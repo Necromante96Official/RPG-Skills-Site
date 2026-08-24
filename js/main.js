@@ -1,5 +1,5 @@
 /* ============================================
-   RPG SKILLS — Main JavaScript
+   RPG SKILLS - Main JavaScript
    ============================================ */
 
 (function () {
@@ -562,7 +562,7 @@
 
   /* ---- WINDOW TAB SWITCH (legacy + new premium) ---- */
   (function () {
-    // Legacy (old .window-tab) — keep compat if present
+    // Legacy (old .window-tab) - keep compat if present
     var legacyTabs = document.querySelectorAll('.window-tab');
     var legacyPanels = document.querySelectorAll('.window-panel');
     if (legacyTabs.length && legacyPanels.length) {
@@ -705,14 +705,14 @@
       { cat:'combat', name:'Mestre da Magia', icon:'&#128302;', bonus:'+10% dano mágico · +10% regen mana · +10% veloc. lançamento', color:'#ef4444' },
       { cat:'combat', name:'Mestre Invocador', icon:'&#128058;', bonus:'+10% dano invocação · +2 invocações/pt (cap 10)', color:'#ef4444' },
       { cat:'combat', name:'Mestre Sangrento', icon:'&#129657;', bonus:'+0.6/s cura por pt · lifesteal +10%/pt', color:'#ef4444' },
-      { cat:'combat', name:'Mestre do Fogo', icon:'&#128293;', bonus:'5–25/s queimadura · 3–15s duração', color:'#ef4444' },
-      { cat:'combat', name:'Mestre do Veneno', icon:'&#9760;', bonus:'5–25/s veneno necrótico · slow', color:'#ef4444' },
-      { cat:'combat', name:'Mestre do Gelo', icon:'&#10052;', bonus:'5–25/s geada · Lv5: 30% congelar 15s', color:'#ef4444' },
-      { cat:'combat', name:'Mestre do Pesadelo', icon:'&#128123;', bonus:'5–25/s escuridão · Lv5: 5% hitkill', color:'#ef4444' },
+      { cat:'combat', name:'Mestre do Fogo', icon:'&#128293;', bonus:'5-25/s queimadura · 3-15s duração', color:'#ef4444' },
+      { cat:'combat', name:'Mestre do Veneno', icon:'&#9760;', bonus:'5-25/s veneno necrótico · slow', color:'#ef4444' },
+      { cat:'combat', name:'Mestre do Gelo', icon:'&#10052;', bonus:'5-25/s geada · Lv5: 30% congelar 15s', color:'#ef4444' },
+      { cat:'combat', name:'Mestre do Pesadelo', icon:'&#128123;', bonus:'5-25/s escuridão · Lv5: 5% hitkill', color:'#ef4444' },
       // defense 7 (already have some, but ergänzen)
       { cat:'defense', name:'Mestre da Resistência', icon:'🛡️', bonus:'-10% dano recebido/pt · -10% empurrão', color:'#60a5fa' },
       { cat:'defense', name:'Mestre Elemental', icon:'&#129514;', bonus:'Lv1 veneno immune → Lv5 bloqueia todos debuffs', color:'#60a5fa' },
-      { cat:'defense', name:'Mestre Colossal', icon:'&#129704;', bonus:'2–10s invulnerável ao ser atingido (30s CD)', color:'#60a5fa' },
+      { cat:'defense', name:'Mestre Colossal', icon:'&#129704;', bonus:'2-10s invulnerável ao ser atingido (30s CD)', color:'#60a5fa' },
       { cat:'defense', name:'Mestre da Vitalidade', icon:'❤️', bonus:'+20 HP/pt · regen · 3%/pt sobreviver fatal', color:'#60a5fa' },
       { cat:'defense', name:'Mestre da Resiliência', icon:'💧', bonus:'+20 resiliência/pt · +10% ganho/recarga', color:'#60a5fa' },
       // mobility 3
@@ -723,7 +723,7 @@
       { cat:'utility', name:'Mestre da Construção', icon:'🔨', bonus:'+10% veloc. construção · +alcance interação', color:'#c8973a' },
       { cat:'utility', name:'Mestre Arcano', icon:'✨', bonus:'+20 mana/pt · Escritor Imortal (Nv1)', color:'#c8973a' },
       { cat:'utility', name:'Mestre da Riqueza', icon:'💰', bonus:'Golpe de Ouro até 50/hit', color:'#c8973a' },
-      { cat:'utility', name:'Mestre do Saque', icon:'🎁', bonus:'Loot 2×–5× · chance drop completo', color:'#c8973a' },
+      { cat:'utility', name:'Mestre do Saque', icon:'🎁', bonus:'Loot 2×-5× · chance drop completo', color:'#c8973a' },
       { cat:'utility', name:'Mestre das Relíquias', icon:'💎', bonus:'+4 slots trinket/pt · alcance coleta', color:'#c8973a' },
       { cat:'utility', name:'Mestre do Mar', icon:'🎣', bonus:'Pesca + Angler’s Reflex (AFK)', color:'#c8973a' },
       { cat:'utility', name:'Mestre Gourmet', icon:'🍖', bonus:'Comida +25%→300% · Lv5 auto-comer', color:'#c8973a' },
@@ -889,7 +889,7 @@
           activeBuff = val;
           buffBtns.forEach(function (x){ x.classList.remove('active'); });
           b.classList.add('active');
-          if (buffLabel) buffLabel.textContent = val + '× ativo — 10 min';
+          if (buffLabel) buffLabel.textContent = val + '× ativo - 10 min';
         }
       });
     });
@@ -947,7 +947,7 @@
     function updateVeinLabel() {
       if (veinCount) veinCount.textContent = minedCount();
       if (veinBtn) {
-        veinBtn.textContent = veinEnabled ? '⛏️ Minerador de Veios ON' : '⛏️ OFF — clique único';
+        veinBtn.textContent = veinEnabled ? '⛏️ Minerador de Veios ON' : '⛏️ OFF - clique único';
         veinBtn.style.opacity = veinEnabled ? '1' : '0.7';
         veinBtn.style.background = veinEnabled ? 'linear-gradient(180deg, var(--gold), #c2761a)' : 'rgba(255,255,255,0.08)';
         veinBtn.style.color = veinEnabled ? '#120a00' : '#fff';
@@ -1396,7 +1396,7 @@
     if (data.passives && data.passives.length) {
       html += '<div class="modal-section"><h4>Passivas Desbloqueáveis</h4>';
       data.passives.forEach(function (p) {
-        html += '<div class="passive-tag"><span class="passive-icon">&#9733;</span><div><strong>' + p.name + '</strong> — ' + p.desc + '<br><small>' + p.req + '</small></div></div>';
+        html += '<div class="passive-tag"><span class="passive-icon">&#9733;</span><div><strong>' + p.name + '</strong> - ' + p.desc + '<br><small>' + p.req + '</small></div></div>';
       });
       html += '</div>';
     }

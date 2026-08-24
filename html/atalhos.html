@@ -157,7 +157,7 @@
 
       
       <div class="reveal" style="max-width:560px; margin:0 auto 18px; padding:16px; background:linear-gradient(135deg,#120e12,#0d0b0e); border:1px solid rgba(212,136,28,0.14); border-radius:12px; text-align:center;">
-        <div style="font-family:var(--font-heading); font-weight:800; color:#fff; margin-bottom:10px;">Teste os atalhos <span style="color:var(--gold);">— pressione K, 1-5 ou LB+RB</span></div>
+        <div style="font-family:var(--font-heading); font-weight:800; color:#fff; margin-bottom:10px;">Teste os atalhos <span style="color:var(--gold);">- pressione K, 1-5 ou LB+RB</span></div>
         <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
           <span class="kbd" data-kbd="k">K</span>
           <span class="kbd" data-kbd="1">1</span>
@@ -171,7 +171,7 @@
         (function(){
           var fb=document.getElementById('kbd-feedback');
           document.querySelectorAll('[data-kbd]').forEach(function(k){
-            k.addEventListener('click', function(){ fb.textContent='✓ '+k.textContent+' pressionado — janela '+ (k.textContent==='K'?'abre/fecha':k.textContent==='ESC'?'fecha':'ativa buff')+'!'; fb.style.color='var(--gold)'; k.style.transform='translateY(1px)'; setTimeout(function(){k.style.transform='';},120); });
+            k.addEventListener('click', function(){ fb.textContent='✓ '+k.textContent+' pressionado - janela '+ (k.textContent==='K'?'abre/fecha':k.textContent==='ESC'?'fecha':'ativa buff')+'!'; fb.style.color='var(--gold)'; k.style.transform='translateY(1px)'; setTimeout(function(){k.style.transform='';},120); });
           });
           document.addEventListener('keydown', function(e){
             var key=e.key.toLowerCase();
