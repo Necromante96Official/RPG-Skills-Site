@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Todas as versões desde o lançamento. Atualizações constantes com novas classes, features e correções.">
+  <meta name="description"
+    content="Todas as versões desde o lançamento. Atualizações constantes com novas classes, features e correções.">
   <meta name="theme-color" content="#0a0a0f">
   <title>Changelog Completo - RPG Skills</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
 
   <link rel="stylesheet" href="../css/tokens.css">
@@ -28,23 +32,32 @@
       padding: 120px 0 36px;
       text-align: center;
       background: linear-gradient(180deg, #0d0b0e 0%, #09080a 100%);
-      border-bottom: 1px solid rgba(212,136,28,0.14);
+      border-bottom: 1px solid rgba(212, 136, 28, 0.14);
       position: relative;
       overflow: hidden;
     }
+
     .page-header::before {
-      content:"";
+      content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212,136,28,0.09), transparent 60%);
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212, 136, 28, 0.09), transparent 60%);
       pointer-events: none;
     }
-    .page-header-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+    .page-header-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     .page-kicker {
       display: inline-block;
       padding: 4px 12px;
-      background: rgba(212,136,28,0.12);
-      border: 1px solid rgba(212,136,28,0.22);
+      background: rgba(212, 136, 28, 0.12);
+      border: 1px solid rgba(212, 136, 28, 0.22);
       border-radius: 999px;
       color: var(--gold);
       font-family: var(--font-heading);
@@ -54,40 +67,121 @@
       text-transform: uppercase;
       margin-bottom: 12px;
     }
-    .page-title { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 8px; }
-    .page-title span { color: var(--gold); }
-    .page-sub { color: var(--text-muted); font-size: 0.95rem; margin: 0 auto 18px; max-width: 600px; line-height:1.6; }
+
+    .page-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 8px;
+    }
+
+    .page-title span {
+      color: var(--gold);
+    }
+
+    .page-sub {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0 auto 18px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
     .page-back {
-      display:inline-flex; align-items:center; gap:8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       padding: 10px 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(212,136,28,0.18);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(212, 136, 28, 0.18);
       border-radius: 999px;
       color: var(--text-body);
       font-family: var(--font-heading);
       font-size: 0.78rem;
       font-weight: 700;
-      text-decoration:none;
+      text-decoration: none;
       transition: all 0.18s;
     }
-    .page-back:hover { background: rgba(212,136,28,0.10); border-color: var(--gold); color:#fff; transform: translateY(-1px); }
-    .page-content { padding-top: 28px; }
-    .back-footer { text-align:center; padding: 40px 0 20px; }
+
+    .page-back:hover {
+      background: rgba(212, 136, 28, 0.10);
+      border-color: var(--gold);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .page-content {
+      padding-top: 28px;
+    }
+
+    .back-footer {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+
+    .changelog-section {
+      margin-top: 14px;
+    }
+
+    .changelog-section:first-of-type {
+      margin-top: 8px;
+    }
+
+    .changelog-section-title {
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 8px;
+    }
+
+    .changelog-note {
+      margin-top: 12px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    .changelog-item .changelog-list li {
+      margin-bottom: 6px;
+      line-height: 1.55;
+    }
   </style>
 
 </head>
-<body>
+
+<body data-page="changelog">
   <div class="global-particles">
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-    <div class="gp g"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
   </div>
   <div class="global-runes">
     <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
@@ -97,8 +191,10 @@
     <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
   </div>
   <div class="global-circles">
-    <div class="gc"></div><div class="gc"></div>
-    <div class="gc"></div><div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
   </div>
   <div class="global-vignette"></div>
 
@@ -108,7 +204,7 @@
       RPG Skills
     </a>
     <div class="nav-links">
-      <div class="lang-switcher" role="group" aria-label="Idioma">
+      <div class="lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
         <button class="lang-option" data-lang="pt-BR" aria-label="Portugues">
           <span class="fi fi-br"></span> PT-BR
         </button>
@@ -116,317 +212,169 @@
           <span class="fi fi-us"></span> EN-US
         </button>
       </div>
-      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;">&#8592; Voltar ao Início</a>
+      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;"><span
+          data-i18n="nav.back">← Voltar ao Início</span></a>
     </div>
-    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <button class="mobile-toggle" aria-label="Menu" data-i18n-aria="nav.menu">&#9776;</button>
   </nav>
   <div class="mobile-nav">
-    <button class="mobile-nav-close" aria-label="Fechar">&times;</button>
-    <a href="../index.html">&#8592; Voltar ao Início</a>
-    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma">
+    <button class="mobile-nav-close" aria-label="Fechar" data-i18n-aria="nav.close">&times;</button>
+    <a href="../index.html"><span data-i18n="nav.back">← Voltar ao Início</span></a>
+    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
       <button class="lang-option" data-lang="pt-BR" aria-label="Portugues"><span class="fi fi-br"></span> PT-BR</button>
       <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-us"></span> EN-US</button>
     </div>
-    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary">Steam Workshop</a>
+    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+      class="btn btn-primary" data-i18n="nav.steam">Steam Workshop</a>
   </div>
 
   <header class="page-header">
     <div class="page-header-inner">
-      <div class="page-kicker">Histórico de Versões</div>
-      <h1 class="page-title">Changelog <span class="text-green">Completo</span></h1>
-      <p class="page-sub">Todas as versões desde o lançamento. Atualizações constantes com novas classes, features e correções.</p>
-      
+      <div class="page-kicker" data-i18n="changelog.hero.kicker">Histórico de Versões</div>
+      <h1 class="page-title" data-i18n="changelog.title">Changelog <span class="text-green">Completo</span></h1>
+      <p class="page-sub" data-i18n="changelog.subtitle">Todas as versões desde o lançamento. Atualizações constantes
+        com novas classes, features e correções.</p>
+
       <div class="page-stats">
-        <span class="page-stat"><i>📜</i> <b>11</b> versões</span>
+        <span class="page-stat"><i>📜</i> <b>22</b> <span data-i18n="changelog.stats.versions">versões</span></span>
         <span class="page-stat"><i>🔥</i> <b>v2.7</b></span>
         <span class="page-stat"><i>⚡</i> <b>2024-26</b></span>
       </div>
-      <a href="../index.html" class="page-back">&#8592; Voltar à página inicial</a>
+      <a href="../index.html" class="page-back"><span data-i18n="nav.back.home">← Voltar à página inicial</span></a>
     </div>
   </header>
 
   <div class="page-content">
-  <!-- ========== CHANGELOG ========== -->
-  <section class="section">
-    <div class="section-glow-line"></div>
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label" data-i18n="changelog.label">Histórico de Versões</div>
-        <h2 class="section-title" data-i18n="changelog.title">Changelog <span class="text-green">Completo</span></h2>
-        <p class="section-subtitle" style="margin:0 auto;" data-i18n="changelog.subtitle">Todas as versões desde o lançamento. Atualizações constantes com novas classes, features e correções.</p>
+    <!-- ========== CHANGELOG ========== -->
+    <section class="section">
+      <div class="section-glow-line"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="changelog.label">Histórico de Versões</div>
+          <h2 class="section-title" data-i18n="changelog.title">Changelog <span class="text-green">Completo</span></h2>
+          <p class="section-subtitle" style="margin:0 auto;" data-i18n="changelog.subtitle">Todas as versões desde o
+            lançamento. Atualizações constantes com novas classes, features e correções.</p>
+        </div>
+
+        <div class="grid-2 reveal" style="margin-top:var(--space-xl);">
+          <div class="card">
+            <h4 class="card-title" style="margin-bottom:var(--space-md);">
+              <span data-i18n="changelog.highlights.recent">🚀 v2.5 - v2.7 (Recentes)</span>
+            </h4>
+            <div class="feature-row">
+              <span class="feature-row-icon text-green">2.7</span>
+              <div class="feature-row-content">
+                <h4 data-i18n="changelog.h.27.title">Trinket config (até 255)</h4>
+                <p data-i18n="changelog.h.27.desc">Loot Master Incursion exclusion, respec automático em updates</p>
+              </div>
+            </div>
+            <div class="feature-row">
+              <span class="feature-row-icon text-blue">2.6</span>
+              <div class="feature-row-content">
+                <h4 data-i18n="changelog.h.26.title">Auto Weapon Select</h4>
+                <p data-i18n="changelog.h.26.desc">Accelerated Sleep (8PM-3AM), loot attribution corrigido</p>
+              </div>
+            </div>
+            <div class="feature-row">
+              <span class="feature-row-icon text-green">2.5</span>
+              <div class="feature-row-content">
+                <h4 data-i18n="changelog.h.25.title">Major: 33 classes (era 27)</h4>
+                <p data-i18n="changelog.h.25.desc">Config menu completo, Angler's Reflex, spoil 1/ciclo, Safe Haven 3.5
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4 class="card-title" style="margin-bottom:var(--space-md);">
+              <span data-i18n="changelog.highlights.early">📜 v1.0 - v2.4 (Lançamento)</span>
+            </h4>
+            <div class="feature-row">
+              <span class="feature-row-icon text-gold">2.3</span>
+              <div class="feature-row-content">
+                <h4 data-i18n="changelog.h.23.title">Backup automático</h4>
+                <p data-i18n="changelog.h.23.desc">5 cópias/10min, controller LB/RB/D-pad, 12 idiomas</p>
+              </div>
+            </div>
+            <div class="feature-row">
+              <span class="feature-row-icon text-gold">2.0</span>
+              <div class="feature-row-content">
+                <h4 data-i18n="changelog.h.20.title">Realm Master 5</h4>
+                <p data-i18n="changelog.h.20.desc">Unrivaled + x3 XP, 6+ personalidades, Life Partner</p>
+              </div>
+            </div>
+            <div class="feature-row">
+              <span class="feature-row-icon text-gold">1.0</span>
+              <div class="feature-row-content">
+                <h4 data-i18n="changelog.h.10.title">Lançamento</h4>
+                <p data-i18n="changelog.h.10.desc">27 classes, RPG progression, Shop, 3-abas, tecla K, controle</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="grid-2 reveal" style="margin-top:var(--space-xl);">
-        <div class="card">
-          <h4 class="card-title" style="margin-bottom:var(--space-md);">
-            <span>&#128640; v2.5 - v2.7 (Recentes)</span>
-          </h4>
-          <div class="feature-row">
-            <span class="feature-row-icon text-green">2.7</span>
-            <div class="feature-row-content">
-              <h4>Trinket config (até 255)</h4>
-              <p>Loot Master Incursion exclusion, respec automático em updates</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <span class="feature-row-icon text-blue">2.6</span>
-            <div class="feature-row-content">
-              <h4>Auto Weapon Select</h4>
-              <p>Accelerated Sleep (8PM-3AM), loot attribution corrigido</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <span class="feature-row-icon text-green">2.5</span>
-            <div class="feature-row-content">
-              <h4>Major: 33 classes (era 27)</h4>
-              <p>Config menu completo, Angler's Reflex, spoil 1/ciclo, Safe Haven 3.5</p>
-            </div>
-          </div>
+
+    <div class="section-divider"></div>
+    <!-- ========== FULL CHANGELOG ========== -->
+    <section class="section" id="changelog">
+      <div class="section-glow-line"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="changelog-full.label">Histórico Completo</div>
+          <h2 class="section-title" data-i18n="changelog-full.title">Changelog <span class="text-green">Detalhado</span>
+          </h2>
+          <p class="section-subtitle" style="margin:0 auto;" data-i18n="changelog-full.subtitle">Todas as versões desde
+            o lançamento com detalhes completos de cada atualização.</p>
         </div>
 
-        <div class="card">
-          <h4 class="card-title" style="margin-bottom:var(--space-md);">
-            <span>&#128220; v1.0 - v2.4 (Lançamento)</span>
-          </h4>
-          <div class="feature-row">
-            <span class="feature-row-icon text-gold">2.3</span>
-            <div class="feature-row-content">
-              <h4>Backup automático</h4>
-              <p>5 cópias/10min, controller LB/RB/D-pad, 12 idiomas</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <span class="feature-row-icon text-gold">2.0</span>
-            <div class="feature-row-content">
-              <h4>Realm Master 5</h4>
-              <p>Unrivaled + x3 XP, 6+ personalidades, Life Partner</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <span class="feature-row-icon text-gold">1.0</span>
-            <div class="feature-row-content">
-              <h4>Lançamento</h4>
-              <p>27 classes, RPG progression, Shop, 3-abas, tecla K, controle</p>
-            </div>
-          </div>
+
+        <div class="reveal" style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:18px;">
+          <button class="config-tab active" data-cl="all" data-i18n="changelog.filter.all.short">Todas</button>
+          <button class="config-tab" data-cl="major" data-i18n="changelog.filter.major.short">Principais</button>
+          <button class="config-tab" data-cl="fix" data-i18n="changelog.filter.fixes.short">Correções</button>
+        </div>
+
+        <div class="timeline" style="margin-top:var(--space-xl);">
+          <!-- Filled by js/main.js from js/changelog-data.js -->
+          <div id="changelog-timeline"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  
-<div class="section-divider"></div>
-  <!-- ========== FULL CHANGELOG ========== -->
-  <section class="section" id="changelog">
-    <div class="section-glow-line"></div>
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label" data-i18n="changelog-full.label">Histórico Completo</div>
-        <h2 class="section-title" data-i18n="changelog-full.title">Changelog <span class="text-green">Detalhado</span></h2>
-        <p class="section-subtitle" style="margin:0 auto;" data-i18n="changelog-full.subtitle">Todas as versões desde o lançamento com detalhes completos de cada atualização.</p>
-      </div>
 
-      
-      <div class="reveal" style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:18px;">
-        <button class="config-tab active" data-cl="all">Todas</button>
-        <button class="config-tab" data-cl="major">Principais</button>
-        <button class="config-tab" data-cl="fix">Correções</button>
-      </div>
-      <script>
-        (function(){
-          var btns=document.querySelectorAll('[data-cl]');
-          btns.forEach(function(b){
-            b.addEventListener('click', function(){
-              var f=b.dataset.cl;
-              btns.forEach(function(x){x.classList.toggle('active', x===b);});
-              document.querySelectorAll('.changelog-item').forEach(function(it){
-                var tag=it.querySelector('.changelog-tag');
-                var type=tag?tag.textContent.toLowerCase():'';
-                var show=f==='all' || (f==='major'&&type.includes('principal')) || (f==='fix'&&type.includes('corre'));
-                it.style.display=show?'':'none';
-              });
-            });
-          });
-        })();
-      </script>
-
-      <div class="timeline" style="margin-top:var(--space-xl);">
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v2.7</span>
-            <span class="changelog-tag fix">CORREÇÃO</span>
-          </div>
-          <ul class="changelog-list">
-            <li class="fix">Config: bonus de slots de trinket corrigido (até 255); desabilita Relic Master quando ativo</li>
-            <li class="fix">Config: opção de excluir Incursion Tablets do Loot Master (off por padrão)</li>
-            <li class="fix">Config: reset automático de classes em updates (pontos voltam grátis; nível/XP/mastery preservados)</li>
-            <li class="fix">Texto de bônus de classe duplicado na UI corrigido</li>
-            <li class="fix">Relic Master: itens de terceiros para slots de trinket agora funcionam</li>
-            <li class="fix">Loot Master: móveis/máquinas colocados não são multiplicados ao destruir</li>
-            <li class="fix">Gold Strike respeita Coin Pouch</li>
-            <li class="fix">World stack e chest upgrades salvam imediatamente</li>
-            <li class="fix">Performance: colonos e bônus de classe param de recalcular a cada tick</li>
-          </ul>
-        </div>
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v2.6</span>
-            <span class="changelog-tag major">NOVIDADE</span>
-          </div>
-          <ul class="changelog-list">
-            <li>Auto Weapon Select: seleciona arma correta automaticamente (melee/ranged/magic/summon)</li>
-            <li>Accelerated Sleep: dormir entre 8PM-3AM avança a noite instantaneamente</li>
-            <li class="fix">Loot Master: forja/forno agora usa o dono do assentamento corretamente</li>
-            <li class="fix">Config do Safe Haven não é mais sobrescrita pelo RPG Skills</li>
-          </ul>
-        </div>
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v2.5</span>
-            <span class="changelog-tag major">PRINCIPAL</span>
-          </div>
-          <ul class="changelog-list">
-            <li><strong>33 classes</strong> (era 27): Gourmet, Alquimia, Rancho, Máquinas, Natureza, Armadilhas</li>
-            <li>Menu de Configuração completo com botão no menu principal</li>
-            <li>Angler's Reflex: pesca AFK automática (Sea Master 1)</li>
-            <li>Spoil 1 por ciclo (não a stack inteira), toggleável</li>
-            <li>Compatível com Necesse 1.3.2 e Safe Haven QOL 3.5</li>
-            <li>Comando /rpgskills config reload</li>
-            <li>Passivas individualmente toggleáveis no config</li>
-            <li>Economia ajustável (custo, duração de buff, rate de assentamento)</li>
-          </ul>
-        </div>
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v2.4</span>
-            <span class="changelog-tag minor">ATUALIZAÇÃO</span>
-          </div>
-          <ul class="changelog-list">
-            <li>XP de trabalho de colonos compartilhável com equipe</li>
-            <li>Arquivo de config unificado (progressão, classes, stacks, QoL, backup, UI)</li>
-            <li>Gateway Tablets de níveis/biomas diferentes não se mesclam mais</li>
-            <li class="fix">Loot Master: dinamite/bombas não multiplicam drops repetidamente</li>
-          </ul>
-        </div>
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v2.3</span>
-            <span class="changelog-tag major">NOVIDADE</span>
-          </div>
-          <ul class="changelog-list">
-            <li>Backup automático: 5 cópias a cada 10 minutos enquanto online</li>
-            <li>Comando /rpgskills restore inventory</li>
-            <li>Redesign da aba Classes: lista à esquerda + painel de detalhes à direita</li>
-            <li>Aba Status dividida: Manual Mágico + Grimório Proibido</li>
-            <li>Controller: LB/RB para trocar abas, D-pad para navegar</li>
-            <li>Janela fecha com ESC automaticamente</li>
-          </ul>
-        </div>
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v2.0</span>
-            <span class="changelog-tag major">PRINCIPAL</span>
-          </div>
-          <ul class="changelog-list">
-            <li>Realm Master nível 5: Sem Rival + 3x XP de assentamento</li>
-            <li>Colonos "Ricos" (6+ personalidades): +1.5x XP extra</li>
-            <li>Leadership Aura: +15% stats nos colonos (22.5% com personalidade alinhada)</li>
-            <li>Zona XP: Charred Forest e Scrapyard separados</li>
-            <li>Recreação: colonos olhando, conversando, etc. dão 5 XP (cap 30/dia)</li>
-            <li>Life Partner: bônus de XP em grupo (off por padrão)</li>
-            <li>Novas passivas: Settlement Leader, Rich Administration, Incursion Specialist</li>
-          </ul>
-        </div>
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v1.9.2</span>
-            <span class="changelog-tag minor">ATUALIZAÇÃO</span>
-          </div>
-          <ul class="changelog-list">
-            <li>Arquivo de config de progressão: multiplicador, curva, penalidade</li>
-            <li>Config de classes: ativar/desativar individualmente</li>
-            <li>Master of Classes conta apenas classes habilitadas</li>
-            <li>Estabilidade massiva: save/load, multiplayer sync, segurança de rede</li>
-          </ul>
-        </div>
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v1.7</span>
-            <span class="changelog-tag minor">ATUALIZAÇÃO</span>
-          </div>
-          <ul class="changelog-list">
-            <li>Partículas de debuff coloridas (fogo laranja, veneno verde, gelo azul, pesadelo roxo, sangue vermelho)</li>
-            <li>DoT mostra números azuis combinados</li>
-            <li>Debuffs de classe funcionam em bonecos de treino</li>
-            <li>Lifesteal/heal mostra texto flutuante verde</li>
-          </ul>
-        </div>
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v1.5</span>
-            <span class="changelog-tag minor">ATUALIZAÇÃO</span>
-          </div>
-          <ul class="changelog-list">
-            <li>Restauração de slots de trinket em reset/respec</li>
-            <li>Barra de XP movível e posição salva</li>
-            <li>Buffs de XP na loja duram 10 minutos</li>
-            <li>Toggle de penalidade de morte no config</li>
-          </ul>
-        </div>
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v1.2</span>
-            <span class="changelog-tag major">NOVIDADE</span>
-          </div>
-          <ul class="changelog-list">
-            <li><strong>3 novas classes:</strong> Gourmet, Alquimia, Rancho</li>
-            <li>Leadership Aura: Realm Master nível 5 dá bônus aos colonos</li>
-            <li>Nível máx aumentado para 150</li>
-            <li>Gold Strike funciona do nível 1</li>
-          </ul>
-        </div>
-
-        <div class="changelog-item polish reveal">
-          <div>
-            <span class="changelog-version">v1.0</span>
-            <span class="changelog-tag major">LANÇAMENTO</span>
-          </div>
-          <ul class="changelog-list">
-            <li><strong>Lançamento oficial:</strong> 27 classes, sistema RPG completo</li>
-            <li>Shop: buffs XP, world stack, chest slots, Explosive Miner</li>
-            <li>UI de 3 abas: Status, Classes, Loja</li>
-            <li>Hotkey K + suporte a controle</li>
-            <li>Comandos: set level, maxskills, reset points, reset zero</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  
 
   </div>
 
+
+  <div class="section-divider"></div>
+  <section class="section page-flow-cta">
+    <div class="container reveal">
+      <h2 class="page-flow-title" data-i18n="cta.flow.title">Continue explorando</h2>
+      <p class="section-subtitle page-flow-sub" data-i18n="cta.flow.subtitle">Volte à página anterior ou siga para a
+        próxima do guia.</p>
+      <div class="page-flow-actions">
+        <a href="passivas.html" class="btn btn-outline page-flow-prev" data-i18n="cta.flow.prev.passivas">← Anterior: 19
+          Passivas</a>
+        <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+          class="btn btn-primary" data-i18n="cta.flow.steam">⭐ Avaliar na Steam</a>
+      </div>
+    </div>
+  </section>
+
   <div class="back-footer">
-    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;">&#8592; Voltar à página inicial</a>
+    <a href="../index.html" class="page-back"
+      style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;"><span
+        data-i18n="nav.back.home">← Voltar à página inicial</span></a>
   </div>
 
   <footer class="footer" style="padding:28px 40px; margin-top:20px;">
     <div class="container">
       <div class="footer-bottom">
-        <span>Feito com &#9829; por Necromante96</span>
-        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);">Início</a></span>
+        <span data-i18n="footer.made">Feito com &#9829; por Necromante96</span>
+        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);"
+            data-i18n="footer.home">Início</a></span>
       </div>
     </div>
   </footer>
@@ -446,6 +394,9 @@
     </div>
   </div>
 
+  <script src="../js/i18n-data.js"></script>
+  <script src="../js/changelog-data.js"></script>
   <script src="../js/main.js"></script>
 </body>
+
 </html>

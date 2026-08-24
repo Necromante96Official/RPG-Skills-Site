@@ -5,456 +5,25 @@
 (function () {
   'use strict';
 
-  /* ---- TRANSLATIONS (embedded) ---- */
-  var I18N = {
-    'pt-BR': {
-      "nav.features": "Funcionalidades",
-      "nav.classes": "Classes",
-      "nav.progression": "Progressão",
-      "nav.window": "Janela",
-      "nav.config": "Config",
-      "hero.badge": "Mod para Necesse",
-      "hero.title": "RPG Skills",
-      "hero.tagline": "Fique mais forte a cada nível.",
-      "hero.subtitle": "Esqueça tudo o que você sabia sobre Necesse. ⚔️|Imagine transformar o jogo em um RPG de verdade:|⚔️ 33 classes profundas para dominar|🔮 19 passivas exclusivas para builds únicas|📈 XP dinâmico que recompensa a verdadeira dificuldade|Sua jornada nunca mais será a mesma. Você tem o que é preciso? 🔥",
-      "hero.cta": "Inscreva-se no Steam",
-      "hero.learn": "Saiba Mais",
-      "hero.stat.classes": "Classes",
-      "hero.stat.maxlevel": "Nível Máximo",
-      "hero.stat.passives": "Passivas",
-      "hero.stat.languages": "Idiomas",
-      "features.label": "O que o mod adiciona",
-      "features.title": "Progressão <span class='text-green'>Completa</span>",
-      "features.subtitle": "Loop claro e satisfatório: XP → Nível → Pontos de Classe → Domine o mundo.",
-      "features.card1.title": "Sistema de XP",
-      "features.card1.text": "Ganhe XP de inimigos, mineração, pesca, fazenda e trabalho no assentamento. Curva de XP e penalidade de morte configuráveis.",
-      "features.card2.title": "33 Classes",
-      "features.card2.text": "Mestre da Guerra, Arcanista, Minerador, Construtor e mais. Cada classe oferece passivas e ativas únicas. Ative ou desative pelo config.",
-      "features.card3.title": "Loja QoL",
-      "features.card3.text": "Buffs de XP (2x, 5x ou 10x), slots de baú extras (até 1000), stacks de mundo maiores e Minerador Explosivo. Tudo com economia balanceada.",
-      "features.card4.title": "Config Completa",
-      "features.card4.text": "Menu in-game para configurar progressão, classes, passivas, economia da loja e compatibilidade com outros mods.",
-      "features.card5.title": "Controle",
-      "features.card5.text": "Suporte completo a controle. LB+RB para abrir janela, D-pad para navegar, A para confirmar. Funciona em SP e MP.",
-      "features.card6.title": "Compatibilidade",
-      "features.card6.text": "Compatível com Safe Haven QOL 3.5. Opções de compatibilidade no menu RPG Skills. O config do Safe Haven não é mais sobrescrito.",
-      "features.card7.title": "Auto Weapon Select",
-      "features.card7.text": "Seleção automática de arma. Acelere o sono e pesque automaticamente com Angler's Reflex (Sea Master 1).",
-      "features.card8.title": "Spoil Otimizado",
-      "features.card8.text": "Spoil perde 1 por ciclo (não a stack inteira). Toggleável no config. Evita perdas desnecessárias.",
-      "features.card9.title": "DoT Combinado",
-      "features.card9.text": "Múltiplos DoTs no mesmo alvo mostram o número azul combinado. Life Partner (off by default) para progressão personalizada.",
-      "progression.label": "Como funciona",
-      "progression.title": "O Loop de <span class='text-green'>Progressão</span>",
-      "progression.step1": "Jogue",
-      "progression.step2": "Ganhe XP",
-      "progression.step3": "Suba de Nível",
-      "progression.step4": "Gaste Pontos",
-      "progression.step5": "Domine",
-      "progression.xp.title": "Fontes de XP",
-      "progression.xp.combat": "Combate",
-      "progression.xp.combat.desc": "Inimigos e bosses (regiões mais difíceis = mais XP). Invocações não dão XP de combate. Regras de zona: Charred Forest; Scrapyard surface ≠ incursion.",
-      "progression.xp.mining": "Mineração e Fabricação",
-      "progression.xp.mining.desc": "Minerar blocos, árvores, plantas e fabricar itens.",
-      "progression.xp.fishing": "Pesca e Fazenda",
-      "progression.xp.fishing.desc": "Pescar peixes e cultivar colheitas no assentamento.",
-      "progression.xp.settlement": "Assentamento",
-      "progression.xp.settlement.desc": "Trabalho e recreação diária (com limite), recrutar especialistas, colonos com 6 ou mais personalidades.",
-      "progression.config.title": "Configuração",
-      "progression.config.curve": "Curva de XP",
-      "progression.config.curve.desc": "Nível máx. 165 (33 classes x 5 pontos). Curva e multiplicador configuráveis. Life Partner (off by default).",
-      "progression.config.death": "Penalidade de Morte",
-      "progression.config.death.desc": "Perda de XP ao morrer. Configurável (pode ser desativado).",
-      "progression.config.respec": "Reconfiguração",
-      "progression.config.respec.desc": "Resetar pontos de classe. Via comando ou menu.",
-      "progression.config.economy": "Economia da Loja",
-      "progression.config.economy.desc": "Preços de itens, buffs de XP, slots de baú (base 40, máx 400, config até 1000). Tudo balanceado.",
-      "classes.label": "33 Classes Disponíveis",
-      "classes.title": "Escolha Sua <span class='text-green'>Build</span>",
-      "classes.subtitle": "Ative apenas as classes que importam para o seu servidor. Cada uma oferece passivas e ativas únicas.",
-      "classes.cat.combat": "Combate",
-      "classes.cat.defense": "Defesa",
-      "classes.cat.mobility": "Mobilidade",
-      "classes.cat.utility": "Utilidade e Fabricação",
-      "classes.cat.settler": "Assentamento",
-      "class.warrior": "Mestre da Guerra",
-      "class.warrior.desc": "Corpo a corpo, críticos, penetração de armadura, velocidade de ataque",
-      "class.marksman": "Mestre Atirador",
-      "class.marksman.desc": "À distância, projéteis, Olho de Águia",
-      "class.magic": "Mestre da Magia",
-      "class.magic.desc": "Magia, mana, velocidade de lançamento",
-      "class.summoner": "Mestre Invocador",
-      "class.summoner.desc": "Dano de invocação, velocidade, limites",
-      "class.bloodthirsty": "Mestre Sedento de Sangue",
-      "class.bloodthirsty.desc": "Sangramento; quebra de armadura em níveis altos",
-      "class.fire": "Mestre do Fogo",
-      "class.fire.desc": "Dano de queimadura",
-      "class.poison": "Mestre do Veneno",
-      "class.poison.desc": "Veneno necrótico",
-      "class.frost": "Mestre do Gelo",
-      "class.frost.desc": "Geada, lentidão, congelamento",
-      "class.nightmare": "Mestre do Pesadelo",
-      "class.nightmare.desc": "Escuridão, lentidão; raro golpe mortal",
-      "class.bloody": "Mestre Sangrento",
-      "class.bloody.desc": "Roubo de vida, regeneração, cura pós-kill",
-      "class.resistance": "Mestre da Resistência",
-      "class.resistance.desc": "Menos dano e empurrão",
-      "class.elemental": "Mestre da Resistência Elemental",
-      "class.elemental.desc": "Resistência e imunidade a debuffs",
-      "class.colossal": "Mestre Colossal",
-      "class.colossal.desc": "Explosão curta de defesa ao ser atingido",
-      "class.vitality": "Mestre da Vitalidade",
-      "class.vitality.desc": "HP máximo, regeneração, chance de sobreviver a golpe fatal",
-      "class.defense": "Mestre da Defesa",
-      "class.defense.desc": "Armadura e espinhos",
-      "class.resilient": "Mestre da Resiliência",
-      "class.resilient.desc": "Resiliência máxima, ganho, recuperação",
-      "class.speed": "Mestre da Velocidade",
-      "class.speed.desc": "Velocidade de movimento e corrida",
-      "class.dash": "Mestre do Dash",
-      "class.dash.desc": "Mais dashes, cooldown menor",
-      "class.reduction": "Mestre da Redução",
-      "class.reduction.desc": "Menos munição; menos dano crítico recebido",
-      "class.cavern": "Mestre da Caverna",
-      "class.cavern.desc": "Mineração; Minerador de Veios",
-      "class.construction": "Mestre da Construção",
-      "class.construction.desc": "Alcance e velocidade de construção e interação",
-      "class.arcane": "Mestre Arcano",
-      "class.arcane.desc": "Mana; Escritor Imortal",
-      "class.wealth": "Mestre da Riqueza",
-      "class.wealth.desc": "Ouro; Golpe de Ouro",
-      "class.loot": "Mestre do Saque",
-      "class.loot.desc": "Saque melhor; chance extra de drop",
-      "class.relic": "Mestre das Relíquias",
-      "class.relic.desc": "Slots de trinket extras; alcance de coleta",
-      "class.sea": "Mestre do Mar",
-      "class.sea.desc": "Pesca; Reflexo do Pescador no nível 1",
-      "class.gourmet": "Mestre Gourmet",
-      "class.gourmet.desc": "Comida duradoura; Sempre Barriga Cheia",
-      "class.alchemy": "Mestre da Alquimia",
-      "class.alchemy.desc": "Poções duradouras; Poção Automática",
-      "class.ranch": "Mestre do Rancho",
-      "class.ranch.desc": "Doma e cruzamento mais rápidos; drops de rancho melhores",
-      "class.machine": "Mestre das Máquinas",
-      "class.machine.desc": "Máquinas mais rápidas (equipe de assentamento)",
-      "class.nature": "Mestre da Natureza",
-      "class.nature.desc": "Colheitas e árvores mais rápidas em assentamentos",
-      "class.trap": "Mestre das Armadilhas",
-      "class.trap.desc": "Armadilhas mais fortes; menos dano de armadilha aliada",
-      "class.realm": "Mestre do Reino",
-      "class.realm.desc": "Assentamentos; nível 5 Sem Rival + 3x XP",
-      "window.label": "Interface do Jogo",
-      "window.title": "Janela <span class='text-green'>RPG Skills</span>",
-      "window.subtitle": "Pressione K (ou LB+RB no controle) para abrir. Três abas completas.",
-      "window.heading": "3 Abas, Tudo Visível",
-      "window.tab.status": "Status",
-      "window.tab.status.desc": "Veja seu personagem, passivas e bônus ativos de classe.",
-      "window.tab.classes": "Classes",
-      "window.tab.classes.desc": "Revise bônus e desbloqueios e gaste 1 ponto por vez em cada classe.",
-      "window.tab.shop": "Loja",
-      "window.tab.shop.desc": "Buffs de XP, stacks de mundo, slots de baú, Minerador Explosivo e passivas/ativas.",
-      "window.mockup.title": "RPG Skills v2.7",
-      "window.mockup.tab1": "Status",
-      "window.mockup.tab2": "Classes",
-      "window.mockup.tab3": "Loja",
-      "window.mockup.warrior": "Guerreiro",
-      "window.mockup.actives": "ATIVOS",
-      "window.mockup.melee": "Corpo a corpo",
-      "window.mockup.dash": "Dash",
-      "window.mockup.veinminer": "Minerador de Veios",
-      "window.mockup.points": "PONTOS DISPONÍVEIS:",
-      "window.mockup.shop": "LOJA",
-      "window.mockup.chestslots": "Slots de Baú",
-      "window.mockup.explosiveminer": "Minerador Explosivo",
-      "qol.label": "Qualidade de Vida",
-      "qol.title": "Recursos que <span class='text-green'>Facilitam</span>",
-      "qol.veinminer": "Minerador de Veios",
-      "qol.veinminer.desc": "Minere veios inteiros de minério com um clique. Configurável.",
-      "qol.angler": "Reflexo do Pescador",
-      "qol.angler.desc": "Pesca AFK: pegue e lance a isca automaticamente. Desbloqueado em Sea Master 1.",
-      "qol.potion": "Poção Automática",
-      "qol.potion.desc": "Use poções automaticamente quando necessário. Desbloqueado em Alchemy Master.",
-      "qol.explosive": "Minerador Explosivo",
-      "qol.explosive.desc": "Detonação de picareta sem dano a jogadores ou mobs. Cavern Master 5.",
-      "qol.xpbuffs": "Buffs de XP",
-      "qol.xpbuffs.desc": "Buffs temporários de 2x, 5x ou 10x. Via loja ou atalho.",
-      "qol.worldstack": "Stack de Mundo",
-      "qol.worldstack.desc": "Stacks de mundo maiores e mais slots de baú. Compre na loja.",
-      "config.label": "Config e Comandos",
-      "config.title": "Controle <span class='text-green'>Total</span>",
-      "config.menu.title": "Menu de Configuração",
-      "config.menu.progression": "Progressão",
-      "config.menu.progression.desc": "XP, penalidade de morte, curva, nível máx., pontos por classe, reconfiguração, Parceiro da Vida.",
-      "config.menu.classes": "Classes",
-      "config.menu.classes.desc": "Ative ou desative classes individualmente. Mestre das Classes conta apenas as ativas.",
-      "config.menu.economy": "Economia",
-      "config.menu.economy.desc": "Preços da loja, spoil 1 por ciclo, Sono Acelerado e mais.",
-      "config.commands.title": "Comandos",
-      "config.commands.player": "Jogador",
-      "config.commands.status": "ver nível, XP e pontos",
-      "config.commands.respec": "reconfigurar",
-      "config.commands.admin": "Admin (MP)",
-      "hotkeys.label": "Atalhos",
-      "hotkeys.title": "Controles <span class='text-green'>Rápidos</span>",
-      "hotkeys.keyboard": "Teclado",
-      "hotkeys.open": "Abrir/Fechar Janela",
-      "hotkeys.keyboard.shortcuts": "Buffs de XP, Minerador de Veios, Minerador Explosivo",
-      "hotkeys.controller": "Controle",
-      "hotkeys.navigate": "Navegar, Confirmar, Fechar",
-      "cta.title": "Pronto para <span class='text-green'>Evoluir</span>?",
-      "cta.subtitle": "Inscreva-se no Steam Workshop e comece sua jornada RPG no Necesse.",
-      "cta.subscribe": "Inscreva-se Agora",
-      "cta.youtube": "Canal no YouTube",
-      "footer.brand": "Mod de progressão RPG para Necesse. Criado por Necromante96.",
-      "footer.links": "Links",
-      "footer.store": "Loja Necesse",
-      "footer.resources": "Recursos",
-      "footer.config": "Configuração",
-      "footer.community": "Comunidade",
-      "footer.discussions": "Discussões",
-      "footer.made": "Feito com &#9829; por Necromante96",
-      "zones.label": "Valores de XP por Zona",
-      "zones.title": "XP por <span class='text-green'>Região</span>",
-      "zones.subtitle": "Quanto mais difícil a zona, mais XP por kill. Bosses dão 300 XP base + 100 por 10 níveis.",
-      "changelog.label": "Histórico de Versões",
-      "changelog.title": "Changelog <span class='text-green'>Completo</span>",
-      "changelog.subtitle": "Todas as versões desde o lançamento. Atualizações constantes com novas classes, features e correções.",
-      "passives.label": "Passivas e Habilidades",
-      "passives.title": "19 <span class='text-green'>Passivas</span> Desbloqueáveis",
-      "passives.subtitle": "Cada classe oferece passivas exclusivas ao investir pontos. Algumas requerem nível máximo para desbloquear.",
-      "xp-detail.label": "Fontes de XP Detalhadas",
-      "xp-detail.title": "Tudo Sobre <span class='text-green'>XP</span>",
-      "xp-detail.subtitle": "Cada ação gera XP de forma diferente. Compreenda todas as fontes para otimizar sua progressão.",
-      "changelog-full.label": "Histórico Completo",
-      "changelog-full.title": "Changelog <span class='text-green'>Detalhado</span>",
-      "changelog-full.subtitle": "Todas as versões desde o lançamento com detalhes completos de cada atualização."
-    },
-    'en': {
-      "nav.features": "Features",
-      "nav.classes": "Classes",
-      "nav.progression": "Progression",
-      "nav.window": "Window",
-      "nav.config": "Config",
-      "hero.badge": "Necesse Mod",
-      "hero.title": "RPG Skills",
-      "hero.tagline": "Get stronger with every level.",
-      "hero.subtitle": "Forget everything you knew about Necesse. ⚔️|Imagine turning the game into a real RPG:|⚔️ 33 deep classes to master|🔮 19 unique passives for unique builds|📈 Dynamic XP that rewards real difficulty|Your journey will never be the same. Do you have what it takes? 🔥",
-      "hero.cta": "Subscribe on Steam",
-      "hero.learn": "Learn More",
-      "hero.stat.classes": "Classes",
-      "hero.stat.maxlevel": "Max Level",
-      "hero.stat.passives": "Passives",
-      "hero.stat.languages": "Languages",
-      "features.label": "What the mod adds",
-      "features.title": "Full <span class='text-green'>Progression</span>",
-      "features.subtitle": "A clear and satisfying loop: XP → Level → Class Points → Dominate the world.",
-      "features.card1.title": "XP System",
-      "features.card1.text": "Earn XP from enemies, mining, fishing, farming, and settlement work. Configurable XP curve and death penalty.",
-      "features.card2.title": "33 Classes",
-      "features.card2.text": "War Master, Arcane Master, Cavern Master, Construction Master, and more. Each class offers unique passives and actives. Toggle via config.",
-      "features.card3.title": "QoL Shop",
-      "features.card3.text": "XP buffs (2x, 5x, or 10x), extra chest slots (up to 1000), larger world stacks, and Explosive Miner. All with balanced economy.",
-      "features.card4.title": "Full Config",
-      "features.card4.text": "In-game menu to configure progression, classes, passives, shop economy, and mod compatibility.",
-      "features.card5.title": "Controller",
-      "features.card5.text": "Full controller support. LB+RB to open window, D-pad to navigate, A to confirm. Works in SP and MP.",
-      "features.card6.title": "Compatibility",
-      "features.card6.text": "Compatible with Safe Haven QOL 3.5. Compat options in the RPG Skills menu. Safe Haven config is no longer overwritten.",
-      "features.card7.title": "Auto Weapon Select",
-      "features.card7.text": "Automatic weapon selection. Accelerate sleep and auto-fish with Angler's Reflex (Sea Master 1).",
-      "features.card8.title": "Optimized Spoil",
-      "features.card8.text": "Spoil loses 1 per cycle (not the whole stack). Toggleable in config. Prevents unnecessary losses.",
-      "features.card9.title": "Combined DoT",
-      "features.card9.text": "Multiple DoTs on the same target show the combined blue number. Life Partner (off by default) for personalized progression.",
-      "progression.label": "How it works",
-      "progression.title": "The <span class='text-green'>Progression</span> Loop",
-      "progression.step1": "Play",
-      "progression.step2": "Earn XP",
-      "progression.step3": "Level Up",
-      "progression.step4": "Spend Points",
-      "progression.step5": "Dominate",
-      "progression.xp.title": "XP Sources",
-      "progression.xp.combat": "Combat",
-      "progression.xp.combat.desc": "Enemies and bosses (harder regions = more XP). Summons grant no combat XP. Zone rules: Charred Forest; Scrapyard surface ≠ incursion.",
-      "progression.xp.mining": "Mining and Crafting",
-      "progression.xp.mining.desc": "Mining blocks, trees, plants, and crafting items.",
-      "progression.xp.fishing": "Fishing and Farming",
-      "progression.xp.fishing.desc": "Catch fish and grow crops in settlements.",
-      "progression.xp.settlement": "Settlement",
-      "progression.xp.settlement.desc": "Daily work and recreation (capped), recruit specialists, settlers with 6+ personalities.",
-      "progression.config.title": "Configuration",
-      "progression.config.curve": "XP Curve",
-      "progression.config.curve.desc": "Max level 165 (33 classes x 5 points). Configurable curve and multiplier. Life Partner (off by default).",
-      "progression.config.death": "Death Penalty",
-      "progression.config.death.desc": "XP loss on death. Configurable (can be disabled).",
-      "progression.config.respec": "Respec",
-      "progression.config.respec.desc": "Reset class points via command or menu.",
-      "progression.config.economy": "Shop Economy",
-      "progression.config.economy.desc": "Item prices, XP buffs, chest slots (base 40, max 400, config up to 1000). All balanced.",
-      "classes.label": "33 Available Classes",
-      "classes.title": "Choose Your <span class='text-green'>Build</span>",
-      "classes.subtitle": "Enable only the classes that matter for your server. Each offers unique passives and actives.",
-      "classes.cat.combat": "Combat",
-      "classes.cat.defense": "Defense",
-      "classes.cat.mobility": "Mobility",
-      "classes.cat.utility": "Utility and Crafting",
-      "classes.cat.settler": "Settlement",
-      "class.warrior": "War Master",
-      "class.warrior.desc": "Melee, crits, armor penetration, attack speed",
-      "class.marksman": "Master Marksman",
-      "class.marksman.desc": "Ranged, projectiles, Eagle Eye",
-      "class.magic": "Master of Magic",
-      "class.magic.desc": "Magic, mana, cast speed",
-      "class.summoner": "Master Summoner",
-      "class.summoner.desc": "Summon damage, speed, limits",
-      "class.bloodthirsty": "Bloodthirsty Master",
-      "class.bloodthirsty.desc": "Bleed; armor break at high levels",
-      "class.fire": "Fire Master",
-      "class.fire.desc": "Burn damage",
-      "class.poison": "Poison Master",
-      "class.poison.desc": "Necrotic poison",
-      "class.frost": "Frost Master",
-      "class.frost.desc": "Frost, chill, freeze",
-      "class.nightmare": "Nightmare Master",
-      "class.nightmare.desc": "Darkness, slow; rare instant kill",
-      "class.bloody": "Bloody Master",
-      "class.bloody.desc": "Lifesteal, regeneration, post-kill heal",
-      "class.resistance": "Resistance Master",
-      "class.resistance.desc": "Less damage and knockback",
-      "class.elemental": "Elemental Resistance Master",
-      "class.elemental.desc": "Debuff resistance and immunities",
-      "class.colossal": "Colossal Master",
-      "class.colossal.desc": "Short defense burst when hit",
-      "class.vitality": "Vitality Master",
-      "class.vitality.desc": "Max HP, regeneration, chance to survive fatal damage",
-      "class.defense": "Defense Master",
-      "class.defense.desc": "Armor and thorns",
-      "class.resilient": "Resilient Master",
-      "class.resilient.desc": "Max resilience, gain, recovery",
-      "class.speed": "Speed Master",
-      "class.speed.desc": "Movement speed and sprint",
-      "class.dash": "Dash Master",
-      "class.dash.desc": "More dashes, lower cooldown",
-      "class.reduction": "Reduction Master",
-      "class.reduction.desc": "Less ammo; less critical damage taken",
-      "class.cavern": "Cavern Master",
-      "class.cavern.desc": "Mining; Vein Miner",
-      "class.construction": "Construction Master",
-      "class.construction.desc": "Build and interact range and speed",
-      "class.arcane": "Arcane Master",
-      "class.arcane.desc": "Mana; Immortal Scribe",
-      "class.wealth": "Wealth Master",
-      "class.wealth.desc": "Gold; Gold Strike",
-      "class.loot": "Loot Master",
-      "class.loot.desc": "Better loot and extra drop chance",
-      "class.relic": "Relic Master",
-      "class.relic.desc": "Extra trinket slots; pickup range",
-      "class.sea": "Sea Master",
-      "class.sea.desc": "Fishing; Angler's Reflex at level 1",
-      "class.gourmet": "Gourmet Master",
-      "class.gourmet.desc": "Longer food duration; Always Full Belly",
-      "class.alchemy": "Alchemy Master",
-      "class.alchemy.desc": "Longer potion duration; Auto Potion",
-      "class.ranch": "Ranch Master",
-      "class.ranch.desc": "Faster taming and breeding; better ranch drops",
-      "class.machine": "Machine Master",
-      "class.machine.desc": "Faster machines (settlement team)",
-      "class.nature": "Nature Master",
-      "class.nature.desc": "Faster crops and trees in settlements",
-      "class.trap": "Trap Master",
-      "class.trap.desc": "Stronger traps; less ally trap damage",
-      "class.realm": "Realm Master",
-      "class.realm.desc": "Settlements; level 5 Unrivaled + 3x XP",
-      "window.label": "In-Game Interface",
-      "window.title": "<span class='text-green'>RPG Skills</span> Window",
-      "window.subtitle": "Press K (or LB+RB on controller) to open. Three full tabs.",
-      "window.heading": "3 Tabs, Everything Visible",
-      "window.tab.status": "Status",
-      "window.tab.status.desc": "View your character, passives, and active class bonuses.",
-      "window.tab.classes": "Classes",
-      "window.tab.classes.desc": "Review bonuses and unlocks, and spend 1 point at a time in each class.",
-      "window.tab.shop": "Shop",
-      "window.tab.shop.desc": "XP buffs, world stacks, chest slots, Explosive Miner, and passives/actives.",
-      "window.mockup.title": "RPG Skills v2.7",
-      "window.mockup.tab1": "Status",
-      "window.mockup.tab2": "Classes",
-      "window.mockup.tab3": "Shop",
-      "window.mockup.warrior": "Warrior",
-      "window.mockup.actives": "ACTIVES",
-      "window.mockup.melee": "Melee",
-      "window.mockup.dash": "Dash",
-      "window.mockup.veinminer": "Vein Miner",
-      "window.mockup.points": "AVAILABLE POINTS:",
-      "window.mockup.shop": "SHOP",
-      "window.mockup.chestslots": "Chest Slots",
-      "window.mockup.explosiveminer": "Explosive Miner",
-      "qol.label": "Quality of Life",
-      "qol.title": "Features That <span class='text-green'>Make It Easy</span>",
-      "qol.veinminer": "Vein Miner",
-      "qol.veinminer.desc": "Mine entire ore veins with one click. Configurable.",
-      "qol.angler": "Angler's Reflex",
-      "qol.angler.desc": "AFK fishing: catch and recast automatically. Unlocked at Sea Master 1.",
-      "qol.potion": "Auto Potion",
-      "qol.potion.desc": "Use potions automatically when needed. Unlocked at Alchemy Master.",
-      "qol.explosive": "Explosive Miner",
-      "qol.explosive.desc": "Pickaxe blast with no player or mob damage. Cavern Master 5.",
-      "qol.xpbuffs": "XP Buffs",
-      "qol.xpbuffs.desc": "Temporary 2x, 5x, or 10x XP buffs. Via shop or hotkey.",
-      "qol.worldstack": "World Stack",
-      "qol.worldstack.desc": "Larger world stacks and more chest slots. Buy in shop.",
-      "config.label": "Config and Commands",
-      "config.title": "Full <span class='text-green'>Control</span>",
-      "config.menu.title": "Config Menu",
-      "config.menu.progression": "Progression",
-      "config.menu.progression.desc": "XP, death penalty, curve, max level, points per class, respec, Life Partner.",
-      "config.menu.classes": "Classes",
-      "config.menu.classes.desc": "Toggle classes individually. Master of Classes only counts enabled ones.",
-      "config.menu.economy": "Economy",
-      "config.menu.economy.desc": "Shop prices, spoil 1 per cycle, Accelerated Sleep, and more.",
-      "config.commands.title": "Commands",
-      "config.commands.player": "Player",
-      "config.commands.status": "see level, XP, and points",
-      "config.commands.respec": "respec",
-      "config.commands.admin": "Admin (MP)",
-      "hotkeys.label": "Hotkeys",
-      "hotkeys.title": "<span class='text-green'>Quick</span> Controls",
-      "hotkeys.keyboard": "Keyboard",
-      "hotkeys.open": "Open/Close Window",
-      "hotkeys.keyboard.shortcuts": "XP Buffs, Vein Miner, Explosive Miner",
-      "hotkeys.controller": "Controller",
-      "hotkeys.navigate": "Navigate, Confirm, Close",
-      "cta.title": "Ready to <span class='text-green'>Level Up</span>?",
-      "cta.subtitle": "Subscribe on the Steam Workshop and start your RPG journey in Necesse.",
-      "cta.subscribe": "Subscribe Now",
-      "cta.youtube": "YouTube Channel",
-      "footer.brand": "RPG progression mod for Necesse. Created by Necromante96.",
-      "footer.links": "Links",
-      "footer.store": "Necesse Store",
-      "footer.resources": "Resources",
-      "footer.config": "Configuration",
-      "footer.community": "Community",
-      "footer.discussions": "Discussions",
-      "footer.made": "Made with &#9829; by Necromante96",
-      "zones.label": "XP Values by Zone",
-      "zones.title": "XP by <span class='text-green'>Region</span>",
-      "zones.subtitle": "Harder zones = more XP per kill. Bosses give 300 base XP + 100 per 10 player levels.",
-      "changelog.label": "Version History",
-      "changelog.title": "Full <span class='text-green'>Changelog</span>",
-      "changelog.subtitle": "All versions since launch. Constant updates with new classes, features, and fixes.",
-      "passives.label": "Passives & Abilities",
-      "passives.title": "19 <span class='text-green'>Passives</span> to Unlock",
-      "passives.subtitle": "Each class offers unique passives by investing points. Some require max level to unlock.",
-      "xp-detail.label": "Detailed XP Sources",
-      "xp-detail.title": "Everything About <span class='text-green'>XP</span>",
-      "xp-detail.subtitle": "Each action generates XP differently. Understand all sources to optimize your progression.",
-      "changelog-full.label": "Full History",
-      "changelog-full.title": "Detailed <span class='text-green'>Changelog</span>",
-      "changelog-full.subtitle": "All versions since launch with complete details of each update."
-    }
-  };
-
+  /* ---- TRANSLATIONS (JSON is the source of truth) ---- */
+  var I18N = { 'pt-BR': {}, 'en': {} };
   var STORAGE_KEY = 'rpgskills-lang';
   var currentLang = 'pt-BR';
+  var i18nReady = false;
+
+  function i18nBasePath() {
+    var path = (window.location.pathname || '').replace(/\\/g, '/');
+    if (/\/html\//.test(path) || /\/html\/[^/]*\.html?$/i.test(path)) return '../i18n/';
+    return 'i18n/';
+  }
+
+  function t(key, fallback) {
+    var dict = I18N[currentLang] || {};
+    if (dict[key] !== undefined) return dict[key];
+    var other = I18N['pt-BR'] || {};
+    if (other[key] !== undefined) return other[key];
+    return fallback !== undefined ? fallback : '';
+  }
 
   /* ---- DETECT LANGUAGE ---- */
   function detectLanguage() {
@@ -465,6 +34,41 @@
   }
 
   /* ---- APPLY TO DOM ---- */
+  function applyPageMeta(dict) {
+    var page = document.body && document.body.getAttribute('data-page');
+    if (!page) {
+      var path = (window.location.pathname || '').replace(/\\/g, '/');
+      if (/index\.html?$/i.test(path) || path.endsWith('/') || path === '') page = 'index';
+      else {
+        var m = path.match(/\/([^/]+)\.html?$/i);
+        if (m) {
+          var map = {
+            'funcionalidades': 'funcionalidades',
+            'progressao': 'progressao',
+            'universo-xp': 'universo',
+            'classes': 'classes',
+            'janela': 'janela',
+            'qol': 'qol',
+            'configuracao': 'configuracao',
+            'atalhos': 'atalhos',
+            'passivas': 'passivas',
+            'changelog': 'changelog',
+            'fontes-xp': 'fontes'
+          };
+          page = map[m[1]] || m[1];
+        }
+      }
+    }
+    if (!page) return;
+    var titleKey = 'meta.title.' + page;
+    var descKey = 'meta.desc.' + page;
+    if (dict[titleKey] !== undefined) document.title = dict[titleKey];
+    if (dict[descKey] !== undefined) {
+      var meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.setAttribute('content', dict[descKey]);
+    }
+  }
+
   function applyTranslations() {
     var dict = I18N[currentLang];
     if (!dict) return;
@@ -476,11 +80,16 @@
       var key = el.getAttribute('data-i18n-placeholder');
       if (dict[key] !== undefined) el.placeholder = dict[key];
     });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      var key = el.getAttribute('data-i18n-aria');
+      if (dict[key] !== undefined) el.setAttribute('aria-label', dict[key]);
+    });
+    applyPageMeta(dict);
+    document.dispatchEvent(new CustomEvent('rpgskills:i18n', { detail: { lang: currentLang } }));
   }
 
   /* ---- SWITCH LANGUAGE ---- */
   function setLanguage(lang) {
-    if (!I18N[lang]) return;
     currentLang = lang;
     localStorage.setItem(STORAGE_KEY, lang);
     document.documentElement.lang = lang === 'pt-BR' ? 'pt-BR' : 'en';
@@ -489,7 +98,35 @@
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
 
-    applyTranslations();
+    if (I18N[lang] && Object.keys(I18N[lang]).length) applyTranslations();
+  }
+
+  function loadI18nDictionaries() {
+    // Prefer bundled data (works on file:// and offline). JSON remains editable source.
+    if (window.RPG_I18N && window.RPG_I18N['pt-BR'] && window.RPG_I18N['en']) {
+      I18N['pt-BR'] = window.RPG_I18N['pt-BR'];
+      I18N['en'] = window.RPG_I18N['en'];
+      i18nReady = true;
+      return Promise.resolve();
+    }
+    var base = i18nBasePath();
+    return Promise.all([
+      fetch(base + 'pt-BR.json').then(function (r) {
+        if (!r.ok) throw new Error('pt-BR.json ' + r.status);
+        return r.json();
+      }),
+      fetch(base + 'en.json').then(function (r) {
+        if (!r.ok) throw new Error('en.json ' + r.status);
+        return r.json();
+      })
+    ]).then(function (pair) {
+      I18N['pt-BR'] = pair[0] || {};
+      I18N['en'] = pair[1] || {};
+      i18nReady = true;
+    }).catch(function (err) {
+      console.warn('[rpgskills] i18n load failed; keeping HTML fallbacks.', err);
+      i18nReady = false;
+    });
   }
 
   /* ---- NAV SCROLL ---- */
@@ -556,7 +193,7 @@
   document.querySelectorAll('.lang-option').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var lang = btn.getAttribute('data-lang');
-      if (lang && lang !== currentLang) setLanguage(lang);
+      if (lang) setLanguage(lang);
     });
   });
 
@@ -618,16 +255,17 @@
     var lvl = 42;
     var free = 3;
     var spent = 42;
-    var chestSlots = 60;
+    var chestSlots = 40;
     var worldStack = 1;
     var activeBuff = null;
 
     function xpNeededFor(l) {
-      // Next level needs 10000 * (l+1) ? Simplified: incremental, level 43 needs 15000 in demo
-      // Use real formula: 10k * (lvl+1) for next, but clamp for demo values
-      if (l < 42) return 10000 * (l + 1);
-      if (l === 42) return 15000;
-      return 10000 * (l + 1);
+      // Real mod formula: 10000 + (L-1)*10000 → L1=10k … L42=420k … L165=1.65M
+      if (l <= 0) return 0;
+      return 10000 + (l - 1) * 10000;
+    }
+    function localeNum(n) {
+      return n.toLocaleString(currentLang === 'en' ? 'en-US' : 'pt-BR');
     }
     function updateXP() {
       var needed = xpNeededFor(lvl);
@@ -640,9 +278,9 @@
       var maxBadge = document.getElementById('rw-max-badge');
       var bar = document.getElementById('rw-xpbar');
       if (fill) fill.style.width = pct.toFixed(1) + '%';
-      if (txt) txt.innerHTML = '<strong>' + xp.toLocaleString('pt-BR') + '</strong> / ' + needed.toLocaleString('pt-BR') + ' XP';
+      if (txt) txt.innerHTML = '<strong>' + localeNum(xp) + '</strong> / ' + localeNum(needed) + ' XP';
       if (pctEl) pctEl.textContent = pct.toFixed(0) + '%';
-      if (lvlEl) lvlEl.textContent = 'Nível ' + lvl;
+      if (lvlEl) lvlEl.textContent = t('demo.level', 'Nível') + ' ' + lvl;
       if (badge) badge.textContent = lvl;
       if (bar) { bar.classList.remove('pulse'); void bar.offsetWidth; bar.classList.add('pulse'); }
       if (maxBadge) maxBadge.style.display = lvl >= 165 ? 'inline-block' : 'none';
@@ -654,12 +292,12 @@
       if (pv) pv.textContent = free;
     }
     function showToast(amount) {
-      var t = document.getElementById('rw-toast');
-      if (!t) return;
-      t.textContent = '+ ' + amount.toLocaleString('pt-BR') + ' XP';
-      t.classList.add('show');
-      clearTimeout(t._hide);
-      t._hide = setTimeout(function () { t.classList.remove('show'); }, 1800);
+      var toast = document.getElementById('rw-toast');
+      if (!toast) return;
+      toast.textContent = '+ ' + localeNum(amount) + ' XP';
+      toast.classList.add('show');
+      clearTimeout(toast._hide);
+      toast._hide = setTimeout(function () { toast.classList.remove('show'); }, 1800);
     }
     var gainBtn = document.getElementById('rw-gain-xp');
     if (gainBtn) {
@@ -697,95 +335,78 @@
       });
     }
 
-    // Populate full 33 classes list (append after the 5 placeholders)
+    // Populate full 33 classes list (bilingual; rebuilt on language change)
     var classData = [
-      // combat 9
-      { cat:'combat', name:'Mestre da Guerra', icon:'&#9876;', bonus:'+10% dano corpo a corpo · +10% crítico · +10% pen. armadura · +10% velocidade', color:'#ef4444' },
-      { cat:'combat', name:'Mestre Atirador', icon:'&#127993;', bonus:'+10% dano à distância · Eagle Eye no Nv1', color:'#ef4444' },
-      { cat:'combat', name:'Mestre da Magia', icon:'&#128302;', bonus:'+10% dano mágico · +10% regen mana · +10% veloc. lançamento', color:'#ef4444' },
-      { cat:'combat', name:'Mestre Invocador', icon:'&#128058;', bonus:'+10% dano invocação · +2 invocações/pt (cap 10)', color:'#ef4444' },
-      { cat:'combat', name:'Mestre Sangrento', icon:'&#129657;', bonus:'+0.6/s cura por pt · lifesteal +10%/pt', color:'#ef4444' },
-      { cat:'combat', name:'Mestre do Fogo', icon:'&#128293;', bonus:'5-25/s queimadura · 3-15s duração', color:'#ef4444' },
-      { cat:'combat', name:'Mestre do Veneno', icon:'&#9760;', bonus:'5-25/s veneno necrótico · slow', color:'#ef4444' },
-      { cat:'combat', name:'Mestre do Gelo', icon:'&#10052;', bonus:'5-25/s geada · Lv5: 30% congelar 15s', color:'#ef4444' },
-      { cat:'combat', name:'Mestre do Pesadelo', icon:'&#128123;', bonus:'5-25/s escuridão · Lv5: 5% hitkill', color:'#ef4444' },
-      // defense 7 (already have some, but ergänzen)
-      { cat:'defense', name:'Mestre da Resistência', icon:'🛡️', bonus:'-10% dano recebido/pt · -10% empurrão', color:'#60a5fa' },
-      { cat:'defense', name:'Mestre Elemental', icon:'&#129514;', bonus:'Lv1 veneno immune → Lv5 bloqueia todos debuffs', color:'#60a5fa' },
-      { cat:'defense', name:'Mestre Colossal', icon:'&#129704;', bonus:'2-10s invulnerável ao ser atingido (30s CD)', color:'#60a5fa' },
-      { cat:'defense', name:'Mestre da Vitalidade', icon:'❤️', bonus:'+20 HP/pt · regen · 3%/pt sobreviver fatal', color:'#60a5fa' },
-      { cat:'defense', name:'Mestre da Resiliência', icon:'💧', bonus:'+20 resiliência/pt · +10% ganho/recarga', color:'#60a5fa' },
-      // mobility 3
-      { cat:'mobility', name:'Mestre da Velocidade', icon:'👟', bonus:'+10% mov. / corrida por pt', color:'#a78bfa' },
-      { cat:'mobility', name:'Mestre do Dash', icon:'💨', bonus:'+2 dash/pt (cap 10) · -10% cooldown/pt', color:'#a78bfa' },
-      { cat:'mobility', name:'Mestre da Redução', icon:'🎯', bonus:'-10% munição/pt · -10% dano crítico recebido', color:'#a78bfa' },
-      // utility 13 (some already done, add rest)
-      { cat:'utility', name:'Mestre da Construção', icon:'🔨', bonus:'+10% veloc. construção · +alcance interação', color:'#c8973a' },
-      { cat:'utility', name:'Mestre Arcano', icon:'✨', bonus:'+20 mana/pt · Escritor Imortal (Nv1)', color:'#c8973a' },
-      { cat:'utility', name:'Mestre da Riqueza', icon:'💰', bonus:'Golpe de Ouro até 50/hit', color:'#c8973a' },
-      { cat:'utility', name:'Mestre do Saque', icon:'🎁', bonus:'Loot 2×-5× · chance drop completo', color:'#c8973a' },
-      { cat:'utility', name:'Mestre das Relíquias', icon:'💎', bonus:'+4 slots trinket/pt · alcance coleta', color:'#c8973a' },
-      { cat:'utility', name:'Mestre do Mar', icon:'🎣', bonus:'Pesca + Angler’s Reflex (AFK)', color:'#c8973a' },
-      { cat:'utility', name:'Mestre Gourmet', icon:'🍖', bonus:'Comida +25%→300% · Lv5 auto-comer', color:'#c8973a' },
-      { cat:'utility', name:'Mestre da Alquimia', icon:'🧪', bonus:'Poção +25%→300% · Lv5 auto-poção (<50% HP)', color:'#c8973a' },
-      { cat:'utility', name:'Mestre do Rancho', icon:'🐓', bonus:'Doma/cruzamento rápido · Lv5: 5× drops', color:'#c8973a' },
-      { cat:'utility', name:'Mestre das Máquinas', icon:'⚙️', bonus:'Forno 6s→2s · Prensa 45→2s · Compost 30→2s', color:'#c8973a' },
-      { cat:'utility', name:'Mestre da Natureza', icon:'🌱', bonus:'Colheitas/árvores rápidas no assentamento', color:'#c8973a' },
-      { cat:'utility', name:'Mestre das Armadilhas', icon:'💬', bonus:'Armadilhas +bleed no Lv5', color:'#c8973a' },
-      // settler
-      { cat:'settler', name:'Mestre do Reino', icon:'👑', bonus:'Nv5: Sem Rival + 3× XP + Aura +15% stats colonos', color:'#4ade80' }
+      { cat: 'combat', id: 'warrior', icon: '&#9876;', init: 3, bonusPt: '+10% dano corpo a corpo · +10% crítico · +10% pen. armadura · +10% velocidade', bonusEn: '+10% melee damage · +10% crit · +10% armor pen · +10% attack speed', color: '#ef4444' },
+      { cat: 'combat', id: 'marksman', icon: '&#127993;', init: 0, bonusPt: '+10% dano à distância · Olho de Águia no Nv1', bonusEn: '+10% ranged damage · Eagle Eye at Lv1', color: '#ef4444' },
+      { cat: 'combat', id: 'magic', icon: '&#128302;', init: 0, bonusPt: '+10% dano mágico · +10% regen mana · +10% veloc. lançamento', bonusEn: '+10% magic damage · +10% mana regen · +10% cast speed', color: '#ef4444' },
+      { cat: 'combat', id: 'summoner', icon: '&#128058;', init: 0, bonusPt: '+10% dano invocação · +2 invocações/pt (cap 10)', bonusEn: '+10% summon damage · +2 summons/pt (cap 10)', color: '#ef4444' },
+      { cat: 'combat', id: 'bloodthirsty', icon: '&#129657;', init: 0, bonusPt: 'sangramento 5-25/s · quebra de armadura no Nv5', bonusEn: 'bleed 5-25/s · armor break at Lv5', color: '#ef4444' },
+      { cat: 'combat', id: 'fire', icon: '&#128293;', init: 1, bonusPt: '5-25/s queimadura · 3-15s duração', bonusEn: '5-25/s burn · 3-15s duration', color: '#ef4444' },
+      { cat: 'combat', id: 'poison', icon: '&#9760;', init: 0, bonusPt: '5-25/s veneno necrótico · lentidão', bonusEn: '5-25/s necrotic poison · slow', color: '#ef4444' },
+      { cat: 'combat', id: 'frost', icon: '&#10052;', init: 0, bonusPt: '5-25/s geada · Lv5: 30% congelar 15s', bonusEn: '5-25/s frost · Lv5: 30% freeze 15s', color: '#ef4444' },
+      { cat: 'combat', id: 'nightmare', icon: '&#128123;', init: 0, bonusPt: '5-25/s escuridão · Lv5: 5% golpe mortal', bonusEn: '5-25/s darkness · Lv5: 5% hitkill', color: '#ef4444' },
+      { cat: 'defense', id: 'bloody', icon: '&#10084;', init: 0, bonusPt: '+0.6/s cura por pt · roubo de vida +10%/pt', bonusEn: '+0.6/s heal per pt · lifesteal +10%/pt', color: '#60a5fa' },
+      { cat: 'defense', id: 'resistance', icon: '🛡️', init: 0, bonusPt: '-10% dano recebido/pt · -10% empurrão', bonusEn: '-10% damage taken/pt · -10% knockback', color: '#60a5fa' },
+      { cat: 'defense', id: 'elemental', icon: '&#129514;', init: 0, bonusPt: 'Lv1 imune a veneno → Lv5 bloqueia todos debuffs', bonusEn: 'Lv1 poison immune → Lv5 blocks all debuffs', color: '#60a5fa' },
+      { cat: 'defense', id: 'colossal', icon: '&#129704;', init: 0, bonusPt: '2-10s invulnerável ao ser atingido (30s CD)', bonusEn: '2-10s invulnerable when hit (30s CD)', color: '#60a5fa' },
+      { cat: 'defense', id: 'vitality', icon: '❤️', init: 0, bonusPt: '+20 HP/pt · regen · 3%/pt sobreviver fatal', bonusEn: '+20 HP/pt · regen · 3%/pt survive fatal', color: '#60a5fa' },
+      { cat: 'defense', id: 'defense', icon: '🛡️', init: 0, bonusPt: '+5 armadura/pt (cap 25) · +10% espinhos/pt', bonusEn: '+5 armor/pt (cap 25) · +10% thorns/pt', color: '#60a5fa' },
+      { cat: 'defense', id: 'resilient', icon: '💧', init: 0, bonusPt: '+20 resiliência/pt · +10% ganho/recarga', bonusEn: '+20 resilience/pt · +10% gain/recovery', color: '#60a5fa' },
+      { cat: 'mobility', id: 'speed', icon: '👟', init: 0, bonusPt: '+10% mov. / corrida por pt', bonusEn: '+10% move / sprint per pt', color: '#a78bfa' },
+      { cat: 'mobility', id: 'dash', icon: '💨', init: 0, bonusPt: '+2 dash/pt (cap 10) · -10% cooldown/pt', bonusEn: '+2 dash/pt (cap 10) · -10% cooldown/pt', color: '#a78bfa' },
+      { cat: 'mobility', id: 'reduction', icon: '🎯', init: 0, bonusPt: '-10% munição/pt · -10% dano crítico recebido', bonusEn: '-10% ammo/pt · -10% crit damage taken', color: '#a78bfa' },
+      { cat: 'utility', id: 'cavern', icon: '&#9935;', init: 5, bonusPt: '+10% mineração · Vein Miner + Dark Ruin · Explosive Miner no Nv5', bonusEn: '+10% mining · Vein Miner + Dark Ruin · Explosive Miner at Lv5', color: '#c8973a' },
+      { cat: 'utility', id: 'construction', icon: '🔨', init: 0, bonusPt: '+10% veloc. construção · +alcance interação', bonusEn: '+10% build speed · +interact range', color: '#c8973a' },
+      { cat: 'utility', id: 'arcane', icon: '✨', init: 0, bonusPt: '+20 mana/pt · Escritor Imortal (Nv1)', bonusEn: '+20 mana/pt · Immortal Scribe (Lv1)', color: '#c8973a' },
+      { cat: 'utility', id: 'wealth', icon: '💰', init: 0, bonusPt: 'Golpe de Ouro até 50/hit', bonusEn: 'Gold Strike up to 50/hit', color: '#c8973a' },
+      { cat: 'utility', id: 'loot', icon: '🎁', init: 0, bonusPt: 'Saque 2×-5× · chance drop completo', bonusEn: 'Loot 2×-5× · full drop chance', color: '#c8973a' },
+      { cat: 'utility', id: 'relic', icon: '💎', init: 0, bonusPt: '+4 slots trinket/pt · alcance coleta', bonusEn: '+4 trinket slots/pt · pickup range', color: '#c8973a' },
+      { cat: 'utility', id: 'sea', icon: '🎣', init: 0, bonusPt: 'Pesca + Reflexo do Pescador (AFK)', bonusEn: 'Fishing + Angler\u2019s Reflex (AFK)', color: '#c8973a' },
+      { cat: 'utility', id: 'gourmet', icon: '🍖', init: 0, bonusPt: 'Comida +25%→300% · Lv5 auto-comer', bonusEn: 'Food +25%→300% · Lv5 auto-eat', color: '#c8973a' },
+      { cat: 'utility', id: 'alchemy', icon: '🧪', init: 0, bonusPt: 'Poção +25%→300% · Lv5 auto-poção (<50% HP)', bonusEn: 'Potion +25%→300% · Lv5 auto-potion (<50% HP)', color: '#c8973a' },
+      { cat: 'utility', id: 'ranch', icon: '🐓', init: 0, bonusPt: 'Doma/cruzamento rápido · Lv5: 5× drops', bonusEn: 'Faster tame/breed · Lv5: 5× drops', color: '#c8973a' },
+      { cat: 'utility', id: 'machine', icon: '⚙️', init: 0, bonusPt: 'Forno 6s→2s · Prensa 45→2s · Compost 30→2s', bonusEn: 'Furnace 6s→2s · Press 45→2s · Compost 30→2s', color: '#c8973a' },
+      { cat: 'utility', id: 'nature', icon: '🌱', init: 0, bonusPt: 'Colheitas/árvores rápidas no assentamento', bonusEn: 'Faster crops/trees in settlements', color: '#c8973a' },
+      { cat: 'utility', id: 'trap', icon: '💬', init: 0, bonusPt: 'Armadilhas +sangramento no Lv5', bonusEn: 'Traps +bleed at Lv5', color: '#c8973a' },
+      { cat: 'settler', id: 'realm', icon: '👑', init: 4, bonusPt: 'Nv5: Sem Rival + 3× XP + Aura +15% stats colonos', bonusEn: 'Lv5: Unrivaled + 3× XP + Aura +15% settler stats', color: '#4ade80' }
     ];
 
     var list = document.getElementById('rw-class-list');
-    if (list) {
-      // Keep first 5 as demo interactive; append the rest as additional rows (cloned style)
-      // Avoid duplicating already shown names
-      var existingNames = Array.from(list.querySelectorAll('.rw-cname')).map(function (el) { return el.textContent.trim().toLowerCase(); });
-      classData.forEach(function (c) {
-        var already = existingNames.some(function (n) { return n.indexOf(c.name.toLowerCase()) !== -1; });
-        if (already) return;
-        var lvlInit = 0;
-        var max = 5;
-        var row = document.createElement('div');
-        row.className = 'rw-crow locked';
-        row.dataset.cat = c.cat;
-        row.dataset.lvl = lvlInit;
-        row.dataset.max = max;
-        row.innerHTML = '<div class="rw-cico" style="background:' + (c.color===''+c.color ? '' : '') + '; color:' + c.color + '; background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.06);">' + c.icon + '</div>' +
-          '<div class="rw-cinfo"><div class="rw-cname">' + c.name + ' <span class="rw-clvl dim">NV 0 / 5</span></div><div class="rw-cbonus">' + c.bonus + '</div><div class="rw-cbar"><div class="rw-cfill" style="width:0%"></div></div></div>' +
-          '<button class="rw-plus" aria-label="Adicionar ponto">+1</button>';
-        // color the icon bg a bit
-        var ico = row.querySelector('.rw-cico');
-        if (c.color === '#ef4444') ico.style.background = 'rgba(239,68,68,0.10)';
-        else if (c.color === '#60a5fa') ico.style.background = 'rgba(96,165,250,0.10)';
-        else if (c.color === '#a78bfa') ico.style.background = 'rgba(167,139,250,0.10)';
-        else if (c.color === '#c8973a') ico.style.background = 'rgba(234,179,8,0.10)';
-        else if (c.color === '#4ade80') ico.style.background = 'rgba(74,222,128,0.10)';
-        list.appendChild(row);
-      });
-      // Refresh crowEls
-      crowEls = document.querySelectorAll('.rw-crow');
+
+    function lvlLabel(lvlNow, max) {
+      var nv = t('demo.nv', 'NV');
+      var mx = t('demo.max', 'MÁX');
+      return lvlNow >= max ? mx + ' 5' : nv + ' ' + lvlNow + ' / 5';
     }
 
     function updateCavernGate() {
       var cavernRow = Array.from(document.querySelectorAll('.rw-crow')).find(function (r) {
-        return r.querySelector('.rw-cname') && r.querySelector('.rw-cname').textContent.indexOf('Caverna') !== -1;
+        return r.dataset.classId === 'cavern';
       });
-      var lvl = cavernRow ? parseInt(cavernRow.dataset.lvl || '0', 10) : 0;
+      var cavernLvl = cavernRow ? parseInt(cavernRow.dataset.lvl || '0', 10) : 0;
       var btn = document.getElementById('rw-buy-explosive');
       if (btn) {
-        if (lvl >= 5) {
+        if (btn.dataset.unlocked === '1') {
+          btn.disabled = true;
+          btn.textContent = t('demo.unlocked', '✓ Desbloqueado');
+          btn.style.opacity = '1';
+          btn.style.background = 'rgba(34,197,94,0.14)';
+          btn.style.borderColor = 'rgba(34,197,94,0.35)';
+          btn.style.color = '#22c55e';
+          btn.style.cursor = 'default';
+        } else if (cavernLvl >= 5) {
           btn.disabled = false;
           btn.style.opacity = '1';
           btn.style.cursor = 'pointer';
-          btn.textContent = 'Comprar Explosivo';
+          btn.textContent = t('demo.buy.explosive', 'Comprar Explosivo');
           btn.style.background = 'linear-gradient(180deg, var(--gold), #c2761a)';
           btn.style.color = '#120a00';
         } else {
           btn.disabled = true;
           btn.style.opacity = '0.45';
           btn.style.cursor = 'not-allowed';
-          btn.textContent = 'Requer Caverna 5 (' + lvl + '/5)';
+          btn.textContent = t('demo.need.cavern', 'Requer Caverna 5 ({n}/5)').replace('{n}', String(cavernLvl));
         }
       }
     }
@@ -798,82 +419,114 @@
         btn.addEventListener('click', function () {
           if (btn.disabled) return;
           if (free <= 0) {
-            btn.animate([{ transform:'translateX(0)'},{transform:'translateX(-4px)'},{transform:'translateX(4px)'},{transform:'translateX(0)'}],{duration:240});
+            btn.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-4px)' }, { transform: 'translateX(4px)' }, { transform: 'translateX(0)' }], { duration: 240 });
             showToast(0);
-            var t = document.getElementById('rw-toast');
-            if (t) { t.textContent = 'Sem pontos! Ganhe XP'; t.classList.add('show'); clearTimeout(t._hide2); t._hide2=setTimeout(function(){t.classList.remove('show');},1600); }
+            var toastEl = document.getElementById('rw-toast');
+            if (toastEl) { toastEl.textContent = t('demo.no.points', 'Sem pontos! Ganhe XP'); toastEl.classList.add('show'); clearTimeout(toastEl._hide2); toastEl._hide2 = setTimeout(function () { toastEl.classList.remove('show'); }, 1600); }
             return;
           }
           var row = btn.closest('.rw-crow');
           if (!row) return;
-          var lvlNow = parseInt(row.dataset.lvl || '0',10);
-          var max = parseInt(row.dataset.max || '5',10);
+          var lvlNow = parseInt(row.dataset.lvl || '0', 10);
+          var max = parseInt(row.dataset.max || '5', 10);
           if (lvlNow >= max) return;
           lvlNow += 1;
           row.dataset.lvl = lvlNow;
           free -= 1;
           spent += 1;
-          // update UI
           var lvlTag = row.querySelector('.rw-clvl');
           var bar = row.querySelector('.rw-cfill');
           if (lvlTag) {
-            lvlTag.textContent = lvlNow >= max ? 'MÁX 5' : 'NV ' + lvlNow + ' / 5';
-            lvlTag.className = 'rw-clvl' + (lvlNow>=max ? ' max' : lvlNow===0 ? ' dim' : '');
+            lvlTag.textContent = lvlLabel(lvlNow, max);
+            lvlTag.className = 'rw-clvl' + (lvlNow >= max ? ' max' : lvlNow === 0 ? ' dim' : '');
           }
           if (bar) bar.style.width = (lvlNow / max * 100) + '%';
-          row.classList.toggle('locked', lvlNow===0);
-          row.classList.toggle('maxed', lvlNow>=max);
+          row.classList.toggle('locked', lvlNow === 0);
+          row.classList.toggle('maxed', lvlNow >= max);
           if (lvlNow >= max) { btn.disabled = true; btn.textContent = '✓'; }
           updateXP();
           updateCavernGate();
-          // small toast
           showToast(0);
           var tt = document.getElementById('rw-toast');
-          if (tt) { tt.textContent = '+1 ' + (row.querySelector('.rw-cname')? row.querySelector('.rw-cname').childNodes[0].textContent.trim() : 'Ponto'); tt.classList.add('show'); clearTimeout(tt._hide2); tt._hide2=setTimeout(function(){tt.classList.remove('show');},1300); }
+          var cname = row.querySelector('.rw-cname');
+          var plain = cname ? cname.childNodes[0].textContent.trim() : '';
+          if (tt) { tt.textContent = '+1 ' + plain; tt.classList.add('show'); clearTimeout(tt._hide2); tt._hide2 = setTimeout(function () { tt.classList.remove('show'); }, 1300); }
         });
       });
     }
-    bindPlusButtons(document);
+
+    function buildClassRows(preserveLevels) {
+      if (!list) return;
+      var saved = {};
+      if (preserveLevels) {
+        Array.from(list.querySelectorAll('.rw-crow')).forEach(function (row) {
+          if (row.dataset.classId) saved[row.dataset.classId] = parseInt(row.dataset.lvl || '0', 10);
+        });
+      }
+      list.innerHTML = '';
+      classData.forEach(function (c) {
+        var lvlInit = preserveLevels && saved[c.id] !== undefined ? saved[c.id] : (c.init || 0);
+        var max = 5;
+        var bonus = currentLang === 'en' ? c.bonusEn : c.bonusPt;
+        var name = t('class.' + c.id, c.id);
+        var row = document.createElement('div');
+        row.className = 'rw-crow' + (lvlInit >= max ? ' maxed' : lvlInit === 0 ? ' locked' : '');
+        row.dataset.cat = c.cat;
+        row.dataset.lvl = String(lvlInit);
+        row.dataset.max = String(max);
+        row.dataset.classId = c.id;
+        row.innerHTML = '<div class="rw-cico" style="color:' + c.color + '; background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.06);">' + c.icon + '</div>' +
+          '<div class="rw-cinfo"><div class="rw-cname">' + name + ' <span class="rw-clvl' + (lvlInit >= max ? ' max' : lvlInit === 0 ? ' dim' : '') + '">' + lvlLabel(lvlInit, max) + '</span></div><div class="rw-cbonus">' + bonus + '</div><div class="rw-cbar"><div class="rw-cfill" style="width:' + (lvlInit / max * 100) + '%"></div></div></div>' +
+          '<button class="rw-plus" aria-label="' + t('aria.add.point', 'Adicionar ponto') + '"' + (lvlInit >= max ? ' disabled' : '') + '>' + (lvlInit >= max ? '✓' : '+1') + '</button>';
+        var ico = row.querySelector('.rw-cico');
+        if (c.color === '#ef4444') ico.style.background = 'rgba(239,68,68,0.10)';
+        else if (c.color === '#60a5fa') ico.style.background = 'rgba(96,165,250,0.10)';
+        else if (c.color === '#a78bfa') ico.style.background = 'rgba(167,139,250,0.10)';
+        else if (c.color === '#c8973a') ico.style.background = 'rgba(234,179,8,0.10)';
+        else if (c.color === '#4ade80') ico.style.background = 'rgba(74,222,128,0.10)';
+        list.appendChild(row);
+      });
+      crowEls = document.querySelectorAll('.rw-crow');
+      // re-apply active filter
+      var activeFilter = document.querySelector('.rw-fbtn.active');
+      var f = activeFilter ? activeFilter.dataset.filter : 'all';
+      crowEls.forEach(function (row) {
+        var show = f === 'all' || row.dataset.cat === f;
+        row.style.display = show ? '' : 'none';
+      });
+      bindPlusButtons(list);
+      updateCavernGate();
+    }
+
+    buildClassRows(false);
 
     var resetBtn = document.getElementById('rw-reset-points');
     if (resetBtn) {
       resetBtn.addEventListener('click', function () {
         free = 3;
-        // reset all rows to initial demo state (keep cavern at 5, guerra 3, reino 4, defesa 0)
-        var rows = document.querySelectorAll('.rw-crow');
-        rows.forEach(function (row) {
-          var name = row.querySelector('.rw-cname') ? row.querySelector('.rw-cname').textContent : '';
-          var init = 0;
-          if (name.indexOf('Guerra') !== -1) init = 3;
-          else if (name.indexOf('Caverna') !== -1) init = 5;
-          else if (name.indexOf('Reino') !== -1) init = 4;
-          else if (name.indexOf('Fogo') !== -1) init = 1;
-          else init = 0;
-          // but if row was appended dynamically and user increased it, reset to 0
-          if (row.dataset.cat && init===0 && parseInt(row.dataset.lvl||'0',10) > 0) init = 0;
-          // actually for appended rows reset to 0
-          if (row._wasAppended) init = 0;
-          row.dataset.lvl = init;
-          var lvlTag = row.querySelector('.rw-clvl');
-          var bar = row.querySelector('.rw-cfill');
-          var btn = row.querySelector('.rw-plus');
-          if (lvlTag) {
-            lvlTag.textContent = init >=5 ? 'MÁX 5' : init===0 ? 'NV 0 / 5' : 'NV ' + init + ' / 5';
-            lvlTag.className = 'rw-clvl' + (init>=5 ? ' max' : init===0 ? ' dim' : '');
-          }
-          if (bar) bar.style.width = (init/5*100)+'%';
-          row.classList.toggle('locked', init===0);
-          row.classList.toggle('maxed', init>=5);
-          if (btn) { btn.disabled = init>=5; btn.textContent = init>=5? '✓' : '+1'; }
-        });
-        // recalc spent/free approx
         spent = 42;
-        free = 3;
+        buildClassRows(false);
         updateXP();
-        updateCavernGate();
       });
     }
-    updateCavernGate();
+
+    document.addEventListener('rpgskills:i18n', function () {
+      buildClassRows(true);
+      updateXP();
+      updateCavernGate();
+      var buffLabel = document.getElementById('rw-buff-active');
+      if (buffLabel) {
+        if (activeBuff) buffLabel.textContent = t('demo.buff.active', '{n}× ativo - 10 min').replace('{n}', activeBuff);
+        else buffLabel.textContent = t('demo.no.buff', 'Nenhum ativo');
+      }
+      // restore chest/stack numbers after i18n may rewrite nested HTML
+      chestVal = document.getElementById('rw-chest-val');
+      stackVal = document.getElementById('rw-stack-val');
+      if (chestVal) chestVal.textContent = chestSlots;
+      if (stackVal) stackVal.textContent = worldStack + '×';
+      var bar = document.getElementById('rw-chest-bar');
+      if (bar && bar.firstElementChild) bar.firstElementChild.style.width = (chestSlots / 1000 * 100).toFixed(1) + '%';
+    });
 
     /* ---- DEMO: SHOP buffs & buys ---- */
     var buffBtns = document.querySelectorAll('.rw-buff');
@@ -883,13 +536,13 @@
         var val = b.dataset.buff;
         if (activeBuff === val) {
           activeBuff = null;
-          buffBtns.forEach(function (x){ x.classList.remove('active'); });
-          if (buffLabel) buffLabel.textContent = 'Nenhum ativo';
+          buffBtns.forEach(function (x) { x.classList.remove('active'); });
+          if (buffLabel) buffLabel.textContent = t('demo.no.buff', 'Nenhum ativo');
         } else {
           activeBuff = val;
-          buffBtns.forEach(function (x){ x.classList.remove('active'); });
+          buffBtns.forEach(function (x) { x.classList.remove('active'); });
           b.classList.add('active');
-          if (buffLabel) buffLabel.textContent = val + '× ativo - 10 min';
+          if (buffLabel) buffLabel.textContent = t('demo.buff.active', '{n}× ativo - 10 min').replace('{n}', val);
         }
       });
     });
@@ -904,16 +557,19 @@
           if (chestSlots >= 1000) return;
           chestSlots += 10;
           if (chestSlots > 1000) chestSlots = 1000;
+          chestVal = document.getElementById('rw-chest-val');
           if (chestVal) chestVal.textContent = chestSlots;
           var bar = document.getElementById('rw-chest-bar');
-          if (bar) bar.firstElementChild.style.width = (chestSlots/1000*100).toFixed(1)+'%';
-          btn.animate([{transform:'scale(1)'},{transform:'scale(1.04)'},{transform:'scale(1)'}],{duration:220});
+          if (bar && bar.firstElementChild) bar.firstElementChild.style.width = (chestSlots / 1000 * 100).toFixed(1) + '%';
+          btn.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.04)' }, { transform: 'scale(1)' }], { duration: 220 });
         } else if (kind === 'stack') {
           worldStack = Math.min(1000, worldStack === 1 ? 10 : worldStack * 2);
+          stackVal = document.getElementById('rw-stack-val');
           if (stackVal) stackVal.textContent = worldStack + '×';
-          btn.animate([{transform:'scale(1)'},{transform:'scale(1.04)'},{transform:'scale(1)'}],{duration:220});
+          btn.animate([{ transform: 'scale(1)' }, { transform: 'scale(1.04)' }, { transform: 'scale(1)' }], { duration: 220 });
         } else if (kind === 'explosive') {
-          btn.textContent = '✓ Desbloqueado';
+          btn.dataset.unlocked = '1';
+          btn.textContent = t('demo.unlocked', '✓ Desbloqueado');
           btn.disabled = true;
           btn.style.opacity = '1';
           btn.style.background = 'rgba(34,197,94,0.14)';
@@ -921,14 +577,14 @@
           btn.style.color = '#22c55e';
         }
         showToast(0);
-        var t = document.getElementById('rw-toast');
-        if (t) { t.textContent = '✓ Compra efetuada'; t.classList.add('show'); clearTimeout(t._hide3); t._hide3=setTimeout(function(){t.classList.remove('show');},1400); }
+        var toastEl = document.getElementById('rw-toast');
+        if (toastEl) { toastEl.textContent = t('janela.mock.purchase', '✓ Compra efetuada'); toastEl.classList.add('show'); clearTimeout(toastEl._hide3); toastEl._hide3 = setTimeout(function () { toastEl.classList.remove('show'); }, 1400); }
       });
     });
 
     // close button just switches to status tab as easter egg
     var closeBtn = document.querySelector('.rw-close');
-    if (closeBtn) closeBtn.addEventListener('click', function(){ activateRwTab('rw-status'); });
+    if (closeBtn) closeBtn.addEventListener('click', function () { activateRwTab('rw-status'); });
 
   })();
 
@@ -947,7 +603,9 @@
     function updateVeinLabel() {
       if (veinCount) veinCount.textContent = minedCount();
       if (veinBtn) {
-        veinBtn.textContent = veinEnabled ? '⛏️ Minerador de Veios ON' : '⛏️ OFF - clique único';
+        veinBtn.textContent = veinEnabled
+          ? t('qol.demo.vein.on', '⛏️ Minerador de Veios ON')
+          : t('qol.demo.vein.off', '⛏️ OFF - clique único');
         veinBtn.style.opacity = veinEnabled ? '1' : '0.7';
         veinBtn.style.background = veinEnabled ? 'linear-gradient(180deg, var(--gold), #c2761a)' : 'rgba(255,255,255,0.08)';
         veinBtn.style.color = veinEnabled ? '#120a00' : '#fff';
@@ -962,13 +620,13 @@
           if (ore.classList.contains('mined')) return;
           setTimeout(function () {
             ore.classList.add('mined', 'pop');
-            setTimeout(function(){ ore.classList.remove('pop'); }, 260);
+            setTimeout(function () { ore.classList.remove('pop'); }, 260);
             updateVeinLabel();
           }, idx * 70);
         });
       } else {
         target.classList.add('mined', 'pop');
-        setTimeout(function(){ target.classList.remove('pop'); }, 260);
+        setTimeout(function () { target.classList.remove('pop'); }, 260);
         updateVeinLabel();
       }
     }
@@ -976,22 +634,27 @@
       ore.addEventListener('click', function () {
         if (ore.dataset.ore === 'stone') {
           ore.classList.add('pop');
-          setTimeout(function(){ ore.classList.remove('pop'); }, 220);
-          ore.animate([{transform:'translateX(0)'},{transform:'translateX(-3px)'},{transform:'translateX(3px)'},{transform:'translateX(0)'}],{duration:220});
+          setTimeout(function () { ore.classList.remove('pop'); }, 220);
+          ore.animate([{ transform: 'translateX(0)' }, { transform: 'translateX(-3px)' }, { transform: 'translateX(3px)' }, { transform: 'translateX(0)' }], { duration: 220 });
           return;
         }
         mineVein(ore);
       });
     });
+    document.addEventListener('rpgskills:i18n', function () {
+      veinCount = document.getElementById('qol-vein-count');
+      updateVeinLabel();
+    });
+
     if (veinBtn) veinBtn.addEventListener('click', function () {
       veinEnabled = !veinEnabled;
       updateVeinLabel();
       // also toggle the switch in card
       var sw = document.querySelector('.qol-switch[data-qol=\"vein\"]');
-      if (sw) { sw.classList.toggle('on', veinEnabled); sw.setAttribute('aria-checked', veinEnabled?'true':'false'); }
+      if (sw) { sw.classList.toggle('on', veinEnabled); sw.setAttribute('aria-checked', veinEnabled ? 'true' : 'false'); }
     });
     if (veinReset) veinReset.addEventListener('click', function () {
-      veinOres.forEach(function (o){ o.classList.remove('mined','pop'); });
+      veinOres.forEach(function (o) { o.classList.remove('mined', 'pop'); });
       updateVeinLabel();
     });
     updateVeinLabel();
@@ -1000,7 +663,7 @@
     document.querySelectorAll('.qol-switch').forEach(function (sw) {
       sw.addEventListener('click', function () {
         var on = sw.classList.toggle('on');
-        sw.setAttribute('aria-checked', on ? 'true':'false');
+        sw.setAttribute('aria-checked', on ? 'true' : 'false');
         if (sw.dataset.qol === 'vein') {
           veinEnabled = on;
           updateVeinLabel();
@@ -1023,12 +686,12 @@
       fishProgress = 0;
       if (fishIv) clearInterval(fishIv);
       fishIv = setInterval(function () {
-        fishProgress += 3 + Math.random()*4;
+        fishProgress += 3 + Math.random() * 4;
         if (fishProgress >= 100) {
           fishProgress = 100;
           fishBar.style.width = '100%';
           if (fishPct) fishPct.textContent = '100%';
-          setTimeout(function(){
+          setTimeout(function () {
             fishProgress = 0;
             fishBar.style.width = '0%';
             if (fishPct) fishPct.textContent = '0%';
@@ -1036,7 +699,7 @@
           clearInterval(fishIv);
           fishIv = null;
           // auto restart if switch on
-          setTimeout(function(){
+          setTimeout(function () {
             var sw = document.querySelector('.qol-switch[data-qol=\"fish\"]');
             if (sw && sw.classList.contains('on')) startFish();
           }, 900);
@@ -1050,28 +713,28 @@
     var fishObserver = null;
     if (fishBar) {
       try {
-        fishObserver = new IntersectionObserver(function (entries){
-          entries.forEach(function(ent){
+        fishObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (ent) {
             if (ent.isIntersecting) {
               var sw = document.querySelector('.qol-switch[data-qol=\"fish\"]');
               if (sw && sw.classList.contains('on')) startFish();
             } else {
-              if (fishIv) { clearInterval(fishIv); fishIv=null; }
+              if (fishIv) { clearInterval(fishIv); fishIv = null; }
             }
           });
-        }, {threshold:0.2});
+        }, { threshold: 0.2 });
         fishObserver.observe(fishBar.closest('.qol-card'));
-      } catch(e){ startFish(); }
+      } catch (e) { startFish(); }
       // click bobber to manual trigger
-      if (fishingCard) fishingCard.closest('.qol-card').addEventListener('click', function(e){
+      if (fishingCard) fishingCard.closest('.qol-card').addEventListener('click', function (e) {
         if (e.target.closest('.qol-switch')) return;
         startFish();
       });
       // switch toggle
       var fishSw = document.querySelector('.qol-switch[data-qol=\"fish\"]');
-      if (fishSw) fishSw.addEventListener('click', function(){
+      if (fishSw) fishSw.addEventListener('click', function () {
         fishOn = fishSw.classList.contains('on');
-        if (fishOn) startFish(); else { if (fishIv){clearInterval(fishIv); fishIv=null;} fishBar.style.width='0%'; if(fishPct) fishPct.textContent='0%'; }
+        if (fishOn) startFish(); else { if (fishIv) { clearInterval(fishIv); fishIv = null; } fishBar.style.width = '0%'; if (fishPct) fishPct.textContent = '0%'; }
       });
     }
   })();
@@ -1089,256 +752,569 @@
     }
   }
 
+  /* ---- PASSIVES COLLECTION ---- */
+  (function () {
+    var cards = document.querySelectorAll('.passive-card');
+    if (!cards.length) return;
+    var collected = 0;
+    var STORAGE = 'rpgskills-passives-collected';
+
+    function updateProgress() {
+      var total = cards.length || 19;
+      var pct = Math.round(collected / total * 100);
+      var countEl = document.getElementById('collected-count');
+      var fillEl = document.getElementById('progress-fill');
+      if (countEl) countEl.textContent = collected;
+      if (fillEl) fillEl.style.width = pct + '%';
+    }
+
+    function setCollectedVisual(card, on) {
+      var icon = card.querySelector('.passive-icon');
+      if (!icon) return;
+      if (!icon.dataset.orig) icon.dataset.orig = icon.textContent.trim();
+      if (on) {
+        icon.textContent = '✓';
+        icon.style.background = 'rgba(74,222,128,0.14)';
+        icon.style.borderColor = 'rgba(74,222,128,0.22)';
+        icon.style.color = '#4ade80';
+      } else {
+        icon.textContent = icon.dataset.orig;
+        icon.style.background = '';
+        icon.style.borderColor = '';
+        icon.style.color = '';
+      }
+    }
+
+    function saveState() {
+      var ids = [];
+      cards.forEach(function (c, i) {
+        if (c.classList.contains('collected')) ids.push(String(i));
+      });
+      try { localStorage.setItem(STORAGE, JSON.stringify(ids)); } catch (e) { }
+    }
+
+    function loadState() {
+      try {
+        var raw = localStorage.getItem(STORAGE);
+        if (!raw) return;
+        var ids = JSON.parse(raw) || [];
+        ids.forEach(function (id) {
+          var idx = parseInt(id, 10);
+          if (!isNaN(idx) && cards[idx]) {
+            cards[idx].classList.add('collected');
+            setCollectedVisual(cards[idx], true);
+            collected += 1;
+          }
+        });
+      } catch (e) { }
+    }
+
+    cards.forEach(function (card) {
+      var ic = card.querySelector('.passive-icon');
+      if (ic && !ic.dataset.orig) ic.dataset.orig = ic.textContent.trim();
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.addEventListener('click', function () {
+        card.classList.toggle('collected');
+        var on = card.classList.contains('collected');
+        collected += on ? 1 : -1;
+        if (collected < 0) collected = 0;
+        if (collected > cards.length) collected = cards.length;
+        setCollectedVisual(card, on);
+        updateProgress();
+        saveState();
+      });
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+
+    document.querySelectorAll('[data-pass]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.dataset.pass;
+        document.querySelectorAll('[data-pass]').forEach(function (x) {
+          x.classList.toggle('active', x === b);
+        });
+        cards.forEach(function (c) {
+          var cat = c.dataset.cat;
+          var show = f === 'all' || cat === f;
+          c.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    loadState();
+    updateProgress();
+  })();
+
+  /* ---- FULL CHANGELOG (from release-notes via changelog-data.js) ---- */
+  (function () {
+    var mount = document.getElementById('changelog-timeline');
+    if (!mount || !window.RPG_CHANGELOG || !window.RPG_CHANGELOG.length) return;
+
+    var activeFilter = 'all';
+
+    function localePack(entry) {
+      return currentLang === 'en' ? (entry.en || entry.pt) : (entry.pt || entry.en);
+    }
+
+    function tagLabel(entry) {
+      return t(entry.tagKey, entry.tag);
+    }
+
+    function sectionIsFix(heading) {
+      var h = (heading || '').toLowerCase();
+      return h.indexOf('corre') !== -1 || h.indexOf('fix') !== -1;
+    }
+
+    function render() {
+      var html = '';
+      window.RPG_CHANGELOG.forEach(function (entry) {
+        var pack = localePack(entry);
+        var sections = (pack && pack.sections) || [];
+        html += '<div class="changelog-item polish reveal" data-cl-type="' + entry.tag + '">';
+        html += '<div><span class="changelog-version">v' + entry.version + '</span>';
+        html += '<span class="changelog-tag ' + entry.tagClass + '" data-i18n="' + entry.tagKey + '">' + tagLabel(entry) + '</span></div>';
+        if (pack && pack.title) {
+          html += '<p class="changelog-note" style="margin-top:8px;color:#fff;font-weight:600;">' + pack.title + '</p>';
+        }
+        sections.forEach(function (sec) {
+          var fixSec = sectionIsFix(sec.heading);
+          html += '<div class="changelog-section">';
+          if (sec.heading) {
+            html += '<h4 class="changelog-section-title">' + sec.heading + '</h4>';
+          }
+          html += '<ul class="changelog-list">';
+          (sec.items || []).forEach(function (item) {
+            html += '<li' + (fixSec ? ' class="fix"' : '') + '>' + item + '</li>';
+          });
+          html += '</ul></div>';
+        });
+        if (pack && pack.note) {
+          html += '<p class="changelog-note">' + pack.note + '</p>';
+        }
+        html += '</div>';
+      });
+      mount.innerHTML = html;
+      applyFilter(activeFilter);
+      if (window.Reveal && typeof window.Reveal.refresh === 'function') {
+        try { window.Reveal.refresh(); } catch (e) { }
+      }
+      // re-observe reveal for newly injected nodes
+      document.querySelectorAll('#changelog-timeline .reveal:not(.visible)').forEach(function (el) {
+        el.classList.add('visible');
+      });
+    }
+
+    function applyFilter(f) {
+      activeFilter = f || 'all';
+      mount.querySelectorAll('.changelog-item').forEach(function (it) {
+        var type = it.getAttribute('data-cl-type') || '';
+        var show = activeFilter === 'all' || activeFilter === type ||
+          (activeFilter === 'major' && (type === 'major' || type === 'new' || type === 'release'));
+        it.style.display = show ? '' : 'none';
+      });
+    }
+
+    document.querySelectorAll('[data-cl]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.dataset.cl;
+        document.querySelectorAll('[data-cl]').forEach(function (x) {
+          x.classList.toggle('active', x === b);
+        });
+        applyFilter(f);
+      });
+    });
+
+    document.addEventListener('rpgskills:i18n', render);
+    render();
+  })();
+
   /* ---- CLASS MODAL ---- */
+  function L(pair) {
+    if (!pair) return '';
+    if (typeof pair === 'string') return pair;
+    return currentLang === 'en' ? (pair[1] || pair[0]) : pair[0];
+  }
+
   var CLASS_DATA = {
     'class.warrior': {
-      icon: '&#9876;', color: 'var(--cat-combat)', tab: 'Combate',
+      icon: '&#9876;', color: 'var(--cat-combat)', tabKey: 'modal.tab.combat',
       bonuses: [
-        ['Dano Corpo a Corpo', '+10%/pt'], ['Dano Crítico', '+10%/pt'], ['Chance Crítica', '+10%/pt'],
-        ['Penetração de Armadura', '+10%/pt'], ['Velocidade de Ataque', '+10%/pt'], ['Poder de Empurrão', '+10%/pt']
+        [['Dano Corpo a Corpo', 'Melee Damage'], '+10%/pt'],
+        [['Dano Crítico', 'Critical Damage'], '+10%/pt'],
+        [['Chance Crítica', 'Critical Chance'], '+10%/pt'],
+        [['Penetração de Armadura', 'Armor Penetration'], '+10%/pt'],
+        [['Velocidade de Ataque', 'Attack Speed'], '+10%/pt'],
+        [['Poder de Empurrão', 'Knockback'], '+10%/pt']
       ],
       passives: [],
-      note: 'Deus do Dano: todas as 4 classes de combate nível 5 = +50% dano total'
+      note: ['Deus do Dano: todas as 4 classes de combate nível 5 = +50% dano total', 'Damage God: all 4 combat classes at level 5 = +50% total damage']
     },
     'class.marksman': {
-      icon: '&#127993;', color: 'var(--cat-combat)', tab: 'Combate',
+      icon: '&#127993;', color: 'var(--cat-combat)', tabKey: 'modal.tab.combat',
       bonuses: [
-        ['Dano à Distância', '+10%/pt'], ['Dano Crítico', '+10%/pt'], ['Chance Crítica', '+10%/pt'],
-        ['Penetração de Armadura', '+10%/pt'], ['Velocidade do Projétil', '+10%/pt'], ['Poder de Empurrão', '+10%/pt']
+        [['Dano à Distância', 'Ranged Damage'], '+10%/pt'],
+        [['Dano Crítico', 'Critical Damage'], '+10%/pt'],
+        [['Chance Crítica', 'Critical Chance'], '+10%/pt'],
+        [['Penetração de Armadura', 'Armor Penetration'], '+10%/pt'],
+        [['Velocidade do Projétil', 'Projectile Speed'], '+10%/pt'],
+        [['Poder de Empurrão', 'Knockback'], '+10%/pt']
       ],
-      passives: [{name: 'Olho de Águia', req: '>=1 ponto', desc: 'Mostra barras de vida e radar de inimigos'}]
+      passives: [{
+        name: ['Olho de Águia', 'Eagle Eye'],
+        req: 'modal.req.point1',
+        desc: ['Mostra barras de vida e radar de inimigos', 'Shows health bars and enemy radar']
+      }]
     },
     'class.magic': {
-      icon: '&#128302;', color: 'var(--cat-combat)', tab: 'Combate',
+      icon: '&#128302;', color: 'var(--cat-combat)', tabKey: 'modal.tab.combat',
       bonuses: [
-        ['Dano Mágico', '+10%/pt'], ['Dano Crítico', '+10%/pt'], ['Chance Crítica', '+10%/pt'],
-        ['Regeneração de Mana', '+10%/pt'], ['Velocidade de Ataque Mágico', '+10%/pt'], ['Poder de Empurrão', '+10%/pt']
+        [['Dano Mágico', 'Magic Damage'], '+10%/pt'],
+        [['Dano Crítico', 'Critical Damage'], '+10%/pt'],
+        [['Chance Crítica', 'Critical Chance'], '+10%/pt'],
+        [['Regeneração de Mana', 'Mana Regen'], '+10%/pt'],
+        [['Velocidade de Ataque Mágico', 'Magic Attack Speed'], '+10%/pt'],
+        [['Poder de Empurrão', 'Knockback'], '+10%/pt']
       ],
       passives: []
     },
     'class.summoner': {
-      icon: '&#128058;', color: 'var(--cat-combat)', tab: 'Combate',
+      icon: '&#128058;', color: 'var(--cat-combat)', tabKey: 'modal.tab.combat',
       bonuses: [
-        ['Dano de Invocação', '+10%/pt'], ['Dano Crítico', '+10%/pt'], ['Chance Crítica', '+10%/pt'],
-        ['Velocidade de Invocação', '+10%/pt'], ['Máx. Invocações', '+2/pt (cap 10)'], ['Poder de Empurrão', '+10%/pt']
+        [['Dano de Invocação', 'Summon Damage'], '+10%/pt'],
+        [['Dano Crítico', 'Critical Damage'], '+10%/pt'],
+        [['Chance Crítica', 'Critical Chance'], '+10%/pt'],
+        [['Velocidade de Invocação', 'Summon Speed'], '+10%/pt'],
+        [['Máx. Invocações', 'Max Summons'], '+2/pt (cap 10)'],
+        [['Poder de Empurrão', 'Knockback'], '+10%/pt']
       ],
       passives: []
     },
     'class.bloodthirsty': {
-      icon: '&#129657;', color: 'var(--cat-combat)', tab: 'Combate',
+      icon: '&#129657;', color: 'var(--cat-combat)', tabKey: 'modal.tab.combat',
       bonuses: [
-        ['Dano de Sangramento/s', '+5/pt (cap 25)'], ['Duração do Sangramento', '+3s/pt (cap 15s)'], ['Lentidão Necrótica', '+3s/pt (cap 15s)']
+        [['Dano de Sangramento/s', 'Bleed Damage/s'], '+5/pt (cap 25)'],
+        [['Duração do Sangramento', 'Bleed Duration'], '+3s/pt (cap 15s)'],
+        [['Lentidão Necrótica', 'Necrotic Slow'], '+3s/pt (cap 15s)']
       ],
       passives: [],
-      note: 'Nível 5: Quebra de armadura adicional'
+      note: ['Nível 5: Quebra de armadura adicional', 'Level 5: Extra armor break']
     },
     'class.fire': {
-      icon: '&#128293;', color: 'var(--cat-combat)', tab: 'Combate',
+      icon: '&#128293;', color: 'var(--cat-combat)', tabKey: 'modal.tab.combat',
       bonuses: [
-        ['Dano de Queimadura/s', '+5/pt (cap 25)'], ['Duração da Queimadura', '+3s/pt (cap 15s)'], ['Lentidão Necrótica', '+3s/pt (cap 15s)']
+        [['Dano de Queimadura/s', 'Burn Damage/s'], '+5/pt (cap 25)'],
+        [['Duração da Queimadura', 'Burn Duration'], '+3s/pt (cap 15s)'],
+        [['Lentidão Necrótica', 'Necrotic Slow'], '+3s/pt (cap 15s)']
       ],
       passives: []
     },
     'class.poison': {
-      icon: '&#9760;', color: 'var(--cat-combat)', tab: 'Combate',
+      icon: '&#9760;', color: 'var(--cat-combat)', tabKey: 'modal.tab.combat',
       bonuses: [
-        ['Dano de Veneno/s', '+5/pt (cap 25)'], ['Duração do Veneno', '+3s/pt (cap 15s)'], ['Lentidão Necrótica', '+3s/pt (cap 15s)']
+        [['Dano de Veneno/s', 'Poison Damage/s'], '+5/pt (cap 25)'],
+        [['Duração do Veneno', 'Poison Duration'], '+3s/pt (cap 15s)'],
+        [['Lentidão Necrótica', 'Necrotic Slow'], '+3s/pt (cap 15s)']
       ],
       passives: []
     },
     'class.frost': {
-      icon: '&#10052;', color: 'var(--cat-combat)', tab: 'Combate',
+      icon: '&#10052;', color: 'var(--cat-combat)', tabKey: 'modal.tab.combat',
       bonuses: [
-        ['Dano de Geada/s', '+5/pt (cap 25)'], ['Duração da Geada', '+3s/pt (cap 15s)'], ['Duração do Frio', '+3s/pt (cap 15s)']
+        [['Dano de Geada/s', 'Frost Damage/s'], '+5/pt (cap 25)'],
+        [['Duração da Geada', 'Frost Duration'], '+3s/pt (cap 15s)'],
+        [['Duração do Frio', 'Chill Duration'], '+3s/pt (cap 15s)']
       ],
       passives: [],
-      note: 'Nível 5: 30% chance de congelar por 15s'
+      note: ['Nível 5: 30% chance de congelar por 15s', 'Level 5: 30% chance to freeze for 15s']
     },
     'class.nightmare': {
-      icon: '&#128128;', color: 'var(--cat-combat)', tab: 'Combate',
+      icon: '&#128128;', color: 'var(--cat-combat)', tabKey: 'modal.tab.combat',
       bonuses: [
-        ['Dano de Escuridão/s', '+5/pt (cap 25)'], ['Duração da Escuridão', '+3s/pt (cap 15s)'], ['Lentidão Necrótica', '+3s/pt (cap 15s)']
+        [['Dano de Escuridão/s', 'Darkness Damage/s'], '+5/pt (cap 25)'],
+        [['Duração da Escuridão', 'Darkness Duration'], '+3s/pt (cap 15s)'],
+        [['Lentidão Necrótica', 'Necrotic Slow'], '+3s/pt (cap 15s)']
       ],
       passives: [],
-      note: 'Nível 5: 5% chance de golpe mortal'
+      note: ['Nível 5: 5% chance de golpe mortal', 'Level 5: 5% chance of lethal strike']
     },
     'class.bloody': {
-      icon: '&#10084;', color: 'var(--cat-defense)', tab: 'Sobrevivência',
+      icon: '&#10084;', color: 'var(--cat-defense)', tabKey: 'modal.tab.survival',
       bonuses: [
-        ['Roubo de Vida', '+10%/pt'], ['Cura/s', '+0.6/pt (cap 3.0)'], ['Cura ao Comer', '+10/pt (cap 50)'],
-        ['Cura ao Matar', '+10%/pt']
+        [['Roubo de Vida', 'Life Steal'], '+10%/pt'],
+        [['Cura/s', 'Heal/s'], '+0.6/pt (cap 3.0)'],
+        [['Cura ao Comer', 'Heal on Eat'], '+10/pt (cap 50)'],
+        [['Cura ao Matar', 'Heal on Kill'], '+10%/pt']
       ],
       passives: []
     },
     'class.resistance': {
-      icon: '&#128737;', color: 'var(--cat-defense)', tab: 'Sobrevivência',
+      icon: '&#128737;', color: 'var(--cat-defense)', tabKey: 'modal.tab.survival',
       bonuses: [
-        ['Resistência Física', '+10%/pt'], ['Resistência Mágica', '+10%/pt'], ['Resistência a Empurrão', '+10%/pt']
+        [['Resistência Física', 'Physical Resistance'], '+10%/pt'],
+        [['Resistência Mágica', 'Magic Resistance'], '+10%/pt'],
+        [['Resistência a Empurrão', 'Knockback Resistance'], '+10%/pt']
       ],
       passives: []
     },
     'class.elemental': {
-      icon: '&#128167;', color: 'var(--cat-defense)', tab: 'Sobrevivência',
+      icon: '&#128167;', color: 'var(--cat-defense)', tabKey: 'modal.tab.survival',
       bonuses: [
-        ['Redução de Dano de Fogo', '+10%/pt'], ['Resistência a Sangramento', '+10%/pt']
+        [['Redução de Dano de Fogo', 'Fire Damage Reduction'], '+10%/pt'],
+        [['Resistência a Sangramento', 'Bleed Resistance'], '+10%/pt']
       ],
-      passives: [{name: 'Graça de Hermes', req: 'Nível 4-5', desc: 'Lv4: Imunidade a lentidão. Lv5: Remove e bloqueia debuffs'}]
+      passives: [{
+        name: ['Graça de Hermes', "Hermes' Grace"],
+        req: 'modal.req.lv4_5',
+        desc: ['Lv4: Imunidade a lentidão. Lv5: Remove e bloqueia debuffs', 'Lv4: Slow immunity. Lv5: Removes and blocks debuffs']
+      }]
     },
     'class.colossal': {
-      icon: '&#129657;', color: 'var(--cat-defense)', tab: 'Sobrevivência',
+      icon: '&#129657;', color: 'var(--cat-defense)', tabKey: 'modal.tab.survival',
       bonuses: [
-        ['Invulnerabilidade Temporária', '+2s/pt (cap 10s)']
+        [['Invulnerabilidade Temporária', 'Temporary Invulnerability'], '+2s/pt (cap 10s)']
       ],
-      passives: [{name: 'Proteção Colossal', req: '>=1 ponto', desc: 'Invulnerabilidade ao ser atingido. 30s cooldown'}]
+      passives: [{
+        name: ['Proteção Colossal', 'Colossal Protection'],
+        req: 'modal.req.point1',
+        desc: ['Invulnerabilidade ao ser atingido. 30s cooldown', 'Invulnerability when hit. 30s cooldown']
+      }]
     },
     'class.vitality': {
-      icon: '&#10084;', color: 'var(--cat-defense)', tab: 'Sobrevivência',
+      icon: '&#10084;', color: 'var(--cat-defense)', tabKey: 'modal.tab.survival',
       bonuses: [
-        ['HP Máximo', '+20/pt (cap 100)'], ['Regeneração de HP', '+10%/pt'], ['Sobrevivência Fatal', '+3%/pt (cap 15%)']
+        [['HP Máximo', 'Max HP'], '+20/pt (cap 100)'],
+        [['Regeneração de HP', 'HP Regen'], '+10%/pt'],
+        [['Sobrevivência Fatal', 'Fatal Survival'], '+3%/pt (cap 15%)']
       ],
-      passives: [{name: 'Bênção Vital', req: '>=1 ponto', desc: 'HP extra/s com poção de vida ativa'}]
+      passives: [{
+        name: ['Bênção Vital', 'Vital Blessing'],
+        req: 'modal.req.point1',
+        desc: ['HP extra/s com poção de vida ativa', 'Extra HP/s while a life potion is active']
+      }]
     },
     'class.defense': {
-      icon: '&#128737;', color: 'var(--cat-defense)', tab: 'Sobrevivência',
+      icon: '&#128737;', color: 'var(--cat-defense)', tabKey: 'modal.tab.survival',
       bonuses: [
-        ['Ganho de Defesa', '+5/pt (cap 25)'], ['Espinhos', '+10%/pt']
+        [['Ganho de Defesa', 'Defense Gain'], '+5/pt (cap 25)'],
+        [['Espinhos', 'Thorns'], '+10%/pt']
       ],
       passives: []
     },
     'class.resilient': {
-      icon: '&#128167;', color: 'var(--cat-defense)', tab: 'Sobrevivência',
+      icon: '&#128167;', color: 'var(--cat-defense)', tabKey: 'modal.tab.survival',
       bonuses: [
-        ['Resiliência Máxima', '+20/pt (cap 100)'], ['Ganho de Resiliência', '+10%/pt'], ['Regen de Resiliência', '+10%/pt']
+        [['Resiliência Máxima', 'Max Resilience'], '+20/pt (cap 100)'],
+        [['Ganho de Resiliência', 'Resilience Gain'], '+10%/pt'],
+        [['Regen de Resiliência', 'Resilience Regen'], '+10%/pt']
       ],
       passives: []
     },
     'class.speed': {
-      icon: '&#128095;', color: 'var(--cat-mobility)', tab: 'Mobilidade',
+      icon: '&#128095;', color: 'var(--cat-mobility)', tabKey: 'modal.tab.mobility',
       bonuses: [
-        ['Velocidade de Movimento', '+10%/pt'], ['Bônus de Corrida', '+10%/pt'], ['Controle de Mobilidade', '+10%/pt']
+        [['Velocidade de Movimento', 'Move Speed'], '+10%/pt'],
+        [['Bônus de Corrida', 'Sprint Bonus'], '+10%/pt'],
+        [['Controle de Mobilidade', 'Mobility Control'], '+10%/pt']
       ],
       passives: []
     },
     'class.dash': {
-      icon: '&#128168;', color: 'var(--cat-mobility)', tab: 'Mobilidade',
+      icon: '&#128168;', color: 'var(--cat-mobility)', tabKey: 'modal.tab.mobility',
       bonuses: [
-        ['Capacidade de Dash', '+2/pt (cap 10)'], ['Cooldown do Dash', '-10%/pt']
+        [['Capacidade de Dash', 'Dash Capacity'], '+2/pt (cap 10)'],
+        [['Cooldown do Dash', 'Dash Cooldown'], '-10%/pt']
       ],
       passives: []
     },
     'class.reduction': {
-      icon: '&#127919;', color: 'var(--cat-mobility)', tab: 'Mobilidade',
+      icon: '&#127919;', color: 'var(--cat-mobility)', tabKey: 'modal.tab.mobility',
       bonuses: [
-        ['Uso de Munição', '-10%/pt'], ['Uso de Flechas', '-10%/pt'], ['Dano Crítico Recebido', '-10%/pt']
+        [['Uso de Munição', 'Ammo Usage'], '-10%/pt'],
+        [['Uso de Flechas', 'Arrow Usage'], '-10%/pt'],
+        [['Dano Crítico Recebido', 'Crit Damage Taken'], '-10%/pt']
       ],
       passives: []
     },
     'class.cavern': {
-      icon: '&#9935;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#9935;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Velocidade de Mineração', '+10%/pt'], ['Alcance de Mineração', '+10%/pt'], ['Visibilidade Subterrânea', '+10%/pt']
+        [['Velocidade de Mineração', 'Mining Speed'], '+10%/pt'],
+        [['Alcance de Mineração', 'Mining Range'], '+10%/pt'],
+        [['Visibilidade Subterrânea', 'Underground Visibility'], '+10%/pt']
       ],
       passives: [
-        {name: 'Minerador de Veios', req: '>=1 ponto', desc: 'Minera veios inteiros automaticamente'},
-        {name: 'Ruína Escura', req: '>=1 ponto', desc: 'Alcance de trinket luminoso 250→350'}
+        {
+          name: ['Minerador de Veios', 'Vein Miner'],
+          req: 'modal.req.point1',
+          desc: ['Minera veios inteiros automaticamente', 'Mines entire veins automatically']
+        },
+        {
+          name: ['Ruína Escura', 'Dark Ruin'],
+          req: 'modal.req.point1',
+          desc: ['Alcance de trinket luminoso 250→350', 'Light trinket range 250→350']
+        }
       ],
-      note: 'Nível 5: Desbloqueia Minerador Explosivo na loja'
+      note: ['Nível 5: Desbloqueia Minerador Explosivo na loja', 'Level 5: Unlocks Explosive Miner in the shop']
     },
     'class.construction': {
-      icon: '&#128736;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#128736;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Velocidade de Construção', '+10%/pt'], ['Alcance de Interação', '+10%/pt'], ['Alcance de Construção', '+10%/pt'], ['Visão do Mapa', '+10%/pt']
+        [['Velocidade de Construção', 'Build Speed'], '+10%/pt'],
+        [['Alcance de Interação', 'Interact Range'], '+10%/pt'],
+        [['Alcance de Construção', 'Build Range'], '+10%/pt'],
+        [['Visão do Mapa', 'Map Vision'], '+10%/pt']
       ],
       passives: []
     },
     'class.arcane': {
-      icon: '&#10024;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#10024;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Mana Máxima', '+20/pt (cap 100)'], ['Regen de Mana', '+10%/pt'], ['Regen de Mana Flat', '+0.6/pt (cap 3.0)'], ['Redução de Custo', '+10%/pt']
+        [['Mana Máxima', 'Max Mana'], '+20/pt (cap 100)'],
+        [['Regen de Mana', 'Mana Regen'], '+10%/pt'],
+        [['Regen de Mana Flat', 'Flat Mana Regen'], '+0.6/pt (cap 3.0)'],
+        [['Redução de Custo', 'Cost Reduction'], '+10%/pt']
       ],
-      passives: [{name: 'Escritor Imortal', req: '>=1 ponto', desc: 'Scrolls de encantamento não são consumidos'}]
+      passives: [{
+        name: ['Escritor Imortal', 'Immortal Scribe'],
+        req: 'modal.req.point1',
+        desc: ['Scrolls de encantamento não são consumidos', 'Enchantment scrolls are not consumed']
+      }]
     },
     'class.wealth': {
-      icon: '&#129689;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#129689;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Encontro de Ouro', '+10%/pt'], ['Ganho de Ouro', '+10%/pt'], ['Ouro por Hit', '+10/pt (cap 50)']
+        [['Encontro de Ouro', 'Gold Find'], '+10%/pt'],
+        [['Ganho de Ouro', 'Gold Gain'], '+10%/pt'],
+        [['Ouro por Hit', 'Gold per Hit'], '+10/pt (cap 50)']
       ],
-      passives: [{name: 'Golpe de Ouro', req: '>=1 ponto', desc: 'Gera ouro a cada hit inimigo'}]
+      passives: [{
+        name: ['Golpe de Ouro', 'Gold Strike'],
+        req: 'modal.req.point1',
+        desc: ['Gera ouro a cada hit inimigo', 'Grants gold on every enemy hit']
+      }]
     },
     'class.loot': {
-      icon: '&#127873;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#127873;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Qualidade do Saque', '+10%/pt'], ['Ganho de Saque', '2x-5x (50-100% chance)'], ['Chance de Drop Completo', '+10%/pt']
+        [['Qualidade do Saque', 'Loot Quality'], '+10%/pt'],
+        [['Ganho de Saque', 'Loot Gain'], '2x-5x (50-100% chance)'],
+        [['Chance de Drop Completo', 'Full Drop Chance'], '+10%/pt']
       ],
       passives: [],
-      note: 'Saque: 1pt=2x(50%), 2pt=3x(100%), 3pt=3x, 4pt=4x, 5pt=5x'
+      note: [
+        'Saque: 1pt=2x(50%), 2pt=3x(100%), 3pt=3x, 4pt=4x, 5pt=5x',
+        'Loot: 1pt=2x(50%), 2pt=3x(100%), 3pt=3x, 4pt=4x, 5pt=5x'
+      ]
     },
     'class.relic': {
-      icon: '&#128141;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#128141;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Slots de Trinket', '+4/pt (cap 20)'], ['Alcance de Coleta', '+10%/pt']
+        [['Slots de Trinket', 'Trinket Slots'], '+4/pt (cap 20)'],
+        [['Alcance de Coleta', 'Pickup Range'], '+10%/pt']
       ],
       passives: []
     },
     'class.realm': {
-      icon: '&#128081;', color: 'var(--cat-settler)', tab: 'Assentamento',
+      icon: '&#128081;', color: 'var(--cat-settler)', tabKey: 'modal.tab.settlement',
       bonuses: [
-        ['Felicidade do Assentamento', '+20/pt (cap 100)'], ['Desconto na Loja', '+10%/pt (cap 90%)']
+        [['Felicidade do Assentamento', 'Settlement Happiness'], '+20/pt (cap 100)'],
+        [['Desconto na Loja', 'Shop Discount'], '+10%/pt (cap 90%)']
       ],
       passives: [
-        {name: 'Líder do Assentamento', req: 'Nível 5', desc: 'Sem Rival + 3x XP + bloqueia greves'},
-        {name: 'Aura de Liderança', req: 'Nível 5', desc: '+15% dano/HP/resist/vel. nos colonos'},
-        {name: 'Administração Rica', req: 'Informacional', desc: '6+ personalidades = +1.5x XP'}
+        {
+          name: ['Líder do Assentamento', 'Settlement Leader'],
+          req: 'modal.req.lv5',
+          desc: ['Sem Rival + 3x XP + bloqueia greves', 'Unrivaled + 3x XP + blocks strikes']
+        },
+        {
+          name: ['Aura de Liderança', 'Leadership Aura'],
+          req: 'modal.req.lv5',
+          desc: ['+15% dano/HP/resist/vel. nos colonos', '+15% damage/HP/resist/speed for settlers']
+        },
+        {
+          name: ['Administração Rica', 'Rich Administration'],
+          req: 'modal.req.info',
+          desc: ['6+ personalidades = +1.5x XP', '6+ personalities = +1.5x XP']
+        }
       ]
     },
     'class.sea': {
-      icon: '&#127754;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#127754;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Poder de Pesca', '+10%/pt'], ['Linhas Extras', '+2/pt (cap 10)'], ['Velocidade de Natação', '+10%/pt']
+        [['Poder de Pesca', 'Fishing Power'], '+10%/pt'],
+        [['Linhas Extras', 'Extra Lines'], '+2/pt (cap 10)'],
+        [['Velocidade de Natação', 'Swim Speed'], '+10%/pt']
       ],
-      passives: [{name: 'Reflexo do Pescador', req: '>=1 ponto', desc: 'Pesca AFK: pega e recoloca isca automaticamente'}]
+      passives: [{
+        name: ['Reflexo do Pescador', "Angler's Reflex"],
+        req: 'modal.req.point1',
+        desc: ['Pesca AFK: pega e recoloca isca automaticamente', 'AFK fishing: auto-catch and re-bait']
+      }]
     },
     'class.gourmet': {
-      icon: '&#127830;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#127830;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Duração do Buff de Comida', '+25%/50%/75%/100%/300%']
+        [['Duração do Buff de Comida', 'Food Buff Duration'], '+25%/50%/75%/100%/300%']
       ],
-      passives: [{name: 'Sempre Barriga Cheia', req: 'Nível 5', desc: 'Come quando fome < 95%'}]
+      passives: [{
+        name: ['Sempre Barriga Cheia', 'Always Full'],
+        req: 'modal.req.lv5',
+        desc: ['Come quando fome < 95%', 'Eats when hunger < 95%']
+      }]
     },
     'class.alchemy': {
-      icon: '&#129514;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#129514;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Duração do Buff de Poção', '+25%/50%/75%/100%/300%']
+        [['Duração do Buff de Poção', 'Potion Buff Duration'], '+25%/50%/75%/100%/300%']
       ],
-      passives: [{name: 'Poção Automática', req: 'Nível 5', desc: 'Usa poções automaticamente quando HP <= 50%'}]
+      passives: [{
+        name: ['Poção Automática', 'Auto Potion'],
+        req: 'modal.req.lv5',
+        desc: ['Usa poções automaticamente quando HP <= 50%', 'Uses potions automatically when HP <= 50%']
+      }]
     },
     'class.ranch': {
-      icon: '&#128037;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#128037;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Velocidade do Rancho', '+25%/50%/75%/100%']
+        [['Velocidade do Rancho', 'Ranch Speed'], '+25%/50%/75%/100%']
       ],
-      passives: [{name: 'Colheita de Rancho', req: 'Nível 5', desc: 'Animais na zona de criação dropam 5x mais'}]
+      passives: [{
+        name: ['Colheita de Rancho', 'Ranch Harvest'],
+        req: 'modal.req.lv5',
+        desc: ['Animais na zona de criação dropam 5x mais', 'Animals in breeding zones drop 5x more']
+      }]
     },
     'class.machine': {
-      icon: '&#9881;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#9881;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Velocidade das Máquinas', 'Forno: 6s→2s, Prensa: 45s→2s, Compost: 30s→2s'], ['Duração do Combustível', '80s→600s']
+        [['Velocidade das Máquinas', 'Machine Speed'], ['Forno: 6s→2s, Prensa: 45s→2s, Compost: 30s→2s', 'Furnace: 6s→2s, Press: 45s→2s, Compost: 30s→2s']],
+        [['Duração do Combustível', 'Fuel Duration'], '80s→600s']
       ],
       passives: []
     },
     'class.nature': {
-      icon: '&#127793;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#127793;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Velocidade de Crescimento', '+25%/50%/75%/100%/300%']
+        [['Velocidade de Crescimento', 'Growth Speed'], '+25%/50%/75%/100%/300%']
       ],
       passives: []
     },
     'class.trap': {
-      icon: '&#128483;', color: 'var(--cat-utility)', tab: 'Utilidade',
+      icon: '&#128483;', color: 'var(--cat-utility)', tabKey: 'modal.tab.utility',
       bonuses: [
-        ['Maestria em Armadilhas', 'Dano +150%-300%'], ['Proteção Aliada', 'Reduz dano aliado em 50%-100%']
+        [['Maestria em Armadilhas', 'Trap Mastery'], ['Dano +150%-300%', 'Damage +150%-300%']],
+        [['Proteção Aliada', 'Ally Protection'], ['Reduz dano aliado em 50%-100%', 'Reduces ally damage by 50%-100%']]
       ],
-      passives: [{name: 'Engenharia Defensiva', req: 'Nível 5', desc: 'Armadilhas aplicam sangramento'}]
+      passives: [{
+        name: ['Engenharia Defensiva', 'Defensive Engineering'],
+        req: 'modal.req.lv5',
+        desc: ['Armadilhas aplicam sangramento', 'Traps apply bleed']
+      }]
     }
   };
 
@@ -1363,11 +1339,11 @@
 
     modalIcon.innerHTML = data.icon;
     var colorMap = {
-      'var(--cat-combat)':   { bg: 'rgba(239,68,68,0.12)',   fg: 'var(--cat-combat)' },
-      'var(--cat-defense)':  { bg: 'rgba(96,165,250,0.12)',  fg: 'var(--cat-defense)' },
+      'var(--cat-combat)': { bg: 'rgba(239,68,68,0.12)', fg: 'var(--cat-combat)' },
+      'var(--cat-defense)': { bg: 'rgba(96,165,250,0.12)', fg: 'var(--cat-defense)' },
       'var(--cat-mobility)': { bg: 'rgba(167,139,250,0.12)', fg: 'var(--cat-mobility)' },
-      'var(--cat-utility)':  { bg: 'rgba(234,179,8,0.12)',   fg: 'var(--cat-utility)' },
-      'var(--cat-settler)':  { bg: 'rgba(74,222,128,0.12)',  fg: 'var(--cat-settler)' }
+      'var(--cat-utility)': { bg: 'rgba(234,179,8,0.12)', fg: 'var(--cat-utility)' },
+      'var(--cat-settler)': { bg: 'rgba(74,222,128,0.12)', fg: 'var(--cat-settler)' }
     };
     var cm = colorMap[data.color] || { bg: 'rgba(212,136,28,0.12)', fg: 'var(--gold)' };
     modalIcon.style.background = cm.bg;
@@ -1376,32 +1352,34 @@
     modal.style.setProperty('--cat-bg', cm.bg);
     modalTitle.textContent = h4.textContent;
 
-    var tabMap = {
-      'Combate': '&#9876; Combate',
-      'Sobrevivência': '&#10084; Sobrevivência',
-      'Mobilidade': '&#128170; Mobilidade',
-      'Utilidade': '&#9881; Utilidade',
-      'Assentamento': '&#127969; Assentamento'
+    var tabIcons = {
+      'modal.tab.combat': '&#9876; ',
+      'modal.tab.survival': '&#10084; ',
+      'modal.tab.mobility': '&#128170; ',
+      'modal.tab.utility': '&#9881; ',
+      'modal.tab.settlement': '&#127969; '
     };
-    modalTab.innerHTML = tabMap[data.tab] || data.tab;
+    var tabLabel = t(data.tabKey, data.tabKey);
+    modalTab.innerHTML = (tabIcons[data.tabKey] || '') + tabLabel;
 
     var html = '';
     if (data.bonuses && data.bonuses.length) {
-      html += '<div class="modal-section"><h4>Bônus por Ponto</h4><div class="bonus-grid">';
+      html += '<div class="modal-section"><h4>' + t('modal.bonuses', 'Bônus por Ponto') + '</h4><div class="bonus-grid">';
       data.bonuses.forEach(function (b) {
-        html += '<div class="bonus-item"><span class="bonus-name">' + b[0] + '</span><span class="bonus-value">' + b[1] + '</span></div>';
+        html += '<div class="bonus-item"><span class="bonus-name">' + L(b[0]) + '</span><span class="bonus-value">' + L(b[1]) + '</span></div>';
       });
       html += '</div></div>';
     }
     if (data.passives && data.passives.length) {
-      html += '<div class="modal-section"><h4>Passivas Desbloqueáveis</h4>';
+      html += '<div class="modal-section"><h4>' + t('modal.passives', 'Passivas Desbloqueáveis') + '</h4>';
       data.passives.forEach(function (p) {
-        html += '<div class="passive-tag"><span class="passive-icon">&#9733;</span><div><strong>' + p.name + '</strong> - ' + p.desc + '<br><small>' + p.req + '</small></div></div>';
+        var req = p.req && p.req.indexOf('modal.') === 0 ? t(p.req, p.req) : L(p.req);
+        html += '<div class="passive-tag"><span class="passive-icon">&#9733;</span><div><strong>' + L(p.name) + '</strong> - ' + L(p.desc) + '<br><small>' + req + '</small></div></div>';
       });
       html += '</div>';
     }
     if (data.note) {
-      html += '<div class="modal-section"><h4>Observação</h4><p class="modal-note">' + data.note + '</p></div>';
+      html += '<div class="modal-section"><h4>' + t('modal.note', 'Observação') + '</h4><p class="modal-note">' + L(data.note) + '</p></div>';
     }
 
     modalBody.innerHTML = html;
@@ -1425,6 +1403,13 @@
   });
 
   /* ---- INIT ---- */
-  setLanguage(detectLanguage());
+  currentLang = detectLanguage();
+  document.documentElement.lang = currentLang === 'pt-BR' ? 'pt-BR' : 'en';
+  document.querySelectorAll('.lang-option').forEach(function (btn) {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === currentLang);
+  });
+  loadI18nDictionaries().then(function () {
+    setLanguage(currentLang);
+  });
 
 })();

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="RPG Skills v2.7 - Mod de progressão RPG para Necesse 1.3.2. 33 classes, sistema de XP, passivas, ativas e muito mais.">
+  <meta name="description"
+    content="RPG Skills v2.7 - Mod de progressão RPG para Necesse 1.3.2. 33 classes, sistema de XP, passivas, ativas e muito mais.">
   <meta name="theme-color" content="#0a0a0f">
   <title>RPG Skills v2.7 - Necesse 1.3.2</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
@@ -29,17 +33,19 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero::before {
-      content:"";
+      content: "";
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 90% 60% at 50% -10%, rgba(212,136,28,0.16) 0%, transparent 60%),
-        radial-gradient(ellipse 70% 50% at 15% 60%, rgba(212,136,28,0.07) 0%, transparent 55%),
-        radial-gradient(ellipse 60% 45% at 85% 75%, rgba(96,165,250,0.05) 0%, transparent 55%);
+        radial-gradient(ellipse 90% 60% at 50% -10%, rgba(212, 136, 28, 0.16) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 50% at 15% 60%, rgba(212, 136, 28, 0.07) 0%, transparent 55%),
+        radial-gradient(ellipse 60% 45% at 85% 75%, rgba(96, 165, 250, 0.05) 0%, transparent 55%);
       z-index: 1;
       pointer-events: none;
     }
+
     /* floating orbs */
     .hero-orb {
       position: absolute;
@@ -48,34 +54,83 @@
       z-index: 1;
       filter: blur(1px);
     }
+
     .hero-orb--1 {
-      width: 420px; height: 420px;
-      top: -120px; left: 50%;
+      width: 420px;
+      height: 420px;
+      top: -120px;
+      left: 50%;
       transform: translateX(-50%);
-      background: radial-gradient(circle, rgba(212,136,28,0.10) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(212, 136, 28, 0.10) 0%, transparent 70%);
       animation: orbFloat 8s ease-in-out infinite;
     }
+
     .hero-orb--2 {
-      width: 600px; height: 600px;
-      bottom: -200px; right: -150px;
-      background: radial-gradient(circle, rgba(212,136,28,0.06) 0%, transparent 70%);
+      width: 600px;
+      height: 600px;
+      bottom: -200px;
+      right: -150px;
+      background: radial-gradient(circle, rgba(212, 136, 28, 0.06) 0%, transparent 70%);
       animation: orbFloat 11s ease-in-out infinite reverse;
     }
+
     .hero-orb--3 {
-      width: 500px; height: 500px;
-      bottom: -150px; left: -150px;
-      background: radial-gradient(circle, rgba(96,165,250,0.04) 0%, transparent 70%);
+      width: 500px;
+      height: 500px;
+      bottom: -150px;
+      left: -150px;
+      background: radial-gradient(circle, rgba(96, 165, 250, 0.04) 0%, transparent 70%);
       animation: orbFloat 9s ease-in-out infinite;
     }
+
     @keyframes orbFloat {
-      0%,100% { transform: translateY(0) translateX(-50%) scale(1); }
-      50% { transform: translateY(-18px) translateX(-50%) scale(1.04); }
+
+      0%,
+      100% {
+        transform: translateY(0) translateX(-50%) scale(1);
+      }
+
+      50% {
+        transform: translateY(-18px) translateX(-50%) scale(1.04);
+      }
     }
-    .hero-orb--2, .hero-orb--3 { transform: none; }
-    .hero-orb--2 { animation-name: orbFloat2; }
-    .hero-orb--3 { animation-name: orbFloat3; }
-    @keyframes orbFloat2 { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-14px) scale(1.02)} }
-    @keyframes orbFloat3 { 0%,100%{transform:translateY(0) scale(1)} 50%{transform:translateY(-12px) scale(1.03)} }
+
+    .hero-orb--2,
+    .hero-orb--3 {
+      transform: none;
+    }
+
+    .hero-orb--2 {
+      animation-name: orbFloat2;
+    }
+
+    .hero-orb--3 {
+      animation-name: orbFloat3;
+    }
+
+    @keyframes orbFloat2 {
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1)
+      }
+
+      50% {
+        transform: translateY(-14px) scale(1.02)
+      }
+    }
+
+    @keyframes orbFloat3 {
+
+      0%,
+      100% {
+        transform: translateY(0) scale(1)
+      }
+
+      50% {
+        transform: translateY(-12px) scale(1.03)
+      }
+    }
 
     .hero-content {
       position: relative;
@@ -83,6 +138,7 @@
       max-width: 860px;
       animation: fadeInUp 0.9s ease-out;
     }
+
     .hero-badge {
       display: inline-flex;
       gap: 10px;
@@ -90,13 +146,27 @@
       justify-content: center;
       margin-bottom: 28px;
       padding: 6px 14px;
-      background: rgba(212,136,28,0.08);
-      border: 1px solid rgba(212,136,28,0.18);
+      background: rgba(212, 136, 28, 0.08);
+      border: 1px solid rgba(212, 136, 28, 0.18);
       border-radius: 999px;
       backdrop-filter: blur(6px);
     }
-    .hero-badge .tag { background: transparent; border: none; padding: 2px 6px; font-size: 0.72rem; letter-spacing: 0.08em; }
-    .hero-badge .tag-version { background: var(--gold); color: #120a00; border-radius: 999px; padding: 3px 10px; font-weight: 800; }
+
+    .hero-badge .tag {
+      background: transparent;
+      border: none;
+      padding: 2px 6px;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-badge .tag-version {
+      background: var(--gold);
+      color: #120a00;
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-weight: 800;
+    }
 
     .hero-title-wrap {
       display: flex;
@@ -105,17 +175,21 @@
       gap: 18px;
       margin-bottom: 6px;
     }
+
     .hero-emblem {
-      width: 42px; height: 42px;
-      display: grid; place-items: center;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
       font-size: 1.2rem;
-      background: linear-gradient(135deg, rgba(212,136,28,0.18), rgba(212,136,28,0.04));
-      border: 1px solid rgba(212,136,28,0.28);
+      background: linear-gradient(135deg, rgba(212, 136, 28, 0.18), rgba(212, 136, 28, 0.04));
+      border: 1px solid rgba(212, 136, 28, 0.28);
       border-radius: 10px;
-      box-shadow: 0 4px 18px rgba(212,136,28,0.18), inset 0 0 12px rgba(212,136,28,0.08);
+      box-shadow: 0 4px 18px rgba(212, 136, 28, 0.18), inset 0 0 12px rgba(212, 136, 28, 0.08);
       color: var(--gold);
       flex: 0 0 auto;
     }
+
     .hero-title {
       margin: 0;
       font-size: clamp(2.8rem, 7vw, 5.4rem);
@@ -127,13 +201,14 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      filter: drop-shadow(0 4px 18px rgba(212,136,28,0.25)) drop-shadow(0 0 40px rgba(212,136,28,0.18));
+      filter: drop-shadow(0 4px 18px rgba(212, 136, 28, 0.25)) drop-shadow(0 0 40px rgba(212, 136, 28, 0.18));
       display: inline-flex;
       flex-wrap: wrap;
       justify-content: center;
       -webkit-text-stroke: 0;
       text-shadow: none;
     }
+
     .hero-title .letter {
       display: inline-block;
       animation: letterWave 2.6s ease-in-out infinite;
@@ -141,9 +216,23 @@
       -webkit-background-clip: text;
       background-clip: text;
     }
-    .hero-title .letter.space { width: 0.28em; }
+
+    .hero-title .letter.space {
+      width: 0.28em;
+    }
+
     /* keep wave delays */
-    @keyframes letterWave { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+    @keyframes letterWave {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-7px)
+      }
+    }
 
     .hero-divider {
       display: flex;
@@ -153,16 +242,19 @@
       margin: 14px auto 18px;
       max-width: 420px;
     }
+
     .hero-divider span:first-child,
     .hero-divider span:last-child {
-      flex:1; height:1px;
-      background: linear-gradient(90deg, transparent, rgba(212,136,28,0.55), transparent);
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 136, 28, 0.55), transparent);
     }
+
     .hero-divider span:nth-child(2) {
-      color: rgba(212,136,28,0.85);
+      color: rgba(212, 136, 28, 0.85);
       font-size: 0.7rem;
       letter-spacing: 6px;
-      text-shadow: 0 0 8px rgba(212,136,28,0.6);
+      text-shadow: 0 0 8px rgba(212, 136, 28, 0.6);
     }
 
     .hero-tagline {
@@ -175,134 +267,233 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      filter: drop-shadow(0 0 14px rgba(212,136,28,0.35));
+      filter: drop-shadow(0 0 14px rgba(212, 136, 28, 0.35));
       margin-bottom: 22px;
       animation: taglineShine 3s ease-in-out infinite;
       background-size: 200% 100%;
     }
-    @keyframes taglineShine { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+
+    @keyframes taglineShine {
+
+      0%,
+      100% {
+        background-position: 0% 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+    }
 
     .hero-subtitle-card {
-      background: linear-gradient(180deg, rgba(18,14,18,0.92), rgba(10,10,15,0.96));
-      border: 1px solid rgba(212,136,28,0.18);
+      background: linear-gradient(180deg, rgba(18, 14, 18, 0.92), rgba(10, 10, 15, 0.96));
+      border: 1px solid rgba(212, 136, 28, 0.18);
       border-radius: 16px;
       padding: 22px 22px 18px;
       max-width: 640px;
       margin: 0 auto 26px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.03);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
       position: relative;
       overflow: hidden;
     }
+
     .hero-subtitle-card::before {
-      content:"";
+      content: "";
       position: absolute;
-      top:0; left:0; right:0; height:1px;
-      background: linear-gradient(90deg, transparent, rgba(212,136,28,0.45), transparent);
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 136, 28, 0.45), transparent);
     }
+
     .hero-subtitle {
       margin: 0;
       max-width: none;
     }
-    .hero-line { color: var(--text-body); }
-    .hero-line-intro { color: var(--text-muted); font-style: italic; font-size: 0.98rem; }
-    .hero-line-imagine { color: #fff; font-weight: 700; font-size: 1.08rem; }
-    .hero-line-imagine .text-green { color: var(--gold-light); text-shadow: 0 0 10px rgba(212,136,28,0.4); }
-    .hero-feature-item {
-      background: linear-gradient(135deg, rgba(212,136,28,0.09) 0%, rgba(212,136,28,0.03) 100%);
-      border: 1px solid rgba(212,136,28,0.18);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+
+    .hero-line {
+      color: var(--text-body);
     }
-    .hero-feature-item strong { color: #ffd38a; }
-    .hero-line-challenge { color: var(--text-muted); }
+
+    .hero-line-intro {
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 0.98rem;
+    }
+
+    .hero-line-imagine {
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.08rem;
+    }
+
+    .hero-line-imagine .text-green {
+      color: var(--gold-light);
+      text-shadow: 0 0 10px rgba(212, 136, 28, 0.4);
+    }
+
+    .hero-feature-item {
+      background: linear-gradient(135deg, rgba(212, 136, 28, 0.09) 0%, rgba(212, 136, 28, 0.03) 100%);
+      border: 1px solid rgba(212, 136, 28, 0.18);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-feature-item strong {
+      color: #ffd38a;
+    }
+
+    .hero-line-challenge {
+      color: var(--text-muted);
+    }
+
     .hero-line-challenge .text-gold {
       background: linear-gradient(90deg, var(--gold), #ffd38a);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      filter: drop-shadow(0 0 8px rgba(212,136,28,0.3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: drop-shadow(0 0 8px rgba(212, 136, 28, 0.3));
     }
 
     .hero-buttons .btn-primary {
       background: linear-gradient(180deg, #e8a030, #c2761a);
       color: #120a00;
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: 0 8px 24px rgba(212,136,28,0.35), 0 0 0 1px rgba(212,136,28,0.4) inset;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 8px 24px rgba(212, 136, 28, 0.35), 0 0 0 1px rgba(212, 136, 28, 0.4) inset;
       font-weight: 800;
       letter-spacing: 0.06em;
     }
-    .hero-buttons .btn-primary:hover { background: linear-gradient(180deg, #f0b24a, #d4881c); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(212,136,28,0.45); }
+
+    .hero-buttons .btn-primary:hover {
+      background: linear-gradient(180deg, #f0b24a, #d4881c);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(212, 136, 28, 0.45);
+    }
+
     .hero-buttons .btn-outline {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(212,136,28,0.28);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(212, 136, 28, 0.28);
       backdrop-filter: blur(6px);
       color: #fff;
     }
-    .hero-buttons .btn-outline:hover { background: rgba(212,136,28,0.10); border-color: var(--gold); }
+
+    .hero-buttons .btn-outline:hover {
+      background: rgba(212, 136, 28, 0.10);
+      border-color: var(--gold);
+    }
 
     .hero-stats {
       margin-top: 40px;
       padding: 18px 18px 14px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
-      border: 1px solid rgba(212,136,28,0.12);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+      border: 1px solid rgba(212, 136, 28, 0.12);
       border-radius: 14px;
       backdrop-filter: blur(8px);
       gap: var(--space-lg) var(--space-xl);
     }
-    .hero-stat { min-width: 84px; }
-    .hero-stat-icon { color: var(--gold); opacity: 0.9; font-size: 1rem; }
-    .hero-stat-number { font-size: 1.6rem; color: #ffd38a; text-shadow: 0 0 12px rgba(212,136,28,0.4); }
-    .hero-stat-label { color: var(--text-muted); letter-spacing: 0.12em; font-weight: 600; }
+
+    .hero-stat {
+      min-width: 84px;
+    }
+
+    .hero-stat-icon {
+      color: var(--gold);
+      opacity: 0.9;
+      font-size: 1rem;
+    }
+
+    .hero-stat-number {
+      font-size: 1.6rem;
+      color: #ffd38a;
+      text-shadow: 0 0 12px rgba(212, 136, 28, 0.4);
+    }
+
+    .hero-stat-label {
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      font-weight: 600;
+    }
 
     .hero-social-proof {
       margin-top: 18px;
       padding: 12px 18px;
-      background: rgba(0,0,0,0.22);
-      border: 1px solid rgba(255,255,255,0.06);
+      background: rgba(0, 0, 0, 0.22);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 999px;
       display: inline-flex;
       gap: var(--space-md);
       backdrop-filter: blur(6px);
     }
-    .hero-social-item { font-size: 0.78rem; }
-    .hero-social-item strong { color: #ffd38a; }
+
+    .hero-social-item {
+      font-size: 0.78rem;
+    }
+
+    .hero-social-item strong {
+      color: #ffd38a;
+    }
 
     @media (max-width: 640px) {
-      .hero-emblem { display: none; }
-      .hero-title { font-size: clamp(2.4rem, 10vw, 3.4rem); }
-      .hero-subtitle-card { padding: 16px 14px; }
-      .hero-stats { gap: 14px; }
-      .hero-social-proof { flex-direction: column; border-radius: 14px; gap: 6px; }
-      .hero-social-divider { display: none; }
+      .hero-emblem {
+        display: none;
+      }
+
+      .hero-title {
+        font-size: clamp(2.4rem, 10vw, 3.4rem);
+      }
+
+      .hero-subtitle-card {
+        padding: 16px 14px;
+      }
+
+      .hero-stats {
+        gap: 14px;
+      }
+
+      .hero-social-proof {
+        flex-direction: column;
+        border-radius: 14px;
+        gap: 6px;
+      }
+
+      .hero-social-divider {
+        display: none;
+      }
     }
 
     /* ========== EXPLORE FOOTER - DESTAQUE ========== */
     .explore-section {
       background: linear-gradient(180deg, #0d0b0e 0%, #09080a 100%);
-      border-top: 1px solid rgba(212,136,28,0.14);
+      border-top: 1px solid rgba(212, 136, 28, 0.14);
       padding: 56px 0 48px;
       position: relative;
       overflow: hidden;
     }
+
     .explore-section::before {
-      content:"";
+      content: "";
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 50% -10%, rgba(212,136,28,0.08), transparent 60%),
-        radial-gradient(ellipse 50% 40% at 90% 90%, rgba(96,165,250,0.04), transparent 60%);
+        radial-gradient(ellipse 60% 50% at 50% -10%, rgba(212, 136, 28, 0.08), transparent 60%),
+        radial-gradient(ellipse 50% 40% at 90% 90%, rgba(96, 165, 250, 0.04), transparent 60%);
       pointer-events: none;
     }
+
     .explore-header {
       text-align: center;
       margin-bottom: 32px;
       position: relative;
       z-index: 1;
     }
+
     .explore-kicker {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 6px 14px;
-      background: rgba(212,136,28,0.10);
-      border: 1px solid rgba(212,136,28,0.22);
+      background: rgba(212, 136, 28, 0.10);
+      border: 1px solid rgba(212, 136, 28, 0.22);
       border-radius: 999px;
       color: var(--gold);
       font-family: var(--font-heading);
@@ -312,7 +503,12 @@
       text-transform: uppercase;
       margin-bottom: 14px;
     }
-    .explore-kicker i { font-style: normal; color: var(--gold-light); }
+
+    .explore-kicker i {
+      font-style: normal;
+      color: var(--gold-light);
+    }
+
     .explore-title {
       font-family: var(--font-heading);
       font-size: clamp(1.6rem, 3.5vw, 2.4rem);
@@ -321,7 +517,11 @@
       margin-bottom: 8px;
       letter-spacing: -0.02em;
     }
-    .explore-title span { color: var(--gold); }
+
+    .explore-title span {
+      color: var(--gold);
+    }
+
     .explore-subtitle {
       color: var(--text-muted);
       font-size: 0.95rem;
@@ -329,6 +529,7 @@
       margin: 0 auto;
       line-height: 1.6;
     }
+
     .explore-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -337,30 +538,36 @@
       z-index: 1;
       margin-top: 28px;
     }
+
     .explore-card {
       display: flex;
       align-items: flex-start;
       gap: 14px;
       padding: 18px 16px;
       background: linear-gradient(135deg, #120e12 0%, #0d0b0e 100%);
-      border: 1px solid rgba(212,136,28,0.14);
+      border: 1px solid rgba(212, 136, 28, 0.14);
       border-radius: 14px;
       text-decoration: none;
       color: inherit;
-      transition: all 0.22s cubic-bezier(0.22,1,0.36,1);
+      transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
       position: relative;
       overflow: hidden;
     }
+
     .explore-card::before {
-      content:"";
+      content: "";
       position: absolute;
-      top:0; left:0; right:0; height:1px;
-      background: linear-gradient(90deg, transparent, rgba(212,136,28,0.4), transparent);
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 136, 28, 0.4), transparent);
       opacity: 0;
       transition: opacity 0.22s;
     }
+
     .explore-card::after {
-      content:"→";
+      content: "→";
       position: absolute;
       right: 14px;
       top: 50%;
@@ -371,30 +578,67 @@
       transition: all 0.22s;
       font-size: 1.1rem;
     }
+
     .explore-card:hover {
-      border-color: rgba(212,136,28,0.38);
+      border-color: rgba(212, 136, 28, 0.38);
       background: linear-gradient(135deg, #1a1418 0%, #140f14 100%);
       transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.45), 0 0 20px rgba(212,136,28,0.08);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 20px rgba(212, 136, 28, 0.08);
     }
-    .explore-card:hover::before { opacity: 1; }
-    .explore-card:hover::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+
+    .explore-card:hover::before {
+      opacity: 1;
+    }
+
+    .explore-card:hover::after {
+      opacity: 1;
+      transform: translateY(-50%) translateX(0);
+    }
+
     .explore-card-icon {
-      width: 46px; height: 46px;
+      width: 46px;
+      height: 46px;
       flex: 0 0 46px;
-      display: grid; place-items: center;
+      display: grid;
+      place-items: center;
       border-radius: 11px;
       font-size: 1.35rem;
-      background: rgba(212,136,28,0.10);
-      border: 1px solid rgba(212,136,28,0.22);
+      background: rgba(212, 136, 28, 0.10);
+      border: 1px solid rgba(212, 136, 28, 0.22);
       color: var(--gold);
-      box-shadow: inset 0 0 12px rgba(212,136,28,0.08);
+      box-shadow: inset 0 0 12px rgba(212, 136, 28, 0.08);
     }
-    .explore-card-icon.blue { background: rgba(96,165,250,0.10); border-color: rgba(96,165,250,0.22); color: var(--blue); }
-    .explore-card-icon.red { background: rgba(239,68,68,0.08); border-color: rgba(239,68,68,0.18); color: var(--red); }
-    .explore-card-icon.purple { background: rgba(167,139,250,0.08); border-color: rgba(167,139,250,0.18); color: var(--purple); }
-    .explore-card-icon.green { background: rgba(34,197,94,0.08); border-color: rgba(34,197,94,0.18); color: #4ade80; }
-    .explore-card-body { flex:1; min-width:0; padding-right: 22px; }
+
+    .explore-card-icon.blue {
+      background: rgba(96, 165, 250, 0.10);
+      border-color: rgba(96, 165, 250, 0.22);
+      color: var(--blue);
+    }
+
+    .explore-card-icon.red {
+      background: rgba(239, 68, 68, 0.08);
+      border-color: rgba(239, 68, 68, 0.18);
+      color: var(--red);
+    }
+
+    .explore-card-icon.purple {
+      background: rgba(167, 139, 250, 0.08);
+      border-color: rgba(167, 139, 250, 0.18);
+      color: var(--purple);
+    }
+
+    .explore-card-icon.green {
+      background: rgba(34, 197, 94, 0.08);
+      border-color: rgba(34, 197, 94, 0.18);
+      color: #4ade80;
+    }
+
+    .explore-card-body {
+      flex: 1;
+      min-width: 0;
+      padding-right: 22px;
+    }
+
     .explore-card-title {
       font-family: var(--font-heading);
       font-size: 0.98rem;
@@ -406,6 +650,7 @@
       gap: 8px;
       flex-wrap: wrap;
     }
+
     .explore-card-title small {
       font-size: 0.60rem;
       font-weight: 800;
@@ -413,10 +658,11 @@
       text-transform: uppercase;
       padding: 2px 7px;
       border-radius: 999px;
-      background: rgba(212,136,28,0.14);
-      border: 1px solid rgba(212,136,28,0.24);
+      background: rgba(212, 136, 28, 0.14);
+      border: 1px solid rgba(212, 136, 28, 0.24);
       color: var(--gold);
     }
+
     .explore-card-desc {
       font-size: 0.78rem;
       color: var(--text-muted);
@@ -426,11 +672,12 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
+
     .explore-footer-bar {
       margin-top: 36px;
       padding: 18px 20px;
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(212,136,28,0.12);
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(212, 136, 28, 0.12);
       border-radius: 12px;
       display: flex;
       align-items: center;
@@ -440,22 +687,50 @@
       position: relative;
       z-index: 1;
     }
-    .explore-footer-bar span { font-size: 0.78rem; color: var(--text-muted); }
-    .explore-footer-bar b { color: #fff; }
-    .explore-footer-bar .btn { padding: 10px 20px; font-size: 0.75rem; }
-    @media (max-width: 700px) {
-      .explore-grid { grid-template-columns: 1fr; }
-      .explore-footer-bar { flex-direction: column; text-align: center; }
+
+    .explore-footer-bar>span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
     }
+
+    .explore-footer-bar b {
+      color: #fff;
+    }
+
+    .explore-footer-bar .btn {
+      padding: 10px 20px;
+      font-size: 0.75rem;
+      color: #120a00;
+      font-weight: 800;
+    }
+
+    .explore-footer-bar .btn span {
+      color: inherit;
+    }
+
+    @media (max-width: 700px) {
+      .explore-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .explore-footer-bar {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
     /* nav simplified for index */
-    .nav-links-index a { font-size: 0.70rem; }
+    .nav-links-index a {
+      font-size: 0.70rem;
+    }
+
     .page-back-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 10px 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(212,136,28,0.18);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(212, 136, 28, 0.18);
       border-radius: 999px;
       color: var(--text-body);
       font-family: var(--font-heading);
@@ -465,21 +740,47 @@
       transition: all 0.18s;
       text-decoration: none;
     }
-    .page-back-btn:hover { background: rgba(212,136,28,0.10); border-color: var(--gold); color: #fff; }
+
+    .page-back-btn:hover {
+      background: rgba(212, 136, 28, 0.10);
+      border-color: var(--gold);
+      color: #fff;
+    }
   </style>
 </head>
-<body>
+
+<body data-page="index">
   <div class="global-particles">
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-    <div class="gp g"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
   </div>
   <div class="global-runes">
     <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
@@ -489,8 +790,10 @@
     <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
   </div>
   <div class="global-circles">
-    <div class="gc"></div><div class="gc"></div>
-    <div class="gc"></div><div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
   </div>
   <div class="global-vignette"></div>
 
@@ -501,26 +804,30 @@
       RPG Skills
     </a>
     <div class="nav-links nav-links-index">
-      <div class="lang-switcher" role="group" aria-label="Idioma">
-        <button class="lang-option" data-lang="pt-BR" aria-label="Portugues">
+      <div class="lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+        <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt">
           <span class="fi fi-br"></span> PT-BR
         </button>
-        <button class="lang-option" data-lang="en" aria-label="English">
+        <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en">
           <span class="fi fi-us"></span> EN-US
         </button>
       </div>
-      <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary" style="padding:8px 20px; font-size:0.68rem;">Steam Workshop</a>
+      <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+        class="btn btn-primary" style="padding:8px 20px; font-size:0.68rem;" data-i18n="nav.steam">Steam Workshop</a>
     </div>
-    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <button class="mobile-toggle" aria-label="Menu" data-i18n-aria="nav.menu">&#9776;</button>
   </nav>
   <div class="mobile-nav">
-    <button class="mobile-nav-close" aria-label="Fechar">&times;</button>
+    <button class="mobile-nav-close" aria-label="Fechar" data-i18n-aria="nav.close">&times;</button>
     <a href="#explore" data-i18n="nav.features">Explorar</a>
-    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma">
-      <button class="lang-option" data-lang="pt-BR" aria-label="Portugues"><span class="fi fi-br"></span> PT-BR</button>
-      <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-us"></span> EN-US</button>
+    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+      <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt"><span
+          class="fi fi-br"></span> PT-BR</button>
+      <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en"><span
+          class="fi fi-us"></span> EN-US</button>
     </div>
-    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary">Steam Workshop</a>
+    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+      class="btn btn-primary" data-i18n="nav.steam">Steam Workshop</a>
   </div>
 
   <!-- HERO PREMIUM -->
@@ -547,21 +854,28 @@
         <div class="hero-emblem">🔮</div>
       </div>
       <div class="hero-divider"><span></span><span>◆ ◆ ◆</span><span></span></div>
-      <p class="hero-tagline">Fique mais forte a cada nível.</p>
+      <p class="hero-tagline" data-i18n="hero.tagline">Fique mais forte a cada nível.</p>
       <div class="hero-subtitle-card">
         <div class="hero-subtitle">
-          <p class="hero-line hero-line-intro">Esqueça tudo o que você sabia sobre Necesse. ⚔️</p>
-          <p class="hero-line hero-line-imagine">Imagine transformar o jogo em um <span class="text-green">RPG de verdade</span>:</p>
+          <p class="hero-line hero-line-intro" data-i18n="hero.subtitle.lead">Esqueça tudo o que você sabia sobre
+            Necesse. ⚔️</p>
+          <p class="hero-line hero-line-imagine" data-i18n="hero.subtitle.imagine">Imagine transformar o jogo em um
+            <span class="text-green">RPG de verdade</span>:</p>
           <div class="hero-features">
-            <span class="hero-feature-item" style="--delay: 0.2s">⚔️ <strong>33 classes</strong> profundas para dominar</span>
-            <span class="hero-feature-item" style="--delay: 0.4s">🔮 <strong>19 passivas</strong> exclusivas para builds únicas</span>
-            <span class="hero-feature-item" style="--delay: 0.6s">📈 <strong>XP dinâmico</strong> que recompensa a verdadeira dificuldade</span>
+            <span class="hero-feature-item" style="--delay: 0.2s" data-i18n="hero.subtitle.b1">⚔️ <strong>33
+                classes</strong> profundas para dominar</span>
+            <span class="hero-feature-item" style="--delay: 0.4s" data-i18n="hero.subtitle.b2">🔮 <strong>19
+                passivas</strong> exclusivas para builds únicas</span>
+            <span class="hero-feature-item" style="--delay: 0.6s" data-i18n="hero.subtitle.b3">📈 <strong>XP
+                dinâmico</strong> que recompensa a verdadeira dificuldade</span>
           </div>
-          <p class="hero-line hero-line-challenge">Sua jornada nunca mais será a mesma.<br><span class="text-gold">Você tem o que é preciso? 🔥</span></p>
+          <p class="hero-line hero-line-challenge" data-i18n="hero.subtitle.close">Sua jornada nunca mais será a
+            mesma.<br><span class="text-gold">Você tem o que é preciso? 🔥</span></p>
         </div>
       </div>
       <div class="hero-buttons">
-        <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+        <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+          class="btn btn-primary btn-lg">
           &#9889; <span data-i18n="hero.cta">Inscreva-se no Steam</span>
         </a>
         <a href="#explore" class="btn btn-outline btn-lg">
@@ -591,11 +905,14 @@
         </div>
       </div>
       <div class="hero-social-proof">
-        <span class="hero-social-item">&#128100; <strong>18.5k</strong> acessos</span>
+        <span class="hero-social-item">&#128100; <span data-i18n="hero.social.views"><strong>18.5k</strong>
+            acessos</span></span>
         <span class="hero-social-divider">•</span>
-        <span class="hero-social-item">&#9825; <strong>457</strong> favoritos</span>
+        <span class="hero-social-item">&#9825; <span data-i18n="hero.social.favorites"><strong>457</strong>
+            favoritos</span></span>
         <span class="hero-social-divider">•</span>
-        <span class="hero-social-item">&#9733; <strong>143</strong> avaliações</span>
+        <span class="hero-social-item">&#9733; <span data-i18n="hero.social.ratings"><strong>143</strong>
+            avaliações</span></span>
       </div>
     </div>
   </section>
@@ -604,92 +921,109 @@
   <section id="explore" class="explore-section">
     <div class="container">
       <div class="explore-header reveal">
-        <div class="explore-kicker"><i>✦</i> Navegue pelo mod</div>
-        <h2 class="explore-title">Explore o <span>Universo</span> RPG Skills</h2>
-        <p class="explore-subtitle">Todo o conteúdo agora organizado em páginas dedicadas. Clique em um tópico para mergulhar nos detalhes - cada página tem botão para voltar aqui.</p>
+        <div class="explore-kicker"><i>✦</i> <span data-i18n="explore.kicker">Navegue pelo mod</span></div>
+        <h2 class="explore-title" data-i18n="explore.title">Explore o <span>Universo</span> RPG Skills</h2>
+        <p class="explore-subtitle" data-i18n="explore.subtitle">Todo o conteúdo agora organizado em páginas dedicadas.
+          Clique em um tópico para mergulhar nos detalhes - cada página tem botão para voltar aqui.</p>
       </div>
       <div class="explore-grid reveal">
         <a href="html/funcionalidades.html" class="explore-card">
           <div class="explore-card-icon">⚡</div>
           <div class="explore-card-body">
-            <div class="explore-card-title">Progressão Completa <small>XP + Níveis</small></div>
-            <div class="explore-card-desc">Sistema de XP, 9 recursos, jornada de níveis de 1 a 165 e como funciona a curva.</div>
+            <div class="explore-card-title"><span data-i18n="explore.card.funcionalidades.title">Progressão
+                Completa</span> <small data-i18n="explore.card.funcionalidades.small">XP + Níveis</small></div>
+            <div class="explore-card-desc" data-i18n="explore.card.funcionalidades.desc">Sistema de XP, 9 recursos,
+              jornada de níveis de 1 a 165 e como funciona a curva.</div>
           </div>
         </a>
         <a href="html/progressao.html" class="explore-card">
           <div class="explore-card-icon green">🔄</div>
           <div class="explore-card-body">
-            <div class="explore-card-title">O Loop de Progressão</div>
-            <div class="explore-card-desc">Jogue → Ganhe XP → Suba → Gaste Pontos → Domine. Fontes e configuração.</div>
+            <div class="explore-card-title"><span data-i18n="explore.card.progressao.title">O Loop de Progressão</span>
+            </div>
+            <div class="explore-card-desc" data-i18n="explore.card.progressao.desc">Jogue → Ganhe XP → Suba → Gaste
+              Pontos → Domine. Fontes e configuração.</div>
           </div>
         </a>
         <a href="html/universo-xp.html" class="explore-card">
           <div class="explore-card-icon blue">🌍</div>
           <div class="explore-card-body">
-            <div class="explore-card-title">Universo do XP <small>35 zonas</small></div>
-            <div class="explore-card-desc">Todos os biomas, chefe 300+XP, mini-chefe +100 e todas as fontes de XP.</div>
+            <div class="explore-card-title"><span data-i18n="explore.card.universo.title">Universo do XP</span> <small
+                data-i18n="explore.card.universo.small">Biomas & Chefes</small></div>
+            <div class="explore-card-desc" data-i18n="explore.card.universo.desc">Todos os biomas, chefe 300+XP,
+              mini-chefe +100 e todas as fontes de XP.</div>
           </div>
         </a>
         <a href="html/classes.html" class="explore-card">
           <div class="explore-card-icon red">⚔️</div>
           <div class="explore-card-body">
-            <div class="explore-card-title">33 Classes <small>5 categorias</small></div>
-            <div class="explore-card-desc">Combate, Defesa, Mobilidade, Utilidade e Assentamento. Cada classe detalhada.</div>
+            <div class="explore-card-title"><span data-i18n="explore.card.classes.title">33 Classes</span> <small
+                data-i18n="explore.card.classes.small">5 categorias</small></div>
+            <div class="explore-card-desc" data-i18n="explore.card.classes.desc">Combate, Defesa, Mobilidade, Utilidade
+              e Assentamento. Cada classe detalhada.</div>
           </div>
         </a>
         <a href="html/janela.html" class="explore-card">
           <div class="explore-card-icon">🪟</div>
           <div class="explore-card-body">
-            <div class="explore-card-title">Janela RPG Skills <small>K / LB+RB</small></div>
-            <div class="explore-card-desc">Mockup interativo premium com 3 abas: Status, Classes e Loja.</div>
+            <div class="explore-card-title"><span data-i18n="explore.card.janela.title">Janela RPG Skills</span> <small
+                data-i18n="explore.card.janela.small">K / LB+RB</small></div>
+            <div class="explore-card-desc" data-i18n="explore.card.janela.desc">Mockup interativo premium com 3 abas:
+              Status, Classes e Loja.</div>
           </div>
         </a>
         <a href="html/qol.html" class="explore-card">
           <div class="explore-card-icon purple">✨</div>
           <div class="explore-card-body">
-            <div class="explore-card-title">Qualidade de Vida <small>9 QoLs</small></div>
-            <div class="explore-card-desc">Vein Miner, Pesca AFK, Sono Acelerado, Auto Weapon, Explosivo e mais.</div>
+            <div class="explore-card-title"><span data-i18n="explore.card.qol.title">Qualidade de Vida</span> <small
+                data-i18n="explore.card.qol.small">9 QoLs</small></div>
+            <div class="explore-card-desc" data-i18n="explore.card.qol.desc">Vein Miner, Pesca AFK, Sono Acelerado, Auto
+              Weapon, Explosivo e mais.</div>
           </div>
         </a>
         <a href="html/configuracao.html" class="explore-card">
           <div class="explore-card-icon">⚙️</div>
           <div class="explore-card-body">
-            <div class="explore-card-title">Configuração & Comandos</div>
-            <div class="explore-card-desc">Menu in-game completo + comandos de jogador e admin (MP).</div>
+            <div class="explore-card-title"><span data-i18n="explore.card.configuracao.title">Configuração &
+                Comandos</span></div>
+            <div class="explore-card-desc" data-i18n="explore.card.configuracao.desc">Menu in-game completo + comandos
+              de jogador e admin (MP).</div>
           </div>
         </a>
         <a href="html/atalhos.html" class="explore-card">
           <div class="explore-card-icon blue">⌨️</div>
           <div class="explore-card-body">
-            <div class="explore-card-title">Atalhos <small>Teclado + Controle</small></div>
-            <div class="explore-card-desc">K para abrir janela, LB+RB, D-pad, A/B e hotkeys 1-5.</div>
+            <div class="explore-card-title"><span data-i18n="explore.card.atalhos.title">Atalhos</span> <small
+                data-i18n="explore.card.atalhos.small">Teclado + Controle</small></div>
+            <div class="explore-card-desc" data-i18n="explore.card.atalhos.desc">K para abrir janela, LB+RB, D-pad, A/B
+              e hotkeys 1-5.</div>
           </div>
         </a>
         <a href="html/passivas.html" class="explore-card">
           <div class="explore-card-icon green">🔮</div>
           <div class="explore-card-body">
-            <div class="explore-card-title">19 Passivas Desbloqueáveis</div>
-            <div class="explore-card-desc">Olho de Águia, Deus do Dano, Vein Miner, Gold Strike e todas as outras.</div>
-          </div>
-        </a>
-        <a href="html/fontes-xp.html" class="explore-card">
-          <div class="explore-card-icon green">📊</div>
-          <div class="explore-card-body">
-            <div class="explore-card-title">Fontes de XP Detalhadas</div>
-            <div class="explore-card-desc">Combate, mineração, pesca, agricultura, assentamento e fórmula completa.</div>
+            <div class="explore-card-title"><span data-i18n="explore.card.passivas.title">19 Passivas
+                Desbloqueáveis</span></div>
+            <div class="explore-card-desc" data-i18n="explore.card.passivas.desc">Olho de Águia, Deus do Dano, Vein
+              Miner, Gold Strike e todas as outras.</div>
           </div>
         </a>
         <a href="html/changelog.html" class="explore-card">
           <div class="explore-card-icon">📜</div>
           <div class="explore-card-body">
-            <div class="explore-card-title">Changelog Completo <small>v1.0 → v2.7</small></div>
-            <div class="explore-card-desc">Todas as versões desde o lançamento com novidades e correções.</div>
+            <div class="explore-card-title"><span data-i18n="explore.card.changelog.title">Changelog Completo</span>
+              <small data-i18n="explore.card.changelog.small">v1.0 → v2.7</small></div>
+            <div class="explore-card-desc" data-i18n="explore.card.changelog.desc">Todas as versões desde o lançamento
+              com novidades e correções.</div>
           </div>
         </a>
       </div>
       <div class="explore-footer-bar reveal">
-        <span>💡 <b>Dica:</b> Cada página possui um botão <b>“← Voltar ao Início”</b> no topo e rodapé. Todo conteúdo original foi preservado.</span>
-        <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary" style="padding:9px 18px; font-size:0.72rem;">&#9889; Inscreva-se no Steam</a>
+        <span data-i18n="explore.tip">💡 <b>Dica:</b> Cada página possui um botão <b>“← Voltar ao Início”</b> no topo e
+          rodapé. Todo conteúdo original foi preservado.</span>
+        <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+          class="btn btn-primary" style="padding:9px 18px; font-size:0.72rem;">&#9889; <span
+            data-i18n="hero.cta">Inscreva-se no Steam</span></a>
       </div>
     </div>
   </section>
@@ -706,20 +1040,23 @@
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.links">Links</h4>
-          <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener">Steam Workshop</a>
+          <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+            data-i18n="nav.steam">Steam Workshop</a>
           <a href="https://www.youtube.com/@Necromante96Officiall" target="_blank" rel="noopener">YouTube</a>
-          <a href="https://store.steampowered.com/app/1169040" target="_blank" rel="noopener" data-i18n="footer.store">Loja Necesse</a>
+          <a href="https://store.steampowered.com/app/1169040" target="_blank" rel="noopener"
+            data-i18n="footer.store">Loja Necesse</a>
         </div>
         <div class="footer-col">
-          <h4>Conteúdo</h4>
-          <a href="html/classes.html">Classes</a>
-          <a href="html/passivas.html">Passivas</a>
-          <a href="html/janela.html">Janela</a>
-          <a href="html/changelog.html">Changelog</a>
+          <h4 data-i18n="footer.content">Conteúdo</h4>
+          <a href="html/classes.html" data-i18n="nav.classes">Classes</a>
+          <a href="html/passivas.html" data-i18n="footer.passives">Passivas</a>
+          <a href="html/janela.html" data-i18n="footer.window">Janela</a>
+          <a href="html/changelog.html" data-i18n="footer.changelog">Changelog</a>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.community">Comunidade</h4>
-          <a href="https://steamcommunity.com/app/1169040/discussions/" target="_blank" rel="noopener" data-i18n="footer.discussions">Discussões</a>
+          <a href="https://steamcommunity.com/app/1169040/discussions/" target="_blank" rel="noopener"
+            data-i18n="footer.discussions">Discussões</a>
           <a href="https://steamcommunity.com/app/1169040/workshop/" target="_blank" rel="noopener">Workshop</a>
         </div>
       </div>
@@ -730,6 +1067,8 @@
     </div>
   </footer>
 
+  <script src="js/i18n-data.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -8,7 +8,7 @@
   <title>Atalhos - RPG Skills</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
 
   <link rel="stylesheet" href="../css/tokens.css">
@@ -76,7 +76,7 @@
   </style>
 
 </head>
-<body>
+<body data-page="atalhos">
   <div class="global-particles">
     <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
     <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
@@ -108,40 +108,40 @@
       RPG Skills
     </a>
     <div class="nav-links">
-      <div class="lang-switcher" role="group" aria-label="Idioma">
-        <button class="lang-option" data-lang="pt-BR" aria-label="Portugues">
+      <div class="lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+        <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt">
           <span class="fi fi-br"></span> PT-BR
         </button>
-        <button class="lang-option" data-lang="en" aria-label="English">
+        <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en">
           <span class="fi fi-us"></span> EN-US
         </button>
       </div>
-      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;">&#8592; Voltar ao Início</a>
+      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;"><span data-i18n="nav.back">← Voltar ao Início</span></a>
     </div>
-    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <button class="mobile-toggle" aria-label="Menu" data-i18n-aria="nav.menu">&#9776;</button>
   </nav>
   <div class="mobile-nav">
-    <button class="mobile-nav-close" aria-label="Fechar">&times;</button>
-    <a href="../index.html">&#8592; Voltar ao Início</a>
-    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma">
-      <button class="lang-option" data-lang="pt-BR" aria-label="Portugues"><span class="fi fi-br"></span> PT-BR</button>
-      <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-us"></span> EN-US</button>
+    <button class="mobile-nav-close" aria-label="Fechar" data-i18n-aria="nav.close">&times;</button>
+    <a href="../index.html"><span data-i18n="nav.back">← Voltar ao Início</span></a>
+    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+      <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt"><span class="fi fi-br"></span> PT-BR</button>
+      <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en"><span class="fi fi-us"></span> EN-US</button>
     </div>
-    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary">Steam Workshop</a>
+    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="nav.steam">Steam Workshop</a>
   </div>
 
   <header class="page-header">
     <div class="page-header-inner">
-      <div class="page-kicker">Atalhos</div>
-      <h1 class="page-title">Controles <span class="text-green">Rápidos</span></h1>
-      <p class="page-sub">Atalhos de teclado e controle para dominar a janela RPG Skills sem perder tempo.</p>
+      <div class="page-kicker" data-i18n="atalhos.kicker">Atalhos</div>
+      <h1 class="page-title" data-i18n="atalhos.title">Controles <span class="text-green">Rápidos</span></h1>
+      <p class="page-sub" data-i18n="atalhos.subtitle">Atalhos de teclado e controle para dominar a janela RPG Skills sem perder tempo.</p>
       
       <div class="page-stats">
         <span class="page-stat"><i>⌨️</i> <b>K</b></span>
         <span class="page-stat"><i>🎮</i> <b>LB+RB</b></span>
-        <span class="page-stat"><i>⚡</i> <b>1-5</b> buffs</span>
+        <span class="page-stat"><i>⚡</i> <b>1-5</b> <span data-i18n="atalhos.stat.buffs">buffs</span></span>
       </div>
-      <a href="../index.html" class="page-back">&#8592; Voltar à página inicial</a>
+      <a href="../index.html" class="page-back"><span data-i18n="nav.back.home">← Voltar à página inicial</span></a>
     </div>
   </header>
 
@@ -157,7 +157,7 @@
 
       
       <div class="reveal" style="max-width:560px; margin:0 auto 18px; padding:16px; background:linear-gradient(135deg,#120e12,#0d0b0e); border:1px solid rgba(212,136,28,0.14); border-radius:12px; text-align:center;">
-        <div style="font-family:var(--font-heading); font-weight:800; color:#fff; margin-bottom:10px;">Teste os atalhos <span style="color:var(--gold);">- pressione K, 1-5 ou LB+RB</span></div>
+        <div style="font-family:var(--font-heading); font-weight:800; color:#fff; margin-bottom:10px;" data-i18n="atalhos.test">Teste os atalhos <span style="color:var(--gold);">- pressione K, 1-5 ou LB+RB</span></div>
         <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
           <span class="kbd" data-kbd="k">K</span>
           <span class="kbd" data-kbd="1">1</span>
@@ -165,7 +165,7 @@
           <span class="kbd" data-kbd="3">3</span>
           <span class="kbd" data-kbd="esc">ESC</span>
         </div>
-        <div id="kbd-feedback" style="margin-top:10px; font-size:0.78rem; color:var(--text-muted); min-height:1.2em;">Pressione uma tecla acima 👆</div>
+        <div id="kbd-feedback" style="margin-top:10px; font-size:0.78rem; color:var(--text-muted); min-height:1.2em;" data-i18n="atalhos.feedback">Pressione uma tecla acima 👆</div>
       </div>
       <script>
         (function(){
@@ -229,34 +229,33 @@
 
   </div>
 
-  <div class="back-footer">
-    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;">&#8592; Voltar à página inicial</a>
+    <div class="section-divider"></div>
+    <section class="section page-flow-cta">
+      <div class="container reveal">
+        <h2 class="page-flow-title" data-i18n="cta.flow.title">Continue explorando</h2>
+        <p class="section-subtitle page-flow-sub" data-i18n="cta.flow.subtitle">Volte à página anterior ou siga para a próxima do guia.</p>
+        <div class="page-flow-actions">
+          <a href="configuracao.html" class="btn btn-outline page-flow-prev" data-i18n="cta.flow.prev.configuracao">← Anterior: Configuração</a>
+          <a href="passivas.html" class="btn btn-primary page-flow-next" data-i18n="cta.flow.next.passivas">Próxima: 19 Passivas →</a>
+        </div>
+      </div>
+    </section>
+
+<div class="back-footer">
+    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;"><span data-i18n="nav.back.home">← Voltar à página inicial</span></a>
   </div>
 
   <footer class="footer" style="padding:28px 40px; margin-top:20px;">
     <div class="container">
       <div class="footer-bottom">
-        <span>Feito com &#9829; por Necromante96</span>
-        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);">Início</a></span>
+        <span><span data-i18n="footer.made">Feito com &#9829; por Necromante96</span></span>
+        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);"><span data-i18n="footer.home">Início</span></a></span>
       </div>
     </div>
   </footer>
 
   <!-- Modal for classes page -->
-  <div class="modal-overlay" id="classModal">
-    <div class="modal">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div class="modal-header">
-        <div class="class-icon" id="modalIcon"></div>
-        <div>
-          <h3 id="modalTitle"></h3>
-          <div class="modal-tab-label" id="modalTab"></div>
-        </div>
-      </div>
-      <div class="modal-body" id="modalBody"></div>
-    </div>
-  </div>
-
+<script src="../js/i18n-data.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

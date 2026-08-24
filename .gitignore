@@ -1,1 +1,6 @@
 doc/
+desktop.ini
+Thumbs.db
+*.backup
+*.7z
+_*.py

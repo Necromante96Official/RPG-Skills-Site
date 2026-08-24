@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cada classe oferece passivas exclusivas ao investir pontos. Algumas requerem nível máximo para desbloquear.">
+  <meta name="description"
+    content="Conheça as 19 passivas que mudam seu jogo: de pesca sozinha a invulnerabilidade e aura que fortalece seu assentamento.">
   <meta name="theme-color" content="#0a0a0f">
   <title>19 Passivas - RPG Skills</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
-
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -21,321 +24,842 @@
   <link rel="stylesheet" href="../css/qol.css">
   <link rel="stylesheet" href="../css/mobile.css">
   <link rel="stylesheet" href="../css/polish.css">
-
-
   <style>
     .page-header {
-      padding: 120px 0 36px;
+      padding: 130px 0 44px !important;
+      background: linear-gradient(180deg, #0f0a08 0%, #0d0b0e 45%, #09080a 100%) !important;
+      border-bottom: 1px solid rgba(212, 136, 28, 0.18) !important
+    }
+
+    .page-header::before {
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(212, 136, 28, 0.14), transparent 60%) !important
+    }
+
+    .page-header-inner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      max-width: 860px !important;
+      margin: 0 auto !important
+    }
+
+    .page-title {
+      font-size: clamp(2.2rem, 5vw, 3.2rem) !important;
+      margin: 0 auto 10px !important;
+      text-align: center !important;
+      width: 100% !important;
+      display: block !important;
+      color: #fff !important
+    }
+
+    .page-title span {
+      color: var(--gold) !important
+    }
+
+    .page-sub {
+      margin: 0 auto 16px !important;
+      text-align: center !important;
+      max-width: 640px !important
+    }
+
+    .page-stats {
+      display: flex !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+      gap: 10px !important;
+      margin: 0 auto !important
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 800px;
+      margin: 0 auto
+    }
+
+    @media(max-width:700px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px
+      }
+    }
+
+    .intro-card {
+      padding: 16px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #120e12 0%, #0d0b0e 100%);
+      border: 1px solid rgba(212, 136, 28, 0.12);
       text-align: center;
-      background: linear-gradient(180deg, #0d0b0e 0%, #09080a 100%);
-      border-bottom: 1px solid rgba(212,136,28,0.14);
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+
+    .intro-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      font-size: 1.4rem;
+      margin-bottom: 10px
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0 auto 18px;
+      max-width: 700px
+    }
+
+    .progress-bar {
+      max-width: 600px;
+      margin: 14px auto 0;
+      padding: 12px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(212, 136, 28, 0.12);
+      text-align: center
+    }
+
+    .progress-track {
+      height: 8px;
+      background: #050611;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 8px 0
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), #f0b24a);
+      border-radius: 999px;
+      transition: width 0.4s
+    }
+
+    .passive-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 14px;
+      max-width: 1100px;
+      margin: 0 auto;
+      justify-items: center
+    }
+
+    .passive-card {
+      width: 100%;
+      max-width: 360px;
+      padding: 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #120e12 0%, #0d0b0e 100%);
+      border: 1px solid rgba(212, 136, 28, 0.12);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
       position: relative;
       overflow: hidden;
+      transition: all 0.24s;
+      cursor: pointer
     }
-    .page-header::before {
-      content:"";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212,136,28,0.09), transparent 60%);
-      pointer-events: none;
-    }
-    .page-header-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 0 20px; }
-    .page-kicker {
-      display: inline-block;
-      padding: 4px 12px;
-      background: rgba(212,136,28,0.12);
-      border: 1px solid rgba(212,136,28,0.22);
-      border-radius: 999px;
-      color: var(--gold);
-      font-family: var(--font-heading);
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .page-title { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 8px; }
-    .page-title span { color: var(--gold); }
-    .page-sub { color: var(--text-muted); font-size: 0.95rem; margin: 0 auto 18px; max-width: 600px; line-height:1.6; }
-    .page-back {
-      display:inline-flex; align-items:center; gap:8px;
-      padding: 10px 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(212,136,28,0.18);
-      border-radius: 999px;
-      color: var(--text-body);
-      font-family: var(--font-heading);
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-decoration:none;
-      transition: all 0.18s;
-    }
-    .page-back:hover { background: rgba(212,136,28,0.10); border-color: var(--gold); color:#fff; transform: translateY(-1px); }
-    .page-content { padding-top: 28px; }
-    .back-footer { text-align:center; padding: 40px 0 20px; }
-  </style>
 
+    .passive-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.24s
+    }
+
+    .passive-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 136, 28, 0.22);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3)
+    }
+
+    .passive-card:hover::before {
+      opacity: 0.6
+    }
+
+    .passive-card.collected {
+      border-color: rgba(74, 222, 128, 0.22);
+      background: linear-gradient(135deg, #0f1a12 0%, #0d0b0e 100%)
+    }
+
+    .passive-card.collected::before {
+      background: linear-gradient(90deg, transparent, #4ade80, transparent);
+      opacity: 0.5
+    }
+
+    .passive-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px
+    }
+
+    .passive-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      flex: 0 0 auto
+    }
+
+    .passive-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.2
+    }
+
+    .passive-tag {
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.04em
+    }
+
+    .passive-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 8px
+    }
+
+    .passive-unlock {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      font-size: 0.72rem;
+      color: var(--text-dim);
+      margin-top: auto
+    }
+
+    .passive-unlock b {
+      color: var(--gold)
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 900px;
+      margin: 0 auto
+    }
+
+    @media(max-width:820px) {
+      .highlight-grid {
+        grid-template-columns: 1fr;
+        max-width: 420px
+      }
+    }
+
+    .highlight-card {
+      padding: 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #1a1208 0%, #120e12 100%);
+      border: 1px solid rgba(212, 136, 28, 0.18);
+      text-align: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .highlight-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(212, 136, 28, 0.4), transparent)
+    }
+
+    .section {
+      padding: 48px 0 !important;
+      text-align: center !important
+    }
+
+    .section-header {
+      margin: 0 auto 28px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      max-width: 720px !important;
+      text-align: center !important
+    }
+
+    .section-divider {
+      margin: 0 auto !important
+    }
+  </style>
 </head>
-<body>
+
+<body data-page="passivas">
   <div class="global-particles">
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-    <div class="gp g"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
   </div>
-  <div class="global-runes">
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-  </div>
+  <div class="global-runes"><span class="gr">&#5765;</span><span class="gr">&#5792;</span><span
+      class="gr">&#5816;</span><span class="gr">&#5828;</span><span class="gr">&#5765;</span><span
+      class="gr">&#5792;</span><span class="gr">&#5816;</span><span class="gr">&#5828;</span><span
+      class="gr">&#5765;</span><span class="gr">&#5792;</span></div>
   <div class="global-circles">
-    <div class="gc"></div><div class="gc"></div>
-    <div class="gc"></div><div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
   </div>
   <div class="global-vignette"></div>
-
-  <nav class="nav scrolled">
-    <a href="../index.html" class="nav-brand">
-      <span class="brand-icon">&#9876;</span>
-      RPG Skills
-    </a>
+  <nav class="nav scrolled"><a href="../index.html" class="nav-brand"><span class="brand-icon">&#9876;</span>RPG
+      Skills</a>
     <div class="nav-links">
-      <div class="lang-switcher" role="group" aria-label="Idioma">
-        <button class="lang-option" data-lang="pt-BR" aria-label="Portugues">
-          <span class="fi fi-br"></span> PT-BR
-        </button>
-        <button class="lang-option" data-lang="en" aria-label="English">
-          <span class="fi fi-us"></span> EN-US
-        </button>
-      </div>
-      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;">&#8592; Voltar ao Início</a>
-    </div>
-    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+      <div class="lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang"><button class="lang-option"
+          data-lang="pt-BR"><span class="fi fi-br"></span> PT-BR</button><button class="lang-option"
+          data-lang="en"><span class="fi fi-us"></span> EN-US</button></div><a href="../index.html" class="page-back"
+        style="padding:7px 16px;font-size:0.72rem;"><span data-i18n="nav.back">← Voltar ao Início</span></a>
+    </div><button class="mobile-toggle" aria-label="Menu" data-i18n-aria="nav.menu">&#9776;</button>
   </nav>
-  <div class="mobile-nav">
-    <button class="mobile-nav-close" aria-label="Fechar">&times;</button>
-    <a href="../index.html">&#8592; Voltar ao Início</a>
-    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma">
-      <button class="lang-option" data-lang="pt-BR" aria-label="Portugues"><span class="fi fi-br"></span> PT-BR</button>
-      <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-us"></span> EN-US</button>
-    </div>
-    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary">Steam Workshop</a>
+  <div class="mobile-nav"><button class="mobile-nav-close" aria-label="Fechar"
+      data-i18n-aria="nav.close">&times;</button><a href="../index.html"><span data-i18n="nav.back">← Voltar ao
+        Início</span></a>
+    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang"><button
+        class="lang-option" data-lang="pt-BR"><span class="fi fi-br"></span> PT-BR</button><button class="lang-option"
+        data-lang="en"><span class="fi fi-us"></span> EN-US</button></div><a
+      href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+      class="btn btn-primary" data-i18n="nav.steam">Steam Workshop</a>
   </div>
-
   <header class="page-header">
     <div class="page-header-inner">
-      <div class="page-kicker">Passivas e Habilidades</div>
-      <h1 class="page-title">19 <span class="text-green">Passivas</span> Desbloqueáveis</h1>
-      <p class="page-sub">Cada classe oferece passivas exclusivas ao investir pontos. Algumas requerem nível máximo para desbloquear.</p>
-      
-      <div class="page-stats">
-        <span class="page-stat"><i>🔮</i> <b>19</b> passivas</span>
-        <span class="page-stat"><i>⚔️</i> <b>8</b> combate</span>
-        <span class="page-stat"><i>💎</i> <b>5</b> lendárias</span>
-      </div>
-      <a href="../index.html" class="page-back">&#8592; Voltar à página inicial</a>
+      <div class="page-kicker" data-i18n="passivas.kicker">Colecione poderes</div>
+      <h1 class="page-title" data-i18n="passivas.title">19 <span class="text-green">Passivas</span> Únicas</h1>
+      <p class="page-sub" data-i18n="passivas.subtitle">Cada ponto que você investe pode liberar um poder especial.
+        Alguns aparecem logo no nível 1, outros só quando você domina a classe.</p>
+      <div class="page-stats"><span class="page-stat"><i>✨</i> <b>19</b> <span data-i18n="passivas.stat.collect">para colecionar</span></span><span
+          class="page-stat"><i>🔓</i> <b>8</b> <span data-i18n="passivas.stat.early">liberam no 1</span></span><span class="page-stat"><i>👑</i> <b>5</b>
+          <span data-i18n="passivas.stat.legendary">lendárias</span></span></div>
+      <div style="margin-top:16px"><a href="../index.html" class="page-back"><span data-i18n="nav.back.home">← Voltar à
+            página inicial</span></a></div>
     </div>
   </header>
-
   <div class="page-content">
-<!-- ========== PASSIVES ========== -->
-  <section class="section">
-    <div class="section-glow-line"></div>
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label" data-i18n="passives.label">Passivas e Habilidades</div>
-        <h2 class="section-title" data-i18n="passives.title">19 <span class="text-green">Passivas</span> Desbloqueáveis</h2>
-        <p class="section-subtitle" style="margin:0 auto;" data-i18n="passives.subtitle">Cada classe oferece passivas exclusivas ao investir pontos. Algumas requerem nível máximo para desbloquear.</p>
-      </div>
-
-      
-      <div class="reveal" style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:18px;">
-        <button class="config-tab active" data-pass="all">Todas (19)</button>
-        <button class="config-tab" data-pass="combate">Combate</button>
-        <button class="config-tab" data-pass="defesa">Defesa</button>
-        <button class="config-tab" data-pass="util">Utilidade</button>
-        <button class="config-tab" data-pass="lendaria">Lendárias</button>
-      </div>
-      <script>
-        (function(){
-          var btns=document.querySelectorAll('[data-pass]');
-          btns.forEach(function(b){
-            b.addEventListener('click', function(){
-              var f=b.dataset.pass;
-              btns.forEach(function(x){x.classList.toggle('active', x===b);});
-              document.querySelectorAll('.passive-card').forEach(function(c){
-                var html=c.innerHTML;
-                var isComb=html.includes('Olho')||html.includes('Deus')||html.includes('Sangram');
-                var isDef=html.includes('Vital')||html.includes('Colossal')||html.includes('Hermes')||html.includes('Poção')||html.includes('Barriga');
-                var isUtil=html.includes('Veios')||html.includes('Ruína')||html.includes('Escritor')||html.includes('Ouro')||html.includes('Pescador');
-                var isLend=html.includes('Mestre das Classes')||html.includes('Deus')||html.includes('Aura')||html.includes('Líder');
-                var show=f==='all'|| (f==='combate'&&isComb) || (f==='defesa'&&isDef) || (f==='util'&&isUtil) || (f==='lendaria'&&isLend);
-                c.style.display=show?'':'none';
-              });
-            });
-          });
-        })();
-      </script>
-
-      <div class="grid-3 reveal" style="margin-top:var(--space-xl);">
-        <!-- Eagle Eye -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-combat);">&#128065; Olho de Águia</h4>
-          <p class="passive-effect">Mostra barras de vida e radar de inimigos/animais próximos permanentemente.</p>
-          <p class="passive-req">Requisito: Mestre Atirador >= 1 ponto</p>
+    <section class="section" style="padding-top:32px">
+      <div class="container">
+        <div class="intro-grid reveal">
+          <div class="intro-card">
+            <div class="intro-icon"
+              style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">🔓</div>
+            <h3 style="color:#fff;font-family:var(--font-heading);" data-i18n="passivas.intro.what.title">O que são passivas?</h3>
+            <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.6;margin-top:6px" data-i18n="passivas.intro.what.text">São <b
+                style="color:#fff;">poderes que ligam sozinhos</b>. Você não precisa apertar nada. Investiu ponto na
+              classe certa? Ganhou a habilidade na hora. Algumas funcionam sempre, outras só em situação especial.</p>
+            <div style="margin-top:10px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap"><span
+                style="padding:4px 8px;border-radius:999px;background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);font-size:0.68rem;color:var(--gold);font-weight:700" data-i18n="passivas.chip.nobtn">Sem
+                botão</span><span
+                style="padding:4px 8px;border-radius:999px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);font-size:0.68rem;color:var(--text-dim);" data-i18n="passivas.chip.auto">Automático</span>
+            </div>
+          </div>
+          <div class="intro-card">
+            <div class="intro-icon"
+              style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">🎯</div>
+            <h3 style="color:#fff;font-family:var(--font-heading);" data-i18n="passivas.intro.how.title">Como desbloquear?</h3>
+            <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.6;margin-top:6px" data-i18n="passivas.intro.how.text"><b style="color:#fff;">1
+                ponto</b> já libera as mais úteis. As lendárias pedem <b style="color:var(--gold);">nível 5</b> na
+              classe. E duas são bônus por jogar bem com colonos.</p>
+            <div style="margin-top:10px;display:flex;gap:6px;justify-content:center;flex-wrap:wrap"><span
+                style="padding:4px 8px;border-radius:999px;background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);font-size:0.68rem;color:#4ade80;font-weight:700" data-i18n="passivas.chip.lv1">8
+                no nível 1</span><span
+                style="padding:4px 8px;border-radius:999px;background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);font-size:0.68rem;color:var(--gold);font-weight:700" data-i18n="passivas.chip.lv5">6
+                no nível 5</span></div>
+          </div>
         </div>
-        <!-- Deus do Dano -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-combat);">&#9876; Deus do Dano</h4>
-          <p class="passive-effect">+50% de dano total. Requer TODAS as 4 classes de combate no nível 5.</p>
-          <p class="passive-req">Requisito: Guerra+Atirador+Magia+Invocador = nível 5</p>
-        </div>
-        <!-- Minerador de Veios -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-utility);">&#9935; Minerador de Veios</h4>
-          <p class="passive-effect">Minera veios inteiros de minério automaticamente. Modo avançado encadeia blocos do mesmo tipo.</p>
-          <p class="passive-req">Requisito: Mestre das Cavernas >= 1 ponto</p>
-        </div>
-        <!-- Ruína Escura -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-utility);">&#128161; Ruína Escura</h4>
-          <p class="passive-effect">Aumenta alcance de trinkets luminosos de 250 para 350. Funciona com trinket equipado.</p>
-          <p class="passive-req">Requisito: Mestre das Cavernas >= 1 ponto</p>
-        </div>
-        <!-- Escritor Imortal -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-utility);">&#10024; Escritor Imortal</h4>
-          <p class="passive-effect">Scrolls de encantamento não são consumidos ao usar.</p>
-          <p class="passive-req">Requisito: Mestre Arcano >= 1 ponto</p>
-        </div>
-        <!-- Golpe de Ouro -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-utility);">&#129689; Golpe de Ouro</h4>
-          <p class="passive-effect">Gera ouro a cada hit: 10/pt, máximo 50 gold no nível 5. Respeita Coin Pouch.</p>
-          <p class="passive-req">Requisito: Mestre da Riqueza >= 1 ponto</p>
-        </div>
-        <!-- Reflexo do Pescador -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-utility);">&#127907; Reflexo do Pescador</h4>
-          <p class="passive-effect">Pesca AFK: pega peixe e recoloca isca automaticamente no mesmo local.</p>
-          <p class="passive-req">Requisito: Mestre do Mar >= 1 ponto</p>
-        </div>
-        <!-- Bênção Vital -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-defense);">&#10084; Bênção Vital</h4>
-          <p class="passive-effect">HP extra por segundo enquanto poção de vida está ativa.</p>
-          <p class="passive-req">Requisito: Mestre da Vitalidade >= 1 ponto</p>
-        </div>
-        <!-- Proteção Colossal -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-defense);">&#128737; Proteção Colossal</h4>
-          <p class="passive-effect">Invulnerabilidade temporária ao ser atingido. Dura 2-10s. Cooldown 30s.</p>
-          <p class="passive-req">Requisito: Mestre Colossal >= 1 ponto</p>
-        </div>
-        <!-- Graça de Hermes -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-defense);">&#128167; Graça de Hermes</h4>
-          <p class="passive-effect">Nível 4: Imunidade a lentidão. Nível 5: Remove e bloqueia todos debuffs.</p>
-          <p class="passive-req">Requisito: Mestre da Resistência Elemental >= 4 pontos</p>
-        </div>
-        <!-- Poção Automática -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-defense);">&#129514; Poção Automática</h4>
-          <p class="passive-effect">Usa poções de vida automaticamente quando HP <= 50%.</p>
-          <p class="passive-req">Requisito: Mestre da Alquimia = nível 5</p>
-        </div>
-        <!-- Sempre Barriga Cheia -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-defense);">&#127830; Sempre Barriga Cheia</h4>
-          <p class="passive-effect">Come automaticamente quando fome cai abaixo de 95%.</p>
-          <p class="passive-req">Requisito: Mestre Gourmet = nível 5</p>
-        </div>
-        <!-- Colheita de Rancho -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-utility);">&#128037; Colheita de Rancho</h4>
-          <p class="passive-effect">Animais de rancho mortos na zona de criação dropam 5x mais itens.</p>
-          <p class="passive-req">Requisito: Mestre do Rancho = nível 5</p>
-        </div>
-        <!-- Aura de Liderança -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-settler);">&#128081; Aura de Liderança</h4>
-          <p class="passive-effect">Colonos ganham +15% dano, HP, resistência e velocidade. Com personalidade alinhada: 22.5%.</p>
-          <p class="passive-req">Requisito: Mestre dos Reinos = nível 5</p>
-        </div>
-        <!-- Líder do Assentamento -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-settler);">&#127969; Líder do Assentamento</h4>
-          <p class="passive-effect">Força QoL Sem Rival nos colonos, bloqueia greves de humor, 3x XP de assentamento.</p>
-          <p class="passive-req">Requisito: Mestre dos Reinos = nível 5</p>
-        </div>
-        <!-- Administração Rica -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-settler);">&#128176; Administração Rica</h4>
-          <p class="passive-effect">Colonos com 6+ personalidades ganham +50% XP de assentamento e recrutamento.</p>
-          <p class="passive-req">Requisito: Informacional (ativado com 6+ personalidades)</p>
-        </div>
-        <!-- Engenharia Defensiva -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--cat-utility);">&#128483; Engenharia Defensiva</h4>
-          <p class="passive-effect">Armadilhas de assentamento aplicam sangramento em inimigos.</p>
-          <p class="passive-req">Requisito: Mestre das Armadilhas = nível 5</p>
-        </div>
-        <!-- Mestre das Classes -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--gold);">&#9733; Mestre das Classes</h4>
-          <p class="passive-effect">Todas as classes habilitadas no nível 5: partículas brancas + trail de movimento + aura luminosa.</p>
-          <p class="passive-req">Requisito: TODAS as classes habilitadas = nível 5</p>
-        </div>
-        <!-- Especialista em Incursions -->
-        <div class="card passive-card polish">
-          <h4 style="color:var(--red);">&#9760; Especialista em Incursions</h4>
-          <p class="passive-effect">Incursions de alto tier usam as zonas de XP mais fortes disponíveis.</p>
-          <p class="passive-req">Requisito: Informacional (baseado em progressão)</p>
+        <div class="progress-bar reveal">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span style="font-family:var(--font-heading);font-weight:700;color:#fff;font-size:0.85rem" data-i18n="passivas.collection">Sua
+              coleção</span>
+            <span style="font-family:var(--font-heading);font-weight:800;color:var(--gold);font-size:0.85rem"><span
+                id="collected-count">0</span> / 19</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+          </div>
+          <div style="font-size:0.72rem;color:var(--text-dim);margin-top:4px" data-i18n="passivas.collection.hint">Clique nos cards abaixo para marcar como
+            coletadas e ver seu progresso</div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <div class="section-divider"></div>
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="passivas.highlights.label">As mais amadas</div>
+          <h2 class="section-title" data-i18n="passivas.highlights.title">3 passivas que <span class="text-green">todos querem</span></h2>
+          <p class="section-subtitle" style="margin:0 auto" data-i18n="passivas.highlights.sub">Se for começar, mire nessas primeiro. Elas mudam seu jogo
+            logo cedo.</p>
+        </div>
+        <div class="highlight-grid reveal">
+          <div class="highlight-card">
+            <div
+              style="width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);margin:0 auto 10px;color:var(--gold);font-size:1.4rem">
+              ⛏️</div>
+            <h4 style="color:#fff;font-family:var(--font-heading);" data-i18n="passivas.vein.name">Minerador de Veios</h4>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;line-height:1.5" data-i18n="passivas.hl.vein.text">Um clique minera o veio
+              inteiro. De 8 cliques para 1. Quem mina ama.</p>
+            <div style="margin-top:8px"><span
+                style="padding:3px 8px;border-radius:999px;background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);font-size:0.68rem;color:var(--gold);font-weight:700" data-i18n="passivas.hl.vein.badge">Caverna
+                nível 1</span></div>
+            <div style="margin-top:6px;font-size:0.72rem;color:var(--text-dim)"><span data-i18n="passivas.hl.vein.ideal">Ideal para: <b style="color:#fff;">quem
+                minera muito</b></span></div>
+          </div>
+          <div class="highlight-card">
+            <div
+              style="width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);margin:0 auto 10px;color:#60a5fa;font-size:1.4rem">
+              🎣</div>
+            <h4 style="color:#fff;font-family:var(--font-heading);" data-i18n="passivas.hl.fish.name">Pesca Sozinha</h4>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;line-height:1.5" data-i18n="passivas.hl.fish.text">Lança, espera e a vara
+              recolhe e lança de novo sozinha. Pesque AFK.</p>
+            <div style="margin-top:8px"><span
+                style="padding:3px 8px;border-radius:999px;background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);font-size:0.68rem;color:#60a5fa;font-weight:700" data-i18n="passivas.hl.fish.badge">Mar
+                nível 1</span></div>
+            <div style="margin-top:6px;font-size:0.72rem;color:var(--text-dim)"><span data-i18n="passivas.hl.fish.ideal">Ideal para: <b style="color:#fff;">quem
+                curte farmar</b></span></div>
+          </div>
+          <div class="highlight-card">
+            <div
+              style="width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);margin:0 auto 10px;color:#4ade80;font-size:1.4rem">
+              👑</div>
+            <h4 style="color:#fff;font-family:var(--font-heading);" data-i18n="passivas.aura.name">Aura de Liderança</h4>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;line-height:1.5" data-i18n="passivas.hl.aura.text">Seus colonos ficam 15%
+              mais fortes. Se combinar personalidade, 22.5%.</p>
+            <div style="margin-top:8px"><span
+                style="padding:3px 8px;border-radius:999px;background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);font-size:0.68rem;color:#4ade80;font-weight:700" data-i18n="passivas.hl.aura.badge">Reino
+                nível 5</span></div>
+            <div style="margin-top:6px;font-size:0.72rem;color:var(--text-dim)"><span data-i18n="passivas.hl.aura.ideal">Ideal para: <b style="color:#fff;">quem
+                ama assentamento</b></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="passivas.catalog.label">Coleção completa</div>
+          <h2 class="section-title" data-i18n="passivas.catalog.title">Todas as <span class="text-green">19 Passivas</span></h2>
+          <p class="section-subtitle" style="margin:0 auto" data-i18n="passivas.catalog.sub">Clique para marcar como coletada. Filtre por tipo para achar
+            sua próxima meta.</p>
+        </div>
+        <div class="filter-bar reveal">
+          <button class="config-tab active" data-pass="all" data-i18n="passivas.filter.all">Todas (19)</button>
+          <button class="config-tab" data-pass="cedo" data-i18n="passivas.filter.early">Liberam no 1</button>
+          <button class="config-tab" data-pass="lendaria" data-i18n="passivas.filter.legendary">Lendárias (nível 5)</button>
+          <button class="config-tab" data-pass="mundo" data-i18n="passivas.filter.world">Mundo e Pesca</button>
+        </div>
+<div class="passive-grid reveal">
+          <div class="passive-card" data-cat="cedo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.14);color:#ef4444">👁️</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.eagle.name">Olho de Águia</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.marksman">Mestre Atirador</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv1"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">Nível
+                1</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.eagle.desc">Enxerga vida e radar de inimigos e animais por perto, sempre. Caçar nunca foi tão
+              fácil.</div>
+            <div class="passive-unlock" data-i18n="passivas.eagle.unlock"><span>🔓</span> Libera com <b>1 ponto</b> em Atirador <span
+                style="margin-left:auto;font-size:0.62rem;padding:2px 6px;border-radius:999px;background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">Popular</span>
+            </div>
+          </div>
+          <div class="passive-card" data-cat="lendaria">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.14);color:#ef4444">⚔️</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.god.name">Deus do Dano</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.combat4">4 classes de combate</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv5x4"
+                style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">Nível
+                5 em 4</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.god.desc"><b style="color:#fff;">+50% de dano total.</b> Precisa de Guerra, Atirador, Magia
+              e Invocador todos no 5. O ápice do dano.</div>
+            <div class="passive-unlock" data-i18n="passivas.god.unlock"><span>👑</span> Lendária <span
+                style="margin-left:auto;font-size:0.62rem;color:var(--text-dim)">Para veteranos</span></div>
+          </div>
+          <div class="passive-card" data-cat="cedo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">⛏️
+              </div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.vein.name">Minerador de Veios</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.cavern">Mestre da Caverna</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv1"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">Nível
+                1</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.vein.desc">Minera veios inteiros com <b style="color:#fff;">1 clique</b>. Segure Shift para
+              modo avançado que pega pisos e árvores do mesmo tipo.</div>
+            <div class="passive-unlock" data-i18n="passivas.vein.unlock"><span>⛏️</span> Libera com <b>1 ponto</b> em Caverna <span
+                style="margin-left:auto;font-size:0.62rem;padding:2px 6px;border-radius:999px;background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">Queridinha</span>
+            </div>
+          </div>
+          <div class="passive-card" data-cat="cedo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">💡
+              </div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.dark.name">Ruína Escura</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.cavern">Mestre da Caverna</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv1"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">Nível
+                1</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.dark.desc">Sua luz vai de <b>250 para 350</b>. Enxerga muito mais no subsolo sem tochas
+              extras.</div>
+            <div class="passive-unlock" data-i18n="passivas.dark.unlock"><span>💡</span> Libera com <b>1 ponto</b> em Caverna</div>
+          </div>
+          <div class="passive-card" data-cat="cedo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">📜
+              </div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.scribe.name">Escritor Imortal</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.arcane">Mestre Arcano</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv1"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">Nível
+                1</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.scribe.desc">Pergaminhos de encantamento <b style="color:#fff;">nunca gastam</b>. Encante
+              quantas armas quiser!</div>
+            <div class="passive-unlock" data-i18n="passivas.scribe.unlock"><span>✨</span> Libera com <b>1 ponto</b> em Arcano</div>
+          </div>
+          <div class="passive-card" data-cat="cedo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">💰
+              </div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.gold.name">Golpe de Ouro</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.wealth">Mestre da Riqueza</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv1to5"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">Nível 1 a
+                5</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.gold.desc">Cada acerto gera ouro: 10 por nível. No 5 são <b style="color:var(--gold);">50 por
+                golpe</b> direto na bolsa!</div>
+            <div class="passive-unlock" data-i18n="passivas.gold.unlock"><span>💰</span> <b>10 por ponto</b> até 50</div>
+          </div>
+          <div class="passive-card" data-cat="cedo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">🎣</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.angler.name">Reflexo do Pescador</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.sea">Mestre do Mar</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv1"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">Nível
+                1</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.angler.desc">Pesca <b style="color:#fff;">sozinha</b>: fisgou, recolheu e lançou de novo no
+              mesmo lugar. Deixe pescando e vá construir.</div>
+            <div class="passive-unlock" data-i18n="passivas.angler.unlock"><span>🎣</span> AFK de verdade</div>
+          </div>
+          <div class="passive-card" data-cat="cedo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">❤️</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.vital.name">Bênção Vital</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.vitality">Mestre da Vitalidade</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv1"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">Nível
+                1</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.vital.desc">Enquanto a poção de vida está ativa, você regenera <b style="color:#fff;">vida
+                extra por segundo</b>.</div>
+            <div class="passive-unlock" data-i18n="passivas.vital.unlock"><span>❤️</span> Libera com <b>1 ponto</b> em Vitalidade</div>
+          </div>
+          <div class="passive-card" data-cat="cedo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">🛡️</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.colossal.name">Proteção Colossal</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.colossal">Mestre Colossal</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv1"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">Nível
+                1</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.colossal.desc"><b style="color:#fff;">2 a 10 segundos invulnerável</b> ao ser atingido. Recarga
+              de 30s. Salva vidas em boss.</div>
+            <div class="passive-unlock" data-i18n="passivas.colossal.unlock"><span>🛡️</span> Duração cresce com nível</div>
+          </div>
+          <div class="passive-card" data-cat="lendaria">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">💨</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.hermes.name">Graça de Hermes</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.elemental">Resistência Elemental</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv45"
+                style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">Nível
+                4 e 5</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.hermes.desc">Nível 4: <b style="color:#fff;">imune a lentidão</b>. Nível 5: remove todos os
+              efeitos negativos e bloqueia novos.</div>
+            <div class="passive-unlock" data-i18n="passivas.hermes.unlock"><span>✨</span> Nível 4: lentidão / Nível 5: tudo</div>
+          </div>
+          <div class="passive-card" data-cat="lendaria">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">🧪</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.potion.name">Poção Automática</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.alchemy">Mestre da Alquimia</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv5"
+                style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.22);color:#f87171">Nível
+                5</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.potion.desc">Vida abaixo de <b style="color:#fff;">50%</b>? Usa poção sozinha até encher. Sem
+              pânico.</div>
+            <div class="passive-unlock" data-i18n="passivas.potion.unlock"><span>🧪</span> Automática</div>
+          </div>
+          <div class="passive-card" data-cat="lendaria">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">🍖</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.full.name">Sempre de Barriga Cheia</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.gourmet">Mestre Gourmet</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv5"
+                style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.22);color:#f87171">Nível
+                5</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.full.desc">Fome abaixo de <b style="color:#fff;">95%</b>? Come sozinho. Nunca mais esqueça de
+              comer.</div>
+            <div class="passive-unlock" data-i18n="passivas.full.unlock"><span>🍖</span> Nunca com fome</div>
+          </div>
+          <div class="passive-card" data-cat="mundo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">🐓
+              </div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.ranch.name">Colheita de Rancho</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.ranch">Mestre do Rancho</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv5"
+                style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.22);color:#f87171">Nível
+                5</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.ranch.desc">Animais na área de criação dão <b style="color:var(--gold);">5x mais itens</b> ao
+              abater. Fazenda infinita!</div>
+            <div class="passive-unlock" data-i18n="passivas.ranch.unlock"><span>🐓</span> 5x drops</div>
+          </div>
+          <div class="passive-card" data-cat="mundo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">👑</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.aura.name">Aura de Liderança</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.realm">Mestre do Reino</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv5"
+                style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.22);color:#f87171">Nível
+                5</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.aura.desc">Colonos ficam <b style="color:#fff;">15% mais fortes</b> em tudo. Se a
+              personalidade combinar, <b style="color:var(--gold);">22.5%</b>.</div>
+            <div class="passive-unlock" data-i18n="passivas.aura.unlock"><span>👑</span> Líder nato</div>
+          </div>
+          <div class="passive-card" data-cat="mundo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">🏡</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.leader.name">Líder do Assentamento</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.realm">Mestre do Reino</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv5"
+                style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.22);color:#f87171">Nível
+                5</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.leader.desc">Qualidade máxima, <b style="color:#fff;">bloqueia greves</b> e triplica XP de
+              tarefas. Todos felizes!</div>
+            <div class="passive-unlock" data-i18n="passivas.leader.unlock"><span>🏡</span> Assentamento perfeito</div>
+          </div>
+          <div class="passive-card" data-cat="mundo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.14);color:#4ade80">💰</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.admin.name">Administração Rica</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.game">Bônus de jogo</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.auto"
+                style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">Automático</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.admin.desc">Colonos com 6 ou mais personalidades dão <b style="color:var(--gold);">50% a mais
+                de XP</b>. Procure os raros!</div>
+            <div class="passive-unlock" data-i18n="passivas.admin.unlock"><span>💰</span> 6+ personalidades</div>
+          </div>
+          <div class="passive-card" data-cat="mundo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">🪤
+              </div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.eng.name">Engenharia Defensiva</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.trap">Mestre das Armadilhas</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.lv5"
+                style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.22);color:#f87171">Nível
+                5</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.eng.desc">Armadilhas no assentamento causam <b style="color:#fff;">sangramento</b> nos
+              inimigos. Defesa perfeita!</div>
+            <div class="passive-unlock" data-i18n="passivas.eng.unlock"><span>🪤</span> Sangramento</div>
+          </div>
+          <div class="passive-card" data-cat="lendaria">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">✨
+              </div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.master.name">Mestre das Classes</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.all">Todas as classes</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.all5"
+                style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">Todas
+                no 5</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.master.desc"><b style="color:#fff;">Partículas brancas + rastro</b> ao andar. Brilhe como uma
+              lenda! Todos vão te notar.</div>
+            <div class="passive-unlock" data-i18n="passivas.master.unlock"><span>✨</span> O ápice</div>
+          </div>
+          <div class="passive-card" data-cat="mundo">
+            <div class="passive-top">
+              <div class="passive-icon"
+                style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.14);color:#ef4444">🔥</div>
+              <div style="flex:1">
+                <div class="passive-title" data-i18n="passivas.incursion.name">Especialista em Incursões</div>
+                <div style="font-size:0.68rem;color:var(--text-dim)" data-i18n="passivas.class.world">Bônus de mundo</div>
+              </div><span class="passive-tag" data-i18n="passivas.tag.auto"
+                style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">Automático</span>
+            </div>
+            <div class="passive-desc" data-i18n="passivas.incursion.desc">Incursions difíceis usam as <b style="color:#fff;">zonas que mais dão XP</b>. Mais
+              desafio, mais recompensa.</div>
+            <div class="passive-unlock" data-i18n="passivas.incursion.unlock"><span>🔥</span> Progressão natural</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="section" style="background:var(--dark2);">
+      <div class="section-glow-line"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="passivas.tips.label">Combine e brilhe</div>
+          <h2 class="section-title" data-i18n="passivas.tips.title">Dicas para <span class="text-green">colecionar</span></h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:900px;margin:0 auto"
+          class="reveal">
+          <div
+            style="padding:16px;border-radius:12px;background:linear-gradient(135deg,#120e12,#0d0b0e);border:1px solid rgba(212,136,28,0.12);text-align:center">
+            <div style="font-size:1.4rem;margin-bottom:8px">🎯</div>
+            <b style="color:#fff;font-family:var(--font-heading);" data-i18n="passivas.tips.t1">Comece pelas que liberam no 1</b>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;line-height:1.5" data-i18n="passivas.tips.d1">São 8 poderes imediatos.
+              Minerador, Olho de Águia e Pesca Sozinha mudam seu início.</p>
+          </div>
+          <div
+            style="padding:16px;border-radius:12px;background:linear-gradient(135deg,#120e12,#0d0b0e);border:1px solid rgba(212,136,28,0.12);text-align:center">
+            <div style="font-size:1.4rem;margin-bottom:8px">👑</div>
+            <b style="color:#fff;font-family:var(--font-heading);" data-i18n="passivas.tips.t2">Guarde pontos para lendárias</b>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;line-height:1.5" data-i18n="passivas.tips.d2">Junte 5 pontos em Reino
+              para Aura e Líder. Seu assentamento vira outro jogo.</p>
+          </div>
+          <div
+            style="padding:16px;border-radius:12px;background:linear-gradient(135deg,#120e12,#0d0b0e);border:1px solid rgba(212,136,28,0.12);text-align:center">
+            <div style="font-size:1.4rem;margin-bottom:8px">✨</div>
+            <b style="color:#fff;font-family:var(--font-heading);" data-i18n="passivas.tips.t3">Clique para colecionar</b>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;line-height:1.5" data-i18n="passivas.tips.d3">Marque as que já tem e
+              veja seu progresso ali em cima subir até 19!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
 
+  </div>
   
-
-  </div>
-
-  <div class="back-footer">
-    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;">&#8592; Voltar à página inicial</a>
-  </div>
-
-  <footer class="footer" style="padding:28px 40px; margin-top:20px;">
-    <div class="container">
-      <div class="footer-bottom">
-        <span>Feito com &#9829; por Necromante96</span>
-        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);">Início</a></span>
+    <div class="section-divider"></div>
+    <section class="section page-flow-cta">
+      <div class="container reveal">
+        <h2 class="page-flow-title" data-i18n="cta.flow.title">Continue explorando</h2>
+        <p class="section-subtitle page-flow-sub" data-i18n="cta.flow.subtitle">Volte à página anterior ou siga para a próxima do guia.</p>
+        <div class="page-flow-actions">
+          <a href="atalhos.html" class="btn btn-outline page-flow-prev" data-i18n="cta.flow.prev.atalhos">← Anterior: Atalhos</a>
+          <a href="changelog.html" class="btn btn-primary page-flow-next" data-i18n="cta.flow.next.changelog">Próxima: Changelog →</a>
+        </div>
       </div>
+    </section>
+
+<div class="back-footer"><a href="../index.html" class="page-back"
+      style="background:linear-gradient(180deg,var(--gold),#c2761a);color:#120a00;border-color:var(--gold);font-weight:800;"><span
+        data-i18n="nav.back.home">← Voltar à página inicial</span></a></div>
+  <footer class="footer" style="padding:28px 40px;margin-top:20px">
+    <div class="container">
+      <div class="footer-bottom"><span><span data-i18n="footer.made">Feito com &#9829; por
+            Necromante96</span></span><span>RPG Skills v2.7 - Necesse 1.3.2 | <a href="../index.html"
+            style="color:var(--gold);" data-i18n="footer.home">Início</a></span></div>
     </div>
   </footer>
-
-  <!-- Modal for classes page -->
-  <div class="modal-overlay" id="classModal">
-    <div class="modal">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div class="modal-header">
-        <div class="class-icon" id="modalIcon"></div>
-        <div>
-          <h3 id="modalTitle"></h3>
-          <div class="modal-tab-label" id="modalTab"></div>
-        </div>
-      </div>
-      <div class="modal-body" id="modalBody"></div>
-    </div>
-  </div>
-
+  <script src="../js/i18n-data.js"></script>
   <script src="../js/main.js"></script>
 </body>
+
 </html>

@@ -8,7 +8,7 @@
   <title>Qualidade de Vida - RPG Skills</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
 
   <link rel="stylesheet" href="../css/tokens.css">
@@ -76,7 +76,7 @@
   </style>
 
 </head>
-<body>
+<body data-page="qol">
   <div class="global-particles">
     <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
     <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
@@ -108,40 +108,40 @@
       RPG Skills
     </a>
     <div class="nav-links">
-      <div class="lang-switcher" role="group" aria-label="Idioma">
-        <button class="lang-option" data-lang="pt-BR" aria-label="Portugues">
+      <div class="lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+        <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt">
           <span class="fi fi-br"></span> PT-BR
         </button>
-        <button class="lang-option" data-lang="en" aria-label="English">
+        <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en">
           <span class="fi fi-us"></span> EN-US
         </button>
       </div>
-      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;">&#8592; Voltar ao Início</a>
+      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;"><span data-i18n="nav.back">← Voltar ao Início</span></a>
     </div>
-    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <button class="mobile-toggle" aria-label="Menu" data-i18n-aria="nav.menu">&#9776;</button>
   </nav>
   <div class="mobile-nav">
-    <button class="mobile-nav-close" aria-label="Fechar">&times;</button>
-    <a href="../index.html">&#8592; Voltar ao Início</a>
-    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma">
-      <button class="lang-option" data-lang="pt-BR" aria-label="Portugues"><span class="fi fi-br"></span> PT-BR</button>
-      <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-us"></span> EN-US</button>
+    <button class="mobile-nav-close" aria-label="Fechar" data-i18n-aria="nav.close">&times;</button>
+    <a href="../index.html"><span data-i18n="nav.back">← Voltar ao Início</span></a>
+    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+      <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt"><span class="fi fi-br"></span> PT-BR</button>
+      <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en"><span class="fi fi-us"></span> EN-US</button>
     </div>
-    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary">Steam Workshop</a>
+    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="nav.steam">Steam Workshop</a>
   </div>
 
   <header class="page-header">
     <div class="page-header-inner">
-      <div class="page-kicker">Qualidade de Vida</div>
-      <h1 class="page-title">Recursos que <span class="text-green">Facilitam</span></h1>
-      <p class="page-sub">Cada QoL elimina uma fricção que te tira do jogo. Clique único no lugar de vinte. AFK que funciona.</p>
+      <div class="page-kicker" data-i18n="qol.hero.kicker">Qualidade de Vida</div>
+      <h1 class="page-title" data-i18n="qol.hero.title">Recursos que <span class="text-green">Facilitam</span></h1>
+      <p class="page-sub" data-i18n="qol.hero.subtitle">Cada QoL elimina uma fricção que te tira do jogo. Clique único no lugar de vinte. AFK que funciona.</p>
       
       <div class="page-stats">
-        <span class="page-stat"><i>⛏️</i> <b>1</b> clique</span>
+        <span class="page-stat"><i>⛏️</i> <b>1</b> <span data-i18n="qol.stat.click">clique</span></span>
         <span class="page-stat"><i>🎣</i> <b>AFK</b></span>
-        <span class="page-stat"><i>🌙</i> <b>1s</b> noite</span>
+        <span class="page-stat"><i>🌙</i> <b>1s</b> <span data-i18n="qol.stat.night">noite</span></span>
       </div>
-      <a href="../index.html" class="page-back">&#8592; Voltar à página inicial</a>
+      <a href="../index.html" class="page-back"><span data-i18n="nav.back.home">← Voltar à página inicial</span></a>
     </div>
   </header>
 
@@ -152,27 +152,27 @@
     <div class="section-texture"></div>
     <div class="container">
       <div class="section-header reveal" style="text-align:center;">
-        <div class="qol-kicker"><i>✦</i> Menos grind. Mais aventura.</div>
+        <div class="qol-kicker"><i>✦</i> <span data-i18n="qol.kicker.line">Menos grind. Mais aventura.</span></div>
         <div class="section-label" data-i18n="qol.label">Qualidade de Vida</div>
         <h2 class="section-title" data-i18n="qol.title" style="justify-content:center;">Recursos que <span class="text-green">Facilitam</span></h2>
-        <p class="qol-subtitle-creative" style="margin:12px auto 0;">
+        <p class="qol-subtitle-creative" style="margin:12px auto 0;" data-i18n="qol.subtitle.creative">
           Cada QoL elimina uma fricção que te tira do jogo. <b>Clique único</b> no lugar de vinte. <em>AFK que funciona</em>. Noites que pulam. Poções que se tomam sozinhas.
         </p>
       </div>
 
       <!-- HERO: demo interativa + timeline do dia -->
       
-      <div class="reveal" style="text-align:center; margin-bottom:18px;"><span class="float-badge">💡 Clique nos interruptores e no veio acima para testar - tudo é interativo</span></div>
+      <div class="reveal" style="text-align:center; margin-bottom:18px;"><span class="float-badge" data-i18n="qol.float.badge">💡 Clique nos interruptores e no veio acima para testar - tudo é interativo</span></div>
 
       <div class="qol-hero reveal">
         <!-- Demo: Vein Miner -->
         <div class="qol-demo polish" id="qol-demo-vein">
           <div class="qol-demo-head">
-            <div class="qol-demo-title"><i>&#9935;</i> Minerador de Veios <span style="font-weight:400; color:var(--text-muted); font-size:0.72rem; margin-left:6px;">clique no veio → veja a mágica</span></div>
-            <span class="qol-demo-badge">Caverna 1 · Configurável</span>
+            <div class="qol-demo-title"><span data-i18n="qol.demo.vein.title"><i>&#9935;</i> Minerador de Veios</span> <span style="font-weight:400; color:var(--text-muted); font-size:0.72rem; margin-left:6px;" data-i18n="qol.demo.vein.hint">clique no veio → veja a mágica</span></div>
+            <span class="qol-demo-badge" data-i18n="qol.demo.vein.badge">Caverna 1 · Configurável</span>
           </div>
 
-          <div class="qol-ore-grid" id="qol-ore-grid" aria-label="Demonstração Minerador de Veios - clique para minerar">
+          <div class="qol-ore-grid" id="qol-ore-grid" aria-label="Demonstração Minerador de Veios - clique para minerar" data-i18n-aria="qol.demo.vein.aria">
             <!-- 5x3 = 15 blocos: veio = 8 blocos dourados, resto pedra -->
             <div class="qol-ore stone" data-ore="stone">🪨</div><div class="qol-ore vein" data-ore="vein">🪙</div><div class="qol-ore vein" data-ore="vein">🪙</div><div class="qol-ore stone" data-ore="stone">🪨</div><div class="qol-ore stone" data-ore="stone">🪨</div>
             <div class="qol-ore stone" data-ore="stone">🪨</div><div class="qol-ore vein" data-ore="vein">🪙</div><div class="qol-ore vein" data-ore="vein">💎</div><div class="qol-ore vein" data-ore="vein">🪙</div><div class="qol-ore stone" data-ore="stone">🪨</div>
@@ -181,12 +181,12 @@
 
           <div class="qol-demo-footer">
             <div class="qol-compare">
-              <span>Antes <b>8 cliques</b></span>
+              <span data-i18n="qol.demo.vein.before">Antes <b>8 cliques</b></span>
               <span class="qol-arrow">→</span>
-              <span>Depois <b style="color:var(--gold);">1 clique</b> · <span id="qol-vein-count" style="color:var(--gold); font-weight:800;">0</span>/8 minerados</span>
+              <span data-i18n="qol.demo.vein.after">Depois <b style="color:var(--gold);">1 clique</b> · <span id="qol-vein-count" style="color:var(--gold); font-weight:800;">0</span>/8 minerados</span>
             </div>
             <div style="display:flex; gap:8px;">
-              <button class="qol-demo-btn secondary" id="qol-vein-reset">↺ Resetar</button>
+              <button class="qol-demo-btn secondary" id="qol-vein-reset" data-i18n="qol.demo.vein.reset">↺ Resetar</button>
               <button class="qol-demo-btn" id="qol-vein-all">⛏️ Minerador de Veios ON</button>
             </div>
           </div>
@@ -194,40 +194,40 @@
 
         <!-- Timeline: seu dia com QoL -->
         <div class="qol-timeline">
-          <div class="qol-timeline-head">☀️ Seu dia com QoL <span>08:00 → 03:00</span></div>
+          <div class="qol-timeline-head" data-i18n="qol.timeline.head">☀️ Seu dia com QoL <span>08:00 → 03:00</span></div>
           <div class="qol-day">
             <div class="qol-moment">
               <i>⛏️</i>
               <div>
-                <b>Manhã · Vein Miner <em>1 clique</em></b>
-                <p>Veios inteiros caem de uma vez. Dark Ruin estende a luz do trinket 250→350.</p>
+                <b data-i18n="qol.timeline.m1.title">Manhã · Vein Miner <em>1 clique</em></b>
+                <p data-i18n="qol.timeline.m1.text">Veios inteiros caem de uma vez. Dark Ruin estende a luz do trinket 250→350.</p>
               </div>
             </div>
             <div class="qol-moment">
               <i>🎣</i>
               <div>
-                <b>Tarde · Angler's Reflex <em>AFK</em></b>
-                <p>Isca vai e volta sozinha. Pesque enquanto constrói.</p>
+                <b data-i18n="qol.timeline.m2.title">Tarde · Angler's Reflex <em>AFK</em></b>
+                <p data-i18n="qol.timeline.m2.text">Isca vai e volta sozinha. Pesque enquanto constrói.</p>
               </div>
             </div>
             <div class="qol-moment">
               <i>⚔️</i>
               <div>
-                <b>Batalha · Auto Weapon <em>auto</em></b>
-                <p>Detecta o inimigo e troca para a arma certa: melee / ranged / magic / summon.</p>
+                <b data-i18n="qol.timeline.m3.title">Batalha · Auto Weapon <em>auto</em></b>
+                <p data-i18n="qol.timeline.m3.text">Detecta o inimigo e troca para a arma certa: melee / ranged / magic / summon.</p>
               </div>
             </div>
             <div class="qol-moment">
               <i>🌙</i>
               <div>
-                <b>Noite · Sono Acelerado <em>20h-03h</em></b>
-                <p>Dormir entre 8PM e 3AM pula a noite instantaneamente.</p>
+                <b data-i18n="qol.timeline.m4.title">Noite · Sono Acelerado <em>20h-03h</em></b>
+                <p data-i18n="qol.timeline.m4.text">Dormir entre 8PM e 3AM pula a noite instantaneamente.</p>
               </div>
             </div>
           </div>
           <div style="display:flex; gap:8px; flex-wrap:wrap; margin-top:2px;">
-            <span style="font-size:0.66rem; padding:4px 9px; border-radius:999px; background:rgba(212,136,28,0.08); border:1px solid rgba(212,136,28,0.16); color:var(--text-muted);">💾 Tudo salva instantaneamente</span>
-            <span style="font-size:0.66rem; padding:4px 9px; border-radius:999px; background:rgba(96,165,250,0.08); border:1px solid rgba(96,165,250,0.16); color:var(--text-muted);">⚙️ Tudo toggleável no Config</span>
+            <span style="font-size:0.66rem; padding:4px 9px; border-radius:999px; background:rgba(212,136,28,0.08); border:1px solid rgba(212,136,28,0.16); color:var(--text-muted);" data-i18n="qol.timeline.chip1">💾 Tudo salva instantaneamente</span>
+            <span style="font-size:0.66rem; padding:4px 9px; border-radius:999px; background:rgba(96,165,250,0.08); border:1px solid rgba(96,165,250,0.16); color:var(--text-muted);" data-i18n="qol.timeline.chip2">⚙️ Tudo toggleável no Config</span>
           </div>
         </div>
       </div>
@@ -238,77 +238,77 @@
         <div class="qol-card polish" data-accent="gold">
           <div class="qol-card-top">
             <div class="qol-card-icon">⛏️</div>
-            <span class="qol-card-tag">Caverna 1</span>
+            <span class="qol-card-tag" data-i18n="qol.tag.cavern1">Caverna 1</span>
           </div>
           <h3 data-i18n="qol.veinminer">Minerador de Veios</h3>
           <p data-i18n="qol.veinminer.desc"><b>Um clique, um veio inteiro.</b> Modo avançado encadeia blocos do mesmo tipo em 3D. Desative no config se preferir vanilla.</p>
           <div class="qol-card-meta">
-            <span><strong>Antes</strong> 8 cliques</span>
+            <span data-i18n="qol.meta.vein.before"><strong>Antes</strong> 8 cliques</span>
             <span class="qol-mini-bar" aria-hidden="true"><i style="width:92%"></i></span>
-            <span><strong style="color:var(--gold);">Depois 1</strong></span>
+            <span data-i18n="qol.meta.vein.after"><strong style="color:var(--gold);">Depois 1</strong></span>
           </div>
           <div class="qol-card-foot">
-            <span><i>⚙️</i> Hotkey dedicado · Toggle no Config</span>
-            <div class="qol-switch on" data-qol="vein" role="switch" aria-checked="true" tabindex="0" aria-label="Alternar Minerador de Veios"></div>
+            <span data-i18n="qol.foot.vein"><i>⚙️</i> Hotkey dedicado · Toggle no Config</span>
+            <div class="qol-switch on" data-qol="vein" role="switch" aria-checked="true" tabindex="0" aria-label="Alternar Minerador de Veios" data-i18n-aria="qol.aria.vein"></div>
           </div>
         </div>
 
         <div class="qol-card polish" data-accent="blue">
           <div class="qol-card-top">
             <div class="qol-card-icon"><span class="qol-bobber">🎣</span></div>
-            <span class="qol-card-tag">Mar 1 · AFK</span>
+            <span class="qol-card-tag" data-i18n="qol.tag.sea1">Mar 1 · AFK</span>
           </div>
           <h3 data-i18n="qol.angler">Reflexo do Pescador</h3>
           <p data-i18n="qol.angler.desc"><b>Pesca que se pesca sozinha.</b> Mordeu → puxa → relança no mesmo pixel. Combine com +5 XP por lance.</p>
           <div class="qol-card-meta" style="flex-direction:column; align-items:stretch; gap:6px;">
-            <div style="display:flex; justify-content:space-between; font-size:0.70rem;"><span>Progresso da pesca</span><span id="qol-fish-pct" style="color:var(--blue); font-weight:800;">0%</span></div>
+            <div style="display:flex; justify-content:space-between; font-size:0.70rem;"><span data-i18n="qol.meta.fish.progress">Progresso da pesca</span><span id="qol-fish-pct" style="color:var(--blue); font-weight:800;">0%</span></div>
             <div class="qol-fish-track"><div class="qol-fish-progress" id="qol-fish-bar"></div></div>
           </div>
           <div class="qol-card-foot">
-            <span><i>🎣</i> Clique na bobber para simular</span>
-            <div class="qol-switch on" data-qol="fish" role="switch" aria-checked="true" tabindex="0"></div>
+            <span data-i18n="qol.foot.fish"><i>🎣</i> Clique na bobber para simular</span>
+            <div class="qol-switch on" data-qol="fish" role="switch" aria-label="Alternar Reflexo do Pescador" data-i18n-aria="qol.aria.fish" aria-checked="true" tabindex="0"></div>
           </div>
         </div>
 
         <div class="qol-card polish" data-accent="green">
           <div class="qol-card-top">
             <div class="qol-card-icon">🧪</div>
-            <span class="qol-card-tag">Alquimia 5</span>
+            <span class="qol-card-tag" data-i18n="qol.tag.alchemy5">Alquimia 5</span>
           </div>
           <h3 data-i18n="qol.potion">Poção Automática</h3>
           <p data-i18n="qol.potion.desc"><b>Vida ≤50% → poção sozinha.</b> Não precisa abrir inventário no pânico. Também funciona para comida (<em>Sempre Barriga Cheia</em> Gourmet 5).</p>
           <div class="qol-card-meta">
-            <span style="display:flex; align-items:center; gap:6px;"><span style="width:42px; height:6px; background:#050611; border-radius:999px; border:1px solid rgba(255,255,255,0.06); overflow:hidden; display:inline-block;"><i style="display:block; height:100%; width:38%; background:#ef4444; border-radius:999px;"></i></span> HP 38%</span>
-            <span style="color:#22c55e; font-weight:800;">→ 🧪 Auto!</span>
+            <span style="display:flex; align-items:center; gap:6px;"><span style="width:42px; height:6px; background:#050611; border-radius:999px; border:1px solid rgba(255,255,255,0.06); overflow:hidden; display:inline-block;"><i style="display:block; height:100%; width:38%; background:#ef4444; border-radius:999px;"></i></span> <span data-i18n="qol.meta.potion">HP 38%</span></span>
+            <span style="color:#22c55e; font-weight:800;" data-i18n="qol.meta.potion.auto">→ 🧪 Auto!</span>
           </div>
           <div class="qol-card-foot">
-            <span><i>❤️</i> Salva vidas em boss</span>
-            <div class="qol-switch on" data-qol="potion" role="switch" aria-checked="true" tabindex="0"></div>
+            <span data-i18n="qol.foot.potion"><i>❤️</i> Salva vidas em boss</span>
+            <div class="qol-switch on" data-qol="potion" role="switch" aria-label="Alternar Poção Automática" data-i18n-aria="qol.aria.potion" aria-checked="true" tabindex="0"></div>
           </div>
         </div>
 
         <div class="qol-card polish" data-accent="red">
           <div class="qol-card-top">
             <div class="qol-card-icon">💣</div>
-            <span class="qol-card-tag">Caverna 5 · Loja</span>
+            <span class="qol-card-tag" data-i18n="qol.tag.cavern5">Caverna 5 · Loja</span>
           </div>
           <h3 data-i18n="qol.explosive">Minerador Explosivo</h3>
           <p data-i18n="qol.explosive.desc"><b>BOOM sem friendly fire.</b> Detonação da picareta quebra área sem dano a você, mobs ou amigos. Custo: 100k + barras + dynamite.</p>
           <div class="qol-card-meta">
-            <span>Área <b>3×3</b></span>
+            <span data-i18n="qol.meta.explosive.area">Área <b>3×3</b></span>
             <span class="qol-mini-bar"><i style="width:78%; background:linear-gradient(90deg, #ef4444,#f87171)"></i></span>
-            <span><b style="color:#ef4444;">0 dano aliado</b></span>
+            <span data-i18n="qol.meta.explosive.safe"><b style="color:#ef4444;">0 dano aliado</b></span>
           </div>
           <div class="qol-card-foot">
-            <span><i>💥</i> Requer vein miner liberado</span>
-            <div class="qol-switch" data-qol="explosive" role="switch" aria-checked="false" tabindex="0"></div>
+            <span data-i18n="qol.foot.explosive"><i>💥</i> Requer vein miner liberado</span>
+            <div class="qol-switch" data-qol="explosive" role="switch" aria-label="Alternar Minerador Explosivo" data-i18n-aria="qol.aria.explosive" aria-checked="false" tabindex="0"></div>
           </div>
         </div>
 
         <div class="qol-card polish" data-accent="gold">
           <div class="qol-card-top">
             <div class="qol-card-icon">⚡</div>
-            <span class="qol-card-tag">Loja · 10 min</span>
+            <span class="qol-card-tag" data-i18n="qol.tag.shop10">Loja · 10 min</span>
           </div>
           <h3 data-i18n="qol.xpbuffs">Buffs de XP</h3>
           <p data-i18n="qol.xpbuffs.desc"><b>2× suave, 5× equilibrado, 10× explosivo.</b> Ative via loja ou hotkey. Duração 10 min, multiplica tudo: combate, mineração, pesca.</p>
@@ -319,79 +319,79 @@
             <span style="margin-left:auto; color:var(--gold);">600s</span>
           </div>
           <div class="qol-card-foot">
-            <span><i>🔥</i> Stacka com multiplicador global</span>
-            <div class="qol-switch on" data-qol="xpbuff" role="switch" aria-checked="true" tabindex="0"></div>
+            <span data-i18n="qol.foot.xpbuff"><i>🔥</i> Stacka com multiplicador global</span>
+            <div class="qol-switch on" data-qol="xpbuff" role="switch" aria-label="Alternar Buffs de XP" data-i18n-aria="qol.aria.xpbuff" aria-checked="true" tabindex="0"></div>
           </div>
         </div>
 
         <div class="qol-card polish" data-accent="purple">
           <div class="qol-card-top">
             <div class="qol-card-icon">📦</div>
-            <span class="qol-card-tag">Loja · Permanente</span>
+            <span class="qol-card-tag" data-i18n="qol.tag.shopperm">Loja · Permanente</span>
           </div>
           <h3 data-i18n="qol.worldstack">Stack de Mundo + Baú</h3>
           <p data-i18n="qol.worldstack.desc"><b>Mil slots, pilhas gigantes.</b> Baú +10 por compra (5k + 5k/bônus) até 1000. Pilhas no chão até <b>1000×</b> configurável.</p>
           <div class="qol-card-meta">
-            <span>Baú <b>40 → 1000</b></span>
+            <span data-i18n="qol.meta.stack.chest">Baú <b>40 → 1000</b></span>
             <span class="qol-mini-bar"><i style="width:42%; background:linear-gradient(90deg, #a78bfa,#c4b5fd)"></i></span>
-            <span>Pilha <b>1000×</b></span>
+            <span data-i18n="qol.meta.stack.pile">Pilha <b>1000×</b></span>
           </div>
           <div class="qol-card-foot">
-            <span><i>🗄️</i> Economia balanceada</span>
-            <div class="qol-switch on" data-qol="stack" role="switch" aria-checked="true" tabindex="0"></div>
+            <span data-i18n="qol.foot.stack"><i>🗄️</i> Economia balanceada</span>
+            <div class="qol-switch on" data-qol="stack" role="switch" aria-label="Alternar Stack de Mundo" data-i18n-aria="qol.aria.stack" aria-checked="true" tabindex="0"></div>
           </div>
         </div>
 
         <div class="qol-card polish" data-accent="teal">
           <div class="qol-card-top">
             <div class="qol-card-icon">🎯</div>
-            <span class="qol-card-tag">Toggle · Novo v2.6</span>
+            <span class="qol-card-tag" data-i18n="qol.tag.weapon">Toggle · Novo v2.6</span>
           </div>
-          <h3>Auto Weapon Select</h3>
-          <p><b>A arma certa, na hora certa.</b> Detecta inimigo próximo e troca sozinho entre <b>melee / ranged / magic / summon</b> sem pausar a luta.</p>
+          <h3 data-i18n="qol.weapon">Auto Weapon Select</h3>
+          <p data-i18n="qol.weapon.desc"><b>A arma certa, na hora certa.</b> Detecta inimigo próximo e troca sozinho entre <b>melee / ranged / magic / summon</b> sem pausar a luta.</p>
           <div class="qol-card-meta">
             <span>⚔️</span><span>→</span><span>🏹</span><span>→</span><span>🔮</span><span>→</span><span>👻</span>
             <span style="margin-left:auto; color:#2dd4bf; font-weight:800;">auto</span>
           </div>
           <div class="qol-card-foot">
-            <span><i>🤖</i> Hotkey dedicado</span>
-            <div class="qol-switch on" data-qol="weapon" role="switch" aria-checked="true" tabindex="0"></div>
+            <span data-i18n="qol.foot.weapon"><i>🤖</i> Hotkey dedicado</span>
+            <div class="qol-switch on" data-qol="weapon" role="switch" aria-label="Alternar Seleção Automática de Arma" data-i18n-aria="qol.aria.weapon" aria-checked="true" tabindex="0"></div>
           </div>
         </div>
 
         <div class="qol-card polish" data-accent="blue">
           <div class="qol-card-top">
             <div class="qol-card-icon">🌙</div>
-            <span class="qol-card-tag">20h-03h · Instantâneo</span>
+            <span class="qol-card-tag" data-i18n="qol.tag.sleep">20h-03h · Instantâneo</span>
           </div>
-          <h3>Sono Acelerado</h3>
-          <p><b>Dormiu, amanheceu.</b> Entre <b>20:00 e 03:00</b> a noite pula na hora. Sem esperar 8 minutos olhando pro teto.</p>
+          <h3 data-i18n="qol.sleep">Sono Acelerado</h3>
+          <p data-i18n="qol.sleep.desc"><b>Dormiu, amanheceu.</b> Entre <b>20:00 e 03:00</b> a noite pula na hora. Sem esperar 8 minutos olhando pro teto.</p>
           <div class="qol-card-meta">
-            <span>Antes <b>~480s</b></span>
+            <span data-i18n="qol.meta.sleep.before">Antes <b>~480s</b></span>
             <span class="qol-mini-bar"><i style="width:12%; background:linear-gradient(90deg, #60a5fa,#93c5fd)"></i></span>
-            <span><b style="color:#60a5fa;">Agora ~1s</b></span>
+            <span data-i18n="qol.meta.sleep.after"><b style="color:#60a5fa;">Agora ~1s</b></span>
           </div>
           <div class="qol-card-foot">
-            <span><i>🛏️</i> Toggle no Config</span>
-            <div class="qol-switch on" data-qol="sleep" role="switch" aria-checked="true" tabindex="0"></div>
+            <span data-i18n="qol.foot.sleep"><i>🛏️</i> Toggle no Config</span>
+            <div class="qol-switch on" data-qol="sleep" role="switch" aria-label="Alternar Sono Acelerado" data-i18n-aria="qol.aria.sleep" aria-checked="true" tabindex="0"></div>
           </div>
         </div>
 
         <div class="qol-card polish" data-accent="green">
           <div class="qol-card-top">
             <div class="qol-card-icon">✨</div>
-            <span class="qol-card-tag">Detalhes que salvam</span>
+            <span class="qol-card-tag" data-i18n="qol.tag.details">Detalhes que salvam</span>
           </div>
-          <h3>Spoil · DoT · Scribe</h3>
-          <p><b>1 por ciclo, não a pilha.</b> Comida estraga <b>1 unid./ciclo</b>. DoT mostra <b>número azul combinado</b>. <b>Escritor Imortal</b> (Arcano 1) não consome scrolls.</p>
+          <h3 data-i18n="qol.details">Spoil · DoT · Scribe</h3>
+          <p data-i18n="qol.details.desc"><b>1 por ciclo, não a pilha.</b> Comida estraga <b>1 unid./ciclo</b>. DoT mostra <b>número azul combinado</b>. <b>Escritor Imortal</b> (Arcano 1) não consome scrolls.</p>
           <div class="qol-card-meta" style="gap:6px; flex-wrap:wrap;">
             <span style="padding:2px 8px; border-radius:999px; background:rgba(34,197,94,0.10); border:1px solid rgba(34,197,94,0.18);">🍖 -1/ciclo</span>
             <span style="padding:2px 8px; border-radius:999px; background:rgba(96,165,250,0.10); border:1px solid rgba(96,165,250,0.18);">💙 DoT azul</span>
             <span style="padding:2px 8px; border-radius:999px; background:rgba(212,136,28,0.10); border:1px solid rgba(212,136,28,0.18);">📜 Scribe ∞</span>
           </div>
           <div class="qol-card-foot">
-            <span><i>🧩</i> 3 QoLs em 1 card</span>
-            <div class="qol-switch on" data-qol="details" role="switch" aria-checked="true" tabindex="0"></div>
+            <span data-i18n="qol.foot.details"><i>🧩</i> 3 QoLs em 1 card</span>
+            <div class="qol-switch on" data-qol="details" role="switch" aria-label="Alternar detalhes QoL" data-i18n-aria="qol.aria.details" aria-checked="true" tabindex="0"></div>
           </div>
         </div>
 
@@ -401,27 +401,27 @@
       <div class="qol-strip reveal">
         <div class="qol-stat">
           <b>-87%</b>
-          <span>cliques na mineração</span>
-          <small>Vein Miner: 12 → 1.5 cliques / veio médio</small>
+          <span data-i18n="qol.strip.clicks">cliques na mineração</span>
+          <small data-i18n="qol.strip.clicks.sub">Vein Miner: 12 → 1.5 cliques / veio médio</small>
         </div>
         <div class="qol-stat">
           <b>100% AFK</b>
-          <span>pesca automática</span>
-          <small>Angler's Reflex relança sozinho no pixel exato</small>
+          <span data-i18n="qol.strip.afk">pesca automática</span>
+          <small data-i18n="qol.strip.afk.sub">Angler's Reflex relança sozinho no pixel exato</small>
         </div>
         <div class="qol-stat">
           <b>8 min → 1s</b>
-          <span>noites puladas</span>
-          <small>Sono Acelerado 20h-03h, sem espera</small>
+          <span data-i18n="qol.strip.nights">noites puladas</span>
+          <small data-i18n="qol.strip.nights.sub">Sono Acelerado 20h-03h, sem espera</small>
         </div>
         <div class="qol-stat">
-          <b>0 dano</b>
-          <span>explosivo seguro</span>
-          <small>Blast sem friendly-fire, só blocos</small>
+          <b data-i18n="qol.strip.safe.val">0 dano</b>
+          <span data-i18n="qol.strip.safe">explosivo seguro</span>
+          <small data-i18n="qol.strip.safe.sub">Blast sem friendly-fire, só blocos</small>
         </div>
       </div>
 
-      <div class="qol-note reveal">
+      <div class="qol-note reveal" data-i18n="qol.note">
         <span>⚙️ Todos <b>toggleáveis</b> no menu <b>RPG SKILLS CONFIG</b> no jogo</span>
         <span>·</span>
         <span>Compatível com <code>Safe Haven QOL 3.5</code></span>
@@ -438,33 +438,31 @@
 
   </div>
 
-  <div class="back-footer">
-    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;">&#8592; Voltar à página inicial</a>
+    <div class="section-divider"></div>
+    <section class="section page-flow-cta">
+      <div class="container reveal">
+        <h2 class="page-flow-title" data-i18n="cta.flow.title">Continue explorando</h2>
+        <p class="section-subtitle page-flow-sub" data-i18n="cta.flow.subtitle">Volte à página anterior ou siga para a próxima do guia.</p>
+        <div class="page-flow-actions">
+          <a href="janela.html" class="btn btn-outline page-flow-prev" data-i18n="cta.flow.prev.janela">← Anterior: Janela RPG Skills</a>
+          <a href="configuracao.html" class="btn btn-primary page-flow-next" data-i18n="cta.flow.next.configuracao">Próxima: Configuração →</a>
+        </div>
+      </div>
+    </section>
+
+<div class="back-footer">
+    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;"><span data-i18n="nav.back.home">← Voltar à página inicial</span></a>
   </div>
 
   <footer class="footer" style="padding:28px 40px; margin-top:20px;">
     <div class="container">
       <div class="footer-bottom">
-        <span>Feito com &#9829; por Necromante96</span>
-        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);">Início</a></span>
+        <span><span data-i18n="footer.made">Feito com &#9829; por Necromante96</span></span>
+        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);"><span data-i18n="footer.home">Início</span></a></span>
       </div>
     </div>
   </footer>
-
-  <div class="modal-overlay" id="classModal">
-    <div class="modal">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div class="modal-header">
-        <div class="class-icon" id="modalIcon"></div>
-        <div>
-          <h3 id="modalTitle"></h3>
-          <div class="modal-tab-label" id="modalTab"></div>
-        </div>
-      </div>
-      <div class="modal-body" id="modalBody"></div>
-    </div>
-  </div>
-
+<script src="../js/i18n-data.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Cada zona paga diferente, cada ação conta. Da primeira machadada ao boss final - veja de onde vem cada ponto.">
+  <meta name="description"
+    content="Descubra onde cada ponto de XP vem: zonas, bosses, pesca, fazenda e assentamento. Veja o mapa completo de 15 a 1.900 XP.">
   <meta name="theme-color" content="#0a0a0f">
   <title>Universo do XP - RPG Skills</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
-
   <link rel="stylesheet" href="../css/tokens.css">
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -21,377 +24,886 @@
   <link rel="stylesheet" href="../css/qol.css">
   <link rel="stylesheet" href="../css/mobile.css">
   <link rel="stylesheet" href="../css/polish.css">
-
-
   <style>
     .page-header {
-      padding: 120px 0 36px;
-      text-align: center;
-      background: linear-gradient(180deg, #0d0b0e 0%, #09080a 100%);
-      border-bottom: 1px solid rgba(212,136,28,0.14);
-      position: relative;
-      overflow: hidden;
+      padding: 130px 0 44px !important;
+      background: linear-gradient(180deg, #0f0a08 0%, #0d0b0e 45%, #09080a 100%) !important;
+      border-bottom: 1px solid rgba(212, 136, 28, 0.18) !important
     }
+
     .page-header::before {
-      content:"";
+      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(212, 136, 28, 0.14), transparent 60%) !important
+    }
+
+    .page-header-inner {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      max-width: 860px !important;
+      margin: 0 auto !important
+    }
+
+    .page-title {
+      font-size: clamp(2.2rem, 5vw, 3.2rem) !important;
+      margin: 0 auto 10px !important;
+      text-align: center !important;
+      width: 100% !important;
+      display: block !important;
+      color: #fff !important
+    }
+
+    .page-title span {
+      color: var(--gold) !important
+    }
+
+    .page-sub {
+      margin: 0 auto 16px !important;
+      text-align: center !important;
+      max-width: 640px !important
+    }
+
+    .page-stats {
+      display: flex !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+      gap: 10px !important;
+      margin: 0 auto !important
+    }
+
+    .tier-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      max-width: 780px;
+      margin: 0 auto
+    }
+
+    .tier-card {
+      padding: 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #120e12 0%, #0d0b0e 100%);
+      border: 1px solid rgba(212, 136, 28, 0.12);
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      gap: 14px;
+      align-items: center;
+      text-align: left;
+      transition: all 0.28s
+    }
+
+    .tier-card:hover {
+      border-color: rgba(212, 136, 28, 0.28);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3)
+    }
+
+    @media(max-width:640px) {
+      .tier-card {
+        grid-template-columns: 48px 1fr;
+        gap: 10px
+      }
+
+      .tier-card .tier-badge {
+        grid-column: 1 / -1;
+        justify-self: center
+      }
+    }
+
+    .tier-icon {
+      width: 56px;
+      height: 56px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      font-size: 1.5rem;
+      flex: 0 0 auto
+    }
+
+    .tier-info h4 {
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      margin-bottom: 2px
+    }
+
+    .tier-info p {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      line-height: 1.5;
+      margin: 0
+    }
+
+    .tier-bar {
+      height: 8px;
+      background: #050611;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 6px;
+      max-width: 220px
+    }
+
+    .tier-bar i {
+      display: block;
+      height: 100%;
+      border-radius: 999px
+    }
+
+    .tier-badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(212, 136, 28, 0.08);
+      border: 1px solid rgba(212, 136, 28, 0.18);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      color: var(--gold);
+      font-size: 0.8rem;
+      white-space: nowrap
+    }
+
+    .boss-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 760px;
+      margin: 0 auto
+    }
+
+    @media(max-width:700px) {
+      .boss-duo {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .boss-card {
+      padding: 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #1a1208 0%, #120e12 100%);
+      border: 1px solid rgba(212, 136, 28, 0.18);
+      text-align: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    .boss-card::before {
+      content: "";
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212,136,28,0.09), transparent 60%);
-      pointer-events: none;
+      background: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(212, 136, 28, 0.08), transparent 60%);
+      pointer-events: none
     }
-    .page-header-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 0 20px; }
-    .page-kicker {
-      display: inline-block;
-      padding: 4px 12px;
-      background: rgba(212,136,28,0.12);
-      border: 1px solid rgba(212,136,28,0.22);
-      border-radius: 999px;
-      color: var(--gold);
-      font-family: var(--font-heading);
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .page-title { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 8px; }
-    .page-title span { color: var(--gold); }
-    .page-sub { color: var(--text-muted); font-size: 0.95rem; margin: 0 auto 18px; max-width: 600px; line-height:1.6; }
-    .page-back {
-      display:inline-flex; align-items:center; gap:8px;
-      padding: 10px 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(212,136,28,0.18);
-      border-radius: 999px;
-      color: var(--text-body);
-      font-family: var(--font-heading);
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-decoration:none;
-      transition: all 0.18s;
-    }
-    .page-back:hover { background: rgba(212,136,28,0.10); border-color: var(--gold); color:#fff; transform: translateY(-1px); }
-    .page-content { padding-top: 28px; }
-    .back-footer { text-align:center; padding: 40px 0 20px; }
-  </style>
 
+    .boss-card-icon {
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      font-size: 1.8rem;
+      background: rgba(212, 136, 28, 0.1);
+      border: 1px solid rgba(212, 136, 28, 0.22)
+    }
+
+    .boss-card h4 {
+      color: #fff;
+      font-family: var(--font-heading);
+      margin-bottom: 4px
+    }
+
+    .boss-formula {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      color: var(--gold);
+      font-size: 1rem;
+      margin: 6px 0
+    }
+
+    .boss-examples {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px
+    }
+
+    .boss-examples span {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.75rem;
+      color: var(--text-body)
+    }
+
+    .boss-examples b {
+      color: var(--gold)
+    }
+
+    .sources-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      max-width: 1000px;
+      margin: 0 auto
+    }
+
+    .source-card {
+      padding: 16px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #120e12, #0d0b0e);
+      border: 1px solid rgba(212, 136, 28, 0.12);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.24s
+    }
+
+    .source-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(212, 136, 28, 0.28);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3)
+    }
+
+    .source-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      font-size: 1.4rem;
+      margin-bottom: 10px
+    }
+
+    .source-card h4 {
+      color: #fff;
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      margin-bottom: 4px
+    }
+
+    .source-value {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      color: var(--gold);
+      font-size: 1rem;
+      margin-bottom: 4px
+    }
+
+    .source-note {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      max-width: 200px
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      max-width: 900px;
+      margin: 0 auto
+    }
+
+    @media(max-width:760px) {
+      .detail-grid {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .detail-card {
+      padding: 16px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #120e12 0%, #0d0b0e 100%);
+      border: 1px solid rgba(212, 136, 28, 0.12);
+      text-align: left
+    }
+
+    .detail-card h4 {
+      color: #fff;
+      font-family: var(--font-heading);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .detail-card ul {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+      padding-left: 16px;
+      list-style: disc
+    }
+
+    .detail-card li {
+      margin-bottom: 4px
+    }
+
+    .detail-card b {
+      color: #fff
+    }
+
+    .calc-box {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 18px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #120e12, #0d0b0e);
+      border: 1px solid rgba(212, 136, 28, 0.16);
+      text-align: center
+    }
+
+    .calc-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px
+    }
+
+    @media(max-width:600px) {
+      .calc-row {
+        grid-template-columns: 1fr
+      }
+    }
+
+    .calc-box select,
+    .calc-box input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      background: #0e0b0e;
+      border: 1px solid rgba(212, 136, 28, 0.18);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 0.85rem
+    }
+
+    .calc-result {
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 10px;
+      background: rgba(212, 136, 28, 0.08);
+      border: 1px solid rgba(212, 136, 28, 0.18);
+      font-family: var(--font-heading);
+      font-weight: 800;
+      color: var(--gold);
+      font-size: 1.05rem
+    }
+
+    .section {
+      padding: 48px 0 !important;
+      text-align: center !important
+    }
+
+    .section-header {
+      margin: 0 auto 28px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      max-width: 720px !important;
+      text-align: center !important
+    }
+
+    .section-header .section-title {
+      margin: 0 auto 10px !important;
+      text-align: center !important
+    }
+
+    .section-header .section-title::after {
+      margin: 12px auto 0 !important
+    }
+
+    .section-subtitle {
+      margin: 0 auto !important;
+      text-align: center !important
+    }
+
+    .section-divider {
+      margin: 0 auto !important
+    }
+  </style>
 </head>
-<body>
+
+<body data-page="universo">
   <div class="global-particles">
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-    <div class="gp g"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
   </div>
-  <div class="global-runes">
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-  </div>
+  <div class="global-runes"><span class="gr">&#5765;</span><span class="gr">&#5792;</span><span
+      class="gr">&#5816;</span><span class="gr">&#5828;</span><span class="gr">&#5765;</span><span
+      class="gr">&#5792;</span><span class="gr">&#5816;</span><span class="gr">&#5828;</span><span
+      class="gr">&#5765;</span><span class="gr">&#5792;</span></div>
   <div class="global-circles">
-    <div class="gc"></div><div class="gc"></div>
-    <div class="gc"></div><div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
   </div>
   <div class="global-vignette"></div>
-
-  <nav class="nav scrolled">
-    <a href="../index.html" class="nav-brand">
-      <span class="brand-icon">&#9876;</span>
-      RPG Skills
-    </a>
+  <nav class="nav scrolled"><a href="../index.html" class="nav-brand"><span class="brand-icon">&#9876;</span>RPG
+      Skills</a>
     <div class="nav-links">
-      <div class="lang-switcher" role="group" aria-label="Idioma">
-        <button class="lang-option" data-lang="pt-BR" aria-label="Portugues">
-          <span class="fi fi-br"></span> PT-BR
-        </button>
-        <button class="lang-option" data-lang="en" aria-label="English">
-          <span class="fi fi-us"></span> EN-US
-        </button>
-      </div>
-      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;">&#8592; Voltar ao Início</a>
-    </div>
-    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+      <div class="lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang"><button class="lang-option"
+          data-lang="pt-BR"><span class="fi fi-br"></span> PT-BR</button><button class="lang-option"
+          data-lang="en"><span class="fi fi-us"></span> EN-US</button></div><a href="../index.html" class="page-back"
+        style="padding:7px 16px;font-size:0.72rem;"><span data-i18n="nav.back">← Voltar ao Início</span></a>
+    </div><button class="mobile-toggle" aria-label="Menu" data-i18n-aria="nav.menu">&#9776;</button>
   </nav>
-  <div class="mobile-nav">
-    <button class="mobile-nav-close" aria-label="Fechar">&times;</button>
-    <a href="../index.html">&#8592; Voltar ao Início</a>
-    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma">
-      <button class="lang-option" data-lang="pt-BR" aria-label="Portugues"><span class="fi fi-br"></span> PT-BR</button>
-      <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-us"></span> EN-US</button>
-    </div>
-    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary">Steam Workshop</a>
+  <div class="mobile-nav"><button class="mobile-nav-close" aria-label="Fechar"
+      data-i18n-aria="nav.close">&times;</button><a href="../index.html"><span data-i18n="nav.back">← Voltar ao
+        Início</span></a>
+    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang"><button
+        class="lang-option" data-lang="pt-BR"><span class="fi fi-br"></span> PT-BR</button><button class="lang-option"
+        data-lang="en"><span class="fi fi-us"></span> EN-US</button></div><a
+      href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+      class="btn btn-primary" data-i18n="nav.steam">Steam Workshop</a>
   </div>
-
   <header class="page-header">
     <div class="page-header-inner">
-      <div class="page-kicker">O Universo do XP</div>
-      <h1 class="page-title">Tudo sobre <span class="text-green">XP</span></h1>
-      <p class="page-sub">Cada zona paga diferente, cada ação conta. Da primeira machadada ao boss final - veja de onde vem cada ponto.</p>
-      
-      <div class="page-stats">
-        <span class="page-stat"><i>🌍</i> <b>35</b> zonas</span>
-        <span class="page-stat"><i>👹</i> <b>105</b> XP máx</span>
-        <span class="page-stat"><i>👑</i> <b>1.900</b> XP boss</span>
-      </div>
-      <a href="../index.html" class="page-back">&#8592; Voltar à página inicial</a>
+      <div class="page-kicker" data-i18n="universo.kicker">O Universo do XP</div>
+      <h1 class="page-title" data-i18n="universo.title">Tudo sobre <span class="text-green">XP</span></h1>
+      <p class="page-sub" data-i18n="universo.subtitle">Cada lugar paga diferente, cada ação conta. Do primeiro passo na
+        floresta ao boss final, saiba exatamente quanto vale cada aventura.</p>
+      <div class="page-stats"><span class="page-stat"><i>🗺️</i> <b>4</b> camadas</span><span
+          class="page-stat"><i>⚔️</i> <b>15</b> a <b>105</b> XP</span><span class="page-stat"><i>👑</i> <b>Boss</b> até
+          1.900</span></div>
+      <div style="margin-top:16px"><a href="../index.html" class="page-back"><span data-i18n="nav.back.home">← Voltar à
+            página inicial</span></a></div>
     </div>
   </header>
-
   <div class="page-content">
-<!-- ========== XP - UNIVERSO COMPLETO ========== -->
-  <section class="section">
-    <div class="section-glow-line"></div>
-    <div class="section-texture"></div>
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">O Universo do XP</div>
-        <h2 class="section-title">Tudo sobre <span class="text-green">XP</span></h2>
-        <p class="section-subtitle" style="margin:0 auto;">Cada zona paga diferente, cada ação conta. Da primeira machadada ao boss final - veja de onde vem cada ponto.</p>
-      </div>
-
-      <!-- PARTE 1: XP POR BIOMA (todos os 35 do código) -->
-      
-      <div class="reveal" style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:18px 0;">
-        <button class="config-tab active" data-xp-filter="all">Tudo</button>
-        <button class="config-tab" data-xp-filter="surface">Superfícies</button>
-        <button class="config-tab" data-xp-filter="cave">Cavernas</button>
-        <button class="config-tab" data-xp-filter="incursion">Incursions</button>
-      </div>
-      <script>
-        (function(){
-          var btns=document.querySelectorAll('[data-xp-filter]');
-          var groups=document.querySelectorAll('.xp-biome-group');
-          function apply(f){
-            groups.forEach(function(g){
-              var t=g.querySelector('.xp-biome-group-title').textContent;
-              var show=true;
-              if(f==='surface') show=t.includes('Superf');
-              else if(f==='cave') show=t.includes('Cavernas');
-              else if(f==='incursion') show=t.includes('Incursions')||t.includes('Mini');
-              g.style.display=show?'':'none';
-            });
-            btns.forEach(function(b){b.classList.toggle('active', b.dataset.xpFilter===f);});
-          }
-          btns.forEach(function(b){b.addEventListener('click', function(){apply(b.dataset.xpFilter);});});
-        })();
-      </script>
-
-      <div class="xp-biomes reveal" style="margin-top:var(--space-xl);">
-        <div class="xp-biome-group">
-          <h4 class="xp-biome-group-title">&#127795; Superfícies <span class="xp-biome-range">15 - 40 XP</span></h4>
-          <div class="xp-biome-chips">
-            <span class="xp-biome-chip polish">Floresta <b>15</b></span>
-            <span class="xp-biome-chip polish">Vila Pirata <b>20</b></span>
-            <span class="xp-biome-chip polish">Neve <b>20</b></span>
-            <span class="xp-biome-chip polish">Pântano <b>20</b></span>
-            <span class="xp-biome-chip polish">Deserto <b>20</b></span>
-            <span class="xp-biome-chip polish">Planícies <b>20</b></span>
-            <span class="xp-biome-chip polish">Dungeon <b>25</b></span>
-            <span class="xp-biome-chip polish">Outras superfícies <b>30</b></span>
-            <span class="xp-biome-chip polish">Floresta Carbonizada <b>35</b></span>
-            <span class="xp-biome-chip polish">Scrapyard <b>40</b></span>
-          </div>
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="universo.tiers.label">Onde o XP mora</div>
+          <h2 class="section-title" data-i18n="universo.tiers.title.html">Quanto mais <span class="text-green">fundo</span>, mais XP</h2>
+          <p class="section-subtitle" style="margin:0 auto" data-i18n="universo.tiers.subtitle">Pense como camadas de um
+            bolo: superfície é leve, incursões são o recheio premium. Clique nos filtros para focar.</p>
         </div>
-
-        <div class="xp-biome-group">
-          <h4 class="xp-biome-group-title">&#9935; Cavernas & Profundezas <span class="xp-biome-range">30 - 70 XP</span></h4>
-          <div class="xp-biome-chips">
-            <span class="xp-biome-chip polish">Caverna Floresta <b>30</b></span>
-            <span class="xp-biome-chip polish">Caverna Neve <b>30</b></span>
-            <span class="xp-biome-chip polish">Caverna Planícies <b>35</b></span>
-            <span class="xp-biome-chip polish">Caverna Pântano <b>40</b></span>
-            <span class="xp-biome-chip polish">Caverna Deserto <b>40</b></span>
-            <span class="xp-biome-chip polish">Deep Floresta <b>45</b></span>
-            <span class="xp-biome-chip polish">Deep Neve <b>50</b></span>
-            <span class="xp-biome-chip polish">Deep Planícies <b>55</b></span>
-            <span class="xp-biome-chip polish">Deep Pântano <b>60</b></span>
-            <span class="xp-biome-chip polish">Deep Deserto <b>65</b></span>
-            <span class="xp-biome-chip polish">Deep Templo <b>70</b></span>
-          </div>
+        <div class="reveal" style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:16px">
+          <button class="config-tab active" data-xp-filter="all" data-i18n="universo.filter.all">Tudo</button>
+          <button class="config-tab" data-xp-filter="surface" data-i18n="universo.filter.surface">Superfície</button>
+          <button class="config-tab" data-xp-filter="cave" data-i18n="universo.filter.caves">Cavernas</button>
+          <button class="config-tab" data-xp-filter="incursion" data-i18n="universo.filter.incursion">Incursões</button>
         </div>
-
-        <div class="xp-biome-group">
-          <h4 class="xp-biome-group-title">&#9760; Incursions <span class="xp-biome-range">75 - 105 XP</span></h4>
-          <div class="xp-biome-chips">
-            <span class="xp-biome-chip polish">Slime <b>75</b></span>
-            <span class="xp-biome-chip polish">Graveyard <b>80</b></span>
-            <span class="xp-biome-chip polish">Spider Castle <b>85</b></span>
-            <span class="xp-biome-chip polish">Sun/Moon Arena <b>90</b></span>
-            <span class="xp-biome-chip polish">Crystal Hollow <b>95</b></span>
-            <span class="xp-biome-chip polish">Settlement Ruins <b>100</b></span>
-            <span class="xp-biome-chip polish">Scrapyard <b>105</b></span>
-          </div>
-        </div>
-
-        <div class="xp-biome-group">
-          <h4 class="xp-biome-group-title">&#128128; Mini-chefes <span class="xp-biome-range">zona base</span></h4>
-          <div class="xp-biome-chips">
-            <span class="xp-biome-chip polish">Spider Nest <b>25</b></span>
-            <span class="xp-biome-chip polish">Vampire Crypt <b>25</b></span>
-            <span class="xp-biome-chip polish">Thorns <b>30</b></span>
-            <span class="xp-biome-chip polish">Ruins <b>20</b></span>
-          </div>
-        </div>
-      </div>
-
-      <!-- CALLOUT: CHEFES -->
-      <div class="xp-boss-callout reveal polish">
-        <div class="xp-boss-icon polish">&#128081;</div>
-        <div class="xp-boss-body">
-          <span class="xp-boss-tag">XP Premium</span>
-          <h4 class="xp-boss-title">Chefes & Mini-chefes</h4>
-
-          <div class="xp-boss-block">
-            <div class="xp-boss-label">&#128081; Boss</div>
-            <p class="xp-boss-formula">300 + (nível &divide; 10) &times; 100 XP</p>
-            <div class="xp-boss-stats">
-              <span><b>Nv 1</b> 300</span>
-              <span><b>Nv 50</b> 800</span>
-              <span><b>Nv 100</b> 1.300</span>
-              <span><b>Nv 160</b> 1.900</span>
+        <script>
+          (function () {
+            var btns = document.querySelectorAll('[data-xp-filter]');
+            var groups = document.querySelectorAll('.tier-card');
+            function apply(f) {
+              groups.forEach(function (g) {
+                var cat = g.dataset.cat;
+                var show = f === 'all' || cat === f;
+                g.style.display = show ? 'grid' : 'none';
+              });
+              btns.forEach(function (b) { b.classList.toggle('active', b.dataset.xpFilter === f); });
+            }
+            btns.forEach(function (b) { b.addEventListener('click', function () { apply(b.dataset.xpFilter); }); });
+          })();
+        </script>
+        <div class="tier-grid reveal">
+          <div class="tier-card" data-cat="surface">
+            <div class="tier-icon"
+              style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.18);color:#4ade80">🌲</div>
+            <div class="tier-info">
+              <h4><span data-i18n="universo.tier.surface.title">Superfícies</span> <span style="font-weight:400;color:var(--text-dim);font-size:0.75rem" data-i18n="universo.tier.surface.range">- ideal nível 1 a
+                  20</span></h4>
+              <p data-i18n="universo.tier.surface.text">Floresta 15, Outras superfícies 30, Vila Pirata/Neve/Pântano/Deserto/Planícies 20, Dungeon 25,
+                Carbonizada base 32 (~35 c/ ambiente), Scrapyard 40</p>
+              <div class="tier-bar"><i style="width:38%;background:linear-gradient(90deg,#4ade80,#22c55e)"></i></div>
             </div>
+            <div class="tier-badge">15 - 40</div>
           </div>
-
-          <div class="xp-boss-block">
-            <div class="xp-boss-label">&#128128; Mini-chefe</div>
-            <p class="xp-boss-formula">XP da zona + 100</p>
-            <div class="xp-boss-stats">
-              <span><b>Spider Nest</b> 125</span>
-              <span><b>Vampire Crypt</b> 125</span>
-              <span><b>Thorns</b> 130</span>
-              <span><b>Ruins</b> 120</span>
+          <div class="tier-card" data-cat="cave">
+            <div class="tier-icon"
+              style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.18);color:#60a5fa">⛏️</div>
+            <div class="tier-info">
+              <h4><span data-i18n="universo.tier.cave.title">Cavernas e Deep</span> <span style="font-weight:400;color:var(--text-dim);font-size:0.75rem" data-i18n="universo.tier.cave.range">- nível 20 a
+                  60</span></h4>
+              <p data-i18n="universo.tier.cave.text">Caverna Floresta 30, Neve 30, Planícies 35, Pântano 40, Deep Floresta 45, Neve 50, Planícies 55,
+                Pântano 60, Deserto 65, Templo 70</p>
+              <div class="tier-bar"><i style="width:66%;background:linear-gradient(90deg,#60a5fa,#3b82f6)"></i></div>
             </div>
+            <div class="tier-badge">30 - 70</div>
+          </div>
+          <div class="tier-card" data-cat="incursion">
+            <div class="tier-icon"
+              style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.18);color:#ef4444">🔥</div>
+            <div class="tier-info">
+              <h4><span data-i18n="universo.tier.incursion.title">Incursões</span> <span style="font-weight:400;color:var(--text-dim);font-size:0.75rem" data-i18n="universo.tier.incursion.range">- nível 60+
+                  Endgame</span></h4>
+              <p data-i18n="universo.tier.incursion.text">Slime 75, Graveyard 80, Spider Castle 85, Sun/Moon 90, Crystal Hollow 95, Settlement Ruins 100,
+                Scrapyard 105</p>
+              <div class="tier-bar"><i style="width:100%;background:linear-gradient(90deg,#ef4444,#f97316)"></i></div>
+            </div>
+            <div class="tier-badge">75 - 105</div>
+          </div>
+          <div class="tier-card" data-cat="cave">
+            <div class="tier-icon"
+              style="background:rgba(167,139,250,0.08);border:1px solid rgba(167,139,250,0.18);color:#a78bfa">💀</div>
+            <div class="tier-info">
+              <h4><span data-i18n="universo.tier.mini.title">Mini-chefes</span> <span style="font-weight:400;color:var(--text-dim);font-size:0.75rem" data-i18n="universo.tier.mini.range">- bônus +100</span>
+              </h4>
+              <p data-i18n="universo.tier.mini.text">Spider Nest 25, Vampire Crypt 25, Thorns 30, Ruins 20 - cada mini-chefe vale a zona base mais 100 de
+                bônus.</p>
+              <div class="tier-bar"><i style="width:28%;background:linear-gradient(90deg,#a78bfa,#8b5cf6)"></i></div>
+            </div>
+            <div class="tier-badge">+100</div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:12px;font-size:0.78rem;color:var(--text-muted)" data-i18n="universo.tiers.tip">💡 <b
+            style="color:#fff;">Dica:</b> Se está no nível 10, vá para Dungeon (25). No 40, Deep Templo (70). No 80+,
+          Incursions (100+).</div>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="section" style="background:var(--dark2);">
+      <div class="section-glow-line"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="universo.bosses.label">Os grandes prêmios</div>
+          <h2 class="section-title" data-i18n="universo.bosses.title.html">Chefes valem <span class="text-green">muito</span></h2>
+          <p class="section-subtitle" style="margin:0 auto" data-i18n="universo.bosses.subtitle">Um boss pode valer o mesmo que 100 inimigos comuns.
+            Mini-chefes também são ótimos atalhos.</p>
+        </div>
+        <div class="boss-duo reveal">
+          <div class="boss-card">
+            <div class="boss-card-icon"
+              style="background:rgba(212,136,28,0.1);border-color:rgba(212,136,28,0.22);color:var(--gold)">👑</div>
+            <h4 data-i18n="universo.boss.card.title">Chefes</h4>
+            <p style="font-size:0.82rem;color:var(--text-muted);" data-i18n="universo.boss.card.sub">Quanto maior seu nível, mais eles pagam</p>
+            <div class="boss-formula" data-i18n="universo.boss.card.formula">300 + 100 a cada 10 níveis</div>
+            <div class="boss-examples"><span><b><span data-i18n="universo.boss.lvl">Nível</span> 1</b> 300</span><span><b><span data-i18n="universo.boss.lvl">Nível</span> 50</b> 800</span><span><b><span data-i18n="universo.boss.lvl">Nível</span>
+                  100</b> 1.300</span><span><b><span data-i18n="universo.boss.lvl">Nível</span> 160</b> 1.900</span></div>
+            <div style="margin-top:10px;font-size:0.72rem;color:var(--text-dim)" data-i18n="universo.boss.card.ex">Ex: matar o boss no nível 100 rende o
+              mesmo que 86 slimes da floresta!</div>
+          </div>
+          <div class="boss-card">
+            <div class="boss-card-icon"
+              style="background:rgba(167,139,250,0.1);border-color:rgba(167,139,250,0.22);color:#a78bfa">💀</div>
+            <h4 data-i18n="universo.miniboss.card.title">Mini-chefes</h4>
+            <p style="font-size:0.82rem;color:var(--text-muted);" data-i18n="universo.miniboss.card.sub">Vale a zona onde está + 100 de bônus</p>
+            <div class="boss-formula" data-i18n="universo.miniboss.card.formula">Zona + 100 XP</div>
+            <div class="boss-examples"><span>Spider Nest <b>125</b></span><span>Vampire <b>125</b></span><span>Thorns
+                <b>130</b></span><span>Ruins <b>120</b></span></div>
+            <div style="margin-top:10px;font-size:0.72rem;color:var(--text-dim)" data-i18n="universo.miniboss.card.ex">São mais fáceis que bosses, mas já
+              pagam muito bem.</div>
           </div>
         </div>
       </div>
-
-      <!-- PARTE 2: TODAS AS FONTES -->
-      <h3 class="xp-subhead reveal">Todas as Fontes de XP</h3>
-      <div class="xp-sources-grid reveal">
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--red);">&#9876;</div>
-          <div class="xp-source-name">Inimigos</div>
-          <div class="xp-source-value">15-105 XP</div>
-          <div class="xp-source-note">por kill, conforme a zona</div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="universo.sources.label">Toda ação conta</div>
+          <h2 class="section-title" data-i18n="universo.sources.title.html">12 jeitos <span class="text-green">de ganhar XP</span></h2>
+          <p class="section-subtitle" style="margin:0 auto" data-i18n="universo.sources.subtitle">Você não precisa só lutar. Escolha o que curte!</p>
         </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--gold);">&#128081;</div>
-          <div class="xp-source-name">Chefes</div>
-          <div class="xp-source-value">300 + 100/10 nív</div>
-          <div class="xp-source-note">até 1.900 XP</div>
-        </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--red);">&#128128;</div>
-          <div class="xp-source-name">Mini-chefes</div>
-          <div class="xp-source-value">zona + 100</div>
-          <div class="xp-source-note">bônus fixo de 100</div>
-        </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--blue);">&#9935;</div>
-          <div class="xp-source-name">Mineração</div>
-          <div class="xp-source-value">+5 XP</div>
-          <div class="xp-source-note">por bloco quebrado</div>
-        </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--gold);">&#127794;</div>
-          <div class="xp-source-name">Coleta</div>
-          <div class="xp-source-value">+5 XP</div>
-          <div class="xp-source-note">árvores e plantas</div>
-        </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--gold);">&#127907;</div>
-          <div class="xp-source-name">Pesca</div>
-          <div class="xp-source-value">+5 XP</div>
-          <div class="xp-source-note">por lance (não por peixe)</div>
-        </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--gold);">&#127793;</div>
-          <div class="xp-source-name">Fazenda</div>
-          <div class="xp-source-value">+5 XP</div>
-          <div class="xp-source-note">semente ou colheita</div>
-        </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--cat-settler);">&#127969;</div>
-          <div class="xp-source-name">Assentamento</div>
-          <div class="xp-source-value">+5 XP</div>
-          <div class="xp-source-note">por atividade · lim. 150/min</div>
-        </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--cat-settler);">&#127917;</div>
-          <div class="xp-source-name">Lazer</div>
-          <div class="xp-source-value">+5 XP</div>
-          <div class="xp-source-note">cap 30 por dia</div>
-        </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--blue);">&#127758;</div>
-          <div class="xp-source-name">XP de Mundo</div>
-          <div class="xp-source-value">+5 XP</div>
-          <div class="xp-source-note">fixo por ação</div>
-        </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--red);">&#9760;</div>
-          <div class="xp-source-name">Morte</div>
-          <div class="xp-source-value">−25%</div>
-          <div class="xp-source-note">do XP atual do nível</div>
-        </div>
-        <div class="xp-source polish">
-          <div class="xp-source-icon" style="--c:var(--gold);">&#128293;</div>
-          <div class="xp-source-name">Buffs de XP</div>
-          <div class="xp-source-value">2× / 5× / 10×</div>
-          <div class="xp-source-note">multiplica ganhos</div>
+        <div class="sources-grid reveal">
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.14);color:#ef4444">⚔️</div>
+            <h4 data-i18n="universo.src.enemies">Inimigos</h4>
+            <div class="source-value">15 a 105</div>
+            <div class="source-note" data-i18n="universo.src.enemies.note">por inimigo, depende do lugar</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">👑</div>
+            <h4 data-i18n="universo.src.bosses">Chefes</h4>
+            <div class="source-value">300 a 1.900</div>
+            <div class="source-note" data-i18n="universo.src.bosses.note">cresce com seu nível</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(167,139,250,0.08);border:1px solid rgba(167,139,250,0.14);color:#a78bfa">💀</div>
+            <h4 data-i18n="universo.src.miniboss">Mini-chefes</h4>
+            <div class="source-value">+100 bônus</div>
+            <div class="source-note" data-i18n="universo.src.miniboss.note">zona + 100 fixo</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">⛏️</div>
+            <h4 data-i18n="universo.src.mining">Mineração</h4>
+            <div class="source-value">+5 XP</div>
+            <div class="source-note" data-i18n="universo.src.mining.note">por bloco com item</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.14);color:#4ade80">🌳</div>
+            <h4 data-i18n="universo.src.gather">Coleta</h4>
+            <div class="source-value">+5 XP</div>
+            <div class="source-note" data-i18n="universo.src.gather.note">árvores e plantas</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">🎣</div>
+            <h4 data-i18n="universo.src.fish">Pesca</h4>
+            <div class="source-value">+5 XP</div>
+            <div class="source-note" data-i18n="universo.src.fish.note">por arremesso, não por peixe</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.14);color:#4ade80">🌱</div>
+            <h4 data-i18n="universo.src.farm">Fazenda</h4>
+            <div class="source-value">+5 XP</div>
+            <div class="source-note" data-i18n="universo.src.farm.note">plantar ou colher</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">🏡</div>
+            <h4 data-i18n="universo.src.settle">Assentamento</h4>
+            <div class="source-value">+5 XP</div>
+            <div class="source-note" data-i18n="universo.src.settle.note">por tarefa (limite 150/min)</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">🎨</div>
+            <h4 data-i18n="universo.src.leisure">Lazer</h4>
+            <div class="source-value">+5 XP</div>
+            <div class="source-note" data-i18n="universo.src.leisure.note">conversar, relaxar (30/dia)</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.14);color:#60a5fa">📦</div>
+            <h4 data-i18n="universo.src.world">Mundo</h4>
+            <div class="source-value">+5 XP</div>
+            <div class="source-note" data-i18n="universo.src.world.note">ações diversas</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.14);color:#ef4444">💀</div>
+            <h4 data-i18n="universo.src.death">Morte</h4>
+            <div class="source-value" style="color:#f87171">-25%</div>
+            <div class="source-note" data-i18n="universo.src.death.note">do XP do nível (pode desativar)</div>
+          </div>
+          <div class="source-card">
+            <div class="source-icon"
+              style="background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);color:var(--gold)">🚀</div>
+            <h4 data-i18n="universo.src.buff">Impulso</h4>
+            <div class="source-value">2x / 5x / 10x</div>
+            <div class="source-note" data-i18n="universo.src.buff.note">por 10 min na loja</div>
+          </div>
         </div>
       </div>
-
-      <!-- PARTE 3: COMO O XP FUNCIONA -->
-      <div class="xp-formula reveal">
-        <div class="xp-formula-item"><span class="xp-formula-icon">&#128283;</span><strong>Quantum 5:</strong> todo XP vira múltiplo de 5.</div>
-        <div class="xp-formula-item"><span class="xp-formula-icon">&#128293;</span><strong>Buffs:</strong> 2× / 5× / 10× nos ganhos.</div>
-        <div class="xp-formula-item"><span class="xp-formula-icon">&#128165;</span><strong>Morte:</strong> perde 25% do XP do nível.</div>
-        <div class="xp-formula-item"><span class="xp-formula-icon">&#128081;</span><strong>Realm Master 5:</strong> 3× XP do assentamento.</div>
+    </section>
+    <div class="section-divider"></div>
+    <section id="detalhes" class="section" style="background:var(--dark2);">
+      <div class="section-glow-line"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="universo.details.label">Detalhes que fazem diferença</div>
+          <h2 class="section-title" data-i18n="universo.details.title.html">Pequenos detalhes, <span class="text-green">grandes atalhos</span></h2>
+          <p class="section-subtitle" style="margin:0 auto" data-i18n="universo.details.subtitle">O que parece igual, nem sempre é. Veja o que muda na
+            prática.</p>
+        </div>
+        <div class="detail-grid reveal">
+          <div class="detail-card reveal">
+            <h4 data-i18n="universo.details.formulas">📐 Fórmulas reais</h4>
+            <ul>
+              <li data-i18n="universo.formula.boss">Chefe: 300 + floor(nível/10)×100 XP</li>
+              <li data-i18n="universo.formula.quantum">Todo ganho de XP é normalizado em múltiplos de 5 (quantum).</li>
+              <li data-i18n="universo.formula.death">Morte: perde 25% do XP do nível atual (ex.: 10.000 → 2.500),
+                configurável.</li>
+              <li data-i18n="universo.zone.charred.note">Floresta Carbonizada: base 32 XP (+10% ambiente → ~35).</li>
+            </ul>
+          </div>
+          <div class="detail-card">
+            <h4 data-i18n="universo.details.combat">⚔️ Combate no detalhe</h4>
+            <ul>
+              <li data-i18n="universo.details.combat.i1"><b>Animais</b> dão 5 XP, mas <b style="color:var(--gold);">suas invocações não dão nada</b></li>
+              <li data-i18n="universo.details.combat.i2"><b>Mini-chefes</b> precisam ser grandes ou especiais. Vale o XP da zona +100</li>
+              <li data-i18n="universo.details.combat.i3"><b>Boss</b> no nível 50 já paga 800 XP. No 100, 1.300!</li>
+              <li data-i18n="universo.details.combat.i4">Ex: 10 inimigos na Floresta (15 cada) + buff 5x = <b style="color:var(--gold);">750 XP</b></li>
+            </ul>
+          </div>
+          <div class="detail-card">
+            <h4 data-i18n="universo.details.mining">⛏️ Mineração esperta</h4>
+            <ul>
+              <li data-i18n="universo.details.mining.i1"><b>Blocos com item</b> dão 5 XP. Grama e teia não</li>
+              <li data-i18n="universo.details.mining.i2"><b>Explosivos</b> quebram muito, mas só o bloco que você mirou conta</li>
+              <li data-i18n="universo.details.mining.i3"><b>Líquidos</b> como água e lava não dão XP</li>
+              <li data-i18n="universo.details.mining.i4">Dica: 200 blocos = <b style="color:var(--gold);">1.000 XP</b> sem pressa</li>
+            </ul>
+          </div>
+          <div class="detail-card">
+            <h4 data-i18n="universo.details.fish">🎣 Pesca e fazenda</h4>
+            <ul>
+              <li data-i18n="universo.details.fish.i1"><b>Pesca</b> conta por arremesso, não por peixe. Até AFK funciona</li>
+              <li data-i18n="universo.details.fish.i2"><b>Plantar</b> 1 semente = 5 XP. <b>Colher</b> fruta = 5 XP</li>
+              <li data-i18n="universo.details.fish.i3">Colher muito rápido tem um intervalo curto para não duplicar</li>
+              <li data-i18n="universo.details.fish.i4">20 arremessos = <b style="color:var(--gold);">100 XP</b> pescando tranquilo</li>
+            </ul>
+          </div>
+          <div class="detail-card">
+            <h4 data-i18n="universo.details.settle">🏡 Assentamento</h4>
+            <ul>
+              <li data-i18n="universo.details.settle.i1"><b>Tarefas</b> dão 5 XP cada, até 150 por minuto</li>
+              <li data-i18n="universo.details.settle.i2"><b>Lazer</b> (conversar, relaxar) até 30 por dia</li>
+              <li data-i18n="universo.details.settle.i3"><b>Recrutar</b> colonos: comum 5, especialista 10, resgatado 15</li>
+              <li data-i18n="universo.details.settle.i4">Com <b style="color:var(--gold);">Reino nível 5</b>, tudo vale 3x mais!</li>
+            </ul>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:14px"><span
+            style="padding:6px 12px;border-radius:999px;background:rgba(212,136,28,0.08);border:1px solid rgba(212,136,28,0.14);font-size:0.72rem;color:var(--gold);font-weight:700" data-i18n="universo.details.integrated">💡
+            Este era o conteúdo de Fontes Detalhadas, agora integrado aqui</span></div>
       </div>
-    </div>
-  </section>
-
-  
-
+    </section>
+    <div class="section-divider"></div>
+    <section id="calc" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="universo.calc.label">Faça as contas</div>
+          <h2 class="section-title" data-i18n="universo.calc.title.html">Quanto <span class="text-green">você ganharia?</span></h2>
+          <p class="section-subtitle" style="margin:0 auto" data-i18n="universo.calc.subtitle">Escolha onde vai jogar e veja na hora. Sem matemática!</p>
+        </div>
+        <div class="calc-box reveal">
+          <div class="calc-row">
+            <div style="text-align:left"><label
+                style="font-size:0.72rem;color:var(--text-dim);letter-spacing:0.06em;text-transform:uppercase" data-i18n="universo.calc.where">Onde você
+                vai?</label><select id="calc-zone">
+                <option value="15" data-i18n="universo.calc.opt.forest">Floresta - 15 XP</option>
+                <option value="30" data-i18n="universo.calc.opt.cave">Caverna - 30 XP</option>
+                <option value="70" data-i18n="universo.calc.opt.temple">Deep Templo - 70 XP</option>
+                <option value="105" data-i18n="universo.calc.opt.incursion">Incursion - 105 XP</option>
+                <option value="300" data-i18n="universo.calc.opt.boss">Boss nível 1 - 300 XP</option>
+                <option value="5" data-i18n="universo.calc.opt.mine">Mineração/Pesca - 5 XP</option>
+              </select></div>
+            <div style="text-align:left"><label
+                style="font-size:0.72rem;color:var(--text-dim);letter-spacing:0.06em;text-transform:uppercase" data-i18n="universo.calc.times">Quantas
+                vezes?</label><input id="calc-qty" type="number" value="10" min="1" max="999"></div>
+          </div>
+          <div class="calc-row">
+            <div style="text-align:left"><label
+                style="font-size:0.72rem;color:var(--text-dim);letter-spacing:0.06em;text-transform:uppercase" data-i18n="universo.calc.buff">Com
+                impulso?</label><select id="calc-buff">
+                <option value="1" data-i18n="universo.calc.buff.none">Sem impulso (1x)</option>
+                <option value="2" data-i18n="universo.calc.buff.2">2x - suave</option>
+                <option value="5" data-i18n="universo.calc.buff.5">5x - equilibrado</option>
+                <option value="10" data-i18n="universo.calc.buff.10">10x - explosivo</option>
+              </select></div>
+            <div style="text-align:left"><label
+                style="font-size:0.72rem;color:var(--text-dim);letter-spacing:0.06em;text-transform:uppercase" data-i18n="universo.calc.level">Seu
+                nível</label><input id="calc-lvl" type="number" value="25" min="1" max="165"></div>
+          </div>
+          <div class="calc-result"><span id="calc-total">150 XP</span> <span data-i18n="universo.calc.total">no total</span> <span
+              style="color:var(--text-dim);font-weight:400">|</span> <span data-i18n="universo.calc.need">Falta</span> <span id="calc-need"
+              style="color:var(--gold);">250.000 XP</span> <span data-i18n="universo.calc.next">para o próximo</span> <span id="calc-pct"
+              style="color:var(--text-muted);">0.06%</span></div>
+          <div style="margin-top:8px;font-size:0.72rem;color:var(--text-dim)" data-i18n="universo.calc.tip">Boss no nível 100 já vale 1.300 XP
+            sozinho!</div>
+        </div>
+        <script>
+          (function () {
+            var zone = document.getElementById('calc-zone'), qty = document.getElementById('calc-qty'), buff = document.getElementById('calc-buff'), lvl = document.getElementById('calc-lvl'), total = document.getElementById('calc-total'), need = document.getElementById('calc-need'), pct = document.getElementById('calc-pct');
+            if (!zone) return;
+            function upd() {
+              var t = parseInt(zone.value, 10) * parseInt(qty.value, 10) * parseInt(buff.value, 10);
+              var n = 10000 * parseInt(lvl.value, 10);
+              total.textContent = t.toLocaleString('pt-BR') + ' XP';
+              need.textContent = n.toLocaleString('pt-BR') + ' XP';
+              pct.textContent = (t / n * 100).toFixed(1) + '% do nível';
+              pct.style.color = t >= n ? '#22c55e' : 'var(--text-muted)';
+            }
+            [zone, qty, buff, lvl].forEach(function (e) { e.addEventListener('input', upd); e.addEventListener('change', upd); });
+            upd();
+          })();
+        </script>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="section" style="background:var(--dark2);">
+      <div class="section-glow-line"></div>
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label" data-i18n="universo.tips.label">Dicas de veterano</div>
+          <h2 class="section-title" data-i18n="universo.tips.title.html">Como <span class="text-green">upar mais rápido</span></h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:900px;margin:0 auto"
+          class="reveal">
+          <div
+            style="padding:16px;border-radius:12px;background:linear-gradient(135deg,#120e12,#0d0b0e);border:1px solid rgba(212,136,28,0.12);text-align:center">
+            <div style="font-size:1.4rem;margin-bottom:8px">🎯</div>
+            <b style="color:#fff;font-family:var(--font-heading);" data-i18n="universo.tip1.title">Vá onde paga mais</b>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;line-height:1.5" data-i18n="universo.tip1.text">No nível 1, Floresta é
+              ótima. No 30, vá para Deep. No 80+, só Incursion.</p>
+          </div>
+          <div
+            style="padding:16px;border-radius:12px;background:linear-gradient(135deg,#120e12,#0d0b0e);border:1px solid rgba(212,136,28,0.12);text-align:center">
+            <div style="font-size:1.4rem;margin-bottom:8px">⏰</div>
+            <b style="color:#fff;font-family:var(--font-heading);" data-i18n="universo.tip2.title">Use o impulso certo</b>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;line-height:1.5" data-i18n="universo.tip2.text">Guarde o 10x para boss
+              ou Incursion difícil. 10 minutos de 10x valem mais que horas sem bônus.</p>
+          </div>
+          <div
+            style="padding:16px;border-radius:12px;background:linear-gradient(135deg,#120e12,#0d0b0e);border:1px solid rgba(212,136,28,0.12);text-align:center">
+            <div style="font-size:1.4rem;margin-bottom:8px">🤝</div>
+            <b style="color:#fff;font-family:var(--font-heading);" data-i18n="universo.tip3.title">Jogue junto</b>
+            <p style="font-size:0.82rem;color:var(--text-muted);margin-top:6px;line-height:1.5" data-i18n="universo.tip3.text">Perto de amigos (24
+              blocos) o XP é compartilhado. Assentamento com Reino nível 5 dá até 3x mais.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-divider"></div>
+    <section class="section page-flow-cta">
+      <div class="container reveal">
+        <h2 class="page-flow-title" data-i18n="cta.flow.title">Continue explorando</h2>
+        <p class="section-subtitle page-flow-sub" data-i18n="cta.flow.subtitle">Volte à página anterior ou siga para a próxima do guia.</p>
+        <div class="page-flow-actions">
+          <a href="progressao.html" class="btn btn-outline page-flow-prev" data-i18n="cta.flow.prev.progressao">← Anterior: Loop de Progressão</a>
+          <a href="classes.html" class="btn btn-primary page-flow-next" data-i18n="cta.flow.next.classes">Próxima: 33 Classes →</a>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <div class="back-footer">
-    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;">&#8592; Voltar à página inicial</a>
-  </div>
-
-  <footer class="footer" style="padding:28px 40px; margin-top:20px;">
+  <div class="back-footer"><a href="../index.html" class="page-back"
+      style="background:linear-gradient(180deg,var(--gold),#c2761a);color:#120a00;border-color:var(--gold);font-weight:800;"><span
+        data-i18n="nav.back.home">← Voltar à página inicial</span></a></div>
+  <footer class="footer" style="padding:28px 40px;margin-top:20px">
     <div class="container">
-      <div class="footer-bottom">
-        <span>Feito com &#9829; por Necromante96</span>
-        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);">Início</a></span>
-      </div>
+      <div class="footer-bottom"><span><span data-i18n="footer.made">Feito com &#9829; por
+            Necromante96</span></span><span>RPG Skills v2.7 - Necesse 1.3.2 | <a href="../index.html"
+            style="color:var(--gold);"><span data-i18n="footer.home">Início</span></a></span></div>
     </div>
   </footer>
-
-  <!-- Modal for classes page -->
-  <div class="modal-overlay" id="classModal">
-    <div class="modal">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div class="modal-header">
-        <div class="class-icon" id="modalIcon"></div>
-        <div>
-          <h3 id="modalTitle"></h3>
-          <div class="modal-tab-label" id="modalTab"></div>
-        </div>
-      </div>
-      <div class="modal-body" id="modalBody"></div>
-    </div>
-  </div>
-
+  <script src="../js/i18n-data.js"></script>
   <script src="../js/main.js"></script>
 </body>
+
 </html>
