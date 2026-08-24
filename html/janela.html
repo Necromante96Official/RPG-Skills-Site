@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A janela central do mod. Pressione K ou segure LB+RB no controle — 3 abas completas com tudo que você precisa.">
+  <meta name="theme-color" content="#0a0a0f">
+  <title>Janela RPG Skills - RPG Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
+
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/rpg-effects.css">
+  <link rel="stylesheet" href="../css/window.css">
+  <link rel="stylesheet" href="../css/qol.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+  <link rel="stylesheet" href="../css/polish.css">
+
+
+  <style>
+    .page-header {
+      padding: 120px 0 36px;
+      text-align: center;
+      background: linear-gradient(180deg, #0d0b0e 0%, #09080a 100%);
+      border-bottom: 1px solid rgba(212,136,28,0.14);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content:"";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212,136,28,0.09), transparent 60%);
+      pointer-events: none;
+    }
+    .page-header-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 0 20px; }
+    .page-kicker {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(212,136,28,0.12);
+      border: 1px solid rgba(212,136,28,0.22);
+      border-radius: 999px;
+      color: var(--gold);
+      font-family: var(--font-heading);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .page-title { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 8px; }
+    .page-title span { color: var(--gold); }
+    .page-sub { color: var(--text-muted); font-size: 0.95rem; margin: 0 auto 18px; max-width: 600px; line-height:1.6; }
+    .page-back {
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(212,136,28,0.18);
+      border-radius: 999px;
+      color: var(--text-body);
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration:none;
+      transition: all 0.18s;
+    }
+    .page-back:hover { background: rgba(212,136,28,0.10); border-color: var(--gold); color:#fff; transform: translateY(-1px); }
+    .page-content { padding-top: 28px; }
+    .back-footer { text-align:center; padding: 40px 0 20px; }
+  </style>
+
+</head>
+<body>
+  <div class="global-particles">
+    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+    <div class="gp g"></div><div class="gp g"></div><div class="gp w"></div>
+    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
+    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
+    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+  </div>
+  <div class="global-runes">
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+  </div>
+  <div class="global-circles">
+    <div class="gc"></div><div class="gc"></div>
+    <div class="gc"></div><div class="gc"></div>
+  </div>
+  <div class="global-vignette"></div>
+
+  <nav class="nav scrolled">
+    <a href="../index.html" class="nav-brand">
+      <span class="brand-icon">&#9876;</span>
+      RPG Skills
+    </a>
+    <div class="nav-links">
+      <div class="lang-switcher" role="group" aria-label="Idioma">
+        <button class="lang-option" data-lang="pt-BR" aria-label="Portugues">
+          <span class="fi fi-br"></span> PT-BR
+        </button>
+        <button class="lang-option" data-lang="en" aria-label="English">
+          <span class="fi fi-us"></span> EN-US
+        </button>
+      </div>
+      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;">&#8592; Voltar ao Início</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Fechar">&times;</button>
+    <a href="../index.html">&#8592; Voltar ao Início</a>
+    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma">
+      <button class="lang-option" data-lang="pt-BR" aria-label="Portugues"><span class="fi fi-br"></span> PT-BR</button>
+      <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-us"></span> EN-US</button>
+    </div>
+    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary">Steam Workshop</a>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="page-kicker">Interface do Jogo</div>
+      <h1 class="page-title">Janela <span class="text-green">RPG Skills</span></h1>
+      <p class="page-sub">A janela central do mod. Pressione K ou segure LB+RB no controle — 3 abas completas com tudo que você precisa.</p>
+      
+      <div class="page-stats">
+        <span class="page-stat"><i>⌨️</i> <b>K</b> abrir</span>
+        <span class="page-stat"><i>🎮</i> <b>LB+RB</b></span>
+        <span class="page-stat"><i>🗂️</i> <b>3</b> abas</span>
+      </div>
+      <a href="../index.html" class="page-back">&#8592; Voltar à página inicial</a>
+    </div>
+  </header>
+
+  <div class="page-content">
+<!-- ========== JANELA RPG SKILLS — REFEITA DO ZERO (PREMIUM) ========== -->
+  <section id="window" class="section section-alt window-section">
+    <div class="section-glow-line"></div>
+    <div class="section-texture"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label" data-i18n="window.label">Interface do Jogo</div>
+        <h2 class="section-title" data-i18n="window.title">Janela <span class="text-green">RPG Skills</span></h2>
+        <p class="section-subtitle" style="margin:0 auto;" data-i18n="window.subtitle">A janela central do mod. Pressione <b>K</b> ou segure <b>LB+RB</b> no controle — 3 abas completas com tudo que você precisa.</p>
+      </div>
+
+      <!-- Atalhos de abertura -->
+      <div style="text-align:center; margin:10px 0;"><span class="float-badge">✦ Demo interativa — clique nas abas, +1 e buffs</span></div>
+      <div class="window-hotkeys reveal">
+        <div class="whk whk--pulse">
+          <kbd>K</kbd> <strong>Teclado</strong> <em>abrir / fechar</em>
+        </div>
+        <div class="whk">
+          <kbd>LB</kbd> + <kbd>RB</kbd> <strong>Controle</strong> <em>segure 0.4s</em>
+        </div>
+        <div class="whk">
+          <kbd>ESC</kbd> <strong>Fechar</strong> <em>ou B no controle</em>
+        </div>
+      </div>
+
+      <!-- MOCKUP INTERATIVO -->
+      <div class="window-stage-new reveal">
+        <div class="rpg-window" role="region" aria-label="Janela RPG Skills — demonstração interativa">
+
+          <!-- Titlebar -->
+          <div class="rw-titlebar">
+            <div class="rw-logo">&#9876;</div>
+            <div class="rw-title">RPG Skills</div>
+            <div class="rw-ver">v2.7</div>
+            <div class="rw-actions">
+              <span class="rw-hint">Pressione <kbd>K</kbd> ou <kbd>LB+RB</kbd></span>
+              <button class="rw-close" aria-label="Fechar" title="ESC">×</button>
+            </div>
+          </div>
+
+          <!-- Tabs -->
+          <div class="rw-tabs" role="tablist">
+            <button class="rw-tab active" role="tab" aria-selected="true" data-tab="rw-status" id="rtab-status">
+              <span class="ico">&#9889;</span> Status <span class="badge" id="rw-badge-status">42</span>
+            </button>
+            <button class="rw-tab" role="tab" aria-selected="false" data-tab="rw-classes" id="rtab-classes">
+              <span class="ico">&#9876;</span> Classes <span class="badge" id="rw-badge-classes">33</span>
+            </button>
+            <button class="rw-tab" role="tab" aria-selected="false" data-tab="rw-shop" id="rtab-shop">
+              <span class="ico">&#128176;</span> Loja <span class="badge">NOVO</span>
+            </button>
+          </div>
+
+          <!-- Body -->
+          <div class="rw-body">
+
+            <div class="rw-toast" id="rw-toast">+ 120 XP</div>
+
+            <!-- ===== STATUS ===== -->
+            <div class="rw-panel active" id="rw-status" role="tabpanel" aria-labelledby="rtab-status">
+              <div class="rw-status-top">
+                <!-- Player card -->
+                <div class="rw-player" id="rw-player-card">
+                  <div class="rw-avatar">🧙</div>
+                  <div style="flex:1; min-width:0;">
+                    <div class="rw-pname">Aventureiro <span class="rw-plvl" id="rw-lvl-label">Nível 42</span> <span id="rw-max-badge" style="display:none; margin-left:6px; font-size:0.62rem; font-weight:800; background:var(--gold); color:#120a00; padding:1px 6px; border-radius:999px;">MÁX</span></div>
+                    <div class="rw-xpbar" id="rw-xpbar"><div class="rw-xpfill" id="rw-xpfill" style="width:62%"></div></div>
+                    <div class="rw-xplabel">
+                      <span id="rw-xp-text"><strong>12.450</strong> / 15.000 XP</span>
+                      <span id="rw-xp-pct" style="color:var(--gold); font-weight:700;">62%</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Mini stats -->
+                <div class="rw-stats">
+                  <div class="rw-stat"><b id="rw-free-points">3</b><span>Pontos Livres</span></div>
+                  <div class="rw-stat"><b id="rw-spent-points">42</b><span>Gastos</span></div>
+                  <div class="rw-stat"><b id="rw-total-bonus">+38%</b><span>Bônus Ativo</span></div>
+                </div>
+              </div>
+
+              <!-- Bônus derivados -->
+              <div class="rw-bonus" style="margin-bottom:12px;">
+                <div class="rw-section-label">⚡ Bônus Ativos no Personagem</div>
+                <div class="rw-chips" id="rw-bonus-chips">
+                  <span class="rw-chip rw-chip--gold">&#9876; +15% Dano corpo a corpo</span>
+                  <span class="rw-chip rw-chip--red">🩸 +1.8/s Regeneração</span>
+                  <span class="rw-chip rw-chip--blue">&#128168; +2 Dash · -20% cooldown</span>
+                  <span class="rw-chip rw-chip--gold">&#9935; Minerador de Veios <small>ON</small></span>
+                  <span class="rw-chip rw-chip--green">&#10024; +20 Mana · Escritor Imortal</span>
+                  <span class="rw-chip">&#128270; +25% Alcance de construção</span>
+                </div>
+              </div>
+
+              <!-- Passivas -->
+              <div class="rw-bonus">
+                <div class="rw-section-label">✦ Passivas Desbloqueadas <span id="rw-pass-count" style="margin-left:auto; color:var(--gold); font-weight:800;">6 / 19</span></div>
+                <div class="rw-passives" id="rw-pass-grid">
+                  <div class="rw-pass on"><i>👁️</i><div><b>Olho de Águia</b><p>Radar + barras de vida permanentes</p><span class="req">Atirador 1+</span></div></div>
+                  <div class="rw-pass on"><i>⛏️</i><div><b>Minerador de Veios</b><p>Veios inteiros com 1 clique</p><span class="req">Caverna 1+</span></div></div>
+                  <div class="rw-pass on"><i>💡</i><div><b>Ruína Escura</b><p>Luz do trinket 250 → 350</p><span class="req">Caverna 1+</span></div></div>
+                  <div class="rw-pass dim"><i>🛡️</i><div><b>Proteção Colossal</b><p>2–10s invulnerável (30s CD)</p><span class="req">Colossal 1+</span></div></div>
+                </div>
+                <div class="rw-kbar">
+                  <kbd>Clique</kbd> em uma classe na aba Classes para ver bônus detalhados · <kbd>Mouse</kbd> sobre o chip mostra o valor exato · <kbd>+ XP</kbd> botão teste abaixo
+                  <button id="rw-gain-xp" style="margin-left:auto; padding:5px 12px; border-radius:999px; background:var(--gold); color:#120a00; font-weight:800; border:none; cursor:pointer; font-family:var(--font-heading);">+ 850 XP</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===== CLASSES ===== -->
+            <div class="rw-panel" id="rw-classes" role="tabpanel" aria-labelledby="rtab-classes">
+              <div class="rw-classes-head">
+                <div class="rw-points">Pontos disponíveis: <b id="rw-points-val">3</b> <span style="font-size:0.72rem; color:var(--text-dim);">· 1 ponto por nível · Máx 5 por classe</span></div>
+                <div class="rw-filter" id="rw-filter">
+                  <button class="rw-fbtn active" data-filter="all">Todas (33)</button>
+                  <button class="rw-fbtn" data-filter="combat">Combate (9)</button>
+                  <button class="rw-fbtn" data-filter="defense">Defesa (7)</button>
+                  <button class="rw-fbtn" data-filter="mobility">Mobilidade (3)</button>
+                  <button class="rw-fbtn" data-filter="utility">Utilidade (13)</button>
+                  <button class="rw-fbtn" data-filter="settler">Reino (1)</button>
+                </div>
+              </div>
+
+              <div class="rw-class-list" id="rw-class-list">
+                <!-- Gerado por JS, mas placeholder pra SEO / sem JS -->
+                <div class="rw-crow" data-cat="combat" data-lvl="3" data-max="5">
+                  <div class="rw-cico" style="background:rgba(239,68,68,0.10); color:#ef4444;">&#9876;</div>
+                  <div class="rw-cinfo">
+                    <div class="rw-cname">Mestre da Guerra <span class="rw-clvl">NV 3 / 5</span></div>
+                    <div class="rw-cbonus">+30% dano corpo a corpo · +30% crítico · +30% velocidade de ataque</div>
+                    <div class="rw-cbar"><div class="rw-cfill" style="width:60%"></div></div>
+                  </div>
+                  <button class="rw-plus" aria-label="Adicionar ponto">+1</button>
+                </div>
+                <div class="rw-crow maxed" data-cat="utility" data-lvl="5" data-max="5">
+                  <div class="rw-cico" style="background:rgba(234,179,8,0.12); color:#c8973a;">&#9935;</div>
+                  <div class="rw-cinfo">
+                    <div class="rw-cname">Mestre da Caverna <span class="rw-clvl max">MÁX 5</span></div>
+                    <div class="rw-cbonus">+50% mineração · <b>Vein Miner</b> + <b>Dark Ruin</b> · <b>Explosive Miner</b> liberado</div>
+                    <div class="rw-cbar"><div class="rw-cfill" style="width:100%"></div></div>
+                  </div>
+                  <button class="rw-plus" disabled aria-label="Máximo">✓</button>
+                </div>
+                <div class="rw-crow locked" data-cat="defense" data-lvl="0" data-max="5">
+                  <div class="rw-cico" style="background:rgba(96,165,250,0.10); color:#60a5fa;">🛡️</div>
+                  <div class="rw-cinfo">
+                    <div class="rw-cname">Mestre da Defesa <span class="rw-clvl dim">NV 0 / 5</span></div>
+                    <div class="rw-cbonus">+5 armadura por ponto (cap 25) · +10% espinhos por ponto</div>
+                    <div class="rw-cbar"><div class="rw-cfill" style="width:0%"></div></div>
+                  </div>
+                  <button class="rw-plus" aria-label="Adicionar ponto">+1</button>
+                </div>
+                <div class="rw-crow" data-cat="combat" data-lvl="1" data-max="5">
+                  <div class="rw-cico" style="background:rgba(239,68,68,0.10); color:#ef4444;">🔥</div>
+                  <div class="rw-cinfo">
+                    <div class="rw-cname">Mestre do Fogo <span class="rw-clvl">NV 1 / 5</span></div>
+                    <div class="rw-cbonus">5/s queimadura · 3s duração por ponto · + lentidão necrótica</div>
+                    <div class="rw-cbar"><div class="rw-cfill" style="width:20%"></div></div>
+                  </div>
+                  <button class="rw-plus" aria-label="Adicionar ponto">+1</button>
+                </div>
+                <div class="rw-crow" data-cat="settler" data-lvl="4" data-max="5">
+                  <div class="rw-cico" style="background:rgba(74,222,128,0.12); color:#4ade80;">👑</div>
+                  <div class="rw-cinfo">
+                    <div class="rw-cname">Mestre do Reino <span class="rw-clvl">NV 4 / 5</span></div>
+                    <div class="rw-cbonus">+80 felicidade · +40% desconto · Nv5: <b>Sem Rival + 3× XP + Aura</b></div>
+                    <div class="rw-cbar"><div class="rw-cfill" style="width:80%"></div></div>
+                  </div>
+                  <button class="rw-plus" aria-label="Adicionar ponto">+1</button>
+                </div>
+              </div>
+
+              <div class="rw-kbar">
+                <span>💡 <b>Dica:</b> Clique em <kbd>+1</kbd> para simular gasto de ponto. Filtro por categoria acima.</span>
+                <button id="rw-reset-points" style="margin-left:auto; padding:5px 12px; border-radius:999px; background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.32); color:#f87171; font-weight:800; cursor:pointer; font-family:var(--font-heading); font-size:0.72rem;">↺ Resetar (teste)</button>
+              </div>
+            </div>
+
+            <!-- ===== LOJA ===== -->
+            <div class="rw-panel" id="rw-shop" role="tabpanel" aria-labelledby="rtab-shop">
+              <div class="rw-section-label">🔥 Buffs de XP — 10 minutos cada <span id="rw-buff-active" style="margin-left:auto; color:var(--text-dim); font-weight:700; font-size:0.70rem;">Nenhum ativo</span></div>
+              <div class="rw-buff-row" id="rw-buff-row">
+                <button class="rw-buff" data-buff="2"><b>2× XP</b><small>500 coins</small><em>Suave</em></button>
+                <button class="rw-buff" data-buff="5"><b>5× XP</b><small>1.000 coins</small><em>Recomendado</em></button>
+                <button class="rw-buff" data-buff="10"><b>10× XP</b><small>2.000 coins</small><em>Explosivo</em></button>
+              </div>
+
+              <div class="rw-section-label">🛒 Upgrades Permanentes</div>
+              <div class="rw-shop-grid">
+                <div class="rw-shop-card">
+                  <div class="rw-shop-head">
+                    <div class="rw-shop-icon">📦</div>
+                    <div>
+                      <div class="rw-shop-name">Slots de Baú</div>
+                      <div class="rw-shop-desc">+10 por compra. Base 5.000 + 5.000/bônus · Máx 1000 slots</div>
+                    </div>
+                  </div>
+                  <div class="rw-price">🪙 <span data-price="chest">5.000</span> coins</div>
+                  <button class="rw-buy" data-buy="chest">Comprar +10 slots</button>
+                  <div style="margin-top:8px; font-size:0.68rem; color:var(--text-dim);">Atual: <b id="rw-chest-val" style="color:var(--gold);">60</b> slots · <span id="rw-chest-bar" style="display:inline-block; width:60px; height:4px; background:#050611; border-radius:999px; vertical-align:middle; overflow:hidden; border:1px solid rgba(255,255,255,0.06);"><span style="display:block; height:100%; width:6%; background:var(--gold);"></span></span></div>
+                </div>
+
+                <div class="rw-shop-card">
+                  <div class="rw-shop-head">
+                    <div class="rw-shop-icon">🗄️</div>
+                    <div>
+                      <div class="rw-shop-name">World Stack</div>
+                      <div class="rw-shop-desc">Aumenta o empilhamento de itens no mundo</div>
+                    </div>
+                  </div>
+                  <div class="rw-price">🪙 <span>2.500</span> coins + barras</div>
+                  <button class="rw-buy" data-buy="stack">Comprar Stack</button>
+                  <div style="margin-top:8px; font-size:0.68rem; color:var(--text-dim);">Atual: <b id="rw-stack-val" style="color:var(--gold);">1×</b> · Máx <b>1000×</b></div>
+                </div>
+
+                <div class="rw-shop-card" id="rw-card-explosive">
+                  <div class="rw-shop-head">
+                    <div class="rw-shop-icon">💣</div>
+                    <div>
+                      <div class="rw-shop-name">Minerador Explosivo <span style="font-size:0.60rem; background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.22); color:#f87171; padding:1px 6px; border-radius:999px; font-weight:800;">CAVERNA 5</span></div>
+                      <div class="rw-shop-desc">Explosão da picareta sem dano a jogadores/mobs</div>
+                    </div>
+                  </div>
+                  <div class="rw-price">🪙 100.000 + 1k copper/iron/gold + 1k Dynamite</div>
+                  <button class="rw-buy" data-buy="explosive" id="rw-buy-explosive" disabled style="opacity:0.45; cursor:not-allowed;">Requer Caverna 5</button>
+                </div>
+
+                <div class="rw-shop-card">
+                  <div class="rw-shop-head">
+                    <div class="rw-shop-icon">✨</div>
+                    <div>
+                      <div class="rw-shop-name">Passivas & Ativas <span style="font-size:0.60rem; background:rgba(212,136,28,0.12); border:1px solid rgba(212,136,28,0.28); color:var(--gold); padding:1px 6px; border-radius:999px; font-weight:800;">VIA CLASSES</span></div>
+                      <div class="rw-shop-desc">Eagle Eye, Vein Miner, Gold Strike, Angler's Reflex…</div>
+                    </div>
+                  </div>
+                  <div style="display:flex; gap:6px; flex-wrap:wrap; margin-top:8px;">
+                    <span style="font-size:0.66rem; padding:3px 8px; border-radius:999px; background:rgba(212,136,28,0.08); border:1px solid rgba(212,136,28,0.18); color:var(--text-body);">👁️ Eagle Eye</span>
+                    <span style="font-size:0.66rem; padding:3px 8px; border-radius:999px; background:rgba(212,136,28,0.08); border:1px solid rgba(212,136,28,0.18); color:var(--text-body);">💰 Gold Strike</span>
+                    <span style="font-size:0.66rem; padding:3px 8px; border-radius:999px; background:rgba(212,136,28,0.08); border:1px solid rgba(212,136,28,0.18); color:var(--text-body);">🎣 Angler's Reflex</span>
+                  </div>
+                  <div style="margin-top:10px; font-size:0.70rem; color:var(--text-muted);">Desbloqueie investindo pontos nas classes certas. Veja a aba <b style="color:var(--gold);">Classes</b>.</div>
+                </div>
+              </div>
+
+              <div class="rw-kbar">
+                <span>🪙 Economia configurável no menu <b>Config</b> do mod. Preços, durações e limites ajustáveis.</span>
+              </div>
+            </div>
+
+          </div><!-- /rw-body -->
+        </div><!-- /rpg-window -->
+      </div><!-- /window-stage-new -->
+
+      <!-- DETALHES DAS 3 ABAS -->
+      <div class="window-details reveal">
+        <div class="wd-card polish">
+          <div class="wd-icon wd-icon--green">⚡</div>
+          <h3>Status <span>Visão Geral</span></h3>
+          <p>Seu painel pessoal. Nível, XP, pontos livres/gastos, bônus derivados e passivas ativas — tudo à primeira vista.</p>
+          <div class="wd-list">
+            <div class="wd-item"><span class="wd-bullet">1</span><span><b>Barra de XP</b> com progresso exato (ex: 12.450/15.000) e % animada</span></div>
+            <div class="wd-item"><span class="wd-bullet">2</span><span><b>Bônus derivados</b> calculados em tempo real (dano, regen, mana, velocidade)</span></div>
+            <div class="wd-item"><span class="wd-bullet">3</span><span><b>Passivas</b> com ícone grande, requisito e estado (ativa / bloqueada)</span></div>
+            <div class="wd-item"><span class="wd-bullet">✦</span><span>Botão <b>+850 XP</b> na demo simula ganho de XP da sua zona atual</span></div>
+          </div>
+        </div>
+
+        <div class="wd-card polish">
+          <div class="wd-icon wd-icon--blue">🗡️</div>
+          <h3>Classes <span>33 builds</span></h3>
+          <p>A lista completa das 33 classes. Filtre por categoria, veja requisitos e gaste <b>1 ponto por clique</b> até o nível 5.</p>
+          <div class="wd-list">
+            <div class="wd-item"><span class="wd-bullet">⚔️</span><span><b>Combate</b> (9) · <b>Defesa</b> (7) · <b>Mobilidade</b> (3)</span></div>
+            <div class="wd-item"><span class="wd-bullet">🔧</span><span><b>Utilidade</b> (13) · <b>Assentamento</b> (1)</span></div>
+            <div class="wd-item"><span class="wd-bullet">▬</span><span>Barra de progresso <b>NV 0→5</b> por classe + efeitos desbloqueados</span></div>
+            <div class="wd-item"><span class="wd-bullet">✓</span><span>No jogo, bônus e passivas aplicam <b>instantaneamente</b> ao gastar o ponto</span></div>
+          </div>
+        </div>
+
+        <div class="wd-card polish">
+          <div class="wd-icon wd-icon--gold">🛒</div>
+          <h3>Loja <span>Economia</span></h3>
+          <p>Gaste <b>coins do jogo</b> em poder real. Buffs temporários, upgrades permanentes e itens travados por maestria.</p>
+          <div class="wd-list">
+            <div class="wd-item"><span class="wd-bullet">2×</span><span><b>500c</b> · <b>5× 1k</b> · <b>10× 2k</b> — cada um dura <b>10 min</b></span></div>
+            <div class="wd-item"><span class="wd-bullet">📦</span><span><b>+10 Baú</b> por compra (5k + 5k/bônus) · <b>Stack</b> até 1000×</span></div>
+            <div class="wd-item"><span class="wd-bullet">💣</span><span><b>Explosive Miner</b> exige <b>Caverna 5</b> — demo libera ao maximizar a classe</span></div>
+            <div class="wd-item"><span class="wd-bullet">⚙️</span><span>Tudo configurável: preços e durações no <b>Config</b></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTROLES -->
+      <div class="window-controls reveal">
+        <div class="wc-card polish">
+          <h4><i>⌨️</i> Teclado</h4>
+          <div class="wc-row"><span class="wc-key"><kbd>K</kbd> Janela</span><span class="wc-desc">Abrir / fechar</span></div>
+          <div class="wc-row"><span class="wc-key"><kbd>ESC</kbd> Fechar</span><span class="wc-desc">Sai da janela</span></div>
+          <div class="wc-row"><span class="wc-key"><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> Abas</span><span class="wc-desc">Status / Classes / Loja</span></div>
+          <div class="wc-row"><span class="wc-key"><kbd>Click</kbd> +1</span><span class="wc-desc">Gastar ponto na classe</span></div>
+          <div class="wc-row"><span class="wc-key"><kbd>Scroll</kbd> Lista</span><span class="wc-desc">Navegar classes</span></div>
+        </div>
+        <div class="wc-card polish">
+          <h4><i>🎮</i> Controle (Gamepad)</h4>
+          <div class="wc-row"><span class="wc-key"><kbd>LB</kbd> + <kbd>RB</kbd> Janela</span><span class="wc-desc">Segure 0.4s</span></div>
+          <div class="wc-row"><span class="wc-key"><kbd>LB</kbd> / <kbd>RB</kbd> Abas</span><span class="wc-desc">Trocar aba</span></div>
+          <div class="wc-row"><span class="wc-key"><kbd>D-Pad</kbd> Navegar</span><span class="wc-desc">Cima / baixo na lista</span></div>
+          <div class="wc-row"><span class="wc-key"><kbd>A</kbd> Confirmar</span><span class="wc-desc">Gastar ponto / comprar</span></div>
+          <div class="wc-row"><span class="wc-key"><kbd>B</kbd> Fechar</span><span class="wc-desc">Sai da janela</span></div>
+        </div>
+      </div>
+
+      <!-- DICAS -->
+      <div class="window-tips reveal">
+        <span class="wtip"><i>💾</i> <b>Posição salva:</b> “Lembrar posição da janela” no Config</span>
+        <span class="wtip"><i>🔄</i> <b>Respec:</b> <kbd>/rpgskills reset points</kbd> custa 1k/nível</span>
+        <span class="wtip"><i>🧪</i> Demo interativa — clique nos <b>+1</b>, buffs e no <b>+850 XP</b></span>
+      </div>
+
+    </div>
+  </section>
+
+  
+
+  </div>
+
+  <div class="back-footer">
+    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;">&#8592; Voltar à página inicial</a>
+  </div>
+
+  <footer class="footer" style="padding:28px 40px; margin-top:20px;">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>Feito com &#9829; por Necromante96</span>
+        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);">Início</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="classModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-header">
+        <div class="class-icon" id="modalIcon"></div>
+        <div>
+          <h3 id="modalTitle"></h3>
+          <div class="modal-tab-label" id="modalTab"></div>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ajuste tudo pelo menu in-game: progressão, classes, passivas, economia, compatibilidade.">
+  <meta name="theme-color" content="#0a0a0f">
+  <title>Configuração e Comandos - RPG Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
+
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/rpg-effects.css">
+  <link rel="stylesheet" href="../css/window.css">
+  <link rel="stylesheet" href="../css/qol.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+  <link rel="stylesheet" href="../css/polish.css">
+
+
+  <style>
+    .page-header {
+      padding: 120px 0 36px;
+      text-align: center;
+      background: linear-gradient(180deg, #0d0b0e 0%, #09080a 100%);
+      border-bottom: 1px solid rgba(212,136,28,0.14);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content:"";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212,136,28,0.09), transparent 60%);
+      pointer-events: none;
+    }
+    .page-header-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 0 20px; }
+    .page-kicker {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(212,136,28,0.12);
+      border: 1px solid rgba(212,136,28,0.22);
+      border-radius: 999px;
+      color: var(--gold);
+      font-family: var(--font-heading);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .page-title { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 8px; }
+    .page-title span { color: var(--gold); }
+    .page-sub { color: var(--text-muted); font-size: 0.95rem; margin: 0 auto 18px; max-width: 600px; line-height:1.6; }
+    .page-back {
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(212,136,28,0.18);
+      border-radius: 999px;
+      color: var(--text-body);
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration:none;
+      transition: all 0.18s;
+    }
+    .page-back:hover { background: rgba(212,136,28,0.10); border-color: var(--gold); color:#fff; transform: translateY(-1px); }
+    .page-content { padding-top: 28px; }
+    .back-footer { text-align:center; padding: 40px 0 20px; }
+  </style>
+
+</head>
+<body>
+  <div class="global-particles">
+    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+    <div class="gp g"></div><div class="gp g"></div><div class="gp w"></div>
+    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
+    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
+    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+  </div>
+  <div class="global-runes">
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+  </div>
+  <div class="global-circles">
+    <div class="gc"></div><div class="gc"></div>
+    <div class="gc"></div><div class="gc"></div>
+  </div>
+  <div class="global-vignette"></div>
+
+  <nav class="nav scrolled">
+    <a href="../index.html" class="nav-brand">
+      <span class="brand-icon">&#9876;</span>
+      RPG Skills
+    </a>
+    <div class="nav-links">
+      <div class="lang-switcher" role="group" aria-label="Idioma">
+        <button class="lang-option" data-lang="pt-BR" aria-label="Portugues">
+          <span class="fi fi-br"></span> PT-BR
+        </button>
+        <button class="lang-option" data-lang="en" aria-label="English">
+          <span class="fi fi-us"></span> EN-US
+        </button>
+      </div>
+      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;">&#8592; Voltar ao Início</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Fechar">&times;</button>
+    <a href="../index.html">&#8592; Voltar ao Início</a>
+    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma">
+      <button class="lang-option" data-lang="pt-BR" aria-label="Portugues"><span class="fi fi-br"></span> PT-BR</button>
+      <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-us"></span> EN-US</button>
+    </div>
+    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary">Steam Workshop</a>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="page-kicker">Config e Comandos</div>
+      <h1 class="page-title">Controle <span class="text-green">Total</span></h1>
+      <p class="page-sub">Ajuste tudo pelo menu in-game: progressão, classes, passivas, economia, compatibilidade.</p>
+      
+      <div class="page-stats">
+        <span class="page-stat"><i>⚙️</i> <b>∞</b> configs</span>
+        <span class="page-stat"><i>💻</i> <b>/rpgskills</b></span>
+        <span class="page-stat"><i>🎮</i> <b>MP</b> sync</span>
+      </div>
+      <a href="../index.html" class="page-back">&#8592; Voltar à página inicial</a>
+    </div>
+  </header>
+
+  <div class="page-content">
+<!-- ========== CONFIG & COMMANDS ========== -->
+  <section id="config" class="section section-alt">
+    <div class="section-glow-line"></div>
+    <div class="section-texture"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label" data-i18n="config.label">Config e Comandos</div>
+        <h2 class="section-title" data-i18n="config.title">Controle <span class="text-green">Total</span></h2>
+      </div>
+
+      
+      <div class="config-tabs reveal">
+        <button class="config-tab active" data-cfg="menu">Menu Config</button>
+        <button class="config-tab" data-cfg="cmd">Comandos</button>
+        <button class="config-tab" data-cfg="tips">Dicas</button>
+      </div>
+      <script>
+        (function(){
+          var tabs=document.querySelectorAll('.config-tab');
+          var cards=document.querySelectorAll('.grid-2 .card');
+          // wrap: first card = menu, second = commands, create third tips if not exists
+          if(!document.querySelector('[data-cfg-panel="tips"]')){
+            var grid=document.querySelector('.grid-2');
+            if(grid){
+              var tips=document.createElement('div');
+              tips.className='card config-panel';
+              tips.setAttribute('data-cfg-panel','tips');
+              tips.innerHTML='<h4 class="card-title" style="margin-bottom:var(--space-md);"><span>💡 Dicas Pro</span></h4><div class="feature-row"><span class="feature-row-icon">⚡</span><div class="feature-row-content"><h4>F1 no jogo</h4><p>Todos os toggles são instantâneos — não precisa reiniciar.</p></div></div><div class="feature-row"><span class="feature-row-icon" style="color:var(--blue);">🎮</span><div class="feature-row-content"><h4>Safe Haven</h4><p>Ative compatibilidade e o config do Safe Haven não será sobrescrito (v2.6 fix).</p></div></div><div class="feature-row"><span class="feature-row-icon" style="color:var(--gold);">💾</span><div class="feature-row-content"><h4>Backup</h4><p>5 cópias a cada 10 min — use <code>/rpgskills restore inventory</code> se precisar.</p></div></div>';
+              grid.parentElement.appendChild(tips);
+            }
+          }
+          var panels=document.querySelectorAll('.card');
+          // mark panels
+          if(cards[0]) cards[0].setAttribute('data-cfg-panel','menu');
+          if(cards[1]) cards[1].setAttribute('data-cfg-panel','cmd');
+          function show(cfg){
+            document.querySelectorAll('[data-cfg-panel]').forEach(function(p){
+              p.style.display=p.getAttribute('data-cfg-panel')===cfg?'':'none';
+            });
+            tabs.forEach(function(t){t.classList.toggle('active', t.dataset.cfg===cfg);});
+          }
+          tabs.forEach(function(t){t.addEventListener('click', function(){show(t.dataset.cfg);});});
+          show('menu');
+        })();
+      </script>
+
+      <div class="grid-2 reveal">
+        <div class="card polish">
+          <h4 class="card-title" style="margin-bottom:var(--space-md);">
+            <span data-i18n="config.menu.title">&#9881; Menu de Configuração</span>
+          </h4>
+          <div class="feature-row">
+            <span class="feature-row-icon">&#128200;</span>
+            <div class="feature-row-content">
+              <h4 data-i18n="config.menu.progression">Progressão</h4>
+              <p data-i18n="config.menu.progression.desc">XP, penalidade de morte, curva, nível máx., pontos por classe, reconfiguração, Parceiro da Vida.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--blue);">&#9876;</span>
+            <div class="feature-row-content">
+              <h4 data-i18n="config.menu.classes">Classes</h4>
+              <p data-i18n="config.menu.classes.desc">Ative ou desative classes individualmente. Mestre das Classes conta apenas as ativas.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--gold);">&#128176;</span>
+            <div class="feature-row-content">
+              <h4 data-i18n="config.menu.economy">Economia</h4>
+              <p data-i18n="config.menu.economy.desc">Preços da loja, spoil 1 por ciclo, Sono Acelerado e mais.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card polish">
+          <h4 class="card-title" style="margin-bottom:var(--space-md);">
+            <span data-i18n="config.commands.title">&#128187; Comandos</span>
+          </h4>
+          <div style="font-family:var(--font-mono);font-size:var(--fs-xs);background:var(--dark);padding:var(--space-md);border-radius:var(--radius-sm);overflow-x:auto;">
+            <div style="color:var(--text-dim);">// <span data-i18n="config.commands.player">Jogador</span></div>
+            <div><span class="text-green">/rpgskills status</span> <span style="color:var(--text-dim);">// nível, XP, pontos, buff</span></div>
+            <div><span class="text-green">/rpgskills reset points</span> <span style="color:var(--text-dim);">// respec (custa coins)</span></div>
+            <div><span class="text-green">/rpgskills restore inventory</span> <span style="color:var(--text-dim);">// restaurar backup</span></div>
+            <div><span class="text-green">/rpgskills restore inventory list</span> <span style="color:var(--text-dim);">// listar backups</span></div>
+            <div><span class="text-green">/rpgskills help</span> <span style="color:var(--text-dim);">// ajuda</span></div>
+            <div style="margin-top:8px;color:var(--text-dim);">// Admin (MP)</div>
+            <div><span class="text-blue">/rpgskills set level &lt;1-165&gt;</span></div>
+            <div><span class="text-blue">/rpgskills set slotchest &lt;50-400&gt;</span></div>
+            <div><span class="text-blue">/rpgskills set stack &lt;1-1000&gt;</span></div>
+            <div><span class="text-blue">/rpgskills set xpbuff &lt;2|5|10|off&gt;</span></div>
+            <div><span class="text-blue">/rpgskills maxskills</span></div>
+            <div><span class="text-blue">/rpgskills reset zero</span></div>
+            <div><span class="text-blue">/rpgskills config reload</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  </div>
+
+  <div class="back-footer">
+    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;">&#8592; Voltar à página inicial</a>
+  </div>
+
+  <footer class="footer" style="padding:28px 40px; margin-top:20px;">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>Feito com &#9829; por Necromante96</span>
+        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);">Início</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for classes page -->
+  <div class="modal-overlay" id="classModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-header">
+        <div class="class-icon" id="modalIcon"></div>
+        <div>
+          <h3 id="modalTitle"></h3>
+          <div class="modal-tab-label" id="modalTab"></div>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cada ação gera XP de forma diferente. Compreenda todas as fontes para otimizar sua progressão.">
+  <meta name="theme-color" content="#0a0a0f">
+  <title>Fontes de XP Detalhadas - RPG Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
+
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/rpg-effects.css">
+  <link rel="stylesheet" href="../css/window.css">
+  <link rel="stylesheet" href="../css/qol.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+  <link rel="stylesheet" href="../css/polish.css">
+
+
+  <style>
+    .page-header {
+      padding: 120px 0 36px;
+      text-align: center;
+      background: linear-gradient(180deg, #0d0b0e 0%, #09080a 100%);
+      border-bottom: 1px solid rgba(212,136,28,0.14);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content:"";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212,136,28,0.09), transparent 60%);
+      pointer-events: none;
+    }
+    .page-header-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 0 20px; }
+    .page-kicker {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(212,136,28,0.12);
+      border: 1px solid rgba(212,136,28,0.22);
+      border-radius: 999px;
+      color: var(--gold);
+      font-family: var(--font-heading);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .page-title { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 8px; }
+    .page-title span { color: var(--gold); }
+    .page-sub { color: var(--text-muted); font-size: 0.95rem; margin: 0 auto 18px; max-width: 600px; line-height:1.6; }
+    .page-back {
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 10px 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(212,136,28,0.18);
+      border-radius: 999px;
+      color: var(--text-body);
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration:none;
+      transition: all 0.18s;
+    }
+    .page-back:hover { background: rgba(212,136,28,0.10); border-color: var(--gold); color:#fff; transform: translateY(-1px); }
+    .page-content { padding-top: 28px; }
+    .back-footer { text-align:center; padding: 40px 0 20px; }
+  </style>
+
+</head>
+<body>
+  <div class="global-particles">
+    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+    <div class="gp g"></div><div class="gp g"></div><div class="gp w"></div>
+    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
+    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
+    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
+    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
+  </div>
+  <div class="global-runes">
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+  </div>
+  <div class="global-circles">
+    <div class="gc"></div><div class="gc"></div>
+    <div class="gc"></div><div class="gc"></div>
+  </div>
+  <div class="global-vignette"></div>
+
+  <nav class="nav scrolled">
+    <a href="../index.html" class="nav-brand">
+      <span class="brand-icon">&#9876;</span>
+      RPG Skills
+    </a>
+    <div class="nav-links">
+      <div class="lang-switcher" role="group" aria-label="Idioma">
+        <button class="lang-option" data-lang="pt-BR" aria-label="Portugues">
+          <span class="fi fi-br"></span> PT-BR
+        </button>
+        <button class="lang-option" data-lang="en" aria-label="English">
+          <span class="fi fi-us"></span> EN-US
+        </button>
+      </div>
+      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;">&#8592; Voltar ao Início</a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+  </nav>
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Fechar">&times;</button>
+    <a href="../index.html">&#8592; Voltar ao Início</a>
+    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma">
+      <button class="lang-option" data-lang="pt-BR" aria-label="Portugues"><span class="fi fi-br"></span> PT-BR</button>
+      <button class="lang-option" data-lang="en" aria-label="English"><span class="fi fi-us"></span> EN-US</button>
+    </div>
+    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary">Steam Workshop</a>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="page-kicker">Fontes de XP Detalhadas</div>
+      <h1 class="page-title">Tudo Sobre <span class="text-green">XP</span></h1>
+      <p class="page-sub">Cada ação gera XP de forma diferente. Compreenda todas as fontes para otimizar sua progressão.</p>
+      
+      <div class="page-stats">
+        <span class="page-stat"><i>⚔️</i> <b>15</b> XP</span>
+        <span class="page-stat"><i>⛏️</i> <b>+5</b> bloco</span>
+        <span class="page-stat"><i>🐟</i> <b>AFK</b></span>
+      </div>
+      <a href="../index.html" class="page-back">&#8592; Voltar à página inicial</a>
+    </div>
+  </header>
+
+  <div class="page-content">
+<!-- ========== XP SOURCES DETAIL ========== -->
+  <section class="section section-alt" id="xp-detail">
+    <div class="section-glow-line"></div>
+    <div class="section-texture"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label" data-i18n="xp-detail.label">Fontes de XP Detalhadas</div>
+        <h2 class="section-title" data-i18n="xp-detail.title">Tudo Sobre <span class="text-green">XP</span></h2>
+        <p class="section-subtitle" style="margin:0 auto;" data-i18n="xp-detail.subtitle">Cada ação gera XP de forma diferente. Compreenda todas as fontes para otimizar sua progressão.</p>
+      </div>
+
+      
+      <div class="reveal" style="max-width:720px; margin:0 auto 20px;">
+        <div class="xp-calc">
+          <div><label style="font-size:0.72rem; color:var(--text-dim); letter-spacing:0.06em; text-transform:uppercase;">Zona / Fonte</label><select id="calc-zone"><option value="15">Floresta 15 XP</option><option value="30">Caverna 30 XP</option><option value="70">Deep Templo 70 XP</option><option value="105">Incursion Scrapyard 105 XP</option><option value="300">Boss 300 XP</option><option value="5">Mineração/Pesca 5 XP</option></select></div>
+          <div><label style="font-size:0.72rem; color:var(--text-dim); letter-spacing:0.06em; text-transform:uppercase;">Quantidade</label><input id="calc-qty" type="number" value="10" min="1" max="1000"></div>
+          <div><label style="font-size:0.72rem; color:var(--text-dim); letter-spacing:0.06em; text-transform:uppercase;">Buff</label><select id="calc-buff"><option value="1">Sem buff (1×)</option><option value="2">2× (500c)</option><option value="5">5× (1k)</option><option value="10">10× (2k)</option></select></div>
+          <div><label style="font-size:0.72rem; color:var(--text-dim); letter-spacing:0.06em; text-transform:uppercase;">Nível alvo</label><input id="calc-lvl" type="number" value="25" min="1" max="165"></div>
+          <div class="xp-calc-result">Total: <span id="calc-total" style="color:#fff;">150 XP</span> &nbsp;•&nbsp; Para Nível 25 precisa <span id="calc-need" style="color:var(--gold);">250.000 XP</span> — <span id="calc-pct">0.06%</span></div>
+        </div>
+      </div>
+      <script>
+        (function(){
+          var zone=document.getElementById('calc-zone');
+          var qty=document.getElementById('calc-qty');
+          var buff=document.getElementById('calc-buff');
+          var lvl=document.getElementById('calc-lvl');
+          var total=document.getElementById('calc-total');
+          var need=document.getElementById('calc-need');
+          var pct=document.getElementById('calc-pct');
+          if(!zone) return;
+          function upd(){
+            var t=parseInt(zone.value,10)*parseInt(qty.value,10)*parseInt(buff.value,10);
+            var n=10000*parseInt(lvl.value,10);
+            total.textContent=t.toLocaleString('pt-BR')+' XP';
+            need.textContent=n.toLocaleString('pt-BR')+' XP';
+            pct.textContent=(t/n*100).toFixed(2)+'%';
+            pct.style.color=t>=n?'#22c55e':'var(--gold)';
+          }
+          [zone,qty,buff,lvl].forEach(function(e){e.addEventListener('input', upd); e.addEventListener('change', upd);});
+          upd();
+        })();
+      </script>
+
+      <div class="grid-2 reveal" style="margin-top:var(--space-xl);">
+        <div class="card polish">
+          <h4 class="card-title" style="margin-bottom:var(--space-md);">
+            <span>&#9876; Combate (Mobs)</span>
+          </h4>
+          <div class="feature-row">
+            <span class="feature-row-icon">&#128126;</span>
+            <div class="feature-row-content">
+              <h4>Hostile por Zona</h4>
+              <p>Floresta 15, Neve/Deserto 20, Dungeon 25, Caverna 30-40, Deep 45-70, Incursions 75-105</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--gold);">&#128128;</span>
+            <div class="feature-row-content">
+              <h4>Bosses</h4>
+              <p>300 XP base + 100 por 10 níveis do jogador. Ex: nível 50 = 300 + 500 = 800 XP</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--red);">&#129657;</span>
+            <div class="feature-row-content">
+              <h4>Mini-Bosses</h4>
+              <p>Zona base + 100 flat. Requer 300+ HP max para ser classificado como mini-boss.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--text-dim);">&#128058;</span>
+            <div class="feature-row-content">
+              <h4>Animais/Pets</h4>
+              <p>5 XP fixo por kill. Invocações do jogador NÃO dão XP.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card polish">
+          <h4 class="card-title" style="margin-bottom:var(--space-md);">
+            <span>&#9935; Mineração & Coleta</span>
+          </h4>
+          <div class="feature-row">
+            <span class="feature-row-icon">&#9935;</span>
+            <div class="feature-row-content">
+              <h4>Blocos Minerais</h4>
+              <p>5 XP por bloco quebrado com drops. Grass, teias e pisos decorativos = 0 XP.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--red);">&#128163;</span>
+            <div class="feature-row-content">
+              <h4>Explosivos</h4>
+              <p>Minerador Explosivo e dinamite NÃO dão XP nos blocos extras quebrados.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--blue);">&#128167;</span>
+            <div class="feature-row-content">
+              <h4>Liquidos</h4>
+              <p>Água/lava/líquidos = 0 XP.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card polish">
+          <h4 class="card-title" style="margin-bottom:var(--space-md);">
+            <span>&#127807; Agricultura & Pesca</span>
+          </h4>
+          <div class="feature-row">
+            <span class="feature-row-icon">&#127793;</span>
+            <div class="feature-row-content">
+              <h4>Plantar Sementes</h4>
+              <p>5 XP por ação de plantio.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--gold);">&#127815;</span>
+            <div class="feature-row-content">
+              <h4>Colher Frutas</h4>
+              <p>5 XP por colheita de árvores/bosques frutíferos. Cooldown 150ms anti-duplicata.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--blue);">&#127907;</span>
+            <div class="feature-row-content">
+              <h4>Pesca</h4>
+              <p>5 XP por lance de vara (não por peixe). Funciona com Reflexo do Pescador AFK.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card polish">
+          <h4 class="card-title" style="margin-bottom:var(--space-md);">
+            <span>&#127969; Assentamento & NPCs</span>
+          </h4>
+          <div class="feature-row">
+            <span class="feature-row-icon">&#128188;</span>
+            <div class="feature-row-content">
+              <h4>Trabalho/Recreação</h4>
+              <p>5 XP por atividade. Limite: 150 XP/min. Recreação: cap 30 XP/dia.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--green);">&#128100;</span>
+            <div class="feature-row-content">
+              <h4>Recrutar NPCs</h4>
+              <p>Colonos regulares: 5 XP. Especialistas: 10 XP. Resgatados: 15 XP. Anciãos: 0 XP.</p>
+            </div>
+          </div>
+          <div class="feature-row">
+            <span class="feature-row-icon" style="color:var(--gold);">&#128081;</span>
+            <div class="feature-row-content">
+              <h4>Realm Master 5</h4>
+              <p>3x XP de assentamento. Com 6+ personalidades: +1.5x extra (Administração Rica).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card reveal" style="margin-top:var(--space-xl);">
+        <h4 class="card-title" style="margin-bottom:var(--space-md);">
+          <span>&#128200; Fórmula de XP</span>
+        </h4>
+        <div class="feature-row">
+          <span class="feature-row-icon text-green">=</span>
+          <div class="feature-row-content">
+            <h4>XP por Nível</h4>
+            <p>Nível N requer: <strong>10.000 × N</strong> XP. Nível 2 = 10K, Nível 165 = 1.640.000 XP. Total para máx: ~136M XP.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <span class="feature-row-icon text-blue">%</span>
+          <div class="feature-row-content">
+            <h4>Multiplicadores</h4>
+            <p>Buffs de XP: 2x/5x/10x (10 min). Multiplicador global configurável. Compartilhamento de equipe em raio de 24 tiles.</p>
+          </div>
+        </div>
+        <div class="feature-row">
+          <span class="feature-row-icon text-red">%</span>
+          <div class="feature-row-content">
+            <h4>Penalidade de Morte</h4>
+            <p>Perde 25% do XP atual ao morrer. Configurável (pode ser desativado). Respec custa 1.000 coins/nível.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  </div>
+
+  <div class="back-footer">
+    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;">&#8592; Voltar à página inicial</a>
+  </div>
+
+  <footer class="footer" style="padding:28px 40px; margin-top:20px;">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>Feito com &#9829; por Necromante96</span>
+        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);">Início</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal for classes page -->
+  <div class="modal-overlay" id="classModal">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-header">
+        <div class="class-icon" id="modalIcon"></div>
+        <div>
+          <h3 id="modalTitle"></h3>
+          <div class="modal-tab-label" id="modalTab"></div>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
