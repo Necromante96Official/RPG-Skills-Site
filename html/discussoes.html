@@ -240,7 +240,8 @@
                 arquivo, leve estes limites em conta:</p>
               <ul class="discuss-limit-list">
                 <li data-i18n="discussoes.limit.li1"><b>10 MB no total</b> por envio (todos os arquivos somados)</li>
-                <li data-i18n="discussoes.limit.li2">Pode anexar <b>vários arquivos</b>, desde que caibam nos 10 MB</li>
+                <li data-i18n="discussoes.limit.li2">Pode anexar até <b>3 arquivos</b>, desde que a soma caiba nos 10 MB
+                </li>
                 <li data-i18n="discussoes.limit.li3">Aceitos: <b>PNG, JPG, WEBP, GIF, PDF, TXT, LOG, ZIP, MD</b></li>
                 <li data-i18n="discussoes.limit.li4">Se passar do limite, o envio é bloqueado antes de sair</li>
               </ul>
@@ -259,7 +260,7 @@
 
             <input type="hidden" name="_subject" value="RPG Skills — Discussão do site">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" id="discuss-next" value="">
             <input type="text" name="_honey" value="" class="discuss-honey" tabindex="-1" autocomplete="off"
               aria-hidden="true">
@@ -287,21 +288,37 @@
 
             <div class="discuss-field discuss-field--files">
               <div class="discuss-files-label-row">
-                <label for="discuss-files" data-i18n="discussoes.field.files">Anexos (opcional)</label>
-                <span class="discuss-files-badge" data-i18n="discussoes.files.badge">Limite 10 MB</span>
+                <span class="discuss-files-heading" data-i18n="discussoes.field.files">Anexos (opcional)</span>
+                <span class="discuss-files-badge" data-i18n="discussoes.files.badge">Até 3 · 10 MB</span>
               </div>
-              <p class="discuss-files-intro" data-i18n="discussoes.files.intro">Vai mandar print, log ou arquivo? Pode —
-                mas a soma de todos os anexos precisa ficar em até <b>10 MB</b>.</p>
-              <label class="discuss-file-box" for="discuss-files">
-                <span class="discuss-file-icon" aria-hidden="true">📎</span>
-                <span class="discuss-file-title" data-i18n="discussoes.files.pick">Clique para escolher imagens ou
-                  arquivos</span>
-                <span class="discuss-file-hint" data-i18n="discussoes.files.types">PNG, JPG, WEBP, GIF, PDF, TXT, LOG,
-                  ZIP, MD</span>
-                <span id="discuss-file-list" class="discuss-file-list"></span>
-              </label>
-              <input id="discuss-files" class="discuss-file-input" type="file" name="attachment" multiple
-                accept="image/*,.png,.jpg,.jpeg,.gif,.webp,.txt,.log,.zip,.pdf,.md">
+              <p class="discuss-files-intro" data-i18n="discussoes.files.intro">Pode enviar até <b>3 arquivos</b>
+                (prints, logs, etc.). A soma de todos precisa ficar em até <b>10 MB</b>.</p>
+              <div class="discuss-file-slots">
+                <label class="discuss-file-slot" for="discuss-file-1">
+                  <span class="discuss-file-slot-label" data-i18n="discussoes.files.slot1">Arquivo 1</span>
+                  <span id="discuss-file-name-1" class="discuss-file-slot-name" data-i18n="discussoes.files.none">Nenhum
+                    arquivo</span>
+                  <input id="discuss-file-1" class="discuss-file-input" type="file" name="attachment"
+                    accept="image/*,.png,.jpg,.jpeg,.gif,.webp,.txt,.log,.zip,.pdf,.md">
+                </label>
+                <label class="discuss-file-slot" for="discuss-file-2">
+                  <span class="discuss-file-slot-label" data-i18n="discussoes.files.slot2">Arquivo 2</span>
+                  <span id="discuss-file-name-2" class="discuss-file-slot-name" data-i18n="discussoes.files.none">Nenhum
+                    arquivo</span>
+                  <input id="discuss-file-2" class="discuss-file-input" type="file" name="attachment2"
+                    accept="image/*,.png,.jpg,.jpeg,.gif,.webp,.txt,.log,.zip,.pdf,.md">
+                </label>
+                <label class="discuss-file-slot" for="discuss-file-3">
+                  <span class="discuss-file-slot-label" data-i18n="discussoes.files.slot3">Arquivo 3</span>
+                  <span id="discuss-file-name-3" class="discuss-file-slot-name" data-i18n="discussoes.files.none">Nenhum
+                    arquivo</span>
+                  <input id="discuss-file-3" class="discuss-file-input" type="file" name="attachment3"
+                    accept="image/*,.png,.jpg,.jpeg,.gif,.webp,.txt,.log,.zip,.pdf,.md">
+                </label>
+              </div>
+              <p class="discuss-file-hint" data-i18n="discussoes.files.types">PNG, JPG, WEBP, GIF, PDF, TXT, LOG, ZIP,
+                MD
+              </p>
               <div class="discuss-meter" aria-hidden="true">
                 <div class="discuss-meter-track">
                   <div id="discuss-meter-fill" class="discuss-meter-fill" style="width:0%"></div>
@@ -320,8 +337,8 @@
             <button type="submit" class="btn btn-primary discuss-submit" id="discuss-submit">
               <span data-i18n="discussoes.submit">Enviar mensagem</span>
             </button>
-            <p class="discuss-submit-note" data-i18n="discussoes.submit.note">Ao enviar, pode aparecer um captcha
-              rápido. Depois você volta para esta página com a confirmação.</p>
+            <p class="discuss-submit-note" data-i18n="discussoes.submit.note">Depois do envio você volta para esta
+              página com a confirmação.</p>
           </form>
         </div>
       </div>

@@ -1410,15 +1410,17 @@
 
     var MAX_BYTES = 10 * 1024 * 1024;
     var nextInput = document.getElementById('discuss-next');
-    var filesInput = document.getElementById('discuss-files');
-    var fileList = document.getElementById('discuss-file-list');
+    var fileInputs = [
+      document.getElementById('discuss-file-1'),
+      document.getElementById('discuss-file-2'),
+      document.getElementById('discuss-file-3')
+    ].filter(Boolean);
     var errorEl = document.getElementById('discuss-error');
     var successEl = document.getElementById('discuss-success');
     var submitBtn = document.getElementById('discuss-submit');
     var meterFill = document.getElementById('discuss-meter-fill');
     var meterText = document.getElementById('discuss-meter-text');
     var meterLeft = document.getElementById('discuss-meter-left');
-    var fileBox = form.querySelector('.discuss-file-box');
 
     function setNextUrl() {
       if (!nextInput) return;
@@ -1456,7 +1458,7 @@
         var clean = new URL(window.location.href);
         clean.searchParams.delete('enviado');
         window.history.replaceState({}, '', clean.pathname + clean.search + clean.hash);
-      } catch (e2) { }
+      } catch (e2) {}
     }
 
     function showError(msg) {
@@ -1476,11 +1478,31 @@
       return (bytes / (1024 * 1024)).toFixed(bytes >= 1024 * 1024 ? 2 : 1);
     }
 
+    function eachSelectedFile(cb) {
+      fileInputs.forEach(function (input) {
+        if (input.files && input.files[0]) cb(input.files[0], input);
+      });
+    }
+
     function totalFileBytes() {
-      if (!filesInput || !filesInput.files) return 0;
       var total = 0;
-      for (var i = 0; i < filesInput.files.length; i++) total += filesInput.files[i].size || 0;
+      eachSelectedFile(function (file) { total += file.size || 0; });
       return total;
+    }
+
+    function refreshSlots() {
+      fileInputs.forEach(function (input, idx) {
+        var nameEl = document.getElementById('discuss-file-name-' + (idx + 1));
+        var slot = input.closest('.discuss-file-slot');
+        var file = input.files && input.files[0];
+        if (nameEl) {
+          nameEl.removeAttribute('data-i18n');
+          nameEl.textContent = file
+            ? (file.name + ' (' + formatSize(file.size || 0) + ')')
+            : t('discussoes.files.none', 'Nenhum arquivo');
+        }
+        if (slot) slot.classList.toggle('has-file', !!file);
+      });
     }
 
     function refreshMeter() {
@@ -1503,36 +1525,25 @@
           ? t('discussoes.files.meter.over.short', 'Remova arquivos')
           : t('discussoes.files.meter.free', '{free} MB livres').replace('{free}', formatMb(left));
       }
-      if (fileBox) fileBox.classList.toggle('is-over', over);
+      form.classList.toggle('discuss-form--over', over);
     }
 
-    function refreshFileList() {
-      if (!fileList || !filesInput) return;
-      var files = filesInput.files;
-      if (!files || !files.length) {
-        fileList.textContent = '';
-        refreshMeter();
-        return;
-      }
-      var names = [];
-      for (var i = 0; i < files.length; i++) {
-        names.push(files[i].name + ' (' + formatSize(files[i].size || 0) + ')');
-      }
-      fileList.textContent = names.join(' · ');
+    function refreshFiles() {
+      refreshSlots();
       refreshMeter();
     }
 
-    if (filesInput) {
-      filesInput.addEventListener('change', function () {
+    fileInputs.forEach(function (input) {
+      input.addEventListener('change', function () {
         showError('');
         if (totalFileBytes() > MAX_BYTES) {
           showError(t('discussoes.error.size', 'Os anexos juntos passam de 10 MB. Remova alguns arquivos.'));
         }
-        refreshFileList();
+        refreshFiles();
       });
-    }
-    refreshMeter();
-    document.addEventListener('rpgskills:i18n', refreshMeter);
+    });
+    refreshFiles();
+    document.addEventListener('rpgskills:i18n', refreshFiles);
 
     form.addEventListener('submit', function (e) {
       showError('');

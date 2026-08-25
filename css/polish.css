@@ -1024,8 +1024,13 @@ code,
   margin-bottom: 8px;
 }
 
-.discuss-files-label-row label {
-  margin-bottom: 0;
+.discuss-files-heading {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
 .discuss-files-badge {
@@ -1054,6 +1059,60 @@ code,
   color: #ffd38a;
 }
 
+.discuss-file-slots {
+  display: grid;
+  gap: 8px;
+}
+
+.discuss-file-slot {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 12px 14px;
+  border: 1px dashed rgba(212, 136, 28, 0.32);
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(212, 136, 28, 0.06), rgba(212, 136, 28, 0.02));
+  cursor: pointer;
+  transition: border-color 0.18s, background 0.18s;
+  position: relative;
+}
+
+.discuss-file-slot:hover,
+.discuss-file-slot:focus-within {
+  border-color: var(--gold);
+  background: rgba(212, 136, 28, 0.09);
+}
+
+.discuss-file-slot.has-file {
+  border-style: solid;
+  border-color: rgba(212, 136, 28, 0.45);
+}
+
+.discuss-form--over .discuss-file-slot {
+  border-color: rgba(248, 113, 113, 0.45);
+}
+
+.discuss-file-slot-label {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.discuss-file-slot-name {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.discuss-file-slot.has-file .discuss-file-slot-name {
+  color: #fff;
+}
+
 .discuss-file-input {
   position: absolute;
   width: 1px;
@@ -1063,65 +1122,11 @@ code,
   clip: rect(0, 0, 0, 0);
 }
 
-.discuss-file-box {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  padding: 18px 16px;
-  border: 1px dashed rgba(212, 136, 28, 0.38);
-  border-radius: 13px;
-  background: linear-gradient(180deg, rgba(212, 136, 28, 0.07), rgba(212, 136, 28, 0.025));
-  cursor: pointer;
-  transition: border-color 0.18s, background 0.18s, transform 0.18s;
-}
-
-.discuss-file-box:hover,
-.discuss-file-box:focus-within {
-  border-color: var(--gold);
-  background: rgba(212, 136, 28, 0.10);
-  transform: translateY(-1px);
-}
-
-.discuss-file-box.is-over {
-  border-color: rgba(248, 113, 113, 0.55);
-  background: rgba(239, 68, 68, 0.08);
-}
-
-.discuss-file-icon {
-  font-size: 1.15rem;
-  line-height: 1;
-  margin-bottom: 2px;
-}
-
-.discuss-file-title {
-  font-family: var(--font-heading);
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #fff;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
 .discuss-file-hint {
+  margin: 10px 0 0;
   font-size: 0.74rem;
   color: var(--text-dim);
-  text-transform: none;
-  letter-spacing: 0;
-  font-weight: 400;
-  font-family: var(--font-body);
-}
-
-.discuss-file-list {
-  margin-top: 8px;
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  line-height: 1.5;
-  text-transform: none;
-  letter-spacing: 0;
-  font-weight: 400;
-  font-family: var(--font-body);
-  word-break: break-word;
+  line-height: 1.45;
 }
 
 .discuss-meter {
