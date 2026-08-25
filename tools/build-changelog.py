@@ -13,6 +13,7 @@ HTML = ROOT / "html" / "changelog.html"
 
 # Prefer explicit tags for filter UX (match previous page where possible)
 TAG_BY_VERSION = {
+    "2.8": "new",
     "2.7": "fix",
     "2.6": "new",
     "2.5": "major",
@@ -174,12 +175,19 @@ def write_js(entries: list) -> None:
     )
 
 
-def patch_html() -> None:
+def patch_html(version_count: int) -> None:
     html = HTML.read_text(encoding="utf-8")
-    # Update version count badge 11 -> 22
+    # Update version count badge
     html = re.sub(
         r'(<span class="page-stat"><i>📜</i> <b>)\d+(</b>)',
-        r"\g<1>22\2",
+        rf"\g<1>{version_count}\2",
+        html,
+        count=1,
+    )
+    # Latest version badge
+    html = re.sub(
+        r'(<span class="page-stat"><i>🔥</i> <b>)v[\d.]+(</b>)',
+        r"\g<1>v2.8\2",
         html,
         count=1,
     )
@@ -242,7 +250,7 @@ def patch_html() -> None:
 def main():
     entries = build_entries()
     write_js(entries)
-    patch_html()
+    patch_html(len(entries))
     total_items = sum(
         len(it)
         for e in entries

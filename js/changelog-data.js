@@ -1,6 +1,72 @@
 /* Auto-generated from release-notes/*.md — do not edit by hand */
 window.RPG_CHANGELOG = [
   {
+    "version": "2.8",
+    "tag": "new",
+    "tagClass": "major",
+    "tagKey": "changelog.tag.new",
+    "pt": {
+      "title": "🌟 Atualização 2.8 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "Novidades",
+          "items": [
+            "Invocações passam a caçar <strong>Cavernídeos</strong> sozinhas (sem precisar travar alvo). Se houver monstro hostil por perto, priorizam o combate. Dá para desligar no menu de configuração."
+          ]
+        },
+        {
+          "heading": "Compatibilidade",
+          "items": [
+            "Compatível com o Necesse <strong>1.3.3</strong>. Hosts e clientes precisam atualizar o jogo juntos.",
+            "Compatível com <strong>Safe Haven QOL 4.0</strong>: pilha universal e sistemas compartilhados (pilha, veios, incinerador, triple loot) continuam sob a autoridade do RPG Skills.",
+            "Traduções pt-BR do overlay deixam de sobrescrever textos bons do Safe Haven (menus e Blueprints usam o idioma do próprio Safe Haven)."
+          ]
+        },
+        {
+          "heading": "Correções",
+          "items": [
+            "Mineração em veios: paredes de pedra (e variantes profundas/pântano), colunas e pilares passam a entrar no veia como as outras paredes.",
+            "Mineração em veios: troncos como bambu, pinheiro, palmeira, salgueiro, maçã e banana passam a encadear corretamente (antes só as versões com “árvore” no nome).",
+            "Quebrar objetos e pisos com o Mestre do Loot / XP de colheita continua estável na 1.3.3 (o jogo mudou o caminho de destruição; o mod acompanhou).",
+            "Comando de buff de XP: limpar ou trocar o buff (off / outro multiplicador) deixa de ficar “preso” no valor antigo em alguns casos.",
+            "Menu de configuração: textos novos (slots de trinket pelo Config, excluir Tablets de Incursão do loot, forçar triple loot do Safe Haven off) deixam de aparecer em inglês nos outros idiomas."
+          ]
+        }
+      ],
+      "note": ""
+    },
+    "en": {
+      "title": "🌟 Update 2.8 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "New",
+          "items": [
+            "Summons now hunt <strong>Cavelings</strong> on their own (no need to lock a target). If a hostile is nearby, they prioritize combat. You can turn this off in the config menu."
+          ]
+        },
+        {
+          "heading": "Compatibility",
+          "items": [
+            "Compatible with Necesse <strong>1.3.3</strong>. Hosts and clients need to update the game together.",
+            "Compatible with <strong>Safe Haven QOL 4.0</strong>: universal stacks and shared systems (stack size, vein mining, incinerator, triple loot) stay under RPG Skills authority.",
+            "pt-BR overlay translations no longer overwrite good Safe Haven text (menus and Blueprints use Safe Haven’s own locale)."
+          ]
+        },
+        {
+          "heading": "Fixes",
+          "items": [
+            "Vein mining: stone walls (including deep/swamp variants), columns, and pillars now join the vein like other walls.",
+            "Vein mining: trunks such as bamboo, pine, palm, willow, apple, and banana now chain correctly (before, only ids with “tree” in the name did).",
+            "Breaking objects and floors with Loot Master / harvest XP stays stable on 1.3.3 (the game changed the destroy path; the mod followed).",
+            "XP buff command: clearing or swapping the buff (off / another multiplier) no longer gets stuck on the old value in some cases.",
+            "Config menu: newer options (Config trinket slots, exclude Incursion Tablets from loot, force Safe Haven triple loot off) no longer stay in English in other languages."
+          ]
+        }
+      ],
+      "note": ""
+    }
+  },
+  {
     "version": "2.7",
     "tag": "fix",
     "tagClass": "fix",
