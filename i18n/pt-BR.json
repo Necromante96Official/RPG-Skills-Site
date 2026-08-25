@@ -1180,7 +1180,6 @@
   "discussoes.aside.li1": "Nome e e-mail para eu poder responder",
   "discussoes.aside.li2": "Mensagem clara: bug, sugestão, dúvida ou feedback",
   "discussoes.aside.li3": "Captcha anti-spam no momento do envio",
-  "discussoes.aside.note": "O envio só funciona com o site no ar (HTTP/HTTPS). Abrir o HTML local no navegador não entrega a mensagem.",
   "discussoes.field.name": "Nome",
   "discussoes.field.email": "Seu e-mail",
   "discussoes.field.message": "Mensagem",

@@ -1180,7 +1180,6 @@
   "discussoes.aside.li1": "Name and email so I can reply",
   "discussoes.aside.li2": "Clear message: bug, suggestion, question, or feedback",
   "discussoes.aside.li3": "Anti-spam captcha at submit time",
-  "discussoes.aside.note": "Sending only works on a hosted site (HTTP/HTTPS). Opening the local HTML file will not deliver the message.",
   "discussoes.field.name": "Name",
   "discussoes.field.email": "Your email",
   "discussoes.field.message": "Message",

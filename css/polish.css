@@ -868,15 +868,6 @@ code,
   margin-top: 8px;
 }
 
-.discuss-aside-note {
-  margin-top: auto;
-  padding-top: 18px;
-  font-size: 0.74rem;
-  color: var(--text-dim);
-  line-height: 1.55;
-  max-width: none;
-}
-
 .discuss-limit-card {
   margin-top: 20px;
   padding: 16px 16px 14px;
