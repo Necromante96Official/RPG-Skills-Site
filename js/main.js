@@ -1433,8 +1433,25 @@
     }
     setNextUrl();
 
-    if (successEl && /[?&]enviado=1(?:&|$)/.test(window.location.search || '')) {
+    function showSuccessBanner() {
+      if (!successEl) return;
+      successEl.innerHTML =
+        '<strong>' + t('discussoes.success.title', 'Mensagem enviada!') + '</strong>' +
+        '<span>' + t('discussoes.success.text', 'Obrigado. Assim que possível, respondo no e-mail que você informou.') + '</span>';
       successEl.hidden = false;
+      successEl.classList.add('is-visible');
+    }
+
+    function hideSuccessBanner() {
+      if (!successEl) return;
+      successEl.hidden = true;
+      successEl.classList.remove('is-visible');
+      successEl.innerHTML = '';
+    }
+
+    hideSuccessBanner();
+    if (/[?&]enviado=1(?:&|$)/.test(window.location.search || '')) {
+      showSuccessBanner();
       try {
         var clean = new URL(window.location.href);
         clean.searchParams.delete('enviado');
@@ -1446,6 +1463,7 @@
       if (!errorEl) return;
       errorEl.textContent = msg;
       errorEl.hidden = !msg;
+      errorEl.classList.toggle('is-visible', !!msg);
     }
 
     function formatSize(bytes) {
