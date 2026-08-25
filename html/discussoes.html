@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Envie dúvidas, sugestões e feedback sobre o RPG Skills. Nome, e-mail, mensagem e anexos direto para o autor.">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="icon" type="image/png" href="../assets/icon.png">
+  <link rel="shortcut icon" type="image/png" href="../assets/icon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <title>Discussões - RPG Skills</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
+
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/rpg-effects.css">
+  <link rel="stylesheet" href="../css/window.css">
+  <link rel="stylesheet" href="../css/qol.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+  <link rel="stylesheet" href="../css/polish.css">
+
+  <style>
+    .page-header {
+      padding: 120px 0 36px;
+      text-align: center;
+      background: linear-gradient(180deg, #0d0b0e 0%, #09080a 100%);
+      border-bottom: 1px solid rgba(212, 136, 28, 0.14);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212, 136, 28, 0.09), transparent 60%);
+      pointer-events: none;
+    }
+
+    .page-header-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .page-kicker {
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(212, 136, 28, 0.12);
+      border: 1px solid rgba(212, 136, 28, 0.22);
+      border-radius: 999px;
+      color: var(--gold);
+      font-family: var(--font-heading);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .page-title {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 8px;
+    }
+
+    .page-title span {
+      color: var(--gold);
+    }
+
+    .page-sub {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin: 0 auto 18px;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    .page-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(212, 136, 28, 0.18);
+      border-radius: 999px;
+      color: var(--text-body);
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.18s;
+    }
+
+    .page-back:hover {
+      background: rgba(212, 136, 28, 0.10);
+      border-color: var(--gold);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    .page-content {
+      padding-top: 28px;
+    }
+
+    .back-footer {
+      text-align: center;
+      padding: 40px 0 20px;
+    }
+  </style>
+</head>
+
+<body data-page="discussoes">
+  <div class="global-particles">
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp g"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+    <div class="gp g"></div>
+    <div class="gp g"></div>
+    <div class="gp w"></div>
+    <div class="gp d"></div>
+  </div>
+  <div class="global-runes">
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
+    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
+  </div>
+  <div class="global-circles">
+    <div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
+    <div class="gc"></div>
+  </div>
+  <div class="global-vignette"></div>
+
+  <nav class="nav scrolled">
+    <a href="../index.html" class="nav-brand">
+      <span class="brand-icon">&#9876;</span>
+      RPG Skills
+    </a>
+    <div class="nav-links">
+      <div class="lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+        <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt">
+          <span class="fi fi-br"></span> PT-BR
+        </button>
+        <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en">
+          <span class="fi fi-us"></span> EN-US
+        </button>
+      </div>
+      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;"><span
+          data-i18n="nav.back">← Voltar ao Início</span></a>
+    </div>
+    <button class="mobile-toggle" aria-label="Menu" data-i18n-aria="nav.menu">&#9776;</button>
+  </nav>
+  <div class="mobile-nav">
+    <button class="mobile-nav-close" aria-label="Fechar" data-i18n-aria="nav.close">&times;</button>
+    <a href="../index.html"><span data-i18n="nav.back">← Voltar ao Início</span></a>
+    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
+      <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt"><span
+          class="fi fi-br"></span> PT-BR</button>
+      <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en"><span
+          class="fi fi-us"></span> EN-US</button>
+    </div>
+    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+      class="btn btn-primary" data-i18n="nav.steam">Steam Workshop</a>
+  </div>
+
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="page-kicker" data-i18n="discussoes.hero.kicker">Fale comigo</div>
+      <h1 class="page-title" data-i18n="discussoes.title">Discussões &amp; <span>Feedback</span></h1>
+      <p class="page-sub" data-i18n="discussoes.subtitle">Dúvidas, sugestões, bugs ou ideias. Sua mensagem chega
+        direto no e-mail do autor. Pode anexar imagens e arquivos — com limite de <b>10 MB</b> no total.</p>
+      <a href="../index.html" class="page-back"><span data-i18n="nav.back.home">← Voltar à página inicial</span></a>
+    </div>
+  </header>
+
+  <div class="page-content">
+    <section class="section">
+      <div class="section-glow-line"></div>
+      <div class="container">
+        <div id="discuss-success" class="discuss-banner discuss-banner--success" hidden>
+          <strong data-i18n="discussoes.success.title">Mensagem enviada!</strong>
+          <span data-i18n="discussoes.success.text">Obrigado. Assim que possível, respondo no e-mail que você
+            informou.</span>
+        </div>
+
+        <div class="discuss-layout reveal">
+          <aside class="discuss-aside">
+            <div class="section-label" data-i18n="discussoes.aside.label">Como funciona</div>
+            <h2 class="discuss-aside-title" data-i18n="discussoes.aside.title">Envio privado por e-mail</h2>
+            <p class="discuss-aside-text" data-i18n="discussoes.aside.text">Não é um fórum público. O formulário
+              entrega sua mensagem direto em <b>canalnecromante96@gmail.com</b>, com resposta no e-mail que você
+              informar.</p>
+            <ul class="discuss-aside-list">
+              <li data-i18n="discussoes.aside.li1">Nome e e-mail para eu poder responder</li>
+              <li data-i18n="discussoes.aside.li2">Mensagem clara: bug, sugestão, dúvida ou feedback</li>
+              <li data-i18n="discussoes.aside.li3">Captcha anti-spam no momento do envio</li>
+            </ul>
+
+            <div class="discuss-limit-card">
+              <div class="discuss-limit-kicker" data-i18n="discussoes.limit.kicker">Limite de anexos</div>
+              <p class="discuss-limit-lead" data-i18n="discussoes.limit.lead">Se for enviar imagem, print, log ou
+                arquivo, leve estes limites em conta:</p>
+              <ul class="discuss-limit-list">
+                <li data-i18n="discussoes.limit.li1"><b>10 MB no total</b> por envio (todos os arquivos somados)</li>
+                <li data-i18n="discussoes.limit.li2">Pode anexar <b>vários arquivos</b>, desde que caibam nos 10 MB</li>
+                <li data-i18n="discussoes.limit.li3">Aceitos: <b>PNG, JPG, WEBP, GIF, PDF, TXT, LOG, ZIP, MD</b></li>
+                <li data-i18n="discussoes.limit.li4">Se passar do limite, o envio é bloqueado antes de sair</li>
+              </ul>
+              <p class="discuss-limit-tip" data-i18n="discussoes.limit.tip">Dica: prints e fotos grandes? Comprima ou
+                envie só o recorte necessário.</p>
+            </div>
+
+            <p class="discuss-aside-note" data-i18n="discussoes.aside.note">O envio só funciona com o site no ar
+              (HTTP/HTTPS). Abrir o HTML local no navegador não entrega a mensagem.</p>
+          </aside>
+
+          <form id="discuss-form" class="discuss-form" method="POST"
+            action="https://formsubmit.co/canalnecromante96@gmail.com" enctype="multipart/form-data" novalidate>
+            <div class="discuss-form-head">
+              <h3 class="discuss-form-title" data-i18n="discussoes.form.title">Escreva sua mensagem</h3>
+              <p class="discuss-form-sub" data-i18n="discussoes.form.sub">Campos com * são obrigatórios. Anexos são
+                opcionais.</p>
+            </div>
+
+            <input type="hidden" name="_subject" value="RPG Skills — Discussão do site">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_next" id="discuss-next" value="">
+            <input type="text" name="_honey" value="" class="discuss-honey" tabindex="-1" autocomplete="off"
+              aria-hidden="true">
+
+            <div class="discuss-field">
+              <label for="discuss-name"><span data-i18n="discussoes.field.name">Nome</span> <em>*</em></label>
+              <input id="discuss-name" type="text" name="name" required maxlength="120" autocomplete="name"
+                data-i18n-placeholder="discussoes.ph.name" placeholder="Seu nome">
+            </div>
+
+            <div class="discuss-field">
+              <label for="discuss-email"><span data-i18n="discussoes.field.email">Seu e-mail</span> <em>*</em></label>
+              <input id="discuss-email" type="email" name="email" required maxlength="200" autocomplete="email"
+                data-i18n-placeholder="discussoes.ph.email" placeholder="voce@email.com">
+              <span class="discuss-field-hint" data-i18n="discussoes.field.email.hint">Usado só para eu responder você.
+                Não é publicado.</span>
+            </div>
+
+            <div class="discuss-field">
+              <label for="discuss-message"><span data-i18n="discussoes.field.message">Mensagem</span> <em>*</em></label>
+              <textarea id="discuss-message" name="message" required rows="7" maxlength="5000"
+                data-i18n-placeholder="discussoes.ph.message"
+                placeholder="Conte o que aconteceu, sugestão ou dúvida..."></textarea>
+            </div>
+
+            <div class="discuss-field discuss-field--files">
+              <div class="discuss-files-label-row">
+                <label for="discuss-files" data-i18n="discussoes.field.files">Anexos (opcional)</label>
+                <span class="discuss-files-badge" data-i18n="discussoes.files.badge">Limite 10 MB</span>
+              </div>
+              <p class="discuss-files-intro" data-i18n="discussoes.files.intro">Vai mandar print, log ou arquivo? Pode —
+                mas a soma de todos os anexos precisa ficar em até <b>10 MB</b>.</p>
+              <label class="discuss-file-box" for="discuss-files">
+                <span class="discuss-file-icon" aria-hidden="true">📎</span>
+                <span class="discuss-file-title" data-i18n="discussoes.files.pick">Clique para escolher imagens ou
+                  arquivos</span>
+                <span class="discuss-file-hint" data-i18n="discussoes.files.types">PNG, JPG, WEBP, GIF, PDF, TXT, LOG,
+                  ZIP, MD</span>
+                <span id="discuss-file-list" class="discuss-file-list"></span>
+              </label>
+              <input id="discuss-files" class="discuss-file-input" type="file" name="attachment" multiple
+                accept="image/*,.png,.jpg,.jpeg,.gif,.webp,.txt,.log,.zip,.pdf,.md">
+              <div class="discuss-meter" aria-hidden="true">
+                <div class="discuss-meter-track">
+                  <div id="discuss-meter-fill" class="discuss-meter-fill" style="width:0%"></div>
+                </div>
+                <div class="discuss-meter-meta">
+                  <span id="discuss-meter-text" data-i18n="discussoes.files.meter.empty">0 MB de 10 MB usados</span>
+                  <span id="discuss-meter-left" data-i18n="discussoes.files.meter.free">10 MB livres</span>
+                </div>
+              </div>
+              <p class="discuss-field-hint discuss-field-hint--warn" data-i18n="discussoes.files.warn">Se ultrapassar 10
+                MB, o botão não envia até você remover algum arquivo.</p>
+            </div>
+
+            <p id="discuss-error" class="discuss-error" hidden role="alert"></p>
+
+            <button type="submit" class="btn btn-primary discuss-submit" id="discuss-submit">
+              <span data-i18n="discussoes.submit">Enviar mensagem</span>
+            </button>
+            <p class="discuss-submit-note" data-i18n="discussoes.submit.note">Ao enviar, pode aparecer um captcha
+              rápido. Depois você volta para esta página com a confirmação.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="section-divider"></div>
+  <section class="section page-flow-cta">
+    <div class="container reveal">
+      <h2 class="page-flow-title" data-i18n="cta.flow.title">Continue explorando</h2>
+      <p class="section-subtitle page-flow-sub" data-i18n="cta.flow.subtitle">Volte à página anterior ou siga para a
+        próxima do guia.</p>
+      <div class="page-flow-actions">
+        <a href="changelog.html" class="btn btn-outline page-flow-prev" data-i18n="cta.flow.prev.changelog">← Anterior:
+          Changelog</a>
+        <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
+          class="btn btn-primary" data-i18n="cta.flow.steam">⭐ Avaliar na Steam</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-footer">
+    <a href="../index.html" class="page-back"
+      style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;"><span
+        data-i18n="nav.back.home">← Voltar à página inicial</span></a>
+  </div>
+
+  <footer class="footer" style="padding:28px 40px; margin-top:20px;">
+    <div class="container">
+      <div class="footer-bottom">
+        <span data-i18n="footer.made">Feito com &#9829; por Necromante96</span>
+        <span>RPG Skills v2.7 &mdash; Necesse 1.3.2 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);"
+            data-i18n="footer.home">Início</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/i18n-data.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

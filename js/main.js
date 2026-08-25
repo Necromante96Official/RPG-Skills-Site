@@ -53,6 +53,7 @@
             'atalhos': 'atalhos',
             'passivas': 'passivas',
             'changelog': 'changelog',
+            'discussoes': 'discussoes',
             'fontes-xp': 'fontes'
           };
           page = map[m[1]] || m[1];
@@ -1401,6 +1402,143 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
   });
+
+  /* ---- DISCUSSIONS FORM (FormSubmit) ---- */
+  (function () {
+    var form = document.getElementById('discuss-form');
+    if (!form) return;
+
+    var MAX_BYTES = 10 * 1024 * 1024;
+    var nextInput = document.getElementById('discuss-next');
+    var filesInput = document.getElementById('discuss-files');
+    var fileList = document.getElementById('discuss-file-list');
+    var errorEl = document.getElementById('discuss-error');
+    var successEl = document.getElementById('discuss-success');
+    var submitBtn = document.getElementById('discuss-submit');
+    var meterFill = document.getElementById('discuss-meter-fill');
+    var meterText = document.getElementById('discuss-meter-text');
+    var meterLeft = document.getElementById('discuss-meter-left');
+    var fileBox = form.querySelector('.discuss-file-box');
+
+    function setNextUrl() {
+      if (!nextInput) return;
+      try {
+        var url = new URL(window.location.href);
+        url.searchParams.set('enviado', '1');
+        url.hash = '';
+        nextInput.value = url.toString();
+      } catch (e) {
+        nextInput.value = 'discussoes.html?enviado=1';
+      }
+    }
+    setNextUrl();
+
+    if (successEl && /[?&]enviado=1(?:&|$)/.test(window.location.search || '')) {
+      successEl.hidden = false;
+      try {
+        var clean = new URL(window.location.href);
+        clean.searchParams.delete('enviado');
+        window.history.replaceState({}, '', clean.pathname + clean.search + clean.hash);
+      } catch (e2) { }
+    }
+
+    function showError(msg) {
+      if (!errorEl) return;
+      errorEl.textContent = msg;
+      errorEl.hidden = !msg;
+    }
+
+    function formatSize(bytes) {
+      if (bytes < 1024) return bytes + ' B';
+      if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+      return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+    }
+
+    function formatMb(bytes) {
+      return (bytes / (1024 * 1024)).toFixed(bytes >= 1024 * 1024 ? 2 : 1);
+    }
+
+    function totalFileBytes() {
+      if (!filesInput || !filesInput.files) return 0;
+      var total = 0;
+      for (var i = 0; i < filesInput.files.length; i++) total += filesInput.files[i].size || 0;
+      return total;
+    }
+
+    function refreshMeter() {
+      var used = totalFileBytes();
+      var pct = Math.min(100, Math.round((used / MAX_BYTES) * 100));
+      var over = used > MAX_BYTES;
+      var left = Math.max(0, MAX_BYTES - used);
+      if (meterFill) {
+        meterFill.style.width = pct + '%';
+        meterFill.classList.toggle('is-warn', pct >= 80 && !over);
+        meterFill.classList.toggle('is-over', over);
+      }
+      if (meterText) {
+        meterText.textContent = over
+          ? t('discussoes.files.meter.over', 'Limite excedido: {used} / 10 MB').replace('{used}', formatMb(used))
+          : t('discussoes.files.meter.used', '{used} MB de 10 MB usados').replace('{used}', formatMb(used));
+      }
+      if (meterLeft) {
+        meterLeft.textContent = over
+          ? t('discussoes.files.meter.over.short', 'Remova arquivos')
+          : t('discussoes.files.meter.free', '{free} MB livres').replace('{free}', formatMb(left));
+      }
+      if (fileBox) fileBox.classList.toggle('is-over', over);
+    }
+
+    function refreshFileList() {
+      if (!fileList || !filesInput) return;
+      var files = filesInput.files;
+      if (!files || !files.length) {
+        fileList.textContent = '';
+        refreshMeter();
+        return;
+      }
+      var names = [];
+      for (var i = 0; i < files.length; i++) {
+        names.push(files[i].name + ' (' + formatSize(files[i].size || 0) + ')');
+      }
+      fileList.textContent = names.join(' · ');
+      refreshMeter();
+    }
+
+    if (filesInput) {
+      filesInput.addEventListener('change', function () {
+        showError('');
+        if (totalFileBytes() > MAX_BYTES) {
+          showError(t('discussoes.error.size', 'Os anexos juntos passam de 10 MB. Remova alguns arquivos.'));
+        }
+        refreshFileList();
+      });
+    }
+    refreshMeter();
+    document.addEventListener('rpgskills:i18n', refreshMeter);
+
+    form.addEventListener('submit', function (e) {
+      showError('');
+      var name = (form.elements.namedItem('name') || {}).value || '';
+      var email = (form.elements.namedItem('email') || {}).value || '';
+      var message = (form.elements.namedItem('message') || {}).value || '';
+      if (!String(name).trim() || !String(email).trim() || !String(message).trim()) {
+        e.preventDefault();
+        showError(t('discussoes.error.required', 'Preencha nome, e-mail e mensagem.'));
+        return;
+      }
+      if (totalFileBytes() > MAX_BYTES) {
+        e.preventDefault();
+        showError(t('discussoes.error.size', 'Os anexos juntos passam de 10 MB. Remova alguns arquivos.'));
+        return;
+      }
+      setNextUrl();
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        var label = submitBtn.querySelector('[data-i18n="discussoes.submit"]') || submitBtn;
+        label.textContent = t('discussoes.sending', 'Enviando…');
+      }
+    });
+  })();
 
   /* ---- INIT ---- */
   currentLang = detectLanguage();
