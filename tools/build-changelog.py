@@ -13,6 +13,7 @@ HTML = ROOT / "html" / "changelog.html"
 
 # Prefer explicit tags for filter UX (match previous page where possible)
 TAG_BY_VERSION = {
+    "2.9": "update",
     "2.8": "new",
     "2.7": "fix",
     "2.6": "new",
@@ -175,7 +176,7 @@ def write_js(entries: list) -> None:
     )
 
 
-def patch_html(version_count: int) -> None:
+def patch_html(version_count: int, latest_version: str) -> None:
     html = HTML.read_text(encoding="utf-8")
     # Update version count badge
     html = re.sub(
@@ -187,7 +188,7 @@ def patch_html(version_count: int) -> None:
     # Latest version badge
     html = re.sub(
         r'(<span class="page-stat"><i>🔥</i> <b>)v[\d.]+(</b>)',
-        r"\g<1>v2.8\2",
+        rf"\g<1>v{latest_version}\2",
         html,
         count=1,
     )
@@ -250,14 +251,15 @@ def patch_html(version_count: int) -> None:
 def main():
     entries = build_entries()
     write_js(entries)
-    patch_html(len(entries))
+    latest = entries[0]["version"] if entries else "0"
+    patch_html(len(entries), latest)
     total_items = sum(
         len(it)
         for e in entries
         for s in e["pt"]["sections"]
         for it in [s["items"]]
     )
-    print(f"versions={len(entries)} pt_items={total_items}")
+    print(f"versions={len(entries)} latest=v{latest} pt_items={total_items}")
     print("order:", ", ".join(e["version"] for e in entries))
     missing_en = [e["version"] for e in entries if not e["en"]["sections"]]
     print("missing_en_sections:", missing_en or "none")

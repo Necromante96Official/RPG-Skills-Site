@@ -1,6 +1,66 @@
 /* Auto-generated from release-notes/*.md — do not edit by hand */
 window.RPG_CHANGELOG = [
   {
+    "version": "2.9",
+    "tag": "update",
+    "tagClass": "minor",
+    "tagKey": "changelog.tag.update",
+    "pt": {
+      "title": "🌟 Atualização 2.9 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "Qualidade de vida",
+          "items": [
+            "<strong>Raio de aggro das invocações</strong>: no Config você liga/desliga e escolhe quantos tiles (padrão 10) a partir de você. Só monstros hostis dentro desse raio puxam combate automático. Cavernídeos continuam podendo ser caçados à distância — as invocações vão até eles e voltam. Monstros fora do raio são ignorados no caminho.",
+            "Atalho em <strong>Controles</strong> para ligar/desligar a caça a <strong>Cavernídeos</strong> pelas invocações (por jogador; no Config do servidor a opção global continua valendo)."
+          ]
+        },
+        {
+          "heading": "Correções",
+          "items": [
+            "Invocações voltam a caçar <strong>Cavernídeos</strong> de forma confiável. Antes, um monstro longe no mapa (ou um hostil perto de você) podia impedir a caça por completo; agora só hostis no raio de aggro competem com o cavernídeo, sem travar a caça quando não há combate real.",
+            "Ao encolher slots da <strong>Mestre das Relíquias</strong> (respec de atualização ou reset de pontos), acessórios nos slots extras voltam para o inventário ou caem no chão — não somem mais se a devolução falhar (o encolhimento é cancelado e o item permanece equipado).",
+            "Corrigido o bug em que 1 ponto em <strong>Mestre das Relíquias</strong> fazia os slots de acessórios aumentarem de +4 a cada vez que você saía e entrava no mapa."
+          ]
+        },
+        {
+          "heading": "Desempenho",
+          "items": [
+            "Menos travadinhas no servidor: Auto Poção, passivas de tick e checagem de hostis perto das invocações ficaram mais leves, sem mudar o comportamento no jogo."
+          ]
+        }
+      ],
+      "note": ""
+    },
+    "en": {
+      "title": "🌟 Update 2.9 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "Quality of life",
+          "items": [
+            "<strong>Summon aggro radius</strong>: in Config you can turn it on/off and set how many tiles (default 10) from you. Only hostile monsters inside that radius pull automatic combat. Cavelings can still be hunted from far away — summons go to them and return. Hostiles outside the radius are ignored along the way.",
+            "<strong>Controls</strong> hotkey to turn <strong>Caveling</strong> hunting by summons on/off (per player; the server Config global option still applies)."
+          ]
+        },
+        {
+          "heading": "Fixes",
+          "items": [
+            "Summons reliably hunt <strong>Cavelings</strong> again. Before, a far-away hostile (or a hostile near you) could stop the hunt entirely; now only hostiles in the aggro radius compete with the caveling, without locking hunting when there is no real fight.",
+            "When <strong>Relic Master</strong> slots shrink (update respec or point reset), trinkets in the extra slots go to your inventory or drop on the ground — they no longer vanish if recovery fails (shrink is cancelled and the item stays equipped).",
+            "Fixed a bug where 1 point in <strong>Relic Master</strong> made trinket slots grow by +4 every time you left and re-entered the map."
+          ]
+        },
+        {
+          "heading": "Performance",
+          "items": [
+            "Fewer server hitch moments: Auto Potion, tick passives, and nearby-hostile checks for summons are lighter, with the same in-game behavior."
+          ]
+        }
+      ],
+      "note": ""
+    }
+  },
+  {
     "version": "2.8",
     "tag": "new",
     "tagClass": "major",
@@ -25,7 +85,7 @@ window.RPG_CHANGELOG = [
         {
           "heading": "Correções",
           "items": [
-            "Mineração em veios: paredes de pedra (e variantes profundas/pântano), colunas e pilares passam a entrar no veia como as outras paredes.",
+            "Mineração em veios: paredes de pedra (e variantes profundas/pântano), colunas e pilares passam a entrar na veia como as outras paredes.",
             "Mineração em veios: troncos como bambu, pinheiro, palmeira, salgueiro, maçã e banana passam a encadear corretamente (antes só as versões com “árvore” no nome).",
             "Quebrar objetos e pisos com o Mestre do Loot / XP de colheita continua estável na 1.3.3 (o jogo mudou o caminho de destruição; o mod acompanhou).",
             "Comando de buff de XP: limpar ou trocar o buff (off / outro multiplicador) deixa de ficar “preso” no valor antigo em alguns casos.",
