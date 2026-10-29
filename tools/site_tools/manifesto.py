@@ -42,6 +42,7 @@ MENU = [
     ('html/qol.html', 'Extras', 'Extras'),
     ('html/configuracao.html', 'Config', 'Config'),
     ('html/changelog.html', 'Novidades', 'Updates'),
+    ('html/discussoes.html', 'Ajuda', 'Help'),
 ]
 
 # Páginas antigas que só redirecionam (links velhos da Steam e do YouTube continuam valendo).

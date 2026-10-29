@@ -23,6 +23,8 @@
 }
 .heroi h1 { margin-bottom: 20px; }
 .heroi .lead { max-width: 54ch; margin-bottom: 30px; }
+.heroi .acoes { gap: 10px; }
+.heroi .acoes .btn { padding-inline: 18px; }
 
 .heroi__fatos {
   display: flex;
@@ -133,4 +135,45 @@
   .categorias { grid-template-columns: 1fr 1fr; }
   .heroi__vitrine { min-height: 360px; }
   .orbita .icone-classe { width: 40px; height: 40px; }
+}
+
+/* ---------- Ajuda e contato ---------- */
+.ajuda {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 56px);
+  align-items: center;
+  padding: clamp(28px, 4vw, 48px);
+  border-radius: calc(var(--raio) + 6px);
+  border: 1px solid rgba(157, 107, 255, .4);
+  background:
+    radial-gradient(520px 260px at 100% 0%, rgba(157, 107, 255, .2), transparent 70%),
+    var(--sup);
+}
+.ajuda .lead { margin-bottom: 24px; }
+.ajuda__itens { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.ajuda__itens li {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--linha);
+  background: rgba(0, 0, 0, .22);
+}
+.ajuda__itens div { display: grid; gap: 2px; }
+.ajuda__itens div > span { font-size: .9rem; color: var(--txt-3); }
+.ajuda__icone {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: var(--sup-3);
+  font-size: 1.25rem;
+}
+
+@media (max-width: 960px) {
+  .ajuda { grid-template-columns: 1fr; }
 }

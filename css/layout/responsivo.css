@@ -1,7 +1,7 @@
 /* ============================================
    RPG SKILLS - Ajustes por largura de tela (sempre o último CSS da página)
    ============================================ */
-@media (max-width: 1180px) {
+@media (max-width: 1240px) {
   .menu, .topo__steam { display: none; }
   .menu-toggle { display: grid; place-items: center; }
   .topo__acoes { margin-left: auto; }

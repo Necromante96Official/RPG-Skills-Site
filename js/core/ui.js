@@ -18,7 +18,7 @@
     toggle.addEventListener('click', function () { set(panel.hidden); });
     panel.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
-    window.matchMedia('(min-width: 1181px)').addEventListener('change', function (m) { if (m.matches) set(false); });
+    window.matchMedia('(min-width: 1241px)').addEventListener('change', function (m) { if (m.matches) set(false); });
   }
 
   /** Mostra com animação os elementos .revelar quando entram na tela. */
