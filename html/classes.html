@@ -4,662 +4,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Ative apenas as classes que importam para o seu servidor. Cada uma oferece passivas e ativas únicas.">
-  <meta name="theme-color" content="#0a0a0f">
-  <link rel="icon" type="image/png" href="../assets/icon.png">
-  <link rel="shortcut icon" type="image/png" href="../assets/icon.png">
-  <link rel="apple-touch-icon" href="../assets/icon.png">
-  <title>33 Classes - RPG Skills</title>
+  <title>34 Classes - RPG Skills</title>
+  <meta name="description" content="As 34 classes do RPG Skills com os bônus de cada ponto e o que cada nível desbloqueia, direto do código do mod.">
+  <meta name="theme-color" content="#0b0915">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
-
-  <link rel="stylesheet" href="../css/tokens.css">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/components.css">
-  <link rel="stylesheet" href="../css/layout.css">
-  <link rel="stylesheet" href="../css/animations.css">
-  <link rel="stylesheet" href="../css/rpg-effects.css">
-  <link rel="stylesheet" href="../css/window.css">
-  <link rel="stylesheet" href="../css/qol.css">
-  <link rel="stylesheet" href="../css/mobile.css">
-  <link rel="stylesheet" href="../css/polish.css">
-
-
-  <style>
-    .page-header {
-      padding: 130px 0 44px !important;
-      background: linear-gradient(180deg, #0f0a08 0%, #0d0b0e 45%, #09080a 100%) !important;
-      border-bottom: 1px solid rgba(212, 136, 28, 0.18) !important;
-      position: relative;
-      overflow: hidden;
-      text-align: center;
-    }
-
-    .page-header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(212, 136, 28, 0.14), transparent 60%) !important;
-      pointer-events: none;
-    }
-
-    .page-header-inner {
-      position: relative;
-      z-index: 1;
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      text-align: center !important;
-      max-width: 860px !important;
-      margin: 0 auto !important;
-      padding: 0 20px;
-    }
-
-    .page-kicker {
-      display: inline-block;
-      padding: 4px 12px;
-      background: rgba(212, 136, 28, 0.12);
-      border: 1px solid rgba(212, 136, 28, 0.22);
-      border-radius: 999px;
-      color: var(--gold);
-      font-family: var(--font-heading);
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin: 0 auto 14px;
-    }
-
-    .page-title {
-      font-size: clamp(2.2rem, 5vw, 3.2rem) !important;
-      margin: 0 auto 10px !important;
-      text-align: center !important;
-      width: 100% !important;
-      display: block !important;
-      color: #fff !important;
-    }
-
-    .page-title span {
-      color: var(--gold) !important;
-    }
-
-    .page-sub {
-      margin: 0 auto 16px !important;
-      text-align: center !important;
-      max-width: 640px !important;
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .page-stats {
-      display: flex !important;
-      justify-content: center !important;
-      flex-wrap: wrap !important;
-      gap: 10px !important;
-      margin: 0 auto 16px !important;
-    }
-
-    .page-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 18px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(212, 136, 28, 0.18);
-      border-radius: 999px;
-      color: var(--text-body);
-      font-family: var(--font-heading);
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: all 0.18s;
-    }
-
-    .page-back:hover {
-      background: rgba(212, 136, 28, 0.10);
-      border-color: var(--gold);
-      color: #fff;
-      transform: translateY(-1px);
-    }
-
-    .page-content {
-      padding-top: 8px;
-    }
-
-    .back-footer {
-      text-align: center;
-      padding: 40px 0 20px;
-    }
-
-    .class-search {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 720px;
-      margin: 0 auto 28px;
-    }
-
-    .class-search-wrap {
-      flex: 1 1 280px;
-      max-width: 420px;
-    }
-
-    .class-search input,
-    .class-search select {
-      width: 100%;
-      padding: 11px 14px;
-      border-radius: 10px;
-      background: #0e0b0e;
-      border: 1px solid rgba(212, 136, 28, 0.18);
-      color: #fff;
-      font-family: var(--font-body);
-      font-size: 0.85rem;
-    }
-
-    .class-search select {
-      width: auto;
-      min-width: 180px;
-      cursor: pointer;
-    }
-  </style>
-
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@400;500;600;700&family=Pixelify+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- css:inicio -->
+  <link rel="stylesheet" href="../css/base/tokens.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/layout/shell.css">
+  <link rel="stylesheet" href="../css/components/ui.css">
+  <link rel="stylesheet" href="../css/components/blocos.css">
+  <link rel="stylesheet" href="../css/pages/classes.css">
+  <link rel="stylesheet" href="../css/layout/responsivo.css">
+  <!-- css:fim -->
 </head>
 
-<body data-page="classes">
-  <div class="global-particles">
-    <div class="gp g"></div>
-    <div class="gp w"></div>
-    <div class="gp d"></div>
-    <div class="gp g"></div>
-    <div class="gp w"></div>
-    <div class="gp d"></div>
-    <div class="gp g"></div>
-    <div class="gp g"></div>
-    <div class="gp w"></div>
-    <div class="gp d"></div>
-    <div class="gp g"></div>
-    <div class="gp w"></div>
-    <div class="gp g"></div>
-    <div class="gp d"></div>
-    <div class="gp g"></div>
-    <div class="gp w"></div>
-    <div class="gp d"></div>
-    <div class="gp g"></div>
-    <div class="gp d"></div>
-    <div class="gp g"></div>
-    <div class="gp w"></div>
-    <div class="gp g"></div>
-    <div class="gp d"></div>
-    <div class="gp g"></div>
-    <div class="gp w"></div>
-    <div class="gp d"></div>
-    <div class="gp g"></div>
-    <div class="gp g"></div>
-    <div class="gp w"></div>
-    <div class="gp d"></div>
-  </div>
-  <div class="global-runes">
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-  </div>
-  <div class="global-circles">
-    <div class="gc"></div>
-    <div class="gc"></div>
-    <div class="gc"></div>
-    <div class="gc"></div>
-  </div>
-  <div class="global-vignette"></div>
-
-  <nav class="nav scrolled">
-    <a href="../index.html" class="nav-brand">
-      <span class="brand-icon">&#9876;</span>
-      RPG Skills
-    </a>
-    <div class="nav-links">
-      <div class="lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
-        <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt">
-          <span class="fi fi-br"></span> PT-BR
-        </button>
-        <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en">
-          <span class="fi fi-us"></span> EN-US
+<body data-page="classes" data-raiz="../">
+  <!-- topo:inicio -->
+  <a class="pular" href="#conteudo"><span lang="pt-BR">Pular para o conteúdo</span><span lang="en">Skip to content</span></a>
+  <header class="topo" id="topo">
+    <div class="topo__barra wrap">
+      <a class="marca" href="../index.html" aria-label="RPG Skills">
+        <img src="../assets/logo.webp" alt="RPG Skills" width="82" height="40">
+      </a>
+      <nav class="menu" aria-label="Menu">
+        <ul>
+          <li><a href="classes.html" aria-current="page"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        </ul>
+      </nav>
+      <div class="topo__acoes">
+        <div class="idioma" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-option" data-lang="pt-BR">PT</button>
+          <button type="button" class="lang-option" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn--ouro btn--p topo__steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">
+          <span lang="pt-BR">Inscrever-se</span><span lang="en">Subscribe</span>
+        </a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-movel" aria-label="Menu">
+          <span></span>
         </button>
       </div>
-      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;"><span
-          data-i18n="nav.back">← Voltar ao Início</span></a>
     </div>
-    <button class="mobile-toggle" aria-label="Menu" data-i18n-aria="nav.menu">&#9776;</button>
-  </nav>
-  <div class="mobile-nav">
-    <button class="mobile-nav-close" aria-label="Fechar" data-i18n-aria="nav.close">&times;</button>
-    <a href="../index.html"><span data-i18n="nav.back">← Voltar ao Início</span></a>
-    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
-      <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt"><span
-          class="fi fi-br"></span> PT-BR</button>
-      <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en"><span
-          class="fi fi-us"></span> EN-US</button>
-    </div>
-    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener"
-      class="btn btn-primary" data-i18n="nav.steam">Steam Workshop</a>
-  </div>
-
-  <header class="page-header">
-    <div class="page-header-inner">
-      <div class="page-kicker" data-i18n="classes.kicker">33 Classes · 5 Categorias</div>
-      <h1 class="page-title" data-i18n="classes.title">Escolha Sua <span class="text-green">Build</span></h1>
-      <p class="page-sub" data-i18n="classes.subtitle">Ative apenas as classes que importam para o seu servidor. Cada
-        uma oferece passivas e ativas únicas.</p>
-      <div class="page-stats">
-        <span class="page-stat"><i>⚔️</i> <b>33</b> <span data-i18n="classes.stat.classes">classes</span></span>
-        <span class="page-stat"><i>🛡️</i> <b>5</b> <span data-i18n="classes.stat.categories">categorias</span></span>
-        <span class="page-stat"><i>✨</i> <b>165</b> <span data-i18n="classes.stat.points">pontos</span></span>
-      </div>
-      <a href="../index.html" class="page-back"><span data-i18n="nav.back.home">← Voltar à página inicial</span></a>
-    </div>
+    <nav class="menu-movel" id="menu-movel" aria-label="Menu" hidden>
+      <ul>
+          <li><a href="classes.html" aria-current="page"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        <li><a href="../html/discussoes.html"><span lang="pt-BR">Ajuda e contato</span><span lang="en">Help &amp; contact</span></a></li>
+      </ul>
+      <a class="btn btn--ouro" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">
+        <span lang="pt-BR">Inscrever-se na Steam</span><span lang="en">Subscribe on Steam</span>
+      </a>
+    </nav>
   </header>
+  <!-- topo:fim -->
 
-  <div class="page-content">
-    <section id="classes" class="section">
-      <div class="section-glow-line"></div>
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label" data-i18n="classes.catalog.label">Catálogo completo</div>
-          <h2 class="section-title" data-i18n="classes.catalog.title">Explore as <span class="text-green">33
-              classes</span></h2>
-          <p class="section-subtitle" style="margin:0 auto;" data-i18n="classes.catalog.subtitle">Filtre por categoria
-            ou busque pelo nome.</p>
+  <main id="conteudo">
+    <header class="cabeca">
+      <div class="wrap">
+        <p class="sobre"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></p>
+        <h1><span lang="pt-BR"><span class="n">34</span> classes, <span class="n">5</span> pontos em cada</span><span lang="en"><span class="n">34</span> classes, <span class="n">5</span> points each</span></h1>
+        <p class="lead">
+          <span lang="pt-BR">Cada nível do personagem dá 1 ponto. Coloque na classe que quiser: os bônus somam a cada ponto e cada nível da classe pode liberar uma habilidade nova. Clique numa classe para ver tudo, nível por nível.</span>
+          <span lang="en">Each character level gives 1 point. Put it into any class: bonuses add up with every point and each class level can unlock a new ability. Click a class to see everything, level by level.</span>
+        </p>
+        <div class="indice">
+          <span class="selo selo--ouro">34 <span lang="pt-BR">classes</span><span lang="en">classes</span></span>
+          <span class="selo selo--roxo">170 <span lang="pt-BR">pontos no total</span><span lang="en">points in total</span></span>
+          <span class="selo"><span lang="pt-BR">Valores do mod v4.1</span><span lang="en">Values from mod v4.1</span></span>
         </div>
+      </div>
+    </header>
 
-        <div class="class-search reveal">
-          <div class="class-search-wrap">
-            <input id="class-search" type="text" placeholder="Buscar classe… ex: Guerra, Pesadelo, Máquinas"
-              data-i18n-placeholder="classes.search.placeholder">
-          </div>
-          <select id="class-cat" aria-label="Categoria">
-            <option value="all" data-i18n="classes.search.all">Todas categorias</option>
-            <option value="combat" data-i18n="classes.cat.combat">Combate</option>
-            <option value="defense" data-i18n="classes.cat.defense">Defesa</option>
-            <option value="mobility" data-i18n="classes.cat.mobility">Mobilidade</option>
-            <option value="utility" data-i18n="classes.cat.utility">Utilidade</option>
-            <option value="settler" data-i18n="classes.cat.settler">Assentamento</option>
-          </select>
+    <section class="secao secao--topo-curto">
+      <div class="wrap">
+        <div class="barra-classes">
+          <div class="filtros" id="filtros-aba" role="group" aria-label="Categoria / Category"></div>
+          <label class="busca">
+            <span class="sr-only"><span lang="pt-BR">Buscar classe</span><span lang="en">Search class</span></span>
+            <input class="campo" type="search" id="busca-classe" autocomplete="off" data-i18n-placeholder="classes.busca" placeholder="Buscar classe ou bônus...">
+          </label>
         </div>
-        <script>
-          (function () {
-            var inp = document.getElementById('class-search');
-            var sel = document.getElementById('class-cat');
-            if (!inp) return;
-            function filter() {
-              var q = inp.value.toLowerCase();
-              var cat = sel.value;
-              document.querySelectorAll('.class-card').forEach(function (c) {
-                var title = c.querySelector('h4').textContent.toLowerCase();
-                var desc = c.querySelector('p').textContent.toLowerCase();
-                var show = (title.includes(q) || desc.includes(q));
-                var header = c.closest('.reveal');
-                var catHeader = header ? header.querySelector('.category-header') : null;
-                var catClass = catHeader ? catHeader.className : '';
-                if (show && cat !== 'all') {
-                  show = catClass.includes(cat);
-                }
-                c.style.display = show ? '' : 'none';
-              });
-              document.querySelectorAll('.category-header').forEach(function (h) {
-                var grid = h.nextElementSibling;
-                if (!grid) return;
-                var visible = grid.querySelectorAll('.class-card:not([style*="display: none"])').length;
-                h.parentElement.style.display = visible ? '' : 'none';
-              });
-            }
-            inp.addEventListener('input', filter);
-            sel.addEventListener('change', filter);
-          })();
-        </script>
+        <p class="contagem" id="contagem" aria-live="polite"></p>
+        <div class="classes-grade" id="classes-grade"></div>
+        <p class="vazio" id="vazio" hidden>
+          <span lang="pt-BR">Nenhuma classe encontrada.</span><span lang="en">No class found.</span>
+        </p>
+      </div>
+    </section>
 
-        <!-- COMBAT -->
-        <div class="reveal">
-          <div class="category-header combat">
-            <span class="cat-dot"></span>
-            <h3>&#9876; <span data-i18n="classes.cat.combat">Combate</span></h3>
-          </div>
-          <div class="grid-classes">
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(239,68,68,0.1);color:var(--cat-combat);">&#9876;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.warrior">Mestre da Guerra</h4>
-                <p data-i18n="class.warrior.desc">Corpo a corpo, críticos, penetração de armadura, velocidade de ataque
-                </p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(239,68,68,0.1);color:var(--cat-combat);">&#127993;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.marksman">Mestre Atirador</h4>
-                <p data-i18n="class.marksman.desc">À distância, projéteis, Olho de Águia (destaca inimigos)</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(239,68,68,0.1);color:var(--cat-combat);">&#128302;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.magic">Mestre da Magia</h4>
-                <p data-i18n="class.magic.desc">Magia, mana, velocidade de lançamento</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(239,68,68,0.1);color:var(--cat-combat);">&#128058;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.summoner">Mestre Invocador</h4>
-                <p data-i18n="class.summoner.desc">Dano de invocação, velocidade, limites</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(239,68,68,0.1);color:var(--cat-combat);">&#129657;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.bloodthirsty">Mestre Sedento de Sangue</h4>
-                <p data-i18n="class.bloodthirsty.desc">Sangramento 5-25/s; quebra de armadura no nível 5</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(239,68,68,0.1);color:var(--cat-combat);">&#128293;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.fire">Mestre do Fogo</h4>
-                <p data-i18n="class.fire.desc">Queimadura 5-25/s + lentidão necrótica</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(239,68,68,0.1);color:var(--cat-combat);">&#9760;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.poison">Mestre do Veneno</h4>
-                <p data-i18n="class.poison.desc">Veneno necrótico 5-25/s + lentidão</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(239,68,68,0.1);color:var(--cat-combat);">&#10052;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.frost">Mestre do Gelo</h4>
-                <p data-i18n="class.frost.desc">Geada 5-25/s, lentidão, congelamento (30% no Lv5)</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(239,68,68,0.1);color:var(--cat-combat);">&#127761;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.nightmare">Mestre do Pesadelo</h4>
-                <p data-i18n="class.nightmare.desc">Escuridão 5-25/s; 5% golpe mortal no nível 5</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(239,68,68,0.1);color:var(--cat-combat);">&#128154;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.bloody">Mestre Sangrento</h4>
-                <p data-i18n="class.bloody.desc">Roubo de vida, regen (até 3/s), cura pós-kill</p>
-              </div>
-            </div>
-          </div>
+    <section class="secao secao--faixa">
+      <div class="wrap">
+        <div class="secao__cab">
+          <p class="sobre"><span lang="pt-BR">Regras</span><span lang="en">Rules</span></p>
+          <h2><span lang="pt-BR">Como os pontos funcionam</span><span lang="en">How points work</span></h2>
         </div>
-
-        <!-- DEFENSE -->
-        <div class="reveal" style="margin-top:var(--space-xl);">
-          <div class="category-header defense">
-            <span class="cat-dot"></span>
-            <h3>&#128737; <span data-i18n="classes.cat.defense">Defesa</span></h3>
+        <div class="grade grade--3">
+          <div class="cartao">
+            <h3><span lang="pt-BR">Bônus que somam</span><span lang="en">Stacking bonuses</span></h3>
+            <p><span lang="pt-BR">O bônus de cada atributo cresce igual a cada ponto: uma classe com +10% por ponto chega a +50% com 5 pontos. Algumas classes funcionam por faixa (comida, poções, máquinas, armadilhas), com um valor fixo para cada nível.</span><span lang="en">Each stat grows the same with every point: a class with +10% per point reaches +50% at 5 points. Some classes work in tiers (food, potions, machines, traps), with a fixed value for each level.</span></p>
           </div>
-          <div class="grid-classes">
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(96,165,250,0.1);color:var(--cat-defense);">&#128737;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.resistance">Mestre da Resistência</h4>
-                <p data-i18n="class.resistance.desc">Menos dano e empurrão</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(96,165,250,0.1);color:var(--cat-defense);">&#129514;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.elemental">Mestre da Resistência Elemental</h4>
-                <p data-i18n="class.elemental.desc">Lv1: imune a veneno. Lv2: fogo. Lv3: gelo. Lv4: lentidão. Lv5:
-                  remove e bloqueia debuffs</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(96,165,250,0.1);color:var(--cat-defense);">&#129704;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.colossal">Mestre Colossal</h4>
-                <p data-i18n="class.colossal.desc">Invulnerabilidade curta ao ser atingido (2–10s, CD 30s)</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(96,165,250,0.1);color:var(--cat-defense);">&#128154;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.vitality">Mestre da Vitalidade</h4>
-                <p data-i18n="class.vitality.desc">+20 HP/pt, regen, chance de sobreviver a golpe fatal. Lv1: Bênção
-                  Vital</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(96,165,250,0.1);color:var(--cat-defense);">&#128737;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.defense">Mestre da Defesa</h4>
-                <p data-i18n="class.defense.desc">Armadura e espinhos</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(96,165,250,0.1);color:var(--cat-defense);">&#128167;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.resilient">Mestre da Resiliência</h4>
-                <p data-i18n="class.resilient.desc">Resiliência máxima, ganho, recuperação</p>
-              </div>
-            </div>
+          <div class="cartao">
+            <h3><span lang="pt-BR">Mudar de ideia</span><span lang="en">Changing your mind</span></h3>
+            <p><span lang="pt-BR">Na aba Status, "Resetar pontos de classe" devolve todos os pontos sem mexer no nível (custa 1.000 moedas por nível, configurável). "Zerar progressão" recomeça do nível 1. Nenhum dos dois mexe na Loja do mundo.</span><span lang="en">In the Status tab, "Reset class points" gives every point back without touching your level (costs 1,000 coins per level, configurable). "Reset progression" starts over from level 1. Neither touches the world Shop.</span></p>
           </div>
-        </div>
-
-        <!-- MOBILITY -->
-        <div class="reveal" style="margin-top:var(--space-xl);">
-          <div class="category-header mobility">
-            <span class="cat-dot"></span>
-            <h3>&#128170; <span data-i18n="classes.cat.mobility">Mobilidade</span></h3>
-          </div>
-          <div class="grid-classes">
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(167,139,250,0.1);color:var(--cat-mobility);">&#128095;
-              </div>
-              <div class="class-info">
-                <h4 data-i18n="class.speed">Mestre da Velocidade</h4>
-                <p data-i18n="class.speed.desc">Velocidade de movimento e corrida</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(167,139,250,0.1);color:var(--cat-mobility);">&#128168;
-              </div>
-              <div class="class-info">
-                <h4 data-i18n="class.dash">Mestre do Dash</h4>
-                <p data-i18n="class.dash.desc">Mais dashes, cooldown menor</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(167,139,250,0.1);color:var(--cat-mobility);">&#127919;
-              </div>
-              <div class="class-info">
-                <h4 data-i18n="class.reduction">Mestre da Redução</h4>
-                <p data-i18n="class.reduction.desc">Menos munição; menos dano crítico recebido</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- UTILITY & CRAFTING -->
-        <div class="reveal" style="margin-top:var(--space-xl);">
-          <div class="category-header utility">
-            <span class="cat-dot"></span>
-            <h3>&#9881; <span data-i18n="classes.cat.utility">Utilidade</span></h3>
-          </div>
-          <div class="grid-classes">
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#9935;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.cavern">Mestre da Caverna</h4>
-                <p data-i18n="class.cavern.desc">Mineração; Lv1: Vein Miner + Dark Ruin. Lv5: Explosive Miner</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#128736;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.construction">Mestre da Construção</h4>
-                <p data-i18n="class.construction.desc">Alcance e velocidade de construção e interação</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#10024;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.arcane">Mestre Arcano</h4>
-                <p data-i18n="class.arcane.desc">+20 mana/pt; Lv1: Escritor Imortal (scrolls não consumidos)</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#129689;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.wealth">Mestre da Riqueza</h4>
-                <p data-i18n="class.wealth.desc">Gold find; Golpe de Ouro (até 50/hit)</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#127873;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.loot">Mestre do Saque</h4>
-                <p data-i18n="class.loot.desc">Saque 2×-5×; chance de drop completo</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#128141;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.relic">Mestre das Relíquias</h4>
-                <p data-i18n="class.relic.desc">+4 slots trinket/pt; alcance de coleta</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#129663;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.sea">Mestre do Mar</h4>
-                <p data-i18n="class.sea.desc">Pesca; Lv1: Reflexo do Pescador (AFK automático)</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#127830;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.gourmet">Mestre Gourmet</h4>
-                <p data-i18n="class.gourmet.desc">Comida +25%-300%; Lv5: Sempre Barriga Cheia (auto-comer)</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#129514;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.alchemy">Mestre da Alquimia</h4>
-                <p data-i18n="class.alchemy.desc">Poções +25%-300%; Lv5: Poção Automática (<50% HP)</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#128037;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.ranch">Mestre do Rancho</h4>
-                <p data-i18n="class.ranch.desc">Doma e cruzamento mais rápidos; drops de rancho melhores</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#9881;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.machine">Mestre das Máquinas</h4>
-                <p data-i18n="class.machine.desc">Forno 6s→2s, Prensa 45s→2s, Compost 30s→2s</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#127793;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.nature">Mestre da Natureza</h4>
-                <p data-i18n="class.nature.desc">Colheitas e árvores mais rápidas em assentamentos</p>
-              </div>
-            </div>
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(234,179,8,0.1);color:var(--cat-utility);">&#128483;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.trap">Mestre das Armadilhas</h4>
-                <p data-i18n="class.trap.desc">Armadilhas mais fortes; Lv5: Engenharia de Defesa (sangramento)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SETTLER -->
-        <div class="reveal" style="margin-top:var(--space-xl);">
-          <div class="category-header settler">
-            <span class="cat-dot"></span>
-            <h3>&#127969; <span data-i18n="classes.cat.settler">Assentamento</span></h3>
-          </div>
-          <div class="grid-classes">
-            <div class="class-card polish">
-              <div class="class-icon" style="background:rgba(74,222,128,0.1);color:var(--cat-settler);">&#128081;</div>
-              <div class="class-info">
-                <h4 data-i18n="class.realm">Mestre do Reino</h4>
-                <p data-i18n="class.realm.desc">Lv5: Sem Rival + 3× XP + Aura de Liderança (+15% stats dos colonos)</p>
-              </div>
-            </div>
+          <div class="cartao">
+            <h3><span lang="pt-BR">Ligue só o que quiser</span><span lang="en">Turn on only what you want</span></h3>
+            <p><span lang="pt-BR">Cada classe pode ser desligada no RPG Skills Config. Quando todas as classes ativas chegam ao nível 5, você ganha a passiva Mestre das Classes: partículas brancas e um rastro ao caminhar.</span><span lang="en">Each class can be turned off in RPG Skills Config. When every active class reaches level 5, you get the Master of Classes passive: white particles and a trail as you walk.</span></p>
           </div>
         </div>
       </div>
     </section>
-</div>
 
-    <div class="section-divider"></div>
-    <section class="section page-flow-cta">
-      <div class="container reveal">
-        <h2 class="page-flow-title" data-i18n="cta.flow.title">Continue explorando</h2>
-        <p class="section-subtitle page-flow-sub" data-i18n="cta.flow.subtitle">Volte à página anterior ou siga para a próxima do guia.</p>
-        <div class="page-flow-actions">
-          <a href="universo-xp.html" class="btn btn-outline page-flow-prev" data-i18n="cta.flow.prev.universo">← Anterior: Universo do XP</a>
-          <a href="janela.html" class="btn btn-primary page-flow-next" data-i18n="cta.flow.next.janela">Próxima: Janela RPG Skills →</a>
+    <dialog class="detalhe" id="detalhe" aria-labelledby="detalhe-nome">
+      <div class="detalhe__caixa">
+        <button type="button" class="detalhe__fechar" data-fechar aria-label="Fechar / Close">&times;</button>
+        <div class="detalhe__cab">
+          <div class="icone-classe icone-classe--g" id="detalhe-icone"></div>
+          <div>
+            <span class="selo" id="detalhe-aba"></span>
+            <h2 id="detalhe-nome"></h2>
+          </div>
         </div>
+        <p id="detalhe-desc"></p>
+        <div class="niveis" role="group" aria-label="Pontos / Points">
+          <span class="niveis__rotulo"><span lang="pt-BR">Pontos na classe</span><span lang="en">Points in class</span></span>
+          <div class="niveis__botoes" id="detalhe-niveis"></div>
+        </div>
+        <ul class="valores" id="detalhe-bonus"></ul>
+        <div id="detalhe-desbloqueios"></div>
       </div>
-    </section>
+    </dialog>
+  </main>
 
-<div class="back-footer">
-    <a href="../index.html" class="page-back"
-      style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;"><span
-        data-i18n="nav.back.home">← Voltar à página inicial</span></a>
-  </div>
-
-  <footer class="footer" style="padding:28px 40px; margin-top:20px;">
-    <div class="container">
-      <div class="footer-bottom">
-        <span><span data-i18n="footer.made">Feito com &#9829; por Necromante96</span></span>
-        <span>RPG Skills v2.9 &mdash; Necesse 1.3.3 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);"
-            data-i18n="footer.home">Início</a></span>
+  <!-- rodape:inicio -->
+  <footer class="rodape">
+    <div class="wrap rodape__grade">
+      <div class="rodape__marca">
+        <img src="../assets/logo.webp" alt="RPG Skills" width="120" height="58" loading="lazy">
+        <p>
+          <span lang="pt-BR">Mod de progressão RPG para o Necesse, criado e planejado do zero por <strong>Necromante96Official</strong>.</span>
+          <span lang="en">RPG progression mod for Necesse, created and planned from scratch by <strong>Necromante96Official</strong>.</span>
+        </p>
       </div>
+      <div>
+        <h2 class="rodape__titulo"><span lang="pt-BR">Explorar</span><span lang="en">Explore</span></h2>
+        <ul class="rodape__links">
+          <li><a href="classes.html" aria-current="page"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="rodape__titulo"><span lang="pt-BR">Comunidade</span><span lang="en">Community</span></h2>
+        <ul class="rodape__links">
+          <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">Steam Workshop</a></li>
+          <li><a href="https://www.youtube.com/@Necromante96Officiall" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="../html/discussoes.html"><span lang="pt-BR">Ajuda e contato</span><span lang="en">Help &amp; contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap rodape__base">
+      <p>
+        <span lang="pt-BR">Não é permitido editar, redistribuir ou republicar o mod sem autorização do autor.</span>
+        <span lang="en">Editing, redistributing or republishing the mod without the author's permission is not allowed.</span>
+      </p>
+      <p>RPG Skills © Necromante96Official · <span lang="pt-BR">mod feito por fã para o Necesse</span><span lang="en">fan-made mod for Necesse</span></p>
     </div>
   </footer>
-
-  <!-- Modal for classes page -->
-  <div class="modal-overlay" id="classModal">
-    <div class="modal">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div class="modal-header">
-        <div class="class-icon" id="modalIcon"></div>
-        <div>
-          <h3 id="modalTitle"></h3>
-          <div class="modal-tab-label" id="modalTab"></div>
-        </div>
-      </div>
-      <div class="modal-body" id="modalBody"></div>
-    </div>
-  </div>
-
-  <script src="../js/i18n-data.js"></script>
-  <script src="../js/main.js"></script>
+  <!-- rodape:fim -->
+  <!-- js:inicio -->
+  <script src="../js/generated/i18n-data.js"></script>
+  <script src="../js/core/i18n.js"></script>
+  <script src="../js/core/ui.js"></script>
+  <script src="../js/generated/mod-data.js"></script>
+  <script src="../js/core/mod.js"></script>
+  <script src="../js/pages/classes.js"></script>
+  <script src="../js/core/boot.js"></script>
+  <!-- js:fim -->
 </body>
 
 </html>

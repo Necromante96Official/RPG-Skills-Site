@@ -1,294 +1,227 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ajuste tudo pelo menu in-game: progressão, classes, passivas, economia, compatibilidade.">
-  <meta name="theme-color" content="#0a0a0f">
-  <link rel="icon" type="image/png" href="../assets/icon.png">
-  <link rel="shortcut icon" type="image/png" href="../assets/icon.png">
-  <link rel="apple-touch-icon" href="../assets/icon.png">
-  <title>Configuração e Comandos - RPG Skills</title>
+  <title>Config, Comandos e Atalhos - RPG Skills</title>
+  <meta name="description" content="RPG Skills Config, todos os comandos /rpgskills, atalhos de teclado e controle.">
+  <meta name="theme-color" content="#0b0915">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600&family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
-
-  <link rel="stylesheet" href="../css/tokens.css">
-  <link rel="stylesheet" href="../css/base.css">
-  <link rel="stylesheet" href="../css/components.css">
-  <link rel="stylesheet" href="../css/layout.css">
-  <link rel="stylesheet" href="../css/animations.css">
-  <link rel="stylesheet" href="../css/rpg-effects.css">
-  <link rel="stylesheet" href="../css/window.css">
-  <link rel="stylesheet" href="../css/qol.css">
-  <link rel="stylesheet" href="../css/mobile.css">
-  <link rel="stylesheet" href="../css/polish.css">
-
-
-  <style>
-    .page-header {
-      padding: 120px 0 36px;
-      text-align: center;
-      background: linear-gradient(180deg, #0d0b0e 0%, #09080a 100%);
-      border-bottom: 1px solid rgba(212,136,28,0.14);
-      position: relative;
-      overflow: hidden;
-    }
-    .page-header::before {
-      content:"";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212,136,28,0.09), transparent 60%);
-      pointer-events: none;
-    }
-    .page-header-inner { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 0 20px; }
-    .page-kicker {
-      display: inline-block;
-      padding: 4px 12px;
-      background: rgba(212,136,28,0.12);
-      border: 1px solid rgba(212,136,28,0.22);
-      border-radius: 999px;
-      color: var(--gold);
-      font-family: var(--font-heading);
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .page-title { font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 8px; }
-    .page-title span { color: var(--gold); }
-    .page-sub { color: var(--text-muted); font-size: 0.95rem; margin: 0 auto 18px; max-width: 600px; line-height:1.6; }
-    .page-back {
-      display:inline-flex; align-items:center; gap:8px;
-      padding: 10px 18px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(212,136,28,0.18);
-      border-radius: 999px;
-      color: var(--text-body);
-      font-family: var(--font-heading);
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-decoration:none;
-      transition: all 0.18s;
-    }
-    .page-back:hover { background: rgba(212,136,28,0.10); border-color: var(--gold); color:#fff; transform: translateY(-1px); }
-    .page-content { padding-top: 28px; }
-    .back-footer { text-align:center; padding: 40px 0 20px; }
-  </style>
-
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@400;500;600;700&family=Pixelify+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- css:inicio -->
+  <link rel="stylesheet" href="../css/base/tokens.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/layout/shell.css">
+  <link rel="stylesheet" href="../css/components/ui.css">
+  <link rel="stylesheet" href="../css/components/blocos.css">
+  <link rel="stylesheet" href="../css/pages/configuracao.css">
+  <link rel="stylesheet" href="../css/layout/responsivo.css">
+  <!-- css:fim -->
 </head>
-<body data-page="configuracao">
-  <div class="global-particles">
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-    <div class="gp g"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp d"></div><div class="gp g"></div><div class="gp w"></div>
-    <div class="gp g"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp w"></div><div class="gp d"></div><div class="gp g"></div>
-    <div class="gp g"></div><div class="gp w"></div><div class="gp d"></div>
-  </div>
-  <div class="global-runes">
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-    <span class="gr">&#5816;</span><span class="gr">&#5828;</span>
-    <span class="gr">&#5765;</span><span class="gr">&#5792;</span>
-  </div>
-  <div class="global-circles">
-    <div class="gc"></div><div class="gc"></div>
-    <div class="gc"></div><div class="gc"></div>
-  </div>
-  <div class="global-vignette"></div>
 
-  <nav class="nav scrolled">
-    <a href="../index.html" class="nav-brand">
-      <span class="brand-icon">&#9876;</span>
-      RPG Skills
-    </a>
-    <div class="nav-links">
-      <div class="lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
-        <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt">
-          <span class="fi fi-br"></span> PT-BR
-        </button>
-        <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en">
-          <span class="fi fi-us"></span> EN-US
+<body data-page="configuracao" data-raiz="../">
+  <!-- topo:inicio -->
+  <a class="pular" href="#conteudo"><span lang="pt-BR">Pular para o conteúdo</span><span lang="en">Skip to content</span></a>
+  <header class="topo" id="topo">
+    <div class="topo__barra wrap">
+      <a class="marca" href="../index.html" aria-label="RPG Skills">
+        <img src="../assets/logo.webp" alt="RPG Skills" width="82" height="40">
+      </a>
+      <nav class="menu" aria-label="Menu">
+        <ul>
+          <li><a href="classes.html"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html" aria-current="page"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        </ul>
+      </nav>
+      <div class="topo__acoes">
+        <div class="idioma" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-option" data-lang="pt-BR">PT</button>
+          <button type="button" class="lang-option" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn--ouro btn--p topo__steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">
+          <span lang="pt-BR">Inscrever-se</span><span lang="en">Subscribe</span>
+        </a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-movel" aria-label="Menu">
+          <span></span>
         </button>
       </div>
-      <a href="../index.html" class="page-back" style="padding:7px 16px; font-size:0.72rem;"><span data-i18n="nav.back">← Voltar ao Início</span></a>
     </div>
-    <button class="mobile-toggle" aria-label="Menu" data-i18n-aria="nav.menu">&#9776;</button>
-  </nav>
-  <div class="mobile-nav">
-    <button class="mobile-nav-close" aria-label="Fechar" data-i18n-aria="nav.close">&times;</button>
-    <a href="../index.html"><span data-i18n="nav.back">← Voltar ao Início</span></a>
-    <div class="lang-switcher mobile-lang-switcher" role="group" aria-label="Idioma" data-i18n-aria="nav.lang">
-      <button class="lang-option" data-lang="pt-BR" aria-label="Português" data-i18n-aria="nav.lang.pt"><span class="fi fi-br"></span> PT-BR</button>
-      <button class="lang-option" data-lang="en" aria-label="English" data-i18n-aria="nav.lang.en"><span class="fi fi-us"></span> EN-US</button>
-    </div>
-    <a href="https://steamcommunity.com/workshop/filedetails/?id=3694501995" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="nav.steam">Steam Workshop</a>
-  </div>
-
-  <header class="page-header">
-    <div class="page-header-inner">
-      <div class="page-kicker" data-i18n="configuracao.kicker">Config e Comandos</div>
-      <h1 class="page-title" data-i18n="configuracao.title">Controle <span class="text-green">Total</span></h1>
-      <p class="page-sub" data-i18n="configuracao.subtitle">Ajuste tudo pelo menu in-game: progressão, classes, passivas, economia, compatibilidade.</p>
-      
-      <div class="page-stats">
-        <span class="page-stat"><i>⚙️</i> <b>∞</b> configs</span>
-        <span class="page-stat"><i>💻</i> <b>/rpgskills</b></span>
-        <span class="page-stat"><i>🎮</i> <b>MP</b> sync</span>
-      </div>
-      <a href="../index.html" class="page-back"><span data-i18n="nav.back.home">← Voltar à página inicial</span></a>
-    </div>
+    <nav class="menu-movel" id="menu-movel" aria-label="Menu" hidden>
+      <ul>
+          <li><a href="classes.html"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html" aria-current="page"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        <li><a href="../html/discussoes.html"><span lang="pt-BR">Ajuda e contato</span><span lang="en">Help &amp; contact</span></a></li>
+      </ul>
+      <a class="btn btn--ouro" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">
+        <span lang="pt-BR">Inscrever-se na Steam</span><span lang="en">Subscribe on Steam</span>
+      </a>
+    </nav>
   </header>
+  <!-- topo:fim -->
 
-  <div class="page-content">
-<!-- ========== CONFIG & COMMANDS ========== -->
-  <section id="config" class="section section-alt">
-    <div class="section-glow-line"></div>
-    <div class="section-texture"></div>
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label" data-i18n="config.label">Config e Comandos</div>
-        <h2 class="section-title" data-i18n="config.title">Controle <span class="text-green">Total</span></h2>
+  <main id="conteudo">
+    <header class="cabeca">
+      <div class="wrap">
+        <p class="sobre"><span lang="pt-BR">Config</span><span lang="en">Config</span></p>
+        <h1><span lang="pt-BR">Configuração, comandos e atalhos</span><span lang="en">Config, commands &amp; hotkeys</span></h1>
+        <p class="lead">
+          <span lang="pt-BR">Ajuste o mod do seu jeito no menu principal, use comandos no chat e configure atalhos para o que usa sempre.</span>
+          <span lang="en">Tune the mod your way from the main menu, use chat commands and set hotkeys for what you use all the time.</span>
+        </p>
+        <nav class="indice" aria-label="Nesta página / On this page">
+          <a class="selo" href="#config">RPG Skills Config</a>
+          <a class="selo" href="#comandos"><span lang="pt-BR">Comandos</span><span lang="en">Commands</span></a>
+          <a class="selo" href="#atalhos"><span lang="pt-BR">Atalhos e controle</span><span lang="en">Hotkeys &amp; controller</span></a>
+        </nav>
       </div>
+    </header>
 
-      
-      <div class="config-tabs reveal">
-        <button class="config-tab active" data-cfg="menu" data-i18n="config.tab.menu">Menu Config</button>
-        <button class="config-tab" data-cfg="cmd" data-i18n="config.tab.cmd">Comandos</button>
-        <button class="config-tab" data-cfg="tips" data-i18n="config.tab.tips">Dicas</button>
-      </div>
-      <script>
-        (function(){
-          var tabs=document.querySelectorAll('.config-tab');
-          var cards=document.querySelectorAll('.grid-2 .card');
-          // wrap: first card = menu, second = commands, create third tips if not exists
-          if(!document.querySelector('[data-cfg-panel="tips"]')){
-            var grid=document.querySelector('.grid-2');
-            if(grid){
-              var tips=document.createElement('div');
-              tips.className='card config-panel';
-              tips.setAttribute('data-cfg-panel','tips');
-              tips.innerHTML='<h4 class="card-title" style="margin-bottom:var(--space-md);"><span data-i18n="config.tip.pro">💡 Dicas Pro</span></h4><div class="feature-row"><span class="feature-row-icon">⚡</span><div class="feature-row-content"><h4 data-i18n="config.tip.f1.title">F1 no jogo</h4><p data-i18n="config.tip.f1.text">Todos os toggles são instantâneos - não precisa reiniciar.</p></div></div><div class="feature-row"><span class="feature-row-icon" style="color:var(--blue);">🎮</span><div class="feature-row-content"><h4 data-i18n="config.tip.safe.title">Safe Haven</h4><p data-i18n="config.tip.safe.text">Ative compatibilidade e o config do Safe Haven não será sobrescrito (v2.6 fix).</p></div></div><div class="feature-row"><span class="feature-row-icon" style="color:var(--gold);">💾</span><div class="feature-row-content"><h4 data-i18n="config.tip.backup.title">Backup</h4><p data-i18n="config.tip.backup.text">5 cópias a cada 10 min - use <code>/rpgskills restore inventory</code> se precisar.</p></div></div>';
-              
-              (function(){
-                var lang=localStorage.getItem('rpgskills-lang')||'pt-BR';
-                var dict=(window.RPG_I18N&&window.RPG_I18N[lang])||{};
-                tips.querySelectorAll('[data-i18n]').forEach(function(el){
-                  var k=el.getAttribute('data-i18n');
-                  if(dict[k]!==undefined) el.innerHTML=dict[k];
-                });
-              })();
-              grid.parentElement.appendChild(tips);
-            }
-          }
-          var panels=document.querySelectorAll('.card');
-          // mark panels
-          if(cards[0]) cards[0].setAttribute('data-cfg-panel','menu');
-          if(cards[1]) cards[1].setAttribute('data-cfg-panel','cmd');
-          function show(cfg){
-            document.querySelectorAll('[data-cfg-panel]').forEach(function(p){
-              p.style.display=p.getAttribute('data-cfg-panel')===cfg?'':'none';
-            });
-            tabs.forEach(function(t){t.classList.toggle('active', t.dataset.cfg===cfg);});
-          }
-          tabs.forEach(function(t){t.addEventListener('click', function(){show(t.dataset.cfg);});});
-          show('menu');
-        })();
-      </script>
-
-      <div class="grid-2 reveal">
-        <div class="card polish">
-          <h4 class="card-title" style="margin-bottom:var(--space-md);">
-            <span data-i18n="config.menu.title">&#9881; Menu de Configuração</span>
-          </h4>
-          <div class="feature-row">
-            <span class="feature-row-icon">&#128200;</span>
-            <div class="feature-row-content">
-              <h4 data-i18n="config.menu.progression">Progressão</h4>
-              <p data-i18n="config.menu.progression.desc">XP, penalidade de morte, curva, nível máx., pontos por classe, reconfiguração, Parceiro da Vida.</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <span class="feature-row-icon" style="color:var(--blue);">&#9876;</span>
-            <div class="feature-row-content">
-              <h4 data-i18n="config.menu.classes">Classes</h4>
-              <p data-i18n="config.menu.classes.desc">Ative ou desative classes individualmente. Mestre das Classes conta apenas as ativas.</p>
-            </div>
-          </div>
-          <div class="feature-row">
-            <span class="feature-row-icon" style="color:var(--gold);">&#128176;</span>
-            <div class="feature-row-content">
-              <h4 data-i18n="config.menu.economy">Economia</h4>
-              <p data-i18n="config.menu.economy.desc">Preços da loja, spoil 1 por ciclo, Sono Acelerado e mais.</p>
-            </div>
+    <section class="secao" id="config">
+      <div class="wrap colunas colunas--topo">
+        <div>
+          <p class="sobre">RPG Skills Config</p>
+          <h2><span lang="pt-BR">Tudo num painel só</span><span lang="en">Everything in one panel</span></h2>
+          <p><span lang="pt-BR">No menu principal do Necesse, clique em <strong>RPG SKILLS CONFIG</strong>. As opções ficam em abas, cada campo mostra o valor padrão e a faixa permitida, o que foi mudado fica destacado e dá para voltar ao padrão com um clique (por campo ou pela aba inteira). Depois de salvar, reinicie o jogo.</span><span lang="en">In Necesse's main menu, click <strong>RPG SKILLS CONFIG</strong>. Options are split into tabs, each field shows its default and allowed range, changed values are highlighted and you can go back to default in one click (per field or for the whole tab). After saving, restart the game.</span></p>
+          <div class="aviso aviso--roxo">
+            <p><span lang="pt-BR"><strong>No servidor, vale a configuração do servidor.</strong> Ao entrar, o RPG Skills aplica as regras de XP, classes, preços e opções do servidor sem mexer no seu arquivo; ao sair, as suas voltam. Fogos, botão do inventário e linha de status seguem as suas preferências.</span><span lang="en"><strong>On servers, the server's config wins.</strong> When you join, RPG Skills applies the server's XP, class, price and option rules without touching your file; when you leave, yours come back. Fireworks, the inventory button and the status line follow your own settings.</span></p>
           </div>
         </div>
-
-        <div class="card polish">
-          <h4 class="card-title" style="margin-bottom:var(--space-md);">
-            <span data-i18n="config.commands.title">&#128187; Comandos</span>
-          </h4>
-          <div style="font-family:var(--font-mono);font-size:var(--fs-xs);background:var(--dark);padding:var(--space-md);border-radius:var(--radius-sm);overflow-x:auto;">
-            <div style="color:var(--text-dim);">// <span data-i18n="config.commands.player">Jogador</span></div>
-            <div><span class="text-green">/rpgskills status</span> <span style="color:var(--text-dim);">// nível, XP, pontos, buff</span></div>
-            <div><span class="text-green">/rpgskills reset points</span> <span style="color:var(--text-dim);">// respec (custa coins)</span></div>
-            <div><span class="text-green">/rpgskills restore inventory</span> <span style="color:var(--text-dim);">// restaurar backup</span></div>
-            <div><span class="text-green">/rpgskills restore inventory list</span> <span style="color:var(--text-dim);">// listar backups</span></div>
-            <div><span class="text-green">/rpgskills help</span> <span style="color:var(--text-dim);">// ajuda</span></div>
-            <div style="margin-top:8px;color:var(--text-dim);">// Admin (MP)</div>
-            <div><span class="text-blue">/rpgskills set level &lt;1-165&gt;</span></div>
-            <div data-i18n="config.commands.teste">/rpgskills teste level — fireworks de teste (admin)</div>
-<div><span class="text-blue">/rpgskills set slotchest &lt;50-400&gt;</span></div>
-            <div><span class="text-blue">/rpgskills set stack &lt;1-1000&gt;</span></div>
-            <div><span class="text-blue">/rpgskills set xpbuff &lt;2|5|10|off&gt;</span></div>
-            <div><span class="text-blue">/rpgskills maxskills</span></div>
-            <div><span class="text-blue">/rpgskills reset zero</span></div>
-            <div><span class="text-blue">/rpgskills config reload</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-
-  </div>
-
-    <div class="section-divider"></div>
-    <section class="section page-flow-cta">
-      <div class="container reveal">
-        <h2 class="page-flow-title" data-i18n="cta.flow.title">Continue explorando</h2>
-        <p class="section-subtitle page-flow-sub" data-i18n="cta.flow.subtitle">Volte à página anterior ou siga para a próxima do guia.</p>
-        <div class="page-flow-actions">
-          <a href="qol.html" class="btn btn-outline page-flow-prev" data-i18n="cta.flow.prev.qol">← Anterior: Qualidade de Vida</a>
-          <a href="atalhos.html" class="btn btn-primary page-flow-next" data-i18n="cta.flow.next.atalhos">Próxima: Atalhos →</a>
+        <div class="abas-config">
+          <div class="aba-config"><b><span lang="pt-BR">Progressão e XP</span><span lang="en">Progression &amp; XP</span></b><span><span lang="pt-BR">nível máximo, curva, multiplicador global, chefes, morte, XP em equipe</span><span lang="en">max level, curve, global multiplier, bosses, death, team XP</span></span></div>
+          <div class="aba-config"><b><span lang="pt-BR">Funcionalidades</span><span lang="en">Features</span></b><span><span lang="pt-BR">fogos, botão do inventário, boas-vindas, Loja, comando de restaurar</span><span lang="en">fireworks, inventory button, welcome, Shop, restore command</span></span></div>
+          <div class="aba-config"><b><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></b><span><span lang="pt-BR">liga e desliga cada passiva</span><span lang="en">toggle each passive</span></span></div>
+          <div class="aba-config"><b><span lang="pt-BR">Classes</span><span lang="en">Classes</span></b><span><span lang="pt-BR">cada uma das 34 classes, por categoria</span><span lang="en">each of the 34 classes, by category</span></span></div>
+          <div class="aba-config"><b><span lang="pt-BR">Economia e Loja</span><span lang="en">Economy &amp; Shop</span></b><span><span lang="pt-BR">preços, slots e alcance, duração do bônus de XP, XP da vila</span><span lang="en">prices, slots and range, XP buff duration, settlement XP</span></span></div>
+          <div class="aba-config"><b><span lang="pt-BR">Qualidade de vida</span><span lang="en">Quality of life</span></b><span><span lang="pt-BR">estrago de comida, auto arma, sono, invocações, poções, backup</span><span lang="en">food spoilage, auto weapon, sleep, summons, potions, backup</span></span></div>
+          <div class="aba-config"><b><span lang="pt-BR">Interface</span><span lang="en">Interface</span></b><span><span lang="pt-BR">posição da janela e da barra de XP</span><span lang="en">window and XP bar position</span></span></div>
+          <div class="aba-config"><b><span lang="pt-BR">Servidor e Compat.</span><span lang="en">Server &amp; Compat.</span></b><span><span lang="pt-BR">admin na Loja do mundo e ajustes do Safe Haven</span><span lang="en">admin for world Shop and Safe Haven tweaks</span></span></div>
+          <div class="aba-config"><b><span lang="pt-BR">Outros</span><span lang="en">Other</span></b><span><span lang="pt-BR">registro e stack global</span><span lang="en">logging and global stack</span></span></div>
         </div>
       </div>
     </section>
 
-<div class="back-footer">
-    <a href="../index.html" class="page-back" style="background: linear-gradient(180deg, var(--gold), #c2761a); color:#120a00; border-color: var(--gold); font-weight:800;"><span data-i18n="nav.back.home">← Voltar à página inicial</span></a>
-  </div>
+    <section class="secao secao--faixa" id="comandos">
+      <div class="wrap">
+        <div class="secao__cab">
+          <p class="sobre"><span lang="pt-BR">Comandos</span><span lang="en">Commands</span></p>
+          <h2><code class="titulo-cmd">/rpgskills</code></h2>
+          <p class="lead"><span lang="pt-BR">Digite no chat. Comandos de admin só funcionam para o dono do mundo e administradores do servidor. <code>/rpgskills help</code> lista todos.</span><span lang="en">Type them in chat. Admin commands only work for the world owner and server admins. <code>/rpgskills help</code> lists them all.</span></p>
+        </div>
+        <div class="tabela-rolagem comandos">
+          <div class="comando"><code>/rpgskills status</code><p><span lang="pt-BR">Mostra nível, XP, pontos livres e bônus de XP.</span><span lang="en">Shows level, XP, free points and XP buff.</span></p><span class="selo selo--ok"><span lang="pt-BR">jogador</span><span lang="en">player</span></span></div>
+          <div class="comando"><code>/rpgskills reset points</code><p><span lang="pt-BR">Devolve os pontos de classe (custa moedas).</span><span lang="en">Gives class points back (costs coins).</span></p><span class="selo selo--ok"><span lang="pt-BR">jogador</span><span lang="en">player</span></span></div>
+          <div class="comando"><code>/rpgskills restore inventory [list]</code><p><span lang="pt-BR">Restaura o inventário do backup mais recente, ou lista os backups.</span><span lang="en">Restores your inventory from the latest backup, or lists backups.</span></p><span class="selo selo--ok"><span lang="pt-BR">jogador</span><span lang="en">player</span></span></div>
+          <div class="comando"><code>/rpgskills help</code><p><span lang="pt-BR">Mostra a ajuda.</span><span lang="en">Shows help.</span></p><span class="selo selo--ok"><span lang="pt-BR">jogador</span><span lang="en">player</span></span></div>
+          <div class="comando"><code>/rpgskills set level &lt;1-170&gt;</code><p><span lang="pt-BR">Define o nível e zera o XP.</span><span lang="en">Sets the level and clears XP.</span></p><span class="selo selo--roxo">admin</span></div>
+          <div class="comando"><code>/rpgskills set slotchest &lt;50-400&gt;</code><p><span lang="pt-BR">Define os slots dos baús do mundo, de 10 em 10.</span><span lang="en">Sets the world's chest slots, in steps of 10.</span></p><span class="selo selo--roxo">admin</span></div>
+          <div class="comando"><code>/rpgskills set stack &lt;1-1000&gt;</code><p><span lang="pt-BR">Define o stack do mundo.</span><span lang="en">Sets the world stack.</span></p><span class="selo selo--roxo">admin</span></div>
+          <div class="comando"><code>/rpgskills set xpbuff &lt;2|5|10|off&gt; [segundos|max]</code><p><span lang="pt-BR">Aplica ou remove um bônus de XP.</span><span lang="en">Applies or removes an XP buff.</span></p><span class="selo selo--roxo">admin</span></div>
+          <div class="comando"><code>/rpgskills maxskills</code><p><span lang="pt-BR">Nível máximo e todas as classes ativas no máximo.</span><span lang="en">Max level and every active class maxed.</span></p><span class="selo selo--roxo">admin</span></div>
+          <div class="comando"><code>/rpgskills reset zero</code><p><span lang="pt-BR">Zera toda a progressão e devolve as moedas de maestria.</span><span lang="en">Resets all progression and refunds mastery coins.</span></p><span class="selo selo--roxo">admin</span></div>
+          <div class="comando"><code>/rpgskills necro setkills &lt;mob&gt; &lt;n&gt;</code><p><span lang="pt-BR">Define as vitórias contra um monstro no Grimório (ou <code>setlevel &lt;slot&gt; &lt;nível&gt;</code> para um lacaio).</span><span lang="en">Sets the wins against a monster in the Grimoire (or <code>setlevel &lt;slot&gt; &lt;level&gt;</code> for a minion).</span></p><span class="selo selo--roxo">admin</span></div>
+          <div class="comando"><code>/rpgskills config reload</code><p><span lang="pt-BR">Recarrega o arquivo de configuração.</span><span lang="en">Reloads the config file.</span></p><span class="selo selo--roxo">admin</span></div>
+        </div>
+      </div>
+    </section>
 
-  <footer class="footer" style="padding:28px 40px; margin-top:20px;">
-    <div class="container">
-      <div class="footer-bottom">
-        <span><span data-i18n="footer.made">Feito com &#9829; por Necromante96</span></span>
-        <span>RPG Skills v2.9 &mdash; Necesse 1.3.3 &nbsp;|&nbsp; <a href="../index.html" style="color:var(--gold);"><span data-i18n="footer.home">Início</span></a></span>
+    <section class="secao" id="atalhos">
+      <div class="wrap">
+        <div class="secao__cab">
+          <p class="sobre"><span lang="pt-BR">Atalhos e controle</span><span lang="en">Hotkeys &amp; controller</span></p>
+          <h2><span lang="pt-BR">Mão no teclado ou no controle</span><span lang="en">Keyboard or controller</span></h2>
+          <p class="lead"><span lang="pt-BR">Todos os atalhos do RPG Skills aparecem e podem ser trocados em Configurações › Controles do Necesse.</span><span lang="en">Every RPG Skills hotkey shows up and can be changed in Necesse's Settings › Controls.</span></p>
+        </div>
+        <div class="grade grade--2">
+          <div class="cartao">
+            <h3><span lang="pt-BR">Teclado</span><span lang="en">Keyboard</span></h3>
+            <ul class="valores">
+              <li><span><span lang="pt-BR">Abrir/fechar a janela</span><span lang="en">Open/close the window</span></span><kbd>K</kbd></li>
+              <li><span><span lang="pt-BR">Comprar bônus de XP</span><span lang="en">Buy XP buff</span></span><span class="v">2x · 5x · 10x</span></li>
+              <li><span><span lang="pt-BR">Minerador Explosivo</span><span lang="en">Explosive Miner</span></span><span class="v">on/off</span></li>
+              <li><span><span lang="pt-BR">Modo avançado do Minerador de Veios</span><span lang="en">Advanced Vein Miner mode</span></span><span class="v">on/off</span></li>
+              <li><span><span lang="pt-BR">Reforço de luz dos trinkets</span><span lang="en">Trinket light boost</span></span><span class="v">on/off</span></li>
+              <li><span><span lang="pt-BR">Auto-Seleção de Arma</span><span lang="en">Auto Weapon Select</span></span><span class="v">on/off</span></li>
+              <li><span><span lang="pt-BR">Invocações caçam Cavernídeos</span><span lang="en">Summons hunt Cavelings</span></span><span class="v">on/off</span></li>
+              <li><span><span lang="pt-BR">Aliado de ritual 1, 2 e 3</span><span lang="en">Ritual ally 1, 2 and 3</span></span><span class="v"><span lang="pt-BR">chamar/guardar</span><span lang="en">call/rest</span></span></li>
+            </ul>
+          </div>
+          <div class="cartao">
+            <h3><span lang="pt-BR">Controle</span><span lang="en">Controller</span></h3>
+            <ul class="valores">
+              <li><span><span lang="pt-BR">Abrir/fechar a janela</span><span lang="en">Open/close the window</span></span><span class="v"><kbd>LB</kbd> + <kbd>RB</kbd></span></li>
+              <li><span><span lang="pt-BR">Trocar de aba (janela aberta)</span><span lang="en">Switch tab (window open)</span></span><span class="v"><kbd>LB</kbd> / <kbd>RB</kbd></span></li>
+              <li><span><span lang="pt-BR">Navegar</span><span lang="en">Navigate</span></span><span class="v">D-pad</span></li>
+              <li><span><span lang="pt-BR">Confirmar e voltar</span><span lang="en">Confirm and back</span></span><span class="v"><span lang="pt-BR">botões do menu</span><span lang="en">menu buttons</span></span></li>
+            </ul>
+            <p class="nota"><span lang="pt-BR">Também dá para abrir pelo botão do RPG Skills na barra do inventário.</span><span lang="en">You can also open it with the RPG Skills button on the inventory bar.</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- rodape:inicio -->
+  <footer class="rodape">
+    <div class="wrap rodape__grade">
+      <div class="rodape__marca">
+        <img src="../assets/logo.webp" alt="RPG Skills" width="120" height="58" loading="lazy">
+        <p>
+          <span lang="pt-BR">Mod de progressão RPG para o Necesse, criado e planejado do zero por <strong>Necromante96Official</strong>.</span>
+          <span lang="en">RPG progression mod for Necesse, created and planned from scratch by <strong>Necromante96Official</strong>.</span>
+        </p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo"><span lang="pt-BR">Explorar</span><span lang="en">Explore</span></h2>
+        <ul class="rodape__links">
+          <li><a href="classes.html"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html" aria-current="page"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="rodape__titulo"><span lang="pt-BR">Comunidade</span><span lang="en">Community</span></h2>
+        <ul class="rodape__links">
+          <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">Steam Workshop</a></li>
+          <li><a href="https://www.youtube.com/@Necromante96Officiall" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="../html/discussoes.html"><span lang="pt-BR">Ajuda e contato</span><span lang="en">Help &amp; contact</span></a></li>
+        </ul>
       </div>
     </div>
+    <div class="wrap rodape__base">
+      <p>
+        <span lang="pt-BR">Não é permitido editar, redistribuir ou republicar o mod sem autorização do autor.</span>
+        <span lang="en">Editing, redistributing or republishing the mod without the author's permission is not allowed.</span>
+      </p>
+      <p>RPG Skills © Necromante96Official · <span lang="pt-BR">mod feito por fã para o Necesse</span><span lang="en">fan-made mod for Necesse</span></p>
+    </div>
   </footer>
-
-  <!-- Modal for classes page -->
-<script src="../js/i18n-data.js"></script>
-  <script src="../js/main.js"></script>
+  <!-- rodape:fim -->
+  <!-- js:inicio -->
+  <script src="../js/generated/i18n-data.js"></script>
+  <script src="../js/core/i18n.js"></script>
+  <script src="../js/core/ui.js"></script>
+  <script src="../js/core/boot.js"></script>
+  <!-- js:fim -->
 </body>
+
 </html>

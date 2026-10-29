@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Necromancia - RPG Skills</title>
+  <meta name="description" content="Mestre da Necromancia: transforme monstros derrotados em lacaios permanentes que sobem até o nível 100, ganham Maestria e podem até ser um chefe.">
+  <meta name="theme-color" content="#0b0915">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@400;500;600;700&family=Pixelify+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- css:inicio -->
+  <link rel="stylesheet" href="../css/base/tokens.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/layout/shell.css">
+  <link rel="stylesheet" href="../css/components/ui.css">
+  <link rel="stylesheet" href="../css/components/blocos.css">
+  <link rel="stylesheet" href="../css/pages/necromancia.css">
+  <link rel="stylesheet" href="../css/layout/responsivo.css">
+  <!-- css:fim -->
+</head>
+
+<body data-page="necromancia" data-raiz="../">
+  <!-- topo:inicio -->
+  <a class="pular" href="#conteudo"><span lang="pt-BR">Pular para o conteúdo</span><span lang="en">Skip to content</span></a>
+  <header class="topo" id="topo">
+    <div class="topo__barra wrap">
+      <a class="marca" href="../index.html" aria-label="RPG Skills">
+        <img src="../assets/logo.webp" alt="RPG Skills" width="82" height="40">
+      </a>
+      <nav class="menu" aria-label="Menu">
+        <ul>
+          <li><a href="classes.html"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html" aria-current="page"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        </ul>
+      </nav>
+      <div class="topo__acoes">
+        <div class="idioma" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-option" data-lang="pt-BR">PT</button>
+          <button type="button" class="lang-option" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn--ouro btn--p topo__steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">
+          <span lang="pt-BR">Inscrever-se</span><span lang="en">Subscribe</span>
+        </a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-movel" aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="menu-movel" id="menu-movel" aria-label="Menu" hidden>
+      <ul>
+          <li><a href="classes.html"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html" aria-current="page"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        <li><a href="../html/discussoes.html"><span lang="pt-BR">Ajuda e contato</span><span lang="en">Help &amp; contact</span></a></li>
+      </ul>
+      <a class="btn btn--ouro" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">
+        <span lang="pt-BR">Inscrever-se na Steam</span><span lang="en">Subscribe on Steam</span>
+      </a>
+    </nav>
+  </header>
+  <!-- topo:fim -->
+
+  <main id="conteudo">
+    <header class="cabeca cabeca--necro">
+      <div class="wrap colunas">
+        <div>
+          <p class="sobre"><span lang="pt-BR">Mestre da Necromancia</span><span lang="en">Necromancy Master</span></p>
+          <h1><span lang="pt-BR">Seus inimigos viram seu exército</span><span lang="en">Your enemies become your army</span></h1>
+          <p class="lead">
+            <span lang="pt-BR">Derrote um monstro vezes suficientes e ele entra no seu Grimório. Depois, invoque-o num slot do Ritual como lacaio permanente e imortal: ele luta com os próprios ataques, sobe até o nível 100 e não ocupa slots de invocação.</span>
+            <span lang="en">Defeat a monster enough times and it enters your Grimoire. Then summon it into a Ritual slot as a permanent, immortal minion: it fights with its own attacks, levels up to 100 and doesn't take summon slots.</span>
+          </p>
+        </div>
+        <div class="necro-brasao" aria-hidden="true">
+          <div class="icone-classe icone-classe--g" data-aba="necromancia"><img src="../assets/classes/mestre_da_necromancia.webp" alt="" width="96" height="96"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="secao">
+      <div class="wrap">
+        <div class="numeros revelar">
+          <div class="numero"><span class="numero__valor">3</span><span class="numero__rotulo"><span lang="pt-BR">slots de Ritual</span><span lang="en">Ritual slots</span></span></div>
+          <div class="numero"><span class="numero__valor">100</span><span class="numero__rotulo"><span lang="pt-BR">nível máximo do lacaio</span><span lang="en">minion max level</span></span></div>
+          <div class="numero"><span class="numero__valor">10</span><span class="numero__rotulo"><span lang="pt-BR">Maestrias por lacaio</span><span lang="en">Masteries per minion</span></span></div>
+          <div class="numero"><span class="numero__valor">1</span><span class="numero__rotulo"><span lang="pt-BR">chefe invocado por vez</span><span lang="en">boss summoned at a time</span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--faixa">
+      <div class="wrap">
+        <div class="secao__cab">
+          <p class="sobre"><span lang="pt-BR">Os <span class="n">5</span> níveis da classe</span><span lang="en">The class's <span class="n">5</span> levels</span></p>
+          <h2><span lang="pt-BR">Cada ponto abre mais do Ritual</span><span lang="en">Each point opens more of the Ritual</span></h2>
+        </div>
+        <ol class="trilha">
+          <li>
+            <span class="trilha__nv">1</span>
+            <h3><span lang="pt-BR">Despertar</span><span lang="en">Awakening</span></h3>
+            <p><span lang="pt-BR">1 slot de Ritual e monstros comuns. Os lacaios sobem até o nível 100 e recebem Maestria.</span><span lang="en">1 Ritual slot and common monsters. Minions level up to 100 and receive Mastery.</span></p>
+          </li>
+          <li>
+            <span class="trilha__nv">2</span>
+            <h3><span lang="pt-BR">Legião</span><span lang="en">Legion</span></h3>
+            <p><span lang="pt-BR">Segundo slot, monstros elite e +25% de XP para os lacaios.</span><span lang="en">Second slot, elite monsters and +25% XP for minions.</span></p>
+          </li>
+          <li>
+            <span class="trilha__nv">3</span>
+            <h3><span lang="pt-BR">Elo Sombrio</span><span lang="en">Dark Link</span></h3>
+            <p><span lang="pt-BR">Terceiro slot. Os lacaios recebem metade do seu bônus de dano de invocação. Bônus de grupo: 3 lacaios do mesmo monstro dão +50% de dano contra ele.</span><span lang="en">Third slot. Minions get half of your summon damage bonus. Group bonus: 3 minions of the same monster give +50% damage against it.</span></p>
+          </li>
+          <li>
+            <span class="trilha__nv">4</span>
+            <h3><span lang="pt-BR">Soberano dos Chefes</span><span lang="en">Boss Sovereign</span></h3>
+            <p><span lang="pt-BR">Invoque 1 chefe derrotado como lacaio, com 40% do poder dele.</span><span lang="en">Summon 1 defeated boss as a minion, with 40% of its power.</span></p>
+          </li>
+          <li>
+            <span class="trilha__nv">5</span>
+            <h3><span lang="pt-BR">Exército dos Mortos</span><span lang="en">Army of the Dead</span></h3>
+            <p><span lang="pt-BR">50% de chance de levantar um inimigo abatido por 1 minuto (até 3 ao mesmo tempo). Ascensão: +25% de dano para lacaios com Maestria.</span><span lang="en">50% chance to raise a slain enemy for 1 minute (up to 3 at once). Ascension: +25% damage for minions with Mastery.</span></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="secao">
+      <div class="wrap grade grade--3">
+        <div class="cartao cartao--roxo">
+          <h3><span lang="pt-BR">Grimório</span><span lang="en">Grimoire</span></h3>
+          <p><span lang="pt-BR">Para liberar um monstro, derrote-o:</span><span lang="en">To unlock a monster, defeat it:</span></p>
+          <ul class="valores">
+            <li><span><span lang="pt-BR">Comum</span><span lang="en">Common</span></span><b>300×</b></li>
+            <li><span>Elite</span><b>150×</b></li>
+            <li><span><span lang="pt-BR">Chefe</span><span lang="en">Boss</span></span><b>50×</b></li>
+          </ul>
+          <p><span lang="pt-BR">O Grimório separa os monstros por bioma, cavernas, masmorra, templo, piratas, invasores, incursões e chefes.</span><span lang="en">The Grimoire sorts monsters by biome, caves, dungeon, temple, pirates, raiders, incursions and bosses.</span></p>
+        </div>
+        <div class="cartao">
+          <h3><span lang="pt-BR">Lacaios que evoluem</span><span lang="en">Minions that grow</span></h3>
+          <p><span lang="pt-BR">Cada lacaio ganha XP lutando e fica <strong>1,5% mais forte por nível</strong>. No nível 100, aplique a <strong>Maestria</strong>: ele volta ao nível 1 com <strong>+10% de dano permanente</strong>, até 10 vezes.</span><span lang="en">Each minion earns XP by fighting and gets <strong>1.5% stronger per level</strong>. At level 100, apply <strong>Mastery</strong>: it goes back to level 1 with <strong>+10% permanent damage</strong>, up to 10 times.</span></p>
+        </div>
+        <div class="cartao">
+          <h3><span lang="pt-BR">Controle rápido</span><span lang="en">Quick control</span></h3>
+          <p><span lang="pt-BR">A aba Necromancia da janela mostra o Ritual e o Grimório. Cada slot tem um atalho próprio para chamar ou guardar o lacaio (Configurações › Controles › Aliado de ritual), e um painel na tela mostra os três slots.</span><span lang="en">The window's Necromancy tab shows the Ritual and the Grimoire. Each slot has its own hotkey to call or rest the minion (Settings › Controls › Ritual ally), and an on-screen panel shows all three slots.</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- rodape:inicio -->
+  <footer class="rodape">
+    <div class="wrap rodape__grade">
+      <div class="rodape__marca">
+        <img src="../assets/logo.webp" alt="RPG Skills" width="120" height="58" loading="lazy">
+        <p>
+          <span lang="pt-BR">Mod de progressão RPG para o Necesse, criado e planejado do zero por <strong>Necromante96Official</strong>.</span>
+          <span lang="en">RPG progression mod for Necesse, created and planned from scratch by <strong>Necromante96Official</strong>.</span>
+        </p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo"><span lang="pt-BR">Explorar</span><span lang="en">Explore</span></h2>
+        <ul class="rodape__links">
+          <li><a href="classes.html"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html" aria-current="page"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="rodape__titulo"><span lang="pt-BR">Comunidade</span><span lang="en">Community</span></h2>
+        <ul class="rodape__links">
+          <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">Steam Workshop</a></li>
+          <li><a href="https://www.youtube.com/@Necromante96Officiall" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="../html/discussoes.html"><span lang="pt-BR">Ajuda e contato</span><span lang="en">Help &amp; contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap rodape__base">
+      <p>
+        <span lang="pt-BR">Não é permitido editar, redistribuir ou republicar o mod sem autorização do autor.</span>
+        <span lang="en">Editing, redistributing or republishing the mod without the author's permission is not allowed.</span>
+      </p>
+      <p>RPG Skills © Necromante96Official · <span lang="pt-BR">mod feito por fã para o Necesse</span><span lang="en">fan-made mod for Necesse</span></p>
+    </div>
+  </footer>
+  <!-- rodape:fim -->
+  <!-- js:inicio -->
+  <script src="../js/generated/i18n-data.js"></script>
+  <script src="../js/core/i18n.js"></script>
+  <script src="../js/core/ui.js"></script>
+  <script src="../js/core/boot.js"></script>
+  <!-- js:fim -->
+</body>
+
+</html>

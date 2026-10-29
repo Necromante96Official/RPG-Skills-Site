@@ -1,0 +1,56 @@
+/* ============================================
+   RPG SKILLS - Loja
+   ============================================ */
+.item-loja { display: flex; flex-direction: column; }
+.item-loja .valores { margin-top: auto; padding-top: 10px; font-size: .92rem; }
+.item-loja__novo { position: absolute; top: 22px; right: 22px; }
+
+.item-loja__icone {
+  display: grid;
+  place-items: center;
+  width: 72px; height: 72px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  background: radial-gradient(circle at 50% 40%, var(--sup-3), var(--bg-2));
+  border: 1px solid var(--linha-2);
+  box-shadow: 4px 4px 0 rgba(90, 47, 194, .5);
+}
+.item-loja__icone img { width: 48px; height: 48px; image-rendering: pixelated; }
+
+.precos { display: grid; gap: 20px; }
+.precos__nivel { display: grid; gap: 10px; color: var(--txt-2); }
+.precos__nivel b { color: var(--ouro-2); font-family: var(--f-num); font-size: 1.3rem; }
+.precos__nivel input { width: 100%; accent-color: var(--ouro); }
+.precos__lista { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.precos__lista > div {
+  display: grid;
+  gap: 4px;
+  padding: 16px 10px;
+  border-radius: 12px;
+  text-align: center;
+  background: rgba(0, 0, 0, .28);
+  border: 1px solid var(--linha);
+}
+.precos__mult { font-family: var(--f-num); font-size: 1.5rem; color: var(--roxo-2); }
+.precos__valor { font-family: var(--f-mono); font-weight: 600; color: var(--ouro-2); }
+.precos__nota { margin: 0; text-align: center; font-size: .85rem; color: var(--txt-3); }
+
+.destaque-loja { display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: start; padding: clamp(24px, 4vw, 40px); }
+.destaque-loja .item-loja__icone { width: 96px; height: 96px; }
+.destaque-loja .item-loja__icone img { width: 64px; height: 64px; }
+
+.custo { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; padding: 0; list-style: none; }
+.custo li {
+  margin: 0;
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, .28);
+  border: 1px solid var(--linha-2);
+  font-size: .9rem;
+}
+.custo b { font-family: var(--f-mono); color: var(--ouro-2); }
+
+@media (max-width: 640px) {
+  .destaque-loja { grid-template-columns: 1fr; }
+  .item-loja__novo { position: static; align-self: flex-start; margin-bottom: 10px; }
+}

@@ -1,0 +1,30 @@
+/* ============================================
+   RPG SKILLS - Config, comandos e atalhos
+   ============================================ */
+.abas-config { display: grid; gap: 8px; }
+.aba-config {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 14px;
+  align-items: baseline;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--linha);
+  background: rgba(23, 19, 40, .75);
+  font-size: .92rem;
+  transition: border-color var(--transicao), transform var(--transicao);
+}
+.aba-config:hover { border-color: var(--linha-ouro); transform: translateX(4px); }
+.aba-config b { color: var(--ouro-2); }
+.aba-config > span { color: var(--txt-3); }
+
+.titulo-cmd { padding: .1em .4em; font-size: .85em; }
+.comandos { background: rgba(23, 19, 40, .85); }
+.comando .selo { justify-self: end; }
+.nota { margin-top: 14px; font-size: .9rem; color: var(--txt-3); }
+.valores kbd { font-size: .8rem; }
+
+@media (max-width: 640px) {
+  .aba-config { grid-template-columns: 1fr; gap: 2px; }
+  .comando .selo { justify-self: start; }
+}

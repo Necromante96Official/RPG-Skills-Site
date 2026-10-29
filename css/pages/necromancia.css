@@ -1,0 +1,63 @@
+/* ============================================
+   RPG SKILLS - Necromancia
+   ============================================ */
+.cabeca--necro::before {
+  background:
+    radial-gradient(520px 320px at 78% 50%, rgba(184, 140, 255, .32), transparent 70%),
+    radial-gradient(400px 200px at 10% 0%, rgba(95, 220, 143, .08), transparent 70%);
+}
+.necro-brasao { display: grid; place-items: center; min-height: 260px; }
+.necro-brasao .icone-classe {
+  width: 200px; height: 200px;
+  animation: pulsar 4s ease-in-out infinite;
+}
+@keyframes pulsar {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(184, 140, 255, .55), 0 0 60px -10px rgba(184, 140, 255, .6); }
+  50% { box-shadow: 0 0 0 2px rgba(184, 140, 255, .8), 0 0 110px 0 rgba(184, 140, 255, .55); }
+}
+
+.trilha {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.trilha li {
+  position: relative;
+  margin: 0;
+  padding: 22px 18px;
+  border-radius: var(--raio);
+  border: 1px solid rgba(184, 140, 255, .3);
+  background: linear-gradient(180deg, rgba(184, 140, 255, .1), var(--sup) 60%);
+}
+.trilha li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 40px; right: -14px;
+  width: 14px; height: 2px;
+  background: var(--c-necromancia);
+}
+.trilha__nv {
+  display: grid;
+  place-items: center;
+  width: 38px; height: 38px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: var(--c-necromancia);
+  color: #170f26;
+  font-family: var(--f-num);
+  font-size: 1.2rem;
+}
+.trilha h3 { font-size: 1.08rem; }
+.trilha p { font-size: .92rem; }
+
+@media (max-width: 1000px) {
+  .trilha { grid-template-columns: 1fr 1fr; }
+  .trilha li::after { display: none; }
+}
+@media (max-width: 560px) {
+  .trilha { grid-template-columns: 1fr; }
+  .necro-brasao .icone-classe { width: 150px; height: 150px; }
+}

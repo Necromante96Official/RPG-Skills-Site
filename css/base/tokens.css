@@ -1,0 +1,63 @@
+/* ============================================
+   RPG SKILLS - Tokens do visual
+   Paleta tirada da logo do mod: ouro (RPG) e roxo (SKILLS) sobre noite violeta.
+   ============================================ */
+:root {
+  /* Fundos */
+  --bg: #0b0915;
+  --bg-2: #110e1e;
+  --sup: #171328;
+  --sup-2: #1f1934;
+  --sup-3: #2a2245;
+
+  /* Linhas */
+  --linha: rgba(190, 165, 255, .12);
+  --linha-2: rgba(190, 165, 255, .22);
+  --linha-ouro: rgba(245, 184, 61, .45);
+
+  /* Texto */
+  --txt: #f1ecff;
+  --txt-2: #c0b7dc;
+  --txt-3: #8f86ad;
+
+  /* Marca */
+  --ouro: #f5b83d;
+  --ouro-2: #ffd977;
+  --ouro-3: #b97510;
+  --roxo: #9d6bff;
+  --roxo-2: #c9adff;
+  --roxo-3: #5a2fc2;
+
+  /* Categorias das classes (abas do jogo) */
+  --c-combate: #ff6f5e;
+  --c-sobrevivencia: #46d3c3;
+  --c-movimento: #82e07a;
+  --c-utilidade: #f5b83d;
+  --c-necromancia: #b88cff;
+
+  /* Estados */
+  --ok: #5fdc8f;
+  --aviso: #ffc65c;
+  --erro: #ff6f6f;
+
+  /* Tipografia */
+  --f-display: 'Pixelify Sans', 'Outfit', system-ui, sans-serif;
+  --f-corpo: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  --f-num: 'Outfit', system-ui, sans-serif; /* números: o 5 da fonte pixel parece um S */
+
+  /* Medidas */
+  --largura: 1200px;
+  --largura-texto: 70ch;
+  --raio: 14px;
+  --raio-p: 9px;
+  --topo-altura: 68px;
+
+  /* Sombras e brilhos */
+  --sombra: 0 18px 50px -18px rgba(0, 0, 0, .7);
+  --sombra-p: 0 8px 24px -12px rgba(0, 0, 0, .6);
+  --brilho-ouro: 0 0 0 1px rgba(245, 184, 61, .35), 0 10px 40px -12px rgba(245, 184, 61, .45);
+  --brilho-roxo: 0 0 0 1px rgba(157, 107, 255, .35), 0 10px 40px -12px rgba(157, 107, 255, .5);
+
+  --transicao: .22s cubic-bezier(.2, .7, .2, 1);
+}

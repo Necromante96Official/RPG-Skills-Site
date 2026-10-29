@@ -1,0 +1,36 @@
+/* ============================================
+   RPG SKILLS - Ajustes por largura de tela (sempre o último CSS da página)
+   ============================================ */
+@media (max-width: 1180px) {
+  .menu, .topo__steam { display: none; }
+  .menu-toggle { display: grid; place-items: center; }
+  .topo__acoes { margin-left: auto; }
+}
+
+@media (max-width: 960px) {
+  .grade--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grade--3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .colunas { grid-template-columns: 1fr; }
+  .numeros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .numero:nth-child(3) { border-left: 0; }
+  .numero:nth-child(n+3) { border-top: 1px solid var(--linha); }
+  .rodape__grade { grid-template-columns: 1fr 1fr; }
+  .rodape__marca { grid-column: 1 / -1; }
+  .chamada { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+}
+
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .wrap { padding-inline: 16px; }
+  .grade--2, .grade--3, .grade--4 { grid-template-columns: 1fr; }
+  .cartao { padding: 20px; }
+  .acoes .btn { flex: 1 1 100%; }
+  .comando { grid-template-columns: 1fr; }
+  .tabela th, .tabela td { padding: 10px 12px; }
+}
+
+@media (max-width: 420px) {
+  .numero__valor { font-size: 1.5rem; }
+  .rodape__grade { grid-template-columns: 1fr; }
+  .idioma .lang-option { padding: 4px 8px; }
+}

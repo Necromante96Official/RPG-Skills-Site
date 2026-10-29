@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja - RPG Skills</title>
+  <meta name="description" content="A Loja do RPG Skills: bônus de XP, stack do mundo, slots de baú, alcance das estações, Minerador Explosivo e expansão da vila, com preços.">
+  <meta name="theme-color" content="#0b0915">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600&family=Outfit:wght@400;500;600;700&family=Pixelify+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <!-- css:inicio -->
+  <link rel="stylesheet" href="../css/base/tokens.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/layout/shell.css">
+  <link rel="stylesheet" href="../css/components/ui.css">
+  <link rel="stylesheet" href="../css/components/blocos.css">
+  <link rel="stylesheet" href="../css/pages/loja.css">
+  <link rel="stylesheet" href="../css/layout/responsivo.css">
+  <!-- css:fim -->
+</head>
+
+<body data-page="loja" data-raiz="../">
+  <!-- topo:inicio -->
+  <a class="pular" href="#conteudo"><span lang="pt-BR">Pular para o conteúdo</span><span lang="en">Skip to content</span></a>
+  <header class="topo" id="topo">
+    <div class="topo__barra wrap">
+      <a class="marca" href="../index.html" aria-label="RPG Skills">
+        <img src="../assets/logo.webp" alt="RPG Skills" width="82" height="40">
+      </a>
+      <nav class="menu" aria-label="Menu">
+        <ul>
+          <li><a href="classes.html"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html" aria-current="page"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        </ul>
+      </nav>
+      <div class="topo__acoes">
+        <div class="idioma" role="group" aria-label="Idioma / Language">
+          <button type="button" class="lang-option" data-lang="pt-BR">PT</button>
+          <button type="button" class="lang-option" data-lang="en">EN</button>
+        </div>
+        <a class="btn btn--ouro btn--p topo__steam" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">
+          <span lang="pt-BR">Inscrever-se</span><span lang="en">Subscribe</span>
+        </a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="menu-movel" aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="menu-movel" id="menu-movel" aria-label="Menu" hidden>
+      <ul>
+          <li><a href="classes.html"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html" aria-current="page"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        <li><a href="../html/discussoes.html"><span lang="pt-BR">Ajuda e contato</span><span lang="en">Help &amp; contact</span></a></li>
+      </ul>
+      <a class="btn btn--ouro" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">
+        <span lang="pt-BR">Inscrever-se na Steam</span><span lang="en">Subscribe on Steam</span>
+      </a>
+    </nav>
+  </header>
+  <!-- topo:fim -->
+
+  <main id="conteudo">
+    <header class="cabeca">
+      <div class="wrap">
+        <p class="sobre"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></p>
+        <h1><span lang="pt-BR">Gaste suas moedas com propósito</span><span lang="en">Spend your coins with purpose</span></h1>
+        <p class="lead">
+          <span lang="pt-BR">A aba Loja da janela do RPG Skills tem melhorias para você e para o mundo inteiro. Passe o mouse nos botões do jogo para ver os detalhes. Os preços abaixo são os padrões e podem ser mudados no RPG Skills Config.</span>
+          <span lang="en">The Shop tab in the RPG Skills window has upgrades for you and for the whole world. Hover the in-game buttons for details. Prices below are the defaults and can be changed in RPG Skills Config.</span>
+        </p>
+        <div class="indice">
+          <span class="selo selo--ouro"><span lang="pt-BR">Para você</span><span lang="en">For you</span>: <span lang="pt-BR">bônus de XP, Minerador Explosivo</span><span lang="en">XP buffs, Explosive Miner</span></span>
+          <span class="selo selo--roxo"><span lang="pt-BR">Para o mundo</span><span lang="en">For the world</span>: <span lang="pt-BR">stack, baús, estações, vila</span><span lang="en">stack, chests, stations, settlement</span></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="secao" id="xp">
+      <div class="wrap colunas">
+        <div>
+          <div class="item-loja__icone"><img class="px" src="../assets/loja/xp.png" alt="" width="64" height="64"></div>
+          <p class="sobre"><span lang="pt-BR">Bônus de XP</span><span lang="en">XP buffs</span></p>
+          <h2><span lang="pt-BR"><span class="n">2x</span>, <span class="n">5x</span> ou <span class="n">10x</span> por <span class="n">10</span> minutos</span><span lang="en"><span class="n">2x</span>, <span class="n">5x</span> or <span class="n">10x</span> for <span class="n">10</span> minutes</span></h2>
+          <p><span lang="pt-BR">Multiplica todo o XP que você ganha. Só um bônus fica ativo por vez, e o tempo aparece ao lado da barra de XP. Dá para comprar por atalho de teclado.</span><span lang="en">Multiplies all the XP you earn. Only one buff at a time, and the time left shows next to the XP bar. Can be bought with a hotkey.</span></p>
+          <p><span lang="pt-BR">O preço sobe devagar com o seu nível e tem teto: o 2x custa <code>1.000 + 300 × nível</code> moedas, no máximo 50.000. O 5x custa 2,5 vezes isso e o 10x, 5 vezes.</span><span lang="en">The price rises slowly with your level and is capped: 2x costs <code>1,000 + 300 × level</code> coins, up to 50,000. 5x costs 2.5 times that and 10x, 5 times.</span></p>
+        </div>
+        <div class="cartao cartao--ouro precos">
+          <label class="precos__nivel">
+            <span><span lang="pt-BR">Seu nível</span><span lang="en">Your level</span>: <b id="preco-nivel-valor">50</b></span>
+            <input type="range" id="preco-nivel" min="1" max="170" value="50">
+          </label>
+          <div class="precos__lista">
+            <div><span class="precos__mult">2x</span><span class="precos__valor" id="preco-2">0</span></div>
+            <div><span class="precos__mult">5x</span><span class="precos__valor" id="preco-5">0</span></div>
+            <div><span class="precos__mult">10x</span><span class="precos__valor" id="preco-10">0</span></div>
+          </div>
+          <p class="precos__nota"><span lang="pt-BR">moedas por 10 minutos</span><span lang="en">coins per 10 minutes</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--faixa" id="mundo">
+      <div class="wrap">
+        <div class="secao__cab">
+          <p class="sobre"><span lang="pt-BR">Melhorias do mundo</span><span lang="en">World upgrades</span></p>
+          <h2><span lang="pt-BR">Compre uma vez, vale para todos</span><span lang="en">Buy once, it works for everyone</span></h2>
+          <p class="lead"><span lang="pt-BR">Ficam salvas no mundo e valem para todos os jogadores dele. O dono do servidor pode exigir permissão de administrador para comprar.</span><span lang="en">Saved in the world and valid for every player in it. Server owners can require admin permission to buy.</span></p>
+        </div>
+        <div class="grade grade--2">
+          <article class="cartao item-loja">
+            <div class="item-loja__icone"><img class="px" src="../assets/loja/stack.png" alt="" width="48" height="48"></div>
+            <h3><span lang="pt-BR">Stack do mundo</span><span lang="en">World stack</span></h3>
+            <p><span lang="pt-BR">Aumenta quantos itens cabem num slot. Em 2x, um slot de 100 itens passa a guardar 200. Começa em 1x e vai até <strong>1000x</strong>, um nível por compra.</span><span lang="en">Raises how many items fit in a slot. At 2x, a 100-item slot holds 200. Starts at 1x and goes up to <strong>1000x</strong>, one level per purchase.</span></p>
+            <ul class="valores">
+              <li><span><span lang="pt-BR">Para chegar a 2x</span><span lang="en">To reach 2x</span></span><b><span lang="pt-BR">1.000 moedas + 10 barras de ouro</span><span lang="en">1,000 coins + 10 gold bars</span></b></li>
+              <li><span><span lang="pt-BR">Cada nível seguinte</span><span lang="en">Each next level</span></span><b><span lang="pt-BR">+100 moedas, +10 barras</span><span lang="en">+100 coins, +10 bars</span></b></li>
+            </ul>
+          </article>
+          <article class="cartao item-loja">
+            <div class="item-loja__icone"><img class="px" src="../assets/loja/chest.png" alt="" width="48" height="48"></div>
+            <h3><span lang="pt-BR">Slots de baú</span><span lang="en">Chest slots</span></h3>
+            <p><span lang="pt-BR">Todos os baús do jogo neste mundo ganham <strong>+10 slots</strong> por compra, de 40 até <strong>400</strong>. Os baús maiores ganham um filtro por categoria na lateral.</span><span lang="en">Every vanilla chest in this world gets <strong>+10 slots</strong> per purchase, from 40 up to <strong>400</strong>. Bigger chests get a category filter on the side.</span></p>
+            <ul class="valores">
+              <li><span><span lang="pt-BR">Primeira compra</span><span lang="en">First purchase</span></span><b><span lang="pt-BR">5.000 moedas</span><span lang="en">5,000 coins</span></b></li>
+              <li><span><span lang="pt-BR">Cada compra seguinte</span><span lang="en">Each next purchase</span></span><b>+2.500</b></li>
+            </ul>
+          </article>
+          <article class="cartao item-loja">
+            <div class="item-loja__icone"><img class="px" src="../assets/loja/range.png" alt="" width="48" height="48"></div>
+            <span class="selo selo--ok item-loja__novo"><span lang="pt-BR">Novo na 4.1</span><span lang="en">New in 4.1</span></span>
+            <h3><span lang="pt-BR">Alcance das Estações</span><span lang="en">Station Range</span></h3>
+            <p><span lang="pt-BR">Com "usar armazenamento próximo" ligado, as estações de criação e a de melhoria pegam itens de baús mais longe. O jogo usa 15 blocos; cada compra soma <strong>5</strong>, até <strong>50</strong>.</span><span lang="en">With "use nearby storage" on, crafting stations and the upgrade station pull items from farther chests. The game uses 15 tiles; each purchase adds <strong>5</strong>, up to <strong>50</strong>.</span></p>
+            <ul class="valores">
+              <li><span><span lang="pt-BR">Primeiro nível</span><span lang="en">First level</span></span><b><span lang="pt-BR">2.000 moedas</span><span lang="en">2,000 coins</span></b></li>
+              <li><span><span lang="pt-BR">Cada nível seguinte</span><span lang="en">Each next level</span></span><b>+2.000</b></li>
+            </ul>
+          </article>
+          <article class="cartao item-loja">
+            <div class="item-loja__icone"><img class="px" src="../assets/loja/flag.png" alt="" width="48" height="48"></div>
+            <h3><span lang="pt-BR">Expansão da vila</span><span lang="en">Settlement expansion</span></h3>
+            <p><span lang="pt-BR">Aumenta a área da vila onde você está, como a bandeira do jogo faz, e continua depois do limite do jogo: <strong>49 níveis a mais</strong>. Só o dono da vila pode expandir, e vilas de NPC ou de outros jogadores perto demais bloqueiam o lado delas.</span><span lang="en">Grows the settlement you are in, like the game's flag does, and keeps going past the game's limit: <strong>49 extra levels</strong>. Only the owner can expand, and NPC or other settlements too close block that side.</span></p>
+            <ul class="valores">
+              <li><span><span lang="pt-BR">Primeiro nível extra</span><span lang="en">First extra level</span></span><b><span lang="pt-BR">150.000 moedas</span><span lang="en">150,000 coins</span></b></li>
+              <li><span><span lang="pt-BR">Materiais</span><span lang="en">Materials</span></span><b><span lang="pt-BR">barras, gemas e essências</span><span lang="en">bars, gems and essences</span></b></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="minerador">
+      <div class="wrap">
+        <div class="cartao cartao--roxo destaque-loja">
+          <div class="item-loja__icone"><img class="px" src="../assets/loja/dynamite.png" alt="" width="64" height="64"></div>
+          <div>
+            <p class="sobre"><span lang="pt-BR">Habilidade permanente</span><span lang="en">Permanent ability</span></p>
+            <h2><span lang="pt-BR">Minerador Explosivo</span><span lang="en">Explosive Miner</span></h2>
+            <p><span lang="pt-BR">Ligada pelo atalho, faz sua picareta explodir os blocos em volta de onde você cava, sem ferir jogadores nem criaturas. Exige o <a href="classes.html#utilidade">Mestre das Cavernas</a> no nível 5 para comprar e para funcionar. As quebras extras não dão XP.</span><span lang="en">Toggled by hotkey, it makes your pickaxe blast the blocks around where you dig, without hurting players or creatures. Requires <a href="classes.html#utilidade">Cavern Master</a> at level 5 to buy and to work. Extra breaks don't give XP.</span></p>
+            <ul class="custo">
+              <li><b>100.000</b> <span lang="pt-BR">moedas</span><span lang="en">coins</span></li>
+              <li><b>250</b> <span lang="pt-BR">barras de cobre</span><span lang="en">copper bars</span></li>
+              <li><b>250</b> <span lang="pt-BR">barras de ferro</span><span lang="en">iron bars</span></li>
+              <li><b>250</b> <span lang="pt-BR">barras de ouro</span><span lang="en">gold bars</span></li>
+              <li><b>200</b> <span lang="pt-BR">bastões de dinamite</span><span lang="en">dynamite sticks</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- rodape:inicio -->
+  <footer class="rodape">
+    <div class="wrap rodape__grade">
+      <div class="rodape__marca">
+        <img src="../assets/logo.webp" alt="RPG Skills" width="120" height="58" loading="lazy">
+        <p>
+          <span lang="pt-BR">Mod de progressão RPG para o Necesse, criado e planejado do zero por <strong>Necromante96Official</strong>.</span>
+          <span lang="en">RPG progression mod for Necesse, created and planned from scratch by <strong>Necromante96Official</strong>.</span>
+        </p>
+      </div>
+      <div>
+        <h2 class="rodape__titulo"><span lang="pt-BR">Explorar</span><span lang="en">Explore</span></h2>
+        <ul class="rodape__links">
+          <li><a href="classes.html"><span lang="pt-BR">Classes</span><span lang="en">Classes</span></a></li>
+          <li><a href="progressao.html"><span lang="pt-BR">XP e Níveis</span><span lang="en">XP &amp; Levels</span></a></li>
+          <li><a href="passivas.html"><span lang="pt-BR">Passivas</span><span lang="en">Passives</span></a></li>
+          <li><a href="necromancia.html"><span lang="pt-BR">Necromancia</span><span lang="en">Necromancy</span></a></li>
+          <li><a href="loja.html" aria-current="page"><span lang="pt-BR">Loja</span><span lang="en">Shop</span></a></li>
+          <li><a href="qol.html"><span lang="pt-BR">Extras</span><span lang="en">Extras</span></a></li>
+          <li><a href="configuracao.html"><span lang="pt-BR">Config</span><span lang="en">Config</span></a></li>
+          <li><a href="changelog.html"><span lang="pt-BR">Novidades</span><span lang="en">Updates</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="rodape__titulo"><span lang="pt-BR">Comunidade</span><span lang="en">Community</span></h2>
+        <ul class="rodape__links">
+          <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3694501995" target="_blank" rel="noopener">Steam Workshop</a></li>
+          <li><a href="https://www.youtube.com/@Necromante96Officiall" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="../html/discussoes.html"><span lang="pt-BR">Ajuda e contato</span><span lang="en">Help &amp; contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap rodape__base">
+      <p>
+        <span lang="pt-BR">Não é permitido editar, redistribuir ou republicar o mod sem autorização do autor.</span>
+        <span lang="en">Editing, redistributing or republishing the mod without the author's permission is not allowed.</span>
+      </p>
+      <p>RPG Skills © Necromante96Official · <span lang="pt-BR">mod feito por fã para o Necesse</span><span lang="en">fan-made mod for Necesse</span></p>
+    </div>
+  </footer>
+  <!-- rodape:fim -->
+  <!-- js:inicio -->
+  <script src="../js/generated/i18n-data.js"></script>
+  <script src="../js/core/i18n.js"></script>
+  <script src="../js/core/ui.js"></script>
+  <script src="../js/pages/loja.js"></script>
+  <script src="../js/core/boot.js"></script>
+  <!-- js:fim -->
+</body>
+
+</html>

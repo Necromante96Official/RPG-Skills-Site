@@ -1,0 +1,42 @@
+/* ============================================
+   RPG SKILLS - XP e níveis: gráfico, tabela de zonas e calculadora
+   ============================================ */
+.curva { width: 100%; height: auto; margin-bottom: 14px; }
+
+.zonas { margin-top: 18px; }
+.barra-col { width: 34%; }
+.barra {
+  display: block;
+  height: 8px;
+  width: var(--p);
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--ouro), var(--roxo));
+  box-shadow: 0 0 10px rgba(157, 107, 255, .35);
+}
+
+.tipo { font-size: .78rem; font-weight: 600; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--linha-2); white-space: nowrap; }
+.tipo--sup { color: var(--c-movimento); }
+.tipo--mini { color: var(--c-sobrevivencia); }
+.tipo--cav { color: var(--ouro-2); }
+.tipo--fundo { color: var(--c-combate); }
+.tipo--inc { color: var(--roxo-2); }
+
+.calc { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center; }
+.calc__campos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.calc__campos label { display: grid; gap: 6px; font-size: .88rem; color: var(--txt-3); }
+.calc__resultado { display: grid; gap: 14px; }
+.calc__resultado > div {
+  padding: 14px 18px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, .25);
+  border: 1px solid var(--linha);
+}
+.calc__resultado .numero__valor { color: var(--ouro-2); }
+
+@media (max-width: 860px) {
+  .calc { grid-template-columns: 1fr; }
+  .barra-col { display: none; }
+}
+@media (max-width: 480px) {
+  .calc__campos { grid-template-columns: 1fr; }
+}

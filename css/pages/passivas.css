@@ -1,0 +1,32 @@
+/* ============================================
+   RPG SKILLS - Passivas e sinergias
+   ============================================ */
+.passiva {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: var(--raio);
+  border: 1px solid var(--linha);
+  background: linear-gradient(180deg, rgba(31, 25, 52, .85), rgba(23, 19, 40, .85));
+}
+.passiva h3 { margin: 16px 0 8px; }
+.passiva p { font-size: .95rem; }
+.passiva__icones { display: flex; flex-wrap: wrap; gap: 8px; }
+.passiva__como {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--linha-2);
+  font-size: .85rem !important;
+  color: var(--ouro-2);
+}
+
+.passiva--sinergia {
+  border-color: var(--linha-ouro);
+  background:
+    radial-gradient(400px 160px at 0% 0%, rgba(245, 184, 61, .14), transparent 70%),
+    radial-gradient(400px 200px at 100% 100%, rgba(157, 107, 255, .16), transparent 70%),
+    var(--sup);
+}
+.passiva--sinergia h3 { font-family: var(--f-display); font-size: 1.5rem; color: var(--ouro-2); }
+.passiva--sinergia .passiva__icones { gap: 0; }
+.passiva--sinergia .icone-classe { margin-right: -6px; box-shadow: 0 0 0 3px var(--sup); }

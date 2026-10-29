@@ -1,0 +1,72 @@
+/* ============================================
+   RPG SKILLS - Novidades (changelog)
+   ============================================ */
+.secao--topo-curto { padding-top: 40px; }
+
+.novidades { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 32px; align-items: start; }
+.novidades__lado { position: sticky; top: calc(var(--topo-altura) + 20px); display: grid; gap: 20px; }
+.filtros--coluna { flex-direction: column; }
+.filtros--coluna .filtro { justify-content: flex-start; }
+
+.versoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 50vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.versoes a {
+  padding: 3px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--linha);
+  font-family: var(--f-mono);
+  font-size: .78rem;
+  color: var(--txt-3);
+  text-decoration: none;
+}
+.versoes a:hover { color: var(--ouro-2); border-color: var(--linha-ouro); }
+
+.linha-tempo { display: grid; gap: 14px; }
+
+.versao {
+  border-radius: var(--raio);
+  border: 1px solid var(--linha);
+  background: rgba(23, 19, 40, .82);
+  scroll-margin-top: calc(var(--topo-altura) + 20px);
+}
+.versao[open] { border-color: rgba(157, 107, 255, .4); }
+.versao summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 14px;
+  padding: 18px 22px;
+  cursor: pointer;
+  list-style: none;
+}
+.versao summary::-webkit-details-marker { display: none; }
+.versao summary::after { content: '+'; margin-left: auto; font-family: var(--f-display); font-size: 1.4rem; color: var(--ouro); transition: transform var(--transicao); }
+.versao[open] summary::after { transform: rotate(45deg); }
+.versao__num { font-family: var(--f-num); font-size: 1.5rem; color: var(--txt); }
+.versao__tag { padding: 3px 10px; border-radius: 999px; font-size: .74rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; border: 1px solid; }
+.versao__tag--major { color: var(--ouro-2); border-color: var(--linha-ouro); background: rgba(245, 184, 61, .1); }
+.versao__tag--minor { color: var(--roxo-2); border-color: rgba(157, 107, 255, .45); background: rgba(157, 107, 255, .1); }
+.versao__tag--fix { color: var(--c-sobrevivencia); border-color: rgba(70, 211, 195, .4); background: rgba(70, 211, 195, .08); }
+.versao__titulo { flex-basis: 100%; color: var(--txt-2); font-size: .95rem; }
+
+.versao__corpo { padding: 0 22px 22px; border-top: 1px solid var(--linha); }
+.versao__intro { margin-top: 18px; }
+.versao__secao h3 { margin: 22px 0 10px; font-size: 1.05rem; }
+.versao__secao ul { margin: 0; padding-left: 1.1em; }
+.versao__secao li { font-size: .95rem; }
+.versao__secao li::marker { color: var(--ouro); }
+.versao__secao--fix li::marker { color: var(--c-sobrevivencia); }
+.versao__nota { margin-top: 18px; color: var(--ouro-2); }
+
+@media (max-width: 860px) {
+  .novidades { grid-template-columns: 1fr; }
+  .novidades__lado { position: static; }
+  .filtros--coluna { flex-direction: row; }
+  .versoes { max-height: none; }
+}

@@ -1,0 +1,54 @@
+/* ============================================
+   RPG SKILLS - Ajuda e contato (formulário via FormSubmit)
+   ============================================ */
+.contato { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
+.contato__titulo { font-size: 1.6rem; margin-bottom: 18px; }
+.canais { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 24px; }
+.canais .cartao { padding: 20px; }
+.canais p { font-size: .9rem; }
+
+.formulario { display: grid; gap: 16px; }
+.formulario .contato__titulo { margin-bottom: 0; }
+.formulario__sub { margin: -8px 0 0; font-size: .92rem; color: var(--txt-3); }
+.formulario__campo { display: grid; gap: 6px; font-size: .9rem; color: var(--txt-2); }
+.formulario__campo small { color: var(--txt-3); }
+.formulario textarea { resize: vertical; min-height: 130px; }
+
+.formulario__anexos { margin: 0; padding: 0; border: 0; }
+.formulario__anexos legend { margin-bottom: 8px; font-size: .9rem; color: var(--txt-2); }
+.anexos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.anexo {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  padding: 14px 8px;
+  border-radius: 12px;
+  border: 1px dashed var(--linha-2);
+  background: rgba(0, 0, 0, .2);
+  text-align: center;
+  cursor: pointer;
+  transition: border-color var(--transicao), background var(--transicao);
+}
+.anexo:hover, .anexo:focus-within { border-color: var(--roxo); }
+.anexo.has-file { border-style: solid; border-color: var(--ok); background: rgba(95, 220, 143, .06); }
+.anexo__mais { font-family: var(--f-display); font-size: 1.5rem; line-height: 1; color: var(--ouro); }
+.anexo__nome { font-size: .78rem; color: var(--txt-3); overflow-wrap: anywhere; }
+
+.medidor { margin-top: 10px; }
+.medidor__trilho { height: 6px; border-radius: 3px; background: var(--sup-3); overflow: hidden; }
+.medidor__cheio { height: 100%; background: linear-gradient(90deg, var(--ok), var(--ouro)); transition: width var(--transicao); }
+.medidor__cheio.is-warn { background: var(--aviso); }
+.medidor__cheio.is-over { background: var(--erro); }
+.medidor__info { display: flex; justify-content: space-between; margin-top: 6px; font-size: .78rem; color: var(--txt-3); }
+
+.formulario__erro { margin: 0; padding: 10px 14px; border-radius: 10px; background: rgba(255, 111, 111, .1); border: 1px solid rgba(255, 111, 111, .4); color: var(--erro); }
+.formulario__ok { display: grid; gap: 4px; padding: 14px 16px; border-radius: 10px; background: rgba(95, 220, 143, .1); border: 1px solid rgba(95, 220, 143, .4); }
+.formulario__ok strong { color: var(--ok); }
+.formulario .btn { justify-self: start; }
+
+@media (max-width: 900px) {
+  .contato { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .anexos, .canais { grid-template-columns: 1fr; }
+}
