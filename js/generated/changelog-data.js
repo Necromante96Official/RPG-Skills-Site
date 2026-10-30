@@ -1,6 +1,54 @@
 /* Gerado por tools/build.py a partir de release-notes/*.md. Não edite à mão. */
 window.RPG_CHANGELOG = [
   {
+    "version": "4.2",
+    "tag": "new",
+    "tagClass": "major",
+    "tagKey": "changelog.tag.new",
+    "pt": {
+      "title": "🌟 Atualização 4.2 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "✨ Novidades",
+          "items": [
+            "<strong>Mestre do Loot reformulado:</strong> o loot agora vem no máximo em dobro (2x), em vez de chegar a 5x. A chance de dobrar sobe 20% por nível: 20%, 40%, 60%, 80% e 100% no nível 5. Vale para inimigos, mineração, pesca, colheita e criação.",
+            "<strong>Artesão Econômico:</strong> no nível 5 do Mestre do Loot, criar itens tem 50% de chance de não gastar os ingredientes."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "<strong>Colocar e quebrar não duplica mais:</strong> com o Mestre do Loot, alguns objetos e pisos (como o baú de madeira) voltavam multiplicados ao serem colocados e quebrados de novo. Agora o que você coloca volta sempre na mesma quantidade.",
+            "<strong>Baús grandes organizam no stack do mundo:</strong> em baús com muitos slots, o botão de organizar ordenava os itens mas deixava cada pilha separada, sem juntar até o limite do stack comprado na Loja (por exemplo, 5x). Agora os itens iguais se juntam em pilhas cheias, como nos baús menores.",
+            "<strong>Janela do RPG Skills abre sempre:</strong> em alguns casos, depois de um tempo de jogo, a janela não abria mais nem pelo atalho nem pelo botão, por causa de um erro ao montar a aba Loja. Agora ela abre normalmente."
+          ]
+        }
+      ],
+      "note": "<strong>Bom jogo! 🎮</strong>"
+    },
+    "en": {
+      "title": "🌟 Update 4.2 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "✨ What's new",
+          "items": [
+            "<strong>Loot Master reworked:</strong> loot now comes at most doubled (2x) instead of reaching 5x. The chance to double goes up 20% per level: 20%, 40%, 60%, 80% and 100% at level 5. It applies to enemies, mining, fishing, harvesting and crafting.",
+            "<strong>Thrifty Artisan:</strong> at Loot Master level 5, crafting has a 50% chance to not use up the ingredients."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "<strong>Placing and breaking no longer duplicates:</strong> with the Loot Master, some objects and floors (like the wooden chest) came back multiplied when placed and broken again. Now whatever you place always comes back in the same amount.",
+            "<strong>Large chests sort to the world stack:</strong> in chests with many slots, the sort button ordered the items but left each stack apart, without filling up to the stack limit bought in the Shop (for example, 5x). Now matching items join into full stacks, just like in smaller chests.",
+            "<strong>The RPG Skills window always opens:</strong> in some cases, after a while in game, the window would no longer open from the hotkey or the button, because of an error while building the Shop tab. Now it opens normally."
+          ]
+        }
+      ],
+      "note": "<strong>Have fun! 🎮</strong>"
+    }
+  },
+  {
     "version": "4.1",
     "tag": "update",
     "tagClass": "minor",

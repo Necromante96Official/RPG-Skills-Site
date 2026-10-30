@@ -1403,8 +1403,8 @@ window.RPG_MOD = {
     "en": "Loot Master"
    },
    "desc": {
-    "pt": "Melhora qualidade de loot, multiplicação de loot e chance de saque total ao matar mobs.",
-    "en": "Improves loot quality, loot multiplication, and full drop chance when killing mobs."
+    "pt": "Melhora qualidade de loot, dá chance de loot em dobro (até 2x) e chance de saque total ao matar mobs. No nível 5, criar itens tem 50% de chance de não gastar os ingredientes.",
+    "en": "Improves loot quality, gives a chance of double loot (up to 2x), and a full drop chance when killing mobs. At level 5, crafting has a 50% chance to not use up the ingredients."
    },
    "bonus": [
     {
@@ -1427,24 +1427,24 @@ window.RPG_MOD = {
      },
      "faixas": [
       {
-       "pt": "+50% de chance de receber 2x o item",
-       "en": "+50% chance to receive 2x the item"
+       "pt": "+20% de chance de receber 2x o item",
+       "en": "+20% chance to receive 2x the item"
       },
       {
-       "pt": "+100% de chance de receber 3x o item",
-       "en": "+100% chance to receive 3x the item"
+       "pt": "+40% de chance de receber 2x o item",
+       "en": "+40% chance to receive 2x the item"
       },
       {
-       "pt": "+100% de chance de receber 3x o item",
-       "en": "+100% chance to receive 3x the item"
+       "pt": "+60% de chance de receber 2x o item",
+       "en": "+60% chance to receive 2x the item"
       },
       {
-       "pt": "+100% de chance de receber 4x o item",
-       "en": "+100% chance to receive 4x the item"
+       "pt": "+80% de chance de receber 2x o item",
+       "en": "+80% chance to receive 2x the item"
       },
       {
-       "pt": "+100% de chance de receber 5x o item",
-       "en": "+100% chance to receive 5x the item"
+       "pt": "+100% de chance de receber 2x o item",
+       "en": "+100% chance to receive 2x the item"
       }
      ]
     },
@@ -1461,7 +1461,12 @@ window.RPG_MOD = {
      }
     }
    ],
-   "desbloqueios": {}
+   "desbloqueios": {
+    "5": {
+     "pt": "Artesão Econômico (50% de chance de não gastar os ingredientes ao criar)",
+     "en": "Thrifty Artisan (50% chance to not use up the ingredients when crafting)"
+    }
+   }
   },
   {
    "id": "mestre_das_reliquias",

@@ -61,7 +61,7 @@ FAIXAS = {
     'passive_machine_fuel_duration': 'lang:rpgskills_bonus_machine_fuel',
     'passive_trap_mastery': 'lang:rpgskills_bonus_trap',
     'passive_necromancy_mastery': 'lang:rpgskills_bonus_necro',
-    'bonus_loot_gain': [(50, 2), (100, 3), (100, 3), (100, 4), (100, 5)],
+    'bonus_loot_gain': [(20, 2), (40, 2), (60, 2), (80, 2), (100, 2)],
     'bonus_underground_visibility': ['lang:rpgskills_bonus_active'] * 5,
 }
 
