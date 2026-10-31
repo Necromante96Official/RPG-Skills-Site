@@ -1,6 +1,50 @@
 /* Gerado por tools/build.py a partir de release-notes/*.md. Não edite à mão. */
 window.RPG_CHANGELOG = [
   {
+    "version": "4.3",
+    "tag": "new",
+    "tagClass": "major",
+    "tagKey": "changelog.tag.new",
+    "pt": {
+      "title": "🌟 Atualização 4.3 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "✨ Novidades",
+          "items": [
+            "<strong>Aba Classes nova, no estilo grimório:</strong> as classes agora ficam separadas por categoria (Combate, Sobrevivência, Movimento, Utilidade e Necromancia), cada uma mostrando quantos pontos você já gastou nela. Cada classe aparece como uma carta com ícone, nome e os pontos já colocados.",
+            "<strong>Veja o que cada nível dá:</strong> ao escolher uma classe, o painel ao lado mostra o bônus de todos os níveis de uma vez, do 1 ao 5, e o que cada nível desbloqueia. Os níveis que você já tem ficam em dourado e o próximo fica em destaque."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "<strong>Aliados da Necromancia não criam mais inimigos:</strong> o Protetor do Mal invocado pelo ritual continuava abrindo portais que soltavam inimigos contra você. O mesmo valia para outros aliados que lançam criaturas ou deixam algo para trás (como os soldadinhos de brinquedo, os goblins do sobretudo e a Fênix, que deixava um ovo ao morrer). Agora seus aliados lutam com todos os ataques normais, mas não trazem mais inimigos para a luta. Os inimigos que você ou seus aliados derrotam continuam se comportando como sempre."
+          ]
+        }
+      ],
+      "note": "<strong>Bom jogo! 🎮</strong>"
+    },
+    "en": {
+      "title": "🌟 Update 4.3 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "✨ What's new",
+          "items": [
+            "<strong>New Classes tab, grimoire style:</strong> classes are now split by category (Combat, Survival, Movement, Utility and Necromancy), each showing how many points you have spent in it. Every class shows up as a card with its icon, name and the points already placed.",
+            "<strong>See what each level gives:</strong> when you pick a class, the side panel shows the bonus of every level at once, from 1 to 5, plus what each level unlocks. Levels you already have are gold and the next one is highlighted."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "<strong>Necromancy allies no longer create enemies:</strong> an Evil's Protector summoned by the ritual kept opening portals that released enemies against you. The same happened with other allies that launch creatures or leave something behind (like the toy soldiers, the trenchcoat goblins and the Phoenix, which left an egg when it died). Now your allies fight with all their usual attacks, but no longer bring enemies into the fight. Enemies that you or your allies defeat still behave as always."
+          ]
+        }
+      ],
+      "note": "<strong>Have fun! 🎮</strong>"
+    }
+  },
+  {
     "version": "4.2",
     "tag": "new",
     "tagClass": "major",
