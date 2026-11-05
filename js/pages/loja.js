@@ -1,6 +1,6 @@
 /* ============================================
    RPG SKILLS - Loja: preço dos bônus de XP pelo nível
-   Mesma conta de XpBuffPurchaseService.calculateCost (mod 4.1).
+   Mesma conta de XpBuffPurchaseService.calculateCost (mod 4.4).
    ============================================ */
 (function (RPG) {
   'use strict';
@@ -17,7 +17,7 @@
   function atualizar() {
     var nivel = Number(document.getElementById('preco-nivel').value);
     document.getElementById('preco-nivel-valor').textContent = nivel;
-    [2, 5, 10].forEach(function (m) {
+    [2, 5, 10, 25, 50].forEach(function (m) {
       document.getElementById('preco-' + m).textContent = RPG.i18n.formatNumber(custo(nivel, m));
     });
   }

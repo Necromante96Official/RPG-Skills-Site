@@ -1527,11 +1527,28 @@ window.RPG_MOD = {
       "pt": "Felicidade nos assentamentos",
       "en": "Settlement happiness"
      },
-     "porPonto": 20,
-     "sufixo": {
-      "pt": "%",
-      "en": "%"
-     }
+     "faixas": [
+      {
+       "pt": "+50%",
+       "en": "+50%"
+      },
+      {
+       "pt": "+60%",
+       "en": "+60%"
+      },
+      {
+       "pt": "+70%",
+       "en": "+70%"
+      },
+      {
+       "pt": "+80%",
+       "en": "+80%"
+      },
+      {
+       "pt": "+100%",
+       "en": "+100%"
+      }
+     ]
     },
     {
      "id": "bonus_settlement_shop_discount",

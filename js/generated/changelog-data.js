@@ -1,6 +1,109 @@
 /* Gerado por tools/build.py a partir de release-notes/*.md. Não edite à mão. */
 window.RPG_CHANGELOG = [
   {
+    "version": "4.4",
+    "tag": "new",
+    "tagClass": "major",
+    "tagKey": "changelog.tag.new",
+    "pt": {
+      "title": "🌟 Atualização 4.4 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "✨ Novidades",
+          "items": [
+            "<strong>Slots do inventário na loja:</strong> a loja ganhou um cartão novo, \"Slots do inventário\". Cada compra dá <strong>+10 slots</strong> no seu inventário, até <strong>500</strong> no total. A compra é só sua e fica com o seu personagem, inclusive quando o mod é atualizado. O preço sobe um pouco a cada compra e aparece no cartão antes de comprar.",
+            "<strong>Inventário com rolagem:</strong> quando o inventário passa dos 50 slots de sempre, ele ganha uma barra de rolagem. A barra de atalhos continua no mesmo lugar, na primeira linha.",
+            "<strong>Baús até 500 slots:</strong> o limite dos slots extras de baú subiu de 400 para 500, igual ao do inventário. Quem já tinha o limite de 400 na configuração passa para 500 sozinho; um limite que você mudou à mão continua como está.",
+            "<strong>Aura nos lacaios:</strong> o contorno dos aliados da Necromancia virou uma aura suave em volta do corpo. Dourada nos lacaios permanentes do ritual e branca nos temporários do Exército dos Mortos.",
+            "<strong>Moradores abastecem as estações:</strong> ao guardar um item, inclusive a colheita que estão carregando, os moradores agora dão prioridade às fornalhas, composteiras e outras estações que tenham uma receita configurada para ele, antes dos baús. O que não couber na estação vai para o baú, como sempre. Estações sem receita daquele item não mudam nada.",
+            "<strong>Composteira só com sementes:</strong> o filtro de ingredientes do fertilizante ganhou o botão \"Somente sementes\". Com o filtro ajustado, os moradores levam as sementes direto para a composteira. Sem ajustar o filtro, ela não recebe a colheita inteira.",
+            "<strong>Janela dos moradores em português:</strong> felicidade, pensamentos e personalidades dos moradores agora aparecem em português, mesmo quando o jogo mostrava esses textos em inglês.",
+            "<strong>Bônus de XP 25x e 50x:</strong> a loja ganhou dois multiplicadores novos, com preço proporcional aos outros, e dois atalhos para configurar nos controles.",
+            "<strong>Slots da loja por baú:</strong> cada baú agora tem um botão para ativar ou desativar os slots comprados. Desativado, ele fica no tamanho padrão. Se o baú estiver cheio demais para encolher, nada muda e nenhum item se perde.",
+            "<strong>Caixas térmicas com slots da loja:</strong> as caixas térmicas também ganham os slots comprados e o mesmo botão. Os filtros da janela delas mostram só comida.",
+            "<strong>Slot do item em destaque:</strong> o item que aparece em cima do baú agora é escolhido em um slot próprio, à esquerda do botão da moldura na janela do baú. Clique segurando o item: ele continua com você e fica ali como um item fantasma. Com a mão vazia, o clique tira o item do slot.",
+            "<strong>Fertilizante só de sementes:</strong> a composteira ganhou uma receita nova na lista de receitas, com o ícone de uma semente, que usa apenas sementes. Com ela na composteira, os moradores levam as sementes direto para lá.",
+            "<strong>Panela com \"Qualquer receita\":</strong> a panela ganhou a receita \"Qualquer receita\" na lista de receitas dos moradores. Com ela, os moradores cozinham qualquer prato da panela que tenha os ingredientes nos baús da vila, variando entre os pratos. Os modos \"fazer X vezes\", \"até ter X\" e \"sempre\" funcionam como nas outras receitas (no \"até ter X\", vale para cada prato). Ela não aparece na sua bancada.",
+            "<strong>Botão de cor do baú no lugar certo (Safe Haven QOL):</strong> com o Safe Haven QOL, o botão de cor do baú fica fixo logo à direita do botão de renomear."
+          ]
+        },
+        {
+          "heading": "⚙️ Melhorias",
+          "items": [
+            "<strong>Mestre dos Reinos mais útil desde o começo:</strong> a felicidade mínima dos moradores agora é 50, 60, 70, 80 e 100 nos níveis 1 a 5. A qualidade de vida para de cair já no nível 1 e passa a subir no nível 4.",
+            "<strong>Limites de alcance até 500:</strong> o máximo de blocos do Minerador de Veios, o alcance das estações de criação, o raio do empilhamento rápido, o raio do XP em equipe e o raio de ataque das invocações agora podem chegar a 500 na configuração. Valores muito altos podem pesar em mundos grandes.",
+            "<strong>Rolagem mais suave nos slots:</strong> nos baús grandes e no inventário, cada clique da roda do mouse anda exatamente uma linha de slots, sem parar no meio de uma linha. No touchpad, a rolagem vai somando até completar uma linha.",
+            "<strong>Jogo mais leve:</strong> a aura dos lacaios e o ícone em cima dos baús pesam menos a cada quadro, a janela do baú não fica mais ocupando memória depois de fechada, e os moradores decidem mais rápido em qual estação guardar a colheita.",
+            "<strong>Nenhum item se perde:</strong> se o limite de slots do inventário for diminuído na configuração, os itens das linhas que sumiriam vão para os espaços vazios. Se não houver espaço, o inventário fica do tamanho necessário para guardar tudo."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "<strong>Alcance das Estações não volta mais para 15:</strong> o alcance comprado na loja voltava ao normal toda vez que o jogo era reiniciado no jogo solo (e para quem hospeda o mundo). Agora ele fica salvo no mundo.",
+            "<strong>Textos da aba Status não saem mais do cartão:</strong> bônus com nome ou descrição longos (como o da Necromancia) cortavam o nome e passavam por cima do cartão de baixo. Agora, quando não cabem lado a lado, o nome fica em cima e o valor embaixo, e o cartão cresce para caber tudo.",
+            "<strong>Minerador de Veios obedece à configuração:</strong> o minério ignorava o máximo de blocos, e o modo avançado parava em 20 blocos e 3 blocos de distância, não importava o valor escolhido. Agora a mineração vai até o número configurado, em qualquer modo. Atenção: no valor padrão de 20, veios maiores agora param em 20 blocos.",
+            "<strong>Opções da configuração que não faziam nada:</strong> desligar Administração Rica agora remove o bônus de XP dos colonos, e desligar Administração Rica ou Especialista em Incursão tira essas passivas da lista. Multiplicador de XP removido da configuração fica indisponível na loja.",
+            "<strong>Comando de slots de baú:</strong> o comando de administrador agora respeita o limite e o passo de slots da configuração, e as mensagens dele mostram os números da configuração.",
+            "<strong>Aura dos lacaios:</strong> a aura agora aparece em todos os lacaios, inclusive nos de corpo humano, em dourado nos permanentes e em branco nos temporários.",
+            "<strong>Mestre dos Reinos:</strong> os moradores não ficam mais andando travados com o piso de felicidade, e a Aura de Liderança agora vale do mesmo jeito na tela e no jogo.",
+            "<strong>Mestre Gourmet:</strong> agora come da Lancheira, do primeiro slot em diante, e só depois procura no inventário. Comidas que fazem mal, como carne e ovos crus, são ignoradas.",
+            "<strong>Textos do console do jogo:</strong> as mensagens de chat não mostram mais códigos estranhos, e os acentos aparecem certos."
+          ]
+        }
+      ],
+      "note": "<strong>Bom jogo! 🎮</strong>"
+    },
+    "en": {
+      "title": "🌟 Update 4.4 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "✨ What's new",
+          "items": [
+            "<strong>Inventory slots in the shop:</strong> the shop has a new \"Inventory slots\" card. Each purchase gives <strong>+10 slots</strong> to your inventory, up to <strong>500</strong> in total. The purchase is yours alone and stays with your character, including when the mod updates. The price goes up a little with each purchase and shows on the card before you buy.",
+            "<strong>Scrolling inventory:</strong> once your inventory goes past the usual 50 slots, it gets a scroll bar. The hotbar stays where it always was, on the first row.",
+            "<strong>Chests up to 500 slots:</strong> the limit for extra chest slots went up from 400 to 500, the same as the inventory. If your settings had the 400 limit, it moves to 500 by itself; a limit you changed by hand stays as it is.",
+            "<strong>Minion aura:</strong> the outline on Necromancy allies is now a soft aura around their body. Gold on permanent ritual minions and white on the temporary ones from the Army of the Dead.",
+            "<strong>Settlers supply your stations:</strong> when storing an item, including the harvest they are carrying, settlers now put forges, compost bins and other stations with a recipe set up for it ahead of chests. Whatever doesn't fit in the station goes to a chest, as usual. Stations with no recipe for that item change nothing.",
+            "<strong>Seeds-only compost bin:</strong> the fertilizer ingredient filter has a new \"Seeds only\" button. With the filter adjusted, settlers take seeds straight to the compost bin. Without adjusting the filter, it doesn't get your whole harvest.",
+            "<strong>25x and 50x XP bonuses:</strong> the shop has two new multipliers, priced in proportion to the others, and two new hotkeys you can set in the controls.",
+            "<strong>Shop slots per chest:</strong> each chest now has a button to turn the bought slots on or off. When off, it stays at the default size. If the chest is too full to shrink, nothing changes and no item is lost.",
+            "<strong>Cooling boxes with shop slots:</strong> cooling boxes now get the bought slots and the same button. The filters in their window show only food.",
+            "<strong>Featured item slot:</strong> the item shown above a chest is now picked in its own slot, just left of the frame button in the chest window. Click while holding the item: it stays with you and sits there as a ghost item. With an empty hand, the click takes the item out of the slot.",
+            "<strong>Seeds-only fertilizer:</strong> the compost bin has a new recipe in the recipe list, with a seed icon, that uses only seeds. With it on the compost bin, settlers take seeds straight there.",
+            "<strong>Cooking pot with \"Any recipe\":</strong> the cooking pot has a new \"Any recipe\" entry in the settlers' recipe list. With it, settlers cook any cooking pot dish whose ingredients are in the settlement chests, switching between dishes. The \"do X times\", \"until X\" and \"forever\" modes work like on other recipes (with \"until X\", it counts for each dish). It doesn't show up at your own crafting station.",
+            "<strong>Chest color button in the right place (Safe Haven QOL):</strong> with Safe Haven QOL, the chest color button stays fixed right next to the rename button."
+          ]
+        },
+        {
+          "heading": "⚙️ Improvements",
+          "items": [
+            "<strong>Realm Master useful from the start:</strong> the minimum settler happiness is now 50, 60, 70, 80 and 100 at levels 1 to 5. Quality of life stops dropping from level 1 and starts rising at level 4.",
+            "<strong>Range limits up to 500:</strong> the Vein Miner block limit, crafting station range, quick stack radius, team XP radius and summon attack radius can now go up to 500 in the settings. Very high values can weigh on big worlds.",
+            "<strong>Smoother slot scrolling:</strong> in large chests and in the inventory, each mouse wheel click moves exactly one row of slots, never stopping halfway through a row. On a touchpad, scrolling adds up until it completes a row.",
+            "<strong>Lighter on your computer:</strong> the minion aura and the icon above chests cost less every frame, the chest window no longer stays in memory after you close it, and settlers decide faster which station to store their harvest in.",
+            "<strong>No item is ever lost:</strong> if the inventory slot limit is lowered in the settings, items in the rows that would disappear move to empty spaces. If there is no room, the inventory keeps the size it needs to hold everything."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "<strong>Crafting Station Range no longer goes back to 15:</strong> the range bought in the shop went back to normal every time the game restarted in single player (and for whoever hosts the world). Now it stays saved in the world.",
+            "<strong>Status tab texts no longer spill out of their card:</strong> bonuses with a long name or description (like Necromancy's) cut the name short and ran over the card below. Now, when they don't fit side by side, the name goes on top and the value below, and the card grows to fit everything.",
+            "<strong>Vein Miner follows the settings:</strong> ore ignored the block limit, and advanced mode stopped at 20 blocks and 3 tiles apart, whatever value you chose. Now mining goes up to the configured number in every mode. Note: at the default of 20, bigger veins now stop at 20 blocks.",
+            "<strong>Settings that did nothing:</strong> turning off Rich Administration now removes the settler XP bonus, and turning off Rich Administration or Incursion Specialist takes those passives off the list. An XP multiplier removed from the settings is unavailable in the shop.",
+            "<strong>Chest slot command:</strong> the admin command now follows the slot limit and step from the settings, and its messages show the numbers from the settings.",
+            "<strong>Minion aura:</strong> the aura now shows on every minion, including human-shaped ones, gold for permanent and white for temporary.",
+            "<strong>Realm Master:</strong> settlers no longer walk in a choppy way because of the happiness floor, and Leadership Aura now works the same on screen and in the game.",
+            "<strong>Master Gourmet:</strong> now eats from the Lunchbox, starting at the first slot, and only then looks in the inventory. Food that harms you, like raw meat and raw eggs, is skipped.",
+            "<strong>Game console text:</strong> chat messages no longer show strange codes, and accents show up correctly."
+          ]
+        }
+      ],
+      "note": "<strong>Have fun! 🎮</strong>"
+    }
+  },
+  {
     "version": "4.3",
     "tag": "new",
     "tagClass": "major",

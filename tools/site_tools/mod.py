@@ -61,6 +61,8 @@ FAIXAS = {
     'passive_machine_fuel_duration': 'lang:rpgskills_bonus_machine_fuel',
     'passive_trap_mastery': 'lang:rpgskills_bonus_trap',
     'passive_necromancy_mastery': 'lang:rpgskills_bonus_necro',
+    # Pisos de felicidade (ProgressionRules.SETTLEMENT_HAPPINESS_FLOOR_BY_LEVEL, 4.4), não linear.
+    'bonus_settlement_happiness': ['+50%', '+60%', '+70%', '+80%', '+100%'],
     'bonus_loot_gain': [(20, 2), (40, 2), (60, 2), (80, 2), (100, 2)],
     'bonus_underground_visibility': ['lang:rpgskills_bonus_active'] * 5,
 }

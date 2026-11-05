@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Loja - RPG Skills</title>
-  <meta name="description" content="A Loja do RPG Skills: bônus de XP, stack do mundo, slots de baú, alcance das estações, Minerador Explosivo e expansão da vila, com preços.">
+  <meta name="description" content="A Loja do RPG Skills: bônus de XP, slots do inventário, stack do mundo, slots de baú, alcance das estações, Minerador Explosivo e expansão da vila, com preços.">
   <meta name="theme-color" content="#0b0915">
   <link rel="icon" type="image/png" href="../assets/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,7 +85,7 @@
           <span lang="en">The Shop tab in the RPG Skills window has upgrades for you and for the whole world. Hover the in-game buttons for details. Prices below are the defaults and can be changed in RPG Skills Config.</span>
         </p>
         <div class="indice">
-          <span class="selo selo--ouro"><span lang="pt-BR">Para você</span><span lang="en">For you</span>: <span lang="pt-BR">bônus de XP, Minerador Explosivo</span><span lang="en">XP buffs, Explosive Miner</span></span>
+          <span class="selo selo--ouro"><span lang="pt-BR">Para você</span><span lang="en">For you</span>: <span lang="pt-BR">bônus de XP, slots do inventário, Minerador Explosivo</span><span lang="en">XP buffs, inventory slots, Explosive Miner</span></span>
           <span class="selo selo--roxo"><span lang="pt-BR">Para o mundo</span><span lang="en">For the world</span>: <span lang="pt-BR">stack, baús, estações, vila</span><span lang="en">stack, chests, stations, settlement</span></span>
         </div>
       </div>
@@ -96,9 +96,9 @@
         <div>
           <div class="item-loja__icone"><img class="px" src="../assets/loja/xp.png" alt="" width="64" height="64"></div>
           <p class="sobre"><span lang="pt-BR">Bônus de XP</span><span lang="en">XP buffs</span></p>
-          <h2><span lang="pt-BR"><span class="n">2x</span>, <span class="n">5x</span> ou <span class="n">10x</span> por <span class="n">10</span> minutos</span><span lang="en"><span class="n">2x</span>, <span class="n">5x</span> or <span class="n">10x</span> for <span class="n">10</span> minutes</span></h2>
-          <p><span lang="pt-BR">Multiplica todo o XP que você ganha. Só um bônus fica ativo por vez, e o tempo aparece ao lado da barra de XP. Dá para comprar por atalho de teclado.</span><span lang="en">Multiplies all the XP you earn. Only one buff at a time, and the time left shows next to the XP bar. Can be bought with a hotkey.</span></p>
-          <p><span lang="pt-BR">O preço sobe devagar com o seu nível e tem teto: o 2x custa <code>1.000 + 300 × nível</code> moedas, no máximo 50.000. O 5x custa 2,5 vezes isso e o 10x, 5 vezes.</span><span lang="en">The price rises slowly with your level and is capped: 2x costs <code>1,000 + 300 × level</code> coins, up to 50,000. 5x costs 2.5 times that and 10x, 5 times.</span></p>
+          <h2><span lang="pt-BR"><span class="n">2x</span> a <span class="n">50x</span> por <span class="n">10</span> minutos</span><span lang="en"><span class="n">2x</span> to <span class="n">50x</span> for <span class="n">10</span> minutes</span></h2>
+          <p><span lang="pt-BR">Multiplica todo o XP que você ganha. Só um bônus fica ativo por vez, e o tempo aparece ao lado da barra de XP. Dá para comprar por atalho de teclado. Os multiplicadores 25x e 50x são novos na 4.4.</span><span lang="en">Multiplies all the XP you earn. Only one buff at a time, and the time left shows next to the XP bar. Can be bought with a hotkey. The 25x and 50x multipliers are new in 4.4.</span></p>
+          <p><span lang="pt-BR">O preço sobe devagar com o seu nível e tem teto: o 2x custa <code>1.000 + 300 × nível</code> moedas, no máximo 50.000. O 5x custa 2,5 vezes isso, o 10x, 5 vezes, o 25x, 12,5 vezes e o 50x, 25 vezes.</span><span lang="en">The price rises slowly with your level and is capped: 2x costs <code>1,000 + 300 × level</code> coins, up to 50,000. 5x costs 2.5 times that, 10x 5 times, 25x 12.5 times and 50x 25 times.</span></p>
         </div>
         <div class="cartao cartao--ouro precos">
           <label class="precos__nivel">
@@ -109,8 +109,30 @@
             <div><span class="precos__mult">2x</span><span class="precos__valor" id="preco-2">0</span></div>
             <div><span class="precos__mult">5x</span><span class="precos__valor" id="preco-5">0</span></div>
             <div><span class="precos__mult">10x</span><span class="precos__valor" id="preco-10">0</span></div>
+            <div><span class="precos__mult">25x</span><span class="precos__valor" id="preco-25">0</span></div>
+            <div><span class="precos__mult">50x</span><span class="precos__valor" id="preco-50">0</span></div>
           </div>
           <p class="precos__nota"><span lang="pt-BR">moedas por 10 minutos</span><span lang="en">coins per 10 minutes</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="inventario">
+      <div class="wrap">
+        <div class="cartao cartao--ouro destaque-loja">
+          <div class="item-loja__icone"><img class="px" src="../assets/loja/bag.png" alt="" width="64" height="64"></div>
+          <div>
+            <p class="sobre"><span lang="pt-BR">Para você</span><span lang="en">For you</span> · <span lang="pt-BR">Novo na 4.4</span><span lang="en">New in 4.4</span></p>
+            <h2><span lang="pt-BR">Slots do inventário</span><span lang="en">Inventory slots</span></h2>
+            <p><span lang="pt-BR">Cada compra dá <strong>+10 slots</strong> no seu inventário, dos 50 de sempre até <strong>500</strong>. A compra é só sua e fica com o seu personagem, inclusive quando o mod é atualizado. Passando dos 50 slots, o inventário ganha uma barra de rolagem, e a barra de atalhos continua na primeira linha.</span><span lang="en">Each purchase gives <strong>+10 slots</strong> to your inventory, from the usual 50 up to <strong>500</strong>. The purchase is yours alone and stays with your character, including when the mod updates. Past 50 slots, the inventory gets a scroll bar, and the hotbar stays on the first row.</span></p>
+            <p><span lang="pt-BR">Se o limite for diminuído na configuração, nenhum item se perde: os itens das linhas que sumiriam vão para os espaços vazios e, sem espaço, o inventário fica do tamanho necessário.</span><span lang="en">If the limit is lowered in the settings, no item is lost: items in the rows that would disappear move to empty spaces and, with no room, the inventory keeps the size it needs.</span></p>
+            <ul class="custo">
+              <li><b>5.000</b> <span lang="pt-BR">moedas na primeira compra</span><span lang="en">coins for the first purchase</span></li>
+              <li><b>+2.500</b> <span lang="pt-BR">a cada compra seguinte</span><span lang="en">for each next purchase</span></li>
+              <li><b>115.000</b> <span lang="pt-BR">moedas na última compra</span><span lang="en">coins for the last purchase</span></li>
+              <li><b>2.700.000</b> <span lang="pt-BR">moedas para chegar a 500</span><span lang="en">coins to reach 500</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -135,7 +157,7 @@
           <article class="cartao item-loja">
             <div class="item-loja__icone"><img class="px" src="../assets/loja/chest.png" alt="" width="48" height="48"></div>
             <h3><span lang="pt-BR">Slots de baú</span><span lang="en">Chest slots</span></h3>
-            <p><span lang="pt-BR">Todos os baús do jogo neste mundo ganham <strong>+10 slots</strong> por compra, de 40 até <strong>400</strong>. Os baús maiores ganham um filtro por categoria na lateral.</span><span lang="en">Every vanilla chest in this world gets <strong>+10 slots</strong> per purchase, from 40 up to <strong>400</strong>. Bigger chests get a category filter on the side.</span></p>
+            <p><span lang="pt-BR">Todos os baús do jogo neste mundo ganham <strong>+10 slots</strong> por compra, de 40 até <strong>500</strong>. Os baús maiores ganham um filtro por categoria na lateral, e as caixas térmicas também recebem os slots. Cada baú tem um botão para ligar ou desligar os slots comprados: desligado, fica no tamanho padrão, e nenhum item se perde.</span><span lang="en">Every vanilla chest in this world gets <strong>+10 slots</strong> per purchase, from 40 up to <strong>500</strong>. Bigger chests get a category filter on the side, and cooling boxes get the slots too. Each chest has a button to turn the bought slots on or off: when off, it stays at the default size, and no item is lost.</span></p>
             <ul class="valores">
               <li><span><span lang="pt-BR">Primeira compra</span><span lang="en">First purchase</span></span><b><span lang="pt-BR">5.000 moedas</span><span lang="en">5,000 coins</span></b></li>
               <li><span><span lang="pt-BR">Cada compra seguinte</span><span lang="en">Each next purchase</span></span><b>+2.500</b></li>
@@ -145,7 +167,7 @@
             <div class="item-loja__icone"><img class="px" src="../assets/loja/range.png" alt="" width="48" height="48"></div>
             <span class="selo selo--ok item-loja__novo"><span lang="pt-BR">Novo na 4.1</span><span lang="en">New in 4.1</span></span>
             <h3><span lang="pt-BR">Alcance das Estações</span><span lang="en">Station Range</span></h3>
-            <p><span lang="pt-BR">Com "usar armazenamento próximo" ligado, as estações de criação e a de melhoria pegam itens de baús mais longe. O jogo usa 15 blocos; cada compra soma <strong>5</strong>, até <strong>50</strong>.</span><span lang="en">With "use nearby storage" on, crafting stations and the upgrade station pull items from farther chests. The game uses 15 tiles; each purchase adds <strong>5</strong>, up to <strong>50</strong>.</span></p>
+            <p><span lang="pt-BR">Com "usar armazenamento próximo" ligado, as estações de criação e a de melhoria pegam itens de baús mais longe. O jogo usa 15 blocos; cada compra soma <strong>5</strong>, até <strong>50</strong> (o limite pode subir até 500 na configuração). O alcance comprado fica salvo no mundo.</span><span lang="en">With "use nearby storage" on, crafting stations and the upgrade station pull items from farther chests. The game uses 15 tiles; each purchase adds <strong>5</strong>, up to <strong>50</strong> (the limit can go up to 500 in the settings). The range you buy stays saved in the world.</span></p>
             <ul class="valores">
               <li><span><span lang="pt-BR">Primeiro nível</span><span lang="en">First level</span></span><b><span lang="pt-BR">2.000 moedas</span><span lang="en">2,000 coins</span></b></li>
               <li><span><span lang="pt-BR">Cada nível seguinte</span><span lang="en">Each next level</span></span><b>+2.000</b></li>
