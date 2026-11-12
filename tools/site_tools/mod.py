@@ -63,7 +63,9 @@ FAIXAS = {
     'passive_necromancy_mastery': 'lang:rpgskills_bonus_necro',
     # Pisos de felicidade (ProgressionRules.SETTLEMENT_HAPPINESS_FLOOR_BY_LEVEL, 4.4), não linear.
     'bonus_settlement_happiness': ['+50%', '+60%', '+70%', '+80%', '+100%'],
-    'bonus_loot_gain': [(20, 2), (40, 2), (60, 2), (80, 2), (100, 2)],
+    # Mestre do Loot (4.5): nível 1 com 50% de chance de 2x; níveis 2 a 5 sempre 2x a 5x.
+    # O 5x do nível 5 é o padrão; a configuração aceita de 2x a 50x.
+    'bonus_loot_gain': [(50, 2), 2, 3, 4, 5],
     'bonus_underground_visibility': ['lang:rpgskills_bonus_active'] * 5,
 }
 
@@ -94,8 +96,10 @@ def faixa(attr, langs):
     niveis = []
     for item in regra:
         if isinstance(item, tuple):
-            niveis.append({'pt': '+%d%% de chance de receber %dx o item' % item,
-                           'en': '+%d%% chance to receive %dx the item' % item})
+            niveis.append({'pt': '%d%% de chance de %dx o item final' % item,
+                           'en': '%d%% chance of %dx the final item' % item})
+        elif isinstance(item, int):
+            niveis.append({'pt': '%dx o item final' % item, 'en': '%dx the final item' % item})
         elif item.startswith('lang:'):
             chave = item[5:]
             niveis.append({l: langs[l].get(chave, '') for l in langs})

@@ -1,6 +1,72 @@
 /* Gerado por tools/build.py a partir de release-notes/*.md. Não edite à mão. */
 window.RPG_CHANGELOG = [
   {
+    "version": "4.5",
+    "tag": "new",
+    "tagClass": "major",
+    "tagKey": "changelog.tag.new",
+    "pt": {
+      "title": "🌟 Atualização 4.5 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "✨ Novidades",
+          "items": [
+            "<strong>Multiplicador do Mestre do Loot na configuração:</strong> uma opção nova escolhe quanto o Mestre do Loot multiplica no nível 5 (de 2x a 50x, padrão 5x). Do nível 2 em diante, o loot sobe aos poucos até esse valor."
+          ]
+        },
+        {
+          "heading": "⚙️ Melhorias",
+          "items": [
+            "<strong>Mestre do Loot até 5x:</strong> em vez de só uma chance de dobrar, o loot agora cresce a cada nível: no nível 1, <strong>50% de chance de 2x</strong>; nos níveis 2 a 5, sempre <strong>2x</strong>, <strong>3x</strong>, <strong>4x</strong> e <strong>5x</strong>. A economia de ingredientes do nível 5 continua igual.",
+            "<strong>Lacaios da Necromancia mais rápidos a cada nível:</strong> além do dano, os lacaios agora ganham <strong>velocidade de ataque</strong> (até +75%) e <strong>velocidade de movimento</strong> (até +50%) ao subir de nível e com a Maestria. A velocidade total do lacaio tem um teto fixo de 2x, para ele nunca sair voando pelo mapa. A velocidade de ataque vale para todo tipo de ataque: golpes, tiros, magias e dano por encostar. Os valores aparecem no cartão do lacaio no Grimório.",
+            "<strong>Nova inteligência dos lacaios:</strong> os lacaios da Necromancia ganharam um jeito próprio de lutar. Eles atacam o inimigo que você está acertando (ou que está te atacando); se não houver, o inimigo mais perto deles ao seu redor. Vão direto até ficar no alcance do seu ataque, param ali e atacam sem parar, sem vagar, fugir ou ficar andando para lá e para cá. Sem inimigos, ficam do seu lado. Cada lacaio usa só o estilo de ataque do monstro (o tiro ou a magia dele, o golpe com a animação dele ou o dano ao encostar), sem a sequência de ataques e pausas que o monstro tinha. Os ataques saem num ritmo constante, com no máximo meio segundo entre um e outro, e ficam mais rápidos com o nível. Isso vale para todos os lacaios, inclusive os que voavam em círculos em volta dos inimigos sem atacar e os que se teleportavam sozinhos, como o Aprendiz do Vazio.",
+            "<strong>Tiros e magias que acertam:</strong> os projéteis dos lacaios agora viram com força para o inimigo, miram direto quando chegam perto (sem ficar girando em volta dele) e voam o bastante para alcançá-lo.",
+            "<strong>Lacaios sem \"teletransporte\":</strong> a posição dos lacaios agora é atualizada várias vezes por segundo para todos os jogadores (antes era só de tempos em tempos, e o lacaio \"pulava\" quando a posição certa chegava). A velocidade do lacaio também é a mesma para todos, inclusive lacaios que são animais, então ele anda liso."
+          ]
+        },
+        {
+          "heading": "🚀 Desempenho",
+          "items": [
+            "<strong>Andar e explorar o mapa sem travar:</strong> com o alcance maior de descoberta do mapa (Mestre das Cavernas e Mestre da Construção), andar pelo mundo pesava muito, porque toda a área em volta era revelada de novo a cada poucos passos. Agora só a parte nova que entrou no alcance é revelada, e a área inteira só de vez em quando. O mapa é revelado do mesmo jeito.",
+            "<strong>Acessórios que brilham mais leves:</strong> o brilho extra do Cinto brilhante e da Lanterna de fogo-fátuo com a Ruína da Escuridão pesa bem menos a cada instante, sem mudar a luz.",
+            "<strong>Jogo mais leve no geral:</strong> os textos do mod deixaram de procurar o idioma do jogo do zero várias vezes por quadro; fazendas grandes pesam menos no servidor, porque cada planta é conferida no máximo uma vez por segundo (o crescimento acelerado continua igual); os bônus de classe, o alcance de interação e a caça aos cavernídeos pelos lacaios refazem as contas só quando algo muda."
+          ]
+        }
+      ],
+      "note": "<strong>Bom jogo! 🎮</strong>"
+    },
+    "en": {
+      "title": "🌟 Update 4.5 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "✨ What's new",
+          "items": [
+            "<strong>Loot Master multiplier in the settings:</strong> a new option picks how much Loot Master multiplies at level 5 (from 2x to 50x, default 5x). From level 2 on, loot rises step by step up to that value."
+          ]
+        },
+        {
+          "heading": "⚙️ Improvements",
+          "items": [
+            "<strong>Loot Master up to 5x:</strong> instead of just a chance to double, loot now grows at every level: at level 1, a <strong>50% chance of 2x</strong>; at levels 2 to 5, always <strong>2x</strong>, <strong>3x</strong>, <strong>4x</strong> and <strong>5x</strong>. The level 5 ingredient saving stays the same.",
+            "<strong>Faster Necromancy minions every level:</strong> besides damage, minions now gain <strong>attack speed</strong> (up to +75%) and <strong>movement speed</strong> (up to +50%) as they level up and with Mastery. The minion's total speed has a fixed cap of 2x, so it never zooms across the map. Attack speed works for every kind of attack: strikes, shots, spells and contact damage. The values show on the minion's card in the Grimoire.",
+            "<strong>New minion intelligence:</strong> Necromancy minions got their own way of fighting. They attack the enemy you are hitting (or that is attacking you); if there is none, the enemy closest to them around you. They go straight until they are in range of their attack, stop there and attack nonstop, without wandering, running away or pacing back and forth. With no enemies, they stay by your side. Each minion uses only the monster's attack style (its shot or spell, its strike with its animation, or contact damage), without the attack sequence and pauses the monster had. Attacks come out at a steady pace, at most half a second apart, and get faster with level. This applies to every minion, including those that circled around enemies without attacking and those that teleported on their own, like the Void Apprentice.",
+            "<strong>Shots and spells that hit:</strong> minion projectiles now turn hard toward the enemy, aim straight at it when close (no more circling around it) and fly far enough to reach it.",
+            "<strong>No more minion \"teleporting\":</strong> minion positions are now updated several times per second for every player (before it was only every few seconds, and the minion \"jumped\" when the right position arrived). The minion's speed is also the same for everyone, including minions that are animals, so it moves smoothly."
+          ]
+        },
+        {
+          "heading": "🚀 Performance",
+          "items": [
+            "<strong>Walk and explore the map without stutter:</strong> with the bigger map discovery range (Cavern Master and Construction Master), walking around was heavy, because the whole area around you was revealed again every few steps. Now only the new part that came into range is revealed, and the whole area only now and then. The map is revealed the same way.",
+            "<strong>Lighter glowing trinkets:</strong> the extra glow of the Shine belt and the Will-o'-wisp lantern with Dark Ruin costs much less every moment, without changing the light.",
+            "<strong>Lighter game overall:</strong> the mod's texts no longer look up the game language from scratch several times per frame; big farms weigh less on the server, since each plant is checked at most once per second (faster growth stays the same); class bonuses, interaction range and minions hunting cavelings only redo their math when something changes."
+          ]
+        }
+      ],
+      "note": "<strong>Have fun! 🎮</strong>"
+    }
+  },
+  {
     "version": "4.4",
     "tag": "new",
     "tagClass": "major",

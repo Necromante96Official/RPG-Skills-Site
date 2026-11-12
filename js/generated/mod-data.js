@@ -1403,8 +1403,8 @@ window.RPG_MOD = {
     "en": "Loot Master"
    },
    "desc": {
-    "pt": "Melhora qualidade de loot, dá chance de loot em dobro (até 2x) e chance de saque total ao matar mobs. No nível 5, criar itens tem 50% de chance de não gastar os ingredientes.",
-    "en": "Improves loot quality, gives a chance of double loot (up to 2x), and a full drop chance when killing mobs. At level 5, crafting has a 50% chance to not use up the ingredients."
+    "pt": "Melhora qualidade de loot, multiplica o loot (nível 1: 50% de chance de 2x; níveis 2 a 5: 2x, 3x, 4x e 5x) e dá chance de saque total ao matar mobs. No nível 5, criar itens tem 50% de chance de não gastar os ingredientes.",
+    "en": "Improves loot quality, multiplies loot (level 1: 50% chance of 2x; levels 2 to 5: 2x, 3x, 4x and 5x), and gives a full drop chance when killing mobs. At level 5, crafting has a 50% chance to not use up the ingredients."
    },
    "bonus": [
     {
@@ -1427,24 +1427,24 @@ window.RPG_MOD = {
      },
      "faixas": [
       {
-       "pt": "+20% de chance de receber 2x o item",
-       "en": "+20% chance to receive 2x the item"
+       "pt": "50% de chance de 2x o item final",
+       "en": "50% chance of 2x the final item"
       },
       {
-       "pt": "+40% de chance de receber 2x o item",
-       "en": "+40% chance to receive 2x the item"
+       "pt": "2x o item final",
+       "en": "2x the final item"
       },
       {
-       "pt": "+60% de chance de receber 2x o item",
-       "en": "+60% chance to receive 2x the item"
+       "pt": "3x o item final",
+       "en": "3x the final item"
       },
       {
-       "pt": "+80% de chance de receber 2x o item",
-       "en": "+80% chance to receive 2x the item"
+       "pt": "4x o item final",
+       "en": "4x the final item"
       },
       {
-       "pt": "+100% de chance de receber 2x o item",
-       "en": "+100% chance to receive 2x the item"
+       "pt": "5x o item final",
+       "en": "5x the final item"
       }
      ]
     },
