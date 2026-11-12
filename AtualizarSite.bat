@@ -19,6 +19,16 @@ if errorlevel 1 (
   goto :fim
 )
 
+rem --- Libera a pasta no Git (evita o erro "dubious ownership" quando a pasta
+rem     foi criada por outra conta do Windows ou veio de outro PC/disco) ---
+set "PASTA=%CD:\=/%"
+git config --global --get-all safe.directory 2>nul | findstr /x /i /c:"%PASTA%" >nul
+if errorlevel 1 (
+  echo Liberando esta pasta no Git ^(safe.directory^)...
+  git config --global --add safe.directory "%PASTA%" || goto :falhou
+  echo.
+)
+
 rem --- Pasta sem Git (ex.: baixada em .zip): liga ao repositorio e baixa tudo ---
 if not exist ".git" (
   echo Esta pasta ainda nao esta ligada ao GitHub. Ligando agora...
