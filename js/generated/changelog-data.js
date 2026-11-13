@@ -1,6 +1,226 @@
 /* Gerado por tools/build.py a partir de release-notes/*.md. Não edite à mão. */
 window.RPG_CHANGELOG = [
   {
+    "version": "4.6",
+    "tag": "new",
+    "tagClass": "major",
+    "tagKey": "changelog.tag.new",
+    "pt": {
+      "title": "🌟 Atualização 4.6 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "✨ Novidades",
+          "items": [
+            "<strong>Aba Reino:</strong> nova aba no menu do assentamento.",
+            "<strong>Aba Reino:</strong> a visão geral mostra quantos colonos você tem e quantos têm cama, arma, armadura completa e conjunto completo.",
+            "<strong>Aba Reino:</strong> a visão geral mostra quantos colonos estão fora do assentamento.",
+            "<strong>Aba Reino:</strong> barras coloridas mostram o que os colonos estão fazendo, com o número e a porcentagem de cada atividade.",
+            "<strong>Aba Reino:</strong> as atividades são trabalhando, comendo, descansando, se divertindo, organizando, seguindo ordens, lutando, caído, em greve, fora e parado.",
+            "<strong>Aba Reino:</strong> o botão Ver de cada atividade lista os colonos nela.",
+            "<strong>Aba Reino:</strong> a aba se atualiza a cada 2 segundos, só enquanto está aberta.",
+            "<strong>Avisos:</strong> a aba Reino avisa quando um colono está caído, preso, sem cama ou faminto.",
+            "<strong>Avisos:</strong> a aba Reino avisa quando um colono está com a mochila cheia há mais de 30 segundos.",
+            "<strong>Avisos:</strong> a aba Reino avisa quando um colono está com a qualidade de vida no mínimo.",
+            "<strong>Avisos:</strong> a aba Reino avisa quando um colono está sem arma ou com menos de 3 peças de armadura.",
+            "<strong>Avisos:</strong> a aba Reino avisa quando um colono usa peças de conjuntos diferentes.",
+            "<strong>Avisos:</strong> a aba Reino avisa quando a arma de um colono é de estilo diferente da armadura.",
+            "<strong>Avisos:</strong> clicar num aviso ou numa atividade mostra só os colonos com ela.",
+            "<strong>Avisos:</strong> cada jogador escolhe quais avisos quer ver, e a escolha vale só para ele.",
+            "<strong>Lista de colonos:</strong> mostra profissão, personalidade, qualidade de vida e felicidade de cada colono.",
+            "<strong>Lista de colonos:</strong> ordena por nome, profissão, qualidade de vida, felicidade, personalidade ou avisos.",
+            "<strong>Lista de colonos:</strong> abrir um colono mostra a fome, a felicidade, o que ele está fazendo e os pensamentos dele.",
+            "<strong>Lista de colonos:</strong> colonos longe demais aparecem como longe ou fora do mapa, sem detalhes até voltarem.",
+            "<strong>Estilo do equipamento:</strong> novo botão no filtro de equipamento de cada colono, com três opções.",
+            "<strong>Estilo do equipamento:</strong> Padrão do jogo deixa tudo como antes.",
+            "<strong>Estilo do equipamento:</strong> A arma define mantém a arma do colono e prefere armaduras do mesmo estilo.",
+            "<strong>Estilo do equipamento:</strong> O conjunto define prefere arma e peças do estilo do conjunto vestido.",
+            "<strong>Estilo do equipamento:</strong> os estilos são corpo a corpo, distância, magia e invocação.",
+            "<strong>Estilo do equipamento:</strong> a escolha fica salva no colono, e colonos de mundos antigos começam no Padrão do jogo.",
+            "<strong>Estilo do equipamento:</strong> o botão Estilo de todos, no filtro de novos colonos, muda o estilo de todos os colonos, inclusive os que chegarem depois.",
+            "<strong>Estilo do equipamento:</strong> depois do Estilo de todos, cada colono ainda pode ser mudado no próprio filtro, e vale a escolha mais recente.",
+            "<strong>Botões por estilo:</strong> nova linha no filtro de equipamento com Corpo a corpo, Distância, Magia, Invocação e Outros.",
+            "<strong>Botões por estilo:</strong> cada botão libera ou bloqueia de uma vez todas as armaduras daquele estilo.",
+            "<strong>Botões por estilo:</strong> o conjunto vai inteiro: o peito e as botas que servem para vários estilos entram junto com o capacete de cada estilo (o botão Magia libera o Chapéu Rúnico e também o peito e as botas Rúnicos).",
+            "<strong>Botões por estilo:</strong> o botão fica verde com tudo liberado, vermelho com tudo bloqueado e normal quando está misturado.",
+            "<strong>Profissão Cozinhar:</strong> nova profissão, com coluna própria nas prioridades de trabalho.",
+            "<strong>Profissão Cozinhar:</strong> a panela, o assador e a estação de cozinha passam a ser atendidos só por ela.",
+            "<strong>Profissão Cozinhar:</strong> a receita \"qualquer ingrediente\" da panela e as entregas nas estações continuam funcionando.",
+            "<strong>Equipamento feito pelo colono:</strong> o colono sem arma ou armadura melhor nos baús pede para fazer na bancada.",
+            "<strong>Equipamento feito pelo colono:</strong> ele escolhe o melhor que dá para fazer com os seus materiais, respeitando o filtro de equipamento e o estilo dele.",
+            "<strong>Equipamento feito pelo colono:</strong> o pedido aparece como aviso no assentamento, com o nome do colono e os itens.",
+            "<strong>Equipamento feito pelo colono:</strong> os jogadores do assentamento recebem uma mensagem no chat para conferir os pedidos na aba Reino, no máximo uma por minuto.",
+            "<strong>Pedidos:</strong> nova visão Pedidos na aba Reino, com o ícone e a quantidade de cada item e material do pedido (o nome aparece ao passar o mouse).",
+            "<strong>Pedidos:</strong> botões Liberar e Recusar em cada pedido.",
+            "<strong>Pedidos:</strong> o pedido fica na lista até alguém decidir, mesmo com o colono em missão.",
+            "<strong>Pedidos:</strong> qualquer jogador com acesso ao assentamento pode decidir.",
+            "<strong>Pedidos:</strong> com Sempre liberar, o assentamento não pergunta mais.",
+            "<strong>Pedidos:</strong> o colono liberado passa a fabricação na frente dos outros trabalhos.",
+            "<strong>Pedidos:</strong> o colono liberado pega os materiais nos baús, faz um item por vez e veste cada um assim que fica pronto, sem passar pelo baú. A peça antiga vai para os baús.",
+            "<strong>Pedidos:</strong> o colono que sai em missão no meio continua a fabricação quando volta.",
+            "<strong>Pedidos:</strong> o pedido recusado vira o aviso Precisa de equipamento na aba Reino, com a lista do que colocar nos baús.",
+            "<strong>Pedidos:</strong> o aviso Precisa de equipamento some quando o colono pega os itens.",
+            "<strong>Pedidos:</strong> o colono só pede de novo quando o que ele precisa muda.",
+            "<strong>Pedidos:</strong> sem pedido na lista, a visão Pedidos explica o motivo: nenhuma bancada que faça equipamento, falta de materiais nos baús, colonos que já usam o melhor ou que não escolhem o próprio equipamento.",
+            "<strong>Pedra de Casa:</strong> novo cartão na Loja que compra mais um espaço de Pedra do Caminho na Pedra de Casa.",
+            "<strong>Pedra de Casa:</strong> cada espaço comprado vale em todos os assentamentos que são seus.",
+            "<strong>Pedra de Casa:</strong> até 50 espaços extras por padrão.",
+            "<strong>Pedra de Casa:</strong> o primeiro espaço custa 1500 moedas, e cada compra seguinte custa 500 moedas a mais.",
+            "<strong>Pedra de Casa:</strong> os espaços comprados ficam no seu personagem e nunca se perdem ao atualizar o mod.",
+            "<strong>Configuração:</strong> liga e desliga os botões por estilo, a profissão Cozinhar e o colono que faz o próprio equipamento.",
+            "<strong>Configuração:</strong> com a profissão Cozinhar desligada, as estações de cozinha voltam ao trabalho comum de fabricação.",
+            "<strong>Configuração:</strong> ajusta quantos pontos de qualidade de vida mínima cada nível do Mestre dos Reinos dá, de 0 (desliga) até 10.",
+            "<strong>Configuração:</strong> o dono do mundo ajusta o custo dos espaços da Pedra de Casa.",
+            "<strong>Configuração:</strong> o dono do mundo ajusta quantos espaços dá para comprar, de 0 (desliga a compra) até 500."
+          ]
+        },
+        {
+          "heading": "🛠️ Qualidade de vida",
+          "items": [
+            "As abas do menu do assentamento dividem a largura pelo tamanho do nome.",
+            "Nomes longos de aba, como \"Prioridades de trabalho\", aparecem inteiros."
+          ]
+        },
+        {
+          "heading": "⚡ Desempenho",
+          "items": [
+            "Os colonos pesam menos no jogo em assentamentos grandes.",
+            "Os bônus de rancho e de pesca do assentamento pesam menos no jogo."
+          ]
+        },
+        {
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
+          "items": [
+            "Com o equipamento por classe do Safe Haven ligado, o colono em A arma define ou O conjunto define segue a sua escolha.",
+            "O colono em Padrão do jogo continua preferindo o equipamento da classe do Safe Haven.",
+            "A aba Reino convive com a aba Felicidade do Safe Haven, sem nomes de aba cortados."
+          ]
+        },
+        {
+          "heading": "👑 Mestre dos Reinos",
+          "items": [
+            "Cada nível da classe garante 1 ponto de qualidade de vida mínima aos colonos: 1 no nível 1 até 5 no nível 5.",
+            "O colono novo já chega com essa qualidade de vida e os bônus dela.",
+            "A qualidade de vida continua subindo acima do mínimo do jeito normal do jogo.",
+            "O aviso \"Os colonos têm baixa qualidade de vida\" não aparece mais com a classe.",
+            "A aba Reino mostra a qualidade de vida média dos colonos e quantos estão no nível máximo.",
+            "A aba Reino avisa quando a felicidade de um colono chega perto do ponto de greve.",
+            "O aviso de greve some no nível máximo da classe, em que os colonos não entram mais em greve.",
+            "Os colonos cozinham 25% mais rápido, ajustável de 0% a 100%.",
+            "Os colonos fazem o próprio equipamento 25% mais rápido, ajustável de 0% a 100%."
+          ]
+        }
+      ],
+      "note": "<strong>Bom jogo! 🎮</strong>"
+    },
+    "en": {
+      "title": "🌟 Update 4.6 - RPG Skills 🌟",
+      "sections": [
+        {
+          "heading": "✨ What's new",
+          "items": [
+            "<strong>Kingdom tab:</strong> new tab in the settlement menu.",
+            "<strong>Kingdom tab:</strong> the overview shows how many settlers you have and how many have a bed, a weapon, full armor and a full set.",
+            "<strong>Kingdom tab:</strong> the overview shows how many settlers are away from the settlement.",
+            "<strong>Kingdom tab:</strong> colored bars show what settlers are doing, with the number and percentage for each activity.",
+            "<strong>Kingdom tab:</strong> the activities are working, eating, resting, having fun, organizing, following orders, fighting, downed, on strike, away and idle.",
+            "<strong>Kingdom tab:</strong> each activity's Show button lists the settlers in it.",
+            "<strong>Kingdom tab:</strong> the tab updates every 2 seconds, only while it is open.",
+            "<strong>Warnings:</strong> the Kingdom tab warns when a settler is downed, trapped, without a bed or starving.",
+            "<strong>Warnings:</strong> the Kingdom tab warns when a settler's backpack has been full for more than 30 seconds.",
+            "<strong>Warnings:</strong> the Kingdom tab warns when a settler's quality of life is at the minimum.",
+            "<strong>Warnings:</strong> the Kingdom tab warns when a settler has no weapon or fewer than 3 armor pieces.",
+            "<strong>Warnings:</strong> the Kingdom tab warns when a settler wears pieces from different sets.",
+            "<strong>Warnings:</strong> the Kingdom tab warns when a settler's weapon is a different style from the armor.",
+            "<strong>Warnings:</strong> clicking a warning or an activity shows only the settlers with it.",
+            "<strong>Warnings:</strong> each player picks which warnings to see, and the choice is just for them.",
+            "<strong>Settler list:</strong> shows each settler's job, personality, quality of life and happiness.",
+            "<strong>Settler list:</strong> sorts by name, job, quality of life, happiness, personality or warnings.",
+            "<strong>Settler list:</strong> opening a settler shows hunger, happiness, what they are doing and their thoughts.",
+            "<strong>Settler list:</strong> settlers too far away show as far away or off the map, with no details until they come back.",
+            "<strong>Gear style:</strong> new button in each settler's equipment filter, with three options.",
+            "<strong>Gear style:</strong> Game default keeps everything as before.",
+            "<strong>Gear style:</strong> Weapon decides keeps the settler's weapon and prefers armor of the same style.",
+            "<strong>Gear style:</strong> Armor set decides prefers a weapon and pieces matching the set being worn.",
+            "<strong>Gear style:</strong> the styles are melee, ranged, magic and summon.",
+            "<strong>Gear style:</strong> the choice is saved on the settler, and settlers from older worlds start on Game default.",
+            "<strong>Gear style:</strong> the Everyone's style button, in the new settlers filter, changes the style of every settler, including those who arrive later.",
+            "<strong>Gear style:</strong> after Everyone's style, each settler can still be changed in their own filter, and the most recent choice counts.",
+            "<strong>Style buttons:</strong> new row in the equipment filter with Melee, Ranged, Magic, Summon and Other.",
+            "<strong>Style buttons:</strong> each button allows or blocks every armor piece of that style at once.",
+            "<strong>Style buttons:</strong> the whole set goes together: chest pieces and boots shared by several styles come along with the helmet of each style (the Magic button allows the Runic Hat and also the Runic chest and boots).",
+            "<strong>Style buttons:</strong> the button turns green with everything allowed, red with everything blocked and normal when mixed.",
+            "<strong>Cooking job:</strong> new job, with its own column in the work priorities.",
+            "<strong>Cooking job:</strong> the cooking pot, the roasting station and the cooking station are now handled only by it.",
+            "<strong>Cooking job:</strong> the cooking pot's \"any ingredient\" recipe and deliveries to stations keep working.",
+            "<strong>Settler-made gear:</strong> a settler with no better weapon or armor in the chests asks to make it at a workstation.",
+            "<strong>Settler-made gear:</strong> they pick the best they can make with your materials, following their equipment filter and style.",
+            "<strong>Settler-made gear:</strong> the request shows as a settlement notice, with the settler's name and the items.",
+            "<strong>Settler-made gear:</strong> the settlement's players get a chat message to check the requests in the Kingdom tab, at most once a minute.",
+            "<strong>Requests:</strong> new Requests view in the Kingdom tab, with the icon and amount of each item and material in the request (the name shows on hover).",
+            "<strong>Requests:</strong> Allow and Refuse buttons on each request.",
+            "<strong>Requests:</strong> the request stays in the list until someone decides, even with the settler on a mission.",
+            "<strong>Requests:</strong> any player with access to the settlement can decide.",
+            "<strong>Requests:</strong> with Always allow, the settlement stops asking.",
+            "<strong>Requests:</strong> an allowed settler puts the crafting ahead of their other work.",
+            "<strong>Requests:</strong> an allowed settler takes the materials from the chests, makes one item at a time and puts each one on as soon as it is done, without going through the chests. The old piece goes to the chests.",
+            "<strong>Requests:</strong> a settler who leaves on a mission halfway carries on crafting when they come back.",
+            "<strong>Requests:</strong> a refused request becomes the Needs gear warning in the Kingdom tab, with the list of what to put in the chests.",
+            "<strong>Requests:</strong> the Needs gear warning goes away when the settler takes the items.",
+            "<strong>Requests:</strong> the settler only asks again when what they need changes.",
+            "<strong>Requests:</strong> with no requests in the list, the Requests view explains why: no workstation that makes gear, missing materials in the chests, settlers who already use the best or who do not choose their own equipment.",
+            "<strong>Homestone:</strong> new Shop card that buys one more Waystone space on the Homestone.",
+            "<strong>Homestone:</strong> each space bought counts in every settlement you own.",
+            "<strong>Homestone:</strong> up to 50 extra spaces by default.",
+            "<strong>Homestone:</strong> the first space costs 1500 coins, and each next purchase costs 500 coins more.",
+            "<strong>Homestone:</strong> spaces bought stay on your character and are never lost when the mod updates.",
+            "<strong>Settings:</strong> turn the style buttons, the Cooking job and settler-made gear on or off.",
+            "<strong>Settings:</strong> with the Cooking job off, the cooking stations go back to the regular crafting job.",
+            "<strong>Settings:</strong> set how many points of minimum quality of life each Realm Master level gives, from 0 (off) up to 10.",
+            "<strong>Settings:</strong> the world owner sets the cost of Homestone spaces.",
+            "<strong>Settings:</strong> the world owner sets how many spaces can be bought, from 0 (turns the purchase off) up to 500."
+          ]
+        },
+        {
+          "heading": "🛠️ Quality of life",
+          "items": [
+            "Settlement menu tabs split the width by the size of their names.",
+            "Long tab names, like \"Work priorities\", show in full."
+          ]
+        },
+        {
+          "heading": "⚡ Performance",
+          "items": [
+            "Settlers weigh less on the game in big settlements.",
+            "The settlement's ranch and fishing bonuses weigh less on the game."
+          ]
+        },
+        {
+          "heading": "🤝 Compatibility with Safe Haven QOL",
+          "items": [
+            "With Safe Haven's class gear on, a settler on Weapon decides or Armor set decides follows your choice.",
+            "A settler on Game default keeps preferring Safe Haven's class gear.",
+            "The Kingdom tab works alongside Safe Haven's Happiness tab, with no cut-off tab names."
+          ]
+        },
+        {
+          "heading": "👑 Realm Master",
+          "items": [
+            "Each class level guarantees settlers 1 point of minimum quality of life: 1 at level 1 up to 5 at level 5.",
+            "New settlers arrive with that quality of life and its bonuses.",
+            "Quality of life keeps rising above the minimum the game's usual way.",
+            "The \"Settlers have low quality of life\" notice no longer shows with the class.",
+            "The Kingdom tab shows the settlers' average quality of life and how many are at the top level.",
+            "The Kingdom tab warns when a settler's happiness gets close to the strike point.",
+            "The strike warning goes away at the class's top level, where settlers no longer go on strike.",
+            "Settlers cook 25% faster, adjustable from 0% to 100%.",
+            "Settlers make their own gear 25% faster, adjustable from 0% to 100%."
+          ]
+        }
+      ],
+      "note": "<strong>Have fun! 🎮</strong>"
+    }
+  },
+  {
     "version": "4.5",
     "tag": "new",
     "tagClass": "major",
@@ -11,25 +231,55 @@ window.RPG_CHANGELOG = [
         {
           "heading": "✨ Novidades",
           "items": [
-            "<strong>Multiplicador do Mestre do Loot na configuração:</strong> uma opção nova escolhe quanto o Mestre do Loot multiplica no nível 5 (de 2x a 50x, padrão 5x). Do nível 2 em diante, o loot sobe aos poucos até esse valor."
+            "<strong>Configuração:</strong> nova opção escolhe quanto o Mestre do Loot multiplica no nível 5, de 2x a 50x, padrão 5x.",
+            "<strong>Configuração:</strong> do nível 2 em diante, o loot sobe aos poucos até esse valor.",
+            "<strong>Inteligência dos lacaios:</strong> os lacaios da Necromancia ganharam um jeito próprio de lutar.",
+            "<strong>Inteligência dos lacaios:</strong> eles atacam o inimigo que você está acertando ou que está te atacando.",
+            "<strong>Inteligência dos lacaios:</strong> se não houver, atacam o inimigo mais perto deles ao seu redor.",
+            "<strong>Inteligência dos lacaios:</strong> vão direto até ficar no alcance do ataque, param ali e atacam sem parar, sem vagar, fugir ou ficar andando para lá e para cá.",
+            "<strong>Inteligência dos lacaios:</strong> sem inimigos, ficam do seu lado.",
+            "<strong>Inteligência dos lacaios:</strong> cada lacaio usa só o estilo de ataque do monstro: o tiro ou a magia dele, o golpe com a animação dele ou o dano ao encostar.",
+            "<strong>Inteligência dos lacaios:</strong> a sequência de ataques e pausas que o monstro tinha não vale para o lacaio.",
+            "<strong>Inteligência dos lacaios:</strong> os ataques saem num ritmo constante, com no máximo meio segundo entre um e outro, e ficam mais rápidos com o nível.",
+            "<strong>Inteligência dos lacaios:</strong> vale para todos os lacaios, inclusive os que voavam em círculos em volta dos inimigos sem atacar.",
+            "<strong>Inteligência dos lacaios:</strong> vale também para os que se teleportavam sozinhos, como o Aprendiz do Vazio."
           ]
         },
         {
-          "heading": "⚙️ Melhorias",
+          "heading": "⚡ Desempenho",
           "items": [
-            "<strong>Mestre do Loot até 5x:</strong> em vez de só uma chance de dobrar, o loot agora cresce a cada nível: no nível 1, <strong>50% de chance de 2x</strong>; nos níveis 2 a 5, sempre <strong>2x</strong>, <strong>3x</strong>, <strong>4x</strong> e <strong>5x</strong>. A economia de ingredientes do nível 5 continua igual.",
-            "<strong>Lacaios da Necromancia mais rápidos a cada nível:</strong> além do dano, os lacaios agora ganham <strong>velocidade de ataque</strong> (até +75%) e <strong>velocidade de movimento</strong> (até +50%) ao subir de nível e com a Maestria. A velocidade total do lacaio tem um teto fixo de 2x, para ele nunca sair voando pelo mapa. A velocidade de ataque vale para todo tipo de ataque: golpes, tiros, magias e dano por encostar. Os valores aparecem no cartão do lacaio no Grimório.",
-            "<strong>Nova inteligência dos lacaios:</strong> os lacaios da Necromancia ganharam um jeito próprio de lutar. Eles atacam o inimigo que você está acertando (ou que está te atacando); se não houver, o inimigo mais perto deles ao seu redor. Vão direto até ficar no alcance do seu ataque, param ali e atacam sem parar, sem vagar, fugir ou ficar andando para lá e para cá. Sem inimigos, ficam do seu lado. Cada lacaio usa só o estilo de ataque do monstro (o tiro ou a magia dele, o golpe com a animação dele ou o dano ao encostar), sem a sequência de ataques e pausas que o monstro tinha. Os ataques saem num ritmo constante, com no máximo meio segundo entre um e outro, e ficam mais rápidos com o nível. Isso vale para todos os lacaios, inclusive os que voavam em círculos em volta dos inimigos sem atacar e os que se teleportavam sozinhos, como o Aprendiz do Vazio.",
-            "<strong>Tiros e magias que acertam:</strong> os projéteis dos lacaios agora viram com força para o inimigo, miram direto quando chegam perto (sem ficar girando em volta dele) e voam o bastante para alcançá-lo.",
-            "<strong>Lacaios sem \"teletransporte\":</strong> a posição dos lacaios agora é atualizada várias vezes por segundo para todos os jogadores (antes era só de tempos em tempos, e o lacaio \"pulava\" quando a posição certa chegava). A velocidade do lacaio também é a mesma para todos, inclusive lacaios que são animais, então ele anda liso."
+            "Com o alcance maior de descoberta do mapa (Mestre das Cavernas e Mestre da Construção), andar e explorar o mundo não trava mais.",
+            "Só a parte nova que entra no alcance é revelada, em vez de toda a área em volta a cada poucos passos.",
+            "A área inteira é revelada só de vez em quando, e o mapa é revelado do mesmo jeito.",
+            "O brilho extra do Cinto brilhante e da Lanterna de fogo-fátuo com a Ruína da Escuridão pesa bem menos, sem mudar a luz.",
+            "Os textos do mod pesam menos no jogo.",
+            "Fazendas grandes pesam menos no servidor, porque cada planta é conferida no máximo uma vez por segundo.",
+            "O crescimento acelerado das plantas continua igual.",
+            "Os bônus de classe, o alcance de interação e a caça aos cavernídeos pelos lacaios só refazem as contas quando algo muda."
           ]
         },
         {
-          "heading": "🚀 Desempenho",
+          "heading": "💰 Mestre do Loot",
           "items": [
-            "<strong>Andar e explorar o mapa sem travar:</strong> com o alcance maior de descoberta do mapa (Mestre das Cavernas e Mestre da Construção), andar pelo mundo pesava muito, porque toda a área em volta era revelada de novo a cada poucos passos. Agora só a parte nova que entrou no alcance é revelada, e a área inteira só de vez em quando. O mapa é revelado do mesmo jeito.",
-            "<strong>Acessórios que brilham mais leves:</strong> o brilho extra do Cinto brilhante e da Lanterna de fogo-fátuo com a Ruína da Escuridão pesa bem menos a cada instante, sem mudar a luz.",
-            "<strong>Jogo mais leve no geral:</strong> os textos do mod deixaram de procurar o idioma do jogo do zero várias vezes por quadro; fazendas grandes pesam menos no servidor, porque cada planta é conferida no máximo uma vez por segundo (o crescimento acelerado continua igual); os bônus de classe, o alcance de interação e a caça aos cavernídeos pelos lacaios refazem as contas só quando algo muda."
+            "Em vez de só uma chance de dobrar, o loot cresce a cada nível.",
+            "No nível 1, 50% de chance de 2x.",
+            "Nos níveis 2 a 5, sempre 2x, 3x, 4x e 5x.",
+            "A economia de ingredientes do nível 5 continua igual."
+          ]
+        },
+        {
+          "heading": "💀 Necromancia",
+          "items": [
+            "Além do dano, os lacaios ganham até +75% de velocidade de ataque ao subir de nível e com a Maestria.",
+            "Os lacaios também ganham até +50% de velocidade de movimento ao subir de nível e com a Maestria.",
+            "A velocidade total do lacaio tem um teto fixo de 2x, para ele nunca sair voando pelo mapa.",
+            "A velocidade de ataque vale para todo tipo de ataque: golpes, tiros, magias e dano por encostar.",
+            "Os valores aparecem no cartão do lacaio no Grimório.",
+            "Os tiros e magias dos lacaios viram com força para o inimigo.",
+            "Os projéteis miram direto quando chegam perto, sem ficar girando em volta do inimigo.",
+            "Os projéteis voam o bastante para alcançar o inimigo.",
+            "A posição dos lacaios é atualizada várias vezes por segundo para todos os jogadores, e não só de tempos em tempos, então o lacaio não \"pula\" mais.",
+            "A velocidade do lacaio é a mesma para todos os jogadores, inclusive lacaios que são animais, então ele anda liso."
           ]
         }
       ],
@@ -41,25 +291,55 @@ window.RPG_CHANGELOG = [
         {
           "heading": "✨ What's new",
           "items": [
-            "<strong>Loot Master multiplier in the settings:</strong> a new option picks how much Loot Master multiplies at level 5 (from 2x to 50x, default 5x). From level 2 on, loot rises step by step up to that value."
+            "<strong>Settings:</strong> a new option picks how much Loot Master multiplies at level 5, from 2x to 50x, default 5x.",
+            "<strong>Settings:</strong> from level 2 on, loot rises step by step up to that value.",
+            "<strong>Minion intelligence:</strong> Necromancy minions got their own way of fighting.",
+            "<strong>Minion intelligence:</strong> they attack the enemy you are hitting or that is attacking you.",
+            "<strong>Minion intelligence:</strong> if there is none, they attack the enemy closest to them around you.",
+            "<strong>Minion intelligence:</strong> they go straight until they are in range of their attack, stop there and attack nonstop, without wandering, running away or pacing back and forth.",
+            "<strong>Minion intelligence:</strong> with no enemies, they stay by your side.",
+            "<strong>Minion intelligence:</strong> each minion uses only the monster's attack style: its shot or spell, its strike with its animation, or contact damage.",
+            "<strong>Minion intelligence:</strong> the attack sequence and pauses the monster had don't apply to the minion.",
+            "<strong>Minion intelligence:</strong> attacks come out at a steady pace, at most half a second apart, and get faster with level.",
+            "<strong>Minion intelligence:</strong> this applies to every minion, including those that circled around enemies without attacking.",
+            "<strong>Minion intelligence:</strong> it also applies to those that teleported on their own, like the Void Apprentice."
           ]
         },
         {
-          "heading": "⚙️ Improvements",
+          "heading": "⚡ Performance",
           "items": [
-            "<strong>Loot Master up to 5x:</strong> instead of just a chance to double, loot now grows at every level: at level 1, a <strong>50% chance of 2x</strong>; at levels 2 to 5, always <strong>2x</strong>, <strong>3x</strong>, <strong>4x</strong> and <strong>5x</strong>. The level 5 ingredient saving stays the same.",
-            "<strong>Faster Necromancy minions every level:</strong> besides damage, minions now gain <strong>attack speed</strong> (up to +75%) and <strong>movement speed</strong> (up to +50%) as they level up and with Mastery. The minion's total speed has a fixed cap of 2x, so it never zooms across the map. Attack speed works for every kind of attack: strikes, shots, spells and contact damage. The values show on the minion's card in the Grimoire.",
-            "<strong>New minion intelligence:</strong> Necromancy minions got their own way of fighting. They attack the enemy you are hitting (or that is attacking you); if there is none, the enemy closest to them around you. They go straight until they are in range of their attack, stop there and attack nonstop, without wandering, running away or pacing back and forth. With no enemies, they stay by your side. Each minion uses only the monster's attack style (its shot or spell, its strike with its animation, or contact damage), without the attack sequence and pauses the monster had. Attacks come out at a steady pace, at most half a second apart, and get faster with level. This applies to every minion, including those that circled around enemies without attacking and those that teleported on their own, like the Void Apprentice.",
-            "<strong>Shots and spells that hit:</strong> minion projectiles now turn hard toward the enemy, aim straight at it when close (no more circling around it) and fly far enough to reach it.",
-            "<strong>No more minion \"teleporting\":</strong> minion positions are now updated several times per second for every player (before it was only every few seconds, and the minion \"jumped\" when the right position arrived). The minion's speed is also the same for everyone, including minions that are animals, so it moves smoothly."
+            "With the bigger map discovery range (Cavern Master and Construction Master), walking and exploring the world no longer stutters.",
+            "Only the new part that comes into range is revealed, instead of the whole area around you every few steps.",
+            "The whole area is revealed only now and then, and the map is revealed the same way.",
+            "The extra glow of the Shine belt and the Will-o'-wisp lantern with Dark Ruin costs much less, without changing the light.",
+            "The mod's texts weigh less on the game.",
+            "Big farms weigh less on the server, since each plant is checked at most once per second.",
+            "Faster plant growth stays the same.",
+            "Class bonuses, interaction range and minions hunting cavelings only redo their math when something changes."
           ]
         },
         {
-          "heading": "🚀 Performance",
+          "heading": "💰 Loot Master",
           "items": [
-            "<strong>Walk and explore the map without stutter:</strong> with the bigger map discovery range (Cavern Master and Construction Master), walking around was heavy, because the whole area around you was revealed again every few steps. Now only the new part that came into range is revealed, and the whole area only now and then. The map is revealed the same way.",
-            "<strong>Lighter glowing trinkets:</strong> the extra glow of the Shine belt and the Will-o'-wisp lantern with Dark Ruin costs much less every moment, without changing the light.",
-            "<strong>Lighter game overall:</strong> the mod's texts no longer look up the game language from scratch several times per frame; big farms weigh less on the server, since each plant is checked at most once per second (faster growth stays the same); class bonuses, interaction range and minions hunting cavelings only redo their math when something changes."
+            "Instead of just a chance to double, loot grows at every level.",
+            "At level 1, a 50% chance of 2x.",
+            "At levels 2 to 5, always 2x, 3x, 4x and 5x.",
+            "The level 5 ingredient saving stays the same."
+          ]
+        },
+        {
+          "heading": "💀 Necromancy",
+          "items": [
+            "Besides damage, minions gain up to +75% attack speed as they level up and with Mastery.",
+            "Minions also gain up to +50% movement speed as they level up and with Mastery.",
+            "The minion's total speed has a fixed cap of 2x, so it never zooms across the map.",
+            "Attack speed works for every kind of attack: strikes, shots, spells and contact damage.",
+            "The values show on the minion's card in the Grimoire.",
+            "Minion shots and spells turn hard toward the enemy.",
+            "Projectiles aim straight at the enemy when close, with no more circling around it.",
+            "Projectiles fly far enough to reach the enemy.",
+            "Minion positions are updated several times per second for every player, not just every few seconds, so the minion no longer \"jumps\".",
+            "The minion's speed is the same for every player, including minions that are animals, so it moves smoothly."
           ]
         }
       ],
@@ -77,44 +357,97 @@ window.RPG_CHANGELOG = [
         {
           "heading": "✨ Novidades",
           "items": [
-            "<strong>Slots do inventário na loja:</strong> a loja ganhou um cartão novo, \"Slots do inventário\". Cada compra dá <strong>+10 slots</strong> no seu inventário, até <strong>500</strong> no total. A compra é só sua e fica com o seu personagem, inclusive quando o mod é atualizado. O preço sobe um pouco a cada compra e aparece no cartão antes de comprar.",
-            "<strong>Inventário com rolagem:</strong> quando o inventário passa dos 50 slots de sempre, ele ganha uma barra de rolagem. A barra de atalhos continua no mesmo lugar, na primeira linha.",
-            "<strong>Baús até 500 slots:</strong> o limite dos slots extras de baú subiu de 400 para 500, igual ao do inventário. Quem já tinha o limite de 400 na configuração passa para 500 sozinho; um limite que você mudou à mão continua como está.",
-            "<strong>Aura nos lacaios:</strong> o contorno dos aliados da Necromancia virou uma aura suave em volta do corpo. Dourada nos lacaios permanentes do ritual e branca nos temporários do Exército dos Mortos.",
-            "<strong>Moradores abastecem as estações:</strong> ao guardar um item, inclusive a colheita que estão carregando, os moradores agora dão prioridade às fornalhas, composteiras e outras estações que tenham uma receita configurada para ele, antes dos baús. O que não couber na estação vai para o baú, como sempre. Estações sem receita daquele item não mudam nada.",
-            "<strong>Composteira só com sementes:</strong> o filtro de ingredientes do fertilizante ganhou o botão \"Somente sementes\". Com o filtro ajustado, os moradores levam as sementes direto para a composteira. Sem ajustar o filtro, ela não recebe a colheita inteira.",
-            "<strong>Janela dos moradores em português:</strong> felicidade, pensamentos e personalidades dos moradores agora aparecem em português, mesmo quando o jogo mostrava esses textos em inglês.",
-            "<strong>Bônus de XP 25x e 50x:</strong> a loja ganhou dois multiplicadores novos, com preço proporcional aos outros, e dois atalhos para configurar nos controles.",
-            "<strong>Slots da loja por baú:</strong> cada baú agora tem um botão para ativar ou desativar os slots comprados. Desativado, ele fica no tamanho padrão. Se o baú estiver cheio demais para encolher, nada muda e nenhum item se perde.",
-            "<strong>Caixas térmicas com slots da loja:</strong> as caixas térmicas também ganham os slots comprados e o mesmo botão. Os filtros da janela delas mostram só comida.",
-            "<strong>Slot do item em destaque:</strong> o item que aparece em cima do baú agora é escolhido em um slot próprio, à esquerda do botão da moldura na janela do baú. Clique segurando o item: ele continua com você e fica ali como um item fantasma. Com a mão vazia, o clique tira o item do slot.",
-            "<strong>Fertilizante só de sementes:</strong> a composteira ganhou uma receita nova na lista de receitas, com o ícone de uma semente, que usa apenas sementes. Com ela na composteira, os moradores levam as sementes direto para lá.",
-            "<strong>Panela com \"Qualquer receita\":</strong> a panela ganhou a receita \"Qualquer receita\" na lista de receitas dos moradores. Com ela, os moradores cozinham qualquer prato da panela que tenha os ingredientes nos baús da vila, variando entre os pratos. Os modos \"fazer X vezes\", \"até ter X\" e \"sempre\" funcionam como nas outras receitas (no \"até ter X\", vale para cada prato). Ela não aparece na sua bancada.",
-            "<strong>Botão de cor do baú no lugar certo (Safe Haven QOL):</strong> com o Safe Haven QOL, o botão de cor do baú fica fixo logo à direita do botão de renomear."
+            "<strong>Slots do inventário:</strong> novo cartão \"Slots do inventário\" na loja.",
+            "<strong>Slots do inventário:</strong> cada compra dá +10 slots no seu inventário, até 500 no total.",
+            "<strong>Slots do inventário:</strong> a compra é só sua e fica com o seu personagem, inclusive quando o mod é atualizado.",
+            "<strong>Slots do inventário:</strong> o preço sobe um pouco a cada compra e aparece no cartão antes de comprar.",
+            "<strong>Slots do inventário:</strong> se o limite de slots for diminuído na configuração, os itens das linhas que sumiriam vão para os espaços vazios.",
+            "<strong>Slots do inventário:</strong> se não houver espaço, o inventário fica do tamanho necessário para guardar tudo, e nenhum item se perde.",
+            "<strong>Inventário com rolagem:</strong> passando dos 50 slots de sempre, o inventário ganha uma barra de rolagem.",
+            "<strong>Inventário com rolagem:</strong> a barra de atalhos continua no mesmo lugar, na primeira linha.",
+            "<strong>Slots de baú:</strong> o limite dos slots extras de baú subiu de 400 para 500, igual ao do inventário.",
+            "<strong>Slots de baú:</strong> quem tinha o limite de 400 na configuração passa para 500 sozinho, e um limite mudado à mão continua como está.",
+            "<strong>Slots de baú:</strong> cada baú tem um botão para ativar ou desativar os slots comprados na loja.",
+            "<strong>Slots de baú:</strong> desativado, o baú fica no tamanho padrão.",
+            "<strong>Slots de baú:</strong> se o baú estiver cheio demais para encolher, nada muda e nenhum item se perde.",
+            "<strong>Caixas térmicas:</strong> as caixas térmicas também ganham os slots comprados e o mesmo botão.",
+            "<strong>Caixas térmicas:</strong> os filtros da janela delas mostram só comida.",
+            "<strong>Item em destaque:</strong> o item que aparece em cima do baú é escolhido num slot próprio, à esquerda do botão da moldura na janela do baú.",
+            "<strong>Item em destaque:</strong> clique segurando o item: ele continua com você e fica no slot como um item fantasma.",
+            "<strong>Item em destaque:</strong> com a mão vazia, o clique tira o item do slot.",
+            "<strong>Aura dos lacaios:</strong> o contorno dos aliados da Necromancia virou uma aura suave em volta do corpo.",
+            "<strong>Aura dos lacaios:</strong> a aura é dourada nos lacaios permanentes do ritual e branca nos temporários do Exército dos Mortos.",
+            "<strong>Moradores abastecem as estações:</strong> ao guardar um item, inclusive a colheita que carregam, os moradores dão prioridade às fornalhas, composteiras e outras estações com receita configurada para ele, antes dos baús.",
+            "<strong>Moradores abastecem as estações:</strong> o que não couber na estação vai para o baú, como sempre.",
+            "<strong>Moradores abastecem as estações:</strong> estações sem receita daquele item não mudam nada.",
+            "<strong>Composteira:</strong> o filtro de ingredientes do fertilizante ganhou o botão \"Somente sementes\".",
+            "<strong>Composteira:</strong> com o filtro ajustado, os moradores levam as sementes direto para a composteira.",
+            "<strong>Composteira:</strong> sem ajustar o filtro, a composteira não recebe a colheita inteira.",
+            "<strong>Composteira:</strong> nova receita de fertilizante só de sementes na lista de receitas, com o ícone de uma semente.",
+            "<strong>Composteira:</strong> com essa receita na composteira, os moradores levam as sementes direto para lá.",
+            "<strong>Panela:</strong> nova receita \"Qualquer receita\" na lista de receitas dos moradores.",
+            "<strong>Panela:</strong> com ela, os moradores cozinham qualquer prato da panela que tenha os ingredientes nos baús da vila, variando entre os pratos.",
+            "<strong>Panela:</strong> os modos \"fazer X vezes\", \"até ter X\" e \"sempre\" funcionam como nas outras receitas, e no \"até ter X\" vale para cada prato.",
+            "<strong>Panela:</strong> a \"Qualquer receita\" não aparece na sua bancada.",
+            "<strong>Bônus de XP:</strong> dois multiplicadores novos na loja, 25x e 50x, com preço proporcional aos outros.",
+            "<strong>Bônus de XP:</strong> dois atalhos novos para configurar nos controles.",
+            "<strong>Janela dos moradores:</strong> felicidade, pensamentos e personalidades dos moradores aparecem em português, mesmo quando o jogo mostrava esses textos em inglês.",
+            "<strong>Configuração:</strong> o máximo de blocos do Minerador de Veios, o alcance das estações de criação, o raio do empilhamento rápido, o raio do XP em equipe e o raio de ataque das invocações podem chegar a 500.",
+            "<strong>Configuração:</strong> valores muito altos podem pesar em mundos grandes."
           ]
         },
         {
-          "heading": "⚙️ Melhorias",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "<strong>Mestre dos Reinos mais útil desde o começo:</strong> a felicidade mínima dos moradores agora é 50, 60, 70, 80 e 100 nos níveis 1 a 5. A qualidade de vida para de cair já no nível 1 e passa a subir no nível 4.",
-            "<strong>Limites de alcance até 500:</strong> o máximo de blocos do Minerador de Veios, o alcance das estações de criação, o raio do empilhamento rápido, o raio do XP em equipe e o raio de ataque das invocações agora podem chegar a 500 na configuração. Valores muito altos podem pesar em mundos grandes.",
-            "<strong>Rolagem mais suave nos slots:</strong> nos baús grandes e no inventário, cada clique da roda do mouse anda exatamente uma linha de slots, sem parar no meio de uma linha. No touchpad, a rolagem vai somando até completar uma linha.",
-            "<strong>Jogo mais leve:</strong> a aura dos lacaios e o ícone em cima dos baús pesam menos a cada quadro, a janela do baú não fica mais ocupando memória depois de fechada, e os moradores decidem mais rápido em qual estação guardar a colheita.",
-            "<strong>Nenhum item se perde:</strong> se o limite de slots do inventário for diminuído na configuração, os itens das linhas que sumiriam vão para os espaços vazios. Se não houver espaço, o inventário fica do tamanho necessário para guardar tudo."
+            "Nos baús grandes e no inventário, cada clique da roda do mouse anda exatamente uma linha de slots, sem parar no meio.",
+            "No touchpad, a rolagem vai somando até completar uma linha."
+          ]
+        },
+        {
+          "heading": "⚡ Desempenho",
+          "items": [
+            "A aura dos lacaios pesa menos no jogo.",
+            "O ícone em cima dos baús pesa menos no jogo.",
+            "A janela do baú deixa de pesar no jogo depois de fechada.",
+            "Os moradores decidem mais rápido em qual estação guardar a colheita."
+          ]
+        },
+        {
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
+          "items": [
+            "O botão de cor do baú fica fixo logo à direita do botão de renomear."
           ]
         },
         {
           "heading": "🔧 Correções",
           "items": [
-            "<strong>Alcance das Estações não volta mais para 15:</strong> o alcance comprado na loja voltava ao normal toda vez que o jogo era reiniciado no jogo solo (e para quem hospeda o mundo). Agora ele fica salvo no mundo.",
-            "<strong>Textos da aba Status não saem mais do cartão:</strong> bônus com nome ou descrição longos (como o da Necromancia) cortavam o nome e passavam por cima do cartão de baixo. Agora, quando não cabem lado a lado, o nome fica em cima e o valor embaixo, e o cartão cresce para caber tudo.",
-            "<strong>Minerador de Veios obedece à configuração:</strong> o minério ignorava o máximo de blocos, e o modo avançado parava em 20 blocos e 3 blocos de distância, não importava o valor escolhido. Agora a mineração vai até o número configurado, em qualquer modo. Atenção: no valor padrão de 20, veios maiores agora param em 20 blocos.",
-            "<strong>Opções da configuração que não faziam nada:</strong> desligar Administração Rica agora remove o bônus de XP dos colonos, e desligar Administração Rica ou Especialista em Incursão tira essas passivas da lista. Multiplicador de XP removido da configuração fica indisponível na loja.",
-            "<strong>Comando de slots de baú:</strong> o comando de administrador agora respeita o limite e o passo de slots da configuração, e as mensagens dele mostram os números da configuração.",
-            "<strong>Aura dos lacaios:</strong> a aura agora aparece em todos os lacaios, inclusive nos de corpo humano, em dourado nos permanentes e em branco nos temporários.",
-            "<strong>Mestre dos Reinos:</strong> os moradores não ficam mais andando travados com o piso de felicidade, e a Aura de Liderança agora vale do mesmo jeito na tela e no jogo.",
-            "<strong>Mestre Gourmet:</strong> agora come da Lancheira, do primeiro slot em diante, e só depois procura no inventário. Comidas que fazem mal, como carne e ovos crus, são ignoradas.",
-            "<strong>Textos do console do jogo:</strong> as mensagens de chat não mostram mais códigos estranhos, e os acentos aparecem certos."
+            "O Alcance das Estações comprado na loja fica salvo no mundo e não volta mais para 15 ao reiniciar o jogo solo ou para quem hospeda o mundo.",
+            "Bônus com nome ou descrição longos na aba Status, como o da Necromancia, não cortam mais o nome nem passam por cima do cartão de baixo.",
+            "Quando não cabem lado a lado, o nome fica em cima e o valor embaixo, e o cartão cresce para caber tudo.",
+            "O Minerador de Veios respeita o máximo de blocos também no minério.",
+            "O modo avançado do Minerador de Veios não para mais em 20 blocos e 3 blocos de distância.",
+            "A mineração vai até o número configurado, em qualquer modo.",
+            "Atenção: no valor padrão de 20, veios maiores agora param em 20 blocos.",
+            "Desligar Administração Rica remove o bônus de XP dos colonos.",
+            "Desligar Administração Rica ou Especialista em Incursão tira essas passivas da lista.",
+            "Multiplicador de XP removido da configuração fica indisponível na loja.",
+            "O comando de administrador de slots de baú respeita o limite e o passo de slots da configuração.",
+            "As mensagens desse comando mostram os números da configuração.",
+            "A aura aparece em todos os lacaios, inclusive nos de corpo humano, dourada nos permanentes e branca nos temporários.",
+            "Os moradores não ficam mais andando travados com o piso de felicidade do Mestre dos Reinos.",
+            "A Aura de Liderança vale do mesmo jeito na tela e no jogo.",
+            "O Mestre Gourmet come da Lancheira, do primeiro slot em diante, e só depois procura no inventário.",
+            "O Mestre Gourmet ignora comidas que fazem mal, como carne e ovos crus.",
+            "As mensagens do console do jogo no chat não mostram mais códigos estranhos.",
+            "Os acentos das mensagens do console aparecem certos."
+          ]
+        },
+        {
+          "heading": "👑 Mestre dos Reinos",
+          "items": [
+            "A felicidade mínima dos moradores agora é 50, 60, 70, 80 e 100 nos níveis 1 a 5.",
+            "A qualidade de vida para de cair já no nível 1.",
+            "A qualidade de vida passa a subir no nível 4."
           ]
         }
       ],
@@ -126,43 +459,97 @@ window.RPG_CHANGELOG = [
         {
           "heading": "✨ What's new",
           "items": [
-            "<strong>Inventory slots in the shop:</strong> the shop has a new \"Inventory slots\" card. Each purchase gives <strong>+10 slots</strong> to your inventory, up to <strong>500</strong> in total. The purchase is yours alone and stays with your character, including when the mod updates. The price goes up a little with each purchase and shows on the card before you buy.",
-            "<strong>Scrolling inventory:</strong> once your inventory goes past the usual 50 slots, it gets a scroll bar. The hotbar stays where it always was, on the first row.",
-            "<strong>Chests up to 500 slots:</strong> the limit for extra chest slots went up from 400 to 500, the same as the inventory. If your settings had the 400 limit, it moves to 500 by itself; a limit you changed by hand stays as it is.",
-            "<strong>Minion aura:</strong> the outline on Necromancy allies is now a soft aura around their body. Gold on permanent ritual minions and white on the temporary ones from the Army of the Dead.",
-            "<strong>Settlers supply your stations:</strong> when storing an item, including the harvest they are carrying, settlers now put forges, compost bins and other stations with a recipe set up for it ahead of chests. Whatever doesn't fit in the station goes to a chest, as usual. Stations with no recipe for that item change nothing.",
-            "<strong>Seeds-only compost bin:</strong> the fertilizer ingredient filter has a new \"Seeds only\" button. With the filter adjusted, settlers take seeds straight to the compost bin. Without adjusting the filter, it doesn't get your whole harvest.",
-            "<strong>25x and 50x XP bonuses:</strong> the shop has two new multipliers, priced in proportion to the others, and two new hotkeys you can set in the controls.",
-            "<strong>Shop slots per chest:</strong> each chest now has a button to turn the bought slots on or off. When off, it stays at the default size. If the chest is too full to shrink, nothing changes and no item is lost.",
-            "<strong>Cooling boxes with shop slots:</strong> cooling boxes now get the bought slots and the same button. The filters in their window show only food.",
-            "<strong>Featured item slot:</strong> the item shown above a chest is now picked in its own slot, just left of the frame button in the chest window. Click while holding the item: it stays with you and sits there as a ghost item. With an empty hand, the click takes the item out of the slot.",
-            "<strong>Seeds-only fertilizer:</strong> the compost bin has a new recipe in the recipe list, with a seed icon, that uses only seeds. With it on the compost bin, settlers take seeds straight there.",
-            "<strong>Cooking pot with \"Any recipe\":</strong> the cooking pot has a new \"Any recipe\" entry in the settlers' recipe list. With it, settlers cook any cooking pot dish whose ingredients are in the settlement chests, switching between dishes. The \"do X times\", \"until X\" and \"forever\" modes work like on other recipes (with \"until X\", it counts for each dish). It doesn't show up at your own crafting station.",
-            "<strong>Chest color button in the right place (Safe Haven QOL):</strong> with Safe Haven QOL, the chest color button stays fixed right next to the rename button."
+            "<strong>Inventory slots:</strong> new \"Inventory slots\" card in the shop.",
+            "<strong>Inventory slots:</strong> each purchase gives +10 slots to your inventory, up to 500 in total.",
+            "<strong>Inventory slots:</strong> the purchase is yours alone and stays with your character, including when the mod updates.",
+            "<strong>Inventory slots:</strong> the price goes up a little with each purchase and shows on the card before you buy.",
+            "<strong>Inventory slots:</strong> if the slot limit is lowered in the settings, items in the rows that would disappear move to empty spaces.",
+            "<strong>Inventory slots:</strong> if there is no room, the inventory keeps the size it needs to hold everything, and no item is lost.",
+            "<strong>Scrolling inventory:</strong> once it goes past the usual 50 slots, the inventory gets a scroll bar.",
+            "<strong>Scrolling inventory:</strong> the hotbar stays where it always was, on the first row.",
+            "<strong>Chest slots:</strong> the limit for extra chest slots went up from 400 to 500, the same as the inventory.",
+            "<strong>Chest slots:</strong> if your settings had the 400 limit, it moves to 500 by itself, and a limit you changed by hand stays as it is.",
+            "<strong>Chest slots:</strong> each chest has a button to turn the slots bought in the shop on or off.",
+            "<strong>Chest slots:</strong> when off, the chest stays at the default size.",
+            "<strong>Chest slots:</strong> if the chest is too full to shrink, nothing changes and no item is lost.",
+            "<strong>Cooling boxes:</strong> cooling boxes also get the bought slots and the same button.",
+            "<strong>Cooling boxes:</strong> the filters in their window show only food.",
+            "<strong>Featured item:</strong> the item shown above a chest is picked in its own slot, just left of the frame button in the chest window.",
+            "<strong>Featured item:</strong> click while holding the item: it stays with you and sits in the slot as a ghost item.",
+            "<strong>Featured item:</strong> with an empty hand, the click takes the item out of the slot.",
+            "<strong>Minion aura:</strong> the outline on Necromancy allies is now a soft aura around their body.",
+            "<strong>Minion aura:</strong> the aura is gold on permanent ritual minions and white on the temporary ones from the Army of the Dead.",
+            "<strong>Settlers supply your stations:</strong> when storing an item, including the harvest they carry, settlers put forges, compost bins and other stations with a recipe set up for it ahead of chests.",
+            "<strong>Settlers supply your stations:</strong> whatever doesn't fit in the station goes to a chest, as usual.",
+            "<strong>Settlers supply your stations:</strong> stations with no recipe for that item change nothing.",
+            "<strong>Compost bin:</strong> the fertilizer ingredient filter has a new \"Seeds only\" button.",
+            "<strong>Compost bin:</strong> with the filter adjusted, settlers take seeds straight to the compost bin.",
+            "<strong>Compost bin:</strong> without adjusting the filter, the compost bin doesn't get your whole harvest.",
+            "<strong>Compost bin:</strong> new seeds-only fertilizer recipe in the recipe list, with a seed icon.",
+            "<strong>Compost bin:</strong> with that recipe on the compost bin, settlers take seeds straight there.",
+            "<strong>Cooking pot:</strong> new \"Any recipe\" entry in the settlers' recipe list.",
+            "<strong>Cooking pot:</strong> with it, settlers cook any cooking pot dish whose ingredients are in the settlement chests, switching between dishes.",
+            "<strong>Cooking pot:</strong> the \"do X times\", \"until X\" and \"forever\" modes work like on other recipes, and \"until X\" counts for each dish.",
+            "<strong>Cooking pot:</strong> \"Any recipe\" doesn't show up at your own crafting station.",
+            "<strong>XP bonuses:</strong> two new multipliers in the shop, 25x and 50x, priced in proportion to the others.",
+            "<strong>XP bonuses:</strong> two new hotkeys you can set in the controls.",
+            "<strong>Settler window:</strong> settler happiness, thoughts and personalities show in Portuguese, even when the game showed these texts in English.",
+            "<strong>Settings:</strong> the Vein Miner block limit, crafting station range, quick stack radius, team XP radius and summon attack radius can go up to 500.",
+            "<strong>Settings:</strong> very high values can weigh on big worlds."
           ]
         },
         {
-          "heading": "⚙️ Improvements",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "<strong>Realm Master useful from the start:</strong> the minimum settler happiness is now 50, 60, 70, 80 and 100 at levels 1 to 5. Quality of life stops dropping from level 1 and starts rising at level 4.",
-            "<strong>Range limits up to 500:</strong> the Vein Miner block limit, crafting station range, quick stack radius, team XP radius and summon attack radius can now go up to 500 in the settings. Very high values can weigh on big worlds.",
-            "<strong>Smoother slot scrolling:</strong> in large chests and in the inventory, each mouse wheel click moves exactly one row of slots, never stopping halfway through a row. On a touchpad, scrolling adds up until it completes a row.",
-            "<strong>Lighter on your computer:</strong> the minion aura and the icon above chests cost less every frame, the chest window no longer stays in memory after you close it, and settlers decide faster which station to store their harvest in.",
-            "<strong>No item is ever lost:</strong> if the inventory slot limit is lowered in the settings, items in the rows that would disappear move to empty spaces. If there is no room, the inventory keeps the size it needs to hold everything."
+            "In large chests and in the inventory, each mouse wheel click moves exactly one row of slots, never stopping halfway.",
+            "On a touchpad, scrolling adds up until it completes a row."
+          ]
+        },
+        {
+          "heading": "⚡ Performance",
+          "items": [
+            "The minion aura weighs less on the game.",
+            "The icon above chests weighs less on the game.",
+            "The chest window no longer weighs on the game after you close it.",
+            "Settlers decide faster which station to store their harvest in."
+          ]
+        },
+        {
+          "heading": "🤝 Compatibility with Safe Haven QOL",
+          "items": [
+            "The chest color button stays fixed right next to the rename button."
           ]
         },
         {
           "heading": "🔧 Fixes",
           "items": [
-            "<strong>Crafting Station Range no longer goes back to 15:</strong> the range bought in the shop went back to normal every time the game restarted in single player (and for whoever hosts the world). Now it stays saved in the world.",
-            "<strong>Status tab texts no longer spill out of their card:</strong> bonuses with a long name or description (like Necromancy's) cut the name short and ran over the card below. Now, when they don't fit side by side, the name goes on top and the value below, and the card grows to fit everything.",
-            "<strong>Vein Miner follows the settings:</strong> ore ignored the block limit, and advanced mode stopped at 20 blocks and 3 tiles apart, whatever value you chose. Now mining goes up to the configured number in every mode. Note: at the default of 20, bigger veins now stop at 20 blocks.",
-            "<strong>Settings that did nothing:</strong> turning off Rich Administration now removes the settler XP bonus, and turning off Rich Administration or Incursion Specialist takes those passives off the list. An XP multiplier removed from the settings is unavailable in the shop.",
-            "<strong>Chest slot command:</strong> the admin command now follows the slot limit and step from the settings, and its messages show the numbers from the settings.",
-            "<strong>Minion aura:</strong> the aura now shows on every minion, including human-shaped ones, gold for permanent and white for temporary.",
-            "<strong>Realm Master:</strong> settlers no longer walk in a choppy way because of the happiness floor, and Leadership Aura now works the same on screen and in the game.",
-            "<strong>Master Gourmet:</strong> now eats from the Lunchbox, starting at the first slot, and only then looks in the inventory. Food that harms you, like raw meat and raw eggs, is skipped.",
-            "<strong>Game console text:</strong> chat messages no longer show strange codes, and accents show up correctly."
+            "Crafting Station Range bought in the shop stays saved in the world and no longer goes back to 15 when the game restarts in single player or for whoever hosts the world.",
+            "Bonuses with a long name or description in the Status tab, like Necromancy's, no longer cut the name short or run over the card below.",
+            "When they don't fit side by side, the name goes on top and the value below, and the card grows to fit everything.",
+            "Vein Miner follows the block limit on ore too.",
+            "Vein Miner's advanced mode no longer stops at 20 blocks and 3 tiles apart.",
+            "Mining goes up to the configured number in every mode.",
+            "Note: at the default of 20, bigger veins now stop at 20 blocks.",
+            "Turning off Rich Administration removes the settler XP bonus.",
+            "Turning off Rich Administration or Incursion Specialist takes those passives off the list.",
+            "An XP multiplier removed from the settings is unavailable in the shop.",
+            "The admin chest slot command follows the slot limit and step from the settings.",
+            "That command's messages show the numbers from the settings.",
+            "The aura shows on every minion, including human-shaped ones, gold for permanent and white for temporary.",
+            "Settlers no longer walk in a choppy way because of the Realm Master happiness floor.",
+            "Leadership Aura works the same on screen and in the game.",
+            "Master Gourmet eats from the Lunchbox, starting at the first slot, and only then looks in the inventory.",
+            "Master Gourmet skips food that harms you, like raw meat and raw eggs.",
+            "Game console messages in chat no longer show strange codes.",
+            "Accents in console messages show up correctly."
+          ]
+        },
+        {
+          "heading": "👑 Realm Master",
+          "items": [
+            "The minimum settler happiness is now 50, 60, 70, 80 and 100 at levels 1 to 5.",
+            "Quality of life stops dropping from level 1.",
+            "Quality of life starts rising at level 4."
           ]
         }
       ],
@@ -180,14 +567,23 @@ window.RPG_CHANGELOG = [
         {
           "heading": "✨ Novidades",
           "items": [
-            "<strong>Aba Classes nova, no estilo grimório:</strong> as classes agora ficam separadas por categoria (Combate, Sobrevivência, Movimento, Utilidade e Necromancia), cada uma mostrando quantos pontos você já gastou nela. Cada classe aparece como uma carta com ícone, nome e os pontos já colocados.",
-            "<strong>Veja o que cada nível dá:</strong> ao escolher uma classe, o painel ao lado mostra o bônus de todos os níveis de uma vez, do 1 ao 5, e o que cada nível desbloqueia. Os níveis que você já tem ficam em dourado e o próximo fica em destaque."
+            "<strong>Aba Classes:</strong> nova aba no estilo grimório.",
+            "<strong>Aba Classes:</strong> as classes ficam separadas por categoria: Combate, Sobrevivência, Movimento, Utilidade e Necromancia.",
+            "<strong>Aba Classes:</strong> cada categoria mostra quantos pontos você já gastou nela.",
+            "<strong>Aba Classes:</strong> cada classe aparece como uma carta com ícone, nome e os pontos já colocados.",
+            "<strong>Bônus por nível:</strong> ao escolher uma classe, o painel ao lado mostra o bônus de todos os níveis de uma vez, do 1 ao 5.",
+            "<strong>Bônus por nível:</strong> o painel também mostra o que cada nível desbloqueia.",
+            "<strong>Bônus por nível:</strong> os níveis que você já tem ficam em dourado, e o próximo fica em destaque."
           ]
         },
         {
           "heading": "🔧 Correções",
           "items": [
-            "<strong>Aliados da Necromancia não criam mais inimigos:</strong> o Protetor do Mal invocado pelo ritual continuava abrindo portais que soltavam inimigos contra você. O mesmo valia para outros aliados que lançam criaturas ou deixam algo para trás (como os soldadinhos de brinquedo, os goblins do sobretudo e a Fênix, que deixava um ovo ao morrer). Agora seus aliados lutam com todos os ataques normais, mas não trazem mais inimigos para a luta. Os inimigos que você ou seus aliados derrotam continuam se comportando como sempre."
+            "O Protetor do Mal invocado pelo ritual não abre mais portais que soltam inimigos contra você.",
+            "Outros aliados que lançam criaturas ou deixam algo para trás, como os soldadinhos de brinquedo e os goblins do sobretudo, também não trazem mais inimigos para a luta.",
+            "A Fênix aliada não deixa mais um ovo ao morrer.",
+            "Seus aliados continuam lutando com todos os ataques normais.",
+            "Os inimigos que você ou seus aliados derrotam continuam se comportando como sempre."
           ]
         }
       ],
@@ -199,14 +595,23 @@ window.RPG_CHANGELOG = [
         {
           "heading": "✨ What's new",
           "items": [
-            "<strong>New Classes tab, grimoire style:</strong> classes are now split by category (Combat, Survival, Movement, Utility and Necromancy), each showing how many points you have spent in it. Every class shows up as a card with its icon, name and the points already placed.",
-            "<strong>See what each level gives:</strong> when you pick a class, the side panel shows the bonus of every level at once, from 1 to 5, plus what each level unlocks. Levels you already have are gold and the next one is highlighted."
+            "<strong>Classes tab:</strong> new grimoire-style tab.",
+            "<strong>Classes tab:</strong> classes are split by category: Combat, Survival, Movement, Utility and Necromancy.",
+            "<strong>Classes tab:</strong> each category shows how many points you have spent in it.",
+            "<strong>Classes tab:</strong> every class shows up as a card with its icon, name and the points already placed.",
+            "<strong>Bonus per level:</strong> when you pick a class, the side panel shows the bonus of every level at once, from 1 to 5.",
+            "<strong>Bonus per level:</strong> the panel also shows what each level unlocks.",
+            "<strong>Bonus per level:</strong> levels you already have are gold, and the next one is highlighted."
           ]
         },
         {
           "heading": "🔧 Fixes",
           "items": [
-            "<strong>Necromancy allies no longer create enemies:</strong> an Evil's Protector summoned by the ritual kept opening portals that released enemies against you. The same happened with other allies that launch creatures or leave something behind (like the toy soldiers, the trenchcoat goblins and the Phoenix, which left an egg when it died). Now your allies fight with all their usual attacks, but no longer bring enemies into the fight. Enemies that you or your allies defeat still behave as always."
+            "An Evil's Protector summoned by the ritual no longer opens portals that release enemies against you.",
+            "Other allies that launch creatures or leave something behind, like the toy soldiers and the trenchcoat goblins, also no longer bring enemies into the fight.",
+            "An allied Phoenix no longer leaves an egg when it dies.",
+            "Your allies keep fighting with all their usual attacks.",
+            "Enemies that you or your allies defeat still behave as always."
           ]
         }
       ],
@@ -215,25 +620,30 @@ window.RPG_CHANGELOG = [
   },
   {
     "version": "4.2",
-    "tag": "new",
-    "tagClass": "major",
-    "tagKey": "changelog.tag.new",
+    "tag": "update",
+    "tagClass": "minor",
+    "tagKey": "changelog.tag.update",
     "pt": {
       "title": "🌟 Atualização 4.2 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "✨ Novidades",
+          "heading": "🔧 Correções",
           "items": [
-            "<strong>Mestre do Loot reformulado:</strong> o loot agora vem no máximo em dobro (2x), em vez de chegar a 5x. A chance de dobrar sobe 20% por nível: 20%, 40%, 60%, 80% e 100% no nível 5. Vale para inimigos, mineração, pesca, colheita e criação.",
-            "<strong>Artesão Econômico:</strong> no nível 5 do Mestre do Loot, criar itens tem 50% de chance de não gastar os ingredientes."
+            "Com o Mestre do Loot, alguns objetos e pisos (como o baú de madeira) não voltam mais multiplicados ao serem colocados e quebrados de novo.",
+            "O que você coloca volta sempre na mesma quantidade.",
+            "Em baús com muitos slots, o botão de organizar ordenava os itens mas deixava cada pilha separada.",
+            "Agora os itens iguais se juntam em pilhas cheias até o limite do stack comprado na Loja (por exemplo, 5x), como nos baús menores.",
+            "A janela do RPG Skills volta a abrir pelo atalho e pelo botão, mesmo depois de um tempo de jogo.",
+            "A janela deixava de abrir por causa de um erro ao montar a aba Loja."
           ]
         },
         {
-          "heading": "🔧 Correções",
+          "heading": "💰 Mestre do Loot",
           "items": [
-            "<strong>Colocar e quebrar não duplica mais:</strong> com o Mestre do Loot, alguns objetos e pisos (como o baú de madeira) voltavam multiplicados ao serem colocados e quebrados de novo. Agora o que você coloca volta sempre na mesma quantidade.",
-            "<strong>Baús grandes organizam no stack do mundo:</strong> em baús com muitos slots, o botão de organizar ordenava os itens mas deixava cada pilha separada, sem juntar até o limite do stack comprado na Loja (por exemplo, 5x). Agora os itens iguais se juntam em pilhas cheias, como nos baús menores.",
-            "<strong>Janela do RPG Skills abre sempre:</strong> em alguns casos, depois de um tempo de jogo, a janela não abria mais nem pelo atalho nem pelo botão, por causa de um erro ao montar a aba Loja. Agora ela abre normalmente."
+            "O loot agora vem no máximo em dobro (2x), em vez de chegar a 5x.",
+            "A chance de dobrar sobe 20% por nível: 20%, 40%, 60%, 80% e 100% no nível 5.",
+            "O dobro vale para inimigos, mineração, pesca, colheita e criação.",
+            "Nova passiva Artesão Econômico no nível 5: criar itens tem 50% de chance de não gastar os ingredientes."
           ]
         }
       ],
@@ -243,18 +653,23 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Update 4.2 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "✨ What's new",
+          "heading": "🔧 Fixes",
           "items": [
-            "<strong>Loot Master reworked:</strong> loot now comes at most doubled (2x) instead of reaching 5x. The chance to double goes up 20% per level: 20%, 40%, 60%, 80% and 100% at level 5. It applies to enemies, mining, fishing, harvesting and crafting.",
-            "<strong>Thrifty Artisan:</strong> at Loot Master level 5, crafting has a 50% chance to not use up the ingredients."
+            "With the Loot Master, some objects and floors (like the wooden chest) no longer come back multiplied when placed and broken again.",
+            "Whatever you place always comes back in the same amount.",
+            "In chests with many slots, the sort button ordered the items but left each stack apart.",
+            "Now matching items join into full stacks up to the stack limit bought in the Shop (for example, 5x), just like in smaller chests.",
+            "The RPG Skills window opens again from the hotkey and the button, even after a while in game.",
+            "The window stopped opening because of an error while building the Shop tab."
           ]
         },
         {
-          "heading": "🔧 Fixes",
+          "heading": "💰 Loot Master",
           "items": [
-            "<strong>Placing and breaking no longer duplicates:</strong> with the Loot Master, some objects and floors (like the wooden chest) came back multiplied when placed and broken again. Now whatever you place always comes back in the same amount.",
-            "<strong>Large chests sort to the world stack:</strong> in chests with many slots, the sort button ordered the items but left each stack apart, without filling up to the stack limit bought in the Shop (for example, 5x). Now matching items join into full stacks, just like in smaller chests.",
-            "<strong>The RPG Skills window always opens:</strong> in some cases, after a while in game, the window would no longer open from the hotkey or the button, because of an error while building the Shop tab. Now it opens normally."
+            "Loot now comes at most doubled (2x) instead of reaching 5x.",
+            "The chance to double goes up 20% per level: 20%, 40%, 60%, 80% and 100% at level 5.",
+            "Doubling applies to enemies, mining, fishing, harvesting and crafting.",
+            "New Thrifty Artisan passive at level 5: crafting has a 50% chance to not use up the ingredients."
           ]
         }
       ],
@@ -263,83 +678,102 @@ window.RPG_CHANGELOG = [
   },
   {
     "version": "4.1",
-    "tag": "update",
-    "tagClass": "minor",
-    "tagKey": "changelog.tag.update",
+    "tag": "new",
+    "tagClass": "major",
+    "tagKey": "changelog.tag.new",
     "pt": {
       "title": "🌟 Atualização 4.1 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "📦 Ícone em cima do baú",
+          "heading": "✨ Novidades",
           "items": [
-            "<strong>Saiba o que tem em cada baú sem abrir:</strong> ao chegar perto, um ícone aparece em cima do baú. Na janela do baú, dois botões novos no topo, ao lado dos de organizar, escolhem o ícone e o estilo.",
-            "<strong>Escolha o ícone:</strong> clique no botão segurando um item para usar aquele item. Com a mão vazia, o botão alterna entre \"automático\" (mostra o item que mais tem dentro do baú e se atualiza sozinho) e \"nenhum\".",
-            "<strong>Quatro estilos, cada um com sua animação:</strong> Bolha (surge com um pulinho), Placa de madeira (presa na tampa, cresce e balança), Brasão RPG (roxo e dourado, pulsa de leve) e Só o ícone (o item flutua sozinho, sem fundo nem sombra). Cada baú escolhe o seu.",
-            "<strong>Baús lado a lado:</strong> cada ícone cabe na largura do próprio baú, então baús vizinhos não cobrem o ícone um do outro.",
-            "<strong>Para todo mundo:</strong> o ícone fica salvo no baú e todos os jogadores do mundo veem. Quem já usava os rótulos de baú do Safe Haven ganha os mesmos ícones aqui automaticamente, e o rótulo do Safe Haven fica desligado para não aparecerem dois."
+            "<strong>Ícone no baú:</strong> ao chegar perto, um ícone aparece em cima do baú, para você saber o que tem dentro sem abrir.",
+            "<strong>Ícone no baú:</strong> dois botões novos no topo da janela do baú, ao lado dos de organizar, escolhem o ícone e o estilo.",
+            "<strong>Ícone no baú:</strong> clique no botão segurando um item para usar aquele item.",
+            "<strong>Ícone no baú:</strong> com a mão vazia, o botão alterna entre \"automático\" e \"nenhum\".",
+            "<strong>Ícone no baú:</strong> o \"automático\" mostra o item que mais tem dentro do baú e se atualiza sozinho.",
+            "<strong>Ícone no baú:</strong> são quatro estilos, cada um com sua animação, e cada baú escolhe o seu.",
+            "<strong>Ícone no baú:</strong> Bolha surge com um pulinho.",
+            "<strong>Ícone no baú:</strong> Placa de madeira fica presa na tampa, cresce e balança.",
+            "<strong>Ícone no baú:</strong> Brasão RPG é roxo e dourado e pulsa de leve.",
+            "<strong>Ícone no baú:</strong> Só o ícone deixa o item flutuando sozinho, sem fundo nem sombra.",
+            "<strong>Ícone no baú:</strong> cada ícone cabe na largura do próprio baú, então baús vizinhos não cobrem o ícone um do outro.",
+            "<strong>Ícone no baú:</strong> o ícone fica salvo no baú e todos os jogadores do mundo veem.",
+            "<strong>Painel de XP:</strong> o painel acima do inventário agora tem um selo com o seu nível.",
+            "<strong>Painel de XP:</strong> uma barra enche com o XP, com os números e a porcentagem dentro dela.",
+            "<strong>Painel de XP:</strong> com o bônus de XP comprado na Loja, o multiplicador e o tempo que falta aparecem ao lado da barra.",
+            "<strong>Aba Status:</strong> nível, barra de XP e pontos para gastar ficam num cartão só, no topo.",
+            "<strong>Aba Status:</strong> bônus de XP, XP em equipe, qualidade da vila e lacaios em campo aparecem em selos coloridos logo abaixo.",
+            "<strong>Aba Status:</strong> o tempo do bônus de XP conta sozinho com a janela aberta.",
+            "<strong>Aba Status:</strong> o selo do bônus de XP aparece assim que você compra.",
+            "<strong>Aba Status:</strong> em vez de uma lista enorme, os bônus aparecem em cartões: Combate, Sobrevivência, Efeitos nos inimigos, Movimento, Misticismo e invocações, Coleta e utilidades.",
+            "<strong>Aba Status:</strong> embaixo ficam as habilidades e passivas que você já tem.",
+            "<strong>Aba Status:</strong> embaixo também fica um resumo do que o mundo comprou na Loja (stack, slots dos baús e alcance das estações).",
+            "<strong>Alcance das estações:</strong> novo cartão \"Alcance das Estações\" na Loja.",
+            "<strong>Alcance das estações:</strong> com \"usar armazenamento próximo\" ligado, as estações de criação e a de melhoria passam a usar baús mais distantes.",
+            "<strong>Alcance das estações:</strong> o jogo usa 15 blocos, e cada compra soma 5 blocos, até 50.",
+            "<strong>Alcance das estações:</strong> a compra é do mundo, para todos os jogadores, e fica salva nele.",
+            "<strong>Alcance das estações:</strong> o primeiro nível custa 2.000 moedas, e cada um seguinte custa 2.000 a mais.",
+            "<strong>Alcance das estações:</strong> quem entra num servidor só usa o alcance comprado depois de receber o valor do servidor, então a estação nunca mostra uma receita que não daria para criar.",
+            "<strong>Alcance das estações:</strong> custo, blocos por compra e alcance máximo (até 100) podem ser mudados no painel de configuração.",
+            "<strong>Alcance das estações:</strong> administradores podem voltar o alcance ao do jogo, e as moedas não são devolvidas.",
+            "<strong>Botão do inventário:</strong> o botão que abre o RPG Skills trocou a logo do mod por um ícone próprio: duas espadas cruzadas com cabos roxos e uma estrela dourada.",
+            "<strong>Botão do inventário:</strong> o botão agora tem o mesmo tamanho e a mesma moldura dos outros botões da barra."
           ]
         },
         {
-          "heading": "📊 Painel de XP novo",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "<strong>Barra de verdade:</strong> o painel acima do inventário agora tem um selo com o seu nível e uma barra que enche com o XP, com os números e a porcentagem dentro dela.",
-            "<strong>Bônus de XP à vista:</strong> com o bônus de XP comprado na Loja, aparece ao lado da barra o multiplicador e o tempo que falta."
+            "Os ícones do filtro do baú ficam numa coluna vertical, colada à esquerda dos slots, em vez de um bloco à direita.",
+            "Ao clicar num grupo do filtro, o baú se abre para a esquerda e mostra as subcategorias numa coluna ao lado dos ícones, em vez de embaixo deles.",
+            "Com \"Tudo\" selecionado, a coluna fecha e o baú volta ao tamanho compacto, sem espaço vazio.",
+            "O nome do baú ganhou uma linha só para ele, acima dos botões de organizar."
           ]
         },
         {
-          "heading": "📜 Aba Status reorganizada",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "<strong>Ficha do personagem no topo:</strong> nível, barra de XP e pontos para gastar num cartão só.",
-            "<strong>Selos do que está ativo:</strong> bônus de XP, XP em equipe, qualidade da vila e lacaios em campo aparecem em selos coloridos logo abaixo. O tempo do bônus de XP conta sozinho com a janela aberta e o selo aparece assim que você compra.",
-            "<strong>Bônus separados por tipo:</strong> em vez de uma lista enorme, os bônus aparecem em cartões: Combate, Sobrevivência, Efeitos nos inimigos, Movimento, Misticismo e invocações, Coleta e utilidades.",
-            "<strong>Habilidades e o seu mundo:</strong> embaixo, as habilidades e passivas que você já tem e um resumo do que o mundo comprou na Loja (stack, slots dos baús e alcance das estações)."
-          ]
-        },
-        {
-          "heading": "🗺️ Mais mapa descoberto",
-          "items": [
-            "<strong>Mestre das Cavernas:</strong> além da descoberta maior que já dava, agora cada ponto na classe revela mais 6 blocos do mapa em volta nas cavernas (até 85 blocos com a classe completa).",
-            "<strong>Mestre da Construção:</strong> o bônus \"Biomas visíveis no mapa\" agora também revela mais mapa na superfície: 6 blocos a mais por ponto na classe."
-          ]
-        },
-        {
-          "heading": "🔨 Alcance das estações na Loja",
-          "items": [
-            "<strong>Baús mais longe:</strong> a Loja ganhou o cartão \"Alcance das Estações\". Com \"usar armazenamento próximo\" ligado, as estações de criação e a de melhoria passam a usar baús mais distantes. O jogo usa 15 blocos; cada compra soma 5 blocos, até 50.",
-            "<strong>Vale para o mundo todo:</strong> a compra é do mundo, para todos os jogadores, e fica salva nele. O primeiro nível custa 2.000 moedas e cada um seguinte custa 2.000 a mais.",
-            "<strong>Sempre certo no multijogador:</strong> quem entra num servidor só usa o alcance comprado depois de receber o valor do servidor, então a estação nunca mostra uma receita que não daria para criar.",
-            "<strong>Do seu jeito:</strong> custo, blocos por compra e alcance máximo (até 100) podem ser mudados no painel de configuração. Administradores podem voltar o alcance ao do jogo; as moedas não são devolvidas."
-          ]
-        },
-        {
-          "heading": "⚖️ Preços da Loja mais justos",
-          "items": [
-            "<strong>Bônus de XP:</strong> o preço agora sobe devagar com o seu nível e tem limite. Antes, no nível 100 o bônus de 10x custava 1 milhão de moedas; agora o 2x vai de 1.300 a no máximo 50.000 moedas, o 5x custa 2,5 vezes isso e o 10x, 5 vezes.",
-            "<strong>Minerador Explosivo:</strong> continua custando 100.000 moedas, mas pede bem menos material: 250 barras de cobre, de ferro e de ouro (antes 1.000) e 200 bastões de dinamite (antes 1.000).",
-            "<strong>Slots de baú:</strong> cada nível agora encarece 2.500 moedas em vez de 5.000, então os últimos níveis ficam bem mais acessíveis. Quem nunca mexeu nesse valor na configuração recebe o novo automaticamente."
-          ]
-        },
-        {
-          "heading": "🧰 Filtro do baú na lateral",
-          "items": [
-            "<strong>Ícones em coluna:</strong> os ícones do filtro agora ficam numa coluna vertical, colada à esquerda dos slots do baú, em vez de um bloco à direita.",
-            "<strong>Subcategorias só quando precisa:</strong> ao clicar num grupo, o baú se abre para a esquerda e mostra as subcategorias numa coluna ao lado dos ícones, em vez de descer embaixo deles. Com \"Tudo\" selecionado, a coluna fecha e o baú volta ao tamanho compacto, sem espaço vazio.",
-            "<strong>Nome do baú no topo:</strong> o nome do baú ganhou uma linha só para ele, acima dos botões de organizar."
-          ]
-        },
-        {
-          "heading": "🛡️ Botão novo no inventário",
-          "items": [
-            "<strong>Ícone próprio:</strong> o botão que abre o RPG Skills no inventário trocou a logo do mod por um ícone próprio: duas espadas cruzadas com cabos roxos e uma estrela dourada.",
-            "<strong>Do tamanho dos outros:</strong> o botão agora tem o mesmo tamanho e a mesma moldura dos outros botões da barra."
+            "Quem já usava os rótulos de baú do Safe Haven ganha os mesmos ícones em cima dos baús automaticamente.",
+            "O rótulo do Safe Haven fica desligado, para não aparecerem dois."
           ]
         },
         {
           "heading": "🔧 Correções",
           "items": [
-            "<strong>Atalho e botão voltam a abrir a janela:</strong> depois de sair de um mundo e entrar de novo, às vezes a tecla de atalho e o botão do inventário paravam de abrir a janela do RPG Skills. Agora a janela sempre abre na partida atual.",
-            "<strong>Nomes da Necromancia sem letreiro:</strong> os nomes compridos de monstros no Grimório e nos slots do Ritual não ficam mais rolando aos pulos. Agora o nome fica parado: a letra diminui um pouco para caber e, se ainda for grande, ele aparece inteiro em duas linhas.",
-            "<strong>Texto da configuração:</strong> a opção do Safe Haven que desliga o que as classes do RPG Skills já dão ganhou nome traduzido no painel de configuração."
+            "A tecla de atalho e o botão do inventário voltam a abrir a janela do RPG Skills depois de sair de um mundo e entrar de novo.",
+            "Agora a janela sempre abre na partida atual.",
+            "Os nomes compridos de monstros no Grimório e nos slots do Ritual não ficam mais rolando aos pulos.",
+            "O nome fica parado, e a letra diminui um pouco para caber.",
+            "Se ainda for grande, o nome aparece inteiro em duas linhas.",
+            "A opção do Safe Haven que desliga o que as classes do RPG Skills já dão ganhou nome traduzido no painel de configuração."
+          ]
+        },
+        {
+          "heading": "💰 Preços da Loja",
+          "items": [
+            "O preço do bônus de XP agora sobe devagar com o seu nível e tem limite.",
+            "Antes, no nível 100, o bônus de 10x custava 1 milhão de moedas.",
+            "Agora o bônus de 2x vai de 1.300 a no máximo 50.000 moedas.",
+            "O bônus de 5x custa 2,5 vezes o preço do 2x, e o de 10x custa 5 vezes.",
+            "O Minerador Explosivo continua custando 100.000 moedas.",
+            "O Minerador Explosivo pede 250 barras de cobre, de ferro e de ouro (antes 1.000).",
+            "O Minerador Explosivo pede 200 bastões de dinamite (antes 1.000).",
+            "Cada nível de slots de baú agora encarece 2.500 moedas em vez de 5.000, e os últimos níveis ficam bem mais acessíveis.",
+            "Quem nunca mexeu nesse valor na configuração recebe o novo automaticamente."
+          ]
+        },
+        {
+          "heading": "⛏️ Mestre das Cavernas",
+          "items": [
+            "Além da descoberta maior que já dava, cada ponto na classe agora revela mais 6 blocos do mapa em volta nas cavernas.",
+            "Com a classe completa, são até 85 blocos."
+          ]
+        },
+        {
+          "heading": "🏗️ Mestre da Construção",
+          "items": [
+            "O bônus \"Biomas visíveis no mapa\" agora também revela mais mapa na superfície.",
+            "São 6 blocos a mais por ponto na classe."
           ]
         }
       ],
@@ -349,76 +783,95 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Update 4.1 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "📦 Icon above the chest",
+          "heading": "✨ What's new",
           "items": [
-            "<strong>Know what is in each chest without opening it:</strong> when you get close, an icon shows up above the chest. In the chest window, two new buttons at the top, next to the sorting ones, pick the icon and the style.",
-            "<strong>Pick the icon:</strong> click the button while holding an item to use that item. With an empty hand, the button switches between \"automatic\" (shows the item there is most of in the chest and updates by itself) and \"none\".",
-            "<strong>Four styles, each with its own animation:</strong> Bubble (pops in with a little bounce), Wooden sign (sits on the lid, grows and sways), RPG crest (purple and gold, gently pulses) and Icon only (the item floats by itself, with no background or shadow). Each chest picks its own.",
-            "<strong>Chests side by side:</strong> each icon fits within its own chest's width, so neighboring chests don't cover each other's icon.",
-            "<strong>For everyone:</strong> the icon is saved in the chest and every player in the world sees it. If you already used Safe Haven's chest labels, you get the same icons here automatically, and Safe Haven's label is turned off so you don't see two."
+            "<strong>Chest icon:</strong> when you get close, an icon shows up above the chest, so you know what is inside without opening it.",
+            "<strong>Chest icon:</strong> two new buttons at the top of the chest window, next to the sorting ones, pick the icon and the style.",
+            "<strong>Chest icon:</strong> click the button while holding an item to use that item.",
+            "<strong>Chest icon:</strong> with an empty hand, the button switches between \"automatic\" and \"none\".",
+            "<strong>Chest icon:</strong> \"automatic\" shows the item there is most of in the chest and updates by itself.",
+            "<strong>Chest icon:</strong> there are four styles, each with its own animation, and each chest picks its own.",
+            "<strong>Chest icon:</strong> Bubble pops in with a little bounce.",
+            "<strong>Chest icon:</strong> Wooden sign sits on the lid, grows and sways.",
+            "<strong>Chest icon:</strong> RPG crest is purple and gold and gently pulses.",
+            "<strong>Chest icon:</strong> Icon only leaves the item floating by itself, with no background or shadow.",
+            "<strong>Chest icon:</strong> each icon fits within its own chest's width, so neighboring chests don't cover each other's icon.",
+            "<strong>Chest icon:</strong> the icon is saved in the chest and every player in the world sees it.",
+            "<strong>XP panel:</strong> the panel above the inventory now has a badge with your level.",
+            "<strong>XP panel:</strong> a bar fills with your XP, with the numbers and the percentage inside it.",
+            "<strong>XP panel:</strong> with the XP bonus bought in the Shop, the multiplier and the time left show up next to the bar.",
+            "<strong>Status tab:</strong> level, XP bar and points to spend sit in a single card, on top.",
+            "<strong>Status tab:</strong> XP bonus, team XP, settlement quality and minions in the field show up in colored badges right below.",
+            "<strong>Status tab:</strong> the XP bonus time counts down by itself while the window is open.",
+            "<strong>Status tab:</strong> the XP bonus badge shows up as soon as you buy it.",
+            "<strong>Status tab:</strong> instead of one huge list, bonuses show up in cards: Combat, Survival, Effects on enemies, Movement, Mysticism and summons, Gathering and utility.",
+            "<strong>Status tab:</strong> at the bottom are the abilities and passives you already have.",
+            "<strong>Status tab:</strong> also at the bottom is a summary of what the world bought in the Shop (stack, chest slots and station range).",
+            "<strong>Station range:</strong> new \"Crafting Station Range\" card in the Shop.",
+            "<strong>Station range:</strong> with \"use nearby storage\" on, crafting stations and the upgrade station use chests farther away.",
+            "<strong>Station range:</strong> the game uses 15 tiles, and each purchase adds 5 tiles, up to 50.",
+            "<strong>Station range:</strong> the purchase belongs to the world, for every player, and is saved with it.",
+            "<strong>Station range:</strong> the first level costs 2,000 coins, and each next one costs 2,000 more.",
+            "<strong>Station range:</strong> when you join a server, the bought range only kicks in after the server sends it, so a station never shows a recipe you could not craft.",
+            "<strong>Station range:</strong> cost, tiles per purchase and maximum range (up to 100) can be changed in the config panel.",
+            "<strong>Station range:</strong> administrators can put the range back to the game's, and coins are not refunded.",
+            "<strong>Inventory button:</strong> the button that opens RPG Skills swapped the mod logo for its own icon: two crossed swords with purple hilts and a golden star.",
+            "<strong>Inventory button:</strong> the button now has the same size and frame as the other buttons on the bar."
           ]
         },
         {
-          "heading": "📊 New XP panel",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "<strong>A real bar:</strong> the panel above the inventory now has a badge with your level and a bar that fills with your XP, with the numbers and the percentage inside it.",
-            "<strong>XP bonus in sight:</strong> with the XP bonus bought in the Shop, the multiplier and the time left show up next to the bar."
+            "The chest filter icons sit in a vertical column right to the left of the slots, instead of a block on the right.",
+            "Clicking a filter group widens the chest to the left and shows its subcategories in a column next to the icons, instead of below them.",
+            "With \"All items\" selected, the column closes and the chest goes back to its compact size, with no empty space.",
+            "The chest name now has its own line, above the sorting buttons."
           ]
         },
         {
-          "heading": "📜 Reorganized Status tab",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "<strong>Character sheet on top:</strong> level, XP bar and points to spend in a single card.",
-            "<strong>Badges for what is active:</strong> XP bonus, team XP, settlement quality and minions in the field show up in colored badges right below. The XP bonus time counts down by itself while the window is open, and the badge shows up as soon as you buy it.",
-            "<strong>Bonuses split by type:</strong> instead of one huge list, bonuses show up in cards: Combat, Survival, Effects on enemies, Movement, Mysticism and summons, Gathering and utility.",
-            "<strong>Abilities and your world:</strong> at the bottom, the abilities and passives you already have and a summary of what the world bought in the Shop (stack, chest slots and station range)."
-          ]
-        },
-        {
-          "heading": "🗺️ More of the map revealed",
-          "items": [
-            "<strong>Cavern Master:</strong> on top of the bigger discovery it already gave, each point in the class now reveals 6 more tiles of the map around you in caves (up to 85 tiles with the class complete).",
-            "<strong>Construction Master:</strong> the \"Biome map vision\" bonus now also reveals more of the map on the surface: 6 more tiles per point in the class."
-          ]
-        },
-        {
-          "heading": "🔨 Station range in the Shop",
-          "items": [
-            "<strong>Chests farther away:</strong> the Shop has a new \"Crafting Station Range\" card. With \"use nearby storage\" on, crafting stations and the upgrade station use chests farther away. The game uses 15 tiles; each purchase adds 5 tiles, up to 50.",
-            "<strong>For the whole world:</strong> the purchase belongs to the world, for every player, and is saved with it. The first level costs 2,000 coins and each next one costs 2,000 more.",
-            "<strong>Always right in multiplayer:</strong> when you join a server, the bought range only kicks in after the server sends it, so a station never shows a recipe you could not craft.",
-            "<strong>Your way:</strong> cost, tiles per purchase and maximum range (up to 100) can be changed in the config panel. Administrators can put the range back to the game's; coins are not refunded."
-          ]
-        },
-        {
-          "heading": "⚖️ Fairer Shop prices",
-          "items": [
-            "<strong>XP Bonus:</strong> the price now grows slowly with your level and has a cap. Before, the 10x bonus cost 1 million coins at level 100; now the 2x goes from 1,300 to at most 50,000 coins, the 5x costs 2.5 times that and the 10x costs 5 times that.",
-            "<strong>Explosive Miner:</strong> still costs 100,000 coins, but asks for far fewer materials: 250 copper, iron and gold bars (was 1,000) and 200 Dynamite Sticks (was 1,000).",
-            "<strong>Chest slots:</strong> each level now gets 2,500 coins more expensive instead of 5,000, so the last levels are much more affordable. If you never changed this value in the config, you get the new one automatically."
-          ]
-        },
-        {
-          "heading": "🧰 Chest filter on the side",
-          "items": [
-            "<strong>Icons in a column:</strong> the filter icons now sit in a vertical column right to the left of the chest slots, instead of a block on the right.",
-            "<strong>Subcategories only when needed:</strong> clicking a group widens the chest to the left and shows its subcategories in a column next to the icons, instead of below them. With \"All items\" selected, the column closes and the chest goes back to its compact size, with no empty space.",
-            "<strong>Chest name on top:</strong> the chest name now has its own line, above the sorting buttons."
-          ]
-        },
-        {
-          "heading": "🛡️ New inventory button",
-          "items": [
-            "<strong>Its own icon:</strong> the inventory button that opens RPG Skills swapped the mod logo for its own icon: two crossed swords with purple hilts and a golden star.",
-            "<strong>Same size as the others:</strong> the button now has the same size and frame as the other buttons on the bar."
+            "If you already used Safe Haven's chest labels, you get the same icons above chests automatically.",
+            "Safe Haven's label is turned off, so you don't see two."
           ]
         },
         {
           "heading": "🔧 Fixes",
           "items": [
-            "<strong>Shortcut and button open the window again:</strong> after leaving a world and joining again, the shortcut key and the inventory button sometimes stopped opening the RPG Skills window. Now the window always opens in the current game.",
-            "<strong>Necromancy names without the ticker:</strong> long monster names in the Grimoire and the Ritual slots no longer jump around while scrolling. The name now stays still: the letters get a bit smaller to fit and, if it is still too long, it shows in full on two lines.",
-            "<strong>Config text:</strong> the Safe Haven option that turns off what RPG Skills classes already give now has a translated name in the config panel."
+            "The shortcut key and the inventory button open the RPG Skills window again after leaving a world and joining again.",
+            "Now the window always opens in the current game.",
+            "Long monster names in the Grimoire and the Ritual slots no longer jump around while scrolling.",
+            "The name stays still, and the letters get a bit smaller to fit.",
+            "If it is still too long, the name shows in full on two lines.",
+            "The Safe Haven option that turns off what RPG Skills classes already give now has a translated name in the config panel."
+          ]
+        },
+        {
+          "heading": "💰 Shop prices",
+          "items": [
+            "The XP bonus price now grows slowly with your level and has a cap.",
+            "Before, the 10x bonus cost 1 million coins at level 100.",
+            "Now the 2x bonus goes from 1,300 to at most 50,000 coins.",
+            "The 5x bonus costs 2.5 times the 2x price, and the 10x costs 5 times.",
+            "The Explosive Miner still costs 100,000 coins.",
+            "The Explosive Miner asks for 250 copper, iron and gold bars (was 1,000).",
+            "The Explosive Miner asks for 200 Dynamite Sticks (was 1,000).",
+            "Each chest slot level now gets 2,500 coins more expensive instead of 5,000, and the last levels are much more affordable.",
+            "If you never changed this value in the config, you get the new one automatically."
+          ]
+        },
+        {
+          "heading": "⛏️ Cavern Master",
+          "items": [
+            "On top of the bigger discovery it already gave, each point in the class now reveals 6 more tiles of the map around you in caves.",
+            "With the class complete, that is up to 85 tiles."
+          ]
+        },
+        {
+          "heading": "🏗️ Construction Master",
+          "items": [
+            "The \"Biome map vision\" bonus now also reveals more of the map on the surface.",
+            "That is 6 more tiles per point in the class."
           ]
         }
       ],
@@ -427,82 +880,88 @@ window.RPG_CHANGELOG = [
   },
   {
     "version": "4.0",
-    "tag": "update",
-    "tagClass": "minor",
-    "tagKey": "changelog.tag.update",
+    "tag": "new",
+    "tagClass": "major",
+    "tagKey": "changelog.tag.new",
     "pt": {
       "title": "🌟 Atualização 4.0 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "📌 Seus pontos ficam nas atualizações",
+          "heading": "✨ Novidades",
           "items": [
-            "<strong>Sem reset de classes:</strong> atualizar o RPG Skills não zera mais os pontos de classe. Nesta e nas próximas versões, pontos gastos, nível, XP e compras da Loja continuam como estavam, sem precisar distribuir de novo.",
-            "<strong>Opção removida:</strong> a opção \"Respec de classes nas atualizações\" saiu da configuração."
-          ]
-        },
-        {
-          "heading": "🧰 Filtro do baú novo",
-          "items": [
-            "<strong>Mesmas categorias dos colonos:</strong> o filtro dos baús com slots extras agora usa as categorias do próprio jogo, as mesmas do filtro de armazenamento dos colonos. Primeiro você escolhe o grupo (Equipamento, Materiais, Consumíveis, Objetos, Pisos...) e depois desce nas subcategorias, por exemplo Equipamento, Armas e Armas corpo a corpo.",
-            "<strong>Ícones novos:</strong> cada grupo ganhou um ícone colorido próprio, fácil de reconhecer de relance.",
-            "<strong>Botão Voltar:</strong> nas subcategorias, um botão leva de volta para a categoria de cima."
-          ]
-        },
-        {
-          "heading": "🛒 Loja nova",
-          "items": [
-            "<strong>Cartões:</strong> a aba Loja foi refeita em cartões separados (Bônus de XP, Stack do mundo, Slots de Baús e Minerador Explosivo), cada um com ícone, explicação do que a compra faz, situação atual e botões.",
-            "<strong>Custos com ícones:</strong> o preço aparece com os ícones dos itens do próprio jogo (moedas, barras e dinamite) e o valor ao lado. Passe o mouse no ícone para ver o nome do item.",
-            "<strong>Stack do mundo explicado:</strong> o cartão explica que a compra aumenta quantos itens cabem em cada slot neste mundo, para todos os jogadores (em 2x, um slot de 100 itens passa a guardar 200).",
-            "<strong>Slots de Baús explicado:</strong> o cartão diz que a compra adiciona slots aos baús do mundo para todos e quantos slots cada compra dá.",
-            "<strong>Expansão da vila:</strong> cartão novo que expande a vila onde você está, sem precisar abrir a bandeira. Mostra o tamanho atual, o próximo e o custo com os ícones dos itens. Só o dono da vila pode expandir. O cartão se atualiza sozinho quando você entra ou sai de uma vila com a Loja aberta.",
-            "<strong>Vilas maiores que o limite do jogo:</strong> depois dos 7 níveis do jogo vêm mais 49, até 1.840x1.840 tiles. Cada nível extra pede moedas e um conjunto de materiais de fim de jogo que vai mudando (barras, gemas e essências), com valores que sobem a cada nível. Esses níveis também aparecem na bandeira da vila. Vilas muito grandes deixam o mundo mais pesado.",
-            "<strong>Ícone do Bônus de XP:</strong> o buff de XP ganhou um ícone próprio, um orbe verde com seta para cima."
-          ]
-        },
-        {
-          "heading": "💀 Aliados da Necromancia com contorno",
-          "items": [
-            "<strong>Contorno roxo:</strong> os aliados invocados pelo ritual ganharam um contorno roxo brilhante, fácil de diferenciar dos inimigos no meio da luta.",
-            "<strong>Contorno dourado:</strong> os aliados do Exército dos Mortos (a chance de 50% no nível 5, que viram aliados por 1 minuto) têm contorno dourado, para você saber quais vão sumir."
-          ]
-        },
-        {
-          "heading": "🧪 Espera da poção de vida",
-          "items": [
-            "<strong>Sem espera por padrão:</strong> dá para beber uma poção de vida atrás da outra, você e os colonos (a \"Fadiga de poção de vida\" do jogo não é mais aplicada).",
-            "<strong>Configurável:</strong> na aba Funcionalidades da configuração, seção Poções, dá para mudar a espera do jogador e a dos colonos. -1 volta ao valor do jogo (30 segundos) e qualquer outro número vira a espera em segundos.",
-            "<strong>Em servidor:</strong> vale a configuração do servidor para todos os jogadores."
+            "<strong>Pontos nas atualizações:</strong> atualizar o RPG Skills não zera mais os pontos de classe.",
+            "<strong>Pontos nas atualizações:</strong> nesta e nas próximas versões, pontos gastos, nível, XP e compras da Loja continuam como estavam, sem precisar distribuir de novo.",
+            "<strong>Pontos nas atualizações:</strong> a opção \"Respec de classes nas atualizações\" saiu da configuração.",
+            "<strong>Filtro do baú:</strong> o filtro dos baús com slots extras usa as categorias do próprio jogo, as mesmas do filtro de armazenamento dos colonos.",
+            "<strong>Filtro do baú:</strong> primeiro você escolhe o grupo (Equipamento, Materiais, Consumíveis, Objetos, Pisos...) e depois desce nas subcategorias, por exemplo Equipamento, Armas e Armas corpo a corpo.",
+            "<strong>Filtro do baú:</strong> cada grupo ganhou um ícone colorido próprio, fácil de reconhecer de relance.",
+            "<strong>Filtro do baú:</strong> nas subcategorias, um botão Voltar leva de volta para a categoria de cima.",
+            "<strong>Loja nova:</strong> a aba Loja foi refeita em cartões separados: Bônus de XP, Stack do mundo, Slots de Baús e Minerador Explosivo.",
+            "<strong>Loja nova:</strong> cada cartão tem ícone, explicação do que a compra faz, situação atual e botões.",
+            "<strong>Loja nova:</strong> o preço aparece com os ícones dos itens do próprio jogo (moedas, barras e dinamite) e o valor ao lado.",
+            "<strong>Loja nova:</strong> passe o mouse no ícone para ver o nome do item.",
+            "<strong>Loja nova:</strong> o cartão Stack do mundo explica que a compra aumenta quantos itens cabem em cada slot neste mundo, para todos os jogadores.",
+            "<strong>Loja nova:</strong> em 2x, um slot de 100 itens passa a guardar 200.",
+            "<strong>Loja nova:</strong> o cartão Slots de Baús diz que a compra adiciona slots aos baús do mundo para todos e quantos slots cada compra dá.",
+            "<strong>Loja nova:</strong> o buff de XP ganhou um ícone próprio, um orbe verde com seta para cima.",
+            "<strong>Expansão da vila:</strong> novo cartão na Loja que expande a vila onde você está, sem precisar abrir a bandeira.",
+            "<strong>Expansão da vila:</strong> o cartão mostra o tamanho atual, o próximo e o custo com os ícones dos itens.",
+            "<strong>Expansão da vila:</strong> só o dono da vila pode expandir.",
+            "<strong>Expansão da vila:</strong> o cartão se atualiza sozinho quando você entra ou sai de uma vila com a Loja aberta.",
+            "<strong>Vilas maiores:</strong> depois dos 7 níveis do jogo vêm mais 49, até 1.840x1.840 tiles.",
+            "<strong>Vilas maiores:</strong> cada nível extra pede moedas e um conjunto de materiais de fim de jogo que vai mudando (barras, gemas e essências).",
+            "<strong>Vilas maiores:</strong> os valores pedidos sobem a cada nível.",
+            "<strong>Vilas maiores:</strong> esses níveis também aparecem na bandeira da vila.",
+            "<strong>Vilas maiores:</strong> vilas muito grandes deixam o mundo mais pesado.",
+            "<strong>Contorno dos aliados:</strong> os aliados invocados pelo ritual da Necromancia ganharam um contorno roxo brilhante, fácil de diferenciar dos inimigos no meio da luta.",
+            "<strong>Contorno dos aliados:</strong> os aliados do Exército dos Mortos têm contorno dourado, para você saber quais vão sumir.",
+            "<strong>Contorno dos aliados:</strong> o Exército dos Mortos é a chance de 50% no nível 5 de inimigos virarem aliados por 1 minuto.",
+            "<strong>Poção de vida:</strong> por padrão, você e os colonos podem beber uma poção de vida atrás da outra, sem espera.",
+            "<strong>Poção de vida:</strong> a \"Fadiga de poção de vida\" do jogo não é mais aplicada.",
+            "<strong>Poção de vida:</strong> na aba Funcionalidades da configuração, seção Poções, dá para mudar a espera do jogador e a dos colonos.",
+            "<strong>Poção de vida:</strong> -1 volta ao valor do jogo (30 segundos), e qualquer outro número vira a espera em segundos.",
+            "<strong>Poção de vida:</strong> em servidor, vale a configuração do servidor para todos os jogadores."
           ]
         },
         {
           "heading": "⚡ Desempenho",
           "items": [
-            "<strong>Inventário e baús mais leves:</strong> mexer em itens, juntar pilhas e abrir baús ficou mais rápido, principalmente com muitos itens.",
-            "<strong>Colônias grandes:</strong> os colonos pesam menos no servidor.",
-            "<strong>Máquinas, plantações e armadilhas:</strong> os bônus de Mestre das Máquinas, Mestre da Natureza e Mestre das Armadilhas custam menos para o jogo, mesmo em vilas muito grandes.",
-            "<strong>Aliados da Necromancia:</strong> os aliados do ritual pesam menos enquanto andam.",
-            "<strong>Janela do RPG Skills em combate:</strong> com a aba Necromancia aberta durante uma luta, a janela atualiza só o que mudou, sem refazer tudo várias vezes por segundo.",
-            "<strong>Barra de XP:</strong> a barra de XP na tela pesa menos a cada quadro.",
-            "<strong>Combate mais leve:</strong> jogadores e monstros com buffs (velocidade, dano, defesa) pesam menos para o jogo.",
-            "<strong>Servidor com muitos jogadores:</strong> o RPG Skills pesa menos no servidor para cada jogador conectado."
+            "Mexer em itens, juntar pilhas e abrir baús ficou mais rápido, principalmente com muitos itens.",
+            "Os colonos pesam menos no servidor em colônias grandes.",
+            "Os bônus de Mestre das Máquinas, Mestre da Natureza e Mestre das Armadilhas custam menos para o jogo, mesmo em vilas muito grandes.",
+            "Os aliados do ritual da Necromancia pesam menos enquanto andam.",
+            "Com a aba Necromancia aberta durante uma luta, a janela do RPG Skills atualiza só o que mudou, sem refazer tudo várias vezes por segundo.",
+            "A barra de XP na tela pesa menos a cada quadro.",
+            "Jogadores e monstros com buffs (velocidade, dano, defesa) pesam menos para o jogo.",
+            "O RPG Skills pesa menos no servidor para cada jogador conectado."
           ]
         },
         {
-          "heading": "🛠️ Correções",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "<strong>Troca de idioma:</strong> ao trocar o idioma do jogo, a aba Necromancia, os nomes dos monstros no Grimório e o painel Ritual mudam de idioma na hora. Antes, alguns textos ficavam no idioma antigo até reiniciar.",
-            "<strong>Configuração que não salvava:</strong> depois de jogar num mundo e voltar ao menu, parte do que você mudava na configuração do RPG Skills voltava ao valor antigo ao reiniciar o jogo. Agora tudo que é salvo fica salvo.",
-            "<strong>Nomes longos na Necromancia:</strong> nomes de monstro que não cabem no card ou no slot do Ritual andam como letreiro, em vez de ficarem cortados ou por cima da linha de baixo.",
-            "<strong>Textos da configuração:</strong> símbolos que apareciam como \"?\" (como a seta do Sono Acelerado e o traço de \"0-255\") foram trocados em todos os idiomas, e alguns textos foram corrigidos.",
-            "<strong>Mensagens no seu idioma:</strong> em servidor, os avisos do RPG Skills no chat (loja, mineração, reset, Necromancia) chegam no idioma do seu jogo, não no do servidor. Avisos da Necromancia que não apareciam no chat agora aparecem.",
-            "<strong>Config do servidor:</strong> ao entrar num servidor, o RPG Skills usa as regras dele (XP, classes, custos da loja, opções ligadas). Seu arquivo de configuração não muda, e ao sair tudo volta a ser como no seu jogo. Fogos de nível, botão do inventário e linha de status continuam do seu jeito.",
-            "<strong>Mestre da Alquimia e poções de vida:</strong> o bônus de duração de poções esticava a fadiga das poções de vida e de mana, fazendo o alquimista esperar mais para beber outra. Agora ele só vale para os efeitos bons das poções.",
-            "<strong>Poções da Alquimia:</strong> o bônus de duração vale só para quem bebeu. Antes, a duração extra podia passar para a mesma poção de outros jogadores.",
-            "<strong>Pesca e colheita mais seguras:</strong> se um bônus do RPG Skills der errado, a pesca e a colheita continuam funcionando normalmente.",
-            "<strong>Trocar de mundo:</strong> aliados da Necromancia e o modo desenvolvedor não passam mais de um mundo para o outro.",
-            "<strong>Safe Haven 5.0:</strong> o RPG Skills encontra o arquivo de configuração do Safe Haven na pasta nova dele e leva junto as suas opções do local antigo.",
-            "<strong>Arquivos de configuração:</strong> se o jogo fechar no meio da gravação, a configuração anterior fica inteira em vez de corrompida."
+            "O RPG Skills encontra a configuração do Safe Haven 5.0 na pasta nova dele.",
+            "As suas opções do Safe Haven vêm junto do local antigo."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "Ao trocar o idioma do jogo, a aba Necromancia, os nomes dos monstros no Grimório e o painel Ritual mudam de idioma na hora, sem precisar reiniciar.",
+            "Tudo que você muda e salva na configuração do RPG Skills continua salvo ao reiniciar o jogo, mesmo depois de jogar num mundo e voltar ao menu.",
+            "Nomes de monstro que não cabem no card ou no slot do Ritual andam como letreiro, em vez de ficarem cortados ou por cima da linha de baixo.",
+            "Símbolos da configuração que apareciam como \"?\" (como a seta do Sono Acelerado e o traço de \"0-255\") foram trocados em todos os idiomas.",
+            "Alguns textos da configuração foram corrigidos.",
+            "Em servidor, os avisos do RPG Skills no chat (loja, mineração, reset, Necromancia) chegam no idioma do seu jogo, não no do servidor.",
+            "Avisos da Necromancia que não apareciam no chat agora aparecem.",
+            "Ao entrar num servidor, o RPG Skills usa as regras dele (XP, classes, custos da loja, opções ligadas).",
+            "Seu arquivo de configuração não muda, e ao sair do servidor tudo volta a ser como no seu jogo.",
+            "Fogos de nível, botão do inventário e linha de status continuam do seu jeito no servidor.",
+            "O bônus de duração de poções do Mestre da Alquimia não estica mais a fadiga das poções de vida e de mana, que fazia o alquimista esperar mais para beber outra.",
+            "Esse bônus agora só vale para os efeitos bons das poções.",
+            "O bônus de duração das poções da Alquimia vale só para quem bebeu, sem passar para a mesma poção de outros jogadores.",
+            "Se um bônus do RPG Skills der errado, a pesca e a colheita continuam funcionando normalmente.",
+            "Aliados da Necromancia e o modo desenvolvedor não passam mais de um mundo para o outro.",
+            "Se o jogo fechar no meio da gravação, a configuração anterior fica inteira em vez de corrompida."
           ]
         }
       ],
@@ -512,75 +971,81 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Update 4.0 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "📌 Your points stay across updates",
+          "heading": "✨ What's new",
           "items": [
-            "<strong>No class reset:</strong> updating RPG Skills no longer resets your class points. In this and future versions, spent points, level, XP and Shop purchases stay as they were, with no need to spend them again.",
-            "<strong>Option removed:</strong> the \"Class respec on updates\" option was removed from the config."
-          ]
-        },
-        {
-          "heading": "🧰 New chest filter",
-          "items": [
-            "<strong>Same categories as settlers:</strong> the filter for chests with extra slots now uses the game's own categories, the same ones as the settlers' storage filter. First you pick a group (Equipment, Materials, Consumable, Objects, Tiles...) and then go down into its subcategories, for example Equipment, Weapons and Melee weapons.",
-            "<strong>New icons:</strong> each group has its own colored icon, easy to recognize at a glance.",
-            "<strong>Back button:</strong> inside subcategories, a button takes you back to the category above."
-          ]
-        },
-        {
-          "heading": "🛒 New shop",
-          "items": [
-            "<strong>Cards:</strong> the Shop tab was rebuilt as separate cards (XP bonus, World stack, Chest slots and Explosive Miner), each with an icon, an explanation of what the purchase does, the current state and its buttons.",
-            "<strong>Costs with icons:</strong> prices show the game's own item icons (coins, bars and dynamite) with the amount next to them. Hover over an icon to see the item name.",
-            "<strong>World stack explained:</strong> the card explains that the purchase raises how many items fit in each slot in this world, for every player (at 2x, a 100-item slot holds 200).",
-            "<strong>Chest slots explained:</strong> the card says the purchase adds slots to the world's chests for everyone and how many slots each purchase gives.",
-            "<strong>Settlement expansion:</strong> a new card that expands the settlement you are standing in, without opening the flag. It shows the current size, the next one and the cost with item icons. Only the settlement owner can expand it. The card updates by itself when you walk into or out of a settlement with the Shop open.",
-            "<strong>Settlements bigger than the game limit:</strong> after the game's 7 levels come 49 more, up to 1,840x1,840 tiles. Each extra level asks for coins and a rotating set of late-game materials (bars, gems and essences), with amounts that grow every level. These levels also show up on the settlement flag. Very large settlements make the world heavier to run.",
-            "<strong>XP bonus icon:</strong> the XP buff has its own icon, a green orb with an up arrow."
-          ]
-        },
-        {
-          "heading": "💀 Outlined Necromancy allies",
-          "items": [
-            "<strong>Purple outline:</strong> allies summoned by the ritual now have a glowing purple outline, easy to tell apart from enemies in the middle of a fight.",
-            "<strong>Gold outline:</strong> Army of the Dead allies (the 50% chance at level 5 that turns enemies into allies for 1 minute) have a gold outline, so you know which ones will disappear."
-          ]
-        },
-        {
-          "heading": "🧪 Health potion wait",
-          "items": [
-            "<strong>No wait by default:</strong> you and your settlers can drink health potions back to back (the game's \"Health potion fatigue\" is no longer applied).",
-            "<strong>Configurable:</strong> in the config's Features tab, Potions section, you can change the wait for the player and for settlers. -1 goes back to the game value (30 seconds) and any other number becomes the wait in seconds.",
-            "<strong>On a server:</strong> the server's config applies to every player."
+            "<strong>Points across updates:</strong> updating RPG Skills no longer resets your class points.",
+            "<strong>Points across updates:</strong> in this and future versions, spent points, level, XP and Shop purchases stay as they were, with no need to spend them again.",
+            "<strong>Points across updates:</strong> the \"Class respec on updates\" option was removed from the config.",
+            "<strong>Chest filter:</strong> the filter for chests with extra slots uses the game's own categories, the same ones as the settlers' storage filter.",
+            "<strong>Chest filter:</strong> first you pick a group (Equipment, Materials, Consumable, Objects, Tiles...) and then go down into its subcategories, for example Equipment, Weapons and Melee weapons.",
+            "<strong>Chest filter:</strong> each group has its own colored icon, easy to recognize at a glance.",
+            "<strong>Chest filter:</strong> inside subcategories, a Back button takes you back to the category above.",
+            "<strong>New Shop:</strong> the Shop tab was rebuilt as separate cards: XP bonus, World stack, Chest slots and Explosive Miner.",
+            "<strong>New Shop:</strong> each card has an icon, an explanation of what the purchase does, the current state and its buttons.",
+            "<strong>New Shop:</strong> prices show the game's own item icons (coins, bars and dynamite) with the amount next to them.",
+            "<strong>New Shop:</strong> hover over an icon to see the item name.",
+            "<strong>New Shop:</strong> the World stack card explains that the purchase raises how many items fit in each slot in this world, for every player.",
+            "<strong>New Shop:</strong> at 2x, a 100-item slot holds 200.",
+            "<strong>New Shop:</strong> the Chest slots card says the purchase adds slots to the world's chests for everyone and how many slots each purchase gives.",
+            "<strong>New Shop:</strong> the XP buff has its own icon, a green orb with an up arrow.",
+            "<strong>Settlement expansion:</strong> a new Shop card that expands the settlement you are standing in, without opening the flag.",
+            "<strong>Settlement expansion:</strong> the card shows the current size, the next one and the cost with item icons.",
+            "<strong>Settlement expansion:</strong> only the settlement owner can expand it.",
+            "<strong>Settlement expansion:</strong> the card updates by itself when you walk into or out of a settlement with the Shop open.",
+            "<strong>Bigger settlements:</strong> after the game's 7 levels come 49 more, up to 1,840x1,840 tiles.",
+            "<strong>Bigger settlements:</strong> each extra level asks for coins and a rotating set of late-game materials (bars, gems and essences).",
+            "<strong>Bigger settlements:</strong> the amounts asked grow every level.",
+            "<strong>Bigger settlements:</strong> these levels also show up on the settlement flag.",
+            "<strong>Bigger settlements:</strong> very large settlements make the world heavier to run.",
+            "<strong>Ally outlines:</strong> allies summoned by the Necromancy ritual now have a glowing purple outline, easy to tell apart from enemies in the middle of a fight.",
+            "<strong>Ally outlines:</strong> Army of the Dead allies have a gold outline, so you know which ones will disappear.",
+            "<strong>Ally outlines:</strong> Army of the Dead is the 50% chance at level 5 that turns enemies into allies for 1 minute.",
+            "<strong>Health potion:</strong> by default, you and your settlers can drink health potions back to back, with no wait.",
+            "<strong>Health potion:</strong> the game's \"Health potion fatigue\" is no longer applied.",
+            "<strong>Health potion:</strong> in the config's Features tab, Potions section, you can change the wait for the player and for settlers.",
+            "<strong>Health potion:</strong> -1 goes back to the game value (30 seconds), and any other number becomes the wait in seconds.",
+            "<strong>Health potion:</strong> on a server, the server's config applies to every player."
           ]
         },
         {
           "heading": "⚡ Performance",
           "items": [
-            "<strong>Lighter inventory and chests:</strong> moving items, merging stacks and opening chests is faster, especially with many items.",
-            "<strong>Large colonies:</strong> settlers weigh less on the server.",
-            "<strong>Machines, crops and traps:</strong> the Machine Master, Nature Master and Trap Master bonuses cost the game less, even in very large settlements.",
-            "<strong>Necromancy allies:</strong> ritual allies weigh less while moving.",
-            "<strong>RPG Skills window in combat:</strong> with the Necromancy tab open during a fight, the window only updates what changed instead of rebuilding everything several times per second.",
-            "<strong>XP bar:</strong> the on-screen XP bar costs less every frame.",
-            "<strong>Lighter combat:</strong> players and monsters with buffs (speed, damage, defense) cost the game less.",
-            "<strong>Servers with many players:</strong> RPG Skills weighs less on the server for each connected player."
+            "Moving items, merging stacks and opening chests is faster, especially with many items.",
+            "Settlers weigh less on the server in large colonies.",
+            "The Machine Master, Nature Master and Trap Master bonuses cost the game less, even in very large settlements.",
+            "Necromancy ritual allies weigh less while moving.",
+            "With the Necromancy tab open during a fight, the RPG Skills window only updates what changed, instead of rebuilding everything several times per second.",
+            "The on-screen XP bar costs less every frame.",
+            "Players and monsters with buffs (speed, damage, defense) cost the game less.",
+            "RPG Skills weighs less on the server for each connected player."
           ]
         },
         {
-          "heading": "🛠️ Fixes",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "<strong>Language change:</strong> when you change the game language, the Necromancy tab, the monster names in the Grimoire and the Ritual panel switch language right away. Before, some texts stayed in the old language until a restart.",
-            "<strong>Config that did not save:</strong> after playing a world and going back to the menu, some of what you changed in the RPG Skills config went back to the old value when restarting the game. Now everything you save stays saved.",
-            "<strong>Long names in Necromancy:</strong> monster names that do not fit on the card or in a Ritual slot scroll like a marquee instead of being cut or overlapping the line below.",
-            "<strong>Config texts:</strong> symbols that showed up as \"?\" (like the Accelerated Sleep arrow and the dash in \"0-255\") were replaced in every language, and some texts were fixed.",
-            "<strong>Messages in your language:</strong> on a server, RPG Skills chat notices (shop, mining, reset, Necromancy) arrive in your game's language, not the server's. Necromancy notices that did not show up in chat now do.",
-            "<strong>Server config:</strong> when you join a server, RPG Skills uses its rules (XP, classes, shop costs, enabled options). Your config file does not change, and when you leave everything goes back to your own settings. Level-up fireworks, the inventory button and the status line stay the way you set them.",
-            "<strong>Alchemy Master and health potions:</strong> the potion duration bonus stretched health and mana potion fatigue, making alchemists wait longer to drink another one. Now it only applies to the good potion effects.",
-            "<strong>Alchemy potions:</strong> the duration bonus only applies to whoever drank it. Before, the extra duration could carry over to the same potion for other players.",
-            "<strong>Safer fishing and harvesting:</strong> if an RPG Skills bonus goes wrong, fishing and harvesting keep working normally.",
-            "<strong>Switching worlds:</strong> Necromancy allies and developer mode no longer carry over from one world to another.",
-            "<strong>Safe Haven 5.0:</strong> RPG Skills finds Safe Haven's config file in its new folder and brings your options over from the old location.",
-            "<strong>Config files:</strong> if the game closes in the middle of saving, the previous config stays intact instead of corrupted."
+            "RPG Skills finds the Safe Haven 5.0 config in its new folder.",
+            "Your Safe Haven options are brought over from the old location."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "When you change the game language, the Necromancy tab, the monster names in the Grimoire and the Ritual panel switch language right away, with no restart needed.",
+            "Everything you change and save in the RPG Skills config stays saved when restarting the game, even after playing a world and going back to the menu.",
+            "Monster names that do not fit on the card or in a Ritual slot scroll like a marquee, instead of being cut or overlapping the line below.",
+            "Config symbols that showed up as \"?\" (like the Accelerated Sleep arrow and the dash in \"0-255\") were replaced in every language.",
+            "Some config texts were fixed.",
+            "On a server, RPG Skills chat notices (shop, mining, reset, Necromancy) arrive in your game's language, not the server's.",
+            "Necromancy notices that did not show up in chat now do.",
+            "When you join a server, RPG Skills uses its rules (XP, classes, shop costs, enabled options).",
+            "Your config file does not change, and when you leave the server everything goes back to your own settings.",
+            "Level-up fireworks, the inventory button and the status line stay the way you set them on the server.",
+            "The Alchemy Master's potion duration bonus no longer stretches health and mana potion fatigue, which made alchemists wait longer to drink another one.",
+            "That bonus now only applies to the good potion effects.",
+            "The Alchemy potion duration bonus only applies to whoever drank it, without carrying over to the same potion for other players.",
+            "If an RPG Skills bonus goes wrong, fishing and harvesting keep working normally.",
+            "Necromancy allies and developer mode no longer carry over from one world to another.",
+            "If the game closes in the middle of saving, the previous config stays intact instead of corrupted."
           ]
         }
       ],
@@ -596,42 +1061,49 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 3.9 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "🔒 Multiplayer mais seguro",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "<strong>Comandos de admin só para administradores:</strong> em mundo hospedado (aberto para amigos), qualquer jogador conectado conseguia usar os comandos de admin do mod. Agora só o dono do mundo e os admins do servidor conseguem. Em singleplayer nada muda.",
-            "<strong>Restaurar inventário só para administradores:</strong> o <em>/rpgskills restore inventory</em> podia ser usado para duplicar itens. Ver a lista de backups continua liberado para todos.",
-            "<strong>Reset de slots de baú e de stack só para administradores:</strong> o reset vale para o mundo inteiro, então agora exige admin, mesmo com a loja liberada para todos.",
-            "<strong>Sem respec de graça:</strong> não dá mais para tirar pontos de classe sem pagar o respec.",
-            "<strong>Servidor mais protegido:</strong> um jogador mal-intencionado não consegue mais travar o servidor."
-          ]
-        },
-        {
-          "heading": "🛠️ Correções",
-          "items": [
-            "<strong>Ruína Sombria sem pisca-pisca (Mestre das Cavernas):</strong> a luz extra do Cinto Brilhante e do Fogo-Fátuo agora fica estável. Antes ela piscava várias vezes por segundo.",
-            "<strong>Hemorragia Congelada:</strong> a fusão agora dá o bônus de dano que prometia.",
-            "<strong>Bônus de loot na colheita:</strong> o bônus de loot ao colher frutas e sementes agora funciona.",
-            "<strong>Desconto de expedição (Mestre dos Reinos):</strong> o desconto da loja do assentamento agora vale também para as expedições.",
-            "<strong>Necromancia em servidor dedicado:</strong> a aba Necromancia e a barra Ritual agora mostram seus dados corretamente em servidor dedicado.",
-            "<strong>Progresso de quem hospeda:</strong> em singleplayer e para quem hospeda o mundo, o XP e o nível não voltam mais para um valor antigo.",
-            "<strong>Restaurar inventário com 1 backup:</strong> com só 1 backup configurado, o restore falhava e perdia esse backup.",
-            "<strong>Slots de baú comprados:</strong> se o limite de slots for reduzido na configuração, os slots que você comprou não se perdem mais. Eles voltam quando o limite sobe de novo.",
-            "<strong>Compras na loja:</strong> moedas e barras agora são cobradas do inventário do mesmo jeito que a loja do jogo cobra. Se algo der errado no meio da compra, você recebe tudo de volta, e o que não couber no inventário cai no chão.",
-            "<strong>Buff de XP:</strong> os multiplicadores à venda agora seguem a configuração do servidor (antes eram sempre 2x, 5x e 10x).",
-            "<strong>Sobrevivência Fatal e Espinhos:</strong> agora funcionam de forma consistente em multiplayer.",
-            "<strong>Safe Haven QOL:</strong> com a regra \"1 perda por ciclo de estrago\" do RPG Skills ligada, a opção igual do Safe Haven é desligada, para as duas não valerem ao mesmo tempo."
-          ]
-        },
-        {
-          "heading": "🌍 Traduções",
-          "items": [
-            "Os textos de desbloqueio de algumas classes que apareciam em inglês agora estão traduzidos em alemão, espanhol, francês, italiano, japonês, holandês, polonês, russo e chinês."
+            "Com a regra \"1 perda por ciclo de estrago\" do RPG Skills ligada, a opção igual do Safe Haven é desligada, para as duas não valerem ao mesmo tempo."
           ]
         },
         {
           "heading": "⚠️ Importante",
           "items": [
             "Em multiplayer, o servidor e todos os jogadores precisam estar na versão 3.9."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "A luz extra do Cinto Brilhante e do Fogo-Fátuo, na Ruína Sombria do Mestre das Cavernas, agora fica estável.",
+            "Antes, essa luz piscava várias vezes por segundo.",
+            "A fusão Hemorragia Congelada agora dá o bônus de dano que prometia.",
+            "O bônus de loot ao colher frutas e sementes agora funciona.",
+            "O desconto da loja do assentamento do Mestre dos Reinos agora vale também para as expedições.",
+            "A aba Necromancia e a barra Ritual mostram seus dados corretamente em servidor dedicado.",
+            "Em singleplayer e para quem hospeda o mundo, o XP e o nível não voltam mais para um valor antigo.",
+            "Com só 1 backup configurado, restaurar o inventário não falha mais nem perde esse backup.",
+            "Os slots de baú comprados não se perdem mais se o limite de slots for reduzido na configuração.",
+            "Esses slots voltam quando o limite sobe de novo.",
+            "A Loja cobra moedas e barras do inventário do mesmo jeito que a loja do jogo cobra.",
+            "Se algo der errado no meio de uma compra, você recebe tudo de volta.",
+            "O que não couber no inventário na devolução cai no chão.",
+            "Os multiplicadores do buff de XP à venda seguem a configuração do servidor, em vez de serem sempre 2x, 5x e 10x.",
+            "Sobrevivência Fatal e Espinhos agora funcionam de forma consistente em multiplayer.",
+            "Os textos de desbloqueio de algumas classes que apareciam em inglês agora estão traduzidos em alemão, espanhol, francês, italiano, japonês, holandês, polonês, russo e chinês."
+          ]
+        },
+        {
+          "heading": "🔒 Multiplayer mais seguro",
+          "items": [
+            "Em mundo hospedado (aberto para amigos), só o dono do mundo e os admins do servidor usam os comandos de admin do mod.",
+            "Antes, qualquer jogador conectado conseguia usar esses comandos.",
+            "Em singleplayer nada muda.",
+            "O <em>/rpgskills restore inventory</em> agora é só para administradores, porque podia ser usado para duplicar itens.",
+            "Ver a lista de backups continua liberado para todos.",
+            "O reset de slots de baú e de stack vale para o mundo inteiro, então agora exige admin, mesmo com a Loja liberada para todos.",
+            "Não dá mais para tirar pontos de classe sem pagar o respec.",
+            "Um jogador mal-intencionado não consegue mais travar o servidor."
           ]
         }
       ],
@@ -641,42 +1113,49 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Update 3.9 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "🔒 Safer multiplayer",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "<strong>Admin commands for admins only:</strong> in a hosted world (open to friends), any connected player could use the mod's admin commands. Now only the world owner and server admins can. Nothing changes in singleplayer.",
-            "<strong>Inventory restore for admins only:</strong> <em>/rpgskills restore inventory</em> could be used to duplicate items. Viewing the backup list is still open to everyone.",
-            "<strong>Chest slot and stack reset for admins only:</strong> the reset applies to the whole world, so it now requires admin, even when the shop is open to everyone.",
-            "<strong>No free respec:</strong> class points can no longer be removed without paying for the respec.",
-            "<strong>Better protected server:</strong> a malicious player can no longer freeze the server."
-          ]
-        },
-        {
-          "heading": "🛠️ Fixes",
-          "items": [
-            "<strong>Dark Ruin no longer flickers (Cavern Master):</strong> the extra light from the Shine Belt and the Will-o'-Wisp is now steady. It used to flicker several times per second.",
-            "<strong>Frozen Hemorrhage:</strong> the fusion now grants the damage bonus it promised.",
-            "<strong>Harvest loot bonus:</strong> the loot bonus when harvesting fruit and seeds now works.",
-            "<strong>Expedition discount (Realm Master):</strong> the settlement shop discount now also applies to expeditions.",
-            "<strong>Necromancy on dedicated servers:</strong> the Necromancy tab and the Ritual bar now show your data correctly on dedicated servers.",
-            "<strong>Host progress:</strong> in singleplayer and for whoever hosts the world, XP and level no longer jump back to an old value.",
-            "<strong>Inventory restore with 1 backup:</strong> with only 1 backup configured, restore failed and lost that backup.",
-            "<strong>Bought chest slots:</strong> if the slot limit is lowered in the config, the slots you bought are no longer lost. They come back when the limit is raised again.",
-            "<strong>Shop purchases:</strong> coins and bars are now charged from your inventory the same way the game's shop does it. If something goes wrong in the middle of a purchase, you get everything back, and whatever does not fit in your inventory drops on the ground.",
-            "<strong>XP buff:</strong> the multipliers for sale now follow the server's config (they used to always be 2x, 5x and 10x).",
-            "<strong>Fatal Survival and Thorns:</strong> now work consistently in multiplayer.",
-            "<strong>Safe Haven QOL:</strong> with RPG Skills' \"one loss per spoil cycle\" rule on, Safe Haven's matching option is turned off so both do not apply at the same time."
-          ]
-        },
-        {
-          "heading": "🌍 Translations",
-          "items": [
-            "Unlock texts for some classes that showed up in English are now translated into German, Spanish, French, Italian, Japanese, Dutch, Polish, Russian and Chinese."
+            "With RPG Skills' \"one loss per spoil cycle\" rule on, Safe Haven's matching option is turned off, so both do not apply at the same time."
           ]
         },
         {
           "heading": "⚠️ Important",
           "items": [
             "In multiplayer, the server and every player must be on version 3.9."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "The extra light from the Shine Belt and the Will-o'-Wisp, in the Cavern Master's Dark Ruin, is now steady.",
+            "Before, that light flickered several times per second.",
+            "The Frozen Hemorrhage fusion now grants the damage bonus it promised.",
+            "The loot bonus when harvesting fruit and seeds now works.",
+            "The Realm Master's settlement shop discount now also applies to expeditions.",
+            "The Necromancy tab and the Ritual bar show your data correctly on dedicated servers.",
+            "In singleplayer and for whoever hosts the world, XP and level no longer jump back to an old value.",
+            "With only 1 backup configured, restoring the inventory no longer fails or loses that backup.",
+            "Bought chest slots are no longer lost if the slot limit is lowered in the config.",
+            "Those slots come back when the limit is raised again.",
+            "The Shop charges coins and bars from your inventory the same way the game's shop does.",
+            "If something goes wrong in the middle of a purchase, you get everything back.",
+            "Whatever does not fit in your inventory on the refund drops on the ground.",
+            "The XP buff multipliers for sale follow the server's config, instead of always being 2x, 5x and 10x.",
+            "Fatal Survival and Thorns now work consistently in multiplayer.",
+            "Unlock texts for some classes that showed up in English are now translated into German, Spanish, French, Italian, Japanese, Dutch, Polish, Russian and Chinese."
+          ]
+        },
+        {
+          "heading": "🔒 Safer multiplayer",
+          "items": [
+            "In a hosted world (open to friends), only the world owner and server admins can use the mod's admin commands.",
+            "Before, any connected player could use those commands.",
+            "Nothing changes in singleplayer.",
+            "<em>/rpgskills restore inventory</em> is now admins only, because it could be used to duplicate items.",
+            "Viewing the backup list is still open to everyone.",
+            "The chest slot and stack reset applies to the whole world, so it now requires admin, even when the Shop is open to everyone.",
+            "Class points can no longer be removed without paying for the respec.",
+            "A malicious player can no longer freeze the server."
           ]
         }
       ],
@@ -692,401 +1171,437 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 3.8 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "🛠️ Correções",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "<strong>Escriba Imortal (Mestre Arcano) com o Safe Haven QOL:</strong> a passiva agora também funciona com o Safe Haven: o pergaminho de encantamento não é mais consumido. Com o Safe Haven, o pergaminho abre a janela de encantamento múltiplo do Safe Haven, que gastava o pergaminho por conta própria e ignorava a passiva."
+            "A passiva Escriba Imortal do Mestre Arcano agora também funciona com o Safe Haven QOL.",
+            "Com o Safe Haven, o pergaminho de encantamento abre a janela de encantamento múltiplo do Safe Haven.",
+            "Antes, essa janela gastava o pergaminho por conta própria e ignorava a passiva.",
+            "Agora o pergaminho de encantamento não é mais consumido."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 3.8 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "🛠️ Fixes",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "<strong>Immortal Scribe (Arcane Master) with Safe Haven QOL:</strong> the passive now also works with Safe Haven: the enchant scroll is no longer consumed. With Safe Haven, the scroll opens Safe Haven's multi-enchant window, which spent the scroll on its own and ignored the passive."
+            "The Arcane Master's Immortal Scribe passive now also works with Safe Haven QOL.",
+            "With Safe Haven, the enchant scroll opens Safe Haven's multi-enchant window.",
+            "Before, that window spent the scroll on its own and ignored the passive.",
+            "Now the enchant scroll is no longer consumed."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
     "version": "3.7",
-    "tag": "update",
-    "tagClass": "minor",
-    "tagKey": "changelog.tag.update",
+    "tag": "new",
+    "tagClass": "major",
+    "tagKey": "changelog.tag.new",
     "pt": {
       "title": "🌟 Atualização 3.7 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "💀 Mestre da Necromancia: o que cada nível libera",
+          "heading": "✨ Novidades",
           "items": [
-            "<strong>Nível 1 - Despertar:</strong> 1 slot de ritual e os monstros comuns. Seus lacaios sobem de nível até o 100.",
-            "<strong>Nível 2 - Legião:</strong> 2º slot de ritual, monstros <strong>elite</strong> e +25% de XP para os lacaios.",
-            "<strong>Nível 3 - Elo Sombrio:</strong> 3º slot de ritual. Os lacaios recebem metade do seu bônus de dano de invocação. <strong>Bônus de grupo:</strong> 3 lacaios do mesmo monstro causam +50% de dano contra aquele monstro.",
-            "<strong>Nível 4 - Soberano dos Chefes:</strong> invoque <strong>1 chefe</strong> que você já derrotou como lacaio, com 40% do poder dele.",
-            "<strong>Nível 5 - Exército dos Mortos:</strong> cada inimigo que você ou seus lacaios derrotam tem 50% de chance de se levantar como servo por 1 minuto (até 3 ao mesmo tempo). Lacaios com Maestria recebem a <strong>Ascensão</strong>: +25% de dano."
-          ]
-        },
-        {
-          "heading": "⚔️ Lacaios sobem de nível (1 a 100)",
-          "items": [
-            "Para poder invocar um monstro é preciso derrotá-lo muitas vezes: <strong>300 vitórias</strong> para monstros comuns, <strong>150</strong> para elites e <strong>50</strong> para chefes. O card no Grimório mostra o progresso (ex.: 120/300) e o chat avisa quando ele é liberado.",
-            "O lacaio que derrota um inimigo ganha o XP inteiro. Os outros lacaios chamados ganham metade, inclusive quando quem derrota é você. Inimigos mais fortes dão mais XP.",
-            "Cada nível dá <strong>+1,5% de dano</strong> (+148,5% no nível 100).",
-            "O chat avisa a cada 10 níveis, e o lacaio solta faíscas douradas quando sobe.",
-            "Trocar ou remover um lacaio não apaga o progresso dele: quando você invoca aquele monstro de novo, ele volta com o nível que tinha."
-          ]
-        },
-        {
-          "heading": "🌀 Maestria",
-          "items": [
-            "No nível 100 aparece o botão <strong>Maestria</strong> no slot do lacaio. Ao aplicar, ele volta para o nível 1 e ganha <strong>+10% de dano permanente</strong>.",
-            "Dá para aplicar até <strong>10 Maestrias</strong> no mesmo lacaio (+100% de dano permanente). Quanto mais Maestrias, mais forte ele fica."
-          ]
-        },
-        {
-          "heading": "🗂️ Aba Necromancia redesenhada",
-          "items": [
-            "Novo visual no estilo do Grimório: cabeçalho com o emblema da classe, nível (1 a 5), o poder atual e o próximo desbloqueio.",
-            "Cada slot de ritual virou uma <strong>ficha do lacaio</strong>: nível e Maestria, <strong>barra de XP</strong> com quanto falta para o próximo nível, <strong>dano por golpe</strong> (já com todos os bônus), o bônus total de dano e o tipo de ataque. Botões <strong>Chamar/Guardar</strong>, <strong>Remover</strong> e <strong>Maestria</strong> no próprio slot. O slot invocado fica com moldura roxa.",
-            "O Grimório mostra quantos monstros você já derrotou e, em cada card, o nível de classe exigido, as vitórias e o progresso guardado. Os textos não se sobrepõem mais.",
-            "Monstros que estavam sem imagem (Escorpião Gigante, Mago Esqueleto, Bruxa Velha, Golem e Morcego Ascendidos...) agora aparecem com o desenho do próprio monstro."
-          ]
-        },
-        {
-          "heading": "⌨️ Barra Ritual (HUD) nova",
-          "items": [
-            "Painel com a moldura dourada do mod. Lacaio invocado: moldura roxa brilhante. Lacaio descansando: moldura dourada. Slot vazio: moldura tracejada.",
-            "A tecla de cada slot aparece num selo no canto, e o nível do lacaio aparece embaixo."
-          ]
-        },
-        {
-          "heading": "🏹 Lacaios lutam como o monstro de verdade",
-          "items": [
-            "Cada lacaio agora usa a <strong>IA original do monstro</strong>, com os mesmos ataques, investidas, pulos, magias e habilidades que ele tem como inimigo. A diferença é que ele mira os inimigos perto de você em vez dos jogadores e, sem alvo, volta para o seu lado em vez de vagar pelo mapa.",
-            "Os <strong>projéteis e magias</strong> dos lacaios são <strong>teleguiados</strong>: perseguem o inimigo mais próximo até acertar.",
-            "<strong>Foco:</strong> os lacaios atacam o inimigo que você está acertando ou que está te atacando.",
-            "<strong>Coleira:</strong> eles só escolhem inimigos a até 12 tiles de você e, se perseguirem algo para longe demais, largam o alvo e voltam.",
-            "<strong>Destravar:</strong> lacaio preso no mesmo lugar por 10 segundos, longe de você e sem lutar, se teleporta para o seu lado com a animação do ritual."
-          ]
-        },
-        {
-          "heading": "⚙️ Painel RPG SKILLS CONFIG redesenhado",
-          "items": [
-            "As opções agora ficam em <strong>abas na lateral</strong> (Progressão e XP, Funcionalidades, Passivas, Classes, Economia e Loja, Qualidade de vida, Interface, Servidor e Compat.), com subtítulos dentro de cada aba. Nada de rolar uma lista gigante.",
-            "Opção diferente do padrão fica <strong>dourada</strong> e ganha o botão <strong>Padrão</strong>. Passe o mouse no valor para ver o padrão e a faixa permitida.",
-            "Mudança ainda não salva fica <strong>verde</strong>, a aba aberta fica amarela, a aba com mudança ganha um <strong>*</strong> e o botão mostra quantas faltam: <strong>Salvar (3)</strong>. <strong>Desfazer</strong> descarta tudo e <strong>Padrões da aba</strong> restaura a aba inteira.",
-            "Abas só de liga/desliga (Passivas, Classes) têm <strong>Ligar tudo</strong> e <strong>Desligar tudo</strong>. Números com faixa grande ganham os botões <strong>--</strong> e <strong>++</strong> (passo x10).",
-            "A janela pode ser <strong>arrastada pelo título</strong> e <strong>abre onde você a deixou</strong> da última vez. Na primeira vez ela abre centralizada.",
-            "Fechar a janela sem salvar não perde as mudanças: elas continuam lá até você salvar ou desfazer."
+            "<strong>Mestre da Necromancia:</strong> a Necromancia agora é uma classe, o Mestre da Necromancia.",
+            "<strong>Mestre da Necromancia:</strong> tudo traduzido para os 12 idiomas do mod.",
+            "<strong>Mestre da Necromancia:</strong> para administradores, /rpgskills necro setlevel <slot 1-3> <nível 1-100> define o nível de um lacaio, útil para testes.",
+            "<strong>Nível dos lacaios:</strong> a caçada de 150/300/500 vitórias acabou, e agora os lacaios crescem lutando ao seu lado, até o nível 100.",
+            "<strong>Nível dos lacaios:</strong> para poder invocar um monstro, é preciso derrotá-lo 300 vezes se for comum, 150 se for elite e 50 se for chefe.",
+            "<strong>Nível dos lacaios:</strong> o card no Grimório mostra o progresso (ex.: 120/300), e o chat avisa quando o monstro é liberado.",
+            "<strong>Nível dos lacaios:</strong> o lacaio que derrota um inimigo ganha o XP inteiro.",
+            "<strong>Nível dos lacaios:</strong> os outros lacaios chamados ganham metade, inclusive quando quem derrota é você.",
+            "<strong>Nível dos lacaios:</strong> inimigos mais fortes dão mais XP.",
+            "<strong>Nível dos lacaios:</strong> cada nível dá +1,5% de dano, chegando a +148,5% no nível 100.",
+            "<strong>Nível dos lacaios:</strong> o chat avisa a cada 10 níveis.",
+            "<strong>Nível dos lacaios:</strong> o lacaio solta faíscas douradas quando sobe de nível.",
+            "<strong>Nível dos lacaios:</strong> trocar ou remover um lacaio não apaga o progresso dele, e invocado de novo ele volta com o nível que tinha.",
+            "<strong>Maestria:</strong> no nível 100 aparece o botão Maestria no slot do lacaio.",
+            "<strong>Maestria:</strong> ao aplicar, o lacaio volta para o nível 1 e ganha +10% de dano permanente.",
+            "<strong>Maestria:</strong> dá para aplicar até 10 Maestrias no mesmo lacaio, somando +100% de dano permanente.",
+            "<strong>Lacaios em combate:</strong> cada lacaio luta como o monstro de verdade, com os mesmos ataques, investidas, pulos, magias e habilidades que ele tem como inimigo.",
+            "<strong>Lacaios em combate:</strong> o lacaio mira os inimigos perto de você em vez dos jogadores.",
+            "<strong>Lacaios em combate:</strong> sem alvo, o lacaio volta para o seu lado em vez de vagar pelo mapa.",
+            "<strong>Lacaios em combate:</strong> os projéteis e magias dos lacaios são teleguiados e perseguem o inimigo mais próximo até acertar.",
+            "<strong>Lacaios em combate:</strong> os lacaios focam no inimigo que você está acertando ou que está te atacando.",
+            "<strong>Lacaios em combate:</strong> os lacaios só escolhem inimigos a até 12 tiles de você.",
+            "<strong>Lacaios em combate:</strong> se perseguirem algo para longe demais, os lacaios largam o alvo e voltam.",
+            "<strong>Lacaios em combate:</strong> o lacaio preso no mesmo lugar por 10 segundos, longe de você e sem lutar, se teleporta para o seu lado com a animação do ritual.",
+            "<strong>Aba Necromancia:</strong> novo visual no estilo do Grimório, com cabeçalho mostrando o emblema da classe, o nível (1 a 5), o poder atual e o próximo desbloqueio.",
+            "<strong>Aba Necromancia:</strong> cada slot de ritual virou uma ficha do lacaio, com nível e Maestria.",
+            "<strong>Aba Necromancia:</strong> a ficha tem uma barra de XP com quanto falta para o próximo nível.",
+            "<strong>Aba Necromancia:</strong> a ficha mostra o dano por golpe com todos os bônus, o bônus total de dano e o tipo de ataque.",
+            "<strong>Aba Necromancia:</strong> os botões Chamar/Guardar, Remover e Maestria ficam no próprio slot.",
+            "<strong>Aba Necromancia:</strong> o slot invocado fica com moldura roxa.",
+            "<strong>Aba Necromancia:</strong> o Grimório mostra quantos monstros você já derrotou.",
+            "<strong>Aba Necromancia:</strong> cada card mostra o nível de classe exigido, as vitórias e o progresso guardado.",
+            "<strong>Aba Necromancia:</strong> os textos não se sobrepõem mais.",
+            "<strong>Aba Necromancia:</strong> monstros que estavam sem imagem (Escorpião Gigante, Mago Esqueleto, Bruxa Velha, Golem e Morcego Ascendidos...) agora aparecem com o desenho do próprio monstro.",
+            "<strong>Barra Ritual:</strong> painel novo com a moldura dourada do mod.",
+            "<strong>Barra Ritual:</strong> lacaio invocado tem moldura roxa brilhante, lacaio descansando tem moldura dourada e slot vazio tem moldura tracejada.",
+            "<strong>Barra Ritual:</strong> a tecla de cada slot aparece num selo no canto.",
+            "<strong>Barra Ritual:</strong> o nível do lacaio aparece embaixo do slot.",
+            "<strong>Painel de configuração:</strong> as opções do painel RPG SKILLS CONFIG ficam em abas na lateral, com subtítulos dentro de cada aba, sem rolar uma lista gigante.",
+            "<strong>Painel de configuração:</strong> as abas são Progressão e XP, Funcionalidades, Passivas, Classes, Economia e Loja, Qualidade de vida, Interface, Servidor e Compat.",
+            "<strong>Painel de configuração:</strong> opção diferente do padrão fica dourada e ganha o botão Padrão.",
+            "<strong>Painel de configuração:</strong> passar o mouse no valor mostra o padrão e a faixa permitida.",
+            "<strong>Painel de configuração:</strong> mudança ainda não salva fica verde.",
+            "<strong>Painel de configuração:</strong> a aba aberta fica amarela, e a aba com mudança ganha um *.",
+            "<strong>Painel de configuração:</strong> o botão de salvar mostra quantas mudanças faltam, como Salvar (3).",
+            "<strong>Painel de configuração:</strong> Desfazer descarta tudo, e Padrões da aba restaura a aba inteira.",
+            "<strong>Painel de configuração:</strong> abas só de liga/desliga (Passivas, Classes) têm Ligar tudo e Desligar tudo.",
+            "<strong>Painel de configuração:</strong> números com faixa grande ganham os botões -- e ++, com passo x10.",
+            "<strong>Painel de configuração:</strong> a janela pode ser arrastada pelo título.",
+            "<strong>Painel de configuração:</strong> a janela abre onde você a deixou da última vez, e centralizada na primeira vez.",
+            "<strong>Painel de configuração:</strong> fechar a janela sem salvar não perde as mudanças, que ficam lá até você salvar ou desfazer."
           ]
         },
         {
           "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "Jogando com os dois mods, o RPG Skills desliga no Safe Haven só o que dá de graça o que as classes ensinam. Assim as classes continuam valendo a pena:",
-            "<strong>Dano 2x de armas de fogo</strong> (Mestre Atirador) e <strong>+2 invocações</strong> (Mestre Invocador).",
-            "<strong>Botão \"3x\" das máquinas</strong> (Mestre das Máquinas) e <strong>Banco de Juros</strong> (moedas de graça todo dia atrapalhavam a loja e o Mestre da Riqueza).",
-            "<strong>Fênix e Golem de Cinzas com 3x de drops</strong> (Mestre do Loot).",
-            "<strong>+10 de felicidade por dividir quarto</strong> e <strong>colonos já no nível 20 de qualidade de vida</strong> (Mestre dos Reinos).",
-            "<strong>Abelhas fertilizando plantações</strong> (Mestre da Natureza).",
-            "<strong>40 slots de acessório</strong> e <strong>acessórios repetidos somando bônus</strong> (Mestre das Relíquias).",
-            "<strong>Minério sempre brilhando no escuro</strong> (Mestre das Cavernas).",
+            "Jogando com os dois mods, o RPG Skills desliga no Safe Haven só o que dá de graça o que as classes ensinam, para as classes continuarem valendo a pena.",
+            "Fica desligado o dano 2x de armas de fogo (Mestre Atirador).",
+            "Fica desligado o +2 invocações (Mestre Invocador).",
+            "Fica desligado o botão \"3x\" das máquinas (Mestre das Máquinas).",
+            "Fica desligado o Banco de Juros, porque moedas de graça todo dia atrapalhavam a loja e o Mestre da Riqueza.",
+            "Ficam desligados os 3x de drops da Fênix e do Golem de Cinzas (Mestre do Loot).",
+            "Fica desligado o +10 de felicidade por dividir quarto (Mestre dos Reinos).",
+            "Fica desligado o início dos colonos já no nível 20 de qualidade de vida (Mestre dos Reinos).",
+            "Ficam desligadas as abelhas fertilizando plantações (Mestre da Natureza).",
+            "Ficam desligados os 40 slots de acessório (Mestre das Relíquias).",
+            "Ficam desligados os acessórios repetidos somando bônus (Mestre das Relíquias).",
+            "Fica desligado o minério sempre brilhando no escuro (Mestre das Cavernas).",
             "Continuam desligados como antes: pilhas extras, mineração em veio, incinerador instantâneo e loot triplo de animais.",
             "Todo o resto do Safe Haven continua funcionando normalmente (HUD, mapas, construção, baús, cores, plantas de construção etc.).",
             "Se o Safe Haven religar alguma dessas opções pelo menu dele durante o jogo, o RPG Skills desliga de novo em poucos segundos.",
-            "Dono de servidor: quem preferir manter tudo do Safe Haven pode desligar essa trava em <strong>compat.safeHavenBalanceLock=false</strong> na config do RPG Skills."
+            "O dono do servidor que preferir manter tudo do Safe Haven pode desligar essa trava com compat.safeHavenBalanceLock=false na configuração do RPG Skills."
           ]
         },
         {
-          "heading": "🛠️ Correções",
+          "heading": "⚠️ Importante",
           "items": [
-            "<strong>Compatibilidade com o Safe Haven QOL:</strong> corrigido o travamento ao entrar no mundo (<em>NoSuchMethodError: addItemsDropRemaining</em>). O RPG Skills chamava uma versão antiga desse método do jogo, que mudou no Necesse 1.3.3, e o Safe Haven, ao ajustar os sets de equipamento, fazia o jogo passar por esse caminho.",
-            "Corrigidas outras 4 chamadas antigas do mesmo tipo, que podiam travar a <strong>Fusão Elemental</strong>, a caçada dos <strong>Cavelings</strong>, a <strong>bolsa de moedas</strong> do Mestre e a recuperação de construção.",
-            "Removido um gancho antigo do bônus de colheita do Mestre das Relíquias, que não fazia nada. O bônus continua funcionando normalmente.",
-            "Aba Necromancia: remover, invocar ou guardar um lacaio atualiza a aba na hora (antes só mudava ao reabrir), e o XP e as vitórias também aparecem enquanto ela está aberta.",
-            "Aba Necromancia: pedaços de outras telas não aparecem mais no meio da lista de monstros.",
+            "Seus saves continuam funcionando.",
+            "As vitórias da 3.6 continuam no Grimório, e os lacaios nos slots são mantidos.",
+            "Um monstro que tinha 500 ou mais vitórias (Tier 3 da antiga caçada) começa no nível 15.",
+            "Para invocar, agora é preciso ter a classe Mestre da Necromancia.",
+            "Slots acima do nível da sua classe ficam descansando, sem perder o lacaio."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "O jogo não trava mais ao entrar no mundo com o Safe Haven QOL.",
+            "Esse travamento vinha de uma parte do jogo que mudou no Necesse 1.3.3, e o Safe Haven, ao ajustar os sets de equipamento, fazia o jogo passar por ela.",
+            "Outros 4 pontos do mesmo tipo, que podiam travar a Fusão Elemental, a caçada dos Cavelings, a bolsa de moedas do Mestre e a recuperação de construção, também foram corrigidos.",
+            "Foi removida uma parte antiga do bônus de colheita do Mestre das Relíquias que não fazia nada, e o bônus continua funcionando normalmente.",
+            "Remover, invocar ou guardar um lacaio atualiza a aba Necromancia na hora, em vez de só mudar ao reabrir.",
+            "O XP e as vitórias também se atualizam com a aba Necromancia aberta.",
+            "Pedaços de outras telas não aparecem mais no meio da lista de monstros da aba Necromancia.",
             "O Grimório não lista mais partes de chefes, monstros sem nome ou que não podem ser invocados.",
-            "Grimório revisado contra a lista de monstros do jogo. Voltaram monstros que sumiam por engano: <strong>Lançador de Limo com Pernas</strong>, <strong>Limo Fantasma</strong>, as três <strong>Bruxas Malignas</strong> (frasco, arco e espadão), o <strong>Goblin Suspeitosamente Alto</strong> e os goblins do capacete, peitoral e sapatos, e o <strong>Mímico</strong>.",
-            "Saíram do Grimório os monstros que só funcionam na água ou na lava (<strong>Tubarão</strong> e <strong>Flameling</strong>) e os chefes de vários corpos que ainda apareciam (Dragão de Cristal, Sábio e Grit).",
-            "O <strong>Urso-pardo</strong> invocado não fica mais dormindo: ele nasce acordado e luta como o urso de verdade.",
+            "O Grimório foi revisado contra a lista de monstros do jogo.",
+            "Voltaram ao Grimório monstros que sumiam por engano: Lançador de Limo com Pernas, Limo Fantasma e as três Bruxas Malignas (frasco, arco e espadão).",
+            "Também voltaram o Goblin Suspeitosamente Alto, os goblins do capacete, peitoral e sapatos, e o Mímico.",
+            "Saíram do Grimório os monstros que só funcionam na água ou na lava (Tubarão e Flameling).",
+            "Saíram do Grimório os chefes de vários corpos que ainda apareciam (Dragão de Cristal, Sábio e Grit).",
+            "O Urso-pardo invocado não fica mais dormindo: ele nasce acordado e luta como o urso de verdade.",
             "Daqui para frente, um teste automático compara o mod com o jogo instalado antes de cada versão, para pegar esse tipo de erro antes de chegar até vocês."
+          ]
+        },
+        {
+          "heading": "💀 Mestre da Necromancia",
+          "items": [
+            "O nível 1 (Despertar) libera 1 slot de ritual e os monstros comuns.",
+            "O nível 2 (Legião) libera o 2º slot de ritual e os monstros elite.",
+            "O nível 2 também dá +25% de XP para os lacaios.",
+            "O nível 3 (Elo Sombrio) libera o 3º slot de ritual.",
+            "No nível 3, os lacaios recebem metade do seu bônus de dano de invocação.",
+            "No nível 3, 3 lacaios do mesmo monstro causam +50% de dano contra aquele monstro.",
+            "O nível 4 (Soberano dos Chefes) deixa invocar como lacaio 1 chefe que você já derrotou, com 40% do poder dele.",
+            "No nível 5 (Exército dos Mortos), cada inimigo que você ou seus lacaios derrotam tem 50% de chance de se levantar como servo por 1 minuto.",
+            "Até 3 servos ficam de pé ao mesmo tempo.",
+            "No nível 5, os lacaios com Maestria recebem a Ascensão: +25% de dano."
           ]
         },
         {
           "heading": "📈 Progressão",
           "items": [
-            "Com a classe nova (34 classes × 5 pontos), o <strong>nível máximo passa de 165 para 170</strong>, para ainda ser possível completar todas as classes. Configurações que usavam o máximo antigo (165) passam para 170 automaticamente.",
-            "A passiva <strong>Mestre das Classes</strong> continua exigindo todas as classes no máximo, o que agora inclui o Mestre da Necromancia."
-          ]
-        },
-        {
-          "heading": "✅ Compatibilidade",
-          "items": [
-            "Seus saves continuam funcionando. As vitórias da 3.6 continuam no Grimório e os lacaios nos slots são mantidos. Um monstro que tinha 500 ou mais vitórias (Tier 3 da antiga caçada) começa no <strong>nível 15</strong>.",
-            "Para invocar, agora é preciso ter a classe Mestre da Necromancia. Slots acima do nível da sua classe ficam descansando, sem perder o lacaio.",
-            "Tudo traduzido para os 12 idiomas do mod.",
-            "Para administradores: <strong>/rpgskills necro setlevel <slot 1-3> <nível 1-100></strong> define o nível de um lacaio (útil para testes)."
+            "Com a classe nova (34 classes × 5 pontos), o nível máximo passa de 165 para 170, para ainda dar para completar todas as classes.",
+            "Configurações que usavam o máximo antigo (165) passam para 170 sozinhas.",
+            "A passiva Mestre das Classes continua exigindo todas as classes no máximo, o que agora inclui o Mestre da Necromancia."
           ]
         }
       ],
-      "note": "<strong>Que seus lacaios cresçam fortes, necromante! 💀</strong>"
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 3.7 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "💀 Necromancy Master: what each level unlocks",
+          "heading": "✨ What's new",
           "items": [
-            "<strong>Level 1 - Awakening:</strong> 1 ritual slot and common monsters. Your minions level up to 100.",
-            "<strong>Level 2 - Legion:</strong> 2nd ritual slot, <strong>elite</strong> monsters and +25% minion XP.",
-            "<strong>Level 3 - Shadow Link:</strong> 3rd ritual slot. Minions get half of your summon damage bonus. <strong>Group bonus:</strong> 3 minions of the same monster deal +50% damage against that monster.",
-            "<strong>Level 4 - Lord of Bosses:</strong> summon <strong>1 boss</strong> you have defeated as a minion, with 40% of its power.",
-            "<strong>Level 5 - Army of the Dead:</strong> every enemy you or your minions defeat has a 50% chance to rise as a servant for 1 minute (up to 3 at once). Minions with Mastery get <strong>Ascension</strong>: +25% damage."
+            "<strong>Necromancy Master:</strong> Necromancy is now a class, the Necromancy Master.",
+            "<strong>Necromancy Master:</strong> everything translated into the mod's 12 languages.",
+            "<strong>Necromancy Master:</strong> for admins, /rpgskills necro setlevel <slot 1-3> <level 1-100> sets a minion's level, useful for testing.",
+            "<strong>Minion levels:</strong> the 150/300/500-victory hunt is gone, and now minions grow by fighting at your side, up to level 100.",
+            "<strong>Minion levels:</strong> to summon a monster you need to defeat it 300 times if it is common, 150 if it is elite and 50 if it is a boss.",
+            "<strong>Minion levels:</strong> the Grimoire card shows your progress (e.g. 120/300), and the chat lets you know when the monster unlocks.",
+            "<strong>Minion levels:</strong> the minion that defeats an enemy gets the full XP.",
+            "<strong>Minion levels:</strong> the other summoned minions get half, including when you are the one who defeats it.",
+            "<strong>Minion levels:</strong> stronger enemies give more XP.",
+            "<strong>Minion levels:</strong> each level gives +1.5% damage, reaching +148.5% at level 100.",
+            "<strong>Minion levels:</strong> the chat announces every 10 levels.",
+            "<strong>Minion levels:</strong> the minion gives off golden sparks when it levels up.",
+            "<strong>Minion levels:</strong> replacing or removing a minion does not erase its progress, and when summoned again it comes back at the level it had.",
+            "<strong>Mastery:</strong> at level 100 a Mastery button appears on the minion's slot.",
+            "<strong>Mastery:</strong> applying it sends the minion back to level 1 with +10% permanent damage.",
+            "<strong>Mastery:</strong> you can apply up to 10 Masteries to the same minion, adding up to +100% permanent damage.",
+            "<strong>Minions in combat:</strong> every minion fights like the real monster, with the same attacks, charges, jumps, spells and abilities it has as an enemy.",
+            "<strong>Minions in combat:</strong> a minion targets the enemies near you instead of players.",
+            "<strong>Minions in combat:</strong> with no target, a minion comes back to your side instead of wandering around the map.",
+            "<strong>Minions in combat:</strong> minion projectiles and spells are homing and chase the nearest enemy until they hit.",
+            "<strong>Minions in combat:</strong> minions focus on the enemy you are hitting or the one attacking you.",
+            "<strong>Minions in combat:</strong> minions only pick enemies within 12 tiles of you.",
+            "<strong>Minions in combat:</strong> if they chase something too far, minions drop it and come back.",
+            "<strong>Minions in combat:</strong> a minion stuck in the same place for 10 seconds, away from you and not fighting, teleports to your side with the ritual animation.",
+            "<strong>Necromancy tab:</strong> new Grimoire-style look, with a header showing the class emblem, level (1 to 5), your current power and the next unlock.",
+            "<strong>Necromancy tab:</strong> each ritual slot is now a minion sheet, with level and Mastery.",
+            "<strong>Necromancy tab:</strong> the sheet has an XP bar with how much is left to the next level.",
+            "<strong>Necromancy tab:</strong> the sheet shows damage per hit with every bonus applied, the total damage bonus and the attack type.",
+            "<strong>Necromancy tab:</strong> the Summon/Rest, Dismiss and Mastery buttons are right on the slot.",
+            "<strong>Necromancy tab:</strong> the summoned slot gets a purple frame.",
+            "<strong>Necromancy tab:</strong> the Grimoire shows how many monsters you have defeated.",
+            "<strong>Necromancy tab:</strong> each card shows the required class level, victories and saved progress.",
+            "<strong>Necromancy tab:</strong> texts no longer overlap.",
+            "<strong>Necromancy tab:</strong> monsters that had no picture (Giant Scorpion, Skeleton Mage, Crone, Ascended Golem and Bat...) now show the monster's own sprite.",
+            "<strong>Ritual bar:</strong> new panel with the mod's golden frame.",
+            "<strong>Ritual bar:</strong> a summoned minion has a glowing purple frame, a resting minion has a golden frame and an empty slot has a dashed frame.",
+            "<strong>Ritual bar:</strong> each slot's key shows on a badge in the corner.",
+            "<strong>Ritual bar:</strong> the minion's level shows below the slot.",
+            "<strong>Config panel:</strong> the RPG SKILLS CONFIG panel's options live in tabs on the side, with subtitles inside each tab, with no giant list to scroll.",
+            "<strong>Config panel:</strong> the tabs are Progression & XP, Features, Passives, Classes, Economy & Shop, Quality of life, Interface, Server & Compat.",
+            "<strong>Config panel:</strong> an option that differs from the default turns gold and gets a Default button.",
+            "<strong>Config panel:</strong> hovering the value shows the default and the allowed range.",
+            "<strong>Config panel:</strong> unsaved changes turn green.",
+            "<strong>Config panel:</strong> the open tab is yellow, and a tab with changes gets a *.",
+            "<strong>Config panel:</strong> the save button shows how many changes are left, like Save (3).",
+            "<strong>Config panel:</strong> Undo drops everything, and Tab defaults restores the whole tab.",
+            "<strong>Config panel:</strong> toggle-only tabs (Passives, Classes) have All on and All off.",
+            "<strong>Config panel:</strong> numbers with a large range get -- and ++ buttons, with a x10 step.",
+            "<strong>Config panel:</strong> the window can be dragged by its title.",
+            "<strong>Config panel:</strong> the window opens where you left it last time, and centered the first time.",
+            "<strong>Config panel:</strong> closing the window without saving does not lose your changes, which stay until you save or undo."
           ]
         },
         {
-          "heading": "⚔️ Minions level up (1 to 100)",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "To summon a monster you need to defeat it many times: <strong>300 victories</strong> for common monsters, <strong>150</strong> for elites and <strong>50</strong> for bosses. The Grimoire card shows your progress (e.g. 120/300) and the chat lets you know when it unlocks.",
-            "The minion that defeats an enemy gets the full XP. The other summoned minions get half, including when you are the one who defeats it. Stronger enemies give more XP.",
-            "Each level gives <strong>+1.5% damage</strong> (+148.5% at level 100).",
-            "The chat announces every 10 levels, and the minion gives off golden sparks when it levels up.",
-            "Replacing or removing a minion does not erase its progress: when you summon that monster again, it comes back at the level it had."
-          ]
-        },
-        {
-          "heading": "🌀 Mastery",
-          "items": [
-            "At level 100 a <strong>Mastery</strong> button appears on the minion's slot. Applying it sends the minion back to level 1 with <strong>+10% permanent damage</strong>.",
-            "You can apply up to <strong>10 Masteries</strong> to the same minion (+100% permanent damage). The more Masteries, the stronger it gets."
-          ]
-        },
-        {
-          "heading": "🗂️ Redesigned Necromancy tab",
-          "items": [
-            "New Grimoire-style look: a header with the class emblem, level (1 to 5), your current power and the next unlock.",
-            "Each ritual slot is now a <strong>minion sheet</strong>: level and Mastery, an <strong>XP bar</strong> with how much is left to the next level, <strong>damage per hit</strong> (with every bonus applied), the total damage bonus and the attack type. <strong>Summon/Rest</strong>, <strong>Dismiss</strong> and <strong>Mastery</strong> buttons right on the slot. The summoned slot gets a purple frame.",
-            "The Grimoire shows how many monsters you have defeated and, on each card, the required class level, victories and saved progress. Texts no longer overlap.",
-            "Monsters that had no picture (Giant Scorpion, Skeleton Mage, Crone, Ascended Golem and Bat...) now show the monster's own sprite."
-          ]
-        },
-        {
-          "heading": "⌨️ New Ritual bar (HUD)",
-          "items": [
-            "A panel with the mod's golden frame. Summoned minion: glowing purple frame. Resting minion: golden frame. Empty slot: dashed frame.",
-            "Each slot's key is shown on a badge in the corner, and the minion's level below it."
-          ]
-        },
-        {
-          "heading": "🏹 Minions fight like the real monster",
-          "items": [
-            "Every minion now uses the <strong>monster's original AI</strong>, with the same attacks, charges, jumps, spells and abilities it has as an enemy. The difference is that it targets the enemies near you instead of players and, with no target, comes back to your side instead of wandering around the map.",
-            "Minion <strong>projectiles and spells</strong> are <strong>homing</strong>: they chase the nearest enemy until they hit.",
-            "<strong>Focus:</strong> minions attack the enemy you are hitting or the one attacking you.",
-            "<strong>Leash:</strong> they only pick enemies within 12 tiles of you and, if they chase something too far, they drop it and come back.",
-            "<strong>Unstuck:</strong> a minion stuck in the same place for 10 seconds, away from you and not fighting, teleports to your side with the ritual animation."
-          ]
-        },
-        {
-          "heading": "⚙️ Redesigned RPG SKILLS CONFIG panel",
-          "items": [
-            "Options now live in <strong>tabs on the side</strong> (Progression & XP, Features, Passives, Classes, Economy & Shop, Quality of life, Interface, Server & Compat.), with subtitles inside each tab. No more scrolling a giant list.",
-            "An option that differs from the default turns <strong>gold</strong> and gets a <strong>Default</strong> button. Hover the value to see the default and the allowed range.",
-            "Unsaved changes turn <strong>green</strong>, the open tab is yellow, a tab with changes gets a <strong>*</strong> and the button shows how many are left: <strong>Save (3)</strong>. <strong>Undo</strong> drops everything and <strong>Tab defaults</strong> restores the whole tab.",
-            "Toggle-only tabs (Passives, Classes) have <strong>All on</strong> and <strong>All off</strong>. Numbers with a large range get <strong>--</strong> and <strong>++</strong> buttons (x10 step).",
-            "The window can be <strong>dragged by its title</strong> and <strong>opens where you left it</strong> last time. The first time it opens centered.",
-            "Closing the window without saving does not lose your changes: they stay until you save or undo."
-          ]
-        },
-        {
-          "heading": "🤝 Safe Haven QOL compatibility",
-          "items": [
-            "When you play with both mods, RPG Skills turns off in Safe Haven only what gives away for free what the classes teach, so the classes stay worth it:",
-            "<strong>2x gun damage</strong> (Marksman Master) and <strong>+2 summons</strong> (Summon Master).",
-            "The machines' <strong>\"3x\" button</strong> (Machine Master) and the <strong>Interest Bank</strong> (free coins every day broke the shop and the Wealth Master).",
-            "<strong>Phoenix and Ash Golem 3x drops</strong> (Loot Master).",
-            "<strong>+10 happiness for sharing a room</strong> and <strong>settlers starting at quality of life 20</strong> (Realm Master).",
-            "<strong>Bees fertilizing crops</strong> (Nature Master).",
-            "<strong>40 trinket slots</strong> and <strong>repeated trinkets stacking their bonus</strong> (Relic Master).",
-            "<strong>Ore always glowing in the dark</strong> (Cavern Master).",
+            "When you play with both mods, RPG Skills turns off in Safe Haven only what gives away for free what the classes teach, so the classes stay worth it.",
+            "2x gun damage is turned off (Marksman Master).",
+            "+2 summons is turned off (Summon Master).",
+            "The machines' \"3x\" button is turned off (Machine Master).",
+            "The Interest Bank is turned off, because free coins every day broke the shop and the Wealth Master.",
+            "Phoenix and Ash Golem 3x drops are turned off (Loot Master).",
+            "+10 happiness for sharing a room is turned off (Realm Master).",
+            "Settlers starting at quality of life 20 is turned off (Realm Master).",
+            "Bees fertilizing crops is turned off (Nature Master).",
+            "40 trinket slots is turned off (Relic Master).",
+            "Repeated trinkets stacking their bonus is turned off (Relic Master).",
+            "Ore always glowing in the dark is turned off (Cavern Master).",
             "Still off as before: extra stack sizes, vein mining, instant incinerator and triple animal loot.",
             "Everything else in Safe Haven keeps working normally (HUD, maps, building, chests, colors, blueprints and more).",
             "If Safe Haven turns one of these back on from its own menu during the game, RPG Skills turns it off again within a few seconds.",
-            "Server owners: if you prefer to keep every Safe Haven feature, set <strong>compat.safeHavenBalanceLock=false</strong> in the RPG Skills config."
+            "A server owner who prefers to keep every Safe Haven feature can turn this lock off with compat.safeHavenBalanceLock=false in the RPG Skills config."
           ]
         },
         {
-          "heading": "🛠️ Fixes",
+          "heading": "⚠️ Important",
           "items": [
-            "<strong>Safe Haven QOL compatibility:</strong> fixed the crash when joining a world (<em>NoSuchMethodError: addItemsDropRemaining</em>). RPG Skills called an old version of this game method, which changed in Necesse 1.3.3, and Safe Haven, by adjusting equipment sets, made the game go through that path.",
-            "Fixed 4 more old calls of the same kind that could crash <strong>Elemental Fusion</strong>, the <strong>Caveling</strong> hunt, the Master's <strong>coin pouch</strong> and construction recovery.",
-            "Removed an old hook for the Relic Master's harvest bonus that did nothing. The bonus keeps working normally.",
-            "Necromancy tab: dismissing, summoning or resting a minion updates the tab right away (before it only changed after reopening), and XP and victories also update while it is open.",
-            "Necromancy tab: pieces of other screens no longer show up in the middle of the monster list.",
+            "Your saves keep working.",
+            "Victories from 3.6 stay in the Grimoire, and minions in the slots are kept.",
+            "A monster that had 500 or more victories (Tier 3 of the old hunt) starts at level 15.",
+            "Summoning now requires the Necromancy Master class.",
+            "Slots above your class level rest without losing the minion."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "The game no longer crashes when joining a world with Safe Haven QOL.",
+            "The crash came from a part of the game that changed in Necesse 1.3.3, and Safe Haven, by adjusting equipment sets, made the game go through it.",
+            "4 more spots of the same kind, which could crash Elemental Fusion, the Caveling hunt, the Master's coin pouch and construction recovery, were also fixed.",
+            "An old part of the Relic Master's harvest bonus that did nothing was removed, and the bonus keeps working normally.",
+            "Dismissing, summoning or resting a minion updates the Necromancy tab right away, instead of only after reopening.",
+            "XP and victories also update while the Necromancy tab is open.",
+            "Pieces of other screens no longer show up in the middle of the Necromancy tab's monster list.",
             "The Grimoire no longer lists boss parts, nameless monsters or monsters that cannot be summoned.",
-            "The Grimoire was checked against the game's monster list. Monsters that were hidden by mistake are back: <strong>Legged Slime Thrower</strong>, <strong>Ghost Slime</strong>, the three <strong>Evil Witches</strong> (flask, bow and greatsword), the <strong>Suspiciously Tall Goblin</strong> and the Helmet, Chestplate and Shoes Goblins, and the <strong>Mimic</strong>.",
-            "Monsters that only work in water or lava (<strong>Shark</strong> and <strong>Flameling</strong>) and multi-body bosses that still showed up (Crystal Dragon, Sage and Grit) were removed from the Grimoire.",
-            "A summoned <strong>Grizzly Bear</strong> no longer stays asleep: it spawns awake and fights like the real bear.",
+            "The Grimoire was checked against the game's monster list.",
+            "Monsters hidden by mistake are back in the Grimoire: Legged Slime Thrower, Ghost Slime and the three Evil Witches (flask, bow and greatsword).",
+            "The Suspiciously Tall Goblin, the Helmet, Chestplate and Shoes Goblins, and the Mimic are back too.",
+            "Monsters that only work in water or lava (Shark and Flameling) were removed from the Grimoire.",
+            "Multi-body bosses that still showed up (Crystal Dragon, Sage and Grit) were removed from the Grimoire.",
+            "A summoned Grizzly Bear no longer stays asleep: it spawns awake and fights like the real bear.",
             "From now on, an automatic test checks the mod against the installed game before every version, to catch this kind of error before it reaches you."
+          ]
+        },
+        {
+          "heading": "💀 Necromancy Master",
+          "items": [
+            "Level 1 (Awakening) unlocks 1 ritual slot and common monsters.",
+            "Level 2 (Legion) unlocks the 2nd ritual slot and elite monsters.",
+            "Level 2 also gives +25% minion XP.",
+            "Level 3 (Shadow Link) unlocks the 3rd ritual slot.",
+            "At level 3, minions get half of your summon damage bonus.",
+            "At level 3, 3 minions of the same monster deal +50% damage against that monster.",
+            "Level 4 (Lord of Bosses) lets you summon as a minion 1 boss you have defeated, with 40% of its power.",
+            "At level 5 (Army of the Dead), every enemy you or your minions defeat has a 50% chance to rise as a servant for 1 minute.",
+            "Up to 3 servants stand at once.",
+            "At level 5, minions with Mastery get Ascension: +25% damage."
           ]
         },
         {
           "heading": "📈 Progression",
           "items": [
-            "With the new class (34 classes × 5 points), the <strong>max level goes from 165 to 170</strong>, so it is still possible to complete every class. Configs that used the old max (165) move to 170 automatically.",
-            "The <strong>Master of Classes</strong> passive still requires every class maxed, which now includes the Necromancy Master."
-          ]
-        },
-        {
-          "heading": "✅ Compatibility",
-          "items": [
-            "Your saves keep working. Victories from 3.6 stay in the Grimoire and minions in the slots are kept. A monster that had 500 or more victories (Tier 3 of the old hunt) starts at <strong>level 15</strong>.",
-            "Summoning now requires the Necromancy Master class. Slots above your class level rest without losing the minion.",
-            "Everything translated into the mod's 12 languages.",
-            "For admins: <strong>/rpgskills necro setlevel <slot 1-3> <level 1-100></strong> sets a minion's level (useful for testing)."
+            "With the new class (34 classes × 5 points), the max level goes from 165 to 170, so it is still possible to complete every class.",
+            "Configs that used the old max (165) move to 170 automatically.",
+            "The Master of Classes passive still requires every class maxed, which now includes the Necromancy Master."
           ]
         }
       ],
-      "note": "<strong>May your minions grow strong, necromancer! 💀</strong>"
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
     "version": "3.6",
-    "tag": "update",
-    "tagClass": "minor",
-    "tagKey": "changelog.tag.update",
+    "tag": "new",
+    "tagClass": "major",
+    "tagKey": "changelog.tag.new",
     "pt": {
       "title": "🌟 Atualização 3.6 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "💀 Necromancia: como funciona",
+          "heading": "✨ Novidades",
           "items": [
-            "<strong>1. Cace monstros.</strong> Cada monstro que você derrota conta uma vitória para aquele tipo de monstro. Vale para tudo que tenta te matar: monstros comuns de cada bioma, elites e chefes.",
-            "<strong>2. Suba de nível na caçada.</strong> Com vitórias suficientes, o monstro sobe de <strong>Tier</strong> (de 0/3 até 3/3). Cada Tier libera <strong>1 aliado</strong> daquele monstro.",
-            "<strong>3. Invoque seu aliado.</strong> Abra o Grimório, vá na aba <strong>Necromancia</strong> e clique em <strong>Invocar</strong> no monstro que você quer.",
-            "Quando um monstro sobe de Tier, uma mensagem no chat avisa. Se a invocação não puder ser feita, o chat explica o motivo (vitórias insuficientes, slots cheios...).",
-            "<strong>4. Lute junto.</strong> O aliado te segue e ataca os inimigos como uma invocação. Ele é <strong>imortal</strong> e os inimigos o ignoram."
+            "<strong>Necromancia:</strong> derrote monstros para dominá-los e transformá-los em aliados que lutam ao seu lado.",
+            "<strong>Necromancia:</strong> cada monstro que você derrota conta uma vitória para aquele tipo de monstro.",
+            "<strong>Necromancia:</strong> vale para tudo que tenta te matar: monstros comuns de cada bioma, elites e chefes.",
+            "<strong>Necromancia:</strong> com vitórias suficientes, o monstro sobe de Tier, de 0/3 até 3/3.",
+            "<strong>Necromancia:</strong> cada Tier libera 1 aliado daquele monstro.",
+            "<strong>Necromancia:</strong> para invocar, abra o Grimório, vá na aba Necromancia e clique em Invocar no monstro que você quer.",
+            "<strong>Necromancia:</strong> o chat avisa quando um monstro sobe de Tier.",
+            "<strong>Necromancia:</strong> se a invocação não puder ser feita, o chat explica o motivo, como vitórias insuficientes ou slots cheios.",
+            "<strong>Necromancia:</strong> o aliado te segue e ataca os inimigos como uma invocação.",
+            "<strong>Necromancia:</strong> o aliado é imortal e os inimigos o ignoram.",
+            "<strong>Necromancia:</strong> tudo traduzido para os 12 idiomas do mod.",
+            "<strong>Necromancia:</strong> para administradores, /rpgskills necro setkills <monstro> <vitórias> define as vitórias de um monstro, útil para testes.",
+            "<strong>Vitórias:</strong> monstros comuns pedem 150 / 300 / 500 vitórias.",
+            "<strong>Vitórias:</strong> monstros elite, mais fortes, pedem 300 / 600 / 1000 vitórias.",
+            "<strong>Vitórias:</strong> chefes pedem 50 / 100 / 150 vitórias.",
+            "<strong>Vitórias:</strong> os chefes já contam vitórias, mas ainda não podem ser invocados e chegam como miniaturas numa próxima atualização.",
+            "<strong>Aliados de ritual:</strong> você pode ter até 3 aliados de ritual ao mesmo tempo.",
+            "<strong>Aliados de ritual:</strong> eles não ocupam os espaços das suas invocações normais, e dá para usar os dois juntos.",
+            "<strong>Aliados de ritual:</strong> ficam com você até você removê-los.",
+            "<strong>Aliados de ritual:</strong> voltam sozinhos quando você entra no mundo de novo.",
+            "<strong>Aliados de ritual:</strong> causam o dano de verdade daquele monstro.",
+            "<strong>Aliados de ritual:</strong> andam na mesma velocidade das invocações do jogo e atravessam portas como elas.",
+            "<strong>Aliados de ritual:</strong> com os 3 aliados do mesmo monstro e esse monstro no Tier 3/3, você causa o dobro de dano (+100%) contra aquele tipo de monstro.",
+            "<strong>Barra de ritual:</strong> a barra Ritual, no lado direito da tela, mostra seus 3 aliados.",
+            "<strong>Barra de ritual:</strong> slot destacado é aliado invocado, e slot normal é aliado descansando.",
+            "<strong>Barra de ritual:</strong> cada slot tem sua própria tecla, escolhida em Configurações > Controles (procure por \"Aliado de ritual\").",
+            "<strong>Barra de ritual:</strong> também dá para clicar no slot.",
+            "<strong>Barra de ritual:</strong> apertar a tecla chama o aliado: você conjura um círculo mágico roxo e verde e ele surge numa explosão de energia.",
+            "<strong>Barra de ritual:</strong> apertar de novo guarda o aliado, que se desfaz numa névoa sombria.",
+            "<strong>Barra de ritual:</strong> os outros jogadores também veem os efeitos.",
+            "<strong>Aba Necromancia:</strong> os monstros aparecem em cartões com ícone, vitórias e progresso.",
+            "<strong>Aba Necromancia:</strong> os cartões ficam separados por bioma, na ordem em que você os encontra no jogo (Floresta, Ninho de aranhas, Cripta de vampiros, Planícies, Neve, Pântano, Deserto, Masmorra, Templo...).",
+            "<strong>Aba Necromancia:</strong> filtros rápidos Todos, Comum, Elite e Chefe."
           ]
         },
         {
-          "heading": "📊 Quantas vitórias são precisas",
+          "heading": "⚠️ Importante",
           "items": [
-            "<strong>Monstros comuns:</strong> 150 / 300 / 500 vitórias.",
-            "<strong>Monstros elite (mais fortes):</strong> 300 / 600 / 1000 vitórias.",
-            "<strong>Chefes:</strong> 50 / 100 / 150 vitórias. Os chefes já contam vitórias, mas ainda não podem ser invocados: eles chegam como <strong>miniaturas</strong> numa próxima atualização."
+            "Seus saves continuam funcionando.",
+            "A Necromancia começa do zero e nada do seu progresso atual muda.",
+            "Os aliados nunca ficam gravados no mundo, então remover o mod não deixa nenhum monstro solto."
           ]
         },
         {
-          "heading": "🔮 Seus 3 aliados de ritual",
+          "heading": "🔧 Correções",
           "items": [
-            "Você pode ter até <strong>3 aliados de ritual</strong> ao mesmo tempo. Eles <strong>não ocupam</strong> os espaços das suas invocações normais: dá para usar os dois juntos.",
-            "Os aliados ficam com você até você removê-los e voltam sozinhos quando você entra no mundo de novo.",
-            "Eles causam o <strong>dano de verdade</strong> daquele monstro e andam na mesma velocidade das invocações do jogo, atravessando portas como elas.",
-            "<strong>Bônus de grupo:</strong> com os 3 aliados do mesmo monstro e esse monstro no Tier 3/3, você causa <strong>o dobro de dano (+100%)</strong> contra aquele tipo de monstro."
-          ]
-        },
-        {
-          "heading": "⌨️ Barra de ritual e teclas de atalho",
-          "items": [
-            "No lado direito da tela aparece a barra <strong>Ritual</strong> com seus 3 aliados. Slot destacado = aliado invocado. Slot normal = aliado descansando.",
-            "Cada slot tem sua própria tecla. Escolha as teclas em <strong>Configurações > Controles</strong> (procure por \"Aliado de ritual\"). Também dá para clicar no slot.",
-            "Apertar a tecla <strong>chama</strong> o aliado: você conjura um círculo mágico roxo e verde e ele surge numa explosão de energia. Apertar de novo <strong>guarda</strong> o aliado, que se desfaz numa névoa sombria. Os outros jogadores também veem os efeitos."
-          ]
-        },
-        {
-          "heading": "🗂️ Aba Necromancia organizada",
-          "items": [
-            "Os monstros aparecem em cartões com ícone, vitórias e progresso, separados por <strong>bioma</strong> na ordem em que você os encontra no jogo (Floresta, Ninho de aranhas, Cripta de vampiros, Planícies, Neve, Pântano, Deserto, Masmorra, Templo...).",
-            "Filtros rápidos: <strong>Todos</strong>, <strong>Comum</strong>, <strong>Elite</strong> e <strong>Chefe</strong>."
-          ]
-        },
-        {
-          "heading": "🛠️ Correções",
-          "items": [
-            "<strong>XP em time:</strong> jogando junto com amigos do mesmo time, o XP agora é <strong>dividido</strong> entre vocês. Antes, cada um recebia o valor inteiro, e jogar em dupla dava o dobro de XP de jogar sozinho.",
-            "<strong>Tela de Controles:</strong> abrir Configurações > Controles não enche mais o arquivo de log de erros. Atalhos do mod sem tecla agora aparecem como \"NOT SET\", igual aos do jogo."
-          ]
-        },
-        {
-          "heading": "✅ Compatibilidade",
-          "items": [
-            "Seus saves continuam funcionando: a Necromancia começa do zero e nada do seu progresso atual muda.",
-            "Os aliados nunca ficam gravados no mundo. Se você remover o mod, nenhum monstro fica solto.",
-            "Tudo traduzido para os 12 idiomas do mod.",
-            "Para administradores: <strong>/rpgskills necro setkills <monstro> <vitórias></strong> define as vitórias de um monstro (útil para testes)."
+            "Jogando com amigos do mesmo time, o XP agora é dividido entre vocês.",
+            "Antes, cada um recebia o valor inteiro, e jogar em dupla dava o dobro de XP de jogar sozinho.",
+            "Abrir Configurações > Controles não enche mais o registro de erros do jogo.",
+            "Atalhos do mod sem tecla agora aparecem como \"NOT SET\", igual aos do jogo."
           ]
         }
       ],
-      "note": "<strong>Boa caçada, necromante! 💀</strong>"
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 3.6 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "💀 Necromancy: how it works",
+          "heading": "✨ What's new",
           "items": [
-            "<strong>1. Hunt monsters.</strong> Every monster you defeat counts one victory for that kind of monster. It works for everything that tries to kill you: common monsters of every biome, elites and bosses.",
-            "<strong>2. Level up your hunt.</strong> With enough victories, the monster goes up a <strong>Tier</strong> (from 0/3 to 3/3). Each Tier unlocks <strong>1 ally</strong> of that monster.",
-            "<strong>3. Summon your ally.</strong> Open the Grimoire, go to the <strong>Necromancy</strong> tab and click <strong>Invoke</strong> on the monster you want.",
-            "When a monster goes up a Tier, a chat message lets you know. If an ally cannot be summoned, the chat explains why (not enough victories, slots full...).",
-            "<strong>4. Fight together.</strong> The ally follows you and attacks enemies like a summon. It is <strong>immortal</strong> and enemies ignore it."
+            "<strong>Necromancy:</strong> defeat monsters to master them and turn them into allies that fight by your side.",
+            "<strong>Necromancy:</strong> every monster you defeat counts one victory for that kind of monster.",
+            "<strong>Necromancy:</strong> it works for everything that tries to kill you: common monsters of every biome, elites and bosses.",
+            "<strong>Necromancy:</strong> with enough victories, the monster goes up a Tier, from 0/3 to 3/3.",
+            "<strong>Necromancy:</strong> each Tier unlocks 1 ally of that monster.",
+            "<strong>Necromancy:</strong> to summon, open the Grimoire, go to the Necromancy tab and click Invoke on the monster you want.",
+            "<strong>Necromancy:</strong> the chat lets you know when a monster goes up a Tier.",
+            "<strong>Necromancy:</strong> if an ally cannot be summoned, the chat explains why, like not enough victories or slots full.",
+            "<strong>Necromancy:</strong> the ally follows you and attacks enemies like a summon.",
+            "<strong>Necromancy:</strong> the ally is immortal and enemies ignore it.",
+            "<strong>Necromancy:</strong> everything translated into the mod's 12 languages.",
+            "<strong>Necromancy:</strong> for admins, /rpgskills necro setkills <monster> <victories> sets a monster's victories, handy for testing.",
+            "<strong>Victories:</strong> common monsters need 150 / 300 / 500 victories.",
+            "<strong>Victories:</strong> elite monsters, the stronger ones, need 300 / 600 / 1000 victories.",
+            "<strong>Victories:</strong> bosses need 50 / 100 / 150 victories.",
+            "<strong>Victories:</strong> bosses already count victories but can't be summoned yet, and will arrive as miniatures in a future update.",
+            "<strong>Ritual allies:</strong> you can have up to 3 ritual allies at the same time.",
+            "<strong>Ritual allies:</strong> they don't use your regular summon slots, and you can use both together.",
+            "<strong>Ritual allies:</strong> they stay with you until you remove them.",
+            "<strong>Ritual allies:</strong> they come back on their own when you join the world again.",
+            "<strong>Ritual allies:</strong> they deal the real damage of that monster.",
+            "<strong>Ritual allies:</strong> they move at the same speed as the game's summons and walk through doors like them.",
+            "<strong>Ritual allies:</strong> with all 3 allies of the same monster and that monster at Tier 3/3, you deal double damage (+100%) against that kind of monster.",
+            "<strong>Ritual bar:</strong> the Ritual bar, on the right side of the screen, shows your 3 allies.",
+            "<strong>Ritual bar:</strong> a highlighted slot is a summoned ally, and a normal slot is a resting ally.",
+            "<strong>Ritual bar:</strong> each slot has its own key, picked in Settings > Controls (look for \"Ritual ally\").",
+            "<strong>Ritual bar:</strong> you can also click the slot.",
+            "<strong>Ritual bar:</strong> pressing the key calls the ally: you cast a purple and green magic circle and it bursts into the world in a flash of energy.",
+            "<strong>Ritual bar:</strong> pressing it again puts the ally away, and it fades into a dark mist.",
+            "<strong>Ritual bar:</strong> other players see the effects too.",
+            "<strong>Necromancy tab:</strong> monsters show up as cards with icon, victories and progress.",
+            "<strong>Necromancy tab:</strong> cards are grouped by biome, in the order you meet them in the game (Forest, Spider nest, Vampire crypt, Plains, Snow, Swamp, Desert, Dungeon, Temple...).",
+            "<strong>Necromancy tab:</strong> quick filters All, Common, Elite and Boss."
           ]
         },
         {
-          "heading": "📊 How many victories you need",
+          "heading": "⚠️ Important",
           "items": [
-            "<strong>Common monsters:</strong> 150 / 300 / 500 victories.",
-            "<strong>Elite monsters (stronger ones):</strong> 300 / 600 / 1000 victories.",
-            "<strong>Bosses:</strong> 50 / 100 / 150 victories. Bosses already count victories but can't be summoned yet: they will arrive as <strong>miniatures</strong> in a future update."
+            "Your saves keep working.",
+            "Necromancy starts from zero and none of your current progress changes.",
+            "Allies are never saved in the world, so removing the mod leaves no monsters behind."
           ]
         },
         {
-          "heading": "🔮 Your 3 ritual allies",
+          "heading": "🔧 Fixes",
           "items": [
-            "You can have up to <strong>3 ritual allies</strong> at the same time. They <strong>don't use</strong> your regular summon slots: you can use both together.",
-            "Allies stay with you until you remove them and come back on their own when you join the world again.",
-            "They deal the <strong>real damage</strong> of that monster and move at the same speed as the game's summons, walking through doors like them.",
-            "<strong>Group bonus:</strong> with all 3 allies of the same monster and that monster at Tier 3/3, you deal <strong>double damage (+100%)</strong> against that kind of monster."
-          ]
-        },
-        {
-          "heading": "⌨️ Ritual bar and hotkeys",
-          "items": [
-            "On the right side of the screen you'll see the <strong>Ritual</strong> bar with your 3 allies. Highlighted slot = ally summoned. Normal slot = ally resting.",
-            "Each slot has its own key. Pick them in <strong>Settings > Controls</strong> (look for \"Ritual ally\"). You can also click the slot.",
-            "Pressing the key <strong>calls</strong> the ally: you cast a purple and green magic circle and it bursts into the world in a flash of energy. Press again to <strong>put it away</strong>, and it fades into a dark mist. Other players see the effects too."
-          ]
-        },
-        {
-          "heading": "🗂️ An organized Necromancy tab",
-          "items": [
-            "Monsters show up as cards with icon, victories and progress, grouped by <strong>biome</strong> in the order you meet them in the game (Forest, Spider nest, Vampire crypt, Plains, Snow, Swamp, Desert, Dungeon, Temple...).",
-            "Quick filters: <strong>All</strong>, <strong>Common</strong>, <strong>Elite</strong> and <strong>Boss</strong>."
-          ]
-        },
-        {
-          "heading": "🛠️ Fixes",
-          "items": [
-            "<strong>Team XP:</strong> when playing with friends on the same team, XP is now <strong>split</strong> between you. Before, each player got the full amount, so playing as a pair gave double the XP of playing solo.",
-            "<strong>Controls screen:</strong> opening Settings > Controls no longer floods the log file with errors. Mod hotkeys without a key now show as \"NOT SET\", like the game's."
-          ]
-        },
-        {
-          "heading": "✅ Compatibility",
-          "items": [
-            "Your saves keep working: Necromancy starts from zero and none of your current progress changes.",
-            "Allies are never saved in the world. If you remove the mod, no monsters are left behind.",
-            "Everything translated into the mod's 12 languages.",
-            "For admins: <strong>/rpgskills necro setkills <monster> <victories></strong> sets a monster's victories (handy for testing)."
+            "When playing with friends on the same team, XP is now split between you.",
+            "Before, each player got the full amount, so playing as a pair gave double the XP of playing solo.",
+            "Opening Settings > Controls no longer floods the game's error log.",
+            "Mod hotkeys without a key now show as \"NOT SET\", like the game's."
           ]
         }
       ],
-      "note": "<strong>Happy hunting, necromancer! 💀</strong>"
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1098,47 +1613,63 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 3.5 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Correções",
+          "heading": "⚡ Desempenho",
           "items": [
-            "<strong>Compartilhamento de XP em time</strong>: corrigido o XP que não era dividido mesmo com a opção ativada. O primeiro time criado no servidor (o mais comum entre amigos) era tratado como \"sem time\" e ficava de fora. Agora qualquer time compartilha XP de combate e de settlement com os colegas próximos, como configurado.",
-            "<strong>Cinto brilhante</strong>: o mod deixou de deixar o cinto mais brilhante para todo mundo só por estar instalado. Sem a passiva <strong>Ruína da Escuridão</strong> (Mestre das Cavernas), a luz é exatamente a do jogo.",
-            "<strong>Lanterna de fogo-fátuo</strong>: corrigida a luz instável quando equipada. O reforço da Ruína da Escuridão era aplicado de forma irregular na posição do personagem e \"brigava\" com a luz do fogo-fátuo. Agora o reforço acompanha o próprio fogo-fátuo, na mesma cor dele.",
-            "Backups de inventário: dois backups criados ao mesmo tempo não se sobrescrevem mais, e o \"mais recente\" usado em <strong>/restore inventory</strong> é sempre o último salvo."
+            "A Ruína da Escuridão reforça a luz do Cinto brilhante e da Lanterna de fogo-fátuo de um jeito mais leve e estável.",
+            "O reforço de luz usa a mesma cor e o mesmo ritmo de atualização da luz do jogo, em vez de atualizar o tempo todo.",
+            "O reforço de luz não fica mais conferindo os efeitos do personagem a cada quadro.",
+            "O atalho de ligar e desligar o reforço de luz continua funcionando.",
+            "O servidor trabalha menos: a luz não é mais calculada nele, onde não tinha efeito visual."
           ]
         },
         {
-          "heading": "Melhorias",
+          "heading": "🔧 Correções",
           "items": [
-            "Reforço de luz mais leve e estável: a <strong>Ruína da Escuridão</strong> agora reforça a luz do Cinto brilhante e da Lanterna de fogo-fátuo usando a mesma cor e o mesmo ritmo de atualização do jogo (a cada 5 ticks em vez de todo tick), sem varrer buffs a cada quadro. O atalho de ligar/desligar o reforço continua funcionando.",
-            "Menos trabalho no servidor: a luz deixou de ser processada na sincronização de slots do servidor, onde não tinha efeito visual.",
-            "Novos testes automáticos, incluindo um \"robô sabotador\" que ataca o mod com dados quebrados, valores extremos e acessos simultâneos para pegar bugs antes de chegarem ao jogo."
+            "O XP em time volta a ser dividido com a opção ativada.",
+            "O primeiro time criado no servidor, o mais comum entre amigos, era tratado como \"sem time\" e ficava de fora.",
+            "Agora qualquer time compartilha XP de combate e de settlement com os colegas próximos, como configurado.",
+            "O Cinto brilhante não fica mais brilhante para todo mundo só por ter o mod instalado.",
+            "Sem a passiva Ruína da Escuridão (Mestre das Cavernas), a luz do Cinto brilhante é exatamente a do jogo.",
+            "A Lanterna de fogo-fátuo não tem mais luz instável quando equipada.",
+            "O reforço da Ruína da Escuridão brigava com a luz do fogo-fátuo e agora acompanha o próprio fogo-fátuo, na mesma cor dele.",
+            "Dois backups de inventário criados ao mesmo tempo não se sobrescrevem mais.",
+            "O backup \"mais recente\" usado em /restore inventory é sempre o último salvo.",
+            "Novos testes automáticos, incluindo um \"robô sabotador\", atacam o mod com dados quebrados, valores extremos e vários acessos ao mesmo tempo para pegar bugs antes de chegarem ao jogo."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 3.5 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Fixes",
+          "heading": "⚡ Performance",
           "items": [
-            "<strong>Team XP sharing</strong>: fixed XP not being shared even with the option enabled. The first team created on a server (the usual one among friends) was treated as \"no team\" and left out. Now every team shares combat and settlement XP with nearby teammates as configured.",
-            "<strong>Shine belt</strong>: the mod no longer makes the belt brighter for everyone just by being installed. Without the <strong>Dark Ruin</strong> passive (Caverns Master), the light is exactly the vanilla one.",
-            "<strong>Will-o'-wisp lantern</strong>: fixed unstable light while equipped. The Dark Ruin boost was applied irregularly at the character's position and fought with the wisp's own light. The boost now follows the wisp itself, in its own color.",
-            "Inventory backups: two backups created at the same time no longer overwrite each other, and the \"latest\" used by <strong>/restore inventory</strong> is always the last one saved."
+            "Dark Ruin boosts the light of the Shine belt and Will-o'-wisp lantern in a lighter, steadier way.",
+            "The light boost uses the same color and refresh rhythm as the game's light, instead of refreshing all the time.",
+            "The light boost no longer checks the character's effects every frame.",
+            "The hotkey to turn the light boost on and off still works.",
+            "The server does less work: light is no longer processed there, where it had no visual effect."
           ]
         },
         {
-          "heading": "Improvements",
+          "heading": "🔧 Fixes",
           "items": [
-            "Lighter, steadier light boost: <strong>Dark Ruin</strong> now boosts the Shine belt and Will-o'-wisp lantern with the same color and refresh rhythm as the game (every 5 ticks instead of every tick), without scanning buffs every frame. The boost toggle hotkey still works.",
-            "Less server work: light is no longer processed during the server's slot sync, where it had no visual effect.",
-            "New automated tests, including a \"saboteur robot\" that attacks the mod with broken data, extreme values and concurrent access to catch bugs before they reach the game."
+            "Team XP is shared again with the option enabled.",
+            "The first team created on a server, the usual one among friends, was treated as \"no team\" and left out.",
+            "Now every team shares combat and settlement XP with nearby teammates as configured.",
+            "The Shine belt no longer gets brighter for everyone just because the mod is installed.",
+            "Without the Dark Ruin passive (Caverns Master), the Shine belt's light is exactly the vanilla one.",
+            "The Will-o'-wisp lantern no longer has unstable light while equipped.",
+            "The Dark Ruin boost fought with the wisp's own light and now follows the wisp itself, in its own color.",
+            "Two inventory backups created at the same time no longer overwrite each other.",
+            "The \"latest\" backup used by /restore inventory is always the last one saved.",
+            "New automated tests, including a \"saboteur robot\", attack the mod with broken data, extreme values and many accesses at once to catch bugs before they reach the game."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1150,27 +1681,37 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 3.4 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
-            "<strong>Mestre das Relíquias</strong>: corrigido o travamento do jogo ao passar o mouse sobre os slots de acessórios, armadura, cosméticos ou habilidade. O bônus de slots era aplicado por engano também nesses inventários, deixando-os maiores do que o jogo esperava. Agora só os slots de acessórios recebem o bônus.",
-            "Saves já afetados são reparados sozinhos ao entrar no mundo: os inventários de armadura, cosméticos e habilidade voltam ao tamanho normal, e qualquer item que estivesse nos slots extras volta para a mochila (ou cai no chão se ela estiver cheia). Se algum item não puder ser devolvido, nada é removido e o reparo tenta de novo depois."
+            "Com o Mestre das Relíquias, o jogo não trava mais ao passar o mouse sobre os slots de acessórios, armadura, cosméticos ou habilidade.",
+            "O bônus de slots era aplicado por engano também nos inventários de armadura, cosméticos e habilidade, deixando-os maiores do que o jogo esperava.",
+            "Agora só os slots de acessórios recebem o bônus.",
+            "Saves já afetados se consertam sozinhos ao entrar no mundo.",
+            "Os inventários de armadura, cosméticos e habilidade voltam ao tamanho normal.",
+            "Itens que estavam nos slots extras voltam para a mochila, ou caem no chão se ela estiver cheia.",
+            "Se algum item não puder ser devolvido, nada é removido e o conserto tenta de novo depois."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 3.4 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
-            "<strong>Relic Master</strong>: fixed the game freezing when hovering over trinket, armor, cosmetic, or ability slots. The slot bonus was wrongly applied to those inventories too, making them larger than the game expected. Now only trinket slots get the bonus.",
-            "Saves that were already affected repair themselves when you enter the world: armor, cosmetic, and ability inventories go back to their normal size, and any item in the extra slots returns to your inventory (or drops on the ground if it is full). If an item cannot be returned, nothing is removed and the repair tries again later."
+            "With Relic Master, the game no longer freezes when hovering over trinket, armor, cosmetic or ability slots.",
+            "The slot bonus was wrongly applied to the armor, cosmetic and ability inventories too, making them larger than the game expected.",
+            "Now only trinket slots get the bonus.",
+            "Saves that were already affected repair themselves when you enter the world.",
+            "Armor, cosmetic and ability inventories go back to their normal size.",
+            "Items that were in the extra slots return to your inventory, or drop on the ground if it is full.",
+            "If an item cannot be returned, nothing is removed and the repair tries again later."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1182,61 +1723,91 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 3.3 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Novidades",
+          "heading": "✨ Novidades",
           "items": [
-            "<strong>Fusão Elemental</strong>: com dois mestres de efeito no nível 5, os ataques passam a combinar esses efeitos. Fogo e gelo estilhaçam, veneno e sangue espalham praga, fogo e veneno queimam mais forte, sangue e gelo deixam o próximo golpe mais pesado, e o pesadelo com outro efeito pode causar medo.",
-            "<strong>Tempestade Interior</strong>: com Sanguinário, Incendiário, Venenoso, Congelante e Pesadelo no nível 5, o dano dos efeitos contínuos aumenta em 50%."
+            "<strong>Fusão Elemental:</strong> com dois mestres de efeito no nível 5, os ataques passam a combinar esses efeitos.",
+            "<strong>Fusão Elemental:</strong> fogo e gelo estilhaçam.",
+            "<strong>Fusão Elemental:</strong> veneno e sangue espalham praga.",
+            "<strong>Fusão Elemental:</strong> fogo e veneno queimam mais forte.",
+            "<strong>Fusão Elemental:</strong> sangue e gelo deixam o próximo golpe mais pesado.",
+            "<strong>Fusão Elemental:</strong> o pesadelo com outro efeito pode causar medo.",
+            "<strong>Tempestade Interior:</strong> com Sanguinário, Incendiário, Venenoso, Congelante e Pesadelo no nível 5, o dano dos efeitos contínuos aumenta em 50%."
           ]
         },
         {
-          "heading": "Qualidade de vida",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
             "Cada classe mostra um item próprio na lista e no detalhe, no estilo do jogo.",
-            "Novo visual Grimório na janela de habilidades: fundo escuro e opaco com moldura dourada, abas na lateral e o nível de cada classe mostrado em bolinhas douradas. Os textos ficam mais fáceis de ler e o mundo não aparece mais por trás da janela."
+            "Novo visual Grimório na janela de habilidades, com fundo escuro e opaco e moldura dourada.",
+            "As abas da janela de habilidades ficam na lateral.",
+            "O nível de cada classe aparece em bolinhas douradas.",
+            "Os textos ficam mais fáceis de ler.",
+            "O mundo não aparece mais por trás da janela."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "Hemorragia Gelada agora realmente aumenta em 30% o próximo golpe direto.",
-            "Classes desativadas na configuração não contam mais para Fusão Elemental nem para Tempestade Interior.",
+            "Com o Safe Haven QOL 4.8, os discos de vinil empilháveis passam a seguir o sistema de pilhas do RPG Skills.",
+            "Opções removidas do Safe Haven não são mais recriadas na configuração dele."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "A Hemorragia Gelada agora realmente aumenta em 30% o próximo golpe direto.",
+            "Classes desativadas na configuração não contam mais para a Fusão Elemental nem para a Tempestade Interior.",
             "Um Estilhaço que mata o alvo agora conta o abate para o jogador.",
-            "Os pontos de cada classe (ex.: 0 / 5) não ficam mais cortados pelo botão do nome.",
-            "Compatibilidade com Safe Haven QOL 4.8: discos de vinil empilháveis passam a seguir o sistema de pilhas do RPG Skills, e opções removidas do Safe Haven não são mais recriadas no arquivo de configuração."
+            "Os pontos de cada classe (ex.: 0 / 5) não ficam mais cortados pelo botão do nome."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 3.3 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "What's new",
+          "heading": "✨ What's new",
           "items": [
-            "<strong>Elemental Fusion</strong>: with two damage-over-time masters at level 5, attacks start combining those effects. Fire and frost shatter, poison and blood spread plague, fire and poison burn harder, blood and frost make the next hit heavier, and nightmare with another effect can cause fear.",
-            "<strong>Inner Storm</strong>: with Bloodthirsty, Incendiary, Venomous, Freezing, and Nightmare all at level 5, damage-over-time effects deal 50% more damage."
+            "<strong>Elemental Fusion:</strong> with two damage-over-time masters at level 5, attacks start combining those effects.",
+            "<strong>Elemental Fusion:</strong> fire and frost shatter.",
+            "<strong>Elemental Fusion:</strong> poison and blood spread plague.",
+            "<strong>Elemental Fusion:</strong> fire and poison burn harder.",
+            "<strong>Elemental Fusion:</strong> blood and frost make the next hit heavier.",
+            "<strong>Elemental Fusion:</strong> nightmare with another effect can cause fear.",
+            "<strong>Inner Storm:</strong> with Bloodthirsty, Incendiary, Venomous, Freezing and Nightmare all at level 5, damage-over-time effects deal 50% more damage."
           ]
         },
         {
-          "heading": "Quality of life",
+          "heading": "🛠️ Quality of life",
           "items": [
             "Each class shows its own item in the list and in the class detail, in the game's style.",
-            "New Grimoire look for the skills window: an opaque dark background with a gold frame, tabs on the side, and each class level shown as gold pips. Text is easier to read, and the world no longer shows through the window."
+            "New Grimoire look for the skills window, with an opaque dark background and a gold frame.",
+            "The skills window's tabs sit on the side.",
+            "Each class level shows as gold pips.",
+            "Text is easier to read.",
+            "The world no longer shows through the window."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
+          "items": [
+            "With Safe Haven QOL 4.8, stackable vinyls now follow RPG Skills stack sizes.",
+            "Options Safe Haven removed are no longer recreated in its config."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
           "items": [
             "Frozen Hemorrhage now really adds 30% to the next direct hit.",
             "Classes disabled in config no longer count toward Elemental Fusion or Inner Storm.",
             "A killing Shatter now credits the kill to the player.",
-            "Each class's points (e.g. 0 / 5) are no longer cut off by the name button.",
-            "Safe Haven QOL 4.8 compatibility: stackable vinyls now follow RPG Skills stack sizes, and options Safe Haven removed are no longer recreated in its config file."
+            "Each class's points (e.g. 0 / 5) are no longer cut off by the name button."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1248,7 +1819,7 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 3.1 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Qualidade de vida",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
             "A janela de habilidades passa a ter um visual próprio.",
             "Cada classe mostra um emblema próprio na lista e no detalhe.",
@@ -1258,23 +1829,23 @@ window.RPG_CHANGELOG = [
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 3.1 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Quality of life",
+          "heading": "🛠️ Quality of life",
           "items": [
             "The skills window now has its own look.",
             "Each class shows its own emblem in the list and in the class detail.",
-            "Status, Classes, and Shop text fits inside the frame, including the last line.",
+            "Status, Classes and Shop text fits inside the frame, including the last line.",
             "Shop buttons and class names follow the panel's dark look.",
             "Hovering a panel button turns its text a brighter gold."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1286,39 +1857,51 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 3.0 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
             "Um personagem novo, ou o mesmo nome num mundo novo, não herda mais o nível nem os pontos de habilidade de um personagem anterior.",
-            "Resetar para o nível 0 permanece depois de sair e entrar de novo. Antes, o nível antigo podia voltar na próxima entrada.",
+            "Resetar para o nível 0 continua valendo depois de sair e entrar de novo, sem o nível antigo voltar na próxima entrada.",
             "Quem já tem a progressão gravada naquele personagem continua com ela.",
-            "<strong>Golpe de Ouro</strong> volta a dar ouro no multiplayer para quem não está hospedando. O ouro do acerto chega no inventário ou na bolsa de moedas, também com projétil, magia e invocação.",
-            "Pegar o <strong>Mestre das Relíquias</strong> e entrar numa caverna, ou reconectar, não trava mais o jogo. O personagem volta a carregar com o mod.",
-            "O <strong>XP de combate do time</strong> volta a contar para quem está no mesmo time, no mesmo mapa e perto, inclusive quando a morte vem de projétil, magia ou invocação.",
-            "<strong>LB</strong> e <strong>RB</strong> voltam a rolar a barra de atalhos no controle, em qualquer layout, inclusive o padrão. O combo dos dois bumpers continua só para abrir a janela do mod.",
-            "No controle, a barra de atalhos segue o layout de cada aparelho. A janela do mod abre ao segurar os dois botões dessa barra e, aberta, usa os botões de menu do jogo."
+            "O Golpe de Ouro volta a dar ouro no multiplayer para quem não está hospedando.",
+            "O ouro do acerto chega no inventário ou na bolsa de moedas, também com projétil, magia e invocação.",
+            "Pegar o Mestre das Relíquias e entrar numa caverna, ou reconectar, não trava mais o jogo.",
+            "O personagem com o Mestre das Relíquias volta a carregar com o mod.",
+            "O XP de combate do time volta a contar para quem está no mesmo time, no mesmo mapa e perto.",
+            "O XP de combate do time também conta quando a morte vem de projétil, magia ou invocação.",
+            "LB e RB voltam a rolar a barra de atalhos no controle, em qualquer layout, inclusive o padrão.",
+            "O combo dos dois bumpers continua só abrindo a janela do mod.",
+            "No controle, a barra de atalhos segue o layout de cada aparelho.",
+            "A janela do mod abre ao segurar os dois botões dessa barra.",
+            "Com a janela do mod aberta, o controle usa os botões de menu do jogo."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 3.0 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
             "A new character, or the same name in a new world, no longer inherits level or skill points from a previous character.",
-            "Resetting to level 0 stays that way after you leave and come back. Before, the old level could return on the next entry.",
+            "Resetting to level 0 stays that way after you leave and come back, without the old level returning on the next entry.",
             "A character that already has progression saved on that character keeps it.",
-            "<strong>Gold Strike</strong> gives gold again in multiplayer for players who are not hosting. Hit gold reaches your inventory or coin pouch, including projectiles, magic, and summons.",
-            "Taking <strong>Relic Master</strong> and entering a cave, or reconnecting, no longer freezes the game. That character loads again with the mod.",
-            "<strong>Team combat XP</strong> counts again for players on the same team, on the same map, and nearby, including kills from projectiles, magic, or summons.",
-            "<strong>LB</strong> and <strong>RB</strong> scroll the hotbar again on a controller, on any layout, including the default. The two-bumper combo still only opens the mod window.",
-            "On a controller, the hotbar follows each device's layout. The mod window opens when you hold both of those hotbar buttons and, once open, uses the game's menu buttons."
+            "Gold Strike gives gold again in multiplayer for players who are not hosting.",
+            "Hit gold reaches your inventory or coin pouch, including projectiles, magic and summons.",
+            "Taking Relic Master and entering a cave, or reconnecting, no longer freezes the game.",
+            "A character with Relic Master loads again with the mod.",
+            "Team combat XP counts again for players on the same team, on the same map and nearby.",
+            "Team combat XP also counts when the kill comes from projectiles, magic or summons.",
+            "LB and RB scroll the hotbar again on a controller, on any layout, including the default.",
+            "The two-bumper combo still only opens the mod window.",
+            "On a controller, the hotbar follows each device's layout.",
+            "The mod window opens when you hold both of those hotbar buttons.",
+            "With the mod window open, the controller uses the game's menu buttons."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1330,55 +1913,73 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 2.9 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Qualidade de vida",
+          "heading": "✨ Novidades",
           "items": [
-            "<strong>Raio de aggro das invocações</strong>: no Config você liga/desliga e escolhe quantos tiles (padrão 10) a partir de você. Só monstros hostis dentro desse raio puxam combate automático. Cavernídeos continuam podendo ser caçados à distância — as invocações vão até eles e voltam. Monstros fora do raio são ignorados no caminho.",
-            "Atalho em <strong>Controles</strong> para ligar/desligar a caça a <strong>Cavernídeos</strong> pelas invocações (por jogador; no Config do servidor a opção global continua valendo)."
+            "<strong>Raio de aggro:</strong> no Config você liga ou desliga o raio de aggro das invocações.",
+            "<strong>Raio de aggro:</strong> você escolhe quantos tiles a partir de você, com padrão de 10.",
+            "<strong>Raio de aggro:</strong> só monstros hostis dentro do raio puxam combate automático.",
+            "<strong>Raio de aggro:</strong> Cavernídeos continuam podendo ser caçados à distância, e as invocações vão até eles e voltam.",
+            "<strong>Raio de aggro:</strong> monstros fora do raio são ignorados no caminho.",
+            "<strong>Caça a Cavernídeos:</strong> novo atalho em Controles para ligar ou desligar a caça pelas invocações.",
+            "<strong>Caça a Cavernídeos:</strong> o atalho vale por jogador, e a opção geral no Config do servidor continua valendo."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "⚡ Desempenho",
           "items": [
-            "Invocações voltam a caçar <strong>Cavernídeos</strong> de forma confiável. Antes, um monstro longe no mapa (ou um hostil perto de você) podia impedir a caça por completo; agora só hostis no raio de aggro competem com o cavernídeo, sem travar a caça quando não há combate real.",
-            "Ao encolher slots da <strong>Mestre das Relíquias</strong> (respec de atualização ou reset de pontos), acessórios nos slots extras voltam para o inventário ou caem no chão — não somem mais se a devolução falhar (o encolhimento é cancelado e o item permanece equipado).",
-            "Corrigido o bug em que 1 ponto em <strong>Mestre das Relíquias</strong> fazia os slots de acessórios aumentarem de +4 a cada vez que você saía e entrava no mapa."
+            "Auto Poção, passivas contínuas e a busca de hostis perto das invocações ficaram mais leves.",
+            "Isso reduz travadinhas no servidor sem mudar nada no jogo."
           ]
         },
         {
-          "heading": "Desempenho",
+          "heading": "🔧 Correções",
           "items": [
-            "Menos travadinhas no servidor: Auto Poção, passivas de tick e checagem de hostis perto das invocações ficaram mais leves, sem mudar o comportamento no jogo."
+            "As invocações voltam a caçar Cavernídeos de forma confiável.",
+            "Antes, um monstro longe no mapa ou um hostil perto de você podia impedir a caça por completo.",
+            "Agora só hostis no raio de aggro competem com o Cavernídeo, sem travar a caça quando não há combate de verdade.",
+            "Ao encolher os espaços do Mestre das Relíquias (reset da atualização ou de pontos), os acessórios dos espaços extras voltam para o inventário ou caem no chão.",
+            "Se a devolução falhar, o encolhimento é cancelado e o acessório continua equipado, sem sumir.",
+            "1 ponto no Mestre das Relíquias não faz mais os espaços de acessório aumentarem +4 a cada vez que você sai e entra no mapa."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 2.9 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Quality of life",
+          "heading": "✨ What's new",
           "items": [
-            "<strong>Summon aggro radius</strong>: in Config you can turn it on/off and set how many tiles (default 10) from you. Only hostile monsters inside that radius pull automatic combat. Cavelings can still be hunted from far away — summons go to them and return. Hostiles outside the radius are ignored along the way.",
-            "<strong>Controls</strong> hotkey to turn <strong>Caveling</strong> hunting by summons on/off (per player; the server Config global option still applies)."
+            "<strong>Aggro radius:</strong> in Config you can turn the summon aggro radius on or off.",
+            "<strong>Aggro radius:</strong> you choose how many tiles from you, with a default of 10.",
+            "<strong>Aggro radius:</strong> only hostile monsters inside the radius pull automatic combat.",
+            "<strong>Aggro radius:</strong> Cavelings can still be hunted from far away, and summons go to them and come back.",
+            "<strong>Aggro radius:</strong> monsters outside the radius are ignored along the way.",
+            "<strong>Caveling hunting:</strong> new hotkey in Controls to turn hunting by summons on or off.",
+            "<strong>Caveling hunting:</strong> the hotkey is per player, and the global option in the server Config still applies."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "⚡ Performance",
           "items": [
-            "Summons reliably hunt <strong>Cavelings</strong> again. Before, a far-away hostile (or a hostile near you) could stop the hunt entirely; now only hostiles in the aggro radius compete with the caveling, without locking hunting when there is no real fight.",
-            "When <strong>Relic Master</strong> slots shrink (update respec or point reset), trinkets in the extra slots go to your inventory or drop on the ground — they no longer vanish if recovery fails (shrink is cancelled and the item stays equipped).",
-            "Fixed a bug where 1 point in <strong>Relic Master</strong> made trinket slots grow by +4 every time you left and re-entered the map."
+            "Auto Potion, ongoing passives and the check for hostiles near summons are lighter.",
+            "This cuts server hitching without changing anything in the game."
           ]
         },
         {
-          "heading": "Performance",
+          "heading": "🔧 Fixes",
           "items": [
-            "Fewer server hitch moments: Auto Potion, tick passives, and nearby-hostile checks for summons are lighter, with the same in-game behavior."
+            "Summons reliably hunt Cavelings again.",
+            "Before, a far-away monster or a hostile near you could stop the hunt entirely.",
+            "Now only hostiles in the aggro radius compete with the Caveling, without locking the hunt when there is no real fight.",
+            "When Relic Master slots shrink (update reset or point reset), trinkets in the extra slots go to your inventory or drop on the ground.",
+            "If that fails, the shrink is cancelled and the trinket stays equipped, without vanishing.",
+            "1 point in Relic Master no longer makes trinket slots grow by +4 every time you leave and re-enter the map."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1390,61 +1991,77 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 2.8 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Novidades",
+          "heading": "✨ Novidades",
           "items": [
-            "Invocações passam a caçar <strong>Cavernídeos</strong> sozinhas (sem precisar travar alvo). Se houver monstro hostil por perto, priorizam o combate. Dá para desligar no menu de configuração."
+            "<strong>Caça a Cavernídeos:</strong> as invocações caçam Cavernídeos sozinhas, sem precisar travar alvo.",
+            "<strong>Caça a Cavernídeos:</strong> com monstro hostil por perto, as invocações priorizam o combate.",
+            "<strong>Caça a Cavernídeos:</strong> dá para desligar no menu de configuração."
           ]
         },
         {
-          "heading": "Compatibilidade",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "Compatível com o Necesse <strong>1.3.3</strong>. Hosts e clientes precisam atualizar o jogo juntos.",
-            "Compatível com <strong>Safe Haven QOL 4.0</strong>: pilha universal e sistemas compartilhados (pilha, veios, incinerador, triple loot) continuam sob a autoridade do RPG Skills.",
-            "Traduções pt-BR do overlay deixam de sobrescrever textos bons do Safe Haven (menus e Blueprints usam o idioma do próprio Safe Haven)."
+            "Compatível com o Necesse 1.3.3.",
+            "Hosts e clientes precisam atualizar o jogo juntos.",
+            "Compatível com o Safe Haven QOL 4.0.",
+            "A pilha universal e os sistemas compartilhados (pilha, veios, incinerador e triple loot) continuam com o RPG Skills.",
+            "As traduções em pt-BR do RPG Skills não sobrescrevem mais os bons textos do Safe Haven.",
+            "Os menus e as Blueprints usam o idioma do próprio Safe Haven."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
-            "Mineração em veios: paredes de pedra (e variantes profundas/pântano), colunas e pilares passam a entrar na veia como as outras paredes.",
-            "Mineração em veios: troncos como bambu, pinheiro, palmeira, salgueiro, maçã e banana passam a encadear corretamente (antes só as versões com “árvore” no nome).",
-            "Quebrar objetos e pisos com o Mestre do Loot / XP de colheita continua estável na 1.3.3 (o jogo mudou o caminho de destruição; o mod acompanhou).",
-            "Comando de buff de XP: limpar ou trocar o buff (off / outro multiplicador) deixa de ficar “preso” no valor antigo em alguns casos.",
-            "Menu de configuração: textos novos (slots de trinket pelo Config, excluir Tablets de Incursão do loot, forçar triple loot do Safe Haven off) deixam de aparecer em inglês nos outros idiomas."
+            "Na mineração em veios, paredes de pedra (inclusive as profundas e de pântano), colunas e pilares entram na veia como as outras paredes.",
+            "Troncos de bambu, pinheiro, palmeira, salgueiro, maçã e banana agora encadeiam certo na mineração em veios.",
+            "Antes, só encadeavam os troncos com \"árvore\" no nome.",
+            "Quebrar objetos e pisos com o Mestre do Loot e o XP de colheita continua estável na 1.3.3.",
+            "O jogo mudou o jeito de destruir, e o mod acompanhou.",
+            "Limpar ou trocar o buff de XP pelo comando não fica mais preso no valor antigo.",
+            "No menu de configuração, as opções novas não aparecem mais em inglês nos outros idiomas.",
+            "Essas opções são espaços de acessório pela configuração, excluir Tablets de Incursão do loot e forçar o triple loot do Safe Haven desligado."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 2.8 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "New",
+          "heading": "✨ What's new",
           "items": [
-            "Summons now hunt <strong>Cavelings</strong> on their own (no need to lock a target). If a hostile is nearby, they prioritize combat. You can turn this off in the config menu."
+            "<strong>Caveling hunting:</strong> summons hunt Cavelings on their own, with no need to lock a target.",
+            "<strong>Caveling hunting:</strong> with a hostile monster nearby, summons prioritize combat.",
+            "<strong>Caveling hunting:</strong> you can turn it off in the config menu."
           ]
         },
         {
-          "heading": "Compatibility",
+          "heading": "🤝 Compatibility",
           "items": [
-            "Compatible with Necesse <strong>1.3.3</strong>. Hosts and clients need to update the game together.",
-            "Compatible with <strong>Safe Haven QOL 4.0</strong>: universal stacks and shared systems (stack size, vein mining, incinerator, triple loot) stay under RPG Skills authority.",
-            "pt-BR overlay translations no longer overwrite good Safe Haven text (menus and Blueprints use Safe Haven’s own locale)."
+            "Compatible with Necesse 1.3.3.",
+            "Hosts and clients need to update the game together.",
+            "Compatible with Safe Haven QOL 4.0.",
+            "Universal stacks and shared systems (stack size, vein mining, incinerator and triple loot) stay with RPG Skills.",
+            "RPG Skills pt-BR translations no longer overwrite good Safe Haven text.",
+            "Menus and Blueprints use Safe Haven's own language."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
-            "Vein mining: stone walls (including deep/swamp variants), columns, and pillars now join the vein like other walls.",
-            "Vein mining: trunks such as bamboo, pine, palm, willow, apple, and banana now chain correctly (before, only ids with “tree” in the name did).",
-            "Breaking objects and floors with Loot Master / harvest XP stays stable on 1.3.3 (the game changed the destroy path; the mod followed).",
-            "XP buff command: clearing or swapping the buff (off / another multiplier) no longer gets stuck on the old value in some cases.",
-            "Config menu: newer options (Config trinket slots, exclude Incursion Tablets from loot, force Safe Haven triple loot off) no longer stay in English in other languages."
+            "In vein mining, stone walls (including deep and swamp ones), columns and pillars join the vein like other walls.",
+            "Bamboo, pine, palm, willow, apple and banana trunks now chain correctly in vein mining.",
+            "Before, only trunks with \"tree\" in the name chained.",
+            "Breaking objects and floors with Loot Master and harvest XP stays stable on 1.3.3.",
+            "The game changed how destroying works, and the mod followed.",
+            "Clearing or swapping the XP buff with the command no longer gets stuck on the old value.",
+            "In the config menu, the newer options no longer show in English in other languages.",
+            "Those options are trinket slots from settings, excluding Incursion Tablets from loot and forcing Safe Haven triple loot off."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1456,75 +2073,109 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 2.7 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Novidades",
+          "heading": "✨ Novidades",
           "items": [
-            "Config: dá para definir um bônus fixo de slots de acessórios (até 255). Com essa opção ligada, o bônus de slots da Mestre das Relíquias deixa de valer. Valores muito altos deixam a tela de equipamento bem larga (o jogo não tem rolagem nessa grade).",
-            "Config: opção para a Mestre do Loot não multiplicar Tablets de Incursão (desligada por padrão, igual ao comportamento anterior).",
-            "Config: opção para, nesta atualização (e nas próximas, se continuar ligada), zerar só as classes uma vez por versão. Os pontos voltam livres. Nível, XP e Maestria da Loja não mudam. Acessórios extras da Mestre das Relíquias vão para o inventário ou para o chão. Um backup de inventário é feito antes; se algo falhar, use o restore de inventário do comando do mod."
+            "<strong>Espaços de acessório:</strong> a configuração permite um bônus fixo de espaços de acessório, até 255.",
+            "<strong>Espaços de acessório:</strong> com essa opção ligada, o bônus de espaços do Mestre das Relíquias deixa de valer.",
+            "<strong>Espaços de acessório:</strong> valores muito altos deixam a tela de equipamento bem larga, porque o jogo não tem rolagem nessa grade.",
+            "<strong>Tablets de Incursão:</strong> opção na configuração para o Mestre do Loot não multiplicar Tablets de Incursão.",
+            "<strong>Tablets de Incursão:</strong> a opção vem desligada por padrão, igual ao comportamento anterior.",
+            "<strong>Reset das classes:</strong> opção na configuração para zerar só as classes uma vez por versão, nesta atualização e nas próximas se continuar ligada.",
+            "<strong>Reset das classes:</strong> os pontos voltam livres.",
+            "<strong>Reset das classes:</strong> nível, XP e Maestria da Loja não mudam.",
+            "<strong>Reset das classes:</strong> acessórios extras do Mestre das Relíquias vão para o inventário ou para o chão.",
+            "<strong>Reset das classes:</strong> um backup do inventário é feito antes.",
+            "<strong>Reset das classes:</strong> se algo falhar, use o restore de inventário do comando do mod."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "⚡ Desempenho",
           "items": [
-            "Textos de bônus das classes: o nome do efeito não se repete no valor (ex.: duração de poção mostra só +25%).",
-            "Tooltips da janela do RPG Skills (Classes e Loja): textos longos deixam de quebrar no meio da frase.",
-            "Traço Maior Fã (português): a tooltip deixa de misturar chave interna no texto; descrição sem tratamento masculino forçado.",
-            "Mestre das Relíquias: itens de outros mods que aumentam slots de acessórios passam a funcionar; acessórios não somem ao reduzir slots.",
-            "Mestre do Loot: móveis e máquinas colocados deixam de ser multiplicados ao destruir; mineração/árvores/plantas continuam elegíveis.",
-            "Mestre do Loot: quebrar piso ou parede devolve a quantidade original (não multiplica). Mineração, árvores, plantas, loot de inimigos, pesca e craft continuam iguais.",
-            "Loja: os bônus de XP 2x, 5x e 10x deixam de mostrar um ponto de interrogação no nome.",
-            "Golpe de Ouro: se você tiver Bolsa de Moedas, o ouro entra nela; se não tiver, as moedas vão para o inventário.",
-            "Upgrades de pilha e baús do mundo: salvam na hora após a compra (não só no autosave).",
-            "Menos lag ao usar inventário/baús com pilha do mundo aumentada.",
-            "Compatibilidade Safe Haven: triple loot forçado desligado por padrão para não somar com a Mestre do Loot.",
-            "Colonos deixam de andar aos trancos por atualizações repetidas de movimento."
+            "Menos lag ao usar inventário e baús com a stack do mundo aumentada.",
+            "Colonos e bônus de classe não recalculam mais o mesmo efeito o tempo todo, o que reduz travadinhas no servidor."
           ]
         },
         {
-          "heading": "Desempenho",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "Colonos e bônus de classe deixam de recalcular o mesmo efeito o tempo todo, o que reduz travadinhas no servidor."
+            "O triple loot forçado do Safe Haven vem desligado por padrão, para não somar com o Mestre do Loot."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "Nos bônus das classes, o nome do efeito não se repete no valor (ex.: a duração de poção mostra só +25%).",
+            "As dicas da janela do RPG Skills (Classes e Loja) não quebram mais no meio da frase.",
+            "A dica do traço Maior Fã, em português, não mistura mais texto interno.",
+            "A descrição do Maior Fã não força mais o tratamento masculino.",
+            "Itens de outros mods que aumentam os espaços de acessório passam a funcionar com o Mestre das Relíquias.",
+            "Acessórios não somem mais ao reduzir os espaços do Mestre das Relíquias.",
+            "Móveis e máquinas colocados não são mais multiplicados pelo Mestre do Loot ao destruir.",
+            "Quebrar piso ou parede devolve a quantidade original, sem multiplicar.",
+            "Mineração, árvores, plantas, loot de inimigos, pesca e craft continuam iguais no Mestre do Loot.",
+            "Na Loja, os bônus de XP 2x, 5x e 10x não mostram mais um ponto de interrogação no nome.",
+            "No Golpe de Ouro, o ouro entra na Bolsa de Moedas se você tiver uma.",
+            "Sem Bolsa de Moedas, as moedas do Golpe de Ouro vão para o inventário.",
+            "Os upgrades de pilha e de baús do mundo salvam na hora após a compra, não só no salvamento automático.",
+            "Colonos não andam mais aos trancos por atualizações repetidas de movimento."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 2.7 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "What's New",
+          "heading": "✨ What's new",
           "items": [
-            "Config: you can set a fixed accessory-slot bonus (up to 255). While that option is on, Relic Master's slot bonus no longer applies. Very high values make the equipment panel very wide (vanilla has no scroll on that grid).",
-            "Config: option to stop Loot Master from multiplying Incursion Tablets (off by default, same as before).",
-            "Config: option that, on this update (and later ones if it stays on), resets only classes once per version. Spent points come back as free points. Level, XP, and Shop Mastery stay. Extra Relic Master accessory slots go to inventory or the ground. An inventory backup runs first; if something goes wrong, use the mod command inventory restore."
+            "<strong>Trinket slots:</strong> the settings allow a fixed trinket slot bonus, up to 255.",
+            "<strong>Trinket slots:</strong> while that option is on, Relic Master's slot bonus no longer applies.",
+            "<strong>Trinket slots:</strong> very high values make the equipment screen very wide, because the game has no scrolling on that grid.",
+            "<strong>Incursion Tablets:</strong> settings option to stop Loot Master from multiplying Incursion Tablets.",
+            "<strong>Incursion Tablets:</strong> the option is off by default, same as before.",
+            "<strong>Class reset:</strong> settings option to reset only classes once per version, on this update and later ones if it stays on.",
+            "<strong>Class reset:</strong> points come back as free points.",
+            "<strong>Class reset:</strong> level, XP and Shop Mastery do not change.",
+            "<strong>Class reset:</strong> extra Relic Master trinkets go to the inventory or the ground.",
+            "<strong>Class reset:</strong> an inventory backup is made first.",
+            "<strong>Class reset:</strong> if something fails, use the mod command's inventory restore."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "⚡ Performance",
           "items": [
-            "Class bonus text: the effect name no longer repeats in the value (e.g. potion duration shows just +25%).",
-            "RPG Skills window tooltips (Classes and Shop): long text no longer breaks awkwardly mid-sentence.",
-            "Biggest Fan trait (Portuguese): tooltip no longer mixes an internal key into the text; description avoids forced masculine wording.",
-            "Relic Master: third-party trinket-slot items work correctly; equipped trinkets are no longer lost when slots shrink.",
-            "Loot Master: placed furniture/machines are no longer multiplied on destroy; mining/trees/plants stay eligible.",
-            "Loot Master: breaking a floor or wall returns the original amount (no multiplier). Mining, trees, plants, enemy loot, fishing, and crafting stay the same.",
-            "Shop: the 2x, 5x, and 10x XP bonuses no longer show a question mark in the name.",
-            "Gold Strike: if you have a Coin Pouch, gold goes into it; otherwise coins go into your inventory.",
-            "World stack and chest upgrades: save immediately after purchase (not only on autosave).",
-            "Less lag when using inventory/chests with an upgraded world stack size.",
-            "Safe Haven compat: triple loot forced off by default so it does not stack with Loot Master.",
-            "Settlers no longer hitch while walking because of repeated movement updates."
+            "Less lag when using the inventory and chests with an upgraded world stack.",
+            "Settlers and class bonuses no longer recalculate the same effect all the time, which cuts server hitching."
           ]
         },
         {
-          "heading": "Performance",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "Settlers and class bonuses stop recalculating the same effect every moment, which cuts server hitching."
+            "Safe Haven's forced triple loot is off by default, so it does not stack with Loot Master."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "In class bonuses, the effect name no longer repeats in the value (e.g. potion duration shows just +25%).",
+            "RPG Skills window tooltips (Classes and Shop) no longer break mid-sentence.",
+            "The Biggest Fan trait tooltip, in Portuguese, no longer mixes in internal text.",
+            "The Biggest Fan description no longer forces masculine wording.",
+            "Items from other mods that add trinket slots now work with Relic Master.",
+            "Trinkets are no longer lost when Relic Master slots shrink.",
+            "Placed furniture and machines are no longer multiplied by Loot Master when destroyed.",
+            "Breaking a floor or wall returns the original amount, with no multiplier.",
+            "Mining, trees, plants, enemy loot, fishing and crafting stay the same with Loot Master.",
+            "In the Shop, the 2x, 5x and 10x XP bonuses no longer show a question mark in the name.",
+            "With Gold Strike, gold goes into your Coin Pouch if you have one.",
+            "Without a Coin Pouch, Gold Strike coins go into your inventory.",
+            "World stack and chest upgrades save right after purchase, not only on autosave.",
+            "Settlers no longer stutter while walking because of repeated movement updates."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1536,45 +2187,87 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 2.6 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Novidades",
+          "heading": "✨ Novidades",
           "items": [
-            "<strong>Auto-Seleção de Arma</strong>: recurso de qualidade de vida gratuito que escolhe automaticamente o slot certo da hotbar (corpo a corpo, à distância, magia ou invocação) quando há inimigo ou boneco de treino a até 12 tiles. Sem monstro por perto, não troca o que você está usando — picareta, machado, pá e outras ferramentas ficam no lugar. Nunca escolhe TNT, bombas ou itens explosivos no lugar de uma arma. Só troca a arma — você continua atacando normalmente. Ative ou desative pelo atalho nas opções de controles.",
-            "<strong>Sono Acelerado</strong>: ao dormir na cama entre 20h e 3h, a noite passa quase na hora. Se dormir antes da meia-noite, você acorda na manhã do dia seguinte (o calendário do jogo muda junto). Se dormir depois da meia-noite (até 3h), acorda por volta das 8h no mesmo dia. Fora desse horário, o sono continua normal. Dá para ligar ou desligar no menu de configuração do RPG Skills."
+            "<strong>Auto-Seleção de Arma:</strong> recurso gratuito que escolhe sozinho o espaço certo da hotbar (corpo a corpo, à distância, magia ou invocação).",
+            "<strong>Auto-Seleção de Arma:</strong> a troca acontece quando há inimigo ou boneco de treino a até 12 tiles.",
+            "<strong>Auto-Seleção de Arma:</strong> sem monstro por perto, não troca o que você está usando, e picareta, machado, pá e outras ferramentas ficam no lugar.",
+            "<strong>Auto-Seleção de Arma:</strong> nunca escolhe TNT, bombas ou itens explosivos no lugar de uma arma.",
+            "<strong>Auto-Seleção de Arma:</strong> só troca a arma, e você continua atacando normalmente.",
+            "<strong>Auto-Seleção de Arma:</strong> liga e desliga pelo atalho nas opções de controles.",
+            "<strong>Sono Acelerado:</strong> ao dormir na cama entre 20h e 3h, a noite passa quase na hora.",
+            "<strong>Sono Acelerado:</strong> dormindo antes da meia-noite, você acorda na manhã do dia seguinte, e o calendário do jogo muda junto.",
+            "<strong>Sono Acelerado:</strong> dormindo depois da meia-noite, até 3h, você acorda por volta das 8h do mesmo dia.",
+            "<strong>Sono Acelerado:</strong> fora desse horário, o sono continua normal.",
+            "<strong>Sono Acelerado:</strong> liga e desliga no menu de configuração do RPG Skills."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "Mestre do Loot na forja, fornalha e outras máquinas: o bônus continua valendo quando você tem pontos na classe, mas agora usa a atribuição correta — seu craft manual, o dono do assentamento da máquina ou quem abriu a máquina por último. Corrigido o caso em que a forja multiplicava sem pontos por causa de perfil antigo/offline ou de outro jogador online.",
-            "Colheita automática (colonos) e quebra de blocos: o bônus de loot passa a usar o dono do assentamento da área quando não há jogador direto, em vez de puxar o melhor perfil carregado no servidor.",
-            "Configuração do Safe Haven QOL: ao salvar opções e reiniciar, as escolhas deixam de ser sobrescritas pelo RPG Skills. A mineração de veios compartilhada continua sob o RPG Skills por padrão (evita conflito); dá para ajustar isso na seção Servidor / Compat do menu do RPG Skills.",
-            "Menu de configuração do RPG Skills: salvar vazio não finge gravação; ao reabrir, o menu mostra os valores atuais; intervalos de backup batem com os limites reais."
+            "Ao salvar as opções do Safe Haven QOL e reiniciar, as escolhas não são mais sobrescritas pelo RPG Skills.",
+            "A mineração de veios compartilhada continua com o RPG Skills por padrão, para evitar conflito.",
+            "Dá para mudar isso na seção Servidor / Compat do menu do RPG Skills."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "O bônus do Mestre do Loot na forja, na fornalha e em outras máquinas continua valendo quando você tem pontos na classe.",
+            "O bônus agora conta para a pessoa certa: você no craft manual, o dono do assentamento da máquina ou quem abriu a máquina por último.",
+            "A forja não multiplica mais sem pontos por causa de um perfil antigo, offline ou de outro jogador online.",
+            "Na colheita automática dos colonos e na quebra de blocos, o bônus de loot usa o dono do assentamento da área quando não há jogador direto.",
+            "Antes, esse bônus pegava o melhor perfil carregado no servidor.",
+            "No menu de configuração do RPG Skills, salvar vazio não finge mais que gravou.",
+            "Ao reabrir, o menu de configuração mostra os valores atuais.",
+            "Os intervalos de backup batem com os limites reais."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 2.6 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "New",
+          "heading": "✨ What's new",
           "items": [
-            "<strong>Auto Weapon Select</strong>: free quality-of-life that picks the right hotbar slot (melee, ranged, magic, or summon) when a hostile mob or training dummy is within 12 tiles. With no monster nearby, it leaves your current item alone — pickaxe, axe, shovel, and other tools stay selected. It never picks TNT, bombs, or other explosives instead of a real weapon. It only switches weapons — you still attack as usual. Toggle it with the control binding in the options menu.",
-            "<strong>Accelerated Sleep</strong>: when you sleep in a bed between 8 PM and 3 AM, night passes almost instantly. Sleep before midnight and you wake on the next morning (the in-game calendar day advances with it). Sleep after midnight (until 3 AM) and you wake around 8 AM the same day. Outside that window, sleep stays normal. You can turn it on or off in the RPG Skills config menu."
+            "<strong>Auto Weapon Select:</strong> free feature that picks the right hotbar slot on its own (melee, ranged, magic or summon).",
+            "<strong>Auto Weapon Select:</strong> it switches when a hostile mob or training dummy is within 12 tiles.",
+            "<strong>Auto Weapon Select:</strong> with no monster nearby, it leaves your current item alone, and pickaxe, axe, shovel and other tools stay selected.",
+            "<strong>Auto Weapon Select:</strong> it never picks TNT, bombs or other explosives instead of a weapon.",
+            "<strong>Auto Weapon Select:</strong> it only switches the weapon, and you still attack as usual.",
+            "<strong>Auto Weapon Select:</strong> turn it on or off with the hotkey in the controls options.",
+            "<strong>Accelerated Sleep:</strong> when you sleep in a bed between 8 PM and 3 AM, the night passes almost instantly.",
+            "<strong>Accelerated Sleep:</strong> sleep before midnight and you wake on the next morning, and the in-game calendar moves along.",
+            "<strong>Accelerated Sleep:</strong> sleep after midnight, until 3 AM, and you wake around 8 AM the same day.",
+            "<strong>Accelerated Sleep:</strong> outside that window, sleep stays normal.",
+            "<strong>Accelerated Sleep:</strong> turn it on or off in the RPG Skills config menu."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "Loot Master on forges, furnaces, and other machines: the multiplier still applies when you have points in the class, but now uses the correct attribution — your manual craft, the settlement owner of the machine, or whoever opened the machine last. Fixed cases where the forge multiplied with zero points because of an old/offline profile or another online player.",
-            "Automated harvest (settlers) and block breaking: loot bonus now uses the settlement owner of the area when there is no direct player, instead of pulling the best profile loaded on the server.",
-            "Safe Haven QOL settings: saving options and restarting no longer gets overwritten by RPG Skills. Shared vein mining stays under RPG Skills by default (avoids conflicts); you can change that in the RPG Skills Server / Compat config section.",
-            "RPG Skills config menu: empty save no longer pretends it wrote; reopening shows current values; backup interval limits match the real caps."
+            "Saving Safe Haven QOL options and restarting no longer gets your choices overwritten by RPG Skills.",
+            "Shared vein mining stays with RPG Skills by default, to avoid conflicts.",
+            "You can change that in the Server / Compat section of the RPG Skills menu."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "Loot Master's bonus on forges, furnaces and other machines still applies when you have points in the class.",
+            "The bonus now counts for the right person: you on a manual craft, the settlement owner of the machine or whoever opened the machine last.",
+            "The forge no longer multiplies with zero points because of an old or offline profile or another online player.",
+            "For settlers' automatic harvest and block breaking, the loot bonus uses the settlement owner of the area when there is no direct player.",
+            "Before, that bonus took the best profile loaded on the server.",
+            "In the RPG Skills config menu, an empty save no longer pretends it saved.",
+            "When reopened, the config menu shows the current values.",
+            "Backup intervals match the real limits."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1586,169 +2279,227 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 2.5 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Novidades",
+          "heading": "✨ Novidades",
           "items": [
-            "Arquivo de configuração do mod bem mais completo, com seções claras e comentários em português explicando cada opção, o valor padrão e os limites.",
-            "Dá para ligar ou desligar recursos do mod: fogos no level up, botão no inventário, mensagem de boas-vindas, Minerador Explosivo na Loja, linha de XP em equipe no Status, comando de restaurar inventário e compra de buff de XP.",
-            "Cada passiva nomeada também pode ser ligada ou desligada na configuração (Vein Mining, Auto Poção, Bênção Vital, Deus do Dano e as demais).",
-            "Economia da Loja ajustável: custo e tamanho dos upgrades de baú (até 1000 slots), duração do buff de XP, ritmo de XP de settlement, tamanho do Vein Mining e escala dos fogos de level up.",
-            "Classes podem ser habilitadas ou desabilitadas por aba na configuração.",
-            "No menu inicial, o botão <strong>RPG SKILLS CONFIG</strong> abre uma janela com todas essas opções; ao salvar, reinicie o jogo para aplicar de ponta a ponta.",
-            "Textos do menu de configuração traduzidos em todos os idiomas do mod (mesmas opções, mesmo significado).",
-            "Admins podem usar <strong>/rpgskills config reload</strong> para releitura na memória (o restart completo ainda é o caminho mais seguro).",
-            "Em multiplayer, opção para exigir admin nas compras de stack do mundo e de slots de baú na Loja (buff de XP da Loja continua separado).",
-            "Limite de progressão protegido: no máximo 5 pontos por classe e nível máximo de 165 (33 classes × 5).",
-            "Com Safe Haven / Torvians, o RPG Skills continua mandando no incinerador por padrão (dá para mudar na configuração se quiser).",
-            "Opção de log resumido na inicialização mostrando o que saiu do padrão.",
-            "Nova passiva <strong>Reflexo do Pescador</strong> (Mestre dos Mares nível 1): quando o peixe morde, a captura é automática e a vara é lançada de novo no mesmo ponto — pesca AFK, respeitando linhas extras e bônus de pesca."
+            "<strong>Configuração:</strong> o arquivo de configuração do mod ficou bem mais completo, com seções claras.",
+            "<strong>Configuração:</strong> cada opção tem comentários em português explicando o que faz, o valor padrão e os limites.",
+            "<strong>Configuração:</strong> liga e desliga os fogos no level up, o botão no inventário, a mensagem de boas-vindas e o Minerador Explosivo na Loja.",
+            "<strong>Configuração:</strong> liga e desliga a linha de XP em equipe no Status, o comando de restaurar inventário e a compra de buff de XP.",
+            "<strong>Configuração:</strong> cada passiva nomeada pode ser ligada ou desligada (Vein Mining, Auto Poção, Bênção Vital, Deus do Dano e as demais).",
+            "<strong>Configuração:</strong> as classes podem ser ligadas ou desligadas por aba.",
+            "<strong>Configuração:</strong> um resumo opcional ao iniciar o jogo mostra o que saiu do padrão.",
+            "<strong>Economia da Loja:</strong> o custo e o tamanho dos upgrades de baú são ajustáveis, até 1000 espaços.",
+            "<strong>Economia da Loja:</strong> a duração do buff de XP é ajustável.",
+            "<strong>Economia da Loja:</strong> o ritmo de XP do assentamento, o tamanho do Vein Mining e a escala dos fogos de level up são ajustáveis.",
+            "<strong>Menu RPG SKILLS CONFIG:</strong> novo botão no menu inicial que abre uma janela com todas essas opções.",
+            "<strong>Menu RPG SKILLS CONFIG:</strong> depois de salvar, reinicie o jogo para aplicar tudo.",
+            "<strong>Menu RPG SKILLS CONFIG:</strong> os textos do menu estão traduzidos em todos os idiomas do mod, com as mesmas opções e o mesmo significado.",
+            "<strong>Menu RPG SKILLS CONFIG:</strong> admins podem usar /rpgskills config reload para recarregar as opções, mas reiniciar ainda é o caminho mais seguro.",
+            "<strong>Multiplayer:</strong> opção para exigir admin nas compras de stack do mundo e de espaços de baú na Loja.",
+            "<strong>Multiplayer:</strong> o buff de XP da Loja continua separado dessa opção.",
+            "<strong>Limite de progressão:</strong> no máximo 5 pontos por classe.",
+            "<strong>Limite de progressão:</strong> nível máximo de 165 (33 classes × 5).",
+            "<strong>Reflexo do Pescador:</strong> nova passiva do Mestre dos Mares no nível 1.",
+            "<strong>Reflexo do Pescador:</strong> quando o peixe morde, a captura é automática.",
+            "<strong>Reflexo do Pescador:</strong> a vara é lançada de novo no mesmo ponto, para pescar AFK.",
+            "<strong>Reflexo do Pescador:</strong> respeita as linhas extras e os bônus de pesca."
           ]
         },
         {
-          "heading": "Qualidade de vida",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "Janela de skills mais limpa: a Loja ficou mais compacta e organizada (bônus de XP, stack, baús e Minerador Explosivo).",
-            "Botões de reset na aba Status deixam claro que afetam o personagem: <strong>Resetar pontos de classe</strong> e <strong>Zerar progressão</strong> — sem confundir com redefinir stack ou slots na Loja.",
-            "Textos da interface (barra de XP, botões e tooltips) passam pelos idiomas do mod de forma consistente.",
-            "Descrições das classes de combate explicam melhor o <strong>Deus do Dano</strong> (quando Guerra, Atirador, Magia e Invocador estão no nível 5) e o dano ao longo do tempo de Congelante e Pesadelo.",
-            "Textos de Vitalidade, Colossal e Resistência Elemental ficam mais claros (Bênção Vital, cooldown de 30s, imunidades e redução a fogo).",
-            "Mestre das Cavernas deixa claro no nível 5 que libera a compra do Minerador Explosivo na Loja.",
-            "Ruína da Escuridão descreve o aumento de luz certo (de 250 para 350).",
-            "Natureza, Auto Poção, Barriga Sempre Cheia e Colheita do Rancho ficam mais claros na interface e nas passivas.",
-            "Mestre das Máquinas documenta o incinerador: mais rápido e queima um pack inteiro por ciclo. Com Safe Haven, quem manda é o RPG Skills (incinerador instantâneo do outro mod fica desligado).",
-            "Comando <strong>/rpgskills status</strong> mostra nível, XP, pontos livres e buff de XP.",
-            "Ajuda dos comandos marca o que é <strong>admin</strong> e o que é <strong>jogador</strong>; stack admin aceita de 1x a 1000x.",
-            "Idioma coreano do mod traduzido de verdade; textos de comando seguem o idioma do jogo.",
-            "Aba Status com mais espaço entre as linhas (textos menos grudados).",
-            "Em português do Brasil, o mod deixa de sobrescrever textos que o próprio Necesse já traduz — e completa só o que o jogo ainda deixa em inglês (tooltips, controles e poucas frases).",
-            "Comida e itens que estragam: em vez de perder a pilha inteira de uma vez, some <strong>1 por ciclo</strong>; a última unidade vira comida estragada. Dá para desligar em <strong>RPG SKILLS CONFIG</strong>."
+            "A Loja ficou mais compacta e organizada (bônus de XP, pilha, baús e Minerador Explosivo).",
+            "Os botões de reset da aba Status agora se chamam Resetar pontos de classe e Zerar progressão.",
+            "Assim fica claro que eles afetam o personagem, e não a pilha ou os espaços de baú da Loja.",
+            "A aba Status tem mais espaço entre as linhas.",
+            "A barra de XP, os botões e as dicas seguem os idiomas do mod de forma consistente.",
+            "Comida e itens que estragam perdem 1 por ciclo, em vez da pilha inteira de uma vez.",
+            "A última unidade vira comida estragada.",
+            "Dá para desligar a perda aos poucos no RPG SKILLS CONFIG.",
+            "O comando /rpgskills status mostra nível, XP, pontos livres e buff de XP.",
+            "A ajuda dos comandos marca o que é de admin e o que é de jogador.",
+            "O comando de pilha de admin aceita de 1x a 1000x.",
+            "O idioma coreano do mod foi traduzido de verdade.",
+            "Os textos dos comandos seguem o idioma do jogo.",
+            "Em português do Brasil, o mod não sobrescreve mais textos que o Necesse já traduz.",
+            "Em português do Brasil, o mod completa só o que o jogo ainda deixa em inglês (dicas, controles e poucas frases).",
+            "As descrições das classes de combate explicam melhor o Deus do Dano, que vale com Guerra, Atirador, Magia e Invocador no nível 5.",
+            "As descrições explicam melhor o dano ao longo do tempo de Congelante e Pesadelo.",
+            "Os textos de Vitalidade, Colossal e Resistência Elemental estão mais claros (Bênção Vital, recarga de 30s, imunidades e redução a fogo).",
+            "O Mestre das Cavernas deixa claro que o nível 5 libera a compra do Minerador Explosivo na Loja.",
+            "A Ruína da Escuridão descreve o aumento de luz certo, de 250 para 350.",
+            "Natureza, Auto Poção, Barriga Sempre Cheia e Colheita do Rancho estão mais claros na interface e nas passivas.",
+            "O Mestre das Máquinas explica o incinerador: mais rápido e queimando um pack inteiro por ciclo."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "⚡ Desempenho",
           "items": [
-            "Painel de Classes com mais espaço entre os bônus atuais e o próximo ponto, para textos longos não se sobreporem.",
-            "Sanguinário, Congelante e Pesadelo deixam de mostrar na lista de bônus por ponto efeitos que só existem no nível 5 (armadura quebrada, congelar e hitkill) — esses efeitos continuam só no desbloqueio máximo.",
-            "Resistência Elemental no nível certo <strong>bloqueia</strong> debuffs de verdade (não só remove depois).",
-            "Colossal não aumenta mais regeneração de resiliência por engano; a defesa continua sendo a proteção ao tomar dano.",
-            "Bênção Vital funciona só com a classe Vitalidade (não depende mais do Sangrento).",
-            "Sobrevivência a dano fatal da Vitalidade agora pode salvar de um golpe letal (com intervalo entre usos).",
-            "Mestre da Construção: alcance de interação agora afeta colocar, quebrar e usar objetos/NPCs — não aumenta mais a coleta de itens (isso fica com Relíquias).",
-            "Mestre dos Mares: o poder de pesca reduz o tempo de espera sem tornar a pesca quase instantânea só por ter linhas extras.",
-            "Auto Poção da Alquimia deixa claro: em até 50% de vida, usa poções até encher.",
-            "Em servidor dedicado, comandos de admin do RPG Skills exigem permissão real (não basta ser o único jogador online).",
-            "Baixar o nível com <strong>/rpgskills set level</strong> não passa se você tiver mais pontos de classe gastos do que o novo nível permite — use reset de pontos antes.",
+            "Acabaram os travamentos e picos de lag no servidor, inclusive no singleplayer, causados por uma gravação no disco que não parava.",
+            "O tamanho de pilha ficou mais leve e evita trabalho pesado sem necessidade."
+          ]
+        },
+        {
+          "heading": "🤝 Compatibilidade",
+          "items": [
+            "Compatível com o Necesse 1.3.2.",
+            "Hosts e clientes precisam atualizar o jogo juntos.",
+            "Deixe o RPG Skills no topo da lista de mods, acima de todos os outros.",
+            "Compatível com o Safe Haven QOL 3.5.",
+            "Com os dois ativos, o RPG Skills cuida do tamanho de pilha, do incinerador, da mineração em veia e dos estandartes empilháveis.",
+            "O Safe Haven continua com o resto da qualidade de vida dele.",
+            "Com o Safe Haven, o RPG Skills cuida do incinerador por padrão, e dá para mudar isso na configuração.",
+            "O incinerador instantâneo do Safe Haven fica desligado.",
+            "Os textos do Safe Haven aparecem em português do Brasil pelo RPG Skills (menu e opções do Safe Haven)."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "O painel de Classes tem mais espaço entre os bônus atuais e o próximo ponto, sem textos longos sobrepostos.",
+            "Sanguinário, Congelante e Pesadelo não mostram mais, nos bônus por ponto, efeitos que só existem no nível 5 (armadura quebrada, congelar e hitkill).",
+            "Esses efeitos continuam só no desbloqueio máximo.",
+            "A Resistência Elemental, no nível certo, bloqueia debuffs de verdade, e não só remove depois.",
+            "O Colossal não aumenta mais a regeneração de resiliência por engano.",
+            "A defesa do Colossal continua sendo a proteção ao tomar dano.",
+            "A Bênção Vital funciona só com a classe Vitalidade e não depende mais do Sangrento.",
+            "A sobrevivência a dano fatal da Vitalidade agora pode salvar de um golpe letal, com intervalo entre usos.",
+            "O alcance de interação do Mestre da Construção agora afeta colocar, quebrar e usar objetos e NPCs.",
+            "O Mestre da Construção não aumenta mais a coleta de itens, que fica com as Relíquias.",
+            "O poder de pesca do Mestre dos Mares reduz a espera sem deixar a pesca quase instantânea só por ter linhas extras.",
+            "A Auto Poção da Alquimia deixa claro que, com até 50% de vida, usa poções até encher.",
+            "Em servidor dedicado, os comandos de admin do RPG Skills exigem permissão real.",
+            "Ser o único jogador online não basta mais para usar comandos de admin.",
+            "Baixar o nível com /rpgskills set level não funciona se você tiver mais pontos de classe gastos do que o novo nível permite.",
+            "Nesse caso, resete os pontos antes.",
             "Depois de morrer, os bônus de classe voltam a funcionar sem precisar de reset completo.",
-            "Vermes (areia, slime e similares) não dão mais XP por cada pedaço do corpo — só a cabeça conta.",
-            "Pescar peixe volta a dar XP de trabalho: <strong>5 por lançamento</strong> da vara (1 ou vários peixes no mesmo lançamento contam como um), dentro ou fora do assentamento — manual ou com Reflexo do Pescador.",
-            "Boomerangs e a adaga de carapaça dão para aprimorar e encantar mesmo com o tamanho de pilha do mundo aumentado.",
-            "No menu inicial, ao trocar o idioma do jogo, a janela <strong>RPG SKILLS CONFIG</strong> atualiza os textos na hora (não fica presa no idioma anterior).",
-            "A perda de XP ao morrer passa a respeitar de verdade a configuração (ligar/desligar e a fração escolhida em <strong>RPG SKILLS CONFIG</strong> / arquivo de config).",
-            "Compras na Loja (stack do mundo e slots de baú) ficam mais seguras: a cobrança e o upgrade acontecem juntos, sem perder moedas/barras se algo falhar no meio.",
-            "Bônus do Mestre das Máquinas vale pelas máquinas do <strong>assentamento</strong> (não pelo maior nível de classe entre todos os jogadores online)."
-          ]
-        },
-        {
-          "heading": "Desempenho",
-          "items": [
-            "Corrigidos travamentos e picos de lag no servidor (incluindo singleplayer) causados por um registro de depuração que escrevia no disco o tempo todo.",
-            "O sistema de tamanho de pilha ficou mais leve: evita trabalho pesado quando não é necessário."
-          ]
-        },
-        {
-          "heading": "Compatibilidade",
-          "items": [
-            "Compatível com o Necesse <strong>1.3.2</strong>. Hosts e clientes precisam atualizar o jogo juntos.",
-            "<strong>Prioridade máxima:</strong> deixe o RPG Skills no topo da lista de mods (acima de todos os outros).",
-            "Compatível com <strong>Safe Haven QOL 3.5</strong>: com os dois ativos, o RPG Skills manda em tamanho de pilha, incinerador, mineração em veia e banners empilháveis (o Safe Haven continua com o resto do QoL).",
-            "Textos do Safe Haven em português do Brasil pela ponte de localização do RPG Skills (menu e flags do Torvians)."
+            "Vermes (areia, slime e parecidos) não dão mais XP por cada pedaço do corpo, só pela cabeça.",
+            "Pescar volta a dar XP de trabalho: 5 por lançamento da vara.",
+            "Um ou vários peixes no mesmo lançamento contam como um.",
+            "O XP de pesca vale dentro ou fora do assentamento, pescando na mão ou com o Reflexo do Pescador.",
+            "Bumerangues e a adaga de carapaça podem ser aprimorados e encantados mesmo com a stack do mundo aumentada.",
+            "No menu inicial, trocar o idioma do jogo atualiza na hora os textos da janela RPG SKILLS CONFIG.",
+            "A perda de XP ao morrer respeita de verdade a configuração (ligar ou desligar e a fração escolhida).",
+            "As compras de stack do mundo e de espaços de baú na Loja cobram e aplicam o upgrade juntas.",
+            "Assim você não perde moedas ou barras se algo falhar no meio da compra.",
+            "O bônus do Mestre das Máquinas vale pelas máquinas do assentamento, e não pelo maior nível de classe entre os jogadores online."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 2.5 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "What's new",
+          "heading": "✨ What's new",
           "items": [
-            "Much richer mod config file, with clear sections and Portuguese comments explaining each option, its default, and its limits.",
-            "Toggle mod features on or off: level-up fireworks, inventory button, welcome message, Explosive Miner in the Shop, team XP status line, inventory restore command, and XP buff purchases.",
-            "Each named passive can also be toggled in the config (Vein Mining, Auto Potion, Vital Blessing, Damage God, and the rest).",
-            "Shop economy is adjustable: chest upgrade cost and size (up to 1000 slots), XP buff duration, settlement XP pacing, Vein Mining burst size, and level-up fireworks scale.",
-            "Classes can be enabled or disabled by tab in the config.",
-            "On the main menu, the <strong>RPG SKILLS CONFIG</strong> button opens a window with all of these options; after saving, restart the game to apply everything end to end.",
-            "Config menu text is translated in every language the mod supports (same options, same meaning).",
-            "Admins can run <strong>/rpgskills config reload</strong> to reload into memory (a full restart is still the safest path).",
-            "In multiplayer, an option can require admin for world stack and chest-slot Shop upgrades (Shop XP buff stays separate).",
-            "Progression caps protected: at most 5 points per class and max level 165 (33 classes × 5).",
-            "With Safe Haven / Torvians, RPG Skills still owns the incinerator by default (you can change that in the config if you want).",
-            "Optional boot summary log showing what differs from the defaults.",
-            "New passive <strong>Angler's Reflex</strong> (Sea Master level 1): when a fish bites, the catch is automatic and the rod is cast again at the same spot — AFK fishing, with extra lines and fishing bonuses still applying."
+            "<strong>Settings:</strong> the mod's config file is much richer, with clear sections.",
+            "<strong>Settings:</strong> each option has Portuguese comments explaining what it does, its default and its limits.",
+            "<strong>Settings:</strong> turn level-up fireworks, the inventory button, the welcome message and the Explosive Miner in the Shop on or off.",
+            "<strong>Settings:</strong> turn the team XP line in Status, the inventory restore command and XP buff purchases on or off.",
+            "<strong>Settings:</strong> each named passive can be turned on or off (Vein Mining, Auto Potion, Vital Blessing, Damage God and the rest).",
+            "<strong>Settings:</strong> classes can be turned on or off by tab.",
+            "<strong>Settings:</strong> an optional summary at game start shows what differs from the defaults.",
+            "<strong>Shop economy:</strong> chest upgrade cost and size are adjustable, up to 1000 slots.",
+            "<strong>Shop economy:</strong> XP buff duration is adjustable.",
+            "<strong>Shop economy:</strong> settlement XP pacing, Vein Mining size and level-up fireworks scale are adjustable.",
+            "<strong>RPG SKILLS CONFIG menu:</strong> new main menu button that opens a window with all of these options.",
+            "<strong>RPG SKILLS CONFIG menu:</strong> after saving, restart the game to apply everything.",
+            "<strong>RPG SKILLS CONFIG menu:</strong> the menu text is translated into every language the mod supports, with the same options and meaning.",
+            "<strong>RPG SKILLS CONFIG menu:</strong> admins can use /rpgskills config reload to reload the options, but restarting is still the safest path.",
+            "<strong>Multiplayer:</strong> option to require admin for world stack and chest slot purchases in the Shop.",
+            "<strong>Multiplayer:</strong> the Shop XP buff stays separate from that option.",
+            "<strong>Progression cap:</strong> at most 5 points per class.",
+            "<strong>Progression cap:</strong> max level 165 (33 classes × 5).",
+            "<strong>Angler's Reflex:</strong> new Sea Master passive at level 1.",
+            "<strong>Angler's Reflex:</strong> when a fish bites, the catch is automatic.",
+            "<strong>Angler's Reflex:</strong> the rod is cast again at the same spot, for AFK fishing.",
+            "<strong>Angler's Reflex:</strong> extra lines and fishing bonuses still apply."
           ]
         },
         {
-          "heading": "Quality of life",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "Cleaner skills window: the Shop tab is more compact and organized (XP bonuses, stack, chests, and Explosive Miner).",
-            "Status-tab reset buttons make it clear they affect your character: <strong>Reset class points</strong> and <strong>Reset progression</strong> — so they are not confused with resetting stack or chest slots in the Shop.",
-            "Interface text (XP bar, buttons, and tooltips) goes through the mod languages consistently.",
-            "Combat class descriptions better explain <strong>Damage God</strong> (when War Master, Marksman, Magic Master, and Summon Master are all at level 5) and Congelante/Pesadelo damage over time.",
-            "Vitality, Colossal, and Elemental Resistance texts are clearer (Vital Blessing, 30s cooldown, immunities and fire reduction).",
-            "Cavern Master at level 5 clearly unlocks Explosive Miner purchase in the Shop.",
-            "Dark Ruin describes the correct light boost (from 250 to 350).",
-            "Nature, Auto Potion, Always Full, and Ranch Harvest texts are clearer in the UI and passives.",
-            "Machine Master documents the incinerator: faster and burns one full pack per cycle. With Safe Haven, RPG Skills is in charge (the other mod's instant incinerator is turned off).",
-            "<strong>/rpgskills status</strong> shows level, XP, free points, and XP buff.",
-            "Command help marks what is <strong>admin</strong> vs <strong>player</strong>; admin stack accepts 1x to 1000x.",
-            "Korean mod language fully translated; command text follows the game language.",
-            "Status tab has more space between lines (less cramped text).",
-            "In Brazilian Portuguese, the mod no longer overrides texts the game already translates — it only fills what Necesse still leaves in English (tooltips, controls, and a few phrases).",
-            "Spoiling food and items: instead of losing a whole stack at once, you lose <strong>1 per cycle</strong>; the last unit becomes spoiled food. Toggle it in <strong>RPG SKILLS CONFIG</strong>."
+            "The Shop is more compact and organized (XP bonuses, stack, chests and Explosive Miner).",
+            "The Status tab reset buttons are now called Reset class points and Reset progression.",
+            "This makes it clear they affect your character, not the stack or chest slots in the Shop.",
+            "The Status tab has more space between lines.",
+            "The XP bar, buttons and tooltips follow the mod languages consistently.",
+            "Spoiling food and items lose 1 per cycle instead of the whole stack at once.",
+            "The last unit becomes spoiled food.",
+            "You can turn the gradual loss off in RPG SKILLS CONFIG.",
+            "The /rpgskills status command shows level, XP, free points and XP buff.",
+            "Command help marks what is for admins and what is for players.",
+            "The admin stack command accepts 1x to 1000x.",
+            "The mod's Korean language is fully translated.",
+            "Command text follows the game language.",
+            "In Brazilian Portuguese, the mod no longer overrides texts Necesse already translates.",
+            "In Brazilian Portuguese, the mod only fills what the game still leaves in English (tooltips, controls and a few phrases).",
+            "Combat class descriptions better explain Damage God, which applies with War Master, Marksman, Magic Master and Summon Master at level 5.",
+            "Descriptions better explain Congelante and Pesadelo damage over time.",
+            "Vitality, Colossal and Elemental Resistance texts are clearer (Vital Blessing, 30s cooldown, immunities and fire reduction).",
+            "Cavern Master makes it clear that level 5 unlocks the Explosive Miner purchase in the Shop.",
+            "Dark Ruin describes the correct light boost, from 250 to 350.",
+            "Nature, Auto Potion, Always Full and Ranch Harvest are clearer in the interface and passives.",
+            "Machine Master explains the incinerator: faster and burning one full pack per cycle."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "⚡ Performance",
           "items": [
-            "Classes panel has more space between current bonuses and the next point, so long texts do not overlap.",
-            "Sanguinario, Congelante, and Pesadelo no longer list per-point bonuses for effects that only exist at level 5 (broken armor, freeze, and hitkill) — those stay on the max-level unlock only.",
-            "Elemental Resistance at the right level truly <strong>blocks</strong> debuffs (not only removes them later).",
-            "Colossal no longer boosts resilience regen by mistake; defense remains the on-hit protection.",
-            "Vital Blessing works from Vitality Master alone (no longer depends on Blood Master).",
-            "Vitality Master fatal survival can now save you from a lethal hit (with a cooldown between procs).",
-            "Construction Master: interaction range now affects placing, breaking, and using objects/NPCs — it no longer boosts item pickup (that stays with Relics).",
-            "Seas Master: fishing power shortens wait time without making fishing nearly instant just from extra lines.",
-            "Alchemy Auto Potion is clear: at or below 50% HP, uses potions until full.",
-            "On dedicated servers, RPG Skills admin commands require real admin permission (being the only online player is not enough).",
-            "Lowering level with <strong>/rpgskills set level</strong> is blocked if spent class points exceed the new level budget — reset points first.",
-            "After death, class bonuses work again without needing a full reset.",
-            "Worms (sand, slime, and similar) no longer grant XP for every body segment — only the head counts.",
-            "Catching fish grants work XP again: <strong>5 per cast</strong> (one or many fish on the same cast count as one), inside or outside a settlement — manual or with Angler's Reflex.",
-            "Boomerangs and the carapace dagger can be upgraded and enchanted even when world stack size is increased.",
-            "On the main menu, changing the game language updates the <strong>RPG SKILLS CONFIG</strong> window text right away (it no longer sticks to the previous language).",
-            "XP loss on death now truly follows the config (toggle and fraction in <strong>RPG SKILLS CONFIG</strong> / config file).",
-            "Shop purchases (world stack and chest slots) are safer: payment and upgrade happen together, so you do not lose coins/bars if something fails mid-purchase.",
-            "Machine Master bonuses apply to machines in the <strong>settlement</strong> (not the highest class level among all online players)."
+            "No more server freezes and lag spikes, including singleplayer, caused by nonstop writing to disk.",
+            "Stack size handling is lighter and skips heavy work when it is not needed."
           ]
         },
         {
-          "heading": "Performance",
+          "heading": "🤝 Compatibility",
           "items": [
-            "Fixed server freezes and lag spikes (including singleplayer) caused by leftover debug logging that kept writing to disk.",
-            "Stack-size handling is lighter: it skips heavy work when it is not needed."
+            "Compatible with Necesse 1.3.2.",
+            "Hosts and clients need to update the game together.",
+            "Keep RPG Skills at the top of your mod list, above every other mod.",
+            "Compatible with Safe Haven QOL 3.5.",
+            "With both active, RPG Skills handles stack size, the incinerator, vein mining and stackable banners.",
+            "Safe Haven keeps the rest of its quality of life.",
+            "With Safe Haven, RPG Skills handles the incinerator by default, and you can change that in the settings.",
+            "Safe Haven's instant incinerator is turned off.",
+            "Safe Haven texts show in Brazilian Portuguese through RPG Skills (Safe Haven menu and options)."
           ]
         },
         {
-          "heading": "Compatibility",
+          "heading": "🔧 Fixes",
           "items": [
-            "Compatible with Necesse <strong>1.3.2</strong>. Hosts and clients need to update the game together.",
-            "<strong>Maximum priority:</strong> keep RPG Skills at the top of your mod list (above every other mod).",
-            "Compatible with <strong>Safe Haven QOL 3.5</strong>: when both are active, RPG Skills owns stack size, incinerator, vein mining, and stackable banners (Safe Haven keeps its other QoL).",
-            "Safe Haven Brazilian Portuguese texts via the RPG Skills localization bridge (Torvians menu and flags)."
+            "The Classes panel has more space between current bonuses and the next point, so long texts do not overlap.",
+            "Sanguinario, Congelante and Pesadelo no longer list, in per-point bonuses, effects that only exist at level 5 (broken armor, freeze and hitkill).",
+            "Those effects stay on the max-level unlock only.",
+            "Elemental Resistance at the right level truly blocks debuffs, instead of only removing them later.",
+            "Colossal no longer boosts resilience regen by mistake.",
+            "Colossal's defense is still the protection when taking damage.",
+            "Vital Blessing works with Vitality Master alone and no longer depends on Blood Master.",
+            "Vitality Master fatal damage survival can now save you from a lethal hit, with a cooldown between uses.",
+            "Construction Master interaction range now affects placing, breaking and using objects and NPCs.",
+            "Construction Master no longer boosts item pickup, which stays with Relics.",
+            "Sea Master fishing power shortens the wait without making fishing nearly instant just from extra lines.",
+            "Alchemy's Auto Potion makes it clear that, at or below 50% health, it uses potions until full.",
+            "On dedicated servers, RPG Skills admin commands require real admin permission.",
+            "Being the only player online is no longer enough to use admin commands.",
+            "Lowering your level with /rpgskills set level does not work if you have more spent class points than the new level allows.",
+            "In that case, reset your points first.",
+            "After dying, class bonuses work again without a full reset.",
+            "Worms (sand, slime and similar) no longer give XP for every body segment, only for the head.",
+            "Fishing gives work XP again: 5 per rod cast.",
+            "One or many fish on the same cast count as one.",
+            "Fishing XP applies inside or outside a settlement, fishing by hand or with Angler's Reflex.",
+            "Boomerangs and the carapace dagger can be upgraded and enchanted even with an increased world stack.",
+            "On the main menu, changing the game language updates the RPG SKILLS CONFIG window text right away.",
+            "XP loss on death truly follows the settings (on or off and the chosen fraction).",
+            "World stack and chest slot purchases in the Shop charge and apply the upgrade together.",
+            "This way you do not lose coins or bars if something fails mid-purchase.",
+            "Machine Master bonuses count the settlement's machines, not the highest class level among online players."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1760,59 +2511,81 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 2.4 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Qualidade de vida",
+          "heading": "✨ Novidades",
           "items": [
-            "XP de trabalho dos aldeões do settlement também pode ser compartilhado com o time perto (igual ao XP de combate). Dá para ligar ou desligar no arquivo de configuração geral do mod.",
-            "Configurações do mod (progressão, classes, pilhas, QoL, backup de inventário e interface) ficam em um único arquivo geral, organizado por seções. Continuam separados: mensagem de boas-vindas por mundo, perfis de jogador e cópias de inventário."
+            "<strong>XP em equipe:</strong> o XP de trabalho dos aldeões do assentamento também pode ser dividido com o time por perto, como o XP de combate.",
+            "<strong>XP em equipe:</strong> dá para ligar ou desligar no arquivo de configuração geral do mod."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "World Stack: tábuas de portal (Gateway Tablets) com níveis ou biomas diferentes não se misturam mais — cada uma mantém suas propriedades.",
-            "Mestre do Loot: dinamite, bombas e quebras em massa não multiplicam o mesmo drop várias vezes (fim dos milhões de recursos de uma vez).",
-            "Mestre dos Reinos: qualidade de vida dos aldeões fica no teto normal do jogo — sem velocidade absurda / teleporte.",
-            "Controle: hotkeys do mod não interferem mais no botão de sprint (habilidade de trinket)."
+            "As configurações do mod ficam num único arquivo geral, organizado por seções.",
+            "Esse arquivo reúne progressão, classes, pilhas, qualidade de vida, cópia do inventário e interface.",
+            "Continuam separados a mensagem de boas-vindas de cada mundo, os perfis de jogador e as cópias de inventário."
           ]
         },
         {
-          "heading": "Compatibilidade",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "Continua compatível com o Necesse <strong>1.3.1</strong>.",
-            "<strong>Prioridade máxima:</strong> deixe o RPG Skills no topo da lista de mods (acima de todos os outros)."
+            "Continua compatível com o Necesse 1.3.1.",
+            "Deixe o RPG Skills no topo da lista de mods, acima de todos os outros."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "Tábuas de portal com níveis ou biomas diferentes não se misturam mais na stack do mundo.",
+            "Cada tábua de portal mantém suas propriedades.",
+            "Dinamite, bombas e quebras em massa não multiplicam mais o mesmo drop várias vezes com o Mestre do Loot.",
+            "Acabaram os milhões de recursos de uma vez.",
+            "A qualidade de vida dos aldeões com o Mestre dos Reinos fica no limite normal do jogo.",
+            "Os aldeões não ficam mais com velocidade absurda nem se teleportam.",
+            "No controle, os atalhos do mod não atrapalham mais o botão de correr (habilidade do acessório)."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 2.4 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Quality of life",
+          "heading": "✨ What's new",
           "items": [
-            "Settlement villager work XP can also be shared with nearby teammates (same idea as combat XP). You can turn it on or off in the mod's general config file.",
-            "Mod settings (progression, classes, stacks, QoL, inventory backup settings, and UI) live in one general config file organized by sections. Still separate: per-world welcome message, player profiles, and inventory backup copies."
+            "<strong>Team XP:</strong> settlement villager work XP can also be shared with nearby teammates, like combat XP.",
+            "<strong>Team XP:</strong> you can turn it on or off in the mod's general config file."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "World Stack: Gateway Tablets with different levels or biomes no longer merge — each keeps its own properties.",
-            "Loot Master: dynamite, bombs, and mass breaks no longer multiply the same drop over and over (no more millions of resources at once).",
-            "Realm Master: settler quality of life stays at the normal game cap — no absurd speed / teleporting villagers.",
-            "Controller: mod hotkeys no longer interfere with the sprint button (trinket ability)."
+            "Mod settings live in a single general file, organized by sections.",
+            "That file covers progression, classes, stacks, quality of life, inventory backup and interface.",
+            "The per-world welcome message, player profiles and inventory copies stay separate."
           ]
         },
         {
-          "heading": "Compatibility",
+          "heading": "🤝 Compatibility",
           "items": [
-            "Still compatible with Necesse <strong>1.3.1</strong>.",
-            "<strong>Maximum priority:</strong> keep RPG Skills at the top of your mod list (above every other mod)."
+            "Still compatible with Necesse 1.3.1.",
+            "Keep RPG Skills at the top of your mod list, above every other mod."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "Gateway Tablets with different levels or biomes no longer merge in the world stack.",
+            "Each Gateway Tablet keeps its own properties.",
+            "Dynamite, bombs and mass breaks no longer multiply the same drop over and over with Loot Master.",
+            "No more millions of resources at once.",
+            "Villager quality of life with Realm Master stays at the game's normal cap.",
+            "Villagers no longer get absurd speed or teleport.",
+            "On controller, mod hotkeys no longer interfere with the sprint button (trinket ability)."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1824,81 +2597,105 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 2.3 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Qualidade de vida",
+          "heading": "✨ Novidades",
           "items": [
-            "O jogo guarda automaticamente até 5 cópias do seu inventário e equipamento a cada 10 minutos enquanto você está online.",
-            "Use <strong>/rpgskills restore inventory</strong> para voltar à cópia mais recente, ou <strong>/rpgskills restore inventory list</strong> para ver as datas salvas.",
-            "Aba Classes redesenhada: lista à esquerda com ícones de itens do jogo e nível; à direita, bônus atuais, seta e o ganho do próximo ponto (incluindo desbloqueios de nível); um botão para adicionar ponto. Só a lista rola.",
-            "Aba Status em dois painéis: Manual de Magia com dados do personagem à esquerda; Livro de Magias Proibidas com bônus e passivas ativas à direita.",
-            "No controle, LB/RB trocam as abas; o D-pad navega a lista e o painel de detalhe.",
-            "A janela do RPG Skills fecha sozinha quando o menu de pause (ESC) abre."
+            "<strong>Cópia do inventário:</strong> o jogo guarda cópias do seu inventário e equipamento a cada 10 minutos enquanto você está online.",
+            "<strong>Cópia do inventário:</strong> ficam guardadas até 5 cópias.",
+            "<strong>Cópia do inventário:</strong> /rpgskills restore inventory volta para a cópia mais recente.",
+            "<strong>Cópia do inventário:</strong> /rpgskills restore inventory list mostra as datas salvas."
           ]
         },
         {
-          "heading": "Agradecimentos",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "Ideias trazidas por [url=https://steamcommunity.com/id/megafrigaa]MegaFriga foram ajustadas e aperfeiçoadas para a nova interface do RPG Skills (abas Status e Classes)."
+            "A aba Classes foi redesenhada.",
+            "A lista de classes fica à esquerda, com ícones de itens do jogo e o nível.",
+            "À direita aparecem os bônus atuais, uma seta e o ganho do próximo ponto, incluindo desbloqueios de nível.",
+            "Um botão adiciona ponto na classe.",
+            "Só a lista rola.",
+            "A aba Status ficou dividida em dois painéis.",
+            "À esquerda, o Manual de Magia mostra os dados do personagem.",
+            "À direita, o Livro de Magias Proibidas mostra os bônus e as passivas ativas.",
+            "As ideias de [url=https://steamcommunity.com/id/megafrigaa]MegaFriga foram ajustadas e aperfeiçoadas para as novas abas Status e Classes.",
+            "No controle, LB e RB trocam as abas.",
+            "No controle, o D-pad navega pela lista e pelo painel de detalhe.",
+            "A janela do RPG Skills fecha sozinha quando o menu de pausa (ESC) abre."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "Ajuste fino na progressão de armadilhas (Mestre das Armadilhas): a lógica de dano e proteção de aliados ficou isolada e testada de forma mais segura.",
-            "Preferências da janela de status e da barra de XP separadas das regras de nível — evita misturar configuração de interface com progressão.",
-            "World Stack: pergaminhos de encantamento diferentes não se misturam mais ao organizar o inventário (só empilham se forem o mesmo encantamento).",
-            "Mestre das Relíquias: slots extras não encolhem sozinhos no meio do jogo; ao reduzir slots de propósito, amuletos de todos os presets são recuperados em vez de sumirem.",
-            "Textos que estavam fixos em português (bônus de classes, avisos de mineração avançada, nomes de auras) passam pelos arquivos de idioma; adicionado suporte base para coreano."
+            "Continua compatível com o Necesse 1.3.1.",
+            "Deixe o RPG Skills no topo da lista de mods, acima de todos os outros."
           ]
         },
         {
-          "heading": "Compatibilidade",
+          "heading": "🔧 Correções",
           "items": [
-            "Continua compatível com o Necesse <strong>1.3.1</strong>.",
-            "<strong>Prioridade máxima:</strong> deixe o RPG Skills no topo da lista de mods (acima de todos os outros)."
+            "O dano e a proteção de aliados do Mestre das Armadilhas ficaram mais seguros.",
+            "As preferências da janela de status e da barra de XP não se misturam mais com a progressão de nível.",
+            "Pergaminhos de encantamento diferentes não se misturam mais ao organizar o inventário com a stack do mundo.",
+            "Os pergaminhos só empilham se tiverem o mesmo encantamento.",
+            "Os espaços extras do Mestre das Relíquias não encolhem mais sozinhos no meio do jogo.",
+            "Ao reduzir os espaços de propósito, os amuletos de todos os conjuntos de equipamento são recuperados em vez de sumirem.",
+            "Textos que estavam fixos em português (bônus de classes, avisos de mineração avançada e nomes de auras) agora seguem o idioma do jogo.",
+            "O mod ganhou suporte básico ao coreano."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 2.3 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Quality of life",
+          "heading": "✨ What's new",
           "items": [
-            "The game automatically keeps up to 5 copies of your inventory and equipment every 10 minutes while you are online.",
-            "Use <strong>/rpgskills restore inventory</strong> to return to the newest copy, or <strong>/rpgskills restore inventory list</strong> to see the saved dates.",
-            "Classes tab redesigned: left list with game item icons and level; on the right, current bonuses, an arrow, and what you gain with the next point (including level unlocks); one button to add a point. Only the list scrolls.",
-            "Status tab split in two panels: Magic Manual with character info on the left; Forbidden Spellbook with active bonuses and passives on the right.",
-            "On controller, LB/RB switch tabs; the D-pad navigates the list and detail panel.",
-            "The RPG Skills window closes automatically when the pause menu (ESC) opens."
+            "<strong>Inventory copy:</strong> the game saves copies of your inventory and equipment every 10 minutes while you are online.",
+            "<strong>Inventory copy:</strong> up to 5 copies are kept.",
+            "<strong>Inventory copy:</strong> /rpgskills restore inventory goes back to the newest copy.",
+            "<strong>Inventory copy:</strong> /rpgskills restore inventory list shows the saved dates."
           ]
         },
         {
-          "heading": "Thanks",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "Ideas from [url=https://steamcommunity.com/id/megafrigaa]MegaFriga were refined and shaped into the new RPG Skills UI (Status and Classes tabs)."
+            "The Classes tab was redesigned.",
+            "The class list is on the left, with game item icons and the level.",
+            "On the right you see current bonuses, an arrow and what the next point gives, including level unlocks.",
+            "One button adds a point to the class.",
+            "Only the list scrolls.",
+            "The Status tab is now split into two panels.",
+            "On the left, the Magic Manual shows your character info.",
+            "On the right, the Forbidden Spellbook shows active bonuses and passives.",
+            "Ideas from [url=https://steamcommunity.com/id/megafrigaa]MegaFriga were refined and shaped into the new Status and Classes tabs.",
+            "On controller, LB and RB switch tabs.",
+            "On controller, the D-pad moves through the list and the detail panel.",
+            "The RPG Skills window closes on its own when the pause menu (ESC) opens."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🤝 Compatibility",
           "items": [
-            "Trap Master damage/ally protection logic is isolated and tested more safely.",
-            "Status window and XP bar preferences are separated from level rules — UI settings no longer mix with progression.",
-            "World Stack: different enchantment scrolls no longer merge when sorting inventory (they only stack if they share the same enchantment).",
-            "Relic Master: extra trinket slots no longer shrink on their own mid-game; when slots are reduced on purpose, trinkets from every equipment preset are recovered instead of vanishing.",
-            "Player-facing strings that were hardcoded in Portuguese (class bonus text, advanced vein mining notices, aura names) now use language files; basic Korean locale support added."
+            "Still compatible with Necesse 1.3.1.",
+            "Keep RPG Skills at the top of your mod list, above every other mod."
           ]
         },
         {
-          "heading": "Compatibility",
+          "heading": "🔧 Fixes",
           "items": [
-            "Still compatible with Necesse <strong>1.3.1</strong>.",
-            "<strong>Maximum priority:</strong> keep RPG Skills at the top of your mod list (above every other mod)."
+            "Trap Master damage and ally protection are now safer.",
+            "Status window and XP bar preferences no longer mix with level progression.",
+            "Different enchantment scrolls no longer merge when sorting the inventory with the world stack.",
+            "Scrolls only stack if they have the same enchantment.",
+            "Relic Master extra slots no longer shrink on their own mid-game.",
+            "When slots are reduced on purpose, trinkets from every equipment preset are recovered instead of vanishing.",
+            "Texts that were stuck in Portuguese (class bonuses, advanced vein mining notices and aura names) now follow the game language.",
+            "The mod got basic Korean support."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1910,41 +2707,47 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 2.2 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibilidade",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "Continua compatível com o Necesse <strong>1.3.1</strong>.",
-            "<strong>Prioridade máxima:</strong> deixe o RPG Skills no topo da lista de mods (acima de todos os outros). Isso evita conflito de idioma, patches e lojas de colonos."
+            "Continua compatível com o Necesse 1.3.1.",
+            "Deixe o RPG Skills no topo da lista de mods, acima de todos os outros.",
+            "Isso evita conflitos de idioma, de alterações no jogo e nas lojas de colonos."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
-            "Abrir a loja do <strong>Mago</strong> (e outras lojas de colonos com itens especiais) não deve mais fechar o jogo com erro de gerador de item incompatível.",
-            "Conferência dos arquivos de idioma: as traduções do mod seguem o idioma escolhido no jogo; o português do Brasil só entra quando o jogo está em pt-BR."
+            "Abrir a loja do Mago não fecha mais o jogo com erro.",
+            "O mesmo vale para as outras lojas de colonos com itens especiais.",
+            "As traduções do mod seguem o idioma escolhido no jogo.",
+            "O português do Brasil só entra quando o jogo está em pt-BR."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 2.2 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibility",
+          "heading": "🤝 Compatibility",
           "items": [
-            "Still compatible with Necesse <strong>1.3.1</strong>.",
-            "<strong>Maximum priority:</strong> keep RPG Skills at the top of your mod list (above every other mod). This avoids language conflicts, patch clashes, and settler shop issues."
+            "Still compatible with Necesse 1.3.1.",
+            "Keep RPG Skills at the top of your mod list, above every other mod.",
+            "This avoids language conflicts, game change clashes and settler shop issues."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
-            "Opening the <strong>Mage</strong> shop (and other settler shops with special items) should no longer crash from an incompatible shop item generator.",
-            "Language files checked: the mod follows the language selected in-game; Brazilian Portuguese overlays only apply when the game language is pt-BR."
+            "Opening the Mage shop no longer crashes the game.",
+            "The same goes for other settler shops with special items.",
+            "The mod's translations follow the language selected in the game.",
+            "Brazilian Portuguese only applies when the game is in pt-BR."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -1956,43 +2759,41 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 2.1 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibilidade",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "Compatível com o Necesse <strong>1.3.1</strong> (atualização de manutenção do Rust & Romance).",
-            "Continua funcionando com o conteúdo da <strong>1.3.0</strong>; hosts/servidores precisam estar na 1.3.1 junto com o jogo."
-          ]
-        },
-        {
-          "heading": "O que mudou no jogo (e no mod)",
-          "items": [
-            "A 1.3.1 do Necesse traz ajustes de balance (abelhas/Hive Scepter, Pyromancy, dano de raiders), correções de crash de settlers/personalidades e melhorias de Story Objectives — tudo isso é do jogo base.",
-            "O RPG Skills <strong>não</strong> copia essas armas nem o sistema de Story Objectives; a progressão, classes, settlement e XP seguem como na 2.0.",
-            "Confirmação de compat: hooks críticos e assinaturas validados contra o Necesse 1.3.1."
+            "Compatível com o Necesse 1.3.1 (atualização de manutenção do Rust & Romance).",
+            "Continua funcionando com o conteúdo da 1.3.0.",
+            "Anfitriões e servidores precisam estar na 1.3.1 junto com o jogo.",
+            "As partes mais importantes do mod foram conferidas no Necesse 1.3.1.",
+            "A 1.3.1 do Necesse traz ajustes nas abelhas e no Hive Scepter, na Pyromancy e no dano dos invasores.",
+            "A 1.3.1 também corrige travamentos de colonos e personalidades e melhora os Story Objectives.",
+            "Essas mudanças são do jogo base.",
+            "O RPG Skills não copia essas armas nem os Story Objectives.",
+            "Progressão, classes, assentamento e XP continuam como na 2.0."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 2.1 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibility",
+          "heading": "🤝 Compatibility",
           "items": [
-            "Compatible with Necesse <strong>1.3.1</strong> (Rust & Romance maintenance update).",
-            "Still works with <strong>1.3.0</strong> content; hosts/servers should update to 1.3.1 with the game."
-          ]
-        },
-        {
-          "heading": "What changed in the game (and in the mod)",
-          "items": [
-            "Necesse 1.3.1 brings balance tweaks (bee/Hive Scepter, Pyromancy, raider damage), settler/personality crash fixes, and Story Objective improvements — all base-game.",
-            "RPG Skills does <strong>not</strong> copy those weapons or Story Objectives; progression, classes, settlement, and XP stay as in 2.0.",
-            "Compatibility confirmed: critical hooks and signatures validated against Necesse 1.3.1."
+            "Compatible with Necesse 1.3.1 (Rust & Romance maintenance update).",
+            "Still works with 1.3.0 content.",
+            "Hosts and servers need to be on 1.3.1 along with the game.",
+            "The mod's most important parts were checked against Necesse 1.3.1.",
+            "Necesse 1.3.1 brings changes to bees and the Hive Scepter, Pyromancy and raider damage.",
+            "1.3.1 also fixes settler and personality crashes and improves Story Objectives.",
+            "These changes are from the base game.",
+            "RPG Skills does not copy those weapons or Story Objectives.",
+            "Progression, classes, settlement and XP stay as in 2.0."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2004,89 +2805,115 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 2.0 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibilidade",
+          "heading": "✨ Novidades",
           "items": [
-            "Continua compatível com o Necesse <strong>1.3.0</strong> (Rust & Romance)."
+            "<strong>Personalidades:</strong> colonos com 6 ou mais personalidades rendem XP de assentamento extra.",
+            "<strong>Personalidades:</strong> colonos Fastworker e Gardener aceleram um pouco as expedições, com teto.",
+            "<strong>Personalidades:</strong> Voyager continua só com o efeito do jogo base.",
+            "<strong>Aura de Liderança:</strong> fica mais forte em colonos com personalidade de combate igual à sua classe (Warrior, Ranger, Magician ou Summoner).",
+            "<strong>Lazer:</strong> colonos em lazer (olhar o mar, conversar, música etc.) dão um pouco de XP de assentamento, com limite diário.",
+            "<strong>Parceiro de vida:</strong> com um Life Partner no grupo de aventura, dá para ligar um pequeno bônus de XP de combate e regeneração.",
+            "<strong>Parceiro de vida:</strong> esse bônus vem desligado por padrão no arquivo de configuração.",
+            "<strong>XP de zona:</strong> a Floresta Carbonizada tem XP de zona próprio e não conta mais como outro bioma genérico.",
+            "<strong>XP de zona:</strong> o bioma de superfície do Scrapyard não usa mais o mesmo XP da incursão Scrapyard.",
+            "<strong>XP de zona:</strong> a incursão Scrapyard continua dando mais XP.",
+            "<strong>Aba Status:</strong> mostra a qualidade de vida média do assentamento.",
+            "<strong>Aba Status:</strong> mostra se o compartilhamento de XP de time está ligado.",
+            "<strong>Passivas informativas:</strong> novas passivas Líder do Assentamento, Administração Rica e Especialista de Incursão."
           ]
         },
         {
-          "heading": "Novidades",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "<strong>Mestre dos Reinos nível 5</strong>: força Qualidade de Vida Unrivaled nos colonos, bloqueia greve por humor e triplica o XP das tarefas do assentamento (com limite por minuto).",
-            "Settlers com <strong>6 ou mais personalidades</strong> rendem XP de settlement extra.",
-            "A <strong>Aura de Liderança</strong> fica mais forte em colonos com personalidade de combate alinhada à sua classe (Warrior/Ranger/Magician/Summoner).",
-            "A aba Status mostra o QoL médio do assentamento e se o compartilhamento de XP de time está ligado.",
-            "A <strong>Floresta Carbonizada</strong> passa a ter XP de zona próprio (não conta mais como “outro bioma” genérico).",
-            "O bioma de superfície do <strong>Scrapyard</strong> deixa de usar o mesmo XP da incursão Scrapyard (incursão continua mais forte).",
-            "Colonos em <strong>recreation</strong> (olhar o mar, conversar, música, etc.) dão um pouco de XP de assentamento, com limite diário.",
-            "Colonos <strong>Fastworker</strong> e <strong>Gardener</strong> aceleram expedições um pouco (com teto; Voyager continua só no efeito vanilla).",
-            "Com <strong>Life Partner</strong> na party de aventura, dá para ligar um micro-bônus de XP de combate e regeneração (desligado por padrão no arquivo de config)."
+            "Recrutar especialistas e colonos resgatados dá mais XP de assentamento.",
+            "O filtro de baú reconhece melhor as essências novas (cristal e radiada), os Ascended Shards e os pós de altar e de melhoria.",
+            "Divorce Papers e Pretty Bouquet não recebem o multiplicador de pilha do mod e continuam com pilha 1.",
+            "As estações de Upgrade, Salvage e Transmutation não aplicam o multiplicador de pilha do mod."
           ]
         },
         {
-          "heading": "Qualidade de vida",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "Novas passivas informativas: Líder do Assentamento, Administração Rica e Especialista de Incursão.",
-            "Recrutamento de especialistas e settlers resgatados concede mais XP de settlement.",
-            "Filtro de baú reconhece melhor essências novas (cristal / radiada), Ascended Shards e dusts de altar/upgrade.",
-            "Divorce Papers e Pretty Bouquet não recebem multiplicador de stack do mod (permanecem stack 1).",
-            "Estações de Upgrade, Salvage e Transmutation não aplicam o multiplicador de stack do mod no contexto delas."
+            "Continua compatível com o Necesse 1.3.0 (Rust & Romance)."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
-            "A <strong>Mutant Hydra</strong> conta como boss no XP de combate; cabeça e pescoço não geram XP extra (um kill = um payout).",
-            "Morte de summons/mounts seus (Makeshift, Junk Mech, abelhas, morcegos, etc.) não gera XP de combate ao dono.",
-            "No <strong>controle</strong>, a janela do RPG Skills passa a focar direito os botões de stack e os toggles de passivas/ativas na Loja (o D-pad não troca de aba no meio quando um desses botões está focado)."
+            "A Mutant Hydra conta como chefe no XP de combate.",
+            "A cabeça e o pescoço da Mutant Hydra não dão XP extra: um abate, um pagamento de XP.",
+            "A morte das suas próprias invocações e montarias (Makeshift, Junk Mech, abelhas, morcegos etc.) não dá mais XP de combate a você.",
+            "No controle, a janela do RPG Skills foca direito os botões de pilha e os botões de ligar passivas e ativas na Loja.",
+            "O D-pad não troca mais de aba quando um desses botões está em foco."
+          ]
+        },
+        {
+          "heading": "👑 Mestre dos Reinos",
+          "items": [
+            "No nível 5, a classe força a qualidade de vida Unrivaled nos colonos.",
+            "No nível 5, os colonos não entram mais em greve por humor.",
+            "No nível 5, o XP das tarefas do assentamento triplica, com limite por minuto."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 2.0 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibility",
+          "heading": "✨ What's new",
           "items": [
-            "Still compatible with Necesse <strong>1.3.0</strong> (Rust & Romance)."
+            "<strong>Personalities:</strong> settlers with 6 or more personalities give extra settlement XP.",
+            "<strong>Personalities:</strong> Fastworker and Gardener settlers speed up expeditions a bit, with a cap.",
+            "<strong>Personalities:</strong> Voyager keeps only the base game effect.",
+            "<strong>Leadership Aura:</strong> is stronger on settlers whose combat personality matches your class (Warrior, Ranger, Magician or Summoner).",
+            "<strong>Recreation:</strong> settlers doing recreation (gazing at the sea, chatting, music, etc.) give a little settlement XP, with a daily cap.",
+            "<strong>Life Partner:</strong> with a Life Partner in the adventure party, you can turn on a small combat XP and regeneration bonus.",
+            "<strong>Life Partner:</strong> this bonus is off by default in the config file.",
+            "<strong>Zone XP:</strong> the Charred Forest has its own zone XP and no longer counts as a generic other biome.",
+            "<strong>Zone XP:</strong> the Scrapyard surface biome no longer uses the same XP as the Scrapyard incursion.",
+            "<strong>Zone XP:</strong> the Scrapyard incursion still gives more XP.",
+            "<strong>Status tab:</strong> shows the settlement's average quality of life.",
+            "<strong>Status tab:</strong> shows whether team XP sharing is on.",
+            "<strong>Informational passives:</strong> new Settlement Leader, Rich Administration and Incursion Specialist passives."
           ]
         },
         {
-          "heading": "What's new",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "<strong>Realm Master level 5</strong>: forces Unrivaled quality of life on colonists, blocks mood strikes, and triples settlement task XP (with a per-minute cap).",
-            "Settlers with <strong>6+ personalities</strong> grant extra settlement XP.",
-            "<strong>Leadership Aura</strong> is stronger on colonists whose combat personality matches your class (Warrior/Ranger/Magician/Summoner).",
-            "The Status tab shows average settlement QoL and whether team XP sharing is on.",
-            "The <strong>Charred Forest</strong> now has its own zone XP (no longer treated as a generic “other” surface).",
-            "Scrapyard <strong>surface</strong> biome XP is no longer the same as Scrapyard <strong>incursion</strong> XP (incursion stays stronger).",
-            "Colonists doing <strong>recreation</strong> (gazing, chatting, music, etc.) grant a little settlement XP, with a daily cap.",
-            "<strong>Fastworker</strong> and <strong>Gardener</strong> colonists speed up expeditions a bit (capped; Voyager stays vanilla-only).",
-            "With a <strong>Life Partner</strong> in the adventure party, you can enable a tiny combat XP and regen bonus (off by default in the config file)."
+            "Recruiting specialists and rescued settlers gives more settlement XP.",
+            "The chest filter better recognizes new essences (crystal and radiated), Ascended Shards and altar and upgrade dusts.",
+            "Divorce Papers and Pretty Bouquet do not get the mod's stack multiplier and stay at stack 1.",
+            "Upgrade, Salvage and Transmutation stations do not apply the mod's stack multiplier."
           ]
         },
         {
-          "heading": "Quality of life",
+          "heading": "🤝 Compatibility",
           "items": [
-            "New informational passives: Settlement Leader, Rich Administration, and Incursion Specialist.",
-            "Recruiting specialists and rescued settlers grants more settlement XP.",
-            "Chest filters better recognize new essences (crystal / radiated), Ascended Shards, and altar/upgrade dusts.",
-            "Divorce Papers and Pretty Bouquet are not multiplied by the mod stack upgrade (stay stack 1).",
-            "Upgrade, Salvage, and Transmutation stations do not apply the mod stack multiplier in their station context."
+            "Still compatible with Necesse 1.3.0 (Rust & Romance)."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
-            "<strong>Mutant Hydra</strong> counts as a combat XP boss; head/neck parts no longer grant extra XP (one kill = one payout).",
-            "Death of your own summons/mounts (Makeshift, Junk Mech, bees, bats, etc.) no longer grants combat XP to the owner.",
-            "On <strong>controller</strong>, the RPG Skills window now properly focuses stack buttons and passive/active toggles on the Shop tab (D-pad no longer switches tabs while one of those buttons is focused)."
+            "The Mutant Hydra counts as a boss for combat XP.",
+            "The Mutant Hydra's head and neck give no extra XP: one kill, one XP payout.",
+            "The death of your own summons and mounts (Makeshift, Junk Mech, bees, bats, etc.) no longer gives you combat XP.",
+            "On controller, the RPG Skills window properly focuses the stack buttons and the passive and active toggles on the Shop.",
+            "The D-pad no longer switches tabs while one of those buttons is focused."
+          ]
+        },
+        {
+          "heading": "👑 Realm Master",
+          "items": [
+            "At level 5, the class forces Unrivaled quality of life on settlers.",
+            "At level 5, settlers no longer go on strike from mood.",
+            "At level 5, settlement task XP triples, with a per-minute cap."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2098,69 +2925,75 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.9.4 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibilidade",
+          "heading": "✨ Novidades",
           "items": [
-            "Compatível com o Necesse <strong>1.3.0</strong> (atualização Rust & Romance).",
-            "Ajustes internos para o mod continuar funcionando com as mudanças de assentamento e de loja do jogo.",
-            "Textos novos do Necesse 1.3.0 que ainda estavam em inglês no pt-BR do jogo (pets de incursão, romance, personalidades, qualidade de vida, newsletter e mais) passam a aparecer em português pelo RPG Skills — inclusive menus que usam LocalMessage (como Assinar a Newsletter)."
+            "<strong>XP de time:</strong> no multijogador, o XP de combate é compartilhado com o seu time quando vocês estão no mesmo mapa e perto um do outro (padrão: 24 blocos).",
+            "<strong>XP de time:</strong> se a invocação ou o golpe de um jogador mata o inimigo, os colegas de time por perto também ganham XP.",
+            "<strong>XP de time:</strong> cada jogador recebe o XP calculado para o próprio nível e o próprio buff de XP, se tiver.",
+            "<strong>XP de time:</strong> quem não está em time, está longe ou está em outro mapa ou ilha continua ganhando XP só dos próprios abates.",
+            "<strong>XP de time:</strong> no arquivo de configuração de progressão dá para ligar ou desligar o compartilhamento e ajustar o raio."
           ]
         },
         {
-          "heading": "Novidades",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "No multijogador, o <strong>XP de combate</strong> é compartilhado com o seu <strong>time</strong> quando vocês estão no <strong>mesmo mapa</strong> e <strong>perto um do outro</strong> (padrão: 24 tiles). Se a invocação (ou o golpe) de um jogador mata o inimigo, os outros do time próximos também ganham XP.",
-            "Dá para <strong>ligar ou desligar</strong> esse compartilhamento e <strong>ajustar o raio</strong> no arquivo de configuração de progressão do mod.",
-            "Cada jogador do time recebe o XP calculado para o <strong>próprio nível</strong> (e o próprio buff de XP, se tiver).",
-            "Quem não está em time, está longe, ou está em outro mapa/ilha, continua ganhando XP só das próprias kills."
+            "Compatível com o Necesse 1.3.0 (atualização Rust & Romance).",
+            "Ajustes para o mod continuar funcionando com as mudanças de assentamento e de loja do jogo.",
+            "Textos novos do Necesse 1.3.0 que estavam em inglês no pt-BR do jogo passam a aparecer em português pelo RPG Skills.",
+            "Isso inclui pets de incursão, romance, personalidades, qualidade de vida, newsletter e mais.",
+            "Também vale para menus como Assinar a Newsletter."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
-            "A mensagem de boas-vindas passa a mostrar a <strong>versão correta</strong> do mod (em vez de ficar em 1.0).",
-            "Os ícones de filtro do baú voltam a aparecer normalmente (sem o quadrado vermelho).",
-            "O piso de felicidade do <strong>Mestre dos Reinos</strong> volta a ser aplicado corretamente nos settlers (o jogo mudou a forma de calcular felicidade).",
-            "Descontos de loja/expedição do assentamento voltam a ser aplicados na abertura do menu do settler.",
-            "XP de combate na nova incursion <strong>Scrapyard</strong> deixa de ser tratado como se fosse a Caverna de Slime.",
-            "A Floresta Carbonizada (Charred Forest) deixa de ser contada como floresta comum no cálculo de XP de zona."
+            "A mensagem de boas-vindas mostra a versão certa do mod, em vez de 1.0.",
+            "Os ícones de filtro do baú voltam a aparecer normalmente, sem o quadrado vermelho.",
+            "O piso de felicidade do Mestre dos Reinos volta a valer para os colonos, depois que o jogo mudou o cálculo da felicidade.",
+            "Os descontos de loja e de expedição do assentamento voltam a valer ao abrir o menu do colono.",
+            "O XP de combate na nova incursão Scrapyard não é mais tratado como o da Caverna de Slime.",
+            "A Floresta Carbonizada não conta mais como floresta comum no XP de zona."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.9.4 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibility",
+          "heading": "✨ What's new",
           "items": [
-            "Compatible with Necesse <strong>1.3.0</strong> (Rust & Romance update).",
-            "Internal fixes so the mod keeps working with settlement and settler shop changes in the base game.",
-            "New Necesse 1.3.0 strings that were still English in the game's pt-BR (incursion pets, romance, personalities, quality of life, newsletter, and more) now show in Portuguese through RPG Skills — including LocalMessage menus (such as Subscribe to Newsletter)."
+            "<strong>Team XP:</strong> in multiplayer, combat XP is shared with your team when you are on the same map and near each other (default: 24 tiles).",
+            "<strong>Team XP:</strong> if a player's summon or hit kills the enemy, nearby teammates also gain XP.",
+            "<strong>Team XP:</strong> each player gets XP calculated for their own level and their own XP buff, if any.",
+            "<strong>Team XP:</strong> players not on a team, too far away or on another map or island still only get XP from their own kills.",
+            "<strong>Team XP:</strong> in the progression config file you can turn the sharing on or off and change the radius."
           ]
         },
         {
-          "heading": "What's new",
+          "heading": "🤝 Compatibility",
           "items": [
-            "In multiplayer, <strong>combat XP</strong> is shared with your <strong>team</strong> when you are on the <strong>same map</strong> and <strong>near each other</strong> (default: 24 tiles). If one player's summon (or hit) gets the kill, nearby teammates also gain XP.",
-            "You can <strong>turn this sharing on/off</strong> and <strong>change the radius</strong> in the mod progression config file.",
-            "Each teammate gets XP calculated for their <strong>own level</strong> (and their own XP buff, if any).",
-            "Players not on a team, too far away, or on a different map/island, still only get XP from their own kills."
+            "Compatible with Necesse 1.3.0 (Rust & Romance update).",
+            "Adjustments so the mod keeps working with the game's settlement and shop changes.",
+            "New Necesse 1.3.0 text that was still in English in the game's pt-BR now shows in Portuguese through RPG Skills.",
+            "This includes incursion pets, romance, personalities, quality of life, newsletter and more.",
+            "It also covers menus like Subscribe to Newsletter."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
-            "The welcome message now shows the <strong>correct mod version</strong> (instead of staying stuck on 1.0).",
-            "Chest filter icons show normally again (no red error square).",
-            "The <strong>Realm Master</strong> happiness floor applies correctly to settlers again (the game changed how happiness is calculated).",
-            "Settlement shop/expedition discounts apply again when opening a settler menu.",
-            "Combat XP in the new <strong>Scrapyard</strong> incursion is no longer treated like the Slime Cave.",
-            "The Charred Forest is no longer counted as a normal forest for zone XP."
+            "The welcome message shows the correct mod version, instead of 1.0.",
+            "Chest filter icons show normally again, without the red square.",
+            "The Realm Master happiness floor applies to settlers again, after the game changed how happiness is calculated.",
+            "Settlement shop and expedition discounts apply again when opening a settler's menu.",
+            "Combat XP in the new Scrapyard incursion is no longer treated like the Slime Cave.",
+            "The Charred Forest no longer counts as a normal forest for zone XP."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2172,49 +3005,67 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.9.3 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Correções",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "Corrigido o <strong>controle</strong> e o atalho de abrir/fechar a janela do RPG Skills: o combo <strong>LB+RB</strong> e a tecla configurada (padrão <strong>K</strong>) voltam a responder de forma estável, sem depender da barra de XP estar ativa.",
-            "Com a janela aberta no controle, o <strong>D-pad</strong> troca de aba quando nenhum botão está em foco, <strong>B/Circle</strong> fecha, <strong>A/Cross</strong> confirma o botão em foco e, na aba Loja, <strong>A/X/Y</strong> e <strong>RB</strong> continuam como atalhos rápidos de compra quando nenhum botão está em foco.",
-            "Os ombros e o D-pad do jogo base deixam de ficar “presos” pelos atalhos do mod; a limpeza dos binds do controle é refeita quando um controle conecta no meio da sessão.",
-            "Atalhos de teclado da loja, minerador de veios avançado, minerador explosivo e reforço de luz continuam ativos no modo teclado/mouse e continuam desligados enquanto o controle está em uso, para não conflitar com o jogo.",
-            "<strong>/rpgskills help</strong> volta a mostrar a lista de comandos. Em multiplayer, <strong>set level</strong>, <strong>maxskills</strong> e <strong>reset zero</strong> exigem permissão de admin; <strong>reset points</strong> continua disponível ao jogador (com custo em moedas quando aplicável).",
-            "Fechado um atalho que permitia maximizar nível e classes sem ser admin."
+            "Com duas ou mais classes de debuff ativas no mesmo inimigo, o número azul mostra a soma total, em vez de vários números separados.",
+            "Com só um debuff de classe, o visual continua igual.",
+            "A aba Classes volta a mostrar a descrição completa ao passar o mouse no nome da classe e no botão +.",
+            "A grade da aba Classes ficou mais compacta e fácil de ler."
           ]
         },
         {
-          "heading": "Qualidade de vida",
+          "heading": "🔧 Correções",
           "items": [
-            "Com <strong>duas ou mais</strong> classes de debuff ativas no mesmo inimigo, o número azul de dano mostra a <strong>soma total</strong> em vez de vários números separados na tela. Com só um debuff de classe, o visual continua igual.",
-            "A aba <strong>Classes</strong> voltou a mostrar a descrição completa ao passar o mouse no nome da classe (e no botão <strong>+</strong>), e o grid ficou mais compacto e legível."
+            "O LB+RB do controle e a tecla configurada (padrão K) voltam a abrir e fechar a janela do RPG Skills sem falhar.",
+            "Isso funciona mesmo sem a barra de XP ativa.",
+            "Com a janela aberta no controle, o D-pad troca de aba quando nenhum botão está em foco.",
+            "B/Circle fecha a janela, e A/Cross confirma o botão em foco.",
+            "Na aba Loja, A/X/Y e RB continuam como atalhos de compra quando nenhum botão está em foco.",
+            "Os botões de ombro e o D-pad do jogo base não ficam mais presos pelos atalhos do mod.",
+            "Os botões do controle são acertados de novo quando um controle é conectado no meio do jogo.",
+            "Os atalhos de teclado da Loja, do minerador de veios avançado, do minerador explosivo e do reforço de luz continuam ativos com teclado e mouse.",
+            "Esses atalhos continuam desligados enquanto o controle está em uso, para não conflitar com o jogo.",
+            "/rpgskills help volta a mostrar a lista de comandos.",
+            "No multijogador, set level, maxskills e reset zero exigem permissão de admin.",
+            "reset points continua disponível ao jogador, com custo em moedas quando aplicável.",
+            "Foi fechado um atalho que deixava maximizar nível e classes sem ser admin."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.9.3 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Fixes",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "Fixed <strong>controller</strong> and hotkey open/close for the RPG Skills window: the <strong>LB+RB</strong> combo and the bound key (default <strong>K</strong>) respond reliably again, without depending on the XP bar being active.",
-            "With the window open on a controller, the <strong>D-pad</strong> switches tabs when no button is focused, <strong>B/Circle</strong> closes, <strong>A/Cross</strong> confirms the focused button, and on the Shop tab <strong>A/X/Y</strong> and <strong>RB</strong> remain quick-buy shortcuts when no button is focused.",
-            "Base-game shoulders and D-pad no longer get stuck on mod shortcuts; controller bind cleanup runs again when a controller connects mid-session.",
-            "Keyboard hotkeys for the shop, advanced vein miner, explosive miner, and light boost stay active in mouse/keyboard mode and stay disabled while a controller is in use, to avoid conflicts with the base game.",
-            "<strong>/rpgskills help</strong> shows the command list again. In multiplayer, <strong>set level</strong>, <strong>maxskills</strong>, and <strong>reset zero</strong> require admin permission; <strong>reset points</strong> stays available to players (with the coin cost when applicable).",
-            "Closed a shortcut that let players max level and classes without admin permission."
+            "With two or more debuff classes active on the same enemy, the blue number shows the combined total instead of several separate numbers.",
+            "With only one class debuff, the visual stays the same.",
+            "The Classes tab shows the full description again when you hover the class name and the + button.",
+            "The Classes tab grid is more compact and easier to read."
           ]
         },
         {
-          "heading": "Quality of life",
+          "heading": "🔧 Fixes",
           "items": [
-            "With <strong>two or more</strong> debuff classes active on the same enemy, the blue damage number shows the <strong>combined total</strong> instead of several separate numbers on screen. With only one class debuff, the visual stays the same.",
-            "The <strong>Classes</strong> tab shows the full class description again when you hover the class name (and the <strong>+</strong> button), and the grid is more compact and readable."
+            "The controller's LB+RB and the bound key (default K) open and close the RPG Skills window reliably again.",
+            "This works even without the XP bar active.",
+            "With the window open on a controller, the D-pad switches tabs when no button is focused.",
+            "B/Circle closes the window, and A/Cross confirms the focused button.",
+            "On the Shop tab, A/X/Y and RB stay as buy shortcuts when no button is focused.",
+            "The base game's shoulder buttons and D-pad no longer get stuck on the mod's shortcuts.",
+            "Controller buttons are set up again when a controller connects mid-game.",
+            "Keyboard hotkeys for the Shop, advanced vein miner, explosive miner and light boost stay active with mouse and keyboard.",
+            "These hotkeys stay off while a controller is in use, to avoid conflicts with the game.",
+            "/rpgskills help shows the command list again.",
+            "In multiplayer, set level, maxskills and reset zero require admin permission.",
+            "reset points stays available to players, with the coin cost when applicable.",
+            "Closed a shortcut that let players max level and classes without being admin."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2226,123 +3077,143 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.9.2 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Novidades",
+          "heading": "✨ Novidades",
           "items": [
-            "Arquivo de configuração de progressão: ajuste multiplicador global de XP, XP fixo do mundo, pena de morte, curva de nível, nível máximo, pontos por classe e custos de reset (pasta de settings do mod).",
-            "Arquivo de configuração de classes: ligue ou desligue classes; as desligadas <strong>não aparecem</strong> no jogo, não recebem pontos novos e não dão bônus.",
-            "A passiva <strong>Mestre das Classes</strong> considera só as <strong>classes ativas</strong> (as que estão ligadas na config)."
+            "<strong>Configuração de progressão:</strong> novo arquivo na pasta de configurações do mod.",
+            "<strong>Configuração de progressão:</strong> ajusta o multiplicador geral de XP, o XP fixo do mundo e a pena de morte.",
+            "<strong>Configuração de progressão:</strong> ajusta a curva de nível, o nível máximo, os pontos por classe e os custos de reset.",
+            "<strong>Configuração de classes:</strong> novo arquivo para ligar ou desligar classes.",
+            "<strong>Configuração de classes:</strong> as classes desligadas não aparecem no jogo, não recebem pontos novos e não dão bônus.",
+            "<strong>Configuração de classes:</strong> a passiva Mestre das Classes considera só as classes ligadas."
           ]
         },
         {
-          "heading": "Qualidade de vida",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "Janela do RPG Skills com layout mais limpo: menos cortes na lista de classes, scroll mais estável ao trocar de aba e loja com altura correta."
+            "A janela do RPG Skills tem um visual mais limpo.",
+            "A lista de classes tem menos cortes.",
+            "A rolagem fica mais estável ao trocar de aba.",
+            "A Loja aparece com a altura certa."
           ]
         },
         {
-          "heading": "Estabilidade",
+          "heading": "⚡ Desempenho",
           "items": [
-            "Proteção reforçada contra o bug em que <strong>aprender uma classe</strong> podia fazer inimigos causarem só 1 de dano.",
-            "Proteção reforçada para <strong>debuffs de classe</strong> em <strong>Cavernídeos</strong> (caçáveis e não hostis).",
-            "Saves de progresso, slots de bugigangas e sincronização entre jogadores ficaram mais seguros e consistentes.",
-            "Em multiplayer, ao <strong>sair e entrar de novo</strong>, classes, buff de XP, maestria e slots de bugigangas voltam iguais ao servidor.",
-            "Bônus de classe, debuffs e passivas passam por validação mais rígida, reduzindo drift silencioso de fórmulas.",
-            "A passiva <strong>Mestre das Classes</strong> continua alcançável no nível máximo (todas as classes ativas no limite).",
-            "Resistências elementais, DOT/burst e combinações de várias classes ativas ficaram mais consistentes.",
-            "Ações pela rede (gastar pontos, reset, compras e maxskills) ficam mais protegidas contra pedidos inválidos ou de outro jogador.",
-            "Comandos administrativos sensíveis exigem permissão de admin quando for o caso, com rejeição clara para quem não pode usar.",
-            "Mais proteção automática contra quebras silenciosas após atualizações do jogo (hooks e itens críticos).",
-            "Slots de bugigangas do jogo base (incluindo itens que sobem o total) continuam separados do bônus do RPG Skills no save e no reload."
+            "Minerar veios em área grande ficou mais estável.",
+            "Organizar um inventário cheio ficou mais estável.",
+            "Jogar com todas as classes no máximo ficou mais estável, sem travadinhas no uso normal."
           ]
         },
         {
-          "heading": "Compatibilidade",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "Compatibilidade confirmada com <strong>Safe Haven QOL 1.2.0-2.6</strong>: menus e tooltips em <strong>pt-BR</strong>, e o <strong>stack size</strong> do RPG Skills continua mandando sem briga com cosméticos/trinkets do Safe Haven."
+            "Compatível com o Safe Haven QOL 1.2.0 a 2.6.",
+            "Os menus e as dicas do Safe Haven aparecem em pt-BR.",
+            "O tamanho das pilhas do RPG Skills continua valendo, sem conflito com os cosméticos e bugigangas do Safe Haven."
           ]
         },
         {
-          "heading": "Desempenho",
+          "heading": "🔧 Correções",
           "items": [
-            "Vein mining em área grande, organizar inventário cheio e jogar com <strong>todas as classes no máximo</strong> ficaram mais estáveis, sem travadinhas óbvias no uso normal."
+            "Proteção reforçada contra o bug em que aprender uma classe fazia os inimigos causarem só 1 de dano.",
+            "Proteção reforçada para os debuffs de classe pegarem nos Cavernídeos, que podem ser caçados e não são hostis.",
+            "O progresso salvo, os espaços de bugiganga e a sincronia entre jogadores ficaram mais seguros e consistentes.",
+            "No multijogador, ao sair e entrar de novo, classes, buff de XP, maestria e espaços de bugiganga voltam iguais aos do servidor.",
+            "Bônus de classe, debuffs e passivas são conferidos com mais rigor, evitando valores que mudam sem ninguém perceber.",
+            "A passiva Mestre das Classes continua alcançável no nível máximo, com todas as classes ligadas no limite.",
+            "Resistências elementais, dano contínuo, dano de uma vez e combinações de várias classes ficaram mais consistentes.",
+            "Gastar pontos, resetar, comprar e o comando maxskills ficam protegidos contra pedidos inválidos ou feitos por outro jogador.",
+            "Comandos de administrador sensíveis exigem permissão de admin, com uma recusa clara para quem não pode usar.",
+            "Mais proteção automática para partes e itens importantes do mod não pararem de funcionar depois de atualizações do jogo.",
+            "Os espaços de bugiganga do jogo base, inclusive os de itens que aumentam o total, continuam separados do bônus do RPG Skills ao salvar e carregar."
           ]
         },
         {
-          "heading": "Qualidade",
+          "heading": "🧪 Qualidade",
           "items": [
-            "O mod passa por validação automática antes de cada atualização, reduzindo o risco de regressões silenciosas.",
-            "Mais testes cobrindo save/load, migração de dados e pacotes de rede.",
-            "Mais testes automáticos de combate, progressão, pesca, settlement, produção e exploração.",
-            "Contrato canônico reforçado: total de classes, pontos e nível máximo não podem divergir sem falhar no CI.",
-            "Mais validação automática de pacotes, comandos e sincronização entre cliente e servidor.",
-            "Menos risco de estado impossível (como pontos negativos ou gasto sem saldo) passar despercebido.",
-            "Organização interna do código reforçada para facilitar manutenção e reduzir regressões em atualizações futuras.",
-            "Processo de atualização e checklist de qualidade mais claros antes de cada publicação (incluindo host + client e compatibilidade com outros mods)."
+            "O mod passa por conferência automática antes de cada atualização, para evitar problemas que voltam sem ninguém perceber.",
+            "Mais testes para salvar e carregar, para a conversão de dados antigos e para a comunicação em rede.",
+            "Mais testes automáticos de combate, progressão, pesca, assentamento, produção e exploração.",
+            "O total de classes, os pontos e o nível máximo são conferidos automaticamente e não podem mudar sem aviso.",
+            "Mais conferência automática da comunicação em rede, dos comandos e da sincronia entre jogador e servidor.",
+            "Menos risco de situações impossíveis, como pontos negativos ou gasto sem saldo, passarem despercebidas.",
+            "O mod ficou mais organizado por dentro, facilitando a manutenção e evitando problemas em atualizações futuras.",
+            "Checklist de qualidade mais claro antes de cada publicação, testando como anfitrião e como convidado e a compatibilidade com outros mods."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.9.2 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "New",
+          "heading": "✨ What's new",
           "items": [
-            "Progression config file: tune global XP multiplier, fixed world XP, death penalty, level curve, max level, points per class, and respec costs (mod settings folder).",
-            "Class config file: enable or disable classes; disabled ones <strong>do not appear</strong> in-game, accept no new points, and grant no bonuses.",
-            "The <strong>Master of Classes</strong> passive only checks <strong>enabled classes</strong>."
+            "<strong>Progression config:</strong> new file in the mod's settings folder.",
+            "<strong>Progression config:</strong> sets the global XP multiplier, fixed world XP and death penalty.",
+            "<strong>Progression config:</strong> sets the level curve, max level, points per class and reset costs.",
+            "<strong>Class config:</strong> new file to turn classes on or off.",
+            "<strong>Class config:</strong> disabled classes do not appear in the game, get no new points and give no bonuses.",
+            "<strong>Class config:</strong> the Master of Classes passive only counts enabled classes."
           ]
         },
         {
-          "heading": "Quality of life",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "Cleaner RPG Skills window layout: less clipping in the class list, more stable scroll when switching tabs, and a correctly sized shop panel."
+            "The RPG Skills window has a cleaner look.",
+            "The class list has less clipping.",
+            "Scrolling is more stable when switching tabs.",
+            "The Shop shows at the right height."
           ]
         },
         {
-          "heading": "Stability",
+          "heading": "⚡ Performance",
           "items": [
-            "Stronger protection against the bug where <strong>learning a class</strong> could make enemies deal only 1 damage.",
-            "Stronger protection so <strong>class debuffs</strong> also apply to <strong>Cavelings</strong> (huntable, non-hostile).",
-            "Progress saves, trinket slot tracking, and player sync are more reliable and consistent.",
-            "In multiplayer, after <strong>disconnect and reconnect</strong>, classes, XP buff, mastery, and trinket slots match the server again.",
-            "Class bonuses, debuffs, and passives now go through stricter validation, reducing silent formula drift.",
-            "The <strong>Master of Classes</strong> passive remains reachable at max level (all enabled classes maxed).",
-            "Elemental resistances, DOT/burst, and multi-class combinations are more consistent.",
-            "Network actions (spending points, resets, purchases, and maxskills) are better protected against invalid or spoofed requests.",
-            "Sensitive admin commands require admin permission where applicable, with a clear rejection for players who cannot use them.",
-            "Stronger automatic protection against silent breakage after game updates (hooks and critical items).",
-            "Base-game trinket slots (including items that raise the total) stay separated from the RPG Skills bonus across save and reload."
+            "Vein mining over a large area is more stable.",
+            "Sorting a full inventory is more stable.",
+            "Playing with all classes maxed is more stable, with no hitching in normal use."
           ]
         },
         {
-          "heading": "Compatibility",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "Confirmed compatibility with <strong>Safe Haven QOL 1.2.0-2.6</strong>: menus and tooltips in <strong>pt-BR</strong>, and RPG Skills <strong>stack size</strong> still takes priority without fighting Safe Haven cosmetics/trinkets."
+            "Compatible with Safe Haven QOL 1.2.0 to 2.6.",
+            "Safe Haven menus and tooltips show in pt-BR.",
+            "RPG Skills stack sizes still apply, with no conflict with Safe Haven cosmetics and trinkets."
           ]
         },
         {
-          "heading": "Performance",
+          "heading": "🔧 Fixes",
           "items": [
-            "Large-area vein mining, sorting a full inventory, and playing with <strong>all classes maxed</strong> feel more stable, without obvious hitching in normal use."
+            "Stronger protection against the bug where learning a class made enemies deal only 1 damage.",
+            "Stronger protection so class debuffs apply to Cavelings, which can be hunted and are not hostile.",
+            "Progress saves, trinket slots and player sync are safer and more consistent.",
+            "In multiplayer, after leaving and rejoining, classes, XP buff, mastery and trinket slots match the server again.",
+            "Class bonuses, debuffs and passives are checked more strictly, avoiding values that change unnoticed.",
+            "The Master of Classes passive stays reachable at max level, with all enabled classes maxed.",
+            "Elemental resistances, ongoing damage, burst damage and multi-class combos are more consistent.",
+            "Spending points, resetting, buying and the maxskills command are protected against invalid requests or requests from another player.",
+            "Sensitive admin commands require admin permission, with a clear refusal for players who cannot use them.",
+            "More automatic protection so important parts and items of the mod keep working after game updates.",
+            "Base game trinket slots, including those from items that raise the total, stay separate from the RPG Skills bonus across save and load."
           ]
         },
         {
-          "heading": "Quality",
+          "heading": "🧪 Quality",
           "items": [
-            "The mod now goes through automatic validation before each update, reducing silent regressions.",
-            "More coverage for save/load, data migration, and network packets.",
-            "More automated tests for combat, progression, fishing, settlements, production, and exploration.",
-            "Stronger canonical contract: class count, points, and max level cannot drift without failing CI.",
-            "More automated validation of packets, commands, and client/server sync.",
-            "Lower risk of impossible states (like negative points or spending without balance) slipping through.",
-            "Stronger internal code organization to ease maintenance and reduce regressions in future updates.",
-            "Clearer update process and quality checklist before each publication (including host + client and third-party mod compatibility)."
+            "The mod goes through automatic checks before each update, to avoid problems coming back unnoticed.",
+            "More tests for saving and loading, converting old data and network communication.",
+            "More automatic tests for combat, progression, fishing, settlements, production and exploration.",
+            "Class count, points and max level are checked automatically and cannot change without warning.",
+            "More automatic checks of network communication, commands and sync between player and server.",
+            "Less risk of impossible situations, like negative points or spending without balance, going unnoticed.",
+            "The mod is better organized inside, making maintenance easier and avoiding problems in future updates.",
+            "Clearer quality checklist before each release, testing as host and as guest and compatibility with other mods."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2354,25 +3225,29 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.9.1 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibilidade",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "<strong>Safe Haven QOL 1.2:</strong> atualizadas as traduções embutidas (menu, flags novas, filtro de lixo, proteção da base, busca de itens, rastreador de missões e tooltips), com <strong>pt-BR</strong> completo."
+            "As traduções do Safe Haven QOL 1.2 que vêm no RPG Skills foram atualizadas.",
+            "Valem para o menu, as bandeiras novas, o filtro de lixo, a proteção da base, a busca de itens, o rastreador de missões e as dicas ao passar o mouse.",
+            "O pt-BR está completo."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.9.1 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibility",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "<strong>Safe Haven QOL 1.2:</strong> refreshed the bundled locale strings (menu, new flags, trash filter, base protection, item finder, quest tracker, and tooltips), with full <strong>pt-BR</strong>."
+            "The Safe Haven QOL 1.2 translations included in RPG Skills were updated.",
+            "They cover the menu, new flags, trash filter, base protection, item finder, quest tracker and tooltips.",
+            "pt-BR is complete."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2384,27 +3259,29 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.9 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
-            "Debuffs de classe (sangramento, fogo, veneno, gelo, etc.) agora também aplicam nos <strong>Cavernídeos</strong>, que no jogo não são hostis mas são caçáveis.",
-            "Corrigido bug em que aprender qualquer classe fazia <strong>inimigos causarem só 1 de dano</strong>: ao atualizar o buff de bônus, o modificador de dano recebido era zerado (x0) em vez de voltar ao valor normal (x1)."
+            "Os debuffs de classe (sangramento, fogo, veneno, gelo etc.) também pegam nos Cavernídeos, que não são hostis mas podem ser caçados.",
+            "Aprender qualquer classe não faz mais os inimigos causarem só 1 de dano.",
+            "O dano recebido volta ao normal ao atualizar o bônus de classe, em vez de ser zerado."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.9 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
-            "Class debuffs (bleed, fire, poison, frost, etc.) now also apply to <strong>Cavelings</strong>, which are non-hostile but huntable in the base game.",
-            "Fixed a bug where learning any class made <strong>enemies deal only 1 damage</strong>: when refreshing the class bonus buff, incoming damage was cleared to x0 instead of the normal x1 identity."
+            "Class debuffs (bleed, fire, poison, frost, etc.) also apply to Cavelings, which are not hostile but can be hunted.",
+            "Learning any class no longer makes enemies deal only 1 damage.",
+            "Incoming damage goes back to normal when the class bonus updates, instead of being zeroed."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2416,65 +3293,73 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.8 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Correções",
+          "heading": "✨ Novidades",
           "items": [
-            "Corrigido o piscar da <strong>Lanterna de fogo-fátuo</strong> e de trinkets que emitem luz: o mod deixou de reaplicar os buffs de equipamento em loop curto, o que fazia o item e a animação sumirem e voltarem perto do personagem.",
-            "Luz de trinkets luminosos (como o <strong>Cinto brilhante</strong>) e o reforço da passiva <strong>Ruína da Escuridão</strong> agora só entram em ação quando o trinket está <strong>equipado e com buff ativo</strong>, não só por estar no inventário.",
-            "Corrigido o <strong>Mestre das Relíquias</strong> dando slots de bugiganga a mais (ex.: 12 no primeiro ponto ou 255 após reset): o mod não absorve mais o bônus da classe como se fosse progressão vanilla.",
-            "Corrigido reset/respec do Mestre das Relíquias removendo só 4 slots em vez do bônus inteiro quando o perfil estava inflado.",
-            "Corrigido o uso de itens vanilla que aumentam slots de bugiganga (pendente, bainha, etc.) <strong>apagando acessórios equipados</strong>: o mod agora soma o bônus da classe ao alvo vanilla e recupera trinkets antes de encolher.",
-            "Corrigido o alcance de coleta do Mestre das Relíquias <strong>continuar ativo após reset</strong> quando a classe volta a 0 pontos (o buff de classe agora zera o modificador em vez de manter o valor antigo).",
-            "Corrigidos baús com slots <strong>inconsistentes em servidor dedicado</strong>: ao entrar no mundo, o cliente agora pede e recebe o nível real de slots do mundo antes de abrir ou encolher baús (evita perda de itens por tamanho errado).",
-            "Corrigido <strong>rubberband/lag</strong> em LAN e servidor dedicado quando os bônus de classe já estavam estáveis: o mod deixou de reenviar pacotes de vida e mana sem necessidade."
+            "<strong>Reforço de luz:</strong> novo atalho configurável liga e desliga o reforço de luz das bugigangas luminosas, como o Cinto brilhante e a Lanterna de fogo-fátuo.",
+            "<strong>Reforço de luz:</strong> desligado, vale a luz padrão do jogo.",
+            "<strong>Reforço de luz:</strong> ligado, o mod aplica o alcance e a intensidade reforçados, incluindo o bônus da Ruína da Escuridão.",
+            "<strong>Reforço de luz:</strong> a tecla é definida em Controles do jogo.",
+            "<strong>Controle:</strong> segure LB+RB para abrir e fechar a janela de skills.",
+            "<strong>Controle:</strong> com a janela aberta, o D-pad troca de aba e navega.",
+            "<strong>Controle:</strong> A/Cross confirma e B/Circle fecha.",
+            "<strong>Controle:</strong> na aba Loja, A/X/Y compram bônus de XP e RB compra mineração explosiva.",
+            "<strong>Controle:</strong> os atalhos de teclado da Loja funcionam só com mouse e teclado e ficam desligados com o controle, para não conflitar com o jogo."
           ]
         },
         {
-          "heading": "Qualidade de vida",
+          "heading": "🔧 Correções",
           "items": [
-            "Novo atalho configurável para <strong>ligar/desligar o reforço de luz</strong> de trinkets luminosos (Cinto brilhante, Lanterna de fogo-fátuo, etc.). Com o reforço desligado, vale a luz padrão do jogo; com ele ligado, o mod aplica o alcance e a intensidade reforçados (incluindo o bônus da Ruína da Escuridão). Defina a tecla em Controles do jogo."
-          ]
-        },
-        {
-          "heading": "Compatibilidade",
-          "items": [
-            "<strong>Suporte a controle</strong> na janela de skills: segure <strong>LB+RB</strong> para abrir/fechar; com a janela aberta use o <strong>D-pad</strong> para trocar abas e navegar, <strong>A/Cross</strong> para confirmar e <strong>B/Circle</strong> para fechar. Na aba Loja, <strong>A/X/Y</strong> compram bônus de XP e <strong>RB</strong> compra mineração explosiva.",
-            "Atalhos de teclado para compras na loja continuam só com mouse/teclado; com controle ativo eles ficam desativados para não conflitar com o jogo."
+            "A Lanterna de fogo-fátuo e outras bugigangas que emitem luz não piscam mais perto do personagem.",
+            "A luz das bugigangas luminosas, como o Cinto brilhante, só vale com a bugiganga equipada e com o buff ativo, não só no inventário.",
+            "O reforço da passiva Ruína da Escuridão também só vale com a bugiganga equipada e com o buff ativo.",
+            "O Mestre das Relíquias não dá mais espaços de bugiganga a mais (ex.: 12 no primeiro ponto ou 255 depois de um reset).",
+            "Resetar o Mestre das Relíquias remove o bônus inteiro, e não só 4 espaços.",
+            "Usar itens do jogo que aumentam os espaços de bugiganga (pendente, bainha etc.) não apaga mais os acessórios equipados.",
+            "O bônus da classe agora soma com o dos itens do jogo, e as bugigangas são recuperadas antes de os espaços diminuírem.",
+            "O alcance de coleta do Mestre das Relíquias não fica mais ativo depois de resetar a classe para 0 pontos.",
+            "Os baús não ficam mais com espaços diferentes em servidor dedicado: ao entrar no mundo, você recebe o nível real de espaços antes de abrir ou encolher baús.",
+            "Isso evita perder itens por baú do tamanho errado.",
+            "Em LAN e servidor dedicado, o personagem não é mais puxado de volta nem sofre lag quando os bônus de classe já estão estáveis."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.8 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Fixes",
+          "heading": "✨ What's new",
           "items": [
-            "Fixed flickering on the <strong>Will-o'-wisp lantern</strong> and other light-emitting trinkets: the mod no longer reapplies equipment buffs in a tight loop, which made the item and its animation blink near your character.",
-            "Light from luminous trinkets (such as the <strong>Shine belt</strong>) and the <strong>Dark Ruin</strong> passive boost now only apply when the trinket is <strong>equipped with an active buff</strong>, not merely present in inventory.",
-            "Fixed <strong>Relic Master</strong> granting too many trinket slots (e.g. 12 on the first point or 255 after reset): the mod no longer treats class bonus slots as vanilla baseline growth.",
-            "Fixed Relic Master reset/respec only removing 4 slots instead of the full bonus when the profile baseline was inflated.",
-            "Fixed vanilla trinket slot upgrade items <strong>deleting equipped accessories</strong>: the mod now adds the class bonus on top of the vanilla target and recovers trinkets before shrinking.",
-            "Fixed Relic Master pickup range <strong>staying active after reset</strong> when the class returns to 0 points (the class buff now clears the modifier instead of keeping the old value).",
-            "Fixed <strong>inconsistent chest slots on dedicated servers</strong>: joining a world now requests and applies the real world chest level before opening or shrinking chests (prevents item loss from wrong sizes).",
-            "Fixed <strong>rubberband/lag</strong> in LAN and dedicated multiplayer when class bonuses were already stable: the mod no longer resends health and mana packets unnecessarily."
+            "<strong>Light boost:</strong> new configurable hotkey turns the light boost of luminous trinkets on and off, like the Shine belt and the Will-o'-wisp lantern.",
+            "<strong>Light boost:</strong> when off, the game's normal light applies.",
+            "<strong>Light boost:</strong> when on, the mod applies the boosted range and intensity, including the Dark Ruin bonus.",
+            "<strong>Light boost:</strong> the key is set in the game's Controls.",
+            "<strong>Controller:</strong> hold LB+RB to open and close the skills window.",
+            "<strong>Controller:</strong> with the window open, the D-pad switches tabs and navigates.",
+            "<strong>Controller:</strong> A/Cross confirms and B/Circle closes.",
+            "<strong>Controller:</strong> on the Shop tab, A/X/Y buy XP boosts and RB buys explosive mining.",
+            "<strong>Controller:</strong> Shop keyboard hotkeys only work with mouse and keyboard and are off with a controller, to avoid conflicts with the game."
           ]
         },
         {
-          "heading": "Quality of life",
+          "heading": "🔧 Fixes",
           "items": [
-            "New configurable hotkey to <strong>toggle the light boost</strong> for luminous trinkets (Shine belt, Will-o'-wisp lantern, etc.). With the boost off, vanilla light applies; with it on, the mod uses its reinforced range and intensity (including Dark Ruin). Bind the key in the game Controls menu."
-          ]
-        },
-        {
-          "heading": "Compatibility",
-          "items": [
-            "<strong>Controller support</strong> in the skills window: hold <strong>LB+RB</strong> to open/close; with the window open use the <strong>D-pad</strong> to switch tabs and navigate, <strong>A/Cross</strong> to confirm, and <strong>B/Circle</strong> to close. On the Shop tab, <strong>A/X/Y</strong> buy XP boosts and <strong>RB</strong> buys explosive mining.",
-            "Keyboard shop hotkeys remain mouse/keyboard only; they are disabled while using a controller to avoid conflicts with the base game."
+            "The Will-o'-wisp lantern and other light-emitting trinkets no longer flicker near your character.",
+            "Light from luminous trinkets, like the Shine belt, only applies with the trinket equipped and its buff active, not just in the inventory.",
+            "The Dark Ruin passive boost also only applies with the trinket equipped and its buff active.",
+            "Relic Master no longer gives too many trinket slots (e.g. 12 on the first point or 255 after a reset).",
+            "Resetting Relic Master removes the whole bonus, not just 4 slots.",
+            "Using game items that add trinket slots (pendant, sheath, etc.) no longer deletes equipped accessories.",
+            "The class bonus now adds on top of the game items' bonus, and trinkets are recovered before slots shrink.",
+            "Relic Master pickup range no longer stays active after resetting the class to 0 points.",
+            "Chests no longer have mismatched slots on dedicated servers: joining a world gives you the real slot level before chests open or shrink.",
+            "This prevents losing items from wrongly sized chests.",
+            "In LAN and dedicated servers, your character no longer gets pulled back or lags when class bonuses are already stable."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2486,67 +3371,89 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.7 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Qualidade de vida",
+          "heading": "✨ Novidades",
           "items": [
-            "Debuffs elementais: blobs roxo/verde do vanilla removidos; partículas coloridas por tipo (fogo laranja, veneno verde, gelo azul, pesadelo roxo, sangue vermelho) pulsam continuamente enquanto o debuff durar e param ao acabar; dano DoT em <strong>números azuis</strong>.",
-            "DoTs de classe agora passam pelo sistema de dano do jogo, exibindo <strong>números azuis</strong> para diferenciar do dano direto, e contando no boneco de treino (DPS Dummy).",
-            "Debuffs de classe passam a funcionar no <strong>boneco de treino</strong>: ao acertar, o debuff é aplicado e o dano contínuo aparece em azul, separado do dano normal do ataque.",
-            "Removido dano duplicado dos debuffs vanilla (ex.: sangramento vermelho) — só o DoT do mod escala com a classe e usa feedback azul.",
-            "Debuffs elementais voltam a acumular duração ao bater de novo no alvo, até o limite máximo já usado pelo mod.",
-            "Roubo de vida, cura ao matar e outras curas diretas do mod mostram um texto verde com o valor recuperado.",
-            "O indicador interno de DoT do mod ficou visível na barra de buffs, para saber quando o efeito ainda está ativo."
+            "<strong>Visual dos debuffs:</strong> as bolhas roxas e verdes do jogo base nos debuffs elementais foram removidas.",
+            "<strong>Visual dos debuffs:</strong> cada tipo tem partículas coloridas: fogo laranja, veneno verde, gelo azul, pesadelo roxo e sangue vermelho.",
+            "<strong>Visual dos debuffs:</strong> as partículas pulsam enquanto o debuff dura e param quando ele acaba.",
+            "<strong>Dano azul:</strong> o dano contínuo dos debuffs de classe aparece em números azuis, diferente do dano direto.",
+            "<strong>Dano azul:</strong> o dano contínuo de classe passa a usar o sistema de dano do jogo.",
+            "<strong>Boneco de treino:</strong> os debuffs de classe funcionam no boneco de treino (DPS Dummy).",
+            "<strong>Boneco de treino:</strong> ao acertar, o debuff é aplicado e o dano contínuo aparece em azul, separado do dano normal do ataque.",
+            "<strong>Boneco de treino:</strong> o dano contínuo de classe conta no boneco de treino.",
+            "<strong>Cura em verde:</strong> roubo de vida, cura ao matar e outras curas diretas do mod mostram um texto verde com o valor recuperado.",
+            "<strong>Barra de buffs:</strong> o indicador de dano contínuo do mod aparece na barra de buffs, mostrando quando o efeito ainda está ativo."
           ]
         },
         {
-          "heading": "Compatibilidade",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "Com Safe Haven QOL instalado, o RPG Skills passa a incluir as traduções desse mod: menu, flags, economia, grade de construção e demais textos aparecem no idioma do jogo (com pt-BR completo; demais idiomas usam inglês como base)."
+            "Com o Safe Haven QOL instalado, o RPG Skills traz as traduções dele.",
+            "Menu, bandeiras, economia, grade de construção e os outros textos dele aparecem no idioma do jogo.",
+            "O pt-BR está completo, e os outros idiomas usam o inglês como base.",
+            "O RPG Skills desliga sozinho os acúmulos de cosméticos e bugigangas do Safe Haven QOL 1.2, além dos de pergaminhos, invocações e moedas.",
+            "Assim o RPG Skills continua definindo o tamanho das pilhas."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
-            "Corrigido DoTs de classes diferentes se substituírem no mesmo alvo: sangramento, queimadura, veneno, gelo e escuridão agora acumulam separados (ex.: cinco classes no 5 = até 125/s de dano azul).",
-            "Corrigido spam de DPS no boneco de treino: dano contínuo de debuffs agora entra no medidor vanilla (1 leitura por segundo) em vez de gerar vários números azuis e várias contagens separadas.",
-            "Compatibilidade Safe Haven QOL 1.2: desativa automaticamente stacks de cosméticos e trinkets desse mod (além de pergaminhos, summons e moedas), para o RPG Skills continuar mandando no stack size.",
-            "Corrigido um caso em que debuffs e DoTs não renovavam duração em hits seguintes, mesmo quando o efeito ainda estava ativo."
+            "Os danos contínuos de classes diferentes não se substituem mais no mesmo alvo.",
+            "Sangramento, queimadura, veneno, gelo e escuridão acumulam separados (ex.: cinco classes no 5 dão até 125/s de dano azul).",
+            "O dano contínuo dos debuffs entra no medidor de DPS do boneco de treino do jogo, com 1 leitura por segundo.",
+            "O boneco de treino não mostra mais vários números azuis e várias contagens separadas.",
+            "Debuffs e danos contínuos voltam a renovar a duração nos acertos seguintes enquanto o efeito está ativo.",
+            "Os debuffs elementais voltam a somar duração ao acertar o mesmo alvo de novo, até o limite máximo do mod.",
+            "Os debuffs do jogo base, como o sangramento vermelho, não causam mais dano duplicado.",
+            "Só o dano contínuo do mod, que cresce com a classe e aparece em azul, continua valendo."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.7 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Quality of life",
+          "heading": "✨ What's new",
           "items": [
-            "Class debuffs: vanilla blob particles removed; color-coded particles (orange fire, green poison, blue frost, purple nightmare, red bleed) pulse continuously while the debuff lasts and stop when it ends; DoT damage in <strong>blue numbers</strong>.",
-            "Class DoTs now go through the game's damage system, showing <strong>blue numbers</strong> to tell them apart from direct damage, and counting on the training dummy (DPS Dummy).",
-            "Class debuffs now work on the <strong>training dummy</strong>: hits apply the debuff and ongoing damage shows in blue, separate from normal attack damage.",
-            "Removed duplicate vanilla debuff damage (e.g. red bleed ticks) — only the mod's class-scaled DoT runs, with blue feedback.",
-            "Elemental debuffs stack duration again when you hit the same target, up to the mod's existing maximum.",
-            "Lifesteal, kill heals, and other direct mod heals show green floating text with the amount recovered.",
-            "The mod's internal DoT indicator is now visible on the buff bar so you can tell when the effect is still running."
+            "<strong>Debuff visuals:</strong> the base game's purple and green blobs on elemental debuffs were removed.",
+            "<strong>Debuff visuals:</strong> each type has colored particles: orange fire, green poison, blue frost, purple nightmare and red bleed.",
+            "<strong>Debuff visuals:</strong> the particles pulse while the debuff lasts and stop when it ends.",
+            "<strong>Blue damage:</strong> ongoing damage from class debuffs shows in blue numbers, apart from direct damage.",
+            "<strong>Blue damage:</strong> class ongoing damage now uses the game's damage system.",
+            "<strong>Training dummy:</strong> class debuffs work on the training dummy (DPS Dummy).",
+            "<strong>Training dummy:</strong> hits apply the debuff and the ongoing damage shows in blue, apart from normal attack damage.",
+            "<strong>Training dummy:</strong> class ongoing damage counts on the training dummy.",
+            "<strong>Green heals:</strong> lifesteal, kill heals and other direct mod heals show green text with the amount recovered.",
+            "<strong>Buff bar:</strong> the mod's ongoing damage indicator shows on the buff bar, so you can tell when the effect is still active."
           ]
         },
         {
-          "heading": "Compatibility",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "With Safe Haven QOL installed, RPG Skills now bundles that mod's locale strings: menus, flags, economy, build grid, and other UI text follow your game language (full pt-BR; other languages fall back to English)."
+            "With Safe Haven QOL installed, RPG Skills brings its translations.",
+            "Its menu, flags, economy, build grid and other text follow your game language.",
+            "pt-BR is complete, and other languages use English as the base.",
+            "RPG Skills automatically turns off Safe Haven QOL 1.2's cosmetic and trinket stacking, along with scrolls, summons and coins.",
+            "This way RPG Skills keeps deciding stack sizes."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
-            "Fixed class DoTs of different types replacing each other on the same target: bleed, burn, poison, frost, and darkness now stack separately (e.g. five classes at 5 = up to 125/s blue damage).",
-            "Fixed DPS spam on the training dummy: debuff DoT now feeds the vanilla DPS meter (one reading per second) instead of spawning many blue numbers and separate counts.",
-            "Safe Haven QOL 1.2 compatibility: automatically disables that mod's cosmetic and trinket stacks (along with scrolls, summons, and coins) so RPG Skills remains stack-size authority.",
-            "Fixed a case where debuffs and DoTs did not refresh their duration on later hits, even while the effect was still active."
+            "Ongoing damage from different classes no longer replaces each other on the same target.",
+            "Bleed, burn, poison, frost and darkness stack separately (e.g. five classes at 5 deal up to 125/s of blue damage).",
+            "Debuff ongoing damage feeds the game's training dummy DPS meter, with 1 reading per second.",
+            "The training dummy no longer shows many blue numbers and separate counts.",
+            "Debuffs and ongoing damage refresh their duration again on later hits while the effect is active.",
+            "Elemental debuffs stack duration again when you hit the same target, up to the mod's maximum.",
+            "Base game debuffs, like the red bleed, no longer deal duplicate damage.",
+            "Only the mod's ongoing damage, which scales with the class and shows in blue, still applies."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2558,51 +3465,55 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.6 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibilidade",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "Melhorada a compatibilidade com [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3739062775]Settler Leader Buffs Share.",
-            "Colonos agora podem receber uma versão segura dos bônus de classe do líder, sem copiar efeitos feitos apenas para o jogador."
+            "Melhor compatibilidade com mods que repassam os bônus do líder aos colonos.",
+            "Os colonos podem receber uma versão segura dos bônus de classe do líder.",
+            "Efeitos feitos só para o jogador não são copiados para os colonos."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
-            "Corrigido um problema em que efeitos passivos do jogador podiam ser reavaliados com frequência demais durante a atualização dos bônus de classe.",
-            "Companheiros utilitários, como o Wisp que revela armadilhas, não devem mais ficar desaparecendo e reaparecendo durante o jogo.",
-            "O RPG Skills agora evita reenviar o mesmo bônus de classe quando nada mudou no personagem.",
-            "Corrigido um travamento crítico ao colocar o primeiro ponto no Mestre das Relíquias.",
-            "O bônus de slots do Mestre das Relíquias não deve mais se aplicar várias vezes em sequência e criar espaços demais para bugigangas.",
-            "Corrigido um caso em que o mod podia mostrar textos em português ou espanhol para jogadores usando outro idioma. Agora o fallback padrão é inglês.",
-            "A descrição no menu de mods agora fica em inglês para ser legível para mais jogadores."
+            "Os efeitos passivos do jogador não são mais conferidos vezes demais ao atualizar os bônus de classe.",
+            "Companheiros utilitários, como o Wisp que revela armadilhas, não somem e reaparecem mais durante o jogo.",
+            "O mod não reenvia mais o mesmo bônus de classe quando nada mudou no personagem.",
+            "Colocar o primeiro ponto no Mestre das Relíquias não trava mais o jogo.",
+            "O bônus de espaços do Mestre das Relíquias não se aplica mais várias vezes seguidas, criando espaços de bugiganga demais.",
+            "Jogadores em outro idioma não veem mais textos em português ou espanhol.",
+            "O idioma padrão de reserva agora é o inglês.",
+            "A descrição no menu de mods agora fica em inglês, para mais jogadores entenderem."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.6 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Compatibility",
+          "heading": "🤝 Compatibility",
           "items": [
-            "Improved compatibility with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3739062775]Settler Leader Buffs Share.",
-            "Settlers can now receive a safe version of the leader's class bonuses, without copying effects that are meant only for the player."
+            "Better compatibility with mods that share the leader's bonuses with settlers.",
+            "Settlers can receive a safe version of the leader's class bonuses.",
+            "Effects meant only for the player are not copied to settlers."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
-            "Fixed an issue where player passive effects could be checked too often while class bonuses were being updated.",
-            "Utility companions, such as the trap-revealing Wisp, should no longer disappear and reappear during gameplay.",
-            "RPG Skills now avoids resending the same class bonus when nothing changed on the character.",
-            "Fixed a critical freeze when placing the first point into Relic Master.",
-            "Relic Master's trinket slot bonus should no longer apply several times in a row and create too many trinket slots.",
-            "Fixed a case where the mod could show Portuguese or Spanish text to players using another language. The default fallback is now English.",
-            "The mod menu description is now in English so more players can read it."
+            "The player's passive effects are no longer checked too often while class bonuses update.",
+            "Utility companions, like the trap-revealing Wisp, no longer disappear and reappear during play.",
+            "The mod no longer resends the same class bonus when nothing changed on the character.",
+            "Placing the first point into Relic Master no longer freezes the game.",
+            "Relic Master's slot bonus no longer applies several times in a row, creating too many trinket slots.",
+            "Players using another language no longer see Portuguese or Spanish text.",
+            "The default fallback language is now English.",
+            "The mod menu description is now in English, so more players can read it."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2614,73 +3525,93 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.5 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Correções",
+          "heading": "✨ Novidades",
           "items": [
-            "Melhorada a restauração dos slots de bugigangas quando o nível ou os pontos do RPG Skills são resetados.",
-            "O mod agora reconhece melhor os slots de bugigangas aplicados pelo próprio jogo e por outros mods, evitando que a quantidade fique presa em um valor menor.",
-            "Corrigido um caso em que o comando maxskills podia criar slots de bugigangas demais.",
-            "Corrigido o reset de pontos e o reset do zero para remover corretamente os slots extras de bugigangas do RPG Skills.",
-            "Os slots de bugigangas ganhos por itens do próprio Necesse agora ficam separados dos slots ganhos pelo Mestre das Relíquias.",
-            "Melhorada a compatibilidade dos slots extras de baú com diferentes formas de criação dos baús vanilla.",
-            "Corrigido o botão de organizar dos baús para juntar melhor stacks iguais nos slots extras."
+            "<strong>Configuração:</strong> nova opção para mover a barra de XP do RPG Skills.",
+            "<strong>Configuração:</strong> com a opção ligada, a posição da barra de XP fica salva e não volta sozinha para o lugar automático.",
+            "<strong>Configuração:</strong> nova opção para ligar ou desligar a perda de XP ao morrer.",
+            "<strong>Configuração:</strong> os arquivos de configuração ficam em %APPDATA%\\Necesse\\cfg\\mods\\rpgskills\\settings."
           ]
         },
         {
-          "heading": "Compatibilidade",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "Adicionada compatibilidade com [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3739062775]Settler Leader Buffs Share para compartilhar com colonos os bônus do RPG Skills que funcionam bem em NPCs.",
-            "Marcada compatibilidade opcional com [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3731244177]Safe Haven QOL."
+            "Administradores definem ou removem o bônus de XP temporário pelo comando do RPG Skills, sem editar arquivos do servidor."
           ]
         },
         {
-          "heading": "Qualidade de vida",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "Adicionada uma opção no arquivo de configuração para permitir mover a barra de XP do RPG Skills.",
-            "Quando essa opção estiver ativada, a posição da barra de XP fica salva e não volta sozinha para o lugar automático.",
-            "Os bônus de XP 2x, 5x e 10x da loja agora duram 10 minutos.",
-            "Administradores agora podem definir ou remover o bônus de XP temporário pelo comando do RPG Skills, sem precisar editar arquivos do servidor manualmente.",
-            "Adicionada uma opção no arquivo de configuração para ativar ou desativar a perda de XP ao morrer.",
-            "Os arquivos de configuração do RPG Skills ficam em: %APPDATA%\\Necesse\\cfg\\mods\\rpgskills\\settings"
+            "Com mods que passam os bônus do líder para os colonos, só os bônus do RPG Skills que funcionam bem neles são passados.",
+            "Compatibilidade opcional com o Safe Haven QOL."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "Os slots de bugigangas voltam melhor quando o nível ou os pontos do RPG Skills são resetados.",
+            "O mod reconhece melhor os slots de bugigangas dados pelo jogo e por outros mods, sem a quantidade ficar presa num valor menor.",
+            "O comando maxskills não cria mais slots de bugigangas demais.",
+            "O reset de pontos e o reset do zero removem certo os slots extras de bugigangas do RPG Skills.",
+            "Os slots de bugigangas ganhos com itens do Necesse ficam separados dos ganhos pelo Mestre das Relíquias.",
+            "Os slots extras de baú funcionam melhor com as diferentes formas de criar os baús do jogo.",
+            "O botão de organizar junta melhor stacks iguais nos slots extras dos baús."
+          ]
+        },
+        {
+          "heading": "🛒 Loja",
+          "items": [
+            "Os bônus de XP 2x, 5x e 10x duram 10 minutos."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.5 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Fixes",
+          "heading": "✨ What's new",
           "items": [
-            "Improved trinket slot restoration when RPG Skills level or points are reset.",
-            "The mod now better recognizes trinket slots applied by the base game and other mods, preventing the slot count from getting stuck too low.",
-            "Fixed a case where the maxskills command could create too many trinket slots.",
-            "Fixed point reset and start from zero reset so they correctly remove RPG Skills extra trinket slots.",
-            "Trinket slots gained from base Necesse items are now tracked separately from Relic Master slots.",
-            "Improved extra chest slot compatibility with different vanilla chest creation paths.",
-            "Fixed the chest organize button so matching stacks merge better in extra chest slots."
+            "<strong>Settings:</strong> new option to move the RPG Skills XP bar.",
+            "<strong>Settings:</strong> with the option on, the XP bar position is saved and no longer snaps back to the automatic spot.",
+            "<strong>Settings:</strong> new option to turn XP loss on death on or off.",
+            "<strong>Settings:</strong> the settings files are in %APPDATA%\\Necesse\\cfg\\mods\\rpgskills\\settings."
           ]
         },
         {
-          "heading": "Compatibility",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "Added compatibility with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3739062775]Settler Leader Buffs Share to share RPG Skills bonuses that work well on NPCs with settlers.",
-            "Marked optional compatibility with [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3731244177]Safe Haven QOL."
+            "Administrators set or clear the temporary XP bonus with the RPG Skills command, without editing server files."
           ]
         },
         {
-          "heading": "Quality of Life",
+          "heading": "🤝 Compatibility",
           "items": [
-            "Added a config file option to allow moving the RPG Skills XP bar.",
-            "When that option is enabled, the XP bar position is saved and no longer snaps back to the automatic position.",
-            "The 2x, 5x, and 10x XP shop buffs now last 10 minutes.",
-            "Administrators can now set or clear the temporary XP buff through the RPG Skills command, without manually editing server files.",
-            "Added a config file option to enable or disable XP loss on death.",
-            "RPG Skills config files are stored at: %APPDATA%\\Necesse\\cfg\\mods\\rpgskills\\settings"
+            "With mods that share the leader's buffs with settlers, only the RPG Skills bonuses that work well on them are passed on.",
+            "Optional compatibility with Safe Haven QOL."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "Trinket slots come back better when RPG Skills level or points are reset.",
+            "The mod better recognizes trinket slots given by the game and other mods, so the count does not get stuck too low.",
+            "The maxskills command no longer creates too many trinket slots.",
+            "Point reset and start-from-zero reset correctly remove RPG Skills extra trinket slots.",
+            "Trinket slots from Necesse items are kept separate from Relic Master slots.",
+            "Extra chest slots work better with the different ways the game creates chests.",
+            "The organize button merges matching stacks better in extra chest slots."
+          ]
+        },
+        {
+          "heading": "🛒 Shop",
+          "items": [
+            "The 2x, 5x and 10x XP bonuses last 10 minutes."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2692,63 +3623,79 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.4 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Qualidade de vida",
+          "heading": "✨ Novidades",
           "items": [
-            "<strong>Controles:</strong> agora é possível abrir e fechar a janela do RPG Skills com o combo <strong>LB + RB</strong> no controle, sem precisar deixar a tela de equipamento aberta.",
-            "Os botões LB e RB continuam livres para as ações normais do jogo quando usados separadamente."
+            "<strong>Idiomas:</strong> alemão, espanhol, francês, italiano, japonês, holandês, polonês, russo e chinês simplificado foram revisados para tirar textos que ainda apareciam em inglês.",
+            "<strong>Idiomas:</strong> a tradução em chinês foi completada na interface, loja, classes, passivas, atributos, comandos e filtros de baú.",
+            "<strong>Idiomas:</strong> as traduções são conferidas com mais rigor para não passarem só repetindo o texto em inglês."
           ]
         },
         {
-          "heading": "Idiomas",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "As traduções de alemão, espanhol, francês, italiano, japonês, holandês, polonês, russo e chinês simplificado foram revisadas para remover textos que ainda apareciam em inglês.",
-            "A tradução chinesa foi completada para a interface, loja, classes, passivas, atributos, comandos e filtros de baú.",
-            "O RPG Skills agora valida melhor os arquivos de idioma para evitar que uma tradução passe apenas por repetir o texto em inglês."
+            "A janela do RPG Skills abre e fecha com o combo LB + RB no controle.",
+            "Não é mais preciso deixar a tela de equipamento aberta para isso.",
+            "LB e RB apertados separados continuam com as ações normais do jogo."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "Corrigido um problema em que jogadores usando controle podiam depender da tela de equipamento aberta para acessar atalhos do RPG Skills.",
-            "O nível, XP e progresso de classes agora também são gravados no save do personagem, ajudando a manter o progresso ao trocar de dispositivo quando o save é sincronizado.",
-            "Corrigida uma falha rara em que o Mestre das Relíquias podia voltar para 0 por um snapshot de progresso inconsistente, reduzindo slots de trinket e colocando itens equipados em risco.",
-            "A reconciliação automática de slots de trinket agora nunca encolhe slots durante ticks normais; reduções de slots ficam restritas a reset/respec explícito.",
-            "Compatibilidade com SafeHavenQOL/TorvianQOL 1.3: RPG Skills agora desativa os stacks alterados de pergaminhos de encantamento, itens de invocação de chefes e moedas desse mod para manter o sistema de stack do RPG Skills como autoridade."
+            "O RPG Skills desliga os stacks alterados pelo Safe Haven QOL 1.3 para pergaminhos de encantamento, itens de invocar chefes e moedas.",
+            "Assim, o tamanho dos stacks continua seguindo o RPG Skills."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "Quem joga no controle não depende mais da tela de equipamento aberta para usar os atalhos do RPG Skills.",
+            "Nível, XP e progresso das classes também ficam gravados no save do personagem.",
+            "Isso ajuda a manter o progresso ao trocar de dispositivo com o save sincronizado.",
+            "Corrigida uma falha rara em que o Mestre das Relíquias voltava para 0, reduzindo slots de trinket e arriscando os itens equipados.",
+            "Os slots de trinket não diminuem mais sozinhos durante o jogo; só diminuem num reset de pontos."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.4 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Quality of Life",
+          "heading": "✨ What's new",
           "items": [
-            "<strong>Controls:</strong> you can now open and close the RPG Skills window with the <strong>LB + RB</strong> controller combo without keeping the equipment screen open.",
-            "LB and RB remain available for the game's normal actions when pressed separately."
+            "<strong>Languages:</strong> German, Spanish, French, Italian, Japanese, Dutch, Polish, Russian and Simplified Chinese were reviewed to remove text still showing in English.",
+            "<strong>Languages:</strong> the Chinese translation was completed for the interface, shop, classes, passives, attributes, commands and chest filters.",
+            "<strong>Languages:</strong> translations are checked more strictly so they cannot pass by just repeating the English text."
           ]
         },
         {
-          "heading": "Languages",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "German, Spanish, French, Italian, Japanese, Dutch, Polish, Russian, and Simplified Chinese translations were reviewed to remove text that was still appearing in English.",
-            "The Chinese translation was completed for the interface, shop, classes, passives, attributes, commands, and chest filters.",
-            "RPG Skills now validates language files more strictly so a translation cannot pass by only repeating the English text."
+            "The RPG Skills window opens and closes with the LB + RB controller combo.",
+            "You no longer need to keep the equipment screen open for that.",
+            "LB and RB pressed separately keep the game's normal actions."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "Fixed an issue where controller players could depend on the equipment screen being open to access RPG Skills shortcuts.",
-            "Level, XP, and class progress are now also stored in the character save, helping progress carry over between devices when the save is synced.",
-            "Fixed a rare case where Relic Master could drop back to 0 from an inconsistent progress snapshot, reducing trinket slots and putting equipped items at risk.",
-            "Automatic trinket slot reconciliation no longer shrinks slots during normal ticks; slot reductions are limited to explicit reset/respec actions.",
-            "SafeHavenQOL/TorvianQOL 1.3 compatibility: RPG Skills now disables that mod's altered stacks for enchanting scrolls, boss-summon items, and coins so RPG Skills remains the stack-size authority."
+            "RPG Skills turns off Safe Haven QOL 1.3's altered stacks for enchanting scrolls, boss-summon items and coins.",
+            "This way, stack sizes keep following RPG Skills."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "Controller players no longer need the equipment screen open to use RPG Skills shortcuts.",
+            "Level, XP and class progress are also stored in the character save.",
+            "This helps keep progress when switching devices with a synced save.",
+            "Fixed a rare issue where Relic Master dropped back to 0, reducing trinket slots and putting equipped items at risk.",
+            "Trinket slots no longer shrink on their own during play; they only shrink on a point reset."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2760,93 +3707,105 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.3 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Novidades",
+          "heading": "✨ Novidades",
           "items": [
-            "<strong>Mestre das Armadilhas:</strong> nova classe com 5 níveis. Ela aumenta o dano das armadilhas dentro dos assentamentos, reduz o dano de armadilhas fora deles para jogadores e colonos, bloqueia esse dano dentro dos assentamentos e, no nível 5, aplica sangramento nos inimigos atingidos por armadilhas do assentamento.",
-            "<strong>Mestre das Máquinas:</strong> nova classe com 5 níveis. Ela acelera todas as máquinas e faz o combustível durar mais em máquinas que usam combustível.",
-            "<strong>Mestre da Natureza:</strong> nova classe com 5 níveis. Ela acelera plantações, árvores, árvores frutíferas, arbustos com frutinhas e cogumelos dentro dos assentamentos do jogador ou do time."
+            "<strong>Mestre das Armadilhas:</strong> nova classe com 5 níveis.",
+            "<strong>Mestre das Armadilhas:</strong> aumenta o dano das armadilhas dentro dos assentamentos.",
+            "<strong>Mestre das Armadilhas:</strong> reduz o dano de armadilhas fora dos assentamentos para jogadores e colonos.",
+            "<strong>Mestre das Armadilhas:</strong> bloqueia o dano de armadilhas em jogadores e colonos dentro dos assentamentos.",
+            "<strong>Mestre das Armadilhas:</strong> no nível 5, as armadilhas do assentamento aplicam sangramento nos inimigos atingidos.",
+            "<strong>Mestre das Máquinas:</strong> nova classe com 5 níveis.",
+            "<strong>Mestre das Máquinas:</strong> acelera todas as máquinas.",
+            "<strong>Mestre das Máquinas:</strong> o combustível dura mais nas máquinas que usam combustível.",
+            "<strong>Mestre das Máquinas:</strong> cada nível tem tempos definidos para fornalha, prensa de queijo, composteira e moinho.",
+            "<strong>Mestre das Máquinas:</strong> no nível 5, fornalha, prensa de queijo, composteira e moinho processam em 2 segundos.",
+            "<strong>Mestre das Máquinas:</strong> o tronco na fornalha dura 80s, 120s, 240s, 360s e 600s, conforme o nível.",
+            "<strong>Mestre da Natureza:</strong> nova classe com 5 níveis.",
+            "<strong>Mestre da Natureza:</strong> acelera plantações, árvores, árvores frutíferas, arbustos com frutinhas e cogumelos nos assentamentos do jogador ou do time.",
+            "<strong>Mestre da Natureza:</strong> o crescimento fica 25%, 50%, 75%, 100% e 300% mais rápido, conforme o nível.",
+            "<strong>Administração Eficiente:</strong> nova passiva do Mestre dos Reinos no nível 5.",
+            "<strong>Administração Eficiente:</strong> os colonos trabalham mais rápido.",
+            "<strong>Administração Eficiente:</strong> as expedições levam menos tempo.",
+            "<strong>Filtros de baú:</strong> baús expandidos têm um painel fixo de filtros por categoria ao lado da grade.",
+            "<strong>Filtros de baú:</strong> o painel ajuda a achar consumíveis, materiais, equipamentos e outros itens.",
+            "<strong>Comandos:</strong> administradores ajustam direto o limite de slots de baús e o stack do mundo."
           ]
         },
         {
-          "heading": "Qualidade de vida",
+          "heading": "⚡ Desempenho",
           "items": [
-            "Cada nível tem tempos definidos para fornalha, prensa de queijo, composteira e moinho. No nível 5, todas elas processam em 2 segundos.",
-            "O tronco usado na fornalha dura mais por nível: 80s, 120s, 240s, 360s e 600s.",
-            "O crescimento da natureza nos assentamentos fica 25%, 50%, 75%, 100% e 300% mais rápido conforme o nível da classe.",
-            "Mestre dos Reinos nível 5 agora libera Administração Eficiente: colonos trabalham mais rápido e expedições levam menos tempo.",
-            "Baús expandidos agora têm um painel fixo de filtros por categoria ao lado da grade, ajudando a encontrar consumíveis, materiais, equipamentos e outros itens.",
-            "Administradores agora podem ajustar diretamente o limite de slots de baús e o stack do mundo por comando."
+            "Organizar baús grandes ficou mais leve, com menos travadas no botão ou atalho de organizar."
           ]
         },
         {
-          "heading": "Desempenho",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "Organizar baús grandes agora fica mais leve, reduzindo travadas ao usar o botão ou atalho de organizar."
+            "Com o Safe Haven QOL ativo, as dicas de sementes, mudas e árvores frutíferas mostram o tempo de crescimento com o bônus do Mestre da Natureza.",
+            "O RPG Skills corrige a tradução pt-BR de textos do Necesse 1.2.0 que ainda estavam em inglês."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
-            "O comando maxskills agora atualiza corretamente os bônus aplicados ao jogador, incluindo a tela de estatísticas.",
-            "Jogadores com bônus de vida e mana máximas agora entram no mundo já com os valores cheios quando estavam cheios antes."
-          ]
-        },
-        {
-          "heading": "Compatibilidade",
-          "items": [
-            "Com o Torvians-QoL ativo, os tooltips de sementes, mudas e árvores frutíferas passam a mostrar o tempo de crescimento já considerando o bônus de Mestre da Natureza.",
-            "Os itens do jogo que aumentam slots de acessórios agora funcionam corretamente junto com o bônus de Mestre das Relíquias.",
-            "O RPG Skills adiciona correções de tradução pt-BR para textos do Necesse que ainda estavam em inglês na versão 1.2.0."
+            "O comando maxskills atualiza certo os bônus do jogador, inclusive na tela de estatísticas.",
+            "Quem tem bônus de vida e mana máximas entra no mundo com elas cheias, se estavam cheias antes.",
+            "Os itens do jogo que aumentam slots de acessórios funcionam junto com o bônus do Mestre das Relíquias."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.3 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "New Features",
+          "heading": "✨ What's new",
           "items": [
-            "<strong>Trap Master:</strong> new 5-level class. It increases trap damage inside settlements, reduces trap damage outside settlements for players and colonists, blocks that damage inside settlements, and at level 5 makes settlement traps apply bleeding to enemies.",
-            "<strong>Machine Master:</strong> new 5-level class. It speeds up all machines and makes fuel last longer in fueled machines.",
-            "<strong>Nature Master:</strong> new 5-level class. It speeds up crops, trees, fruit trees, berry bushes, and mushrooms inside player or team settlements."
+            "<strong>Trap Master:</strong> new 5-level class.",
+            "<strong>Trap Master:</strong> increases trap damage inside settlements.",
+            "<strong>Trap Master:</strong> reduces trap damage outside settlements for players and colonists.",
+            "<strong>Trap Master:</strong> blocks trap damage to players and colonists inside settlements.",
+            "<strong>Trap Master:</strong> at level 5, settlement traps apply bleeding to enemies they hit.",
+            "<strong>Machine Master:</strong> new 5-level class.",
+            "<strong>Machine Master:</strong> speeds up all machines.",
+            "<strong>Machine Master:</strong> fuel lasts longer in fueled machines.",
+            "<strong>Machine Master:</strong> each level has fixed times for forge, cheese press, compost bin and grain mill.",
+            "<strong>Machine Master:</strong> at level 5, forge, cheese press, compost bin and grain mill process in 2 seconds.",
+            "<strong>Machine Master:</strong> logs in the forge last 80s, 120s, 240s, 360s and 600s, by level.",
+            "<strong>Nature Master:</strong> new 5-level class.",
+            "<strong>Nature Master:</strong> speeds up crops, trees, fruit trees, berry bushes and mushrooms in player or team settlements.",
+            "<strong>Nature Master:</strong> growth becomes 25%, 50%, 75%, 100% and 300% faster, by level.",
+            "<strong>Efficient Administration:</strong> new Realm Master passive at level 5.",
+            "<strong>Efficient Administration:</strong> colonists work faster.",
+            "<strong>Efficient Administration:</strong> expeditions take less time.",
+            "<strong>Chest filters:</strong> expanded chests have a fixed category filter panel beside the grid.",
+            "<strong>Chest filters:</strong> the panel helps find consumables, materials, equipment and other items.",
+            "<strong>Commands:</strong> administrators directly adjust the chest slot limit and world stack."
           ]
         },
         {
-          "heading": "Quality of Life",
+          "heading": "⚡ Performance",
           "items": [
-            "Each level has fixed times for forge, cheese press, compost bin, and grain mill. At level 5, all of them process in 2 seconds.",
-            "Logs used in the forge last longer by level: 80s, 120s, 240s, 360s, and 600s.",
-            "Nature growth inside settlements becomes 25%, 50%, 75%, 100%, and 300% faster by class level.",
-            "Realm Master level 5 now unlocks Efficient Administration: colonists work faster and expeditions take less time.",
-            "Expanded chests now have a fixed category filter panel beside the grid, making consumables, materials, equipment, and other items easier to find.",
-            "Administrators can now directly adjust the chest slot limit and world stack by command."
+            "Sorting large chests is lighter, with fewer stutters from the sort button or shortcut."
           ]
         },
         {
-          "heading": "Performance",
+          "heading": "🤝 Compatibility",
           "items": [
-            "Sorting large chests is now lighter, reducing stutters when using the sort button or shortcut."
+            "With Safe Haven QOL on, seed, sapling and fruit tree tooltips show growth time with the Nature Master bonus.",
+            "RPG Skills fixes the pt-BR translation of Necesse 1.2.0 texts that were still in English."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
-            "The maxskills command now correctly updates the bonuses applied to the player, including the stats screen.",
-            "Players with max health and max mana bonuses now enter the world already full when they were full before."
-          ]
-        },
-        {
-          "heading": "Compatibility",
-          "items": [
-            "With Torvians-QoL enabled, seed, sapling, and fruit tree tooltips now show growth times that include the Nature Master bonus.",
-            "The game's trinket slot upgrade items now work correctly alongside the Relic Master bonus.",
-            "RPG Skills adds pt-BR translation fixes for Necesse texts that were still in English in version 1.2.0."
+            "The maxskills command correctly updates the player's bonuses, including on the stats screen.",
+            "Players with max health and max mana bonuses enter the world with them full, if they were full before.",
+            "The game's trinket slot upgrade items work alongside the Relic Master bonus."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2858,103 +3817,117 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.2 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Lançamento",
+          "heading": "✨ Novidades",
           "items": [
-            "A atualização 1.2 está fechada e pronta para jogar."
+            "<strong>Mestre Gourmet:</strong> nova classe com 5 níveis.",
+            "<strong>Mestre Gourmet:</strong> aumenta a duração dos buffs de comida em 25%, 50%, 75%, 100% e 300%.",
+            "<strong>Mestre Gourmet:</strong> no nível 5, Barriga Sempre Cheia faz você comer sozinho quando a fome fica abaixo de 95%.",
+            "<strong>Mestre da Alquimia:</strong> nova classe com 5 níveis.",
+            "<strong>Mestre da Alquimia:</strong> aumenta a duração dos buffs de poções e do Frasco Fedorento em 25%, 50%, 75%, 100% e 300%.",
+            "<strong>Mestre da Alquimia:</strong> no nível 5, Auto Poção usa poções de vida sozinha quando a vida fica baixa.",
+            "<strong>Mestre do Rancho:</strong> nova classe com 5 níveis.",
+            "<strong>Mestre do Rancho:</strong> acelera a domesticação, a procriação e o crescimento dos filhotes.",
+            "<strong>Mestre do Rancho:</strong> no nível 5, animais de rancho mortos na zona de criação dropam 5x mais itens.",
+            "<strong>Aura de Liderança:</strong> nova passiva do Mestre dos Reinos no nível 5.",
+            "<strong>Aura de Liderança:</strong> os colonos recebem bônus de dano, vida, redução de dano e velocidade de movimento.",
+            "<strong>Nível máximo:</strong> sobe para 150 para caber as novas classes.",
+            "<strong>Configuração:</strong> o raio do envio rápido para baús pode ser ajustado."
           ]
         },
         {
-          "heading": "Novidades",
+          "heading": "🛠️ Qualidade de vida",
           "items": [
-            "<strong>Mestre Gourmet:</strong> nova classe com 5 níveis. Ela aumenta a duração dos buffs de comida em 25%, 50%, 75%, 100% e 300%; no nível 5, também ativa Barriga Sempre Cheia para comer automaticamente quando a fome fica abaixo de 95%.",
-            "<strong>Mestre da Alquimia:</strong> nova classe com 5 níveis. Ela aumenta a duração dos buffs de poções e do Frasco Fedorento em 25%, 50%, 75%, 100% e 300%; no nível 5, também ativa Auto Poção para usar poções de vida automaticamente quando a vida fica baixa.",
-            "<strong>Mestre do Rancho:</strong> nova classe com 5 níveis. Ela acelera domesticação, procriação e crescimento de filhotes; no nível 5, animais de rancho mortos na zona de criação dropam 5x mais itens.",
-            "<strong>Nível máximo:</strong> aumentado para 150 para acomodar as novas classes.",
-            "<strong>Aura de Liderança:</strong> nova passiva do Mestre dos Reinos no nível 5. Colonos recebem bônus de dano, vida, redução de dano e velocidade de movimento."
+            "O envio rápido de itens do inventário para baús e barris próximos alcança mais longe."
           ]
         },
         {
-          "heading": "Qualidade de vida",
+          "heading": "⚡ Desempenho",
           "items": [
-            "<strong>Envio rápido para baús:</strong> o raio para enviar itens do inventário aos baús e barris próximos foi aumentado e agora pode ser ajustado na configuração do RPG Skills."
+            "Menos trabalho repetido em segundo plano, evitando travadas e quedas fortes de FPS.",
+            "Os animais de rancho do Mestre do Rancho pesam menos no jogo, evitando pequenas travadas em mundos com muitos mobs."
           ]
         },
         {
-          "heading": "Compatibilidade",
+          "heading": "🤝 Compatibilidade com o Safe Haven QOL",
           "items": [
-            "<strong>Torvians QOL:</strong> quando estiver instalado junto, o RPG Skills ajuda a criar e aplicar o arquivo de configuração dele na pasta de mods do Necesse.",
-            "<strong>Torvians QOL 0.9:</strong> o RPG Skills agora completa opções novas do arquivo de configuração sem apagar escolhas já feitas."
+            "Com o Safe Haven QOL instalado junto, o RPG Skills ajuda a criar e aplicar a configuração dele.",
+            "Com o Safe Haven QOL 0.9, o RPG Skills completa as opções novas da configuração sem apagar as escolhas já feitas."
           ]
         },
         {
-          "heading": "Correções",
+          "heading": "🔧 Correções",
           "items": [
-            "<strong>Mestre da Riqueza:</strong> Golpe de Ouro agora concede ouro ao acertar inimigos desde o primeiro nível da classe.",
-            "O ouro por acerto aumenta com os níveis da classe, chegando a 50 ouro por acerto no nível 5.",
-            "<strong>Montarias:</strong> corrigido um travamento que podia acontecer ao usar montarias enquanto o jogo atualizava bônus do personagem.",
-            "<strong>Estabilidade:</strong> corrigido um travamento que podia acontecer quando a tela de status recebia dados do servidor durante o jogo."
+            "O Golpe de Ouro do Mestre da Riqueza dá ouro ao acertar inimigos desde o primeiro nível da classe.",
+            "Usar montarias não trava mais o jogo enquanto os bônus do personagem são atualizados.",
+            "A tela de status não trava mais ao receber dados do servidor durante o jogo."
           ]
         },
         {
-          "heading": "Desempenho",
+          "heading": "💰 Mestre da Riqueza",
           "items": [
-            "<strong>Menos travadas:</strong> reduzido trabalho repetido em segundo plano para evitar travadas e quedas fortes de FPS.",
-            "<strong>Mestre do Rancho:</strong> reduzido o trabalho interno feito pelos animais de rancho para evitar pequenas travadas em mundos com muitos mobs."
+            "O ouro por acerto do Golpe de Ouro aumenta com os níveis da classe, até 50 ouro por acerto no nível 5."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.2 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Release",
+          "heading": "✨ What's new",
           "items": [
-            "Update 1.2 is closed and ready to play."
+            "<strong>Gourmet Master:</strong> new 5-level class.",
+            "<strong>Gourmet Master:</strong> increases food buff duration by 25%, 50%, 75%, 100% and 300%.",
+            "<strong>Gourmet Master:</strong> at level 5, Always Full Belly makes you eat automatically when hunger drops below 95%.",
+            "<strong>Alchemy Master:</strong> new 5-level class.",
+            "<strong>Alchemy Master:</strong> increases potion buff and Stink Flask duration by 25%, 50%, 75%, 100% and 300%.",
+            "<strong>Alchemy Master:</strong> at level 5, Auto Potion uses health potions automatically when health gets low.",
+            "<strong>Ranch Master:</strong> new 5-level class.",
+            "<strong>Ranch Master:</strong> speeds up taming, breeding and baby growth.",
+            "<strong>Ranch Master:</strong> at level 5, ranch animals killed in the husbandry zone drop 5x more items.",
+            "<strong>Leadership Aura:</strong> new Realm Master passive at level 5.",
+            "<strong>Leadership Aura:</strong> colonists get bonuses to damage, health, damage reduction and movement speed.",
+            "<strong>Max level:</strong> raised to 150 to fit the new classes.",
+            "<strong>Settings:</strong> the quick stack to chests range can be adjusted."
           ]
         },
         {
-          "heading": "New Features",
+          "heading": "🛠️ Quality of life",
           "items": [
-            "<strong>Gourmet Master:</strong> new 5-level class. It increases food buff duration by 25%, 50%, 75%, 100%, and 300%; at level 5, it also activates Always Full Belly to automatically eat when hunger drops below 95%.",
-            "<strong>Alchemy Master:</strong> new 5-level class. It increases potion buff duration and Stink Flask duration by 25%, 50%, 75%, 100%, and 300%; at level 5, it also activates Auto Potion to automatically use health potions when health gets low.",
-            "<strong>Ranch Master:</strong> new 5-level class. It speeds up taming, breeding and baby growth; at level 5, ranch animals killed in the husbandry zone drop 5x more items.",
-            "<strong>Max level:</strong> increased to 150 to support the new classes.",
-            "<strong>Leadership Aura:</strong> new Realm Master passive at level 5. Colonists receive bonuses to damage, health, damage reduction and movement speed."
+            "Quick stacking inventory items to nearby chests and barrels reaches farther."
           ]
         },
         {
-          "heading": "Quality of Life",
+          "heading": "⚡ Performance",
           "items": [
-            "<strong>Quick stack to chests:</strong> the range for sending inventory items to nearby chests and barrels has been increased and can now be adjusted in the RPG Skills config."
+            "Less repeated background work, avoiding freezes and heavy FPS drops.",
+            "Ranch Master's ranch animals weigh less on the game, avoiding small freezes in worlds with many mobs."
           ]
         },
         {
-          "heading": "Compatibility",
+          "heading": "🤝 Compatibility with Safe Haven QOL",
           "items": [
-            "<strong>Torvians QOL:</strong> when installed alongside RPG Skills, RPG Skills helps create and apply its config file in the Necesse mods config folder.",
-            "<strong>Torvians QOL 0.9:</strong> RPG Skills now completes new config options without erasing existing choices."
+            "With Safe Haven QOL installed alongside, RPG Skills helps create and apply its settings.",
+            "With Safe Haven QOL 0.9, RPG Skills fills in new settings options without erasing choices already made."
           ]
         },
         {
-          "heading": "Fixes",
+          "heading": "🔧 Fixes",
           "items": [
-            "<strong>Wealth Master:</strong> Gold Strike now gives gold when hitting enemies starting from the first class level.",
-            "Gold per hit increases with class levels, up to 50 gold per hit at level 5.",
-            "<strong>Mounts:</strong> fixed a freeze that could happen when using mounts while the game updated character bonuses.",
-            "<strong>Stability:</strong> fixed a freeze that could happen when the status screen received server data during gameplay."
+            "Wealth Master's Gold Strike gives gold when hitting enemies from the first class level.",
+            "Using mounts no longer freezes the game while character bonuses are updated.",
+            "The status screen no longer freezes when receiving server data during gameplay."
           ]
         },
         {
-          "heading": "Performance",
+          "heading": "💰 Wealth Master",
           "items": [
-            "<strong>Fewer freezes:</strong> reduced repeated background work to avoid freezes and heavy FPS drops.",
-            "<strong>Ranch Master:</strong> reduced the internal work done by ranch animals to avoid small freezes in worlds with many mobs."
+            "Gold Strike's gold per hit grows with class levels, up to 50 gold per hit at level 5."
           ]
         }
       ],
-      "note": ""
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -2966,51 +3939,81 @@ window.RPG_CHANGELOG = [
       "title": "🌟 Atualização 1.1 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Resumo",
+          "heading": "⚡ Desempenho",
           "items": [
-            "<strong>Progressão:</strong> subir de nível agora pede mais XP. O nível 1 precisa de 10.000 XP, o nível 2 precisa de 20.000 XP, e assim por diante.",
-            "<strong>Nível máximo:</strong> para sair do nível 134 e chegar ao nível 135, o jogador precisa de 1.350.000 XP.",
-            "<strong>Reset de pontos:</strong> corrigido um problema em que moedas podiam ser consumidas mesmo quando o jogador não tinha moedas suficientes para resetar. O custo agora é simples: 1.000 moedas por nível do jogador.",
-            "<strong>Loja:</strong> compras que usam moedas e itens ficaram mais seguras. Se faltar item no final da compra, as moedas não devem sumir por engano.",
-            "<strong>Desempenho:</strong> o mod faz menos trabalho repetido durante o jogo, ajudando a reduzir travadas e lag sem mudar as regras das classes."
+            "O mod faz menos trabalho repetido durante o jogo.",
+            "Isso reduz travadas e lag sem mudar as regras das classes."
           ]
         },
         {
-          "heading": "O que muda para o jogador",
+          "heading": "🤝 Compatibilidade",
           "items": [
-            "A jornada até o nível máximo fica mais longa e mais estável.",
-            "Resetar pontos continua cobrando moedas quando houver custo: um personagem no nível 25 paga 25.000 moedas, por exemplo. A cobrança só acontece quando puder ser feita corretamente.",
-            "Comandos e botões do menu seguem as mesmas regras de segurança para moedas.",
             "Mundos e personagens antigos continuam funcionando."
+          ]
+        },
+        {
+          "heading": "🔧 Correções",
+          "items": [
+            "O reset de pontos não consome mais moedas quando você não tem o suficiente.",
+            "A cobrança do reset só acontece quando pode ser feita corretamente.",
+            "Compras na Loja que usam moedas e itens ficaram mais seguras.",
+            "Se faltar um item no final da compra, as moedas não somem por engano.",
+            "Comandos e botões do menu seguem as mesmas regras de segurança para moedas."
+          ]
+        },
+        {
+          "heading": "📈 Progressão",
+          "items": [
+            "Subir de nível pede mais XP.",
+            "O nível 1 precisa de 10.000 XP, o nível 2 de 20.000 XP, e assim por diante.",
+            "Para ir do nível 134 ao 135 são precisos 1.350.000 XP.",
+            "A jornada até o nível máximo fica mais longa e mais estável.",
+            "Resetar pontos custa 1.000 moedas por nível do jogador.",
+            "Um personagem no nível 25, por exemplo, paga 25.000 moedas."
           ]
         }
       ],
-      "note": "<strong>Bom jogo!</strong>"
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
       "title": "🌟 Update 1.1 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Summary",
+          "heading": "⚡ Performance",
           "items": [
-            "<strong>Progression:</strong> leveling now asks for more XP. Level 1 needs 10,000 XP, level 2 needs 20,000 XP, and so on.",
-            "<strong>Max level:</strong> to go from level 134 to level 135, the player needs 1,350,000 XP.",
-            "<strong>Point reset:</strong> fixed an issue where coins could be consumed even when the player did not have enough coins to reset. The cost is now simple: 1,000 coins per player level.",
-            "<strong>Shop:</strong> purchases that use both coins and items are safer. If an item is missing at the final step, coins should not disappear by mistake.",
-            "<strong>Performance:</strong> the mod does less repeated work while playing, helping reduce stutters and lag without changing class rules."
+            "The mod does less repeated work while you play.",
+            "This reduces stutters and lag without changing class rules."
           ]
         },
         {
-          "heading": "What changes for players",
+          "heading": "🤝 Compatibility",
           "items": [
-            "The road to max level is longer and steadier.",
-            "Resetting points still charges coins when there is a cost: a level 25 character pays 25,000 coins, for example. The charge only happens when it can be completed correctly.",
-            "Commands and menu buttons follow the same coin safety rules.",
             "Old worlds and characters keep working."
+          ]
+        },
+        {
+          "heading": "🔧 Fixes",
+          "items": [
+            "Point reset no longer consumes coins when you do not have enough.",
+            "The reset charge only happens when it can be completed correctly.",
+            "Shop purchases that use coins and items are safer.",
+            "If an item is missing at the end of a purchase, coins no longer disappear by mistake.",
+            "Commands and menu buttons follow the same coin safety rules."
+          ]
+        },
+        {
+          "heading": "📈 Progression",
+          "items": [
+            "Leveling up needs more XP.",
+            "Level 1 needs 10,000 XP, level 2 needs 20,000 XP, and so on.",
+            "Going from level 134 to 135 takes 1,350,000 XP.",
+            "The road to max level is longer and steadier.",
+            "Resetting points costs 1,000 coins per player level.",
+            "A level 25 character, for example, pays 25,000 coins."
           ]
         }
       ],
-      "note": "<strong>Have fun out there!</strong>"
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   },
   {
@@ -3019,200 +4022,130 @@ window.RPG_CHANGELOG = [
     "tagClass": "major",
     "tagKey": "changelog.tag.release",
     "pt": {
-      "title": "🌟 RPG Skills 1.0 - Versão Oficial 🌟",
+      "title": "🌟 Atualização 1.0 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Resumo",
+          "heading": "✨ Novidades",
           "items": [
-            "O RPG Skills chegou à sua <strong>versão oficial 1.0</strong>.",
-            "As versões anteriores serviram como testes, melhorias, ajustes e aprendizado até o mod chegar neste formato mais completo.",
-            "O mod passou por uma <strong>extensa reformulação</strong> para ficar mais organizado, mais claro e mais preparado para continuar evoluindo.",
-            "Esta versão adiciona uma progressão RPG mais forte ao Necesse, com níveis, XP, pontos de habilidade, classes, atributos, loja e atalhos.",
-            "A Loja agora também inclui melhorias globais de slots para baús do mundo.",
-            "<strong>Importante:</strong> é recomendado criar um <strong>novo personagem</strong> para jogar a versão 1.0 corretamente."
+            "<strong>Versão oficial:</strong> o RPG Skills chegou à versão oficial 1.0.",
+            "<strong>Versão oficial:</strong> as versões anteriores serviram de teste, ajuste e aprendizado até o mod chegar aqui.",
+            "<strong>Versão oficial:</strong> o mod passou por uma grande reformulação para ficar mais organizado, mais claro e pronto para continuar evoluindo.",
+            "<strong>Versão oficial:</strong> o mod deixa de ser um conjunto de testes e bônus soltos e vira uma camada RPG completa para o Necesse.",
+            "<strong>Versão oficial:</strong> o foco é dar mais profundidade ao personagem sem tirar o estilo original do jogo.",
+            "<strong>Progressão:</strong> o personagem evolui com níveis, XP e pontos de habilidade.",
+            "<strong>Progressão:</strong> você ganha XP jogando normalmente: derrotando inimigos, enfrentando chefes, minerando, colhendo, pescando, plantando, explorando e interagindo com assentamentos.",
+            "<strong>Progressão:</strong> ao subir de nível, você ganha pontos para investir nas classes.",
+            "<strong>Progressão:</strong> explorar, lutar, minerar, pescar, construir e cuidar do mundo alimentam uma progressão maior.",
+            "<strong>Progressão:</strong> mais motivo para continuar no mesmo personagem e sentir evolução real pelo mundo.",
+            "<strong>Classes:</strong> o sistema de classes foi refeito com 27 classes.",
+            "<strong>Classes:</strong> os estilos são corpo a corpo, distância, magia, invocação, sobrevivência, defesa, mobilidade, mineração, pesca, loot, ouro, construção, trinkets e assentamentos.",
+            "<strong>Classes:</strong> cada classe fortalece uma parte diferente do jogo, para você montar builds do seu jeito.",
+            "<strong>Classes:</strong> algumas classes liberam efeitos especiais, como visão, mineração em veios, efeitos elementais, cura, defesa, mobilidade e bônus de utilidade.",
+            "<strong>Classes:</strong> o Mestre das Cavernas libera o Minerador de Veios para melhorar a mineração.",
+            "<strong>Janela do RPG Skills:</strong> organizada em três abas: Status, Classes e Loja.",
+            "<strong>Janela do RPG Skills:</strong> a aba Status mostra nível, XP, pontos livres e informações gerais do personagem.",
+            "<strong>Janela do RPG Skills:</strong> a aba Classes mostra as classes e deixa investir os pontos de habilidade.",
+            "<strong>Janela do RPG Skills:</strong> a aba Loja reúne bônus temporários de XP, melhorias de stack do mundo e slots extras para baús.",
+            "<strong>Janela do RPG Skills:</strong> o atalho padrão para abrir e fechar é K.",
+            "<strong>Loja:</strong> bônus temporários de XP aceleram a evolução.",
+            "<strong>Loja:</strong> atalhos configuráveis para os bônus de XP 2x, 5x e 10x.",
+            "<strong>Loja:</strong> melhoria do stack do mundo, que ajuda na organização e no farm.",
+            "<strong>Slots de baú:</strong> a Loja vende melhorias globais de slots para os baús do mundo.",
+            "<strong>Slots de baú:</strong> cada compra adiciona +10 slots, começando em 5.000 moedas, até o limite de 400 slots.",
+            "<strong>Slots de baú:</strong> baús grandes ganham rolagem para manter os slots acessíveis.",
+            "<strong>Slots de baú:</strong> a Loja tem um reset que volta os baús ao padrão de 40 slots.",
+            "<strong>Slots de baú:</strong> antes de resetar, tire os itens dos slots extras.",
+            "<strong>Slots de baú:</strong> o mod tenta jogar os itens dos slots extras no chão ao redor do baú, mas ainda pode haver perda.",
+            "<strong>Slots de baú:</strong> o reset não devolve as moedas.",
+            "<strong>Minerador Explosivo:</strong> nova habilidade na Loja, comprada por jogador.",
+            "<strong>Minerador Explosivo:</strong> exige Mestre das Cavernas nível 5 para comprar e para usar.",
+            "<strong>Minerador Explosivo:</strong> se os pontos forem resetados e o requisito cair, fica bloqueado até voltar ao nível certo.",
+            "<strong>Minerador Explosivo:</strong> ligado pelo atalho configurável, faz qualquer picareta quebrar os blocos ao redor com efeito de explosão.",
+            "<strong>Minerador Explosivo:</strong> não machuca jogadores nem mobs e não dá XP nas quebras extras.",
+            "<strong>Minerador Explosivo:</strong> só funciona com picaretas e respeita o poder da picareta usada.",
+            "<strong>Minerador Explosivo:</strong> tem limites para evitar travamentos em áreas muito cheias.",
+            "<strong>Minerador Explosivo:</strong> não funciona junto com o modo avançado do Minerador de Veios.",
+            "<strong>Comandos:</strong> /rpgskills set level <1-135> define o nível do jogador e zera a experiência atual.",
+            "<strong>Comandos:</strong> /rpgskills maxskills coloca o jogador no nível máximo e maximiza todas as classes.",
+            "<strong>Comandos:</strong> /rpgskills reset points devolve os pontos de classe, cobrando o custo correto quando necessário.",
+            "<strong>Comandos:</strong> /rpgskills reset zero zera todo o progresso e devolve moedas de reset."
           ]
         },
         {
-          "heading": "Novo Começo",
+          "heading": "⚠️ Importante",
           "items": [
-            "A versão 1.0 reorganiza a base do RPG Skills e marca uma nova fase do mod.",
-            "Personagens antigos podem não representar bem a progressão atual, porque o sistema mudou bastante.",
-            "Para evitar progresso estranho, pontos fora do lugar ou bônus antigos misturados, começa com um novo personagem.",
-            "A ideia é que a experiência da versão 1.0 seja limpa, equilibrada e feita para crescer desde o início."
-          ]
-        },
-        {
-          "heading": "Progressão RPG",
-          "items": [
-            "Agora o personagem evolui com <strong>níveis</strong>, <strong>XP</strong> e <strong>pontos de habilidade</strong>.",
-            "Você ganha XP jogando normalmente: derrotando inimigos, enfrentando chefes, minerando, colhendo, pescando, plantando, explorando e interagindo com assentamentos.",
-            "Ao subir de nível, você ganha pontos para investir nas classes.",
-            "A progressão dá mais motivo para continuar jogando no mesmo personagem e sentir evolução real ao longo do mundo."
-          ]
-        },
-        {
-          "heading": "Classes e Builds",
-          "items": [
-            "O sistema de classes foi reconstruído com <strong>27 classes</strong>.",
-            "As classes cobrem vários estilos: corpo a corpo, à distância, magia, invocação, sobrevivência, defesa, mobilidade, mineração, pesca, loot, ouro, construção, trinkets e assentamentos.",
-            "Cada classe fortalece uma parte diferente da gameplay, permitindo montar builds do seu jeito.",
-            "Algumas classes também liberam efeitos especiais, como visão, mineração em veios, efeitos elementais, cura, defesa, mobilidade e bônus de utilidade."
-          ]
-        },
-        {
-          "heading": "Interface Nova",
-          "items": [
-            "A janela do RPG Skills foi organizada em três abas principais.",
-            "<strong>Status:</strong> acompanha nível, XP, pontos livres e informações gerais do personagem.",
-            "<strong>Classes:</strong> mostra as classes e permite investir os pontos de habilidade.",
-            "<strong>Loja:</strong> reúne bônus temporários de XP, melhorias de stack do mundo e slots extras para baús.",
-            "O atalho padrão para abrir e fechar a janela é <strong>K</strong>."
-          ]
-        },
-        {
-          "heading": "Loja e Qualidade de Vida",
-          "items": [
-            "A Loja permite comprar bônus temporários de XP para acelerar a evolução.",
-            "Também permite melhorar o stack do mundo, ajudando na organização e no farm.",
-            "Agora também é possível comprar slots extras para baús: cada compra adiciona <strong>+10 slots</strong>, começando em <strong>5.000 moedas</strong>, até o limite de <strong>400 slots</strong>.",
-            "Baús grandes usam rolagem na interface para manter os slots acessíveis.",
-            "A Loja também tem reset de slots de baú para voltar ao padrão de 40 slots.",
-            "Antes de resetar, remova os itens dos slots extras. O mod tenta jogar esses itens no chão ao redor do baú, mas não há reembolso de moedas e ainda pode haver risco de perda.",
-            "A Loja agora também tem a habilidade <strong>Minerador Explosivo</strong>, comprada por jogador.",
-            "Minerador Explosivo exige <strong>Mestre das Cavernas nível 5</strong> para comprar e para usar. Se os pontos forem resetados e o requisito cair, ela fica bloqueada até voltar ao nível certo.",
-            "Ao ativar pelo atalho configurável, minerar com qualquer picareta quebra blocos ao redor com efeito de explosão, sem machucar jogadores ou mobs e sem dar XP nas quebras extras.",
-            "A habilidade só funciona com picaretas, respeita o poder da picareta usada e tem limites internos para evitar travamentos em áreas muito cheias.",
-            "Ela não funciona junto com o modo avançado do Minerador de Veios.",
-            "Existem atalhos configuráveis para bônus de XP 2x, 5x e 10x.",
-            "O Mestre das Cavernas também libera o Minerador de Veios para melhorar a mineração."
-          ]
-        },
-        {
-          "heading": "Comandos Visíveis",
-          "items": [
-            "<strong>/rpgskills set level <1-135></strong>: define o nível do jogador e zera a experiência atual.",
-            "<strong>/rpgskills maxskills</strong>: coloca o jogador no nível máximo e maximiza todas as classes.",
-            "<strong>/rpgskills reset points</strong>: devolve os pontos de classe, cobrando o custo correto quando necessário.",
-            "<strong>/rpgskills reset zero</strong>: zera o progresso completo e devolve moedas de reset."
-          ]
-        },
-        {
-          "heading": "O Que Mudou na Ideia do Mod",
-          "items": [
-            "O RPG Skills deixou de ser apenas um conjunto de testes e bônus soltos.",
-            "Agora ele funciona como uma camada RPG completa para Necesse.",
-            "O foco é dar mais profundidade para o personagem sem remover o estilo original do jogo.",
-            "Explorar, lutar, minerar, pescar, construir e cuidar do mundo agora alimenta uma progressão maior."
-          ]
-        },
-        {
-          "heading": "Aviso Final",
-          "items": [
-            "Cria um novo personagem para aproveitar melhor a versão 1.0.",
-            "Começa em um mundo novo se quiser sentir a progressão do zero.",
-            "As versões antigas ajudaram a testar e melhorar o caminho; a 1.0 é o ponto de partida oficial."
+            "É recomendado criar um personagem novo para jogar a 1.0 corretamente.",
+            "Personagens antigos podem não combinar com a progressão atual, porque o sistema mudou bastante.",
+            "Um personagem novo evita progresso estranho, pontos fora do lugar e bônus antigos misturados.",
+            "Comece em um mundo novo se quiser sentir a progressão do zero.",
+            "A 1.0 é o ponto de partida oficial, feita para ser limpa, equilibrada e crescer desde o início."
           ]
         }
       ],
-      "note": "<strong>Obrigado por jogar RPG Skills. Boa aventura! ⚔️</strong>"
+      "note": "<strong>Bom jogo! 🎮</strong>"
     },
     "en": {
-      "title": "🌟 RPG Skills 1.0 - Official Release 🌟",
+      "title": "🌟 Update 1.0 - RPG Skills 🌟",
       "sections": [
         {
-          "heading": "Summary",
+          "heading": "✨ What's new",
           "items": [
-            "RPG Skills has reached its <strong>official 1.0 release</strong>.",
-            "Previous versions worked as tests, improvements, adjustments, and learning steps until the mod reached this more complete form.",
-            "The mod went through an <strong>extensive rework</strong> to become cleaner, clearer, and better prepared for future updates.",
-            "This version adds stronger RPG progression to Necesse, with levels, XP, skill points, classes, attributes, a shop, and hotkeys.",
-            "The Shop now also includes global chest slot upgrades for the world.",
-            "<strong>Important:</strong> it is recommended to create a <strong>new character</strong> to play version 1.0 properly."
+            "<strong>Official release:</strong> RPG Skills has reached its official 1.0 release.",
+            "<strong>Official release:</strong> previous versions were tests, adjustments and learning steps until the mod got here.",
+            "<strong>Official release:</strong> the mod went through a big rework to be cleaner, clearer and ready to keep evolving.",
+            "<strong>Official release:</strong> the mod is no longer a set of tests and loose bonuses and becomes a complete RPG layer for Necesse.",
+            "<strong>Official release:</strong> the focus is to give your character more depth without removing the game's original style.",
+            "<strong>Progression:</strong> your character grows with levels, XP and skill points.",
+            "<strong>Progression:</strong> you earn XP by playing normally: defeating enemies, fighting bosses, mining, harvesting, fishing, planting, exploring and interacting with settlements.",
+            "<strong>Progression:</strong> when you level up, you gain points to invest in classes.",
+            "<strong>Progression:</strong> exploring, fighting, mining, fishing, building and taking care of the world feed a larger progression.",
+            "<strong>Progression:</strong> more reason to keep the same character and feel real growth across the world.",
+            "<strong>Classes:</strong> the class system was rebuilt with 27 classes.",
+            "<strong>Classes:</strong> the styles are melee, ranged, magic, summon, survival, defense, mobility, mining, fishing, loot, gold, building, trinkets and settlements.",
+            "<strong>Classes:</strong> each class strengthens a different part of the game, so you can build your character your way.",
+            "<strong>Classes:</strong> some classes unlock special effects such as vision, vein mining, elemental effects, healing, defense, mobility and utility bonuses.",
+            "<strong>Classes:</strong> Cavern Master unlocks Vein Miner to improve mining.",
+            "<strong>RPG Skills window:</strong> organized into three tabs: Status, Classes and Shop.",
+            "<strong>RPG Skills window:</strong> the Status tab shows level, XP, free points and general character info.",
+            "<strong>RPG Skills window:</strong> the Classes tab shows the classes and lets you spend skill points.",
+            "<strong>RPG Skills window:</strong> the Shop tab brings together temporary XP bonuses, world stack upgrades and extra chest slots.",
+            "<strong>RPG Skills window:</strong> the default shortcut to open and close it is K.",
+            "<strong>Shop:</strong> temporary XP bonuses speed up progression.",
+            "<strong>Shop:</strong> configurable hotkeys for the 2x, 5x and 10x XP bonuses.",
+            "<strong>Shop:</strong> world stack upgrade, which helps with storage and farming.",
+            "<strong>Chest slots:</strong> the Shop sells global slot upgrades for the world's chests.",
+            "<strong>Chest slots:</strong> each purchase adds +10 slots, starting at 5,000 coins, up to 400 slots.",
+            "<strong>Chest slots:</strong> large chests get scrolling to keep slots accessible.",
+            "<strong>Chest slots:</strong> the Shop has a reset that returns chests to the default 40 slots.",
+            "<strong>Chest slots:</strong> before resetting, remove items from the extra slots.",
+            "<strong>Chest slots:</strong> the mod tries to drop items from extra slots on the ground around the chest, but something may still be lost.",
+            "<strong>Chest slots:</strong> the reset does not refund coins.",
+            "<strong>Explosive Miner:</strong> new Shop ability, bought per player.",
+            "<strong>Explosive Miner:</strong> requires Cavern Master level 5 to buy and to use.",
+            "<strong>Explosive Miner:</strong> if points are reset and the requirement drops, it stays blocked until the right level is reached again.",
+            "<strong>Explosive Miner:</strong> turned on with its configurable hotkey, it makes any pickaxe break nearby blocks with an explosion effect.",
+            "<strong>Explosive Miner:</strong> it does not hurt players or mobs and gives no XP for extra breaks.",
+            "<strong>Explosive Miner:</strong> it only works with pickaxes and respects the power of the pickaxe used.",
+            "<strong>Explosive Miner:</strong> it has limits to avoid freezes in very crowded areas.",
+            "<strong>Explosive Miner:</strong> it does not work together with Advanced Vein Miner mode.",
+            "<strong>Commands:</strong> /rpgskills set level <1-135> sets the player level and clears current experience.",
+            "<strong>Commands:</strong> /rpgskills maxskills sets the player to max level and maxes every class.",
+            "<strong>Commands:</strong> /rpgskills reset points refunds class points, charging the correct cost when needed.",
+            "<strong>Commands:</strong> /rpgskills reset zero fully resets progression and refunds reset coins."
           ]
         },
         {
-          "heading": "A Fresh Start",
+          "heading": "⚠️ Important",
           "items": [
-            "Version 1.0 reorganizes the foundation of RPG Skills and marks a new phase for the mod.",
-            "Old characters may not represent the current progression well, because the system changed a lot.",
-            "To avoid strange progress, misplaced points, or old bonuses mixed in, start with a new character.",
-            "The goal is for version 1.0 to feel clean, balanced, and made to grow from the beginning."
-          ]
-        },
-        {
-          "heading": "RPG Progression",
-          "items": [
-            "Your character now progresses with <strong>levels</strong>, <strong>XP</strong>, and <strong>skill points</strong>.",
-            "You earn XP by playing normally: defeating enemies, fighting bosses, mining, harvesting, fishing, planting, exploring, and interacting with settlements.",
-            "When you level up, you gain points to invest in classes.",
-            "Progression gives you more reasons to keep playing the same character and feel real growth across the world."
-          ]
-        },
-        {
-          "heading": "Classes and Builds",
-          "items": [
-            "The class system was rebuilt with <strong>27 classes</strong>.",
-            "Classes cover many styles: melee, ranged, magic, summons, survival, defense, mobility, mining, fishing, loot, gold, building, trinkets, and settlements.",
-            "Each class strengthens a different part of gameplay, letting you build your character your way.",
-            "Some classes also unlock special effects such as vision, vein mining, elemental effects, healing, defense, mobility, and utility bonuses."
-          ]
-        },
-        {
-          "heading": "New Interface",
-          "items": [
-            "The RPG Skills window is organized into three main tabs.",
-            "<strong>Status:</strong> tracks level, XP, free points, and general character information.",
-            "<strong>Classes:</strong> shows classes and lets you spend skill points.",
-            "<strong>Shop:</strong> brings together temporary XP bonuses, world stack upgrades, and extra chest slots.",
-            "The default shortcut to open and close the window is <strong>K</strong>."
-          ]
-        },
-        {
-          "heading": "Shop and Quality of Life",
-          "items": [
-            "The Shop lets you buy temporary XP bonuses to speed up progression.",
-            "It also lets you improve world stack size, helping with farming and storage.",
-            "You can now buy extra chest slots: each purchase adds <strong>+10 slots</strong>, starting at <strong>5,000 coins</strong>, up to <strong>400 slots</strong>.",
-            "Large chests use scrolling in the interface to keep slots accessible.",
-            "The Shop also has a chest slot reset option to return chests to the default 40 slots.",
-            "Before resetting, remove items from extra slots. The mod tries to drop those items on the ground around the chest, but coins are not refunded and there may still be a risk of losing something.",
-            "The Shop now also has the <strong>Explosive Miner</strong> ability, bought per player.",
-            "Explosive Miner requires <strong>Cavern Master level 5</strong> to buy and to use. If points are reset and the requirement drops, it stays blocked until the requirement is met again.",
-            "When activated with its configurable hotkey, mining with any pickaxe breaks nearby blocks with an explosion effect, without hurting players or mobs and without giving XP from extra breaks.",
-            "The ability only works with pickaxes, respects the power of the pickaxe used and has internal limits to avoid freezes in very crowded areas.",
-            "It does not work together with Advanced Vein Miner mode.",
-            "There are configurable hotkeys for 2x, 5x, and 10x XP bonuses.",
-            "Cavern Master also unlocks Vein Miner to improve mining."
-          ]
-        },
-        {
-          "heading": "Visible Commands",
-          "items": [
-            "<strong>/rpgskills set level <1-135></strong>: sets the player level and clears current experience.",
-            "<strong>/rpgskills maxskills</strong>: sets the player to max level and maxes every class.",
-            "<strong>/rpgskills reset points</strong>: refunds class points, charging the correct cost when needed.",
-            "<strong>/rpgskills reset zero</strong>: fully resets progression and refunds reset coins."
-          ]
-        },
-        {
-          "heading": "What Changed in the Mod's Direction",
-          "items": [
-            "RPG Skills is no longer just a set of tests and loose bonuses.",
-            "It now works as a complete RPG layer for Necesse.",
-            "The focus is to give more depth to your character without removing the original style of the game.",
-            "Exploring, fighting, mining, fishing, building, and taking care of the world now feed a larger progression system."
-          ]
-        },
-        {
-          "heading": "Final Notice",
-          "items": [
-            "Create a new character to enjoy version 1.0 properly.",
+            "Creating a new character is recommended to play 1.0 properly.",
+            "Old characters may not fit the current progression, because the system changed a lot.",
+            "A new character avoids strange progress, misplaced points and old bonuses mixed in.",
             "Start in a new world if you want to feel the progression from zero.",
-            "Older versions helped test and improve the path; 1.0 is the official starting point."
+            "1.0 is the official starting point, made to be clean, balanced and grow from the start."
           ]
         }
       ],
-      "note": "<strong>Thank you for playing RPG Skills. Have a great adventure! ⚔️</strong>"
+      "note": "<strong>Have fun! 🎮</strong>"
     }
   }
 ];
