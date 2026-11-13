@@ -1,0 +1,618 @@
+/* ============================================
+   RPG SKILLS — QoL Section (Polimento Criativo)
+   Recursos que Facilitam — premium + playful
+   ============================================ */
+
+.qol-section {
+  position: relative;
+  overflow: hidden;
+  background: var(--dark);
+}
+.qol-section::before {
+  content:"";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 45% at 20% 12%, rgba(212,136,28,0.07), transparent 60%),
+    radial-gradient(ellipse 50% 35% at 85% 30%, rgba(96,165,250,0.05), transparent 60%),
+    radial-gradient(ellipse 60% 40% at 50% 88%, rgba(212,136,28,0.04), transparent 60%);
+  pointer-events: none;
+}
+
+/* ---------- HEADER EXTRA ---------- */
+.qol-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(212,136,28,0.08);
+  border: 1px solid rgba(212,136,28,0.18);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.qol-kicker i { font-style: normal; animation: qolSpin 3s linear infinite; display:inline-block; }
+@keyframes qolSpin { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+
+.qol-subtitle-creative {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: var(--text-body);
+}
+.qol-subtitle-creative b { color: #fff; }
+.qol-subtitle-creative em {
+  font-style: normal;
+  color: var(--gold);
+  background: rgba(212,136,28,0.08);
+  border: 1px solid rgba(212,136,28,0.15);
+  border-radius: 999px;
+  padding: 1px 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---------- HERO SHOWCASE ---------- */
+.qol-hero {
+  max-width: 1080px;
+  margin: 36px auto 32px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 18px;
+  position: relative;
+}
+@media (max-width: 860px){ .qol-hero{ grid-template-columns:1fr; } }
+
+.qol-demo {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #0f1328 0%, #0a0d1c 60%, #070915 100%);
+  border: 1px solid rgba(212,136,28,0.22);
+  box-shadow: 0 18px 48px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.03);
+  padding: 18px;
+}
+.qol-demo::after {
+  content:"";
+  position: absolute;
+  inset:0;
+  pointer-events:none;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 10px 10px, rgba(212,136,28,0.45) 1.2px, transparent 2px),
+    radial-gradient(circle at calc(100% - 10px) 10px, rgba(212,136,28,0.45) 1.2px, transparent 2px),
+    radial-gradient(circle at 10px calc(100% - 10px), rgba(212,136,28,0.45) 1.2px, transparent 2px),
+    radial-gradient(circle at calc(100% - 10px) calc(100% - 10px), rgba(212,136,28,0.45) 1.2px, transparent 2px);
+  opacity: 0.7;
+}
+.qol-demo-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:14px;
+  position: relative;
+  z-index:1;
+}
+.qol-demo-title {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.98rem;
+  color:#fff;
+}
+.qol-demo-title i {
+  width:32px; height:32px;
+  display:grid; place-items:center;
+  border-radius:8px;
+  background: rgba(212,136,28,0.14);
+  border:1px solid rgba(212,136,28,0.28);
+  font-size:1.1rem;
+}
+.qol-demo-badge {
+  font-family: var(--font-heading);
+  font-size:0.64rem;
+  font-weight:800;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  padding:3px 9px;
+  border-radius:999px;
+  background: rgba(212,136,28,0.12);
+  border:1px solid rgba(212,136,28,0.28);
+  color:var(--gold);
+}
+
+/* ORE GRID */
+.qol-ore-grid {
+  display:grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap:8px;
+  padding:14px;
+  border-radius:12px;
+  background: #050611;
+  border:1px solid rgba(255,255,255,0.06);
+  position:relative;
+  z-index:1;
+}
+.qol-ore {
+  aspect-ratio:1;
+  border-radius:8px;
+  display:grid;
+  place-items:center;
+  font-size:1.35rem;
+  background: linear-gradient(180deg, #1e253e, #13182e);
+  border:1px solid rgba(212,136,28,0.18);
+  cursor:pointer;
+  user-select:none;
+  transition: all 0.22s cubic-bezier(0.22,1,0.36,1);
+  position:relative;
+  overflow:hidden;
+}
+.qol-ore::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: radial-gradient(circle at 30% 20%, rgba(212,136,28,0.18), transparent 60%);
+  opacity:0;
+  transition:opacity 0.22s;
+}
+.qol-ore:hover { transform: translateY(-2px) scale(1.04); border-color: var(--gold); box-shadow: 0 6px 18px rgba(212,136,28,0.22); }
+.qol-ore:hover::before{opacity:1}
+.qol-ore.mined {
+  background: #0a0d1c;
+  border-color: rgba(255,255,255,0.04);
+  transform: scale(0.88);
+  opacity:0.45;
+}
+.qol-ore.mined::after {
+  content:"✓";
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  font-size:0.9rem;
+  color: var(--gold);
+  background: rgba(212,136,28,0.08);
+}
+.qol-ore.vein {
+  background: linear-gradient(180deg, #2a1e12, #1a140e);
+  border-color: rgba(212,136,28,0.32);
+  box-shadow: 0 0 0 1px rgba(212,136,28,0.12) inset;
+}
+.qol-ore.stone {
+  background: linear-gradient(180deg, #1a1d2e, #0f1220);
+  border-color: rgba(255,255,255,0.06);
+  opacity:0.9;
+}
+
+.qol-demo-footer {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:12px;
+  position:relative;
+  z-index:1;
+  flex-wrap:wrap;
+}
+.qol-compare {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:0.74rem;
+  color: var(--text-muted);
+}
+.qol-compare b { color:#fff; }
+.qol-compare .qol-arrow {
+  width:22px; height:22px;
+  display:grid; place-items:center;
+  border-radius:50%;
+  background: var(--gold);
+  color:#120a00;
+  font-weight:900;
+  font-size:0.72rem;
+}
+.qol-demo-btn {
+  padding:7px 14px;
+  border-radius:999px;
+  background: linear-gradient(180deg, var(--gold), #c2761a);
+  color:#120a00;
+  font-family: var(--font-heading);
+  font-weight:800;
+  font-size:0.74rem;
+  letter-spacing:0.04em;
+  border:none;
+  cursor:pointer;
+  transition: all 0.15s;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.qol-demo-btn:hover{ filter:brightness(1.07); transform: translateY(-1px); }
+.qol-demo-btn:active{ transform:scale(0.97); }
+.qol-demo-btn.secondary {
+  background: rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.10);
+  color:#fff;
+}
+.qol-demo-btn.secondary:hover{ background: rgba(212,136,28,0.12); border-color: rgba(212,136,28,0.28); }
+
+/* RIGHT PANEL: day timeline */
+.qol-timeline {
+  border-radius:16px;
+  background: linear-gradient(180deg, #0f1225, #0a0d1c);
+  border:1px solid rgba(255,255,255,0.06);
+  padding:18px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.qol-timeline-head {
+  font-family: var(--font-heading);
+  font-weight:800;
+  font-size:0.86rem;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.qol-timeline-head span {
+  font-size:0.62rem;
+  font-weight:800;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  padding:2px 8px;
+  border-radius:999px;
+  background: rgba(96,165,250,0.12);
+  border:1px solid rgba(96,165,250,0.22);
+  color: var(--blue);
+}
+.qol-day {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  position:relative;
+  padding-left:22px;
+}
+.qol-day::before {
+  content:"";
+  position:absolute;
+  left:7px; top:6px; bottom:6px;
+  width:2px;
+  border-radius:999px;
+  background: linear-gradient(180deg, var(--gold), rgba(212,136,28,0.15));
+  opacity:0.7;
+}
+.qol-moment {
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  padding:10px 12px;
+  border-radius:10px;
+  background: #0e1226;
+  border:1px solid rgba(255,255,255,0.05);
+  transition: all 0.18s;
+  position:relative;
+}
+.qol-moment::before {
+  content:"";
+  position:absolute;
+  left:-18px; top:50%;
+  width:10px; height:10px;
+  margin-top:-5px;
+  border-radius:50%;
+  background: var(--dark);
+  border:2px solid var(--gold);
+  box-shadow: 0 0 0 3px rgba(212,136,28,0.15);
+}
+.qol-moment:hover{ border-color: rgba(212,136,28,0.22); transform: translateX(2px); }
+.qol-moment i {
+  width:30px; height:30px; flex:0 0 30px;
+  display:grid; place-items:center;
+  border-radius:8px;
+  font-size:1rem;
+  background: rgba(212,136,28,0.10);
+  border:1px solid rgba(212,136,28,0.18);
+}
+.qol-moment b { display:block; font-size:0.80rem; color:#fff; }
+.qol-moment p { font-size:0.71rem; color:var(--text-muted); line-height:1.4; margin:2px 0 0; }
+.qol-moment em {
+  font-style:normal;
+  font-size:0.64rem;
+  font-weight:800;
+  color: var(--gold);
+  background: rgba(212,136,28,0.10);
+  border:1px solid rgba(212,136,28,0.18);
+  border-radius:999px;
+  padding:1px 7px;
+  margin-left:6px;
+}
+
+/* ---------- CARDS GRID ---------- */
+.qol-grid {
+  max-width:1080px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:16px;
+}
+@media (max-width: 960px){ .qol-grid{ grid-template-columns: repeat(2,1fr);} }
+@media (max-width: 580px){ .qol-grid{ grid-template-columns: 1fr; } }
+
+.qol-card {
+  position:relative;
+  border-radius:14px;
+  background: linear-gradient(180deg, #0f1225 0%, #0c0f20 100%);
+  border:1px solid rgba(255,255,255,0.06);
+  padding:16px 16px 14px;
+  overflow:hidden;
+  transition: all 0.22s cubic-bezier(0.22,1,0.36,1);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.qol-card::before {
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0;
+  height:2px;
+  background: linear-gradient(90deg, transparent, var(--qol-accent, rgba(212,136,28,0.5)), transparent);
+  opacity:0;
+  transition:opacity 0.22s;
+}
+.qol-card:hover{ transform: translateY(-4px); border-color: rgba(212,136,28,0.22); box-shadow: 0 12px 32px rgba(0,0,0,0.38); }
+.qol-card:hover::before{opacity:1}
+.qol-card:hover .qol-card-icon{ transform: rotate(-6deg) scale(1.06); }
+
+.qol-card-top {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+}
+.qol-card-icon {
+  width:44px; height:44px;
+  display:grid; place-items:center;
+  border-radius:10px;
+  font-size:1.35rem;
+  background: var(--qol-bg, rgba(212,136,28,0.10));
+  border:1px solid var(--qol-border, rgba(212,136,28,0.22));
+  color: var(--qol-accent, var(--gold));
+  transition: transform 0.22s;
+  flex:0 0 44px;
+}
+.qol-card-tag {
+  font-family: var(--font-heading);
+  font-size:0.60rem;
+  font-weight:800;
+  letter-spacing:0.07em;
+  text-transform:uppercase;
+  padding:3px 8px;
+  border-radius:999px;
+  background: var(--qol-bg, rgba(212,136,28,0.10));
+  border:1px solid var(--qol-border, rgba(212,136,28,0.20));
+  color: var(--qol-accent, var(--gold));
+  white-space:nowrap;
+}
+.qol-card h3 {
+  font-size:0.96rem;
+  line-height:1.2;
+  margin:0;
+}
+.qol-card p {
+  font-size:0.82rem;
+  line-height:1.6;
+  color: var(--text-muted);
+  margin:0;
+  flex:1;
+}
+.qol-card p b { color: var(--text-body); font-weight:700; }
+
+.qol-card-meta {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 10px;
+  border-radius:10px;
+  background: rgba(255,255,255,0.03);
+  border:1px dashed rgba(255,255,255,0.07);
+  font-size:0.70rem;
+  color: var(--text-muted);
+  margin-top:2px;
+}
+.qol-card-meta .qol-mini-bar {
+  flex:1;
+  height:6px;
+  border-radius:999px;
+  background: #050611;
+  border:1px solid rgba(255,255,255,0.06);
+  overflow:hidden;
+  display:flex;
+}
+.qol-card-meta .qol-mini-bar i {
+  display:block;
+  height:100%;
+  background: linear-gradient(90deg, var(--qol-accent, var(--gold)), #f0b24a);
+  border-radius:999px;
+}
+.qol-card-meta strong { color:#fff; }
+
+.qol-card-foot {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:2px;
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,0.05);
+}
+.qol-card-foot span {
+  font-size:0.68rem;
+  color: var(--text-dim);
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.qol-card-foot span i { font-style:normal; color: var(--gold); }
+
+/* Toggle switch */
+.qol-switch {
+  width:38px; height:22px;
+  border-radius:999px;
+  background: #1a1f3a;
+  border:1px solid rgba(255,255,255,0.08);
+  position:relative;
+  cursor:pointer;
+  transition: all 0.18s;
+  flex:0 0 38px;
+}
+.qol-switch::after {
+  content:"";
+  position:absolute;
+  top:2px; left:2px;
+  width:16px; height:16px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+  transition: all 0.18s cubic-bezier(0.22,1,0.36,1);
+}
+.qol-switch.on {
+  background: linear-gradient(180deg, var(--gold), #c2761a);
+  border-color: rgba(212,136,28,0.45);
+}
+.qol-switch.on::after { transform: translateX(16px); }
+
+/* Accent variants */
+.qol-card[data-accent=\"gold\"]  { --qol-accent: var(--gold); --qol-bg: rgba(212,136,28,0.10); --qol-border: rgba(212,136,28,0.22); }
+.qol-card[data-accent=\"blue\"]  { --qol-accent: var(--blue); --qol-bg: rgba(96,165,250,0.10); --qol-border: rgba(96,165,250,0.22); }
+.qol-card[data-accent=\"green\"] { --qol-accent: #22c55e; --qol-bg: rgba(34,197,94,0.10); --qol-border: rgba(34,197,94,0.22); }
+.qol-card[data-accent=\"red\"]   { --qol-accent: var(--red); --qol-bg: rgba(239,68,68,0.10); --qol-border: rgba(239,68,68,0.22); }
+.qol-card[data-accent=\"purple\"]{ --qol-accent: var(--purple); --qol-bg: rgba(167,139,250,0.10); --qol-border: rgba(167,139,250,0.22); }
+.qol-card[data-accent=\"teal\"]  { --qol-accent: #2dd4bf; --qol-bg: rgba(45,212,191,0.10); --qol-border: rgba(45,212,191,0.22); }
+
+/* ---------- STRIP ---------- */
+.qol-strip {
+  max-width:1080px;
+  margin:28px auto 0;
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:12px;
+}
+@media (max-width: 720px){ .qol-strip{ grid-template-columns: repeat(2,1fr);} }
+@media (max-width: 420px){ .qol-strip{ grid-template-columns: 1fr;} }
+
+.qol-stat {
+  text-align:center;
+  padding:16px 12px;
+  border-radius:12px;
+  background: linear-gradient(180deg, #0e1226, #0a0d1c);
+  border:1px solid rgba(255,255,255,0.06);
+  position:relative;
+  overflow:hidden;
+}
+.qol-stat::before {
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0;
+  height:1px;
+  background: linear-gradient(90deg, transparent, rgba(212,136,28,0.25), transparent);
+}
+.qol-stat b {
+  display:block;
+  font-family: var(--font-heading);
+  font-size:1.35rem;
+  font-weight:800;
+  color: var(--gold);
+  line-height:1;
+  margin-bottom:4px;
+}
+.qol-stat span {
+  font-size:0.68rem;
+  font-weight:700;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color: var(--text-dim);
+}
+.qol-stat small {
+  display:block;
+  margin-top:6px;
+  font-size:0.70rem;
+  color: var(--text-muted);
+  line-height:1.4;
+}
+
+/* ---------- BOTTOM NOTE ---------- */
+.qol-note {
+  max-width: 720px;
+  margin: 22px auto 0;
+  text-align:center;
+  padding:14px 18px;
+  border-radius:999px;
+  background: rgba(212,136,28,0.06);
+  border:1px solid rgba(212,136,28,0.14);
+  font-size:0.78rem;
+  color: var(--text-muted);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.qol-note b { color:#fff; }
+.qol-note code {
+  font-family: var(--font-mono);
+  font-size:0.72rem;
+  background: #0e1226;
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:6px;
+  padding:2px 7px;
+  color: var(--gold);
+}
+
+/* ---------- ANIM: ore pop ---------- */
+@keyframes qolPop {
+  0%{ transform: scale(1); }
+  40%{ transform: scale(1.08); }
+  100%{ transform: scale(0.88); }
+}
+.qol-ore.pop { animation: qolPop 0.22s ease; }
+
+/* ---------- FISHING BOBBER ---------- */
+.qol-fish-track {
+  height:6px;
+  border-radius:999px;
+  background: #050611;
+  border:1px solid rgba(255,255,255,0.06);
+  overflow:hidden;
+  position:relative;
+}
+.qol-fish-progress {
+  height:100%;
+  width:0%;
+  background: linear-gradient(90deg, var(--blue), #93c5fd);
+  border-radius:999px;
+  transition: width 0.12s linear;
+}
+.qol-bobber {
+  display:inline-block;
+  animation: qolBob 1.1s ease-in-out infinite;
+}
+@keyframes qolBob { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-4px) } }
+
+/* ---------- STEALTH: reveal stagger ---------- */
+.qol-grid .qol-card:nth-child(1){ transition-delay:0.02s}
+.qol-grid .qol-card:nth-child(2){ transition-delay:0.06s}
+.qol-grid .qol-card:nth-child(3){ transition-delay:0.10s}
+.qol-grid .qol-card:nth-child(4){ transition-delay:0.14s}
+.qol-grid .qol-card:nth-child(5){ transition-delay:0.18s}
+.qol-grid .qol-card:nth-child(6){ transition-delay:0.22s}
+.qol-grid .qol-card:nth-child(7){ transition-delay:0.26s}
+.qol-grid .qol-card:nth-child(8){ transition-delay:0.30s}
+.qol-grid .qol-card:nth-child(9){ transition-delay:0.34s}
